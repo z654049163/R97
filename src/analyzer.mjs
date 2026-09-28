@@ -16,11 +16,29 @@ import {
   LANGUAGE_BUILTIN_ROOTS,
 } from "./global-roots.mjs";
 import { normalizeNodeBuiltinSpecifier } from "./module-runtime.mjs";
+import {
+  buildBundleModuleTable,
+  extractModuleExports,
+  findOwningModule,
+  isRequireCall,
+  resolveBundleRequest,
+} from "./bundle-modules.mjs";
 
 const DEFAULT_RUNTIME_GLOBALS = new Set([
   ...LANGUAGE_BUILTIN_ROOTS,
   ...HOST_GLOBAL_ROOTS,
 ]);
+
+const HOST_GLOBAL_SET = new Set(HOST_GLOBAL_ROOTS);
+const LANGUAGE_BUILTIN_SET = new Set(LANGUAGE_BUILTIN_ROOTS);
+
+/**
+ * 导出值溯源的最大递归深度。
+ *
+ * 模块导出可能套好几层：`exports.a = b`、`b` 又是另一个模块的导出。
+ * 超过深度就返回"未知"，退回原来的 module_import 行为，不做猜测。
+ */
+const MAX_BUNDLE_EXPORT_DEPTH = 4;
 
 const FUNCTION_NODE_TYPES = new Set([
   "ArrowFunctionExpression",
@@ -52,7 +70,11 @@ export const analyzeSource = ({
 
   const ast = parseSource(source, sourceType);
   const sourceHash = sha256(source);
-  const scopes = buildScopeTree(ast);
+  // 只有出现 `define(` 的源码才值得扫模块表；普通文件直接跳过，避免无谓遍历。
+  const bundleModules = source.includes("define(")
+    ? buildBundleModuleTable(ast).modules
+    : new Map();
+  const scopes = buildScopeTree(ast, bundleModules);
   const knownGlobals = new Set([
     ...DEFAULT_RUNTIME_GLOBALS,
     ...runtimeGlobals,
@@ -64,6 +86,8 @@ export const analyzeSource = ({
     scopeByNode: scopes.scopeByNode,
     recordByNode: scopes.recordByNode,
     implicitGlobalAssignments: scopes.implicitGlobalAssignments,
+    bundleModules,
+    bundleExportCache: new Map(),
     consumedNodes: new Set(),
     findings: [],
   };
@@ -129,6 +153,21 @@ const getRequiredBuiltinPath = (node) => {
   return normalizeNodeBuiltinSpecifier(node.arguments[0].value);
 };
 
+/**
+ * `const m = require("./x.js")` 的请求是否命中同文件的 bundle 模块表。
+ *
+ * 命中返回目标模块路径；外部依赖（`wx-server-sdk`、Node 内建）返回 null，
+ * 保持原有行为。Node 内建由 getRequiredBuiltinPath 处理，优先级更高。
+ */
+const bundleModulePathForRequire = (initNode, bundleModules) => {
+  if (bundleModules.size === 0 || !isRequireCall(initNode)) {
+    return null;
+  }
+  const owner = findOwningModule(initNode, { modules: bundleModules });
+  const target = resolveBundleRequest(initNode.arguments[0].value, owner);
+  return bundleModules.has(target) ? target : null;
+};
+
 const getImportModulePath = (declaration, specifier) => {
   const basePath = normalizeNodeBuiltinSpecifier(declaration.source.value);
   if (!basePath) {
@@ -161,6 +200,7 @@ class Scope {
     node,
     aliasNode = null,
     modulePath = null,
+    bundleModulePath = null,
     declarationKind = null,
   }) {
     const existing = this.bindings.get(name);
@@ -170,6 +210,9 @@ class Scope {
       }
       if (!existing.modulePath && modulePath) {
         existing.modulePath = modulePath;
+      }
+      if (!existing.bundleModulePath && bundleModulePath) {
+        existing.bundleModulePath = bundleModulePath;
       }
       if (!existing.declarationKind && declarationKind) {
         existing.declarationKind = declarationKind;
@@ -183,6 +226,7 @@ class Scope {
       node,
       aliasNode,
       modulePath,
+      bundleModulePath,
       declarationKind,
       mutated: false,
       scope: this,
@@ -204,7 +248,7 @@ class Scope {
   }
 }
 
-const buildScopeTree = (ast) => {
+const buildScopeTree = (ast, bundleModules = new Map()) => {
   const parentByNode = new WeakMap();
   const scopeByNode = new WeakMap();
   const recordByNode = new WeakMap();
@@ -269,6 +313,10 @@ const buildScopeTree = (ast) => {
         const targetScope =
           node.kind === "var" ? currentScope.functionScope : currentScope;
         const modulePath = getRequiredBuiltinPath(declarator.init);
+        const bundleModulePath = bundleModulePathForRequire(
+          declarator.init,
+          bundleModules,
+        );
         declarePatterns(
           declarator.id,
           targetScope,
@@ -277,6 +325,7 @@ const buildScopeTree = (ast) => {
           declarator.init,
           modulePath,
           node.kind,
+          bundleModulePath,
         );
       }
     } else if (node.type === "ImportDeclaration") {
@@ -352,6 +401,7 @@ const declarePatterns = (
   aliasNode = null,
   modulePath = null,
   declarationKind = null,
+  bundleModulePath = null,
 ) => {
   if (!pattern) {
     return;
@@ -382,6 +432,7 @@ const declarePatterns = (
           : null,
       modulePath,
       declarationKind,
+      bundleModulePath,
     });
     return;
   }
@@ -394,6 +445,7 @@ const declarePatterns = (
       aliasNode,
       modulePath,
       declarationKind,
+      bundleModulePath,
     );
     return;
   }
@@ -406,6 +458,7 @@ const declarePatterns = (
       aliasNode,
       modulePath,
       declarationKind,
+      bundleModulePath,
     );
     return;
   }
@@ -688,6 +741,168 @@ const findPrimaryRuntimeReference = (node, context) => {
   return null;
 };
 
+/**
+ * bundle 模块系统自己的符号。
+ *
+ * 它们在 HOST_GLOBAL_ROOTS 里（Node 端确实由宿主注入），但在微信 bundle 里是
+ * 模块系统关键字：遇到它们不能判成宿主能力，只能判「未知」。
+ */
+const BUNDLE_SYSTEM_SYMBOLS = new Set([
+  "define",
+  "require",
+  "module",
+  "exports",
+  "definePlugin",
+  "requirePlugin",
+]);
+
+/** 取 bundle 模块的导出表，带缓存。 */
+const bundleExportsFor = (modulePath, context) => {
+  if (context.bundleExportCache.has(modulePath)) {
+    return context.bundleExportCache.get(modulePath);
+  }
+  const entry = context.bundleModules.get(modulePath);
+  const exports = entry ? extractModuleExports(entry.factoryNode) : null;
+  context.bundleExportCache.set(modulePath, exports);
+  return exports;
+};
+
+/**
+ * 判断导出值的来源，三态：
+ *   pure    没有任何宿主引用，也没有无法解析的名字
+ *   host    最终引用到宿主全局（返回根名字与路径）
+ *   unknown 无法确定（外部依赖、参数、深度超限、动态写法）
+ *
+ * 导出函数也会进入函数体检查——导出函数的函数体里调用宿主同样危险。
+ * seen 用来防止别名环与递归函数导致无限展开。
+ */
+const analyzeExportProvenance = (node, context, seen, depth) => {
+  let verdict = { kind: "pure" };
+  const visit = (current, currentDepth) => {
+    if (!current || typeof current.type !== "string") return;
+    if (verdict.kind !== "pure") return;
+    if (currentDepth > MAX_BUNDLE_EXPORT_DEPTH) {
+      verdict = { kind: "unknown" };
+      return;
+    }
+    if (current.type === "Identifier") {
+      if (BUNDLE_SYSTEM_SYMBOLS.has(current.name)) {
+        if (current.name !== "define") {
+          verdict = { kind: "unknown" };
+        }
+        return;
+      }
+      const scope = context.scopeByNode.get(current);
+      const binding = scope?.resolve(current.name);
+      if (!binding) {
+        if (HOST_GLOBAL_SET.has(current.name)) {
+          verdict = { kind: "host", root: current.name, path: current.name };
+          return;
+        }
+        if (LANGUAGE_BUILTIN_SET.has(current.name)) {
+          return;
+        }
+        verdict = { kind: "unknown" };
+        return;
+      }
+      if (seen.has(binding)) return;
+      seen.add(binding);
+      if (binding.bundleModulePath) {
+        verdict = { kind: "unknown" };
+        return;
+      }
+      if (binding.aliasNode && !binding.mutated) {
+        visit(binding.aliasNode, currentDepth + 1);
+        return;
+      }
+      const declaration = binding.node;
+      if (
+        declaration &&
+        (declaration.type === "FunctionDeclaration" ||
+          declaration.type === "FunctionExpression" ||
+          declaration.type === "ArrowFunctionExpression")
+      ) {
+        visit(declaration.body, currentDepth + 1);
+        return;
+      }
+      verdict = { kind: "unknown" };
+      return;
+    }
+    if (isRequireCall(current)) {
+      // 导出值里再 require：v1 不做跨模块串联解析，保守返回未知。
+      verdict = { kind: "unknown" };
+      return;
+    }
+    // 成员表达式的属性名不是变量引用：`r.length` 里的 length 不能被当成
+    // 未解析全局，否则任何函数体都会因为属性名而判成 unknown。
+    if (current.type === "MemberExpression") {
+      visit(current.object, currentDepth);
+      if (current.computed) {
+        visit(current.property, currentDepth);
+      }
+      return;
+    }
+    // 对象字面量的 key 同理，只有 computed key 才是表达式。
+    if (current.type === "Property") {
+      if (current.computed) {
+        visit(current.key, currentDepth);
+      }
+      visit(current.value, currentDepth);
+      return;
+    }
+    for (const key of Object.keys(current)) {
+      if (key === "parent") continue;
+      const value = current[key];
+      if (Array.isArray(value)) {
+        for (const child of value) visit(child, currentDepth);
+      } else if (value && typeof value.type === "string") {
+        visit(value, currentDepth);
+      }
+    }
+  };
+  visit(node, depth);
+  return verdict;
+};
+
+/**
+ * 把一个 bundle 模块的命名导出解析成绑定解析结果。
+ *
+ * 返回 null 表示无法确定，调用方保持原来的 module_import 行为（UNKNOWN）。
+ */
+const resolveBundleExport = (modulePath, exportName, context, depth, seen) => {
+  if (depth > MAX_BUNDLE_EXPORT_DEPTH) return null;
+  const exports = bundleExportsFor(modulePath, context);
+  if (!exports || exports.dynamic) return null;
+  const valueNode =
+    exports.named.get(exportName) ??
+    (exportName === "default" ? exports.defaultExport : null);
+  if (!valueNode) return null;
+  const verdict = analyzeExportProvenance(valueNode, context, seen, depth);
+  if (verdict.kind === "pure") {
+    return {
+      kind: BINDING_KIND.LOCAL,
+      origin: `bundle-export:${modulePath}.${exportName}`,
+      path: `${modulePath}.${exportName}`,
+      root: null,
+      aliasChain: [],
+      mutationStatus: "stable",
+      scopeId: null,
+    };
+  }
+  if (verdict.kind === "host") {
+    return {
+      kind: BINDING_KIND.RUNTIME_GLOBAL,
+      origin: verdict.root,
+      path: verdict.path,
+      root: verdict.root,
+      aliasChain: [verdict.root],
+      mutationStatus: "stable",
+      scopeId: null,
+    };
+  }
+  return null;
+};
+
 const resolveExpressionPath = (node, context, resolving = new Set()) => {
   if (!node || typeof node.type !== "string") {
     return dynamicResolution("invalid_expression");
@@ -716,6 +931,51 @@ const resolveExpressionPath = (node, context, resolving = new Set()) => {
         aliasChain: [node.name],
         mutationStatus: "stable",
         scopeId: scopeId(scope),
+      };
+    }
+
+    if (binding.bundleModulePath) {
+      // 模块整体导出：`module.exports = <expr>` 时，require() 的返回值就是该表达式。
+      const moduleExports = bundleExportsFor(binding.bundleModulePath, context);
+      if (moduleExports?.defaultExport && !moduleExports.dynamic) {
+        const verdict = analyzeExportProvenance(
+          moduleExports.defaultExport,
+          context,
+          new Set(),
+          0,
+        );
+        if (verdict.kind === "pure") {
+          return {
+            kind: BINDING_KIND.LOCAL,
+            origin: `bundle-default:${binding.bundleModulePath}`,
+            path: `${binding.bundleModulePath}.default`,
+            root: null,
+            aliasChain: [node.name],
+            mutationStatus: "stable",
+            scopeId: scopeId(binding.scope),
+          };
+        }
+        if (verdict.kind === "host") {
+          return {
+            kind: BINDING_KIND.RUNTIME_GLOBAL,
+            origin: verdict.root,
+            path: verdict.path,
+            root: verdict.root,
+            aliasChain: [node.name, verdict.root],
+            mutationStatus: "stable",
+            scopeId: scopeId(binding.scope),
+          };
+        }
+      }
+      return {
+        kind: BINDING_KIND.MODULE_IMPORT,
+        origin: `bundle:${binding.bundleModulePath}`,
+        path: binding.bundleModulePath,
+        root: binding.bundleModulePath.split("/")[0],
+        bundleModulePath: binding.bundleModulePath,
+        aliasChain: [node.name],
+        mutationStatus: binding.mutated ? "mutated" : "stable",
+        scopeId: scopeId(binding.scope),
       };
     }
 
@@ -806,6 +1066,24 @@ const resolveExpressionPath = (node, context, resolving = new Set()) => {
         path: object.path,
       };
     }
+    // bundle 内部模块的命名导出：解析到导出值的来源。
+    // 解析不出来（外部依赖、动态导出、深度超限）就保持原来的拼接行为，
+    // 让判定停在 UNKNOWN，不做猜测。
+    if (object.bundleModulePath) {
+      const resolved = resolveBundleExport(
+        object.bundleModulePath,
+        property,
+        context,
+        0,
+        new Set(),
+      );
+      if (resolved) {
+        return {
+          ...resolved,
+          aliasChain: [...object.aliasChain, property],
+        };
+      }
+    }
     const path = object.path ? `${object.path}.${property}` : property;
     return {
       ...object,
@@ -814,20 +1092,18 @@ const resolveExpressionPath = (node, context, resolving = new Set()) => {
     };
   }
 
-  if (
-    node.type === "CallExpression" &&
-    node.callee.type === "Identifier" &&
-    node.callee.name === "require" &&
-    node.arguments.length === 1 &&
-    node.arguments[0].type === "Literal" &&
-    typeof node.arguments[0].value === "string"
-  ) {
-    const modulePath = getRequiredBuiltinPath(node);
+  if (isRequireCall(node)) {
+    const builtinPath = getRequiredBuiltinPath(node);
+    const bundlePath = builtinPath
+      ? null
+      : bundleModulePathForRequire(node, context.bundleModules);
+    const modulePath = builtinPath ?? bundlePath;
     return {
       kind: BINDING_KIND.MODULE_IMPORT,
       origin: `require:${node.arguments[0].value}`,
       path: modulePath,
       root: modulePath?.split(".")[0] ?? "require",
+      bundleModulePath: bundlePath,
       aliasChain: ["require", node.arguments[0].value],
       mutationStatus: "stable",
       scopeId: scopeId(context.scopeByNode.get(node)),
