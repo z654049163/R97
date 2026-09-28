@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-09-24T09:48:21.312Z",
+  "projectsRoot": "E:/复现/sample_collector/可用于实验的干净源码包",
+  "projectCount": 1572,
+  "detectedCount": 1570,
+  "platformFamilyResolutionRate": 0.9987277353689568,
+  "runtimeProfileResolutionRate": 0.22519083969465647,
+  "confirmedTargetRate": 0,
+  "byStatus": {
+    "context_unknown": 1216,
+    "corroborated": 354,
+    "unknown": 2
+  },
+  "byMissing": {
+    "version_profile": 1216
+  },
+  "bySignalCount": {
+    "0": 2,
+    "1": 4,
+    "2": 1212,
+    "3": 354
+  },
+  "examples": {
+    "context_unknown": [
+      "#000_844a1a18",
+      "#000_a90852a5",
+      "009b06e8",
+      "01bc0116",
+      "02fd43e5",
+      "05402e0d",
+      "072dfa1d",
+      "07c108e9",
+      "07d4855d",
+      "0851f777"
+    ],
+    "unknown": [
+      "7e6ee639",
+      "warn"
+    ]
+  },
+  "contextUnknownShare": 0.7735368956743003
+}

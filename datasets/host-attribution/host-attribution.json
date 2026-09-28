@@ -1,0 +1,4933 @@
+{
+  "generatedAt": "2026-09-23T09:05:54.836Z",
+  "corpusPath": "E:\\读论文\\R97\\datasets\\real-miniapp-full\\real-miniapp-candidates.jsonl",
+  "sampling": {
+    "perEntityCap": 5
+  },
+  "rootCount": 356,
+  "hostExclusiveUnmappedCount": 17,
+  "hostExclusiveUnmapped": [
+    {
+      "root": "$gwl",
+      "host": "wechat",
+      "knownHostRoot": false
+    },
+    {
+      "root": "$gwn",
+      "host": "wechat",
+      "knownHostRoot": false
+    },
+    {
+      "root": "$gwx",
+      "host": "wechat",
+      "knownHostRoot": false
+    },
+    {
+      "root": "FileReader",
+      "host": "edge",
+      "knownHostRoot": false
+    },
+    {
+      "root": "Image",
+      "host": "edge",
+      "knownHostRoot": false
+    },
+    {
+      "root": "SVGRect",
+      "host": "edge",
+      "knownHostRoot": false
+    },
+    {
+      "root": "WebKitCSSMatrix",
+      "host": "edge",
+      "knownHostRoot": false
+    },
+    {
+      "root": "Window",
+      "host": "edge",
+      "knownHostRoot": false
+    },
+    {
+      "root": "__wxConfig",
+      "host": "wechat",
+      "knownHostRoot": false
+    },
+    {
+      "root": "close",
+      "host": "edge",
+      "knownHostRoot": false
+    },
+    {
+      "root": "define",
+      "host": "wechat",
+      "knownHostRoot": false
+    },
+    {
+      "root": "f",
+      "host": "wechat",
+      "knownHostRoot": false
+    },
+    {
+      "root": "gra",
+      "host": "wechat",
+      "knownHostRoot": false
+    },
+    {
+      "root": "grb",
+      "host": "wechat",
+      "knownHostRoot": false
+    },
+    {
+      "root": "requireOnce",
+      "host": "wechat",
+      "knownHostRoot": false
+    },
+    {
+      "root": "stop",
+      "host": "edge",
+      "knownHostRoot": false
+    },
+    {
+      "root": "wh",
+      "host": "wechat",
+      "knownHostRoot": false
+    }
+  ],
+  "rows": [
+    {
+      "root": "$gwl",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": true
+      },
+      "existingHosts": [
+        "wechat"
+      ],
+      "verdict": "host_exclusive_unmapped"
+    },
+    {
+      "root": "$gwn",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": true
+      },
+      "existingHosts": [
+        "wechat"
+      ],
+      "verdict": "host_exclusive_unmapped"
+    },
+    {
+      "root": "$gwx",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": true
+      },
+      "existingHosts": [
+        "wechat"
+      ],
+      "verdict": "host_exclusive_unmapped"
+    },
+    {
+      "root": "$gwx_wx013447465d3aa024",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wx032b78128e980502",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wx043a474648d3d591",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wx069ba97219f66d99",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wx0e203209e27b1e66",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wx104a1a20c3f81ec2",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wx116d0dd5e6a39ac7",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wx12cec70855c0cacf",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wx1629d117cf9be937",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wx1fe8d9a3cb067a75",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wx293c4b6097a8a4d0",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wx2b03c6e691cd7370",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wx308bd2aeb83d3345",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wx34345ae5855f892d",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wx3b49cd549eb1ae7f",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wx3eb462803881d2f1",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wx43d5971c94455481",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wx4418e3e031e551be",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wx4664e59e8a284069",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wx4a1d9449e295d1a3",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wx4d2deeab3aed6e5a",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wx4ed749733ed0e8e8",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wx50b5593e81dd937a",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wx5917c8c26f85c588",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wx5ec22d3a6a176039",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wx5fcce12afdff9918",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wx610ea582556c983e",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wx62d350f80724f9b0",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wx63d6102e26f0a3f8",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wx63ffb7b7894e99ae",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wx6885acbedba59c14",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wx69b7451feb427f0e",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wx6afed118d9e81df9",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wx70d57361939e63ef",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wx71acb46aa72fff57",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wx76a9a06e5b4e693e",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wx7a4658085b18b581",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wx80b5f24d05ef8e63",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wx82e6ae1175f264fa",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wx8d04ad0492dab24d",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wx92c68dae5a8bb046",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wx94a6522b1d640c3b",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wx97d76316fee0e8fe",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wx9acc1deb2cb15bba",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wxa16657d57059e0f0",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wxa75efa648b60994b",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wxaae6519cee98d824",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wxb7c8f9ea9ceb4663",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wxbc055599e4059c9f",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wxbe275ff84246f1a4",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wxd1d3a59c204109d4",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wxd65104595293601e",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wxdabb25f880cb2a03",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wxdd4927ede9acd724",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wxdf01634fc34b7886",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wxe6129e9cc9619c07",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wxee969de81bba9a45",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wxefa63d84fe9f64a2",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wxefe655223916819e",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wxf3f436ba9bd4be7b",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "$gwx_wxf51d01cf670e28d3",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "AES_CTR_set_options",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "AES_Decrypt_finish",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "AES_Decrypt_process",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "AES_Encrypt_finish",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "AES_Encrypt_process",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "AES_reset",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "AES_set_iv",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "AES_set_key",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "AES_set_padding",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "AbortController",
+      "knownHostRoot": true,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": true,
+        "edge": true,
+        "wechat": null
+      },
+      "existingHosts": [
+        "node",
+        "edge"
+      ],
+      "verdict": "cross_host"
+    },
+    {
+      "root": "AbortSignal",
+      "knownHostRoot": true,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": true,
+        "edge": true,
+        "wechat": null
+      },
+      "existingHosts": [
+        "node",
+        "edge"
+      ],
+      "verdict": "cross_host"
+    },
+    {
+      "root": "AdManager",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "App",
+      "knownHostRoot": true,
+      "mappedRuntimeId": "e4-wechat-real",
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": true
+      },
+      "existingHosts": [
+        "wechat"
+      ],
+      "verdict": "host_exclusive_mapped"
+    },
+    {
+      "root": "AsyncIterator",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "Behavior",
+      "knownHostRoot": true,
+      "mappedRuntimeId": "e4-wechat-real",
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "BigInteger",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "Blob",
+      "knownHostRoot": true,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": true,
+        "edge": true,
+        "wechat": null
+      },
+      "existingHosts": [
+        "node",
+        "edge"
+      ],
+      "verdict": "cross_host"
+    },
+    {
+      "root": "BroadcastChannel",
+      "knownHostRoot": true,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": true,
+        "edge": true,
+        "wechat": null
+      },
+      "existingHosts": [
+        "node",
+        "edge"
+      ],
+      "verdict": "cross_host"
+    },
+    {
+      "root": "Buffer",
+      "knownHostRoot": true,
+      "mappedRuntimeId": "e2-node-24.21.0",
+      "exists": {
+        "language": false,
+        "node": true,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [
+        "node"
+      ],
+      "verdict": "host_exclusive_mapped"
+    },
+    {
+      "root": "C",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "CONFIG",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "Component",
+      "knownHostRoot": true,
+      "mappedRuntimeId": "e4-wechat-real",
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "Crypto",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": true,
+        "edge": true,
+        "wechat": null
+      },
+      "existingHosts": [
+        "node",
+        "edge"
+      ],
+      "verdict": "cross_host"
+    },
+    {
+      "root": "CryptoJS",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "CustomEvent",
+      "knownHostRoot": true,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": true,
+        "edge": true,
+        "wechat": null
+      },
+      "existingHosts": [
+        "node",
+        "edge"
+      ],
+      "verdict": "cross_host"
+    },
+    {
+      "root": "D",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "DEBUG",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "DIMOND_SERVER_DOMAIN",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "Event",
+      "knownHostRoot": true,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": true,
+        "edge": true,
+        "wechat": null
+      },
+      "existingHosts": [
+        "node",
+        "edge"
+      ],
+      "verdict": "cross_host"
+    },
+    {
+      "root": "EventTarget",
+      "knownHostRoot": true,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": true,
+        "edge": true,
+        "wechat": null
+      },
+      "existingHosts": [
+        "node",
+        "edge"
+      ],
+      "verdict": "cross_host"
+    },
+    {
+      "root": "File",
+      "knownHostRoot": true,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": true,
+        "edge": true,
+        "wechat": null
+      },
+      "existingHosts": [
+        "node",
+        "edge"
+      ],
+      "verdict": "cross_host"
+    },
+    {
+      "root": "FileReader",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": true,
+        "wechat": null
+      },
+      "existingHosts": [
+        "edge"
+      ],
+      "verdict": "host_exclusive_unmapped"
+    },
+    {
+      "root": "FormData",
+      "knownHostRoot": true,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": true,
+        "edge": true,
+        "wechat": null
+      },
+      "existingHosts": [
+        "node",
+        "edge"
+      ],
+      "verdict": "cross_host"
+    },
+    {
+      "root": "G",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "GameGlobal",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "Headers",
+      "knownHostRoot": true,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": true,
+        "edge": true,
+        "wechat": null
+      },
+      "existingHosts": [
+        "node",
+        "edge"
+      ],
+      "verdict": "cross_host"
+    },
+    {
+      "root": "HmacSHA1",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "Image",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": true,
+        "wechat": null
+      },
+      "existingHosts": [
+        "edge"
+      ],
+      "verdict": "host_exclusive_unmapped"
+    },
+    {
+      "root": "Iterator",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": true,
+        "edge": true,
+        "wechat": true
+      },
+      "existingHosts": [
+        "node",
+        "edge",
+        "wechat"
+      ],
+      "verdict": "cross_host"
+    },
+    {
+      "root": "MessageChannel",
+      "knownHostRoot": true,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": true,
+        "edge": true,
+        "wechat": null
+      },
+      "existingHosts": [
+        "node",
+        "edge"
+      ],
+      "verdict": "cross_host"
+    },
+    {
+      "root": "MessagePort",
+      "knownHostRoot": true,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": true,
+        "edge": true,
+        "wechat": null
+      },
+      "existingHosts": [
+        "node",
+        "edge"
+      ],
+      "verdict": "cross_host"
+    },
+    {
+      "root": "MutationObserver",
+      "knownHostRoot": true,
+      "mappedRuntimeId": "e5-edge-headless",
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": true,
+        "wechat": null
+      },
+      "existingHosts": [
+        "edge"
+      ],
+      "verdict": "host_exclusive_mapped"
+    },
+    {
+      "root": "Observer",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "PHCNTRUST",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "PHCrypJS",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "Page",
+      "knownHostRoot": true,
+      "mappedRuntimeId": "e4-wechat-real",
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": true
+      },
+      "existingHosts": [
+        "wechat"
+      ],
+      "verdict": "host_exclusive_mapped"
+    },
+    {
+      "root": "R",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "R_htmlToWxml",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "Reporter",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "Request",
+      "knownHostRoot": true,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": true,
+        "edge": true,
+        "wechat": null
+      },
+      "existingHosts": [
+        "node",
+        "edge"
+      ],
+      "verdict": "cross_host"
+    },
+    {
+      "root": "Response",
+      "knownHostRoot": true,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": true,
+        "edge": true,
+        "wechat": null
+      },
+      "existingHosts": [
+        "node",
+        "edge"
+      ],
+      "verdict": "cross_host"
+    },
+    {
+      "root": "SL",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "SLConverter",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "SVGRect",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": true,
+        "wechat": null
+      },
+      "existingHosts": [
+        "edge"
+      ],
+      "verdict": "host_exclusive_unmapped"
+    },
+    {
+      "root": "SuppressedError",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": true,
+        "edge": true,
+        "wechat": true
+      },
+      "existingHosts": [
+        "node",
+        "edge",
+        "wechat"
+      ],
+      "verdict": "cross_host"
+    },
+    {
+      "root": "Taro",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "TextDecoder",
+      "knownHostRoot": true,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": true,
+        "edge": true,
+        "wechat": true
+      },
+      "existingHosts": [
+        "node",
+        "edge",
+        "wechat"
+      ],
+      "verdict": "cross_host"
+    },
+    {
+      "root": "TextEncoder",
+      "knownHostRoot": true,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": true,
+        "edge": true,
+        "wechat": true
+      },
+      "existingHosts": [
+        "node",
+        "edge",
+        "wechat"
+      ],
+      "verdict": "cross_host"
+    },
+    {
+      "root": "Type",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "URL",
+      "knownHostRoot": true,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": true,
+        "edge": true,
+        "wechat": null
+      },
+      "existingHosts": [
+        "node",
+        "edge"
+      ],
+      "verdict": "cross_host"
+    },
+    {
+      "root": "URLSearchParams",
+      "knownHostRoot": true,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": true,
+        "edge": true,
+        "wechat": null
+      },
+      "existingHosts": [
+        "node",
+        "edge"
+      ],
+      "verdict": "cross_host"
+    },
+    {
+      "root": "VM2_INTERNAL_STATE_DO_NOT_USE_OR_PROGRAM_WILL_FAIL",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "WXEnvironment",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "WebKitCSSMatrix",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": true,
+        "wechat": null
+      },
+      "existingHosts": [
+        "edge"
+      ],
+      "verdict": "host_exclusive_unmapped"
+    },
+    {
+      "root": "WebSocket",
+      "knownHostRoot": true,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": true,
+        "edge": true,
+        "wechat": null
+      },
+      "existingHosts": [
+        "node",
+        "edge"
+      ],
+      "verdict": "cross_host"
+    },
+    {
+      "root": "WeixinJSBridge",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "Window",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": true,
+        "wechat": null
+      },
+      "existingHosts": [
+        "edge"
+      ],
+      "verdict": "host_exclusive_unmapped"
+    },
+    {
+      "root": "XMLHttpRequest",
+      "knownHostRoot": true,
+      "mappedRuntimeId": "e5-edge-headless",
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": true,
+        "wechat": null
+      },
+      "existingHosts": [
+        "edge"
+      ],
+      "verdict": "host_exclusive_mapped"
+    },
+    {
+      "root": "Z",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "__VUE_SSR_CONTEXT__",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "__appServiceSDK__",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "__dirname",
+      "knownHostRoot": false,
+      "mappedRuntimeId": "e2-node-24.21.0",
+      "exists": {
+        "language": false,
+        "node": true,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [
+        "node"
+      ],
+      "verdict": "host_exclusive_mapped"
+    },
+    {
+      "root": "__subContextEngine__",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "__wxConfig",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": true
+      },
+      "existingHosts": [
+        "wechat"
+      ],
+      "verdict": "host_exclusive_unmapped"
+    },
+    {
+      "root": "_appNavigater",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "_array_like_to_array",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "_array_with_holes",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "_array_without_holes",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "_chooseImage",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "_classCallCheck2",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "_constants",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "_createClass2",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "_define_property",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "_index",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "_iterable_to_array",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "_iterable_to_array_limit",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "_non_iterable_rest",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "_non_iterable_spread",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "_require",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "_require2",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "_size",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "_type",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "_typeof",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "_typeof3",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "_unsupported_iterable_to_array",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "_util",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "_utils",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "a",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "active",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "aesjs",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "api",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "app",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "array",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "arrayLikeToArray",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "arrayWithHoles",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "arrayWithoutHoles",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "assertThisInitialized",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "atob",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": true,
+        "edge": true,
+        "wechat": true
+      },
+      "existingHosts": [
+        "node",
+        "edge",
+        "wechat"
+      ],
+      "verdict": "cross_host"
+    },
+    {
+      "root": "b",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "btoa",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": true,
+        "edge": true,
+        "wechat": null
+      },
+      "existingHosts": [
+        "node",
+        "edge"
+      ],
+      "verdict": "cross_host"
+    },
+    {
+      "root": "buildInAppellationObj",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "c",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "c1",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "c2",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "c3",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "calc",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "cb",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "checkLogin",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "clearImmediate",
+      "knownHostRoot": true,
+      "mappedRuntimeId": "e2-node-24.21.0",
+      "exists": {
+        "language": false,
+        "node": true,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [
+        "node"
+      ],
+      "verdict": "host_exclusive_mapped"
+    },
+    {
+      "root": "clearInterval",
+      "knownHostRoot": true,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": true,
+        "edge": true,
+        "wechat": true
+      },
+      "existingHosts": [
+        "node",
+        "edge",
+        "wechat"
+      ],
+      "verdict": "cross_host"
+    },
+    {
+      "root": "clearTimeout",
+      "knownHostRoot": true,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": true,
+        "edge": true,
+        "wechat": true
+      },
+      "existingHosts": [
+        "node",
+        "edge",
+        "wechat"
+      ],
+      "verdict": "cross_host"
+    },
+    {
+      "root": "close",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": true,
+        "wechat": null
+      },
+      "existingHosts": [
+        "edge"
+      ],
+      "verdict": "host_exclusive_unmapped"
+    },
+    {
+      "root": "cloud",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "colorIndex",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "complete",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "config",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "console",
+      "knownHostRoot": true,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": true,
+        "edge": true,
+        "wechat": true
+      },
+      "existingHosts": [
+        "node",
+        "edge",
+        "wechat"
+      ],
+      "verdict": "cross_host"
+    },
+    {
+      "root": "constructor",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": true,
+        "edge": true,
+        "wechat": true
+      },
+      "existingHosts": [
+        "node",
+        "edge",
+        "wechat"
+      ],
+      "verdict": "cross_host"
+    },
+    {
+      "root": "crypto",
+      "knownHostRoot": true,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": true,
+        "edge": true,
+        "wechat": null
+      },
+      "existingHosts": [
+        "node",
+        "edge"
+      ],
+      "verdict": "cross_host"
+    },
+    {
+      "root": "currentTime",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "d",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "data",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "debugInfo",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "decrypt",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "default",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "define",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": true
+      },
+      "existingHosts": [
+        "wechat"
+      ],
+      "verdict": "host_exclusive_unmapped"
+    },
+    {
+      "root": "defineProperty",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "describe",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "devices_list",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "document",
+      "knownHostRoot": true,
+      "mappedRuntimeId": "e5-edge-headless",
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": true,
+        "wechat": null
+      },
+      "existingHosts": [
+        "edge"
+      ],
+      "verdict": "host_exclusive_mapped"
+    },
+    {
+      "root": "e",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "encrypt",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "exports",
+      "knownHostRoot": true,
+      "mappedRuntimeId": "e2-node-24.21.0",
+      "exists": {
+        "language": false,
+        "node": true,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [
+        "node"
+      ],
+      "verdict": "host_exclusive_mapped"
+    },
+    {
+      "root": "f",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": true
+      },
+      "existingHosts": [
+        "wechat"
+      ],
+      "verdict": "host_exclusive_unmapped"
+    },
+    {
+      "root": "fetch",
+      "knownHostRoot": true,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": true,
+        "edge": true,
+        "wechat": null
+      },
+      "existingHosts": [
+        "node",
+        "edge"
+      ],
+      "verdict": "cross_host"
+    },
+    {
+      "root": "filterCode",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "first_scene",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "getApp",
+      "knownHostRoot": true,
+      "mappedRuntimeId": "e4-wechat-real",
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": true
+      },
+      "existingHosts": [
+        "wechat"
+      ],
+      "verdict": "host_exclusive_mapped"
+    },
+    {
+      "root": "getCurrentPages",
+      "knownHostRoot": true,
+      "mappedRuntimeId": "e4-wechat-real",
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": true
+      },
+      "existingHosts": [
+        "wechat"
+      ],
+      "verdict": "host_exclusive_mapped"
+    },
+    {
+      "root": "getItem",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "getPrototypeOf",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "gl",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "global",
+      "knownHostRoot": true,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": true,
+        "edge": true,
+        "wechat": null
+      },
+      "existingHosts": [
+        "node",
+        "edge"
+      ],
+      "verdict": "cross_host"
+    },
+    {
+      "root": "gra",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": true
+      },
+      "existingHosts": [
+        "wechat"
+      ],
+      "verdict": "host_exclusive_unmapped"
+    },
+    {
+      "root": "grb",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": true
+      },
+      "existingHosts": [
+        "wechat"
+      ],
+      "verdict": "host_exclusive_unmapped"
+    },
+    {
+      "root": "h",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "i",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "importScripts",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "index",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "ios",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "isCall",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "isNativeReflectConstruct",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "isRunning",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "iterableToArray",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "iterableToArrayLimit",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "l",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "layer",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "loader",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "localStorage",
+      "knownHostRoot": true,
+      "mappedRuntimeId": "e5-edge-headless",
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": true,
+        "wechat": null
+      },
+      "existingHosts": [
+        "edge"
+      ],
+      "verdict": "host_exclusive_mapped"
+    },
+    {
+      "root": "location",
+      "knownHostRoot": true,
+      "mappedRuntimeId": "e5-edge-headless",
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": true,
+        "wechat": null
+      },
+      "existingHosts": [
+        "edge"
+      ],
+      "verdict": "host_exclusive_mapped"
+    },
+    {
+      "root": "log",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "m",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "module",
+      "knownHostRoot": true,
+      "mappedRuntimeId": "e2-node-24.21.0",
+      "exists": {
+        "language": false,
+        "node": true,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [
+        "node"
+      ],
+      "verdict": "host_exclusive_mapped"
+    },
+    {
+      "root": "msg",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "my",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "n",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "navigator",
+      "knownHostRoot": true,
+      "mappedRuntimeId": "e5-edge-headless",
+      "exists": {
+        "language": false,
+        "node": true,
+        "edge": true,
+        "wechat": null
+      },
+      "existingHosts": [
+        "node",
+        "edge"
+      ],
+      "verdict": "cross_host"
+    },
+    {
+      "root": "node:assert",
+      "knownHostRoot": false,
+      "mappedRuntimeId": "e2-node-24.21.0",
+      "exists": {
+        "language": false,
+        "node": true,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [
+        "node"
+      ],
+      "verdict": "host_exclusive_mapped"
+    },
+    {
+      "root": "node:fs",
+      "knownHostRoot": false,
+      "mappedRuntimeId": "e2-node-24.21.0",
+      "exists": {
+        "language": false,
+        "node": true,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [
+        "node"
+      ],
+      "verdict": "host_exclusive_mapped"
+    },
+    {
+      "root": "node:path",
+      "knownHostRoot": false,
+      "mappedRuntimeId": "e2-node-24.21.0",
+      "exists": {
+        "language": false,
+        "node": true,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [
+        "node"
+      ],
+      "verdict": "host_exclusive_mapped"
+    },
+    {
+      "root": "nodeRequest",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nonIterableRest",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nonIterableSpread",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "noop",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nt_0",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nt_1",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nt_10",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nt_11",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nt_12",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nt_13",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nt_14",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nt_15",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nt_16",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nt_17",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nt_18",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nt_19",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nt_2",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nt_21",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nt_22",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nt_23",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nt_24",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nt_29",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nt_3",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nt_30",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nt_4",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nt_5",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nt_6",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nt_7",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nt_8",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nt_9",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nv_Array",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nv__startMovingY",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nv_address",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nv_colFormatVehicleInfo",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nv_colFormatVehicleState",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nv_const",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nv_fmt1",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nv_fmt2",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nv_formatColorName",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nv_formatStationName",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nv_formatVehicleInfo",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nv_getTvlWidth",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nv_instanceLen",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nv_navigator",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nv_nt_0",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nv_nt_1",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nv_nt_5",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nv_nt_6",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nv_owner",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nv_showBox",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nv_showLine",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nv_size",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nv_style",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nv_textViewInstance",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nv_v",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "nv_window",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "o",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "objectWithoutPropertiesLoose",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "off",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "on",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "onHide",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "orderId",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "p",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "possibleConstructorReturn",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "process",
+      "knownHostRoot": true,
+      "mappedRuntimeId": "e2-node-24.21.0",
+      "exists": {
+        "language": false,
+        "node": true,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [
+        "node"
+      ],
+      "verdict": "host_exclusive_mapped"
+    },
+    {
+      "root": "queueMicrotask",
+      "knownHostRoot": true,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": true,
+        "edge": true,
+        "wechat": null
+      },
+      "existingHosts": [
+        "node",
+        "edge"
+      ],
+      "verdict": "cross_host"
+    },
+    {
+      "root": "r",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "requestAnimationFrame",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": true,
+        "wechat": true
+      },
+      "existingHosts": [
+        "edge",
+        "wechat"
+      ],
+      "verdict": "cross_host"
+    },
+    {
+      "root": "require",
+      "knownHostRoot": true,
+      "mappedRuntimeId": "e2-node-24.21.0",
+      "exists": {
+        "language": false,
+        "node": true,
+        "edge": false,
+        "wechat": true
+      },
+      "existingHosts": [
+        "node",
+        "wechat"
+      ],
+      "verdict": "cross_host"
+    },
+    {
+      "root": "requireOnce",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": true
+      },
+      "existingHosts": [
+        "wechat"
+      ],
+      "verdict": "host_exclusive_unmapped"
+    },
+    {
+      "root": "res",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "resolve",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "result",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "root",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "run",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "s",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "savedAppid",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "selectedIds",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "self",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": true,
+        "wechat": true
+      },
+      "existingHosts": [
+        "edge",
+        "wechat"
+      ],
+      "verdict": "cross_host"
+    },
+    {
+      "root": "sessionStorage",
+      "knownHostRoot": true,
+      "mappedRuntimeId": "e5-edge-headless",
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": true,
+        "wechat": null
+      },
+      "existingHosts": [
+        "edge"
+      ],
+      "verdict": "host_exclusive_mapped"
+    },
+    {
+      "root": "setImmediate",
+      "knownHostRoot": true,
+      "mappedRuntimeId": "e2-node-24.21.0",
+      "exists": {
+        "language": false,
+        "node": true,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [
+        "node"
+      ],
+      "verdict": "host_exclusive_mapped"
+    },
+    {
+      "root": "setInterval",
+      "knownHostRoot": true,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": true,
+        "edge": true,
+        "wechat": true
+      },
+      "existingHosts": [
+        "node",
+        "edge",
+        "wechat"
+      ],
+      "verdict": "cross_host"
+    },
+    {
+      "root": "setItem",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "setPrototypeOf",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "setTimeout",
+      "knownHostRoot": true,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": true,
+        "edge": true,
+        "wechat": true
+      },
+      "existingHosts": [
+        "node",
+        "edge",
+        "wechat"
+      ],
+      "verdict": "cross_host"
+    },
+    {
+      "root": "snap_bb",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "song",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "stop",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": true,
+        "wechat": null
+      },
+      "existingHosts": [
+        "edge"
+      ],
+      "verdict": "host_exclusive_unmapped"
+    },
+    {
+      "root": "storage",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "superPropBase",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "swan",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "t",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "that",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "themeListeners",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "toPrimitive",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "toPropertyKey",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "toString",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": true,
+        "edge": true,
+        "wechat": null
+      },
+      "existingHosts": [
+        "node",
+        "edge"
+      ],
+      "verdict": "cross_host"
+    },
+    {
+      "root": "tt",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "u",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "uni",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "unsupportedIterableToArray",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "util",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "version",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "wh",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": true
+      },
+      "existingHosts": [
+        "wechat"
+      ],
+      "verdict": "host_exclusive_unmapped"
+    },
+    {
+      "root": "window",
+      "knownHostRoot": true,
+      "mappedRuntimeId": "e5-edge-headless",
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": true,
+        "wechat": true
+      },
+      "existingHosts": [
+        "edge",
+        "wechat"
+      ],
+      "verdict": "cross_host"
+    },
+    {
+      "root": "words",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "worker",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "ws",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "wx",
+      "knownHostRoot": true,
+      "mappedRuntimeId": "e4-wechat-real",
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": true
+      },
+      "existingHosts": [
+        "wechat"
+      ],
+      "verdict": "host_exclusive_mapped"
+    },
+    {
+      "root": "wxCommonHost",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "wx_login",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    },
+    {
+      "root": "x",
+      "knownHostRoot": false,
+      "mappedRuntimeId": null,
+      "exists": {
+        "language": false,
+        "node": false,
+        "edge": false,
+        "wechat": null
+      },
+      "existingHosts": [],
+      "verdict": "absent_everywhere"
+    }
+  ]
+}

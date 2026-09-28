@@ -1,0 +1,794 @@
+{
+  "corpusPath": "E:\\读论文\\R97\\datasets\\external-node-public\\real-miniapp-candidates.jsonl",
+  "sampling": {
+    "mode": "per-entity-cap",
+    "perEntityCap": 5
+  },
+  "rawRecordCount": 438,
+  "deduplicatedCount": 438,
+  "sampleCount": 438,
+  "entityView": {
+    "total": 165,
+    "fold": 46,
+    "protect": 31,
+    "unknown": 88,
+    "entitiesWithUnsafeFold": 0,
+    "foldRate": 0.2787878787878788,
+    "protectRate": 0.18787878787878787,
+    "unknownRate": 0.5333333333333333,
+    "decidableRate": 0.4666666666666667
+  },
+  "independentReference": {
+    "description": "判卷探针 r97-oracle-probe 在 e2-node-24.21.0 / e5-edge-headless 上的直接读取",
+    "oracleRuntimeIds": [
+      "e2-node-24.21.0",
+      "e5-edge-headless"
+    ],
+    "oracleInScope": true,
+    "targetRuntimeIds": [
+      "e1-ecmascript",
+      "e2-node-24.21.0",
+      "e5-edge-headless"
+    ],
+    "provenance": {
+      "runtimes": [
+        {
+          "runtimeId": "e1-ecmascript",
+          "probeImplementation": "r97-oracle-probe（隔离 vm，非宿主）",
+          "isHost": false,
+          "observedEntityCount": 165,
+          "collectedAt": null,
+          "versionProfile": null
+        },
+        {
+          "runtimeId": "e2-node-24.21.0",
+          "probeImplementation": "r97-oracle-probe",
+          "isHost": true,
+          "observedEntityCount": 165,
+          "collectedAt": null,
+          "versionProfile": "v24.21.0"
+        },
+        {
+          "runtimeId": "e5-edge-headless",
+          "probeImplementation": "r97-oracle-probe",
+          "isHost": true,
+          "observedEntityCount": 165,
+          "collectedAt": null,
+          "versionProfile": null
+        }
+      ]
+    },
+    "excluded": [],
+    "entityCount": 165,
+    "differentialEntityCount": 33,
+    "differentialRecordCount": 89,
+    "differentialEntities": [
+      "require",
+      "AbortSignal.any",
+      "AbortSignal.timeout",
+      "setTimeout",
+      "setImmediate",
+      "clearTimeout",
+      "process.env",
+      "AbortSignal.abort",
+      "__filename",
+      "structuredClone",
+      "Buffer.allocUnsafe",
+      "Buffer.from",
+      "Buffer.copyBytesFrom",
+      "process.on",
+      "Buffer",
+      "Buffer.alloc",
+      "process.argv.2",
+      "process.execPath",
+      "console.log",
+      "console.error"
+    ],
+    "differentialRoots": {
+      "process": 8,
+      "Buffer": 7,
+      "AbortSignal": 3,
+      "console": 2,
+      "globalThis": 2,
+      "require": 1,
+      "setTimeout": 1,
+      "setImmediate": 1,
+      "clearTimeout": 1,
+      "__filename": 1,
+      "structuredClone": 1,
+      "AbortController": 1,
+      "setInterval": 1,
+      "clearInterval": 1,
+      "SharedArrayBuffer": 1,
+      "CryptoKey": 1
+    },
+    "allowedFold": 135,
+    "allowedFoldOnDifferentialEntity": 0,
+    "allowedFoldOnDifferentialExamples": []
+  },
+  "evidenceAvailability": {
+    "language": true,
+    "node": true,
+    "wechat": false,
+    "browser": true
+  },
+  "runtimeEvidence": {
+    "wechat": null,
+    "browser": {
+      "runtimeId": "e5-edge-headless",
+      "observedEntityCount": 165,
+      "browserVersion": {
+        "product": "Edg/150.0.4078.83",
+        "revision": "@7f302606e52ab615d52e1a0ab89ca415c8c843a3",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0",
+        "protocolVersion": "1.3"
+      }
+    }
+  },
+  "byExpected": {
+    "PROTECT": 80,
+    "UNKNOWN": 215,
+    "FOLD": 143
+  },
+  "byActual": {
+    "PROTECT": 84,
+    "UNKNOWN": 219,
+    "FOLD": 135
+  },
+  "byTransformation": {
+    "CALL_EVAL": 338,
+    "BRANCH_PRUNE": 21,
+    "CONST_EVAL": 79
+  },
+  "byReasonCode": {
+    "ALL_TARGETS_MATCH": 227,
+    "CONTRACT_MISMATCH": 84,
+    "BINDING_UNRESOLVED": 211,
+    "EVIDENCE_MISSING": 8
+  },
+  "byUncertaintySource": {
+    "binding": 211,
+    "runtime": 8,
+    "behavior": 0
+  },
+  "byTargetRuntimeStatus": {
+    "confirmed": 438
+  },
+  "targetRuntimeImpact": {
+    "confirmed": {
+      "sampleCount": 438,
+      "unsafeFold": 0,
+      "overProtection": 8,
+      "overProtectionRate": 0.055944055944055944,
+      "blockedForUnconfirmedTarget": 0
+    }
+  },
+  "examples": [
+    {
+      "sampleId": "73343cf623aa3a2acef53662",
+      "project": "files",
+      "file": "test\\parallel\\test-abort-controller-any-timeout.js",
+      "entityId": "Promise.race",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "expected": "FOLD",
+      "actualState": "FOLD",
+      "actualAction": "ALLOW_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH"
+      ]
+    },
+    {
+      "sampleId": "d94b2290a280aa2b1a9e7dd7",
+      "project": "files",
+      "file": "test\\parallel\\test-abort-controller-any-timeout.js",
+      "entityId": "Promise",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "expected": "FOLD",
+      "actualState": "FOLD",
+      "actualAction": "ALLOW_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH"
+      ]
+    },
+    {
+      "sampleId": "ed2b0b777ad179c9313d9878",
+      "project": "files",
+      "file": "test\\parallel\\test-bench-errors.js",
+      "entityId": "Promise",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "expected": "FOLD",
+      "actualState": "FOLD",
+      "actualAction": "ALLOW_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH"
+      ]
+    },
+    {
+      "sampleId": "e57fb874424410087ce66983",
+      "project": "files",
+      "file": "test\\parallel\\test-abort-controller-any-timeout.js",
+      "entityId": "globalThis.gc",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "expected": "FOLD",
+      "actualState": "FOLD",
+      "actualAction": "ALLOW_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH"
+      ]
+    },
+    {
+      "sampleId": "fb20aef9f6d88116f966a36e",
+      "project": "files",
+      "file": "test\\parallel\\test-async-hooks-disable-gc-tracking.js",
+      "entityId": "globalThis.gc",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "expected": "FOLD",
+      "actualState": "FOLD",
+      "actualAction": "ALLOW_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH"
+      ]
+    },
+    {
+      "sampleId": "b9446b4ffab126d91c20cbac",
+      "project": "files",
+      "file": "test\\parallel\\test-assert-deep-with-error.js",
+      "entityId": "process.env.NODE_DISABLE_COLORS",
+      "transformationKind": "CONST_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "expected": "FOLD",
+      "actualState": "UNKNOWN",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": "runtime",
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "EVIDENCE_MISSING"
+      ]
+    },
+    {
+      "sampleId": "f06f12e7f550b67667ef6b2b",
+      "project": "files",
+      "file": "test\\parallel\\test-assert-deep-with-error.js",
+      "entityId": "Error",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "expected": "FOLD",
+      "actualState": "FOLD",
+      "actualAction": "ALLOW_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH"
+      ]
+    },
+    {
+      "sampleId": "56fdb7399acdce75aecf0a0a",
+      "project": "files",
+      "file": "test\\parallel\\test-assert-deep-with-error.js",
+      "entityId": "Error",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "expected": "FOLD",
+      "actualState": "FOLD",
+      "actualAction": "ALLOW_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH"
+      ]
+    },
+    {
+      "sampleId": "1eb93c41211a8dabb93fc0c5",
+      "project": "files",
+      "file": "test\\parallel\\test-diagnostics-channel-tracing-channel-context.js",
+      "entityId": "Error",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "expected": "FOLD",
+      "actualState": "FOLD",
+      "actualAction": "ALLOW_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH"
+      ]
+    },
+    {
+      "sampleId": "8d96f0db0f2ebde7d2774ea2",
+      "project": "files",
+      "file": "test\\parallel\\test-assert-deep-with-error.js",
+      "entityId": "Error",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "expected": "FOLD",
+      "actualState": "FOLD",
+      "actualAction": "ALLOW_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH"
+      ]
+    },
+    {
+      "sampleId": "0dfac0cb287fa86c4479cc8b",
+      "project": "files",
+      "file": "test\\parallel\\test-debugger-probe-narrow-suffix.js",
+      "entityId": "require",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "expected": "PROTECT",
+      "actualState": "PROTECT",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ]
+    },
+    {
+      "sampleId": "77210dd3f7116a8b0feda302",
+      "project": "files",
+      "file": "test\\parallel\\test-abort-controller-any-timeout.js",
+      "entityId": "require",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "expected": "PROTECT",
+      "actualState": "PROTECT",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ]
+    },
+    {
+      "sampleId": "9242b7c679aa8ede9119a47d",
+      "project": "files",
+      "file": "test\\parallel\\test-crypto-dh.js",
+      "entityId": "require",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "expected": "PROTECT",
+      "actualState": "PROTECT",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ]
+    },
+    {
+      "sampleId": "d9c0753aaa125c4485da5c87",
+      "project": "files",
+      "file": "test\\parallel\\test-child-process-exec-encoding.js",
+      "entityId": "require",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "expected": "PROTECT",
+      "actualState": "PROTECT",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ]
+    },
+    {
+      "sampleId": "d13160ae3dd12b01410dc4a8",
+      "project": "files",
+      "file": "test\\parallel\\test-debugger-restart-message.js",
+      "entityId": "require",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "expected": "PROTECT",
+      "actualState": "PROTECT",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ]
+    },
+    {
+      "sampleId": "7222ed2ba20fa1c30adc6b2d",
+      "project": "files",
+      "file": "test\\parallel\\test-abort-controller-any-timeout.js",
+      "entityId": "AbortSignal.any",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "expected": "PROTECT",
+      "actualState": "PROTECT",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ]
+    },
+    {
+      "sampleId": "c7bd4db96b78c8956e333401",
+      "project": "files",
+      "file": "test\\parallel\\test-abort-controller-any-timeout.js",
+      "entityId": "AbortSignal.timeout",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "expected": "PROTECT",
+      "actualState": "PROTECT",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ]
+    },
+    {
+      "sampleId": "afbd9d5782c6827c2084f460",
+      "project": "files",
+      "file": "test\\parallel\\test-abort-controller-any-timeout.js",
+      "entityId": "AbortSignal.timeout",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "expected": "PROTECT",
+      "actualState": "PROTECT",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ]
+    },
+    {
+      "sampleId": "e69dd527a1883f7f78d78f40",
+      "project": "files",
+      "file": "test\\parallel\\test-abort-controller-any-timeout.js",
+      "entityId": "setTimeout",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "expected": "PROTECT",
+      "actualState": "PROTECT",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ]
+    },
+    {
+      "sampleId": "bedf36dc200de405fa428a00",
+      "project": "files",
+      "file": "test\\parallel\\test-child-process-fork-abort-signal.js",
+      "entityId": "setTimeout",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "expected": "PROTECT",
+      "actualState": "PROTECT",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ]
+    },
+    {
+      "sampleId": "345def9dd9c2c75ba9933c4d",
+      "project": "files",
+      "file": "test\\parallel\\test-abort-controller-any-timeout.js",
+      "entityId": "common.platformTimeout",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "module_import",
+      "resolutionStatus": "resolved",
+      "expected": "UNKNOWN",
+      "actualState": "UNKNOWN",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": "binding",
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "BINDING_UNRESOLVED"
+      ]
+    },
+    {
+      "sampleId": "94ebd85385667b3ac8c85a49",
+      "project": "files",
+      "file": "test\\parallel\\test-abort-controller-any-timeout.js",
+      "entityId": "common.platformTimeout",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "module_import",
+      "resolutionStatus": "resolved",
+      "expected": "UNKNOWN",
+      "actualState": "UNKNOWN",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": "binding",
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "BINDING_UNRESOLVED"
+      ]
+    },
+    {
+      "sampleId": "c842e66c6335d3dd4a53beaf",
+      "project": "files",
+      "file": "test\\parallel\\test-diagnostics-channel-http2-client-stream-close.js",
+      "entityId": "common.mustCall",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "module_import",
+      "resolutionStatus": "resolved",
+      "expected": "UNKNOWN",
+      "actualState": "UNKNOWN",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": "binding",
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "BINDING_UNRESOLVED"
+      ]
+    },
+    {
+      "sampleId": "42fc0355d0844e100e6b2a5d",
+      "project": "files",
+      "file": "test\\parallel\\test-async-hooks-promise.js",
+      "entityId": "common.mustCall",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "module_import",
+      "resolutionStatus": "resolved",
+      "expected": "UNKNOWN",
+      "actualState": "UNKNOWN",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": "binding",
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "BINDING_UNRESOLVED"
+      ]
+    },
+    {
+      "sampleId": "539168ee85a4c964bc0a83c5",
+      "project": "files",
+      "file": "test\\parallel\\test-dgram-custom-lookup.js",
+      "entityId": "common.mustCall",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "module_import",
+      "resolutionStatus": "resolved",
+      "expected": "UNKNOWN",
+      "actualState": "UNKNOWN",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": "binding",
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "BINDING_UNRESOLVED"
+      ]
+    },
+    {
+      "sampleId": "76fc5feb5b97f6265a7e7123",
+      "project": "files",
+      "file": "test\\parallel\\test-domain-timers-uncaught-exception.js",
+      "entityId": "common.mustCall",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "module_import",
+      "resolutionStatus": "resolved",
+      "expected": "UNKNOWN",
+      "actualState": "UNKNOWN",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": "binding",
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "BINDING_UNRESOLVED"
+      ]
+    },
+    {
+      "sampleId": "18bbbf9ae9f60c8c4ffe3d12",
+      "project": "files",
+      "file": "test\\parallel\\test-async-local-storage-exit-does-not-leak.js",
+      "entityId": "common.mustCall",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "module_import",
+      "resolutionStatus": "resolved",
+      "expected": "UNKNOWN",
+      "actualState": "UNKNOWN",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": "binding",
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "BINDING_UNRESOLVED"
+      ]
+    },
+    {
+      "sampleId": "8a133deda0d5cae08c0a253a",
+      "project": "files",
+      "file": "test\\parallel\\test-dns-lookup.js",
+      "entityId": "assert.rejects",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "module_import",
+      "resolutionStatus": "resolved",
+      "expected": "UNKNOWN",
+      "actualState": "UNKNOWN",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": "binding",
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "BINDING_UNRESOLVED"
+      ]
+    },
+    {
+      "sampleId": "c6e878f4514f27fa5afccf8c",
+      "project": "files",
+      "file": "test\\parallel\\test-blob-file-backed.js",
+      "entityId": "assert.rejects",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "module_import",
+      "resolutionStatus": "resolved",
+      "expected": "UNKNOWN",
+      "actualState": "UNKNOWN",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": "binding",
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "BINDING_UNRESOLVED"
+      ]
+    },
+    {
+      "sampleId": "a0e395550bcd366e031409f3",
+      "project": "files",
+      "file": "test\\parallel\\test-blob-file-backed.js",
+      "entityId": "assert.rejects",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "module_import",
+      "resolutionStatus": "resolved",
+      "expected": "UNKNOWN",
+      "actualState": "UNKNOWN",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": "binding",
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "BINDING_UNRESOLVED"
+      ]
+    }
+  ],
+  "metrics": {
+    "A0-aggressive-fold": {
+      "total": 438,
+      "allowedFold": 438,
+      "blockedFold": 0,
+      "unsafeFold": 295,
+      "unsafeFoldMeasured": 89,
+      "usefulFold": 143,
+      "overProtection": 0,
+      "unknown": 0,
+      "correctState": 143,
+      "foldRate": 1,
+      "unknownRate": 0,
+      "decidableRate": 1,
+      "unsafeFoldMeasuredRate": 0.20319634703196346,
+      "exactStateAccuracy": 0.3264840182648402,
+      "safeFoldCoverage": 1,
+      "overProtectionRate": 0,
+      "unsafeFoldRate": 1,
+      "blockedNonFoldRate": 0
+    },
+    "A1-legacy-blacklist": {
+      "total": 438,
+      "allowedFold": 303,
+      "blockedFold": 135,
+      "unsafeFold": 208,
+      "unsafeFoldMeasured": 3,
+      "usefulFold": 95,
+      "overProtection": 48,
+      "unknown": 0,
+      "correctState": 173,
+      "foldRate": 0.6917808219178082,
+      "unknownRate": 0,
+      "decidableRate": 1,
+      "unsafeFoldMeasuredRate": 0.009900990099009901,
+      "exactStateAccuracy": 0.3949771689497717,
+      "safeFoldCoverage": 0.6643356643356644,
+      "overProtectionRate": 0.3356643356643357,
+      "unsafeFoldRate": 0.7050847457627119,
+      "blockedNonFoldRate": 0.29491525423728815
+    },
+    "A2-prefix-blacklist": {
+      "total": 438,
+      "allowedFold": 368,
+      "blockedFold": 70,
+      "unsafeFold": 233,
+      "unsafeFoldMeasured": 28,
+      "usefulFold": 135,
+      "overProtection": 8,
+      "unknown": 0,
+      "correctState": 193,
+      "foldRate": 0.8401826484018264,
+      "unknownRate": 0,
+      "decidableRate": 1,
+      "unsafeFoldMeasuredRate": 0.07608695652173914,
+      "exactStateAccuracy": 0.4406392694063927,
+      "safeFoldCoverage": 0.9440559440559441,
+      "overProtectionRate": 0.055944055944055944,
+      "unsafeFoldRate": 0.7898305084745763,
+      "blockedNonFoldRate": 0.21016949152542372
+    },
+    "A-safe-all-protect": {
+      "total": 438,
+      "allowedFold": 0,
+      "blockedFold": 438,
+      "unsafeFold": 0,
+      "unsafeFoldMeasured": 0,
+      "usefulFold": 0,
+      "overProtection": 143,
+      "unknown": 0,
+      "correctState": 80,
+      "foldRate": 0,
+      "unknownRate": 0,
+      "decidableRate": 1,
+      "unsafeFoldMeasuredRate": 0,
+      "exactStateAccuracy": 0.182648401826484,
+      "safeFoldCoverage": 0,
+      "overProtectionRate": 1,
+      "unsafeFoldRate": 0,
+      "blockedNonFoldRate": 1
+    },
+    "R97-full": {
+      "total": 438,
+      "allowedFold": 135,
+      "blockedFold": 303,
+      "unsafeFold": 0,
+      "unsafeFoldMeasured": 0,
+      "usefulFold": 135,
+      "overProtection": 8,
+      "unknown": 219,
+      "correctState": 426,
+      "foldRate": 0.3082191780821918,
+      "unknownRate": 0.5,
+      "decidableRate": 0.5,
+      "unsafeFoldMeasuredRate": 0,
+      "exactStateAccuracy": 0.9726027397260274,
+      "safeFoldCoverage": 0.9440559440559441,
+      "overProtectionRate": 0.055944055944055944,
+      "unsafeFoldRate": 0,
+      "blockedNonFoldRate": 1,
+      "elapsedMs": 65.8701000000001,
+      "decisionsPerSecond": 6649.450964853543
+    }
+  },
+  "foldRateConfidence": null
+}

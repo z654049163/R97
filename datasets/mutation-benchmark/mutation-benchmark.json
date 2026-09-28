@@ -1,0 +1,547 @@
+{
+  "generatedAt": "2026-09-23T08:53:27.524Z",
+  "caseCount": 21,
+  "assertedCount": 20,
+  "passedCount": 20,
+  "failedCount": 0,
+  "knownLimitationCount": 1,
+  "byFamily": {
+    "binding-shadowing": {
+      "total": 4,
+      "passed": 4,
+      "failed": 0
+    },
+    "alias-resolution": {
+      "total": 5,
+      "passed": 5,
+      "failed": 0
+    },
+    "dynamic-property": {
+      "total": 3,
+      "passed": 3,
+      "failed": 0
+    },
+    "runtime-attribution": {
+      "total": 5,
+      "passed": 5,
+      "failed": 0
+    },
+    "transformation-aware": {
+      "total": 3,
+      "passed": 3,
+      "failed": 0
+    }
+  },
+  "results": [
+    {
+      "family": "binding-shadowing",
+      "caseId": "shadow-local-const",
+      "source": "const wx = {}; wx.request({});",
+      "knownLimitation": false,
+      "note": null,
+      "passed": true,
+      "failure": null,
+      "observed": []
+    },
+    {
+      "family": "binding-shadowing",
+      "caseId": "shadow-function-parameter",
+      "source": "function f(wx) { wx.request({}); }",
+      "knownLimitation": false,
+      "note": null,
+      "passed": true,
+      "failure": null,
+      "observed": []
+    },
+    {
+      "family": "binding-shadowing",
+      "caseId": "shadow-inner-scope",
+      "source": "function f() { const wx = {}; wx.request({}); }",
+      "knownLimitation": false,
+      "note": null,
+      "passed": true,
+      "failure": null,
+      "observed": []
+    },
+    {
+      "family": "binding-shadowing",
+      "caseId": "shadow-var-declaration",
+      "source": "var wx; wx.request({});",
+      "knownLimitation": false,
+      "note": null,
+      "passed": true,
+      "failure": null,
+      "observed": []
+    },
+    {
+      "family": "alias-resolution",
+      "caseId": "alias-const",
+      "source": "const w = wx; w.request({});",
+      "knownLimitation": false,
+      "note": null,
+      "passed": true,
+      "failure": null,
+      "observed": [
+        {
+          "entityId": "wx",
+          "bindingKind": "runtime_global",
+          "requiredRuntimeIds": [
+            "e4-wechat-real"
+          ],
+          "requiredRuntimeStatus": "definite",
+          "requiredDimensions": [
+            "existence",
+            "type"
+          ]
+        },
+        {
+          "entityId": "wx.request",
+          "bindingKind": "runtime_global",
+          "requiredRuntimeIds": [
+            "e4-wechat-real"
+          ],
+          "requiredRuntimeStatus": "definite",
+          "requiredDimensions": [
+            "callability",
+            "existence",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "family": "alias-resolution",
+      "caseId": "alias-const-chain",
+      "source": "const w = wx; const v = w; v.request({});",
+      "knownLimitation": false,
+      "note": null,
+      "passed": true,
+      "failure": null,
+      "observed": [
+        {
+          "entityId": "wx",
+          "bindingKind": "runtime_global",
+          "requiredRuntimeIds": [
+            "e4-wechat-real"
+          ],
+          "requiredRuntimeStatus": "definite",
+          "requiredDimensions": [
+            "existence",
+            "type"
+          ]
+        },
+        {
+          "entityId": "wx",
+          "bindingKind": "runtime_global",
+          "requiredRuntimeIds": [
+            "e4-wechat-real"
+          ],
+          "requiredRuntimeStatus": "definite",
+          "requiredDimensions": [
+            "existence",
+            "type"
+          ]
+        },
+        {
+          "entityId": "wx.request",
+          "bindingKind": "runtime_global",
+          "requiredRuntimeIds": [
+            "e4-wechat-real"
+          ],
+          "requiredRuntimeStatus": "definite",
+          "requiredDimensions": [
+            "callability",
+            "existence",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "family": "alias-resolution",
+      "caseId": "alias-let-stable",
+      "source": "let w = wx; w.request({});",
+      "knownLimitation": false,
+      "note": null,
+      "passed": true,
+      "failure": null,
+      "observed": [
+        {
+          "entityId": "wx",
+          "bindingKind": "runtime_global",
+          "requiredRuntimeIds": [
+            "e4-wechat-real"
+          ],
+          "requiredRuntimeStatus": "definite",
+          "requiredDimensions": [
+            "existence",
+            "type"
+          ]
+        },
+        {
+          "entityId": "wx.request",
+          "bindingKind": "runtime_global",
+          "requiredRuntimeIds": [
+            "e4-wechat-real"
+          ],
+          "requiredRuntimeStatus": "definite",
+          "requiredDimensions": [
+            "callability",
+            "existence",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "family": "alias-resolution",
+      "caseId": "alias-let-mutated",
+      "source": "let w = wx; w = {}; w.request({});",
+      "knownLimitation": false,
+      "note": null,
+      "passed": true,
+      "failure": null,
+      "observed": [
+        {
+          "entityId": "wx",
+          "bindingKind": "runtime_global",
+          "requiredRuntimeIds": [
+            "e4-wechat-real"
+          ],
+          "requiredRuntimeStatus": "definite",
+          "requiredDimensions": [
+            "existence",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "family": "alias-resolution",
+      "caseId": "alias-assigned-after-declaration",
+      "source": "let w; w = wx; w.request({});",
+      "knownLimitation": false,
+      "note": null,
+      "passed": true,
+      "failure": null,
+      "observed": [
+        {
+          "entityId": "wx",
+          "bindingKind": "runtime_global",
+          "requiredRuntimeIds": [
+            "e4-wechat-real"
+          ],
+          "requiredRuntimeStatus": "definite",
+          "requiredDimensions": [
+            "existence",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "family": "alias-resolution",
+      "caseId": "alias-used-before-declaration",
+      "source": "w.request({}); const w = wx;",
+      "knownLimitation": true,
+      "note": "别名解析缺少 TDZ 守卫，仍按 wx.request 展开；结果是更保守而不是更宽松。",
+      "passed": true,
+      "failure": null,
+      "observed": [
+        {
+          "entityId": "wx.request",
+          "bindingKind": "runtime_global",
+          "requiredRuntimeIds": [
+            "e4-wechat-real"
+          ],
+          "requiredRuntimeStatus": "definite",
+          "requiredDimensions": [
+            "callability",
+            "existence",
+            "type"
+          ]
+        },
+        {
+          "entityId": "wx",
+          "bindingKind": "runtime_global",
+          "requiredRuntimeIds": [
+            "e4-wechat-real"
+          ],
+          "requiredRuntimeStatus": "definite",
+          "requiredDimensions": [
+            "existence",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "family": "dynamic-property",
+      "caseId": "dynamic-const-key",
+      "source": "const k = \"request\"; wx[k]({});",
+      "knownLimitation": false,
+      "note": null,
+      "passed": true,
+      "failure": null,
+      "observed": [
+        {
+          "entityId": "wx.request",
+          "bindingKind": "runtime_global",
+          "requiredRuntimeIds": [
+            "e4-wechat-real"
+          ],
+          "requiredRuntimeStatus": "definite",
+          "requiredDimensions": [
+            "callability",
+            "existence",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "family": "dynamic-property",
+      "caseId": "dynamic-computed-key",
+      "source": "const k = getKey(); wx[k]({});",
+      "knownLimitation": false,
+      "note": null,
+      "passed": true,
+      "failure": null,
+      "observed": [
+        {
+          "entityId": "getKey",
+          "bindingKind": "unresolved_global",
+          "requiredRuntimeIds": [],
+          "requiredRuntimeStatus": null,
+          "requiredDimensions": [
+            "callability",
+            "existence",
+            "return_value",
+            "type"
+          ]
+        },
+        {
+          "entityId": "wx",
+          "bindingKind": "dynamic",
+          "requiredRuntimeIds": [
+            "e4-wechat-real"
+          ],
+          "requiredRuntimeStatus": "possible",
+          "requiredDimensions": [
+            "callability",
+            "existence",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "family": "dynamic-property",
+      "caseId": "dynamic-inline-call-key",
+      "source": "wx[getKey()]();",
+      "knownLimitation": false,
+      "note": null,
+      "passed": true,
+      "failure": null,
+      "observed": [
+        {
+          "entityId": "wx",
+          "bindingKind": "dynamic",
+          "requiredRuntimeIds": [
+            "e4-wechat-real"
+          ],
+          "requiredRuntimeStatus": "possible",
+          "requiredDimensions": [
+            "callability",
+            "existence",
+            "type"
+          ]
+        },
+        {
+          "entityId": "getKey",
+          "bindingKind": "unresolved_global",
+          "requiredRuntimeIds": [],
+          "requiredRuntimeStatus": null,
+          "requiredDimensions": [
+            "callability",
+            "existence",
+            "return_value",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "family": "runtime-attribution",
+      "caseId": "runtime-node",
+      "source": "process.version;",
+      "knownLimitation": false,
+      "note": null,
+      "passed": true,
+      "failure": null,
+      "observed": [
+        {
+          "entityId": "process.version",
+          "bindingKind": "runtime_global",
+          "requiredRuntimeIds": [
+            "e2-node-24.21.0"
+          ],
+          "requiredRuntimeStatus": "definite",
+          "requiredDimensions": [
+            "existence",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "family": "runtime-attribution",
+      "caseId": "runtime-node-buffer",
+      "source": "Buffer.from(\"abc\");",
+      "knownLimitation": false,
+      "note": null,
+      "passed": true,
+      "failure": null,
+      "observed": [
+        {
+          "entityId": "Buffer.from",
+          "bindingKind": "runtime_global",
+          "requiredRuntimeIds": [
+            "e2-node-24.21.0"
+          ],
+          "requiredRuntimeStatus": "definite",
+          "requiredDimensions": [
+            "callability",
+            "existence",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "family": "runtime-attribution",
+      "caseId": "runtime-browser",
+      "source": "window.document;",
+      "knownLimitation": false,
+      "note": null,
+      "passed": true,
+      "failure": null,
+      "observed": [
+        {
+          "entityId": "window.document",
+          "bindingKind": "runtime_global",
+          "requiredRuntimeIds": [
+            "e5-edge-headless"
+          ],
+          "requiredRuntimeStatus": "definite",
+          "requiredDimensions": [
+            "existence",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "family": "runtime-attribution",
+      "caseId": "runtime-language-builtin",
+      "source": "Math.max(1, 2);",
+      "knownLimitation": false,
+      "note": null,
+      "passed": true,
+      "failure": null,
+      "observed": [
+        {
+          "entityId": "Math.max",
+          "bindingKind": "runtime_global",
+          "requiredRuntimeIds": [],
+          "requiredRuntimeStatus": null,
+          "requiredDimensions": [
+            "callability",
+            "existence",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "family": "runtime-attribution",
+      "caseId": "runtime-pure-computation",
+      "source": "1 + 2;",
+      "knownLimitation": false,
+      "note": null,
+      "passed": true,
+      "failure": null,
+      "observed": []
+    },
+    {
+      "family": "transformation-aware",
+      "caseId": "transformation-call-requires-callability",
+      "source": "wx.setStorageSync(\"a\", 1);",
+      "knownLimitation": false,
+      "note": null,
+      "passed": true,
+      "failure": null,
+      "observed": [
+        {
+          "entityId": "wx.setStorageSync",
+          "bindingKind": "runtime_global",
+          "requiredRuntimeIds": [
+            "e4-wechat-real"
+          ],
+          "requiredRuntimeStatus": "definite",
+          "requiredDimensions": [
+            "callability",
+            "existence",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "family": "transformation-aware",
+      "caseId": "transformation-branch-needs-no-callability",
+      "source": "if (wx.setStorageSync) {}",
+      "knownLimitation": false,
+      "note": null,
+      "passed": true,
+      "failure": null,
+      "observed": [
+        {
+          "entityId": "wx.setStorageSync",
+          "bindingKind": "runtime_global",
+          "requiredRuntimeIds": [
+            "e4-wechat-real"
+          ],
+          "requiredRuntimeStatus": "definite",
+          "requiredDimensions": [
+            "existence",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "family": "transformation-aware",
+      "caseId": "transformation-typeof-needs-no-callability",
+      "source": "typeof wx.setStorageSync;",
+      "knownLimitation": false,
+      "note": null,
+      "passed": true,
+      "failure": null,
+      "observed": [
+        {
+          "entityId": "wx.setStorageSync",
+          "bindingKind": "runtime_global",
+          "requiredRuntimeIds": [
+            "e4-wechat-real"
+          ],
+          "requiredRuntimeStatus": "definite",
+          "requiredDimensions": [
+            "existence",
+            "type"
+          ]
+        }
+      ]
+    }
+  ]
+}

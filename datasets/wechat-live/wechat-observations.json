@@ -1,0 +1,7222 @@
+{
+  "runtimeId": "e4-wechat-real",
+  "provenance": "runtime_observed",
+  "observations": {
+    "$gwx": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "d563c97f64d1643d6e630aec"
+    },
+    "console.warn": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "54b123435bfb64e182dffb06"
+    },
+    "$gwn": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "3f6016624b10f1c37dd4e2d4"
+    },
+    "$gwl": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "ec3528e076aee76449aaf7f4"
+    },
+    "console.log": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "ed61ba384fca95dbe2763e42"
+    },
+    "wh": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "object",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "43b01c8a3977099784ccc9ef"
+    },
+    "wh.hn": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "62c9959af654ff03720c8bb3"
+    },
+    "wh.rv": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "e978c1ff7149af4b5b1f6b47"
+    },
+    "wh.nh": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "76b1d5a68393a8c27be5de6f"
+    },
+    "undefined": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "undefined",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "907ce0d761667a861475ef79"
+    },
+    "console.error": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "58da099fe7dc4dae8fed9fda"
+    },
+    "gra": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "9f09e4fae1c864a87ba97492"
+    },
+    "grb": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "c87124d94c4072ba3cfa8ff2"
+    },
+    "JSON.stringify": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "b8382077d5a2ee97d231dd6f"
+    },
+    "Object.prototype.toString.call": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "eff3842420745b86318c80d1"
+    },
+    "Object.prototype.toString": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "ac2381f6ca430e6bd0bb4c87"
+    },
+    "Object.prototype": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "object",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "169ac078545e91a9d9d44f70"
+    },
+    "Object.defineProperty": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "c9d3c2f88e7ab7b2efa92a84"
+    },
+    "Array.prototype": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "object",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "022ebd6ea94ff61c61cf6707"
+    },
+    "Array.prototype.concat": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "f37909dff6a020da70776e2a"
+    },
+    "Array.prototype.pop": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "fbd6e02071c7f5e4219473de"
+    },
+    "Array.prototype.push": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "4dd4fd0028ff30d74bad36db"
+    },
+    "Array.prototype.reverse": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "d89d75700574d2dfee93fce0"
+    },
+    "Array.prototype.shift": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "13e0d7af2bcbdf42652f3fda"
+    },
+    "Array.prototype.slice": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "24f29d2de0310a91b2c3491c"
+    },
+    "Array.prototype.sort": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "718f8ea113ec33060ef83c53"
+    },
+    "Array.prototype.splice": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "ffbfb46545b5d798c04fd995"
+    },
+    "Array.prototype.unshift": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "65377c4efd672a480134f11b"
+    },
+    "Array.prototype.indexOf": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "664f7a1a0a1ee98b7f7c6440"
+    },
+    "Array.prototype.lastIndexOf": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "1f6da7eaa8a7f41a7ba87255"
+    },
+    "Array.prototype.every": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "e12a218c75cb47eafe499a74"
+    },
+    "Array.prototype.some": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "57426891e46767a9d507d027"
+    },
+    "Array.prototype.forEach": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "2f7faecdeae3d79d85ad11f1"
+    },
+    "Array.prototype.map": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "9795446a539f2c61e360c895"
+    },
+    "Array.prototype.filter": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "d480ef6f61bd4dd87605131f"
+    },
+    "Array.prototype.reduce": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "b855746ff81b28bf72309937"
+    },
+    "Array.prototype.reduceRight": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "dfd445478f77f7d96ae7ccec"
+    },
+    "String.prototype": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "object",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "ff4a5140cc6ebffa2293c5fb"
+    },
+    "String.prototype.toString": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "4dad8aaa6be682806454f080"
+    },
+    "String.prototype.valueOf": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "44d7cfa3d081621077b3fd32"
+    },
+    "String.prototype.charAt": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "414803bd449f24557f4a7d42"
+    },
+    "String.prototype.charCodeAt": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "fe291ce5012f50c2956bf608"
+    },
+    "String.prototype.concat": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "8db60aad15724e29582d59dd"
+    },
+    "String.prototype.indexOf": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "4c3620bd56212c850a76499a"
+    },
+    "String.prototype.lastIndexOf": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "1818e6fc5beaf3761f1ff0fc"
+    },
+    "String.prototype.localeCompare": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "090a099fd4010f40303d1e6c"
+    },
+    "String.prototype.match": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "9e4f75cf6b74716e75293117"
+    },
+    "String.prototype.replace": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "e106546c72e2896dce9b27ad"
+    },
+    "String.prototype.search": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "c09ec5e5a8c87449daa2702a"
+    },
+    "String.prototype.slice": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "b659f8627a7a0333d3cc93cd"
+    },
+    "String.prototype.split": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "5d898910f2e091daa2c203f4"
+    },
+    "String.prototype.substring": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "86680670e38c3d84bde95bf7"
+    },
+    "String.prototype.toLowerCase": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "a182c72f712e39be697c7e74"
+    },
+    "String.prototype.toLocaleLowerCase": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "35fe633147b603736ea2b685"
+    },
+    "String.prototype.toUpperCase": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "b38c1856958d7e3ed2e299bf"
+    },
+    "String.prototype.toLocaleUpperCase": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "1cd358e2d34ac9f49e530cc1"
+    },
+    "String.prototype.trim": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "0a9fa3d335e41a9a02624f6e"
+    },
+    "Boolean.prototype": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "object",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "f7f9c7a040f801c770d64b05"
+    },
+    "Boolean.prototype.toString": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "794a8b35cd9ddfc3edba2bd6"
+    },
+    "Boolean.prototype.valueOf": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "c109d57606b0f4421b5c406b"
+    },
+    "Number": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "a5574accc21b340e8d9a2328"
+    },
+    "Number.MAX_VALUE": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "number",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "c5cf54add3f18a1a82e0c149"
+    },
+    "Number.MIN_VALUE": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "number",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "26e4e906ef932d0eb234a88c"
+    },
+    "Number.NEGATIVE_INFINITY": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "number",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "cbecb0c005bbea8cb6642897"
+    },
+    "Number.POSITIVE_INFINITY": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "number",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "c6747f07d9d15efa59a81670"
+    },
+    "Number.prototype": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "object",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "356fb1c904d82b0c9aa91bd3"
+    },
+    "Number.prototype.toString": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "f6b14f715088b64e7c109fb1"
+    },
+    "Number.prototype.toLocaleString": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "4560b269d4546f0a0b4a6b90"
+    },
+    "Number.prototype.valueOf": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "f837e14cd5f435590b85c10f"
+    },
+    "Number.prototype.toFixed": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "5a0a64bdb6c8e38f60b18600"
+    },
+    "Number.prototype.toExponential": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "136cfa791a43a0812088f4c8"
+    },
+    "Number.prototype.toPrecision": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "6930f19155466026d48ca403"
+    },
+    "Math": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "object",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "833fd081cfc55602581d32d5"
+    },
+    "Math.E": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "number",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "ac16bce1b18c5346789093af"
+    },
+    "Math.LN10": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "number",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "754fd7db487f0eb57f0a89df"
+    },
+    "Math.LN2": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "number",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "b59ecc9a3660888292a478aa"
+    },
+    "Math.LOG2E": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "number",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "fa4fd58bc46b6bf06aa1195d"
+    },
+    "Math.LOG10E": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "number",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "d724b9759675670461e6ee15"
+    },
+    "Math.PI": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "number",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "19839a1fad5bf32c44dd6a41"
+    },
+    "Math.SQRT1_2": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "number",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "b35d6c9ec133d861ed932e6d"
+    },
+    "Math.SQRT2": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "number",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "11c6598d922c62b870f6aee4"
+    },
+    "Math.abs": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "458a533e5fa56a5fc72e1d93"
+    },
+    "Math.acos": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "d0beb3da6fd4c0844d7a3d43"
+    },
+    "Math.asin": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "40146538ae2313f3ebd46444"
+    },
+    "Math.atan": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "ee505fe52dadd07ac7e49394"
+    },
+    "Math.atan2": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "432ca7869ee80fc7c96e9e98"
+    },
+    "Math.ceil": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "f815d6c56c255dcd09b4edaf"
+    },
+    "Math.cos": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "322a516d0534a23c8f424dab"
+    },
+    "Math.exp": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "c21cf033f994c458fb92d79b"
+    },
+    "Math.floor": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "6538789e70431713a641a138"
+    },
+    "Math.log": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "a9b0d4512986affe8fece969"
+    },
+    "Math.max": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "979559a4e4030096e4d91c40"
+    },
+    "Math.min": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "96c910097bd226bbdcca9416"
+    },
+    "Math.pow": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "eb0d93d054a976e3eeecad5a"
+    },
+    "Math.random": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "75b2b5e9158dfc89898e5d6b"
+    },
+    "Math.round": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "db7d242d544e8bc66ede7b81"
+    },
+    "Math.sin": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "b05792700c94097456d869bd"
+    },
+    "Math.sqrt": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "d5a4ef1fedef45b4b7420390"
+    },
+    "Math.tan": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "b519f0673647d437afe314d8"
+    },
+    "Date.prototype": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "object",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "49dee47ebe42ec3355c1a1d9"
+    },
+    "Date": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "28a246b7295a3db16ad1a57c"
+    },
+    "Date.parse": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "93e4a4fbad1c692ac0ecb63e"
+    },
+    "Date.UTC": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "af4918a76a2e401cb0b6a783"
+    },
+    "Date.now": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "826adf34c0b0d99102335a80"
+    },
+    "Date.prototype.toString": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "1e0a46987a30f9dc1fb4e05c"
+    },
+    "Date.prototype.toDateString": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "dcf90d85eef0acb756c1b880"
+    },
+    "Date.prototype.toTimeString": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "f68a92e77b20a39abf9cb936"
+    },
+    "Date.prototype.toLocaleString": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "3b0da52aee089ef8c7a09851"
+    },
+    "Date.prototype.toLocaleDateString": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "b4331a6062aaa865739a81d2"
+    },
+    "Date.prototype.toLocaleTimeString": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "043668d6b645c7d0cef93836"
+    },
+    "Date.prototype.valueOf": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "f3a33e108f6f07a440bfd46a"
+    },
+    "Date.prototype.getTime": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "da3fea00c0bb75ab6b82ed88"
+    },
+    "Date.prototype.getFullYear": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "5c2d728a0e0731efaf0565c9"
+    },
+    "Date.prototype.getUTCFullYear": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "2c44727419e4a11381b5eb8c"
+    },
+    "Date.prototype.getMonth": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "91c75a08ef4df8164b3e28c8"
+    },
+    "Date.prototype.getUTCMonth": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "12ee6ff338cd7b967a7630eb"
+    },
+    "Date.prototype.getDate": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "c94aefeed6f0351b42c997dd"
+    },
+    "Date.prototype.getUTCDate": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "1e7055e1e61945e21e0af6ea"
+    },
+    "Date.prototype.getDay": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "ee3a2934a3ece11f848a88fa"
+    },
+    "Date.prototype.getUTCDay": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "43eb12ac8f5946378636f138"
+    },
+    "Date.prototype.getHours": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "fe6982c02d11160c067e462b"
+    },
+    "Date.prototype.getUTCHours": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "78883129c29289653105f94a"
+    },
+    "Date.prototype.getMinutes": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "3c08bbe942c3a4c90ce67015"
+    },
+    "Date.prototype.getUTCMinutes": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "a765597bbe652d9fabb630f2"
+    },
+    "Date.prototype.getSeconds": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "23f21ce115f1a266aff93d1a"
+    },
+    "Date.prototype.getUTCSeconds": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "11ac4f0af9eb143173518f43"
+    },
+    "Date.prototype.getMilliseconds": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "e083b49e3c9389a891a02a95"
+    },
+    "Date.prototype.getUTCMilliseconds": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "fa237ebc7baa4dd923e77192"
+    },
+    "Date.prototype.getTimezoneOffset": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "1ae5943729d73bd8b71dc5d0"
+    },
+    "Date.prototype.setTime": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "7c831b227ac63f98062c60d6"
+    },
+    "Date.prototype.setMilliseconds": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "2d8b35076de62b815632ae02"
+    },
+    "Date.prototype.setUTCMilliseconds": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "b0ea18a77b5357850a61fe61"
+    },
+    "Date.prototype.setSeconds": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "603a682bd1245f4021cb9c4d"
+    },
+    "Date.prototype.setUTCSeconds": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "f3219c2bae335d8ab91939b1"
+    },
+    "Date.prototype.setMinutes": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "9472d93f428709cdcae53a46"
+    },
+    "Date.prototype.setUTCMinutes": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "9f5698a3050cb29761cb05b9"
+    },
+    "Date.prototype.setHours": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "cd1e826075454f613c9a2d3a"
+    },
+    "Date.prototype.setUTCHours": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "0f9a428ecf9abb9e4ff74987"
+    },
+    "Date.prototype.setDate": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "1344d6e44144cc6732d41dec"
+    },
+    "Date.prototype.setUTCDate": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "c440058f701904b012318269"
+    },
+    "Date.prototype.setMonth": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "4a753862122742f87790e3b7"
+    },
+    "Date.prototype.setUTCMonth": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "5ecee3d08436fb5913de6020"
+    },
+    "Date.prototype.setFullYear": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "ac673f805da6609abbc28510"
+    },
+    "Date.prototype.setUTCFullYear": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "b34c799b419610ac1ec0282f"
+    },
+    "Date.prototype.toUTCString": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "ccc0ca412b5fa50a52f2b120"
+    },
+    "Date.prototype.toISOString": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "eb6a08e2edc994060413283d"
+    },
+    "Date.prototype.toJSON": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "d625ecc4699518b6998f53af"
+    },
+    "RegExp.prototype": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "object",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "4eafdb15733f6edf4ff42c6a"
+    },
+    "RegExp.prototype.exec": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "e5389b79a347807587b5787b"
+    },
+    "RegExp.prototype.test": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "5010a794bebf6ff90353883f"
+    },
+    "RegExp.prototype.toString": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "33a9113f1672b338c1c2cf65"
+    },
+    "Array.prototype.slice.call": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "71453095906ade59f237ca2b"
+    },
+    "RegExp": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "07c8c8c31fe5385069e8173b"
+    },
+    "parseInt": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "77bc7fc0fb05418e1b653d63"
+    },
+    "parseFloat": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "ffcbe6b39e6fd05fc6182c44"
+    },
+    "isNaN": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "17a39b26aba0c40a0b7dadf9"
+    },
+    "isFinite": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "63b0a22cb6c23704c06aef67"
+    },
+    "decodeURI": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "ba455801b53ce2733e8d4ba0"
+    },
+    "decodeURIComponent": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "18b88e61c0d0dd543e1db122"
+    },
+    "encodeURI": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "be3e1b20e13603bbd544690c"
+    },
+    "encodeURIComponent": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "eb56c691935da201f4992bd6"
+    },
+    "Object": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "9d9506200b6fd90a36b58ced"
+    },
+    "Object.prototype.hasOwnProperty.call": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "7c2deaed0151d89af2ef9da6"
+    },
+    "Array": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "65f6dbf574946d09ef89e621"
+    },
+    "JSON.parse": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "2833351ad8be7e08af28cd90"
+    },
+    "define": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "9a371c9b9ae9fa8e98cac6f4"
+    },
+    "App": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "137a597d1e00be26fc27bc01"
+    },
+    "wx.request": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "50f1d22500fbeeaf8dbb6b38"
+    },
+    "require": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "8a498b18983a024c8c14af0c"
+    },
+    "getApp": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "5cfa6fd9d69241399d0d4ace"
+    },
+    "Page": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "37b795b2e04ec5090c57ec83"
+    },
+    "wx.openLocation": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "feaf38c69540525f49beeabd"
+    },
+    "wx.downloadFile": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "6411891670a67277f045260c"
+    },
+    "wx.openDocument": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "57ebdc4ae19c42b857f417ce"
+    },
+    "wx.openBusinessView": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "1af253ea4b0d68c47316d097"
+    },
+    "wx.setVisualEffectOnCapture": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "402f229637328a0ec48119bb"
+    },
+    "wx.login": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "cdcf75b54990da03ff44e06a"
+    },
+    "wx.navigateBack": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "7fb482fee12f566c81379d59"
+    },
+    "wx.setNavigationBarTitle": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "f9b7c404d337a3ed61abfdfb"
+    },
+    "wx.navigateToMiniProgram": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "d55ad83b01e2f366a0cabb55"
+    },
+    "setTimeout": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "fb58c6b0ca39616206e17ac7"
+    },
+    "Math.nv_ceil": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "d2c7e8639d54b45ec651e2ee"
+    },
+    "Object.keys": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "c4a2778ed21328ca0f3c24e8"
+    },
+    "Object.getOwnPropertySymbols": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "743f1de385e9368d82f927ac"
+    },
+    "Object.getOwnPropertyDescriptor": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "d444c135c6ac4b0198288943"
+    },
+    "Object.getOwnPropertyDescriptors": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "823f1873e15a955464744f59"
+    },
+    "Object.defineProperties": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "0f9f16bcc6551b3915fcb475"
+    },
+    "Promise.resolve": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "e43ef6c48e1fbd00692c8ecf"
+    },
+    "Promise": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "c1cc78a85817b65954ec4f3d"
+    },
+    "Object.prototype.hasOwnProperty": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "07173bc8147220bafcc7f14c"
+    },
+    "Symbol": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "bb43320c43b6963bd54b844e"
+    },
+    "Object.create": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "13811f0be552384bd185a840"
+    },
+    "Object.getPrototypeOf": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "afc09082673569909d8a7b5f"
+    },
+    "Error": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "8e2375587cb1e2c5efb9af80"
+    },
+    "TypeError": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "0662876cc7e2537f50084c62"
+    },
+    "Object.setPrototypeOf": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "7c2647e22ade231cd3d54bd1"
+    },
+    "Symbol.toPrimitive": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "symbol",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "f0ccc34e53b16eb426d6633b"
+    },
+    "String": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "94385e42e953eafbb3d357fd"
+    },
+    "globalThis": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "object",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "33e7f555f0ef4d919f6005a2"
+    },
+    "Object.assign": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "4a9ccc7aecf96178cb2d4c8c"
+    },
+    "Object.freeze": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "186df5e9d6a3fcee358c2326"
+    },
+    "Proxy": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "b3848fbdf33663f3544322c3"
+    },
+    "Object.toString": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "0b7f6172f0151ff97e172063"
+    },
+    "Object.hasOwnProperty.call": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "b5ceb486925004d7bf9d4f92"
+    },
+    "Object.hasOwnProperty": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "9d479b03ad14c19fba09f4a7"
+    },
+    "Reflect": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "object",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "28713ddb833a8edae4ef2d52"
+    },
+    "Reflect.ownKeys": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "e32e1dc066748eefd167a3a5"
+    },
+    "Object.getOwnPropertyNames": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "a223eb7cbca9b6abd987d100"
+    },
+    "Symbol.iterator": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "symbol",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "d734977d3b84ebeedbbecca5"
+    },
+    "Array.isArray": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "5bd80bc52accec11045b39f8"
+    },
+    "String.fromCharCode": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "1b0a45851702db6d34bcfbee"
+    },
+    "wx.chooseMessageFile": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "c1b5b0f84cb4857469f518f7"
+    },
+    "wx.showModal": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "3c43100becdde1acc8a1d43d"
+    },
+    "wx.showToast": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "0c50f85c1a979857fa87a7a1"
+    },
+    "clearTimeout": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "f042cfbac84fb0b6a4692fc6"
+    },
+    "wx.uploadFile": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "5859fe3c2c16bc2f3e208984"
+    },
+    "wx.createRewardedVideoAd": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "f49430b8007b95df084a2725"
+    },
+    "wx.showLoading": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "039ffd1cb14c9dad5161a3b7"
+    },
+    "wx.hideLoading": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "81e8ff06634fd59e194bdab4"
+    },
+    "wx.shareFileMessage": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "b5393a40f583385edbb54144"
+    },
+    "Math.nv_max": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "30230b6ee5bc1461632d67ba"
+    },
+    "Math.nv_abs": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "2e456b85c9197dc65f8b94b4"
+    },
+    "Math.nv_sqrt": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "cb11f9777f374aea9c061322"
+    },
+    "Math.nv_pow": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "61fe43331b444833ff8a15f1"
+    },
+    "Math.nv_asin": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "5ba4ff34c218940ca85fdf80"
+    },
+    "Math.nv_PI": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "number",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "85edbb2d2753ecbf36fe95b9"
+    },
+    "Array.prototype.includes": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "7a06866b0c02889c4e5add46"
+    },
+    "Object.entries": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "6b5a8dc867b85d6471febe49"
+    },
+    "Array.from": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "88fd364d0aed8d592b636f27"
+    },
+    "Math.nv_round": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "1341f334fd48cf714378ce2a"
+    },
+    "Math.nv_floor": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "c862390cf02fcbc0777f6855"
+    },
+    "wx.getStorageSync": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "b477e4d83367187ad4a224bd"
+    },
+    "wx.setStorageSync": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "9899387c1dbe8452a0c73a9f"
+    },
+    "wx.createCanvasContext": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "9e50a9be02357200a54db738"
+    },
+    "wx.getUpdateManager": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "e690e3c8cd4e4924543a3bcf"
+    },
+    "wx.reLaunch": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "0d10ccd0774b2c097b7c2bed"
+    },
+    "setInterval": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "79b19a392d248815e769fe90"
+    },
+    "wx.removeStorageSync": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "3d3282dea83917ccd0eabb3c"
+    },
+    "clearInterval": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "6e1924af70b4de9bf24f640a"
+    },
+    "console": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "object",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "17bd9c4db8c048a330799858"
+    },
+    "Object.values": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "f74677a1a64fea61188da596"
+    },
+    "ReferenceError": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "294cd582dd138d1ff665abcc"
+    },
+    "Reflect.construct": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "c45339e6eeec2ee06dc33d50"
+    },
+    "Date.prototype.toString.call": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "208ef648ba794280994d2661"
+    },
+    "Symbol.prototype": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "object",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "1f25709bacc82654c5747935"
+    },
+    "wx.redirectTo": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "8bdb6c7469e6bbd8efc9a01b"
+    },
+    "wx.requestPayment": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "931180b6bd68ebfbd177d58d"
+    },
+    "Object.getPrototypeOf.bind": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "3123f2574b12e1a75935c3d4"
+    },
+    "Math.nv_min": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "009a55c70db219a812c4daae"
+    },
+    "Uint8ClampedArray": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "bb307f3066c59467165e524f"
+    },
+    "console.dir": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "bf47a805d0271df4f1de913e"
+    },
+    "RegExp.$1": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "string",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "3e1b8b5cc2f8d29da2d3f419"
+    },
+    "RegExp.$2": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "string",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "6d1d0e7f6c1df0f76e2bd580"
+    },
+    "wx.previewImage": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "10b2d1a174f3e015520a6220"
+    },
+    "wx.getSystemInfo": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "99ad17f4f6abe55d690f56f7"
+    },
+    "wx.navigateTo": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "d0d55ed717681238e02b9736"
+    },
+    "wx.chooseImage": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "3b9dd8277ee36946cb888ba6"
+    },
+    "wx.switchTab": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "fe4abeada412a6998105a183"
+    },
+    "wx.makePhoneCall": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "d79c40c1fb191c786cec0c67"
+    },
+    "wx.getUserInfo": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "21cd68e3a14f46f8f29ba582"
+    },
+    "wx.hideToast": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "2e512e8cd4c90f6bbc3dadaf"
+    },
+    "wx.canIUse": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "1bf174de00737b7883cee5e8"
+    },
+    "unescape": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "fd6f1198386714fb99485370"
+    },
+    "wx.setStorage": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "424099c577b9b9b91a4c9da3"
+    },
+    "wx.createInterstitialAd": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "9f3457491dad71a96b50bebc"
+    },
+    "wx.env.USER_DATA_PATH": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "string",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "54e4635807b1cc3086c2c8f2"
+    },
+    "wx.env": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "object",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "225a90b9a4851b449d15402a"
+    },
+    "Symbol.toStringTag": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "symbol",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "0a06daa5bbc2fb73c4e99216"
+    },
+    "WeakMap": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "4f72637611248adf72c3dbf5"
+    },
+    "__wxConfig": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "object",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "defa173590fc032889f4bd59"
+    },
+    "WeixinJSBridge.invoke": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "46da4c4d93b7eba0fdf15b94"
+    },
+    "requireOnce": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "ce301127d50d9f4a4c44d48c"
+    },
+    "Math.nv_atan2": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "9521303d59c0d6547e76cb37"
+    },
+    "wx.cloud": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "object",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "5c19e866ed9598b59f3555a5"
+    },
+    "wx.cloud.init": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "4a81c96e59a09d7e3f81d942"
+    },
+    "wx.getFileInfo": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "f35df9e0dda86bd87b945531"
+    },
+    "wx.cloud.downloadFile": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "612e87fa86bd878d740a2041"
+    },
+    "wx.getFileSystemManager": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "14043a56448799c4d8c3fbc9"
+    },
+    "wx.setInnerAudioOption": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "3ffe83c4b3da68e860263959"
+    },
+    "wx.getBackgroundAudioManager": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "ee853218ba0c28113ebd6d2e"
+    },
+    "wx.createInnerAudioContext": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "77651ad576ab21b986b8f72b"
+    },
+    "wx.setKeepScreenOn": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "cdad7b922ff4ef6caa6cb584"
+    },
+    "wx.cloud.getTempFileURL": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "4d8bc62860c7cd9e12bf7deb"
+    },
+    "wx.getSystemInfoSync": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "f0f2069cbc0de00082bbf758"
+    },
+    "Uint8Array": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "084eb3c5f5713e41dbab85e0"
+    },
+    "Uint32Array": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "70fd4408bb52f27ec7c54a24"
+    },
+    "DataView": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "f257af79e4d07365c702ffd4"
+    },
+    "Array.prototype.map.call": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "d2dfdaf9068b430a11ef645f"
+    },
+    "getCurrentPages": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "f9401d51bf30de9caf198113"
+    },
+    "wx.setClipboardData": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "7b87c5b4b31b0063f782796e"
+    },
+    "wx.getClipboardData": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "094a1af1e0dfe25ae9f67309"
+    },
+    "wx.pageScrollTo": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "bf856b2dd311cdbfe44909a7"
+    },
+    "wx.getMenuButtonBoundingClientRect": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "41551dc35ece8a960b434ed8"
+    },
+    "Object.prototype.propertyIsEnumerable.call": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "c8e55fc32d3d7c9630a180e7"
+    },
+    "Object.prototype.propertyIsEnumerable": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "180a29db558a8053e5543837"
+    },
+    "wx.getSetting": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "2cb92db3d4121bb46773515c"
+    },
+    "wx.requestSubscribeMessage": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "be5f499a065c29df8910bdae"
+    },
+    "Object.assign.apply": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "1fa3f7509ab92c7a0597fafc"
+    },
+    "RegExp.$1.length": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "number",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "0f3dc8382203599bd9baeb59"
+    },
+    "Boolean": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "2786916ba2c5b73cd3605120"
+    },
+    "Reflect.construct.bind": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "3a022d6782f48d32bd5b5b77"
+    },
+    "Reflect.get": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "d325dde936ffd1f728e890c3"
+    },
+    "Reflect.get.bind": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "dfa9d1bfea2c64c7f3c419ff"
+    },
+    "wx": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "object",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "672aadfdd933059d58283bff"
+    },
+    "console.info": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "32269916a751d23c2e0de2bc"
+    },
+    "wx.clearStorageSync": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "77010ed3214befe6d2956018"
+    },
+    "Promise.reject": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "5f37d8fd69bf396f70ddd600"
+    },
+    "Array.prototype.unshift.apply": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "03dac1f0edcaeb9997e6de13"
+    },
+    "atob": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "b3614234a98d78fcb48a3789"
+    },
+    "TextDecoder": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "a0e89d1395bcfa939020e249"
+    },
+    "TextEncoder": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "1eb366e00a9b6644ad29061b"
+    },
+    "String.fromCharCode.bind": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "c47f254a6feb2d36db41c8fa"
+    },
+    "Uint8Array.prototype": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "object",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "09f6db3f0b87d681aef9e766"
+    },
+    "escape": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "a9ca35b24444d4bb8ddec3f3"
+    },
+    "ArrayBuffer": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "bc110e013c8445c4995dcfab"
+    },
+    "Int8Array": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "3642379dcb08f312e5eca542"
+    },
+    "Int16Array": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "90dbc3548c83c27b84bb230e"
+    },
+    "Uint16Array": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "29af0505090f2bf03cfbca34"
+    },
+    "Int32Array": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "d4894d84d464c153134fbb66"
+    },
+    "Float32Array": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "0061ba937df5c23a61c017a6"
+    },
+    "Float64Array": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "87244c300614cf927851033d"
+    },
+    "Math.nv_random": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "d5448b3778893dc2f1659e08"
+    },
+    "wx.vibrateShort": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "dab25662236c386201d911ff"
+    },
+    "wx.showShareMenu": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "418ff73a7592dcfa3d249f36"
+    },
+    "wx.getShareInfo": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "4cd0860a60dfbb08c365f564"
+    },
+    "wx.checkSession": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "1a1b13a9f7230cd358f6616d"
+    },
+    "wx.canvasToTempFilePath": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "7fd6725144800f218977e697"
+    },
+    "wx.getUserProfile": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "d4f14818a0cb7cc344dd986d"
+    },
+    "Array.prototype.concat.apply": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "c24a3f0f440ff6c76823ad3e"
+    },
+    "wx.createAnimation": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "c0e3b6d9b3525b357cf04431"
+    },
+    "Promise.all": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "0b51b9c24b5ade915ba40234"
+    },
+    "wx.getLocation": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "415b60a34edbb4dfd5fa0849"
+    },
+    "wx.getStorage": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "038a4c2b39eed2095c2fe440"
+    },
+    "RangeError": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "a52ba9a9e41a8d9319af7f1f"
+    },
+    "Map": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "3daaa8ef6d088e3b6efde8f1"
+    },
+    "wx.cloud.database": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "684043d87ab63342d79e9ebd"
+    },
+    "wx.saveImageToPhotosAlbum": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "3ac4660523b3ba188693d8db"
+    },
+    "JSON": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "object",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "1b5553ca37f82d2a52d679c4"
+    },
+    "console.error.apply": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "876d555f258560d9fa607f86"
+    },
+    "Boolean.prototype.valueOf.call": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "61a5559bde19ff5a6ecd0ebc"
+    },
+    "Symbol.hasInstance": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "symbol",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "f70e9426812f52675f844f75"
+    },
+    "wx.getExtConfigSync": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "0b1f686f3f774ddf6b2d0ff3"
+    },
+    "Object.isExtensible": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "ff87c3345076c092405de00b"
+    },
+    "Object.preventExtensions": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "7d78c41a91f922dce24c7472"
+    },
+    "Date.nv_now": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "5c444bbae6a238e179a73085"
+    },
+    "ArrayBuffer.isView": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "0517ca2fcf59abd7c8f219e2"
+    },
+    "wx.setNavigationBarColor": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "13e9d4fc949b8678616c4a62"
+    },
+    "wx.setTabBarStyle": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "9b2898c1f9a8449681a1a21f"
+    },
+    "wx.startBluetoothDevicesDiscovery": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "40570e35a044750cf4631b64"
+    },
+    "wx.getBluetoothAdapterState": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "a99f235f86f1c95aae6cf6db"
+    },
+    "wx.createBLEConnection": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "41ab3545f739bdab88a03c7c"
+    },
+    "wx.getBLEDeviceServices": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "954eedf7e84fbacc8031595b"
+    },
+    "wx.getBLEDeviceCharacteristics": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "d05b0106da66b1a235ac4c34"
+    },
+    "wx.notifyBLECharacteristicValueChange": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "0a1d3b12236c3eb03e13f784"
+    },
+    "wx.closeBLEConnection": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "2633c5d03a8366b688e8b4d6"
+    },
+    "wx.writeBLECharacteristicValue": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "f979411dd34366ec2f05b4a5"
+    },
+    "wx.closeBluetoothAdapter": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "0a6202a8d421598a510cf501"
+    },
+    "wx.openBluetoothAdapter": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "2f12cf676a6daf35ded0ec18"
+    },
+    "wx.onBluetoothDeviceFound": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "5380f1aabde35495aa6a7faf"
+    },
+    "wx.stopBluetoothDevicesDiscovery": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "52ce6e61f87284b1e5d53106"
+    },
+    "wx.onAccelerometerChange": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "1e5248ef8372102dacd15f77"
+    },
+    "wx.getImageInfo": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "1b556284397d40d9ad83ab4e"
+    },
+    "wx.createSelectorQuery": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "e9a6b7e6c8c1b767093bbf8c"
+    },
+    "wx.updateShareMenu": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "12e6b378a29c6e2f2e387fe1"
+    },
+    "__wxConfig.envVersion": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "string",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "8d58aca2065345b4b6f0cea2"
+    },
+    "wx.canvasGetImageData": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "6bda61ae04e31ccb333b783d"
+    },
+    "toString.call": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "126b0a1074a55bbea34d848c"
+    },
+    "wx.loadFontFace": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "bc57f194eb83dc04fb08df44"
+    },
+    "wx.hideTabBar": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "6b969b191328eb014567c3ed"
+    },
+    "wx.stopPullDownRefresh": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "4e0032691ebd8c8bfd45016a"
+    },
+    "wx.removeStorage": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "cfd0c735d0ba2c90feed0ce5"
+    },
+    "wx.getPrivacySetting": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "0ea841fcf0a7fb13ae9aeb4f"
+    },
+    "wx.onBluetoothAdapterStateChange": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "2868230b1554e1afacc2db93"
+    },
+    "wx.openPrivacyContract": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "77e4b43bc4d174a562e15317"
+    },
+    "WeakSet": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "357cc2c81f296e21e97ab90c"
+    },
+    "String.fromCharCode.apply": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "37df9ebfc25ec1d1f6e017ea"
+    },
+    "wx.getAppBaseInfo": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "2aa5c01ba009f16229a2c79a"
+    },
+    "wx.getWindowInfo": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "1889d0f6d9c97ce02762f3a6"
+    },
+    "wx.getAccountInfoSync": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "ea9c5946a81ca45ff3c579f7"
+    },
+    "wx.chooseMedia": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "1f402c67ee976c61db4f4575"
+    },
+    "wx.showActionSheet": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "399065458f4ca93114bfdc82"
+    },
+    "Math.max.apply": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "5f213b23fcaefce12d6d81c8"
+    },
+    "Math.min.apply": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "31fb0f33b9cae143bdf3b337"
+    },
+    "wx.onAppHide": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "8d7f3ce8ba7025d15616e2fc"
+    },
+    "wx.onAppShow": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "c7ee5911e5f18109fcf4152c"
+    },
+    "wx.onNeedPrivacyAuthorization": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "fbfd4ee5fa0b05b8a7a31b50"
+    },
+    "wx.createOffscreenCanvas": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "e043cf7c2ec13290a1019c7d"
+    },
+    "wx.authorize": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "1b535c859e615b67557e0d49"
+    },
+    "wx.vibrateLong": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "22c3f420469a734821fb3054"
+    },
+    "wx.getScreenBrightness": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "04fe60bbbad51fb1dc5c9442"
+    },
+    "wx.setScreenBrightness": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "ccf7a49dadda18d17ddef134"
+    },
+    "Object.setPrototypeOf.bind": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "82160911cb1c4c9634247383"
+    },
+    "ArrayBuffer.prototype.slice": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "92f50158325f0bbd0001b6fb"
+    },
+    "ArrayBuffer.prototype": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "object",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "d1d75dadad184f1973d8f2d8"
+    },
+    "Set": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "3a06b34e499fc79d2c16bb13"
+    },
+    "f": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "undefined",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "0f839eecd59ccf8c07be90ab"
+    },
+    "Reflect.set": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "6386bbd363b077e48076b238"
+    },
+    "wx.getDeviceInfo": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "2f23ab67aa90d66e3ddee29b"
+    },
+    "wx.requestVirtualPayment": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "cff05167b0b7c44c6126f09c"
+    },
+    "wx.startAccelerometer": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "6b93edc68ff02c1b9747736c"
+    },
+    "wx.stopAccelerometer": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "61ce5c557609d86e10a696cf"
+    },
+    "wx.cloud.callFunction": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "e908261805cd3ed996ec5a24"
+    },
+    "wx.getWeRunData": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "29148244994965e9baf4daa7"
+    },
+    "wx.exitMiniProgram": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "f763ff7a6a38ddf9892d96ea"
+    },
+    "Object.is": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "b1567f63a15b3364d5c6a490"
+    },
+    "wx.clearStorage": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "bde8a381faf7662110a35ffb"
+    },
+    "wx.hideShareMenu": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "914ce948d0fb720aa492d60c"
+    },
+    "wx.openSetting": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "b63998fa387c94bc8fca8d36"
+    },
+    "Number.isInteger": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "b97627ebc5ab61b965c9cc86"
+    },
+    "wx.getBluetoothDevices": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "5f5d6b418dfc181aa86e3b83"
+    },
+    "Date.nv_parse": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "686fcd1c7a3c46d3c2d14dcd"
+    },
+    "wx.showNavigationBarLoading": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "45576c23f785f9e343ca8680"
+    },
+    "eval": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "undefined",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "9586515d02b9e8dd892be804"
+    },
+    "wx.getNetworkType": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "b19867c21d2e8de68f93377e"
+    },
+    "wx.onNetworkStatusChange": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "eb4747d942a64ce7ef3d1934"
+    },
+    "Object.assign.bind": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "2c7697d86ea3381724169bfb"
+    },
+    "constructor": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "0c31042f0982bbf0130b506f"
+    },
+    "Error.call": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "ff825456586f11b054d237a0"
+    },
+    "NaN": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "number",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "f981711e1170b1f9c5628a26"
+    },
+    "String.prototype.charCodeAt.call": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "3724533bb280809e76b24a42"
+    },
+    "Error.captureStackTrace": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "5e50b97ee5e672e767eac6a6"
+    },
+    "Error.prototype": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "object",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "740c0bdfbace2a31e3765b62"
+    },
+    "window": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "object",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "fb9e17eaf73609c8767a0bec"
+    },
+    "self": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "object",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "4669b9ce1c59a00410d54032"
+    },
+    "Error.apply": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "881e629eb7db9938262e4c9b"
+    },
+    "SyntaxError": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "20ead77829f957679b639e4d"
+    },
+    "String.fromCodePoint": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "61e35c0e819e3ff5714e9659"
+    },
+    "BigInt": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "548fa943bf09d7557d4240c3"
+    },
+    "Uint8Array.prototype.indexOf": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "e4aef3eef1034ee6304fc3b4"
+    },
+    "Uint8Array.prototype.indexOf.call": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "0aa4571a6aa14b174eab30ff"
+    },
+    "Uint8Array.prototype.lastIndexOf.call": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "6b7c0b514e80401982167948"
+    },
+    "Uint8Array.prototype.lastIndexOf": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "fb1f396d4c7d6ffa7ea0289b"
+    },
+    "Symbol.species": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "symbol",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "c9ab6faa556b0c6b2808f1b4"
+    },
+    "Uint8Array.prototype.set.call": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "6235611d975a6f9cead2f84c"
+    },
+    "Uint8Array.prototype.set": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "286b3fdf2e6a48a67c31907a"
+    },
+    "Iterator": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "dab8157f1d4ce2091d219547"
+    },
+    "Symbol.asyncIterator": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "symbol",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "acfa7fd3cff27933abd5afb8"
+    },
+    "Symbol.asyncDispose": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "symbol",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "e7bb0743cf64c9043e474071"
+    },
+    "Symbol.dispose": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "symbol",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "7790bec98b31ddb08630d19a"
+    },
+    "SuppressedError": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "38905bf471bd65dabf7ebcf0"
+    },
+    "wx.onBLECharacteristicValueChange": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "41cd4de3e76436620460250d"
+    },
+    "Symbol.for": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "c29cf3ddac5e1e7ffed6f6ef"
+    },
+    "wx.getStorageInfo": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "ef39c93901203827cd66a432"
+    },
+    "wx.hideNavigationBarLoading": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "19e433d44c441bfa105cbd28"
+    },
+    "wx.showRedPackage": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "4e614eb1831067ed78faff09"
+    },
+    "Math.nv_cos": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "b07220e027ce84d5a803a1c3"
+    },
+    "Math.nv_sin": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "3e5e3007370fbce9ea7e89cb"
+    },
+    "Math.nv_tan": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "370b3a7f02d4d3e645cbfd45"
+    },
+    "wx.reportAnalytics": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "2d9471d4892de9c0b90b9fbd"
+    },
+    "requestAnimationFrame": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "eb2b6ee07a571450af74aaf6"
+    },
+    "globalThis.wx": {
+      "runtimeProfileId": "e4-wechat-real",
+      "observedDimensions": [
+        "existence",
+        "type",
+        "callability"
+      ],
+      "values": {
+        "existence": true,
+        "type": "object",
+        "callability": false
+      },
+      "sideEffects": [],
+      "observedAt": "2026-09-24T08:09:33.545Z",
+      "probeHash": "a99860e03fa4e3cbf7421086"
+    }
+  }
+}

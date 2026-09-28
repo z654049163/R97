@@ -1,0 +1,527 @@
+{
+  "generatedAt": "2026-09-18T00:35:18.501Z",
+  "sourceRoots": [
+    "E:\\复现\\sample_collector\\可用于实验的干净源码包"
+  ],
+  "config": {
+    "limitProjects": 200,
+    "maxFilesPerProject": 60,
+    "maxFileBytes": 2097152,
+    "maxFindingsPerFile": 500,
+    "maxFindingsPerProject": 2500,
+    "maxRecords": 100000
+  },
+  "projectsSeen": 1572,
+  "projectsSampled": 200,
+  "filesDiscovered": 259,
+  "filesScanned": 258,
+  "filesParsed": 258,
+  "filesFailed": 0,
+  "filesSkippedTooLarge": 1,
+  "findingCount": 98605,
+  "uniqueEntityCount": 230,
+  "parseSuccessRate": 1,
+  "byTransformation": {
+    "CONST_EVAL": 49691,
+    "CALL_EVAL": 47725,
+    "BRANCH_PRUNE": 1189
+  },
+  "byBindingKind": {
+    "unresolved_global": 30248,
+    "runtime_global": 68286,
+    "module_import": 71
+  },
+  "byCapabilityDomain": {
+    "unknown": 98296,
+    "crypto": 199,
+    "timing": 14,
+    "module_runtime": 16,
+    "storage": 45,
+    "network": 6,
+    "visible_ui": 28,
+    "native_bridge": 1
+  },
+  "byRuntimeRoot": {
+    "$gwx": 182,
+    "console": 1224,
+    "$gwn": 392,
+    "$gwl": 196,
+    "wh": 25284,
+    "undefined": 4123,
+    "snap_bb": 392,
+    "gra": 784,
+    "grb": 1568,
+    "JSON": 1179,
+    "Object": 19462,
+    "Function": 1177,
+    "Array": 11381,
+    "String": 11568,
+    "Boolean": 1372,
+    "Number": 5293,
+    "Math": 10185,
+    "Date": 2380,
+    "$gwx_wx104a1a20c3f81ec2": 1,
+    "$gwx_wx293c4b6097a8a4d0": 2,
+    "define": 34,
+    "Symbol": 23,
+    "setTimeout": 6,
+    "TypeError": 10,
+    "Error": 32,
+    "process": 3,
+    "Uint8ClampedArray": 1,
+    "importScripts": 1,
+    "MessageChannel": 2,
+    "t": 12,
+    "n": 2,
+    "wx": 113,
+    "RegExp": 14,
+    "i": 2,
+    "l": 1,
+    "result": 1,
+    "isNaN": 4,
+    "parseInt": 3,
+    "App": 2,
+    "e": 8,
+    "getApp": 22,
+    "require": 12,
+    "Page": 69,
+    "my": 1,
+    "a": 27,
+    "$gwx_wx50b5593e81dd937a": 2,
+    "__wxConfig": 5,
+    "WeixinJSBridge": 1,
+    "__appServiceSDK__": 1,
+    "__subContextEngine__": 3,
+    "Reporter": 1,
+    "Promise": 5,
+    "requireOnce": 1,
+    "$gwx_wx94a6522b1d640c3b": 2,
+    "toPropertyKey": 1,
+    "defineProperty": 1,
+    "_typeof": 3,
+    "toPrimitive": 1,
+    "arrayLikeToArray": 2,
+    "r": 11,
+    "clearInterval": 7,
+    "setInterval": 1,
+    "$gwx_wxefe655223916819e": 1,
+    "$gwx_wxd1d3a59c204109d4": 2,
+    "$gwx_wx82e6ae1175f264fa": 1,
+    "$gwx_wx4664e59e8a284069": 1,
+    "$gwx_wxa16657d57059e0f0": 1,
+    "$gwx_wxdabb25f880cb2a03": 1
+  },
+  "topEntities": [
+    {
+      "entityId": "Object.defineProperty",
+      "count": 18432
+    },
+    {
+      "entityId": "wh.rv",
+      "count": 14112
+    },
+    {
+      "entityId": "Array.prototype",
+      "count": 7842
+    },
+    {
+      "entityId": "String.prototype",
+      "count": 7840
+    },
+    {
+      "entityId": "wh.hn",
+      "count": 5880
+    },
+    {
+      "entityId": "wh.nh",
+      "count": 5096
+    },
+    {
+      "entityId": "Math",
+      "count": 5088
+    },
+    {
+      "entityId": "undefined",
+      "count": 4123
+    },
+    {
+      "entityId": "Number.prototype",
+      "count": 2548
+    },
+    {
+      "entityId": "grb",
+      "count": 1568
+    },
+    {
+      "entityId": "JSON.stringify",
+      "count": 1177
+    },
+    {
+      "entityId": "Boolean.prototype",
+      "count": 980
+    },
+    {
+      "entityId": "Date.prototype",
+      "count": 806
+    },
+    {
+      "entityId": "Number",
+      "count": 785
+    },
+    {
+      "entityId": "gra",
+      "count": 784
+    },
+    {
+      "entityId": "console.warn",
+      "count": 733
+    },
+    {
+      "entityId": "Object.prototype",
+      "count": 594
+    },
+    {
+      "entityId": "Function",
+      "count": 589
+    },
+    {
+      "entityId": "Function.prototype",
+      "count": 588
+    },
+    {
+      "entityId": "Date",
+      "count": 585
+    },
+    {
+      "entityId": "$gwn",
+      "count": 392
+    },
+    {
+      "entityId": "snap_bb",
+      "count": 392
+    },
+    {
+      "entityId": "console.log",
+      "count": 256
+    },
+    {
+      "entityId": "console.error",
+      "count": 203
+    },
+    {
+      "entityId": "Math.floor",
+      "count": 199
+    },
+    {
+      "entityId": "Math.random",
+      "count": 199
+    },
+    {
+      "entityId": "Object.prototype.toString",
+      "count": 199
+    },
+    {
+      "entityId": "Object.prototype.toString.call",
+      "count": 199
+    },
+    {
+      "entityId": "Math.abs",
+      "count": 197
+    },
+    {
+      "entityId": "$gwl",
+      "count": 196
+    },
+    {
+      "entityId": "Array.prototype.concat",
+      "count": 196
+    },
+    {
+      "entityId": "Array.prototype.every",
+      "count": 196
+    },
+    {
+      "entityId": "Array.prototype.filter",
+      "count": 196
+    },
+    {
+      "entityId": "Array.prototype.forEach",
+      "count": 196
+    },
+    {
+      "entityId": "Array.prototype.indexOf",
+      "count": 196
+    },
+    {
+      "entityId": "Array.prototype.lastIndexOf",
+      "count": 196
+    },
+    {
+      "entityId": "Array.prototype.map",
+      "count": 196
+    },
+    {
+      "entityId": "Array.prototype.pop",
+      "count": 196
+    },
+    {
+      "entityId": "Array.prototype.push",
+      "count": 196
+    },
+    {
+      "entityId": "Array.prototype.reduce",
+      "count": 196
+    },
+    {
+      "entityId": "Array.prototype.reduceRight",
+      "count": 196
+    },
+    {
+      "entityId": "Array.prototype.reverse",
+      "count": 196
+    },
+    {
+      "entityId": "Array.prototype.shift",
+      "count": 196
+    },
+    {
+      "entityId": "Array.prototype.slice",
+      "count": 196
+    },
+    {
+      "entityId": "Array.prototype.some",
+      "count": 196
+    },
+    {
+      "entityId": "Array.prototype.sort",
+      "count": 196
+    },
+    {
+      "entityId": "Array.prototype.splice",
+      "count": 196
+    },
+    {
+      "entityId": "Array.prototype.unshift",
+      "count": 196
+    },
+    {
+      "entityId": "Boolean.prototype.toString",
+      "count": 196
+    },
+    {
+      "entityId": "Boolean.prototype.valueOf",
+      "count": 196
+    },
+    {
+      "entityId": "Date.now",
+      "count": 196
+    },
+    {
+      "entityId": "Math.acos",
+      "count": 196
+    },
+    {
+      "entityId": "Math.asin",
+      "count": 196
+    },
+    {
+      "entityId": "Math.atan",
+      "count": 196
+    },
+    {
+      "entityId": "Math.atan2",
+      "count": 196
+    },
+    {
+      "entityId": "Math.ceil",
+      "count": 196
+    },
+    {
+      "entityId": "Math.cos",
+      "count": 196
+    },
+    {
+      "entityId": "Math.E",
+      "count": 196
+    },
+    {
+      "entityId": "Math.exp",
+      "count": 196
+    },
+    {
+      "entityId": "Math.LN10",
+      "count": 196
+    },
+    {
+      "entityId": "Math.LN2",
+      "count": 196
+    },
+    {
+      "entityId": "Math.log",
+      "count": 196
+    },
+    {
+      "entityId": "Math.LOG10E",
+      "count": 196
+    },
+    {
+      "entityId": "Math.LOG2E",
+      "count": 196
+    },
+    {
+      "entityId": "Math.max",
+      "count": 196
+    },
+    {
+      "entityId": "Math.PI",
+      "count": 196
+    },
+    {
+      "entityId": "Math.SQRT1_2",
+      "count": 196
+    },
+    {
+      "entityId": "Math.SQRT2",
+      "count": 196
+    },
+    {
+      "entityId": "Number.MAX_VALUE",
+      "count": 196
+    },
+    {
+      "entityId": "Number.MIN_VALUE",
+      "count": 196
+    },
+    {
+      "entityId": "Number.NEGATIVE_INFINITY",
+      "count": 196
+    },
+    {
+      "entityId": "Number.POSITIVE_INFINITY",
+      "count": 196
+    },
+    {
+      "entityId": "Number.prototype.toExponential",
+      "count": 196
+    },
+    {
+      "entityId": "Number.prototype.toFixed",
+      "count": 196
+    },
+    {
+      "entityId": "Number.prototype.toLocaleString",
+      "count": 196
+    },
+    {
+      "entityId": "Number.prototype.toPrecision",
+      "count": 196
+    },
+    {
+      "entityId": "Number.prototype.toString",
+      "count": 196
+    },
+    {
+      "entityId": "Number.prototype.valueOf",
+      "count": 196
+    },
+    {
+      "entityId": "String.prototype.charAt",
+      "count": 196
+    },
+    {
+      "entityId": "String.prototype.charCodeAt",
+      "count": 196
+    },
+    {
+      "entityId": "String.prototype.concat",
+      "count": 196
+    },
+    {
+      "entityId": "String.prototype.indexOf",
+      "count": 196
+    },
+    {
+      "entityId": "String.prototype.lastIndexOf",
+      "count": 196
+    },
+    {
+      "entityId": "String.prototype.localeCompare",
+      "count": 196
+    },
+    {
+      "entityId": "String.prototype.match",
+      "count": 196
+    },
+    {
+      "entityId": "String.prototype.replace",
+      "count": 196
+    },
+    {
+      "entityId": "String.prototype.search",
+      "count": 196
+    },
+    {
+      "entityId": "String.prototype.slice",
+      "count": 196
+    },
+    {
+      "entityId": "String.prototype.split",
+      "count": 196
+    },
+    {
+      "entityId": "String.prototype.substring",
+      "count": 196
+    },
+    {
+      "entityId": "String.prototype.toLocaleLowerCase",
+      "count": 196
+    },
+    {
+      "entityId": "String.prototype.toLocaleUpperCase",
+      "count": 196
+    },
+    {
+      "entityId": "String.prototype.toLowerCase",
+      "count": 196
+    },
+    {
+      "entityId": "String.prototype.toString",
+      "count": 196
+    },
+    {
+      "entityId": "String.prototype.toUpperCase",
+      "count": 196
+    },
+    {
+      "entityId": "String.prototype.trim",
+      "count": 196
+    },
+    {
+      "entityId": "String.prototype.valueOf",
+      "count": 196
+    },
+    {
+      "entityId": "wh",
+      "count": 196
+    },
+    {
+      "entityId": "Date.parse",
+      "count": 195
+    },
+    {
+      "entityId": "Date.prototype.toDateString",
+      "count": 195
+    }
+  ],
+  "timing": {
+    "totalMs": 138862.1135,
+    "analysisMs": 133118.33680000008,
+    "filesPerSecond": 1.857958182380682,
+    "findingsPerSecond": 710.0928936963069,
+    "averageAnalysisMsPerFile": 515.9625457364344
+  },
+  "output": {
+    "records": "E:\\读论文\\R97\\datasets\\real-miniapp\\real-miniapp-candidates.jsonl",
+    "failures": "E:\\读论文\\R97\\datasets\\real-miniapp\\real-miniapp-parse-failures.jsonl"
+  }
+}

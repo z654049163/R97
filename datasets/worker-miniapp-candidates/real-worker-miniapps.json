@@ -1,0 +1,684 @@
+{
+  "generatedAt": "2026-09-24T12:20:40.985Z",
+  "candidateCount": 67,
+  "checkedCount": 39,
+  "realMiniappCount": 7,
+  "realMiniapps": [
+    {
+      "fullName": "huangy-coder/wechat_miniprogram_docs",
+      "appJsonPaths": [
+        "miniprogram-demo/miniprogram/app.json",
+        "miniprogram-demo/miniprogram/packageSkylineExamples/examples/address-book/app.json",
+        "miniprogram-demo/miniprogram/packageSkylineExamples/examples/album/app.json",
+        "miniprogram-demo/miniprogram/packageSkylineExamples/examples/app-bar/app.json",
+        "miniprogram-demo/miniprogram/packageSkylineExamples/examples/associated-scroll-view/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "miniprogram-demo/miniprogram/packageAPI/pages/worker/worker/worker.js",
+        "miniprogram-demo/miniprogram/packageAPI/pages/worker/worker/worker.json",
+        "miniprogram-demo/miniprogram/packageAPI/pages/worker/worker/worker.wxml",
+        "miniprogram-demo/miniprogram/packageAPI/pages/worker/worker/worker.wxss",
+        "miniprogram-demo/miniprogram/packageAPI/pages/worker/worker/worker/worker.js",
+        "miniprogram-demo/miniprogram/packageAPI/pages/worker/worker/worker/worker.json",
+        "miniprogram-demo/miniprogram/packageAPI/pages/worker/worker/worker/worker.wxml",
+        "miniprogram-demo/miniprogram/packageAPI/pages/worker/worker/worker/worker.wxss",
+        "miniprogram-demo/miniprogram/workers/fib/index.js",
+        "miniprogram-demo/miniprogram/workers/gaussianSplatting/index.js"
+      ],
+      "workerPathCount": 10,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false
+    },
+    {
+      "fullName": "sanyuered/WeChat-MiniProgram-WebAR",
+      "appJsonPaths": [
+        "app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "workers/ImageTracker.js",
+        "workers/imageBusiness.js",
+        "workers/jsfeat.js",
+        "workers/tracking.js",
+        "workers/workerResponse.js"
+      ],
+      "workerPathCount": 5,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false
+    },
+    {
+      "fullName": "wechat-miniprogram/miniprogram-demo",
+      "appJsonPaths": [
+        "miniprogram/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "miniprogram/packageAPI/pages/worker/worker/worker.js",
+        "miniprogram/packageAPI/pages/worker/worker/worker.json",
+        "miniprogram/packageAPI/pages/worker/worker/worker.wxml",
+        "miniprogram/packageAPI/pages/worker/worker/worker.wxss",
+        "miniprogram/packageAPI/pages/worker/worker/worker/worker.js",
+        "miniprogram/packageAPI/pages/worker/worker/worker/worker.json",
+        "miniprogram/packageAPI/pages/worker/worker/worker/worker.wxml",
+        "miniprogram/packageAPI/pages/worker/worker/worker/worker.wxss",
+        "miniprogram/workers/fib/index.js",
+        "miniprogram/workers/gaussianSplatting/index.js"
+      ],
+      "workerPathCount": 10,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false
+    },
+    {
+      "fullName": "weapp-vite/weapp-vite",
+      "appJsonPaths": [
+        "@weapp-core/schematics/schemas/app.json",
+        "@weapp-core/schematics/scripts/config/app.json",
+        "@weapp-core/schematics/test/fixtures/json/app.json",
+        "apps/alipay-antd-mini-demo/src/app.json",
+        "apps/dashboard-ui-lab/src/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "apps/vite-native-ts/miniprogram/workers/a.ts",
+        "apps/vite-native-ts/miniprogram/workers/aaaaaa.ts",
+        "apps/vite-native-ts/miniprogram/workers/b.js",
+        "apps/vite-native-ts/miniprogram/workers/index.js",
+        "apps/vite-native-ts/miniprogram/workers/lala.ts",
+        "apps/vite-native-ts/miniprogram/workers/other.ts",
+        "apps/vite-native-ts/miniprogram/workers/shared.ts",
+        "apps/vite-native/workers/index.js",
+        "apps/vite-native/workers/utils.js",
+        "apps/wevu-vue-demo/src/pages/api-demos/worker/index.vue"
+      ],
+      "workerPathCount": 30,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false
+    },
+    {
+      "fullName": "wuba/wwto",
+      "appJsonPaths": [
+        "demo/miniprogram-demo/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "demo/miniprogram-demo/page/API/pages/worker/worker.js",
+        "demo/miniprogram-demo/page/API/pages/worker/worker.json",
+        "demo/miniprogram-demo/page/API/pages/worker/worker.wxml",
+        "demo/miniprogram-demo/page/API/pages/worker/worker.wxss",
+        "demo/miniprogram-demo/workers/fib/index.js"
+      ],
+      "workerPathCount": 5,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false
+    },
+    {
+      "fullName": "rongwu/webrtc-vad",
+      "appJsonPaths": [
+        "app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "workers/request/index.js",
+        "workers/request/utils.js"
+      ],
+      "workerPathCount": 2,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false
+    },
+    {
+      "fullName": "a764119732/seamless-long-image-miniapp",
+      "appJsonPaths": [
+        "miniprogram/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "miniprogram/workers/analyzer.js",
+        "miniprogram/workers/stitch-core.js"
+      ],
+      "workerPathCount": 2,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false
+    }
+  ],
+  "checked": [
+    {
+      "fullName": "wepyjs/weapp-document-tracker",
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false
+    },
+    {
+      "fullName": "finscn/weapp-adapter",
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "test/game.json"
+      ],
+      "workerPaths": [
+        "test/workers/my-worker.js"
+      ],
+      "workerPathCount": 1,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true
+    },
+    {
+      "fullName": "N0v4ont0p/wxml-masterguide-",
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false
+    },
+    {
+      "fullName": "huangy-coder/wechat_miniprogram_docs",
+      "appJsonPaths": [
+        "miniprogram-demo/miniprogram/app.json",
+        "miniprogram-demo/miniprogram/packageSkylineExamples/examples/address-book/app.json",
+        "miniprogram-demo/miniprogram/packageSkylineExamples/examples/album/app.json",
+        "miniprogram-demo/miniprogram/packageSkylineExamples/examples/app-bar/app.json",
+        "miniprogram-demo/miniprogram/packageSkylineExamples/examples/associated-scroll-view/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "miniprogram-demo/miniprogram/packageAPI/pages/worker/worker/worker.js",
+        "miniprogram-demo/miniprogram/packageAPI/pages/worker/worker/worker.json",
+        "miniprogram-demo/miniprogram/packageAPI/pages/worker/worker/worker.wxml",
+        "miniprogram-demo/miniprogram/packageAPI/pages/worker/worker/worker.wxss",
+        "miniprogram-demo/miniprogram/packageAPI/pages/worker/worker/worker/worker.js",
+        "miniprogram-demo/miniprogram/packageAPI/pages/worker/worker/worker/worker.json",
+        "miniprogram-demo/miniprogram/packageAPI/pages/worker/worker/worker/worker.wxml",
+        "miniprogram-demo/miniprogram/packageAPI/pages/worker/worker/worker/worker.wxss",
+        "miniprogram-demo/miniprogram/workers/fib/index.js",
+        "miniprogram-demo/miniprogram/workers/gaussianSplatting/index.js"
+      ],
+      "workerPathCount": 10,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false
+    },
+    {
+      "fullName": "Tencent/kbone",
+      "appJsonPaths": [
+        "examples/demo21/mp/app.json",
+        "examples/demo32/mp/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "examples/demo25/src/worker/sharedWorker.js",
+        "examples/demo25/src/worker/worker.js"
+      ],
+      "workerPathCount": 2,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false
+    },
+    {
+      "fullName": "wdk-docs/wxadev-docs",
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "docs/.doctrees/api/worker/Worker.doctree",
+        "docs/.doctrees/api/worker/Worker.onMessage.doctree",
+        "docs/.doctrees/api/worker/Worker.postMessage.doctree",
+        "docs/.doctrees/api/worker/Worker.terminate.doctree",
+        "docs/_sources/api/worker/Worker.onMessage.rst.txt",
+        "docs/_sources/api/worker/Worker.postMessage.rst.txt",
+        "docs/_sources/api/worker/Worker.rst.txt",
+        "docs/_sources/api/worker/Worker.terminate.rst.txt",
+        "docs/api/worker/Worker.html",
+        "docs/api/worker/Worker.onMessage.html"
+      ],
+      "workerPathCount": 16,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false
+    },
+    {
+      "fullName": "timi-liuliang/echo",
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "app/wechat/game.json"
+      ],
+      "workerPaths": [
+        "thirdparty/mlpack/methods/reinforcement_learning/worker/CMakeLists.txt",
+        "thirdparty/mlpack/methods/reinforcement_learning/worker/n_step_q_learning_worker.hpp",
+        "thirdparty/mlpack/methods/reinforcement_learning/worker/one_step_q_learning_worker.hpp",
+        "thirdparty/mlpack/methods/reinforcement_learning/worker/one_step_sarsa_worker.hpp"
+      ],
+      "workerPathCount": 4,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true
+    },
+    {
+      "fullName": "RedrockTeam/xyx",
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "game.json"
+      ],
+      "workerPaths": [
+        "js/worker/index.js"
+      ],
+      "workerPathCount": 1,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true
+    },
+    {
+      "fullName": "stephenml/wxgame-threejs",
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true
+    },
+    {
+      "fullName": "newbieYoung/Threejs_rubik",
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "lesson/demo2/game.json",
+        "lesson/demo3/game.json",
+        "lesson/demo4/game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true
+    },
+    {
+      "fullName": "dcloudio/unidocs-zh",
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false
+    },
+    {
+      "fullName": "wechat-miniprogram/minigame-demo",
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "minicode/getUserInfo/minigame/game.json",
+        "minicode/requestSubscribeSystemMessage/minigame/game/game.json",
+        "miniprogram/game.json"
+      ],
+      "workerPaths": [
+        "miniprogram/js/api/worker/index.js",
+        "miniprogram/js/api/worker/view.js",
+        "miniprogram/workers/index.js"
+      ],
+      "workerPathCount": 3,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true
+    },
+    {
+      "fullName": "sanyuered/WeChat-MiniProgram-WebAR",
+      "appJsonPaths": [
+        "app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "workers/ImageTracker.js",
+        "workers/imageBusiness.js",
+        "workers/jsfeat.js",
+        "workers/tracking.js",
+        "workers/workerResponse.js"
+      ],
+      "workerPathCount": 5,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false
+    },
+    {
+      "fullName": "esengine/esengine",
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "examples/core-demos/workers/physics-worker.js",
+        "examples/core-demos/workers/worker-mapping.json",
+        "examples/wechat-worker-demo/workers/physics-worker.js",
+        "examples/wechat-worker-demo/workers/worker-mapping.json"
+      ],
+      "workerPathCount": 4,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false
+    },
+    {
+      "fullName": "Adherentman/Typescript-wxApi.d.ts",
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false
+    },
+    {
+      "fullName": "egret-labs/egret-docs",
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false
+    },
+    {
+      "fullName": "wechat-miniprogram/miniprogram-demo",
+      "appJsonPaths": [
+        "miniprogram/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "miniprogram/packageAPI/pages/worker/worker/worker.js",
+        "miniprogram/packageAPI/pages/worker/worker/worker.json",
+        "miniprogram/packageAPI/pages/worker/worker/worker.wxml",
+        "miniprogram/packageAPI/pages/worker/worker/worker.wxss",
+        "miniprogram/packageAPI/pages/worker/worker/worker/worker.js",
+        "miniprogram/packageAPI/pages/worker/worker/worker/worker.json",
+        "miniprogram/packageAPI/pages/worker/worker/worker/worker.wxml",
+        "miniprogram/packageAPI/pages/worker/worker/worker/worker.wxss",
+        "miniprogram/workers/fib/index.js",
+        "miniprogram/workers/gaussianSplatting/index.js"
+      ],
+      "workerPathCount": 10,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false
+    },
+    {
+      "fullName": "weapp-vite/weapp-vite",
+      "appJsonPaths": [
+        "@weapp-core/schematics/schemas/app.json",
+        "@weapp-core/schematics/scripts/config/app.json",
+        "@weapp-core/schematics/test/fixtures/json/app.json",
+        "apps/alipay-antd-mini-demo/src/app.json",
+        "apps/dashboard-ui-lab/src/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "apps/vite-native-ts/miniprogram/workers/a.ts",
+        "apps/vite-native-ts/miniprogram/workers/aaaaaa.ts",
+        "apps/vite-native-ts/miniprogram/workers/b.js",
+        "apps/vite-native-ts/miniprogram/workers/index.js",
+        "apps/vite-native-ts/miniprogram/workers/lala.ts",
+        "apps/vite-native-ts/miniprogram/workers/other.ts",
+        "apps/vite-native-ts/miniprogram/workers/shared.ts",
+        "apps/vite-native/workers/index.js",
+        "apps/vite-native/workers/utils.js",
+        "apps/wevu-vue-demo/src/pages/api-demos/worker/index.vue"
+      ],
+      "workerPathCount": 30,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false
+    },
+    {
+      "fullName": "avantcontra/p5.we",
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true
+    },
+    {
+      "fullName": "matchvs/AnimalChecker",
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "build/wechatgame/game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true
+    },
+    {
+      "fullName": "goplus/spx",
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "cmd/spx/template/platform/webminigame/game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true
+    },
+    {
+      "fullName": "kaidianxing/kaidianxing-mobile",
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "src/wxcomponents/worker/index.js"
+      ],
+      "workerPathCount": 1,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false
+    },
+    {
+      "fullName": "akeboshi1/Phaser-wx",
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "game.json"
+      ],
+      "workerPaths": [
+        "js/worker/index.js",
+        "js/worker/worker.js"
+      ],
+      "workerPathCount": 2,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true
+    },
+    {
+      "fullName": "wuba/wwto",
+      "appJsonPaths": [
+        "demo/miniprogram-demo/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "demo/miniprogram-demo/page/API/pages/worker/worker.js",
+        "demo/miniprogram-demo/page/API/pages/worker/worker.json",
+        "demo/miniprogram-demo/page/API/pages/worker/worker.wxml",
+        "demo/miniprogram-demo/page/API/pages/worker/worker.wxss",
+        "demo/miniprogram-demo/workers/fib/index.js"
+      ],
+      "workerPathCount": 5,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false
+    },
+    {
+      "fullName": "rongwu/webrtc-vad",
+      "appJsonPaths": [
+        "app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "workers/request/index.js",
+        "workers/request/utils.js"
+      ],
+      "workerPathCount": 2,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false
+    },
+    {
+      "fullName": "genxium/DelayNoMore",
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false
+    },
+    {
+      "fullName": "remaxjs/promise-mini-api",
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false
+    },
+    {
+      "fullName": "may-today/screen-weapp",
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "src/workers/index.ts"
+      ],
+      "workerPathCount": 1,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false
+    },
+    {
+      "fullName": "k8w/pixi-minigame-test",
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true
+    },
+    {
+      "fullName": "penduan/emscripten-wechat-filesystem",
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false
+    },
+    {
+      "fullName": "dum3ng/worker_test",
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "build-templates/wechatgame/game.json"
+      ],
+      "workerPaths": [
+        "build-templates/wechatgame/workers/fn.js",
+        "build-templates/wechatgame/workers/fn.js.meta",
+        "build-templates/wechatgame/workers/worker.js",
+        "build-templates/wechatgame/workers/worker.js.meta"
+      ],
+      "workerPathCount": 4,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true
+    },
+    {
+      "fullName": "THUCampus/CloseTheLoop",
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "workerscripts/workers/assets/Scripts/GameAI.js",
+        "workerscripts/workers/assets/Scripts/GameRoom.js",
+        "workerscripts/workers/assets/Scripts/IAdapter.js",
+        "workerscripts/workers/assets/Scripts/PayLoadProtobuf.js",
+        "workerscripts/workers/assets/Scripts/PlayerInfo.js",
+        "workerscripts/workers/assets/Scripts/ServerPlayerInfo.js",
+        "workerscripts/workers/assets/Scripts/Uint16PairQueue.js",
+        "workerscripts/workers/assets/Scripts/Uint16TripleQueue.js",
+        "workerscripts/workers/assets/Scripts/protobufjs.js",
+        "workerscripts/workers/workerscripts/WxRoomManager.js"
+      ],
+      "workerPathCount": 11,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false
+    },
+    {
+      "fullName": "docker-practice/miniprogram",
+      "appJsonPaths": [
+        "client/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "client/workers/test/index.ts"
+      ],
+      "workerPathCount": 1,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false
+    },
+    {
+      "fullName": "tikivn/remax",
+      "appJsonPaths": [
+        "e2e/mini/alipay/app.json",
+        "e2e/mini/wechat/app.json",
+        "packages/remax-cli/src/__tests__/integration/fixtures/ali/expected/app.json",
+        "packages/remax-cli/src/__tests__/integration/fixtures/assets/expected/app.json",
+        "packages/remax-cli/src/__tests__/integration/fixtures/babel-plugin-import/expected/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false
+    },
+    {
+      "fullName": "fishen/wxa-core",
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false
+    },
+    {
+      "fullName": "a764119732/seamless-long-image-miniapp",
+      "appJsonPaths": [
+        "miniprogram/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "miniprogram/workers/analyzer.js",
+        "miniprogram/workers/stitch-core.js"
+      ],
+      "workerPathCount": 2,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false
+    },
+    {
+      "fullName": "remaxjs/v1.remaxjs.org",
+      "appJsonPaths": [
+        "packages/remax-cli/src/__tests__/fixtures/alipay/expected/app.json",
+        "packages/remax-cli/src/__tests__/fixtures/assets/expected/app.json",
+        "packages/remax-cli/src/__tests__/fixtures/babelrc/expected/app.json",
+        "packages/remax-cli/src/__tests__/fixtures/createHostComponent/expected/alipay/app.json",
+        "packages/remax-cli/src/__tests__/fixtures/createHostComponent/expected/toutiao/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false
+    },
+    {
+      "fullName": "ronnycyy/learn-remax",
+      "appJsonPaths": [
+        "e2e/mini/alipay/app.json",
+        "e2e/mini/wechat/app.json",
+        "packages/remax-cli/src/__tests__/integration/fixtures/ali/expected/app.json",
+        "packages/remax-cli/src/__tests__/integration/fixtures/assets/expected/app.json",
+        "packages/remax-cli/src/__tests__/integration/fixtures/babel-plugin-import/expected/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false
+    },
+    {
+      "fullName": "Windseek/main-study",
+      "appJsonPaths": [
+        "study-remax/examples/one/app.json",
+        "study-remax/examples/react-query/app.json",
+        "study-remax/examples/umi-mock/app.json",
+        "study-remax/examples/wechat/dist/app.json",
+        "study-remax/examples/weui/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false
+    }
+  ]
+}

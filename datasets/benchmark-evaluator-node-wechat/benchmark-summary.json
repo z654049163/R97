@@ -1,0 +1,1245 @@
+{
+  "generatedAt": "2026-09-23T09:12:04.253Z",
+  "environment": {
+    "node": "v24.21.0",
+    "targetRuntimeIds": [
+      "e1-ecmascript",
+      "e2-node-24.21.0",
+      "e5-edge-headless",
+      "e4-wechat-real"
+    ],
+    "evaluatorRuntimeId": "e2-node-24.21.0",
+    "legacySource": "E:\\复现\\JSIMPLIFIER\\jsimplifier_dataset\\jsimplifier\\data\\pra-rule-map.json",
+    "legacySymbolCount": 147,
+    "corpusPath": "E:\\读论文\\R97\\datasets\\real-miniapp-full\\real-miniapp-candidates.jsonl",
+    "wechatReportPath": "E:\\读论文\\R97\\datasets\\wechat-live\\wechat-probe-report.json"
+  },
+  "synthetic": {
+    "caseCount": 16,
+    "evidenceAvailability": {
+      "language": true,
+      "node": true,
+      "wechat": true,
+      "browser": true
+    },
+    "results": [
+      {
+        "caseId": "safe-object-keys",
+        "category": "language",
+        "source": "Object.keys({ value: 1 });",
+        "expected": "FOLD",
+        "rationale": "ECMAScript 内建对象在语言基线和 Node 中语义一致",
+        "entityId": "Object.keys",
+        "actualStates": [
+          "FOLD"
+        ],
+        "action": "ALLOW_FOLD",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ],
+        "correct": true
+      },
+      {
+        "caseId": "safe-array-is-array",
+        "category": "language",
+        "source": "Array.isArray([]);",
+        "expected": "FOLD",
+        "rationale": "标准语言 API 在评估运行时和目标运行时一致",
+        "entityId": "Array.isArray",
+        "actualStates": [
+          "FOLD"
+        ],
+        "action": "ALLOW_FOLD",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ],
+        "correct": true
+      },
+      {
+        "caseId": "safe-json-parse",
+        "category": "language",
+        "source": "JSON.parse('{\"value\":1}');",
+        "expected": "FOLD",
+        "rationale": "标准语言 API 在评估运行时和目标运行时一致",
+        "entityId": "JSON.parse",
+        "actualStates": [
+          "FOLD"
+        ],
+        "action": "ALLOW_FOLD",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ],
+        "correct": true
+      },
+      {
+        "caseId": "safe-math-max",
+        "category": "language",
+        "source": "Math.max(1, 2, 3);",
+        "expected": "FOLD",
+        "rationale": "标准语言 API 在评估运行时和目标运行时一致",
+        "entityId": "Math.max",
+        "actualStates": [
+          "FOLD"
+        ],
+        "action": "ALLOW_FOLD",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ],
+        "correct": true
+      },
+      {
+        "caseId": "unsafe-process-version",
+        "category": "node",
+        "source": "process.version;",
+        "expected": "PROTECT",
+        "rationale": "Node 宿主实体在语言基线中不存在",
+        "entityId": "process.version",
+        "actualStates": [
+          "PROTECT"
+        ],
+        "action": "BLOCK_FOLD",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ],
+        "correct": true
+      },
+      {
+        "caseId": "unsafe-node-buffer",
+        "category": "node",
+        "source": "Buffer.from('abc');",
+        "expected": "PROTECT",
+        "rationale": "Buffer 是 Node 宿主实体，不能跨语言基线折叠",
+        "entityId": "Buffer.from",
+        "actualStates": [
+          "PROTECT"
+        ],
+        "action": "BLOCK_FOLD",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ],
+        "correct": true
+      },
+      {
+        "caseId": "unsafe-browser-window",
+        "category": "browser",
+        "source": "window.document;",
+        "expected": "PROTECT",
+        "rationale": "缺少真实浏览器证据时只能阻断，不能把缺失证据写成安全",
+        "entityId": "window.document",
+        "actualStates": [
+          "PROTECT"
+        ],
+        "action": "BLOCK_FOLD",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ],
+        "correct": true
+      },
+      {
+        "caseId": "unsafe-browser-document",
+        "category": "browser",
+        "source": "document.createElement('div');",
+        "expected": "PROTECT",
+        "rationale": "缺少真实浏览器证据时只能阻断，不能把缺失证据写成安全",
+        "entityId": "document.createElement",
+        "actualStates": [
+          "PROTECT"
+        ],
+        "action": "BLOCK_FOLD",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ],
+        "correct": true
+      },
+      {
+        "caseId": "unsafe-browser-storage",
+        "category": "browser",
+        "source": "localStorage.getItem('key');",
+        "expected": "PROTECT",
+        "rationale": "缺少真实浏览器证据时只能阻断，不能把缺失证据写成安全",
+        "entityId": "localStorage.getItem",
+        "actualStates": [
+          "PROTECT"
+        ],
+        "action": "BLOCK_FOLD",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ],
+        "correct": true
+      },
+      {
+        "caseId": "unsafe-wechat-request",
+        "category": "miniapp",
+        "source": "wx.request({ url: 'https://example.invalid' });",
+        "expected": "PROTECT",
+        "rationale": "缺少真实微信证据时只能阻断，不能把缺失证据写成安全",
+        "entityId": "wx.request",
+        "actualStates": [
+          "PROTECT"
+        ],
+        "action": "BLOCK_FOLD",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ],
+        "correct": true
+      },
+      {
+        "caseId": "unsafe-wechat-get-app",
+        "category": "miniapp",
+        "source": "getApp();",
+        "expected": "PROTECT",
+        "rationale": "缺少真实微信证据时只能阻断，不能把缺失证据写成安全",
+        "entityId": "getApp",
+        "actualStates": [
+          "PROTECT"
+        ],
+        "action": "BLOCK_FOLD",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ],
+        "correct": true
+      },
+      {
+        "caseId": "unsafe-wechat-page",
+        "category": "miniapp",
+        "source": "Page({});",
+        "expected": "PROTECT",
+        "rationale": "缺少真实微信证据时只能阻断，不能把缺失证据写成安全",
+        "entityId": "Page",
+        "actualStates": [
+          "PROTECT"
+        ],
+        "action": "BLOCK_FOLD",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ],
+        "correct": true
+      },
+      {
+        "caseId": "unsafe-timing-set-timeout",
+        "category": "host_global",
+        "source": "setTimeout(function () {}, 0);",
+        "expected": "PROTECT",
+        "rationale": "定时器不是 ECMAScript 语言内建对象",
+        "entityId": "setTimeout",
+        "actualStates": [
+          "PROTECT"
+        ],
+        "action": "BLOCK_FOLD",
+        "reasonCodes": [
+          "CONTRACT_COVERAGE_MISSING",
+          "CONTRACT_MISMATCH"
+        ],
+        "correct": true
+      },
+      {
+        "caseId": "unsafe-host-fetch",
+        "category": "host_global",
+        "source": "fetch('https://example.invalid');",
+        "expected": "PROTECT",
+        "rationale": "fetch 不是 ECMAScript 语言内建对象",
+        "entityId": "fetch",
+        "actualStates": [
+          "PROTECT"
+        ],
+        "action": "BLOCK_FOLD",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ],
+        "correct": true
+      },
+      {
+        "caseId": "unknown-unresolved-global",
+        "category": "unknown",
+        "source": "foo.bar();",
+        "expected": "UNKNOWN",
+        "rationale": "无法确认 foo 的来源，不能把未知实体当作安全",
+        "entityId": "foo.bar",
+        "actualStates": [
+          "UNKNOWN"
+        ],
+        "action": "BLOCK_FOLD",
+        "reasonCodes": [
+          "BINDING_UNRESOLVED"
+        ],
+        "correct": true
+      },
+      {
+        "caseId": "unknown-dynamic-property",
+        "category": "unknown",
+        "source": "globalThis[key]();",
+        "expected": "UNKNOWN",
+        "rationale": "动态属性访问无法建立稳定的运行时实体",
+        "entityId": "globalThis",
+        "actualStates": [
+          "UNKNOWN"
+        ],
+        "action": "BLOCK_FOLD",
+        "reasonCodes": [
+          "BINDING_UNRESOLVED"
+        ],
+        "correct": true
+      }
+    ],
+    "metrics": {
+      "A0-aggressive-fold": {
+        "total": 16,
+        "allowedFold": 16,
+        "blockedFold": 0,
+        "unsafeFold": 12,
+        "unsafeFoldMeasured": 0,
+        "usefulFold": 4,
+        "overProtection": 0,
+        "unknown": 0,
+        "correctState": 4,
+        "foldRate": 1,
+        "unknownRate": 0,
+        "unsafeFoldMeasuredRate": 0,
+        "exactStateAccuracy": 0.25,
+        "safeFoldCoverage": 1,
+        "overProtectionRate": 0,
+        "unsafeFoldRate": 1,
+        "blockedNonFoldRate": 0
+      },
+      "A1-legacy-blacklist": {
+        "total": 16,
+        "allowedFold": 5,
+        "blockedFold": 11,
+        "unsafeFold": 1,
+        "unsafeFoldMeasured": 0,
+        "usefulFold": 4,
+        "overProtection": 0,
+        "unknown": 0,
+        "correctState": 14,
+        "foldRate": 0.3125,
+        "unknownRate": 0,
+        "unsafeFoldMeasuredRate": 0,
+        "exactStateAccuracy": 0.875,
+        "safeFoldCoverage": 1,
+        "overProtectionRate": 0,
+        "unsafeFoldRate": 0.08333333333333333,
+        "blockedNonFoldRate": 0.9166666666666666
+      },
+      "A2-prefix-blacklist": {
+        "total": 16,
+        "allowedFold": 5,
+        "blockedFold": 11,
+        "unsafeFold": 1,
+        "unsafeFoldMeasured": 0,
+        "usefulFold": 4,
+        "overProtection": 0,
+        "unknown": 0,
+        "correctState": 14,
+        "foldRate": 0.3125,
+        "unknownRate": 0,
+        "unsafeFoldMeasuredRate": 0,
+        "exactStateAccuracy": 0.875,
+        "safeFoldCoverage": 1,
+        "overProtectionRate": 0,
+        "unsafeFoldRate": 0.08333333333333333,
+        "blockedNonFoldRate": 0.9166666666666666
+      },
+      "A-safe-all-protect": {
+        "total": 16,
+        "allowedFold": 0,
+        "blockedFold": 16,
+        "unsafeFold": 0,
+        "unsafeFoldMeasured": 0,
+        "usefulFold": 0,
+        "overProtection": 4,
+        "unknown": 0,
+        "correctState": 10,
+        "foldRate": 0,
+        "unknownRate": 0,
+        "unsafeFoldMeasuredRate": 0,
+        "exactStateAccuracy": 0.625,
+        "safeFoldCoverage": 0,
+        "overProtectionRate": 1,
+        "unsafeFoldRate": 0,
+        "blockedNonFoldRate": 1
+      },
+      "R97-full": {
+        "total": 16,
+        "allowedFold": 4,
+        "blockedFold": 12,
+        "unsafeFold": 0,
+        "unsafeFoldMeasured": 0,
+        "usefulFold": 4,
+        "overProtection": 0,
+        "unknown": 2,
+        "correctState": 16,
+        "foldRate": 0.25,
+        "unknownRate": 0.125,
+        "unsafeFoldMeasuredRate": 0,
+        "exactStateAccuracy": 1,
+        "safeFoldCoverage": 1,
+        "overProtectionRate": 0,
+        "unsafeFoldRate": 0,
+        "blockedNonFoldRate": 1
+      }
+    }
+  },
+  "corpus": {
+    "corpusPath": "E:\\读论文\\R97\\datasets\\real-miniapp-full\\real-miniapp-candidates.jsonl",
+    "sampling": {
+      "mode": "per-entity-cap",
+      "perEntityCap": 5
+    },
+    "rawRecordCount": 3900,
+    "deduplicatedCount": 3895,
+    "sampleCount": 3895,
+    "entityView": {
+      "total": 1246,
+      "fold": 260,
+      "protect": 189,
+      "unknown": 797,
+      "entitiesWithUnsafeFold": 0,
+      "foldRate": 0.2086677367576244,
+      "protectRate": 0.15168539325842698,
+      "unknownRate": 0.6396468699839486
+    },
+    "independentReference": {
+      "description": "判卷探针 r97-oracle-probe 在 e2-node-24.21.0 / e5-edge-headless / e4-wechat-real 上的直接读取",
+      "oracleRuntimeIds": [
+        "e2-node-24.21.0",
+        "e5-edge-headless",
+        "e4-wechat-real"
+      ],
+      "oracleInScope": true,
+      "targetRuntimeIds": [
+        "e1-ecmascript",
+        "e2-node-24.21.0",
+        "e5-edge-headless",
+        "e4-wechat-real"
+      ],
+      "provenance": {
+        "runtimes": [
+          {
+            "runtimeId": "e1-ecmascript",
+            "probeImplementation": "r97-oracle-probe（隔离 vm，非宿主）",
+            "isHost": false,
+            "observedEntityCount": 1246,
+            "collectedAt": null,
+            "versionProfile": null
+          },
+          {
+            "runtimeId": "e2-node-24.21.0",
+            "probeImplementation": "r97-oracle-probe",
+            "isHost": true,
+            "observedEntityCount": 1246,
+            "collectedAt": null,
+            "versionProfile": "v24.21.0"
+          },
+          {
+            "runtimeId": "e5-edge-headless",
+            "probeImplementation": "r97-oracle-probe",
+            "isHost": true,
+            "observedEntityCount": 1246,
+            "collectedAt": null,
+            "versionProfile": null
+          },
+          {
+            "runtimeId": "e4-wechat-real",
+            "probeImplementation": "r97-oracle-probe",
+            "isHost": true,
+            "observedEntityCount": 1225,
+            "collectedAt": "2026-09-23T02:48:13.005Z",
+            "versionProfile": "3.17.3",
+            "platform": "devtools",
+            "snapshot": true
+          }
+        ]
+      },
+      "excluded": [
+        {
+          "root": "Function",
+          "reason": "AppService 上读取 Function 会栈溢出并卡死会话，该根节点不参与微信侧判卷",
+          "entityCount": 10,
+          "entityIds": [
+            "Function",
+            "Function.prototype",
+            "Function.prototype.bind.apply",
+            "Function.prototype.bind",
+            "Function.bind.apply",
+            "Function.bind",
+            "Function.toString.call",
+            "Function.toString",
+            "Function.call.apply",
+            "Function.call"
+          ]
+        }
+      ],
+      "entityCount": 1246,
+      "differentialEntityCount": 208,
+      "differentialRecordCount": 785,
+      "differentialEntities": [
+        "$gwx",
+        "console.warn",
+        "$gwn",
+        "$gwl",
+        "console.log",
+        "wh",
+        "wh.hn",
+        "wh.rv",
+        "wh.nh",
+        "console.error",
+        "gra",
+        "grb",
+        "define",
+        "App",
+        "wx.request",
+        "require",
+        "getApp",
+        "Page",
+        "wx.openLocation",
+        "wx.downloadFile"
+      ],
+      "differentialRoots": {
+        "wx": 128,
+        "Math": 15,
+        "console": 7,
+        "wh": 4,
+        "process": 4,
+        "Buffer": 4,
+        "__wxConfig": 2,
+        "Uint8Array": 2,
+        "Date": 2,
+        "$gwx": 1,
+        "$gwn": 1,
+        "$gwl": 1,
+        "gra": 1,
+        "grb": 1,
+        "define": 1,
+        "App": 1,
+        "require": 1,
+        "getApp": 1,
+        "Page": 1,
+        "setTimeout": 1,
+        "clearTimeout": 1,
+        "setInterval": 1,
+        "clearInterval": 1,
+        "MessageChannel": 1,
+        "WeixinJSBridge": 1,
+        "requireOnce": 1,
+        "getCurrentPages": 1,
+        "setImmediate": 1,
+        "atob": 1,
+        "btoa": 1,
+        "TextDecoder": 1,
+        "TextEncoder": 1,
+        "SVGRect": 1,
+        "WebKitCSSMatrix": 1,
+        "Image": 1,
+        "f": 1,
+        "Window": 1,
+        "__dirname": 1,
+        "close": 1,
+        "Crypto": 1,
+        "eval": 1,
+        "FileReader": 1,
+        "window": 1,
+        "self": 1,
+        "crypto": 1,
+        "Blob": 1,
+        "stop": 1,
+        "requestAnimationFrame": 1,
+        "globalThis": 1
+      },
+      "allowedFold": 1196,
+      "allowedFoldOnDifferentialEntity": 0,
+      "allowedFoldOnDifferentialExamples": []
+    },
+    "evidenceAvailability": {
+      "language": true,
+      "node": true,
+      "wechat": true,
+      "browser": true
+    },
+    "runtimeEvidence": {
+      "wechat": {
+        "runtimeId": "e4-wechat-real",
+        "observedEntityCount": 451,
+        "sdkVersion": "3.17.3"
+      },
+      "browser": {
+        "runtimeId": "e5-edge-headless",
+        "observedEntityCount": 1248,
+        "browserVersion": {
+          "product": "Edg/150.0.4078.83",
+          "revision": "@7f302606e52ab615d52e1a0ab89ca415c8c843a3",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0",
+          "protocolVersion": "1.3"
+        }
+      }
+    },
+    "byExpected": {
+      "UNKNOWN": 2062,
+      "PROTECT": 637,
+      "FOLD": 1196
+    },
+    "byActual": {
+      "UNKNOWN": 2004,
+      "PROTECT": 695,
+      "FOLD": 1196
+    },
+    "byTransformation": {
+      "CONST_EVAL": 2031,
+      "CALL_EVAL": 1742,
+      "BRANCH_PRUNE": 122
+    },
+    "byReasonCode": {
+      "BINDING_UNRESOLVED": 1851,
+      "CONTRACT_MISMATCH": 695,
+      "ALL_TARGETS_MATCH": 2032,
+      "EVIDENCE_MISSING": 199,
+      "CONTRACT_COVERAGE_MISSING": 12
+    },
+    "byUncertaintySource": {
+      "binding": 1851,
+      "runtime": 141,
+      "behavior": 12
+    },
+    "byTargetRuntimeStatus": {
+      "confirmed": 3895
+    },
+    "targetRuntimeImpact": {
+      "confirmed": {
+        "sampleCount": 3895,
+        "unsafeFold": 0,
+        "overProtection": 0,
+        "overProtectionRate": 0,
+        "blockedForUnconfirmedTarget": 0
+      }
+    },
+    "examples": [
+      {
+        "sampleId": "367dd3fa3aabaf79e62d82fb",
+        "project": "35d307ca",
+        "file": "35d307ca\\app-service.js",
+        "entityId": "undefined",
+        "transformationKind": "CONST_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "FOLD",
+        "actualState": "FOLD",
+        "actualAction": "ALLOW_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ]
+      },
+      {
+        "sampleId": "841d086dd14d83104a3fab76",
+        "project": "KK维语翻译_65eb9713",
+        "file": "KK维语翻译_65eb9713\\app-service.js",
+        "entityId": "undefined",
+        "transformationKind": "CONST_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "FOLD",
+        "actualState": "FOLD",
+        "actualAction": "ALLOW_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ]
+      },
+      {
+        "sampleId": "81a8662dcfd2226b91ac288c",
+        "project": "小剧场_b8d846d4",
+        "file": "小剧场_b8d846d4\\app-service.js",
+        "entityId": "undefined",
+        "transformationKind": "BRANCH_PRUNE",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "FOLD",
+        "actualState": "FOLD",
+        "actualAction": "ALLOW_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ]
+      },
+      {
+        "sampleId": "390c77988f7d8f129203723e",
+        "project": "我的_c8deeb89",
+        "file": "我的_c8deeb89\\app-service.js",
+        "entityId": "undefined",
+        "transformationKind": "BRANCH_PRUNE",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "FOLD",
+        "actualState": "FOLD",
+        "actualAction": "ALLOW_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ]
+      },
+      {
+        "sampleId": "7ebbf39ca03c0a6c87f3b70f",
+        "project": "uni-app_6597f70e",
+        "file": "uni-app_6597f70e\\app-service.js",
+        "entityId": "undefined",
+        "transformationKind": "CONST_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "FOLD",
+        "actualState": "FOLD",
+        "actualAction": "ALLOW_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ]
+      },
+      {
+        "sampleId": "3e71cc911d8988d33abdcb95",
+        "project": "喝酒摇骰子_21a80905",
+        "file": "喝酒摇骰子_21a80905\\app-service.js",
+        "entityId": "JSON.stringify",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "FOLD",
+        "actualState": "FOLD",
+        "actualAction": "ALLOW_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ]
+      },
+      {
+        "sampleId": "c1f8aa14dabfa0162c4bd69e",
+        "project": "透明头像小助手_a2856cae",
+        "file": "透明头像小助手_a2856cae\\app-service.js",
+        "entityId": "JSON.stringify",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "FOLD",
+        "actualState": "FOLD",
+        "actualAction": "ALLOW_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ]
+      },
+      {
+        "sampleId": "b68fea6a4c68c469710f499a",
+        "project": "霍兰德职业性格测试_2f55af3e",
+        "file": "霍兰德职业性格测试_2f55af3e\\app-service.js",
+        "entityId": "JSON.stringify",
+        "transformationKind": "BRANCH_PRUNE",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "FOLD",
+        "actualState": "FOLD",
+        "actualAction": "ALLOW_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ]
+      },
+      {
+        "sampleId": "078c0811877bd4f5af97f014",
+        "project": "天工音乐AI写歌_e60b382d",
+        "file": "天工音乐AI写歌_e60b382d\\app-service.js",
+        "entityId": "JSON.stringify",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "FOLD",
+        "actualState": "FOLD",
+        "actualAction": "ALLOW_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ]
+      },
+      {
+        "sampleId": "2df992d589f7c8a10468a94f",
+        "project": "创意平台提供技术支持_4469d358",
+        "file": "创意平台提供技术支持_4469d358\\app-service.js",
+        "entityId": "JSON.stringify",
+        "transformationKind": "BRANCH_PRUNE",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "FOLD",
+        "actualState": "FOLD",
+        "actualAction": "ALLOW_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ]
+      },
+      {
+        "sampleId": "04c2e21b4d0578058206d1e0",
+        "project": "中途国际_b77dbc70",
+        "file": "中途国际_b77dbc70\\app-service.js",
+        "entityId": "console.warn",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "PROTECT",
+        "actualState": "PROTECT",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "CONTRACT_MISMATCH",
+          "ALL_TARGETS_MATCH"
+        ]
+      },
+      {
+        "sampleId": "d6123a385760eed18755f48e",
+        "project": "858e14b1",
+        "file": "858e14b1\\app-service.js",
+        "entityId": "console.warn",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "PROTECT",
+        "actualState": "PROTECT",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "CONTRACT_MISMATCH",
+          "ALL_TARGETS_MATCH"
+        ]
+      },
+      {
+        "sampleId": "0d27f9ec79a609d1695cfe99",
+        "project": "9da14543",
+        "file": "9da14543\\app-service.js",
+        "entityId": "console.warn",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "PROTECT",
+        "actualState": "PROTECT",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "CONTRACT_MISMATCH",
+          "ALL_TARGETS_MATCH"
+        ]
+      },
+      {
+        "sampleId": "a1339977cc47b57563ecea3a",
+        "project": "70f40db0",
+        "file": "70f40db0\\app-service.js",
+        "entityId": "console.warn",
+        "transformationKind": "CONST_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "PROTECT",
+        "actualState": "PROTECT",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "CONTRACT_MISMATCH",
+          "ALL_TARGETS_MATCH"
+        ]
+      },
+      {
+        "sampleId": "2ee1c3de61fa2e8e217d4d28",
+        "project": "君雅物业水电管理系统_fb8f438f",
+        "file": "君雅物业水电管理系统_fb8f438f\\app-service.js",
+        "entityId": "console.warn",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "PROTECT",
+        "actualState": "PROTECT",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "CONTRACT_MISMATCH",
+          "ALL_TARGETS_MATCH"
+        ]
+      },
+      {
+        "sampleId": "079fe045ac4bc4f475988c9f",
+        "project": "在线计算器小工具_cb86660c",
+        "file": "在线计算器小工具_cb86660c\\app-service.js",
+        "entityId": "console.log",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "PROTECT",
+        "actualState": "PROTECT",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "CONTRACT_MISMATCH",
+          "ALL_TARGETS_MATCH"
+        ]
+      },
+      {
+        "sampleId": "0b2f9ed80e806f8cf18425ee",
+        "project": "15460a67",
+        "file": "15460a67\\app-service.js",
+        "entityId": "console.log",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "PROTECT",
+        "actualState": "PROTECT",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "CONTRACT_MISMATCH",
+          "ALL_TARGETS_MATCH"
+        ]
+      },
+      {
+        "sampleId": "f00844b30e48a5e9211387cf",
+        "project": "5G网速测评_5e892f7b",
+        "file": "5G网速测评_5e892f7b\\app-service.js",
+        "entityId": "console.log",
+        "transformationKind": "CONST_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "PROTECT",
+        "actualState": "PROTECT",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "CONTRACT_MISMATCH",
+          "ALL_TARGETS_MATCH"
+        ]
+      },
+      {
+        "sampleId": "ff0673acf62a19bf44c6fb39",
+        "project": "uni-app_89a7ac48",
+        "file": "uni-app_89a7ac48\\app-service.js",
+        "entityId": "console.log",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "PROTECT",
+        "actualState": "PROTECT",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "CONTRACT_MISMATCH",
+          "ALL_TARGETS_MATCH"
+        ]
+      },
+      {
+        "sampleId": "f5c1f5afb69c076a8e2ec5ba",
+        "project": "RQrun_cd7b985e",
+        "file": "RQrun_cd7b985e\\app-service.js",
+        "entityId": "console.log",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "PROTECT",
+        "actualState": "PROTECT",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "CONTRACT_MISMATCH",
+          "ALL_TARGETS_MATCH"
+        ]
+      },
+      {
+        "sampleId": "759d451b26606a4597b66170",
+        "project": "a4e739b4",
+        "file": "a4e739b4\\app-service.js",
+        "entityId": "$gwx",
+        "transformationKind": "CONST_EVAL",
+        "bindingKind": "unresolved_global",
+        "resolutionStatus": "unresolved",
+        "expected": "UNKNOWN",
+        "actualState": "UNKNOWN",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": "binding",
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "BINDING_UNRESOLVED"
+        ]
+      },
+      {
+        "sampleId": "a54e08761edcda519f43fc01",
+        "project": "uView UI_787d326a",
+        "file": "uView UI_787d326a\\app-service.js",
+        "entityId": "$gwx",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "unresolved_global",
+        "resolutionStatus": "unresolved",
+        "expected": "UNKNOWN",
+        "actualState": "UNKNOWN",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": "binding",
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "BINDING_UNRESOLVED"
+        ]
+      },
+      {
+        "sampleId": "447475d4be8704181f4845c0",
+        "project": "医学常用计算_cd717e09",
+        "file": "医学常用计算_cd717e09\\app-service.js",
+        "entityId": "$gwx",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "unresolved_global",
+        "resolutionStatus": "unresolved",
+        "expected": "UNKNOWN",
+        "actualState": "UNKNOWN",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": "binding",
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "BINDING_UNRESOLVED"
+        ]
+      },
+      {
+        "sampleId": "a60529e81423045154946d61",
+        "project": "维尼来了_63394f0f",
+        "file": "维尼来了_63394f0f\\app-service.js",
+        "entityId": "$gwx",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "unresolved_global",
+        "resolutionStatus": "unresolved",
+        "expected": "UNKNOWN",
+        "actualState": "UNKNOWN",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": "binding",
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "BINDING_UNRESOLVED"
+        ]
+      },
+      {
+        "sampleId": "fa8964a56ef7c238e5999bbb",
+        "project": "uni-app_c354d0bb",
+        "file": "uni-app_c354d0bb\\app-service.js",
+        "entityId": "$gwx",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "unresolved_global",
+        "resolutionStatus": "unresolved",
+        "expected": "UNKNOWN",
+        "actualState": "UNKNOWN",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": "binding",
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "BINDING_UNRESOLVED"
+        ]
+      },
+      {
+        "sampleId": "b2fcec27149152977369da52",
+        "project": "南台箱包缴费系统_0fa67583",
+        "file": "南台箱包缴费系统_0fa67583\\app-service.js",
+        "entityId": "$gwn",
+        "transformationKind": "CONST_EVAL",
+        "bindingKind": "unresolved_global",
+        "resolutionStatus": "unresolved",
+        "expected": "UNKNOWN",
+        "actualState": "UNKNOWN",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": "binding",
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "BINDING_UNRESOLVED"
+        ]
+      },
+      {
+        "sampleId": "5f259652a71cf4be3f8dcc44",
+        "project": "像素风_11b15071",
+        "file": "像素风_11b15071\\app-service.js",
+        "entityId": "$gwn",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "unresolved_global",
+        "resolutionStatus": "unresolved",
+        "expected": "UNKNOWN",
+        "actualState": "UNKNOWN",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": "binding",
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "BINDING_UNRESOLVED"
+        ]
+      },
+      {
+        "sampleId": "8283f2d14e086669ddc6576e",
+        "project": "智慧农业病虫害识别_8fbaa990",
+        "file": "智慧农业病虫害识别_8fbaa990\\app-service.js",
+        "entityId": "$gwn",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "unresolved_global",
+        "resolutionStatus": "unresolved",
+        "expected": "UNKNOWN",
+        "actualState": "UNKNOWN",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": "binding",
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "BINDING_UNRESOLVED"
+        ]
+      },
+      {
+        "sampleId": "fad57beff2efe6ca43a8c3bd",
+        "project": "答题帮手_daac5cae",
+        "file": "答题帮手_daac5cae\\app-service.js",
+        "entityId": "$gwn",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "unresolved_global",
+        "resolutionStatus": "unresolved",
+        "expected": "UNKNOWN",
+        "actualState": "UNKNOWN",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": "binding",
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "BINDING_UNRESOLVED"
+        ]
+      },
+      {
+        "sampleId": "dc3c817b84ad1278822777aa",
+        "project": "和你一起背单词_28268ac3",
+        "file": "和你一起背单词_28268ac3\\app-service.js",
+        "entityId": "$gwn",
+        "transformationKind": "CONST_EVAL",
+        "bindingKind": "unresolved_global",
+        "resolutionStatus": "unresolved",
+        "expected": "UNKNOWN",
+        "actualState": "UNKNOWN",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": "binding",
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "BINDING_UNRESOLVED"
+        ]
+      }
+    ],
+    "metrics": {
+      "A0-aggressive-fold": {
+        "total": 3895,
+        "allowedFold": 3895,
+        "blockedFold": 0,
+        "unsafeFold": 2699,
+        "unsafeFoldMeasured": 785,
+        "usefulFold": 1196,
+        "overProtection": 0,
+        "unknown": 0,
+        "correctState": 1196,
+        "foldRate": 1,
+        "unknownRate": 0,
+        "unsafeFoldMeasuredRate": 0.20154043645699615,
+        "exactStateAccuracy": 0.3070603337612324,
+        "safeFoldCoverage": 1,
+        "overProtectionRate": 0,
+        "unsafeFoldRate": 1,
+        "blockedNonFoldRate": 0
+      },
+      "A1-legacy-blacklist": {
+        "total": 3895,
+        "allowedFold": 3119,
+        "blockedFold": 776,
+        "unsafeFold": 1928,
+        "unsafeFoldMeasured": 115,
+        "usefulFold": 1191,
+        "overProtection": 5,
+        "unknown": 0,
+        "correctState": 1757,
+        "foldRate": 0.800770218228498,
+        "unknownRate": 0,
+        "unsafeFoldMeasuredRate": 0.03687079192048734,
+        "exactStateAccuracy": 0.4510911424903723,
+        "safeFoldCoverage": 0.995819397993311,
+        "overProtectionRate": 0.004180602006688963,
+        "unsafeFoldRate": 0.7143386439422008,
+        "blockedNonFoldRate": 0.2856613560577992
+      },
+      "A2-prefix-blacklist": {
+        "total": 3895,
+        "allowedFold": 3274,
+        "blockedFold": 621,
+        "unsafeFold": 2083,
+        "unsafeFoldMeasured": 239,
+        "usefulFold": 1191,
+        "overProtection": 5,
+        "unknown": 0,
+        "correctState": 1709,
+        "foldRate": 0.8405648267008986,
+        "unknownRate": 0,
+        "unsafeFoldMeasuredRate": 0.07299938912645082,
+        "exactStateAccuracy": 0.43876765083440306,
+        "safeFoldCoverage": 0.995819397993311,
+        "overProtectionRate": 0.004180602006688963,
+        "unsafeFoldRate": 0.7717673212300852,
+        "blockedNonFoldRate": 0.2282326787699148
+      },
+      "A-safe-all-protect": {
+        "total": 3895,
+        "allowedFold": 0,
+        "blockedFold": 3895,
+        "unsafeFold": 0,
+        "unsafeFoldMeasured": 0,
+        "usefulFold": 0,
+        "overProtection": 1196,
+        "unknown": 0,
+        "correctState": 637,
+        "foldRate": 0,
+        "unknownRate": 0,
+        "unsafeFoldMeasuredRate": 0,
+        "exactStateAccuracy": 0.16354300385109113,
+        "safeFoldCoverage": 0,
+        "overProtectionRate": 1,
+        "unsafeFoldRate": 0,
+        "blockedNonFoldRate": 1
+      },
+      "R97-full": {
+        "total": 3895,
+        "allowedFold": 1196,
+        "blockedFold": 2699,
+        "unsafeFold": 0,
+        "unsafeFoldMeasured": 0,
+        "usefulFold": 1196,
+        "overProtection": 0,
+        "unknown": 2004,
+        "correctState": 3837,
+        "foldRate": 0.3070603337612324,
+        "unknownRate": 0.5145057766367137,
+        "unsafeFoldMeasuredRate": 0,
+        "exactStateAccuracy": 0.9851091142490372,
+        "safeFoldCoverage": 1,
+        "overProtectionRate": 0,
+        "unsafeFoldRate": 0,
+        "blockedNonFoldRate": 1,
+        "elapsedMs": 5890.2856999999985,
+        "decisionsPerSecond": 661.2582476262571
+      }
+    }
+  }
+}

@@ -1,0 +1,235 @@
+{
+  "generatedAt": "2026-09-24T15:42:35.449Z",
+  "corpusPath": "E:\\读论文\\R97\\datasets\\real-miniapp-full\\real-miniapp-candidates.jsonl",
+  "allowedFoldCount": 1338,
+  "sampledCount": 1338,
+  "baselineEvaluationFailed": 0,
+  "skippedNonScalar": 952,
+  "skippedByOutcomeKind": {
+    "null": 67,
+    "function": 755,
+    "object": 102,
+    "symbol": 28
+  },
+  "skippedByTransformation": {
+    "BRANCH_PRUNE": 67,
+    "CONST_EVAL": 810,
+    "CALL_EVAL": 75
+  },
+  "verifiedByTransformation": {
+    "CONST_EVAL": 108,
+    "CALL_EVAL": 278
+  },
+  "skippedByRoot": {
+    "undefined": 2,
+    "JSON": 5,
+    "Object": 77,
+    "Function": 29,
+    "Array": 110,
+    "String": 106,
+    "Boolean": 20,
+    "Number": 41,
+    "Math": 94,
+    "Date": 231,
+    "RegExp": 25,
+    "parseInt": 3,
+    "parseFloat": 5,
+    "isNaN": 4,
+    "isFinite": 5,
+    "decodeURI": 5,
+    "decodeURIComponent": 5,
+    "encodeURI": 5,
+    "encodeURIComponent": 4,
+    "Promise": 16,
+    "Symbol": 39,
+    "Error": 16,
+    "TypeError": 5,
+    "globalThis": 3,
+    "Proxy": 5,
+    "Reflect": 32,
+    "ReferenceError": 5,
+    "Uint8ClampedArray": 2,
+    "WeakMap": 4,
+    "Uint8Array": 11,
+    "escape": 1,
+    "ArrayBuffer": 10,
+    "Int8Array": 3,
+    "Int16Array": 4,
+    "Uint16Array": 2,
+    "Int32Array": 1,
+    "Float32Array": 2,
+    "Float64Array": 3,
+    "RangeError": 5,
+    "Set": 2,
+    "eval": 1,
+    "SyntaxError": 4
+  },
+  "verifiedByRoot": {
+    "undefined": 3,
+    "JSON": 8,
+    "Object": 62,
+    "Number": 21,
+    "Math": 107,
+    "Date": 25,
+    "Array": 21,
+    "Function": 19,
+    "parseInt": 2,
+    "isNaN": 1,
+    "encodeURIComponent": 1,
+    "Promise": 4,
+    "Symbol": 5,
+    "String": 22,
+    "globalThis": 5,
+    "Reflect": 10,
+    "Uint8ClampedArray": 3,
+    "unescape": 5,
+    "WeakMap": 1,
+    "Uint8Array": 10,
+    "Uint32Array": 5,
+    "DataView": 5,
+    "escape": 4,
+    "ArrayBuffer": 2,
+    "Int8Array": 2,
+    "Uint16Array": 3,
+    "Int32Array": 4,
+    "Float32Array": 3,
+    "Float64Array": 2,
+    "Map": 5,
+    "Boolean": 5,
+    "WeakSet": 1,
+    "Set": 3,
+    "eval": 1,
+    "NaN": 3,
+    "Error": 1,
+    "BigInt": 2
+  },
+  "skippedExamples": [
+    {
+      "entityId": "undefined",
+      "project": "小剧场_b8d846d4",
+      "transformationKind": "BRANCH_PRUNE",
+      "outcomeKind": null
+    },
+    {
+      "entityId": "undefined",
+      "project": "我的_c8deeb89",
+      "transformationKind": "BRANCH_PRUNE",
+      "outcomeKind": null
+    },
+    {
+      "entityId": "JSON.stringify",
+      "project": "霍兰德职业性格测试_2f55af3e",
+      "transformationKind": "BRANCH_PRUNE",
+      "outcomeKind": null
+    },
+    {
+      "entityId": "JSON.stringify",
+      "project": "创意平台提供技术支持_4469d358",
+      "transformationKind": "BRANCH_PRUNE",
+      "outcomeKind": null
+    },
+    {
+      "entityId": "Object.prototype.toString",
+      "project": "跑步步数记录助手_885a7da3",
+      "transformationKind": "CONST_EVAL",
+      "outcomeKind": "function"
+    },
+    {
+      "entityId": "Object.prototype.toString",
+      "project": "成都灵动星商贸有限公司_37fcfd4a",
+      "transformationKind": "CONST_EVAL",
+      "outcomeKind": "function"
+    },
+    {
+      "entityId": "Object.prototype.toString",
+      "project": "开封交警_89d5067d",
+      "transformationKind": "CONST_EVAL",
+      "outcomeKind": "function"
+    },
+    {
+      "entityId": "Object.prototype.toString",
+      "project": "手机旺铺_2084ac97",
+      "transformationKind": "CONST_EVAL",
+      "outcomeKind": "function"
+    },
+    {
+      "entityId": "Object.prototype.toString",
+      "project": "ad67bbc2",
+      "transformationKind": "CONST_EVAL",
+      "outcomeKind": "function"
+    },
+    {
+      "entityId": "Object.prototype",
+      "project": "欣享工具箱_3741253c",
+      "transformationKind": "CONST_EVAL",
+      "outcomeKind": "object"
+    },
+    {
+      "entityId": "Object.prototype",
+      "project": "92e6f1c5",
+      "transformationKind": "CONST_EVAL",
+      "outcomeKind": "object"
+    },
+    {
+      "entityId": "Object.prototype",
+      "project": "惠享宜宾_213f89a5",
+      "transformationKind": "CONST_EVAL",
+      "outcomeKind": "object"
+    },
+    {
+      "entityId": "Object.prototype",
+      "project": "d16bbfc4",
+      "transformationKind": "CONST_EVAL",
+      "outcomeKind": "object"
+    },
+    {
+      "entityId": "Object.prototype",
+      "project": "猫咪体重管理_e7f6a18a",
+      "transformationKind": "CONST_EVAL",
+      "outcomeKind": "object"
+    },
+    {
+      "entityId": "Function",
+      "project": "测量计算_b93c30f8",
+      "transformationKind": "CONST_EVAL",
+      "outcomeKind": "function"
+    },
+    {
+      "entityId": "Function",
+      "project": "德业_04364af6",
+      "transformationKind": "BRANCH_PRUNE",
+      "outcomeKind": null
+    },
+    {
+      "entityId": "Function",
+      "project": "德州扑克计算器_0c1df8ba",
+      "transformationKind": "BRANCH_PRUNE",
+      "outcomeKind": null
+    },
+    {
+      "entityId": "Function",
+      "project": "芒果去水印_6045dbfc",
+      "transformationKind": "CONST_EVAL",
+      "outcomeKind": "function"
+    },
+    {
+      "entityId": "Function",
+      "project": "Bazar_4c316b3d",
+      "transformationKind": "BRANCH_PRUNE",
+      "outcomeKind": null
+    },
+    {
+      "entityId": "Function.prototype",
+      "project": "健康证_aa844188",
+      "transformationKind": "CONST_EVAL",
+      "outcomeKind": "function"
+    }
+  ],
+  "verifiedCount": 386,
+  "byVerdict": {
+    "safe": 386
+  },
+  "unsafeCount": 0,
+  "observedTransformPrecision": 1,
+  "unsafeExamples": []
+}

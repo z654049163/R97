@@ -1,0 +1,7466 @@
+{
+  "stage": "node-vs-wechat",
+  "runtimeId": "e4-wechat-real",
+  "generatedAt": "2026-09-23T02:48:13.005Z",
+  "probeImplementation": "r97-oracle-probe",
+  "excludedRoots": [
+    {
+      "root": "Function",
+      "reason": "AppService 上读取 Function 会栈溢出并卡死会话，该根节点不参与微信侧判卷"
+    }
+  ],
+  "projectPath": "E:\\读论文\\R97\\fixtures\\wechat-miniapp",
+  "cliPath": "E:\\微信开发者工具\\cli.bat",
+  "connectionMode": "connect",
+  "wsEndpoint": "ws://127.0.0.1:9421",
+  "sdkVersion": "3.17.3",
+  "platform": "devtools",
+  "appServiceReady": true,
+  "readinessAttempts": 1,
+  "probeErrorCount": 0,
+  "probeErrors": {},
+  "wechatValues": {
+    "$gwx": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "console.warn": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "$gwn": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "$gwl": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "console.log": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wh": {
+      "existence": true,
+      "type": "object",
+      "callability": false
+    },
+    "wh.hn": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wh.rv": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wh.nh": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "undefined": {
+      "existence": true,
+      "type": "undefined",
+      "callability": false
+    },
+    "snap_bb": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "console.error": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "gra": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "grb": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "JSON.stringify": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Object.prototype.toString.call": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Object.prototype.toString": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Object.prototype": {
+      "existence": true,
+      "type": "object",
+      "callability": false
+    },
+    "Object.defineProperty": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Array.prototype": {
+      "existence": true,
+      "type": "object",
+      "callability": false
+    },
+    "Array.prototype.concat": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Array.prototype.pop": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Array.prototype.push": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Array.prototype.reverse": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Array.prototype.shift": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Array.prototype.slice": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Array.prototype.sort": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Array.prototype.splice": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Array.prototype.unshift": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Array.prototype.indexOf": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Array.prototype.lastIndexOf": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Array.prototype.every": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Array.prototype.some": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Array.prototype.forEach": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Array.prototype.map": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Array.prototype.filter": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Array.prototype.reduce": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Array.prototype.reduceRight": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "String.prototype": {
+      "existence": true,
+      "type": "object",
+      "callability": false
+    },
+    "String.prototype.toString": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "String.prototype.valueOf": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "String.prototype.charAt": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "String.prototype.charCodeAt": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "String.prototype.concat": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "String.prototype.indexOf": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "String.prototype.lastIndexOf": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "String.prototype.localeCompare": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "String.prototype.match": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "String.prototype.replace": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "String.prototype.search": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "String.prototype.slice": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "String.prototype.split": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "String.prototype.substring": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "String.prototype.toLowerCase": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "String.prototype.toLocaleLowerCase": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "String.prototype.toUpperCase": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "String.prototype.toLocaleUpperCase": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "String.prototype.trim": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Boolean.prototype": {
+      "existence": true,
+      "type": "object",
+      "callability": false
+    },
+    "Boolean.prototype.toString": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Boolean.prototype.valueOf": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Number": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Number.MAX_VALUE": {
+      "existence": true,
+      "type": "number",
+      "callability": false
+    },
+    "Number.MIN_VALUE": {
+      "existence": true,
+      "type": "number",
+      "callability": false
+    },
+    "Number.NEGATIVE_INFINITY": {
+      "existence": true,
+      "type": "number",
+      "callability": false
+    },
+    "Number.POSITIVE_INFINITY": {
+      "existence": true,
+      "type": "number",
+      "callability": false
+    },
+    "Number.prototype": {
+      "existence": true,
+      "type": "object",
+      "callability": false
+    },
+    "Number.prototype.toString": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Number.prototype.toLocaleString": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Number.prototype.valueOf": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Number.prototype.toFixed": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Number.prototype.toExponential": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Number.prototype.toPrecision": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Math": {
+      "existence": true,
+      "type": "object",
+      "callability": false
+    },
+    "Math.E": {
+      "existence": true,
+      "type": "number",
+      "callability": false
+    },
+    "Math.LN10": {
+      "existence": true,
+      "type": "number",
+      "callability": false
+    },
+    "Math.LN2": {
+      "existence": true,
+      "type": "number",
+      "callability": false
+    },
+    "Math.LOG2E": {
+      "existence": true,
+      "type": "number",
+      "callability": false
+    },
+    "Math.LOG10E": {
+      "existence": true,
+      "type": "number",
+      "callability": false
+    },
+    "Math.PI": {
+      "existence": true,
+      "type": "number",
+      "callability": false
+    },
+    "Math.SQRT1_2": {
+      "existence": true,
+      "type": "number",
+      "callability": false
+    },
+    "Math.SQRT2": {
+      "existence": true,
+      "type": "number",
+      "callability": false
+    },
+    "Math.abs": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Math.acos": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Math.asin": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Math.atan": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Math.atan2": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Math.ceil": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Math.cos": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Math.exp": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Math.floor": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Math.log": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Math.max": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Math.min": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Math.pow": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Math.random": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Math.round": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Math.sin": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Math.sqrt": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Math.tan": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Date.prototype": {
+      "existence": true,
+      "type": "object",
+      "callability": false
+    },
+    "Date": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Date.parse": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Date.UTC": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Date.now": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Date.prototype.toString": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Date.prototype.toDateString": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Date.prototype.toTimeString": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Date.prototype.toLocaleString": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Date.prototype.toLocaleDateString": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Date.prototype.toLocaleTimeString": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Date.prototype.valueOf": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Date.prototype.getTime": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Date.prototype.getFullYear": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Date.prototype.getUTCFullYear": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Date.prototype.getMonth": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Date.prototype.getUTCMonth": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Date.prototype.getDate": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Date.prototype.getUTCDate": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Date.prototype.getDay": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Date.prototype.getUTCDay": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Date.prototype.getHours": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Date.prototype.getUTCHours": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Date.prototype.getMinutes": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Date.prototype.getUTCMinutes": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Date.prototype.getSeconds": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Date.prototype.getUTCSeconds": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Date.prototype.getMilliseconds": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Date.prototype.getUTCMilliseconds": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Date.prototype.getTimezoneOffset": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Date.prototype.setTime": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Date.prototype.setMilliseconds": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Date.prototype.setUTCMilliseconds": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Date.prototype.setSeconds": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Date.prototype.setUTCSeconds": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Date.prototype.setMinutes": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Date.prototype.setUTCMinutes": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Date.prototype.setHours": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Date.prototype.setUTCHours": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Date.prototype.setDate": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Date.prototype.setUTCDate": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Date.prototype.setMonth": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Date.prototype.setUTCMonth": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Date.prototype.setFullYear": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Date.prototype.setUTCFullYear": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Date.prototype.toUTCString": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Date.prototype.toISOString": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Date.prototype.toJSON": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "RegExp.prototype": {
+      "existence": true,
+      "type": "object",
+      "callability": false
+    },
+    "RegExp.prototype.exec": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "RegExp.prototype.test": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "RegExp.prototype.toString": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Array.prototype.slice.call": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "RegExp": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "parseInt": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "parseFloat": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "isNaN": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "isFinite": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "decodeURI": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "decodeURIComponent": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "encodeURI": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "encodeURIComponent": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Object": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Object.prototype.hasOwnProperty.call": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Array": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "JSON.parse": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "define": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "App": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.request": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "require": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "getApp": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Page": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.openLocation": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.downloadFile": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.openDocument": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.openBusinessView": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.setVisualEffectOnCapture": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.login": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.navigateBack": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.setNavigationBarTitle": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.navigateToMiniProgram": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "setTimeout": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Math.nv_ceil": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "nt_0": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nt_1": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nt_5": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nt_6": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nt_8": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nt_9": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nt_2": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "cloud.init": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "cloud.DYNAMIC_CURRENT_ENV": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "cloud.database": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "cloud.getWXContext": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Object.keys": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Object.getOwnPropertySymbols": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Object.getOwnPropertyDescriptor": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.__webpack_require_UNI_MP_PLUGIN__": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Object.getOwnPropertyDescriptors": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Object.defineProperties": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Promise.resolve": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Promise": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "toPropertyKey": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Object.prototype.hasOwnProperty": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Symbol": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Object.create": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Object.getPrototypeOf": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "t": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Error": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "TypeError": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Object.setPrototypeOf": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "_typeof": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Symbol.toPrimitive": {
+      "existence": true,
+      "type": "symbol",
+      "callability": false
+    },
+    "String": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "globalThis": {
+      "existence": true,
+      "type": "object",
+      "callability": false
+    },
+    "e.taroWindowProvider": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Object.assign": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Object.freeze": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Proxy": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Object.toString": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Object.hasOwnProperty.call": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Object.hasOwnProperty": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Reflect": {
+      "existence": true,
+      "type": "object",
+      "callability": false
+    },
+    "Reflect.ownKeys": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Object.getOwnPropertyNames": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Symbol.iterator": {
+      "existence": true,
+      "type": "symbol",
+      "callability": false
+    },
+    "Array.isArray": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "a": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "String.fromCharCode": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "nv_nt_0": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.chooseMessageFile": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.showModal": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.showToast": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "clearTimeout": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.uploadFile": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.createRewardedVideoAd": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.showLoading": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.hideLoading": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.shareFileMessage": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "nv_navigator": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nv_navigator.nv_userAgent.nv_indexOf": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nv_navigator.nv_userAgent": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Math.nv_max": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Math.nv_abs": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Math.nv_sqrt": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Math.nv_pow": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Math.nv_asin": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Math.nv_PI": {
+      "existence": true,
+      "type": "number",
+      "callability": false
+    },
+    "Array.prototype.includes": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Object.entries": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "nt_3": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nt_7": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "arrayLikeToArray": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Array.from": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "defineProperty": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "arrayWithoutHoles": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "iterableToArray": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "unsupportedIterableToArray": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nonIterableSpread": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "toPrimitive": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Math.nv_round": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Math.nv_floor": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.getStorageSync": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.setStorageSync": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "n.info": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "res.data.data.length": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "res.data.data": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "res.data": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "CryptoJS.mode.ECB": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "CryptoJS.mode": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "CryptoJS.lib.BlockCipherMode.extend": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "CryptoJS.lib.BlockCipherMode": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "CryptoJS.lib": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "CryptoJS.pad.NoPadding": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "CryptoJS.pad": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.miniProgram.navigateTo": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.miniProgram": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "layer.msg": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "_size": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.createCanvasContext": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.getUpdateManager": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.reLaunch": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "setInterval": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "l": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "i": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "r": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "n": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.removeStorageSync": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "s": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "clearInterval": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "CryptoJS.enc.Utf8.parse": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "CryptoJS.enc.Utf8": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "CryptoJS.enc": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "CryptoJS.AES.encrypt": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "CryptoJS.AES": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "CryptoJS.pad.ZeroPadding": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "CryptoJS.enc.Hex.parse": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "CryptoJS.enc.Hex": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "CryptoJS.mode.CBC": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "CryptoJS.pad.Pkcs7": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "CryptoJS.enc.Base64.stringify": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "CryptoJS.enc.Base64": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "CryptoJS.AES.decrypt": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "console": {
+      "existence": true,
+      "type": "object",
+      "callability": false
+    },
+    "$gwx_wx104a1a20c3f81ec2": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Object.values": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "ReferenceError": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "isNativeReflectConstruct": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "getPrototypeOf": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Reflect.construct": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "possibleConstructorReturn": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "setPrototypeOf": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Reflect.construct.sham": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Date.prototype.toString.call": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "assertThisInitialized": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Symbol.prototype": {
+      "existence": true,
+      "type": "object",
+      "callability": false
+    },
+    "wx.redirectTo": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.requestPayment": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Object.getPrototypeOf.bind": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "$gwx_wx293c4b6097a8a4d0": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Math.nv_min": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "nt_4": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "resolve": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "define.amd": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "process": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Uint8ClampedArray": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "importScripts": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "MessageChannel": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "process.nextTick": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.runOnLoop": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.runOnContext": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "i.strDiscode": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "console.dir": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "i.urlToHttpUrl": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "result.source": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "RegExp.$1": {
+      "existence": true,
+      "type": "string",
+      "callability": false
+    },
+    "RegExp.$2": {
+      "existence": true,
+      "type": "string",
+      "callability": false
+    },
+    "wx.previewImage": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.getSystemInfo": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "e.req": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.req": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.navigateTo": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "my.datePicker": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.chooseImage": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.switchTab": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.makePhoneCall": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "a.req": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.getUserInfo": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.hideToast": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.canIUse": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "r.get": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.myRequest": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.config.base_req_api_url": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.config": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.webpackJsonp": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "unescape": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.setStorage": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.createInterstitialAd": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.env.USER_DATA_PATH": {
+      "existence": true,
+      "type": "string",
+      "callability": false
+    },
+    "wx.env": {
+      "existence": true,
+      "type": "object",
+      "callability": false
+    },
+    "Symbol.toStringTag": {
+      "existence": true,
+      "type": "symbol",
+      "callability": false
+    },
+    "$gwx_wx50b5593e81dd937a": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "WeakMap": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "util.request": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "R_htmlToWxml.html2json": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "_util.Promise": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "__wxConfig": {
+      "existence": true,
+      "type": "object",
+      "callability": false
+    },
+    "WeixinJSBridge.invoke": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "__appServiceSDK__.loadSubpackage": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "__subContextEngine__.injectEntryFile": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "__wxConfig.onReady": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Reporter.thirdErrorReport": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "__subContextEngine__": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "__subContextEngine__.loadJsFiles": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "requireOnce": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "$gwx_wx94a6522b1d640c3b": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nv__startMovingY": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Math.nv_atan2": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.cloud": {
+      "existence": true,
+      "type": "object",
+      "callability": false
+    },
+    "wx.cloud.init": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.getFileInfo": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.cloud.downloadFile": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.getFileSystemManager": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.setInnerAudioOption": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.getBackgroundAudioManager": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.createInnerAudioContext": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.setKeepScreenOn": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.cloud.getTempFileURL": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.getSystemInfoSync": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "e.hexMD5": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "n.sha1": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Uint8Array": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Uint32Array": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "DataView": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Array.prototype.map.call": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "getCurrentPages": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.setClipboardData": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.getClipboardData": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.pageScrollTo": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "t.posts_list": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.getMenuButtonBoundingClientRect": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "e.weappJwtDecode": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.hexMD5": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nv_window": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "$gwx_wxefe655223916819e": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "objectWithoutPropertiesLoose": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Object.prototype.propertyIsEnumerable.call": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Object.prototype.propertyIsEnumerable": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "arrayWithHoles": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "iterableToArrayLimit": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nonIterableRest": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.getSetting": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.requestSubscribeMessage": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "h.api.isGradient": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "h.api": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "h.api.doGradient": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Object.assign.apply": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "nt_12": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nt_13": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Date.prototype.format": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "RegExp.$1.length": {
+      "existence": true,
+      "type": "number",
+      "callability": false
+    },
+    "$gwx_wxd1d3a59c204109d4": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Boolean": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "setImmediate": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Reflect.construct.bind": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Reflect.get": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Reflect.get.bind": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "superPropBase": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "$gwx_wx82e6ae1175f264fa": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx": {
+      "existence": true,
+      "type": "object",
+      "callability": false
+    },
+    "t.request": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "o.request": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "o": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "$gwx_wx4664e59e8a284069": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "console.info": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "r.POST": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.put": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "complete": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.get": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "n.login": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "o.Ver": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "o.Server": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.INLOGIN": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.clearStorageSync": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "u.connect": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "s.INCREMENT": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "s.DECREMENT": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "c.asyncInc": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "$gwx_wxa16657d57059e0f0": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Promise.reject": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "$gwx_wxa75efa648b60994b": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "n.COMMON_DATA_KEY.playertype": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "n.COMMON_DATA_KEY": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "o.HookType.GETINFO": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "o.HookType": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "o.HookType.SET_LEVEL": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "n.COMMON_DATA_KEY.appVer": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "n.COMMON_DATA_KEY.pageUrl": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "n.COMMON_DATA_KEY.pageQuery": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "n.COMMON_DATA_KEY.pageRef": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "n.COMMON_DATA_KEY.envAppId": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "o.version": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "o.host": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "o.app": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "o.domain": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Array.prototype.unshift.apply": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "$gwx_wxdabb25f880cb2a03": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "my.request": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "atob": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "btoa": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Buffer": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "TextDecoder": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "TextEncoder": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "String.fromCharCode.bind": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Uint8Array.from": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Uint8Array.from.bind": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Buffer.from": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Uint8Array.prototype": {
+      "existence": true,
+      "type": "object",
+      "callability": false
+    },
+    "escape": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "ArrayBuffer": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Int8Array": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Int16Array": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Uint16Array": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Int32Array": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Float32Array": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Float64Array": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Math.nv_random": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.vibrateShort": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.showShareMenu": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "$gwx_wxe6129e9cc9619c07": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "aesjs.utils.utf8.toBytes": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "aesjs.utils.utf8": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "aesjs.utils": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "aesjs.ModeOfOperation.cbc": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "aesjs.ModeOfOperation": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "aesjs.padding.pkcs7.pad": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "aesjs.padding.pkcs7": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "aesjs.padding": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.getShareInfo": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "m.app_key": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "m.appid": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "m.appsecret": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "$gwx_wx5ec22d3a6a176039": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "process.versions": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "process.versions.node": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.checkSession": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.canvasToTempFilePath": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.getUserProfile": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Array.prototype.concat.apply": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.createAnimation": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "c1": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "c2": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "c3": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "r.createQrCodeImg": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.createQrCodeImg": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Promise.all": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.getLocation": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.getStorage": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "e.drawCld": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.drawCld": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "$gwx_wx92c68dae5a8bb046": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "debugInfo": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "RangeError": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "a.solarToLunar": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Map": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.cloud.database": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "e.compareVersion": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "s.nextString": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.saveImageToPhotosAlbum": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "t.formatTime": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.apiUrl": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "i.call": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "i.prototype": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "o.COMMON_DATA_KEY.playertype": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "o.COMMON_DATA_KEY": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "n.HookType.GETINFO": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "n.HookType": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "n.HookType.SET_LEVEL": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "o.COMMON_DATA_KEY.appVer": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "o.COMMON_DATA_KEY.pageUrl": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "o.COMMON_DATA_KEY.pageQuery": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "o.COMMON_DATA_KEY.pageRef": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "o.COMMON_DATA_KEY.envAppId": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "o.COMMON_DATA_KEY.scene": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "SVGRect": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "WebKitCSSMatrix": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "JSON": {
+      "existence": true,
+      "type": "object",
+      "callability": false
+    },
+    "Image": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "console.error.apply": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "n.hasUserPermission": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "n.normalizeRole": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "$gwx_wx5917c8c26f85c588": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Boolean.prototype.valueOf.call": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Symbol.hasInstance": {
+      "existence": true,
+      "type": "symbol",
+      "callability": false
+    },
+    "$gwx_wx069ba97219f66d99": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.logInfo": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.logLog": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.setLogFlag": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.logErr": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nt_10": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nt_18": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nt_21": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nt_22": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nt_23": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nt_24": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nt_29": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nt_30": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "$gwx_wx0e203209e27b1e66": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.getExtConfigSync": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "ws.hideLoading": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "that.doPay": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nv_Array": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nv_Array.nv_isArray": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "$gwx_wxd65104595293601e": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "storage.getNotes": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "selectedIds.includes": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "storage.deleteNote": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nt_11": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nt_14": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nt_15": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nt_16": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "$gwx_wxf51d01cf670e28d3": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "orderId": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Object.isExtensible": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Object.preventExtensions": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "swan": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "tt": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "my": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Taro": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "$gwx_wxdd4927ede9acd724": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Date.nv_now": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "ArrayBuffer.isView": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.setNavigationBarColor": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.setTabBarStyle": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "o.formatMoney": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.summary": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.formatMoney": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.startBluetoothDevicesDiscovery": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.getBluetoothAdapterState": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.createBLEConnection": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.getBLEDeviceServices": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.getBLEDeviceCharacteristics": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.notifyBLECharacteristicValueChange": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.closeBLEConnection": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "e.f1": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.writeBLECharacteristicValue": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.closeBluetoothAdapter": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.openBluetoothAdapter": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.onBluetoothDeviceFound": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "e.ab2hex": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.stopBluetoothDevicesDiscovery": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "$gwx_wxb7c8f9ea9ceb4663": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "n.compareVersion": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.config.system.version": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.config.system": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.config": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.config.app.name": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.onAccelerometerChange": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "$gwx_wx7a4658085b18b581": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "_index.setEnv": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "_appNavigater.setAppNavigater": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "$gwx_wx34345ae5855f892d": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nv_nt_5": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nv_nt_6": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "savedAppid": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.api.draw": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.api": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.getImageInfo": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.preloadPage": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.createSelectorQuery": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.updateShareMenu": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "$gwx_wx8d04ad0492dab24d": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "checkLogin": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "__wxConfig.envVersion": {
+      "existence": true,
+      "type": "string",
+      "callability": false
+    },
+    "i.uuid": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nv_instanceLen": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "o.Events.PLAY_SESSION_END": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.canvasGetImageData": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "toString.call": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "c": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.enc.Utf8.parse": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.enc.Utf8": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.enc": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.AES.encrypt": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.AES": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.mode.CBC": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.mode": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.pad.Pkcs7": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.pad": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.enc.Hex.parse": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.enc.Hex": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.enc.Base64.stringify": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.enc.Base64": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.AES.decrypt": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "$gwx_wx3b49cd549eb1ae7f": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "r.isNull": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "version": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "$gwx_wx116d0dd5e6a39ac7": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.loadFontFace": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.hideTabBar": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.stopPullDownRefresh": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.removeStorage": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "$gwx_wx4d2deeab3aed6e5a": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.COMMON_DATA_KEY.playertype": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.COMMON_DATA_KEY": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.HookType.GETINFO": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.HookType": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.HookType.SET_LEVEL": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.COMMON_DATA_KEY.appVer": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.InfoLinkType": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.InfoLink": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.userOpenID": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.PlayInfoLink": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.InfoLinkLogo": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "default": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.getPrivacySetting": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.onBluetoothAdapterStateChange": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "devices_list.length": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.openPrivacyContract": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "$gwx_wx1fe8d9a3cb067a75": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.API_DOMAIN": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "$gwx_wxbe275ff84246f1a4": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "String.prototype.format": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "WeakSet": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "String.fromCharCode.apply": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.getAppBaseInfo": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "String.prototype.pad": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.getWindowInfo": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.createBannerAd": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "AdManager.init": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.getAccountInfoSync": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "$gwx_wx3eb462803881d2f1": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.chooseMedia": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.showActionSheet": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "$gwx_wx76a9a06e5b4e693e": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Math.max.apply": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Math.min.apply": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "s.globalUrls.movieList": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "s.globalUrls": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "s.globalUrls.tvList": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "s.globalUrls.showList": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "s.globalUrls.searchUrl": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "s.globalUrls.movieDetail": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "s.globalUrls.tvDetail": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "s.globalUrls.showDetail": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "s.globalUrls.movieTags": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "s.globalUrls.tvTags": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "s.globalUrls.showTags": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "s.globalUrls.movieComments": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "s.globalUrls.tvComments": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "s.globalUrls.showComments": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.onAppHide": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.onAppShow": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.onNeedPrivacyAuthorization": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.createOffscreenCanvas": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.authorize": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "$gwx_wx43d5971c94455481": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.vibrateLong": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.getScreenBrightness": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.setScreenBrightness": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Object.setPrototypeOf.bind": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "t.movieList": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.strftime": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "ArrayBuffer.prototype.slice": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "ArrayBuffer.prototype": {
+      "existence": true,
+      "type": "object",
+      "callability": false
+    },
+    "$gwx_wx043a474648d3d591": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "h.ab2hex": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "m.parse": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.jin2Kg": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.lb2Kg": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.stlb2Kg": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Set": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "f": {
+      "existence": true,
+      "type": "undefined",
+      "callability": false
+    },
+    "Reflect.set": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "buildInAppellationObj": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "buildInAppellationObj.0.content": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "buildInAppellationObj.0": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "fs.writeFileSync": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "calc.calculate": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.parseRelationship": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.RELATIONSHIP_MAP": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "d": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "m": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "$gwx_wx4ed749733ed0e8e8": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.importElicFile": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "PHCNTRUST.asn1": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "PHCNTRUST.asn1.ASN1Util": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "BigInteger": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "BigInteger.ONE": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "PHCrypJS.enc.Hex.parse": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "PHCrypJS.enc.Hex": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "PHCrypJS.enc": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "PHCrypJS.enc.Base64.stringify": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "PHCrypJS.enc.Base64": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "PHCNTRUST.asn1.DERBoolean": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "PHCNTRUST.asn1.DERInteger": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "PHCNTRUST.asn1.DERBitString": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "PHCNTRUST.asn1.DEROctetString": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "PHCNTRUST.asn1.DERNull": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "PHCNTRUST.asn1.DERObjectIdentifier": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "PHCNTRUST.asn1.DERUTF8String": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "PHCNTRUST.asn1.DERNumericString": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "PHCNTRUST.asn1.DERPrintableString": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.getDeviceInfo": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "u.isEmptyValue": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Z": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "$gwx_wx1629d117cf9be937": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "C": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.requestVirtualPayment": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "$gwx_wx6885acbedba59c14": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "G.currDate": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "SLConverter.LunarSolarConverter": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "SL.Lunar": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "util.getChineseWeekday": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "SLConverter.Lunar": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.startAccelerometer": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.stopAccelerometer": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "currentTime": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "isRunning": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "colorIndex": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "$gwx_wxefa63d84fe9f64a2": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "n.rebuildUrl": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "$gwx_wx2b03c6e691cd7370": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nv_colFormatVehicleState": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nv_colFormatVehicleInfo": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nv_showBox": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nv_formatVehicleInfo": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nv_getTvlWidth": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nv_formatColorName": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nv_formatStationName": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nv_showLine": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.createInteractiveAd": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "worker.postMessage": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.request": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "o.setCache": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nodeRequest": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "n.nodeRequest": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "n.wxCommonHost": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx_login": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "o.getThemePrimaryColor": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wxCommonHost": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.init": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.getWXContext": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.cloud.callFunction": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "a.icon20": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "i.icon20": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "i.icon60": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.computeFinalResults": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.saveHistory": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nv_fmt1": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nv_fmt2": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nv_fmt1.nv_replace": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.getWeRunData": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "wx.createWebViewContext": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.onMessage": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.exitMiniProgram": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "$gwx_wx6afed118d9e81df9": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.setupWechatPlatform": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.configPlugin": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "r.fileStorageIO": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "o.localStorageIO": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "describe": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.md5": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "api.loadWeatherData": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "api.loadCityConf": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.loadWeatherData": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.loadCityConf": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "$gwx_wx62d350f80724f9b0": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "log.info": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nv_nt_1": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "$gwx_wxdf01634fc34b7886": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.ajax": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Object.is": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "e.server_url": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nv_textViewInstance.nv_getBoundingClientRect": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nv_textViewInstance": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "$gwx_wx71acb46aa72fff57": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.utils.utf8.toBytes": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.utils.utf8": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.utils": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.ModeOfOperation.cbc": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.ModeOfOperation": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.padding.pkcs7.pad": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.padding.pkcs7": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.padding": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Window": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "worker.onMessage": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "c.authorization": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "c.join": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "c.getUserStatus": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "c.version": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.clearStorage": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "u": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "r.request": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "c.report": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.MAX_REQUEST_COUNT": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "a.request": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.login": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "a.upgrade": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.index": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "a.report": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "s.request": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.getuser": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.join": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "s.report": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.hideShareMenu": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "e.upgrade": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.getDeviceInfo": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "res.data.data.group_id": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.ranklist": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.getWeRunAuthorization": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.report": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.delWeRunAuthorization": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.openSetting": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "nv_size": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nv_style": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Type": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "$gwx_wx63ffb7b7894e99ae": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Number.isInteger": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "$gwx_wxee969de81bba9a45": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "$gwx_wxf3f436ba9bd4be7b": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.getBluetoothDevices": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "_require.MINI_PROGRAM_RUNTIME_CONFIG": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "_require.MINI_PROGRAM_RUNTIME_CONFIG.defaultH5EntryUrl": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "_require.buildWebViewUrl": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "_require.DEFAULT_H5_ENTRY_URL": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "_require2.MINI_PROGRAM_RUNTIME_CONFIG": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "_require2.MINI_PROGRAM_RUNTIME_CONFIG.defaultH5EntryUrl": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Date.nv_parse": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "$gwx_wx4a1d9449e295d1a3": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "data": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "l.strDiscode": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "a.url": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "uni.createInterstitialAd": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.url": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "tt.data.password": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "tt.data": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "tt.data.admin": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "tt.data.user": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "tt.onLaunch": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "$gwx_wx97d76316fee0e8fe": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.showNavigationBarLoading": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "VM2_INTERNAL_STATE_DO_NOT_USE_OR_PROGRAM_WILL_FAIL.handleException": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "$gwx_wx63d6102e26f0a3f8": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "r.hasOwnProperty": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "r.UNKNOW_ERROR": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "$gwx_wx013447465d3aa024": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "config.API_BASE_URL": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "config.WX_APP_ID": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "b": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.BaaS.Query": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.BaaS": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.BaaS.TableObject": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "r.strictEqual": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "n.resolve": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "__dirname": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "i.readFileSync": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "n.join": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "$gwx_wx610ea582556c983e": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "close": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.LoginLFanyiLink": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "o.readdir": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "s.join": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "o.stat": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "o.open": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "o.readFile": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.resolve": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "n.lookup": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "o.close": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "o.writeFile": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Date.prototype.Format": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "o.isTest": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.http": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.http_form": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.confirm": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "cb": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.appId": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "a.appId": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "a._getAuthCode": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "a._getSetting": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.upLoadCode": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.bindUser": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "a._showToast": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "a._alert": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "a._getUserInfo": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.getAuthCode": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "a._setStorage": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.getRooms": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.getPassword": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "o._showToast": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "o._alert": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.update": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "o._getAuthCode": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.upLoadCode": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.unBindUser": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.userRegister": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.checkCs": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.getLastRooms": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.getEqlist": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.openEq": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "n._showToast": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t._showToast": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "n.apiKeys.weather": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "n.apiKeys": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.off": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.on.apply": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.on": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.release": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.saveState": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.restoreState": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.checkState": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "r.isHigherVersion": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "o.buttonClicked": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "R": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "p": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "root._": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Crypto": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.MD5": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "_type": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "o.login": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "o.checkLogin": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "__VUE_SSR_CONTEXT__": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "eval": {
+      "existence": true,
+      "type": "undefined",
+      "callability": false
+    },
+    "DEBUG": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "_array_like_to_array._": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "_define_property._": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "_array_with_holes._": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "_iterable_to_array_limit._": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "_unsupported_iterable_to_array._": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "_non_iterable_rest._": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "_array_without_holes._": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "_iterable_to_array._": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "_non_iterable_spread._": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "o.Base": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.$wuxToast.show": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.$wuxToast": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.toast": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.openCamera": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "HmacSHA1": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.getNetworkType": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "t.wxUpload": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.wxGet": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "isCall": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.formatScore": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.toast": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.wxGet": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "_typeof3": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.onNetworkStatusChange": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Object.assign.bind": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "FileReader": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "constructor": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "getItem": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "setItem": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "x.system.WsSystemReadyRequest": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "x.system": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "x.system.WsSystemReadyResponse": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "$gwx_wx12cec70855c0cacf": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "CONFIG.API_URL.BASE_URL": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "CONFIG.API_URL": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "$gwx_wx80b5f24d05ef8e63": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "DIMOND_SERVER_DOMAIN": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "n.Session.get": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "n.Session": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Error.call": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "noop": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "n.cacheMiguToken.get": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "n.cacheMiguToken": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "n.cacheMiguToken.clear": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "n.cacheUserInfo.get": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "n.cacheUserInfo": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "n.clearCache": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "s.DIMOND_SERVER_DOMAIN": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.setLoginUrl": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.setSourceId": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.login": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "n.cacheUserInfo.set": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "n.Session.set": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "n.cacheMiguToken.set": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "o.encrypt": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "NaN": {
+      "existence": true,
+      "type": "number",
+      "callability": false
+    },
+    "String.prototype.charCodeAt.call": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Error.captureStackTrace": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Error.prototype": {
+      "existence": true,
+      "type": "object",
+      "callability": false
+    },
+    "window": {
+      "existence": true,
+      "type": "object",
+      "callability": false
+    },
+    "self": {
+      "existence": true,
+      "type": "object",
+      "callability": false
+    },
+    "Error.apply": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "AES_set_key": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "AES_CTR_set_options": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "AES_set_iv": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "AES_set_padding": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "AES_reset": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "AES_Encrypt_process": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "AES_Encrypt_finish": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "AES_Decrypt_process": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "AES_Decrypt_finish": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "encrypt": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "decrypt": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "SyntaxError": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "String.fromCodePoint": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "BigInt": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Uint8Array.prototype.indexOf": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Uint8Array.prototype.indexOf.call": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Uint8Array.prototype.lastIndexOf.call": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Uint8Array.prototype.lastIndexOf": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Symbol.species": {
+      "existence": true,
+      "type": "symbol",
+      "callability": false
+    },
+    "Uint8Array.prototype.set.call": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Uint8Array.prototype.set": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Reflect.decorate": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Reflect.metadata": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Iterator": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Symbol.asyncIterator": {
+      "existence": true,
+      "type": "symbol",
+      "callability": false
+    },
+    "AsyncIterator": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Symbol.asyncDispose": {
+      "existence": true,
+      "type": "symbol",
+      "callability": false
+    },
+    "Symbol.dispose": {
+      "existence": true,
+      "type": "symbol",
+      "callability": false
+    },
+    "SuppressedError": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "crypto": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "$gwx_wx4418e3e031e551be": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "_classCallCheck2": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "_createClass2": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "_utils.showDeprecatedTips": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "msg": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "_constants.CERTIFICATE_TYPE.filter": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "_constants.CERTIFICATE_TYPE": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.detail.authSetting.scope.camera": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "_chooseImage.takePhoto": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "res": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.onBLECharacteristicValueChange": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "words": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "$gwx_wx9acc1deb2cb15bba": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Symbol.for": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "r.colors.forEach": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "r.colors": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "r.BUNDLED_SBTI_SNAPSHOT.dimensionMeta": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "r.BUNDLED_SBTI_SNAPSHOT": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "r.BUNDLED_SBTI_SNAPSHOT.DIM_EXPLANATIONS": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "r.BUNDLED_SBTI_SNAPSHOT.questions": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "r.BUNDLED_SBTI_SNAPSHOT.TYPE_LIBRARY": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "r.BUNDLED_SBTI_SNAPSHOT.NORMAL_TYPES": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "r.BUNDLED_SBTI_SNAPSHOT.dimensionOrder": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "r.BUNDLED_SBTI_SNAPSHOT.DRUNK_TRIGGER_QUESTION_ID": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "r.BUNDLED_SBTI_SNAPSHOT.dimensionOrder.forEach": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "r.BUNDLED_SBTI_SNAPSHOT.questions.forEach": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "r.BUNDLED_SBTI_SNAPSHOT.dimensionOrder.map": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "r.BUNDLED_SBTI_SNAPSHOT.NORMAL_TYPES.map": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "themeListeners.forEach": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "themeListeners.indexOf": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "themeListeners.push": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "themeListeners.splice": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "WXEnvironment": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "WXEnvironment.platform": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "WXEnvironment.platform.toLowerCase": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.getStorageInfo": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "app": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "app.globalData.historyList": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "app.globalData": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "song.Id": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "index": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "array.splice": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.get": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.set": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.SERVICE_HOST": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "D.app_key.replace": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "D.app_key": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "D.useOpen": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.Queue.push": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.Queue": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nt_17": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.hideNavigationBarLoading": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "my.getAuthCode": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.showRedPackage": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Math.nv_cos": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Math.nv_sin": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Math.nv_tan": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "$gwx_wx308bd2aeb83d3345": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "a.getData": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "a.setData": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Buffer.alloc": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Buffer.isBuffer": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nt_19": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nv_const": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nv_address": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nv_v": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "filterCode": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "filterCode.0": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "filterCode.1": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "filterCode.2": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "filterCode.3": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "filterCode.4": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.queryRouteList": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "i.prcTripList": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.load": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "util.uploadError": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "o.html2json": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.Promise": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "ios": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "$gwx_wx032b78128e980502": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "String.prototype.isPhone": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "String.prototype.toTime": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "Blob": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "r.px": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "r.app": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "r.app.urls.bodyExamReport": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "r.app.urls": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "r.app.urls.bodyExamById": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "active": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "run": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "on": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "off": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "stop": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nv_window.nv_onmousemove": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nv_window.nv_onmouseup": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.isNotNull": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.formatTimeFromStr": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.isNotNull": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "$gwx_wx70d57361939e63ef": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "i.createStatis": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "d.setDebug": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.log": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "i.log": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "default.hex_sha1": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.ExposureTimes": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.FilterPositions": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.FilterPositions.ND1024": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.BasicShutters": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.BasicShutters.1/3": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.ExposureCalc": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.TrueTimeFilter": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.BasicShutters.1/3.length": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.Results": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.versionCompare": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "r.secondsToTime": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "r.secondsToPace": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "o.zipSync": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "o.unzipSync": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.reportAnalytics": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "Observer": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "onHide": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "onHide.apply": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "$gwx_wx69b7451feb427f0e": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "result.errMsg": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "$gwx_wxaae6519cee98d824": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.getStorage": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.setStorage": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.navigateToMiniProgram": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "$gwx_wxbc055599e4059c9f": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "$gwx_wx5fcce12afdff9918": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.loadSubpackage": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.createImage": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.__first__canvas.width": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.__first__canvas": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.__first__canvas.height": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.__first__canvas.getContext": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "GameGlobal": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.createCanvas": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "loader.loadEngine": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "first_scene.drawImg": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "wx.isGl": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "gl": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "requestAnimationFrame": {
+      "existence": true,
+      "type": "function",
+      "callability": true
+    },
+    "globalThis.tt": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "globalThis.ks": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "globalThis.wx": {
+      "existence": true,
+      "type": "object",
+      "callability": false
+    },
+    "n.sm2": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.getApplyDataImp": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.getReqQRCodeDataImp": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.getAuthQRCodeDataImp": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.getAuthCodeDataImp": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "i.getVersionCode": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "r.getCodeNum": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.getAuthIDCardDataImp": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "e.getEnrollmentIDCardDataImp": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "s.getDeviceId": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "u.getBusinessInfo": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "nv_owner.nv_callMethod": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.bmiData": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.bmiData.boy.findIndex": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.bmiData.boy": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.bmiData.girl.findIndex": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    },
+    "t.bmiData.girl": {
+      "existence": false,
+      "type": "undefined",
+      "callability": false
+    }
+  },
+  "wechatTypeofs": {
+    "$gwx": "function",
+    "console.warn": "function",
+    "$gwn": "function",
+    "$gwl": "function",
+    "console.log": "function",
+    "wh": "object",
+    "wh.hn": "function",
+    "wh.rv": "function",
+    "wh.nh": "function",
+    "undefined": "undefined",
+    "snap_bb": "undefined",
+    "console.error": "function",
+    "gra": "function",
+    "grb": "function",
+    "JSON.stringify": "function",
+    "Object.prototype.toString.call": "function",
+    "Object.prototype.toString": "function",
+    "Object.prototype": "object",
+    "Object.defineProperty": "function",
+    "Array.prototype": "object",
+    "Array.prototype.concat": "function",
+    "Array.prototype.pop": "function",
+    "Array.prototype.push": "function",
+    "Array.prototype.reverse": "function",
+    "Array.prototype.shift": "function",
+    "Array.prototype.slice": "function",
+    "Array.prototype.sort": "function",
+    "Array.prototype.splice": "function",
+    "Array.prototype.unshift": "function",
+    "Array.prototype.indexOf": "function",
+    "Array.prototype.lastIndexOf": "function",
+    "Array.prototype.every": "function",
+    "Array.prototype.some": "function",
+    "Array.prototype.forEach": "function",
+    "Array.prototype.map": "function",
+    "Array.prototype.filter": "function",
+    "Array.prototype.reduce": "function",
+    "Array.prototype.reduceRight": "function",
+    "String.prototype": "object",
+    "String.prototype.toString": "function",
+    "String.prototype.valueOf": "function",
+    "String.prototype.charAt": "function",
+    "String.prototype.charCodeAt": "function",
+    "String.prototype.concat": "function",
+    "String.prototype.indexOf": "function",
+    "String.prototype.lastIndexOf": "function",
+    "String.prototype.localeCompare": "function",
+    "String.prototype.match": "function",
+    "String.prototype.replace": "function",
+    "String.prototype.search": "function",
+    "String.prototype.slice": "function",
+    "String.prototype.split": "function",
+    "String.prototype.substring": "function",
+    "String.prototype.toLowerCase": "function",
+    "String.prototype.toLocaleLowerCase": "function",
+    "String.prototype.toUpperCase": "function",
+    "String.prototype.toLocaleUpperCase": "function",
+    "String.prototype.trim": "function",
+    "Boolean.prototype": "object",
+    "Boolean.prototype.toString": "function",
+    "Boolean.prototype.valueOf": "function",
+    "Number": "function",
+    "Number.MAX_VALUE": "number",
+    "Number.MIN_VALUE": "number",
+    "Number.NEGATIVE_INFINITY": "number",
+    "Number.POSITIVE_INFINITY": "number",
+    "Number.prototype": "object",
+    "Number.prototype.toString": "function",
+    "Number.prototype.toLocaleString": "function",
+    "Number.prototype.valueOf": "function",
+    "Number.prototype.toFixed": "function",
+    "Number.prototype.toExponential": "function",
+    "Number.prototype.toPrecision": "function",
+    "Math": "object",
+    "Math.E": "number",
+    "Math.LN10": "number",
+    "Math.LN2": "number",
+    "Math.LOG2E": "number",
+    "Math.LOG10E": "number",
+    "Math.PI": "number",
+    "Math.SQRT1_2": "number",
+    "Math.SQRT2": "number",
+    "Math.abs": "function",
+    "Math.acos": "function",
+    "Math.asin": "function",
+    "Math.atan": "function",
+    "Math.atan2": "function",
+    "Math.ceil": "function",
+    "Math.cos": "function",
+    "Math.exp": "function",
+    "Math.floor": "function",
+    "Math.log": "function",
+    "Math.max": "function",
+    "Math.min": "function",
+    "Math.pow": "function",
+    "Math.random": "function",
+    "Math.round": "function",
+    "Math.sin": "function",
+    "Math.sqrt": "function",
+    "Math.tan": "function",
+    "Date.prototype": "object",
+    "Date": "function",
+    "Date.parse": "function",
+    "Date.UTC": "function",
+    "Date.now": "function",
+    "Date.prototype.toString": "function",
+    "Date.prototype.toDateString": "function",
+    "Date.prototype.toTimeString": "function",
+    "Date.prototype.toLocaleString": "function",
+    "Date.prototype.toLocaleDateString": "function",
+    "Date.prototype.toLocaleTimeString": "function",
+    "Date.prototype.valueOf": "function",
+    "Date.prototype.getTime": "function",
+    "Date.prototype.getFullYear": "function",
+    "Date.prototype.getUTCFullYear": "function",
+    "Date.prototype.getMonth": "function",
+    "Date.prototype.getUTCMonth": "function",
+    "Date.prototype.getDate": "function",
+    "Date.prototype.getUTCDate": "function",
+    "Date.prototype.getDay": "function",
+    "Date.prototype.getUTCDay": "function",
+    "Date.prototype.getHours": "function",
+    "Date.prototype.getUTCHours": "function",
+    "Date.prototype.getMinutes": "function",
+    "Date.prototype.getUTCMinutes": "function",
+    "Date.prototype.getSeconds": "function",
+    "Date.prototype.getUTCSeconds": "function",
+    "Date.prototype.getMilliseconds": "function",
+    "Date.prototype.getUTCMilliseconds": "function",
+    "Date.prototype.getTimezoneOffset": "function",
+    "Date.prototype.setTime": "function",
+    "Date.prototype.setMilliseconds": "function",
+    "Date.prototype.setUTCMilliseconds": "function",
+    "Date.prototype.setSeconds": "function",
+    "Date.prototype.setUTCSeconds": "function",
+    "Date.prototype.setMinutes": "function",
+    "Date.prototype.setUTCMinutes": "function",
+    "Date.prototype.setHours": "function",
+    "Date.prototype.setUTCHours": "function",
+    "Date.prototype.setDate": "function",
+    "Date.prototype.setUTCDate": "function",
+    "Date.prototype.setMonth": "function",
+    "Date.prototype.setUTCMonth": "function",
+    "Date.prototype.setFullYear": "function",
+    "Date.prototype.setUTCFullYear": "function",
+    "Date.prototype.toUTCString": "function",
+    "Date.prototype.toISOString": "function",
+    "Date.prototype.toJSON": "function",
+    "RegExp.prototype": "object",
+    "RegExp.prototype.exec": "function",
+    "RegExp.prototype.test": "function",
+    "RegExp.prototype.toString": "function",
+    "Array.prototype.slice.call": "function",
+    "RegExp": "function",
+    "parseInt": "function",
+    "parseFloat": "function",
+    "isNaN": "function",
+    "isFinite": "function",
+    "decodeURI": "function",
+    "decodeURIComponent": "function",
+    "encodeURI": "function",
+    "encodeURIComponent": "function",
+    "Object": "function",
+    "Object.prototype.hasOwnProperty.call": "function",
+    "Array": "function",
+    "JSON.parse": "function",
+    "define": "function",
+    "App": "function",
+    "wx.request": "function",
+    "require": "function",
+    "getApp": "function",
+    "Page": "function",
+    "wx.openLocation": "function",
+    "wx.downloadFile": "function",
+    "wx.openDocument": "function",
+    "wx.openBusinessView": "function",
+    "wx.setVisualEffectOnCapture": "function",
+    "wx.login": "function",
+    "wx.navigateBack": "function",
+    "wx.setNavigationBarTitle": "function",
+    "wx.navigateToMiniProgram": "function",
+    "setTimeout": "function",
+    "Math.nv_ceil": "function",
+    "nt_0": "undefined",
+    "nt_1": "undefined",
+    "nt_5": "undefined",
+    "nt_6": "undefined",
+    "nt_8": "undefined",
+    "nt_9": "undefined",
+    "nt_2": "undefined",
+    "cloud.init": "undefined",
+    "cloud.DYNAMIC_CURRENT_ENV": "undefined",
+    "cloud.database": "undefined",
+    "cloud.getWXContext": "undefined",
+    "Object.keys": "function",
+    "Object.getOwnPropertySymbols": "function",
+    "Object.getOwnPropertyDescriptor": "function",
+    "wx.__webpack_require_UNI_MP_PLUGIN__": "undefined",
+    "Object.getOwnPropertyDescriptors": "function",
+    "Object.defineProperties": "function",
+    "Promise.resolve": "function",
+    "Promise": "function",
+    "toPropertyKey": "undefined",
+    "Object.prototype.hasOwnProperty": "function",
+    "Symbol": "function",
+    "Object.create": "function",
+    "Object.getPrototypeOf": "function",
+    "t": "undefined",
+    "Error": "function",
+    "TypeError": "function",
+    "Object.setPrototypeOf": "function",
+    "_typeof": "undefined",
+    "Symbol.toPrimitive": "symbol",
+    "String": "function",
+    "globalThis": "object",
+    "e.taroWindowProvider": "undefined",
+    "Object.assign": "function",
+    "Object.freeze": "function",
+    "Proxy": "function",
+    "Object.toString": "function",
+    "Object.hasOwnProperty.call": "function",
+    "Object.hasOwnProperty": "function",
+    "Reflect": "object",
+    "Reflect.ownKeys": "function",
+    "Object.getOwnPropertyNames": "function",
+    "Symbol.iterator": "symbol",
+    "Array.isArray": "function",
+    "a": "undefined",
+    "String.fromCharCode": "function",
+    "nv_nt_0": "undefined",
+    "wx.chooseMessageFile": "function",
+    "wx.showModal": "function",
+    "wx.showToast": "function",
+    "clearTimeout": "function",
+    "wx.uploadFile": "function",
+    "wx.createRewardedVideoAd": "function",
+    "wx.showLoading": "function",
+    "wx.hideLoading": "function",
+    "wx.shareFileMessage": "function",
+    "nv_navigator": "undefined",
+    "nv_navigator.nv_userAgent.nv_indexOf": "undefined",
+    "nv_navigator.nv_userAgent": "undefined",
+    "Math.nv_max": "function",
+    "Math.nv_abs": "function",
+    "Math.nv_sqrt": "function",
+    "Math.nv_pow": "function",
+    "Math.nv_asin": "function",
+    "Math.nv_PI": "number",
+    "Array.prototype.includes": "function",
+    "Object.entries": "function",
+    "nt_3": "undefined",
+    "nt_7": "undefined",
+    "arrayLikeToArray": "undefined",
+    "Array.from": "function",
+    "defineProperty": "undefined",
+    "arrayWithoutHoles": "undefined",
+    "iterableToArray": "undefined",
+    "unsupportedIterableToArray": "undefined",
+    "nonIterableSpread": "undefined",
+    "toPrimitive": "undefined",
+    "Math.nv_round": "function",
+    "Math.nv_floor": "function",
+    "wx.getStorageSync": "function",
+    "wx.setStorageSync": "function",
+    "n.info": "undefined",
+    "res.data.data.length": "undefined",
+    "res.data.data": "undefined",
+    "res.data": "undefined",
+    "CryptoJS.mode.ECB": "undefined",
+    "CryptoJS.mode": "undefined",
+    "CryptoJS.lib.BlockCipherMode.extend": "undefined",
+    "CryptoJS.lib.BlockCipherMode": "undefined",
+    "CryptoJS.lib": "undefined",
+    "CryptoJS.pad.NoPadding": "undefined",
+    "CryptoJS.pad": "undefined",
+    "wx.miniProgram.navigateTo": "undefined",
+    "wx.miniProgram": "undefined",
+    "layer.msg": "undefined",
+    "_size": "undefined",
+    "wx.createCanvasContext": "function",
+    "wx.getUpdateManager": "function",
+    "wx.reLaunch": "function",
+    "setInterval": "function",
+    "l": "undefined",
+    "e": "undefined",
+    "i": "undefined",
+    "r": "undefined",
+    "n": "undefined",
+    "wx.removeStorageSync": "function",
+    "s": "undefined",
+    "clearInterval": "function",
+    "CryptoJS.enc.Utf8.parse": "undefined",
+    "CryptoJS.enc.Utf8": "undefined",
+    "CryptoJS.enc": "undefined",
+    "CryptoJS.AES.encrypt": "undefined",
+    "CryptoJS.AES": "undefined",
+    "CryptoJS.pad.ZeroPadding": "undefined",
+    "CryptoJS.enc.Hex.parse": "undefined",
+    "CryptoJS.enc.Hex": "undefined",
+    "CryptoJS.mode.CBC": "undefined",
+    "CryptoJS.pad.Pkcs7": "undefined",
+    "CryptoJS.enc.Base64.stringify": "undefined",
+    "CryptoJS.enc.Base64": "undefined",
+    "CryptoJS.AES.decrypt": "undefined",
+    "console": "object",
+    "$gwx_wx104a1a20c3f81ec2": "undefined",
+    "Object.values": "function",
+    "ReferenceError": "function",
+    "isNativeReflectConstruct": "undefined",
+    "getPrototypeOf": "undefined",
+    "Reflect.construct": "function",
+    "possibleConstructorReturn": "undefined",
+    "setPrototypeOf": "undefined",
+    "Reflect.construct.sham": "undefined",
+    "Date.prototype.toString.call": "function",
+    "assertThisInitialized": "undefined",
+    "Symbol.prototype": "object",
+    "wx.redirectTo": "function",
+    "wx.requestPayment": "function",
+    "Object.getPrototypeOf.bind": "function",
+    "$gwx_wx293c4b6097a8a4d0": "undefined",
+    "Math.nv_min": "function",
+    "nt_4": "undefined",
+    "resolve": "undefined",
+    "define.amd": "undefined",
+    "process": "undefined",
+    "Uint8ClampedArray": "function",
+    "importScripts": "undefined",
+    "MessageChannel": "undefined",
+    "process.nextTick": "undefined",
+    "t.runOnLoop": "undefined",
+    "t.runOnContext": "undefined",
+    "i.strDiscode": "undefined",
+    "console.dir": "function",
+    "i.urlToHttpUrl": "undefined",
+    "result.source": "undefined",
+    "RegExp.$1": "string",
+    "RegExp.$2": "string",
+    "wx.previewImage": "function",
+    "wx.getSystemInfo": "function",
+    "e.req": "undefined",
+    "t.req": "undefined",
+    "wx.navigateTo": "function",
+    "my.datePicker": "undefined",
+    "wx.chooseImage": "function",
+    "wx.switchTab": "function",
+    "wx.makePhoneCall": "function",
+    "a.req": "undefined",
+    "wx.getUserInfo": "function",
+    "wx.hideToast": "function",
+    "wx.canIUse": "function",
+    "r.get": "undefined",
+    "e.myRequest": "undefined",
+    "t.config.base_req_api_url": "undefined",
+    "t.config": "undefined",
+    "wx.webpackJsonp": "undefined",
+    "unescape": "function",
+    "wx.setStorage": "function",
+    "wx.createInterstitialAd": "function",
+    "wx.env.USER_DATA_PATH": "string",
+    "wx.env": "object",
+    "Symbol.toStringTag": "symbol",
+    "$gwx_wx50b5593e81dd937a": "undefined",
+    "WeakMap": "function",
+    "util.request": "undefined",
+    "R_htmlToWxml.html2json": "undefined",
+    "_util.Promise": "undefined",
+    "__wxConfig": "object",
+    "WeixinJSBridge.invoke": "function",
+    "__appServiceSDK__.loadSubpackage": "undefined",
+    "__subContextEngine__.injectEntryFile": "undefined",
+    "__wxConfig.onReady": "undefined",
+    "Reporter.thirdErrorReport": "undefined",
+    "__subContextEngine__": "undefined",
+    "__subContextEngine__.loadJsFiles": "undefined",
+    "requireOnce": "function",
+    "$gwx_wx94a6522b1d640c3b": "undefined",
+    "nv__startMovingY": "undefined",
+    "Math.nv_atan2": "function",
+    "wx.cloud": "object",
+    "wx.cloud.init": "function",
+    "wx.getFileInfo": "function",
+    "wx.cloud.downloadFile": "function",
+    "wx.getFileSystemManager": "function",
+    "wx.setInnerAudioOption": "function",
+    "wx.getBackgroundAudioManager": "function",
+    "wx.createInnerAudioContext": "function",
+    "wx.setKeepScreenOn": "function",
+    "wx.cloud.getTempFileURL": "function",
+    "wx.getSystemInfoSync": "function",
+    "e.hexMD5": "undefined",
+    "n.sha1": "undefined",
+    "Uint8Array": "function",
+    "Uint32Array": "function",
+    "DataView": "function",
+    "Array.prototype.map.call": "function",
+    "getCurrentPages": "function",
+    "wx.setClipboardData": "function",
+    "wx.getClipboardData": "function",
+    "wx.pageScrollTo": "function",
+    "t.posts_list": "undefined",
+    "wx.getMenuButtonBoundingClientRect": "function",
+    "e.weappJwtDecode": "undefined",
+    "t.hexMD5": "undefined",
+    "nv_window": "undefined",
+    "$gwx_wxefe655223916819e": "undefined",
+    "objectWithoutPropertiesLoose": "undefined",
+    "Object.prototype.propertyIsEnumerable.call": "function",
+    "Object.prototype.propertyIsEnumerable": "function",
+    "arrayWithHoles": "undefined",
+    "iterableToArrayLimit": "undefined",
+    "nonIterableRest": "undefined",
+    "wx.getSetting": "function",
+    "wx.requestSubscribeMessage": "function",
+    "h.api.isGradient": "undefined",
+    "h.api": "undefined",
+    "h.api.doGradient": "undefined",
+    "Object.assign.apply": "function",
+    "nt_12": "undefined",
+    "nt_13": "undefined",
+    "Date.prototype.format": "undefined",
+    "RegExp.$1.length": "number",
+    "$gwx_wxd1d3a59c204109d4": "undefined",
+    "Boolean": "function",
+    "setImmediate": "undefined",
+    "Reflect.construct.bind": "function",
+    "Reflect.get": "function",
+    "Reflect.get.bind": "function",
+    "superPropBase": "undefined",
+    "$gwx_wx82e6ae1175f264fa": "undefined",
+    "wx": "object",
+    "t.request": "undefined",
+    "o.request": "undefined",
+    "o": "undefined",
+    "$gwx_wx4664e59e8a284069": "undefined",
+    "console.info": "function",
+    "r.POST": "undefined",
+    "t.put": "undefined",
+    "complete": "undefined",
+    "t.get": "undefined",
+    "n.login": "undefined",
+    "o.Ver": "undefined",
+    "o.Server": "undefined",
+    "e.INLOGIN": "undefined",
+    "wx.clearStorageSync": "function",
+    "u.connect": "undefined",
+    "s.INCREMENT": "undefined",
+    "s.DECREMENT": "undefined",
+    "c.asyncInc": "undefined",
+    "$gwx_wxa16657d57059e0f0": "undefined",
+    "Promise.reject": "function",
+    "$gwx_wxa75efa648b60994b": "undefined",
+    "n.COMMON_DATA_KEY.playertype": "undefined",
+    "n.COMMON_DATA_KEY": "undefined",
+    "o.HookType.GETINFO": "undefined",
+    "o.HookType": "undefined",
+    "o.HookType.SET_LEVEL": "undefined",
+    "n.COMMON_DATA_KEY.appVer": "undefined",
+    "n.COMMON_DATA_KEY.pageUrl": "undefined",
+    "n.COMMON_DATA_KEY.pageQuery": "undefined",
+    "n.COMMON_DATA_KEY.pageRef": "undefined",
+    "n.COMMON_DATA_KEY.envAppId": "undefined",
+    "o.version": "undefined",
+    "o.host": "undefined",
+    "o.app": "undefined",
+    "o.domain": "undefined",
+    "Array.prototype.unshift.apply": "function",
+    "$gwx_wxdabb25f880cb2a03": "undefined",
+    "my.request": "undefined",
+    "atob": "function",
+    "btoa": "undefined",
+    "Buffer": "undefined",
+    "TextDecoder": "function",
+    "TextEncoder": "function",
+    "String.fromCharCode.bind": "function",
+    "Uint8Array.from": "undefined",
+    "Uint8Array.from.bind": "undefined",
+    "Buffer.from": "undefined",
+    "Uint8Array.prototype": "object",
+    "escape": "function",
+    "ArrayBuffer": "function",
+    "Int8Array": "function",
+    "Int16Array": "function",
+    "Uint16Array": "function",
+    "Int32Array": "function",
+    "Float32Array": "function",
+    "Float64Array": "function",
+    "Math.nv_random": "function",
+    "wx.vibrateShort": "function",
+    "wx.showShareMenu": "function",
+    "$gwx_wxe6129e9cc9619c07": "undefined",
+    "aesjs.utils.utf8.toBytes": "undefined",
+    "aesjs.utils.utf8": "undefined",
+    "aesjs.utils": "undefined",
+    "aesjs.ModeOfOperation.cbc": "undefined",
+    "aesjs.ModeOfOperation": "undefined",
+    "aesjs.padding.pkcs7.pad": "undefined",
+    "aesjs.padding.pkcs7": "undefined",
+    "aesjs.padding": "undefined",
+    "wx.getShareInfo": "function",
+    "m.app_key": "undefined",
+    "m.appid": "undefined",
+    "m.appsecret": "undefined",
+    "$gwx_wx5ec22d3a6a176039": "undefined",
+    "process.versions": "undefined",
+    "process.versions.node": "undefined",
+    "wx.checkSession": "function",
+    "wx.canvasToTempFilePath": "function",
+    "wx.getUserProfile": "function",
+    "Array.prototype.concat.apply": "function",
+    "wx.createAnimation": "function",
+    "c1": "undefined",
+    "c2": "undefined",
+    "c3": "undefined",
+    "r.createQrCodeImg": "undefined",
+    "t.createQrCodeImg": "undefined",
+    "Promise.all": "function",
+    "wx.getLocation": "function",
+    "wx.getStorage": "function",
+    "e.drawCld": "undefined",
+    "t.drawCld": "undefined",
+    "$gwx_wx92c68dae5a8bb046": "undefined",
+    "debugInfo": "undefined",
+    "RangeError": "function",
+    "a.solarToLunar": "undefined",
+    "Map": "function",
+    "wx.cloud.database": "function",
+    "e.compareVersion": "undefined",
+    "s.nextString": "undefined",
+    "wx.saveImageToPhotosAlbum": "function",
+    "t.formatTime": "undefined",
+    "e.apiUrl": "undefined",
+    "i.call": "undefined",
+    "i.prototype": "undefined",
+    "o.COMMON_DATA_KEY.playertype": "undefined",
+    "o.COMMON_DATA_KEY": "undefined",
+    "n.HookType.GETINFO": "undefined",
+    "n.HookType": "undefined",
+    "n.HookType.SET_LEVEL": "undefined",
+    "o.COMMON_DATA_KEY.appVer": "undefined",
+    "o.COMMON_DATA_KEY.pageUrl": "undefined",
+    "o.COMMON_DATA_KEY.pageQuery": "undefined",
+    "o.COMMON_DATA_KEY.pageRef": "undefined",
+    "o.COMMON_DATA_KEY.envAppId": "undefined",
+    "o.COMMON_DATA_KEY.scene": "undefined",
+    "SVGRect": "undefined",
+    "WebKitCSSMatrix": "undefined",
+    "JSON": "object",
+    "Image": "undefined",
+    "console.error.apply": "function",
+    "n.hasUserPermission": "undefined",
+    "n.normalizeRole": "undefined",
+    "$gwx_wx5917c8c26f85c588": "undefined",
+    "Boolean.prototype.valueOf.call": "function",
+    "Symbol.hasInstance": "symbol",
+    "$gwx_wx069ba97219f66d99": "undefined",
+    "e.logInfo": "undefined",
+    "e.logLog": "undefined",
+    "e.setLogFlag": "undefined",
+    "e.logErr": "undefined",
+    "nt_10": "undefined",
+    "nt_18": "undefined",
+    "nt_21": "undefined",
+    "nt_22": "undefined",
+    "nt_23": "undefined",
+    "nt_24": "undefined",
+    "nt_29": "undefined",
+    "nt_30": "undefined",
+    "$gwx_wx0e203209e27b1e66": "undefined",
+    "wx.getExtConfigSync": "function",
+    "ws.hideLoading": "undefined",
+    "that.doPay": "undefined",
+    "nv_Array": "undefined",
+    "nv_Array.nv_isArray": "undefined",
+    "$gwx_wxd65104595293601e": "undefined",
+    "storage.getNotes": "undefined",
+    "selectedIds.includes": "undefined",
+    "storage.deleteNote": "undefined",
+    "nt_11": "undefined",
+    "nt_14": "undefined",
+    "nt_15": "undefined",
+    "nt_16": "undefined",
+    "$gwx_wxf51d01cf670e28d3": "undefined",
+    "orderId": "undefined",
+    "Object.isExtensible": "function",
+    "Object.preventExtensions": "function",
+    "swan": "undefined",
+    "tt": "undefined",
+    "my": "undefined",
+    "Taro": "undefined",
+    "$gwx_wxdd4927ede9acd724": "undefined",
+    "Date.nv_now": "function",
+    "ArrayBuffer.isView": "function",
+    "wx.setNavigationBarColor": "function",
+    "wx.setTabBarStyle": "function",
+    "o.formatMoney": "undefined",
+    "e.summary": "undefined",
+    "e.formatMoney": "undefined",
+    "wx.startBluetoothDevicesDiscovery": "function",
+    "wx.getBluetoothAdapterState": "function",
+    "wx.createBLEConnection": "function",
+    "wx.getBLEDeviceServices": "function",
+    "wx.getBLEDeviceCharacteristics": "function",
+    "wx.notifyBLECharacteristicValueChange": "function",
+    "wx.closeBLEConnection": "function",
+    "e.f1": "undefined",
+    "wx.writeBLECharacteristicValue": "function",
+    "wx.closeBluetoothAdapter": "function",
+    "wx.openBluetoothAdapter": "function",
+    "wx.onBluetoothDeviceFound": "function",
+    "e.ab2hex": "undefined",
+    "wx.stopBluetoothDevicesDiscovery": "function",
+    "$gwx_wxb7c8f9ea9ceb4663": "undefined",
+    "n.compareVersion": "undefined",
+    "e.config.system.version": "undefined",
+    "e.config.system": "undefined",
+    "e.config": "undefined",
+    "e.config.app.name": "undefined",
+    "wx.onAccelerometerChange": "function",
+    "$gwx_wx7a4658085b18b581": "undefined",
+    "_index.setEnv": "undefined",
+    "_appNavigater.setAppNavigater": "undefined",
+    "$gwx_wx34345ae5855f892d": "undefined",
+    "nv_nt_5": "undefined",
+    "nv_nt_6": "undefined",
+    "savedAppid": "undefined",
+    "e.api.draw": "undefined",
+    "e.api": "undefined",
+    "wx.getImageInfo": "function",
+    "wx.preloadPage": "undefined",
+    "wx.createSelectorQuery": "function",
+    "wx.updateShareMenu": "function",
+    "$gwx_wx8d04ad0492dab24d": "undefined",
+    "checkLogin": "undefined",
+    "__wxConfig.envVersion": "string",
+    "i.uuid": "undefined",
+    "nv_instanceLen": "undefined",
+    "o.Events.PLAY_SESSION_END": "undefined",
+    "wx.canvasGetImageData": "function",
+    "toString.call": "function",
+    "c": "undefined",
+    "e.enc.Utf8.parse": "undefined",
+    "e.enc.Utf8": "undefined",
+    "e.enc": "undefined",
+    "e.AES.encrypt": "undefined",
+    "e.AES": "undefined",
+    "e.mode.CBC": "undefined",
+    "e.mode": "undefined",
+    "e.pad.Pkcs7": "undefined",
+    "e.pad": "undefined",
+    "e.enc.Hex.parse": "undefined",
+    "e.enc.Hex": "undefined",
+    "e.enc.Base64.stringify": "undefined",
+    "e.enc.Base64": "undefined",
+    "e.AES.decrypt": "undefined",
+    "$gwx_wx3b49cd549eb1ae7f": "undefined",
+    "r.isNull": "undefined",
+    "version": "undefined",
+    "$gwx_wx116d0dd5e6a39ac7": "undefined",
+    "wx.loadFontFace": "function",
+    "wx.hideTabBar": "function",
+    "wx.stopPullDownRefresh": "function",
+    "wx.removeStorage": "function",
+    "$gwx_wx4d2deeab3aed6e5a": "undefined",
+    "t.COMMON_DATA_KEY.playertype": "undefined",
+    "t.COMMON_DATA_KEY": "undefined",
+    "e.HookType.GETINFO": "undefined",
+    "e.HookType": "undefined",
+    "e.HookType.SET_LEVEL": "undefined",
+    "t.COMMON_DATA_KEY.appVer": "undefined",
+    "t.InfoLinkType": "undefined",
+    "t.InfoLink": "undefined",
+    "t.userOpenID": "undefined",
+    "t.PlayInfoLink": "undefined",
+    "t.InfoLinkLogo": "undefined",
+    "default": "undefined",
+    "wx.getPrivacySetting": "function",
+    "wx.onBluetoothAdapterStateChange": "function",
+    "devices_list.length": "undefined",
+    "wx.openPrivacyContract": "function",
+    "$gwx_wx1fe8d9a3cb067a75": "undefined",
+    "e.API_DOMAIN": "undefined",
+    "$gwx_wxbe275ff84246f1a4": "undefined",
+    "String.prototype.format": "undefined",
+    "WeakSet": "function",
+    "String.fromCharCode.apply": "function",
+    "wx.getAppBaseInfo": "function",
+    "String.prototype.pad": "undefined",
+    "wx.getWindowInfo": "function",
+    "wx.createBannerAd": "undefined",
+    "AdManager.init": "undefined",
+    "wx.getAccountInfoSync": "function",
+    "$gwx_wx3eb462803881d2f1": "undefined",
+    "wx.chooseMedia": "function",
+    "wx.showActionSheet": "function",
+    "$gwx_wx76a9a06e5b4e693e": "undefined",
+    "Math.max.apply": "function",
+    "Math.min.apply": "function",
+    "s.globalUrls.movieList": "undefined",
+    "s.globalUrls": "undefined",
+    "s.globalUrls.tvList": "undefined",
+    "s.globalUrls.showList": "undefined",
+    "s.globalUrls.searchUrl": "undefined",
+    "s.globalUrls.movieDetail": "undefined",
+    "s.globalUrls.tvDetail": "undefined",
+    "s.globalUrls.showDetail": "undefined",
+    "s.globalUrls.movieTags": "undefined",
+    "s.globalUrls.tvTags": "undefined",
+    "s.globalUrls.showTags": "undefined",
+    "s.globalUrls.movieComments": "undefined",
+    "s.globalUrls.tvComments": "undefined",
+    "s.globalUrls.showComments": "undefined",
+    "wx.onAppHide": "function",
+    "wx.onAppShow": "function",
+    "wx.onNeedPrivacyAuthorization": "function",
+    "wx.createOffscreenCanvas": "function",
+    "wx.authorize": "function",
+    "$gwx_wx43d5971c94455481": "undefined",
+    "wx.vibrateLong": "function",
+    "wx.getScreenBrightness": "function",
+    "wx.setScreenBrightness": "function",
+    "Object.setPrototypeOf.bind": "function",
+    "t.movieList": "undefined",
+    "t.strftime": "undefined",
+    "ArrayBuffer.prototype.slice": "function",
+    "ArrayBuffer.prototype": "object",
+    "$gwx_wx043a474648d3d591": "undefined",
+    "h.ab2hex": "undefined",
+    "m.parse": "undefined",
+    "e.jin2Kg": "undefined",
+    "e.lb2Kg": "undefined",
+    "e.stlb2Kg": "undefined",
+    "Set": "function",
+    "f": "undefined",
+    "Reflect.set": "function",
+    "buildInAppellationObj": "undefined",
+    "buildInAppellationObj.0.content": "undefined",
+    "buildInAppellationObj.0": "undefined",
+    "fs.writeFileSync": "undefined",
+    "calc.calculate": "undefined",
+    "e.parseRelationship": "undefined",
+    "e.RELATIONSHIP_MAP": "undefined",
+    "d": "undefined",
+    "m": "undefined",
+    "$gwx_wx4ed749733ed0e8e8": "undefined",
+    "e.importElicFile": "undefined",
+    "PHCNTRUST.asn1": "undefined",
+    "PHCNTRUST.asn1.ASN1Util": "undefined",
+    "BigInteger": "undefined",
+    "BigInteger.ONE": "undefined",
+    "PHCrypJS.enc.Hex.parse": "undefined",
+    "PHCrypJS.enc.Hex": "undefined",
+    "PHCrypJS.enc": "undefined",
+    "PHCrypJS.enc.Base64.stringify": "undefined",
+    "PHCrypJS.enc.Base64": "undefined",
+    "PHCNTRUST.asn1.DERBoolean": "undefined",
+    "PHCNTRUST.asn1.DERInteger": "undefined",
+    "PHCNTRUST.asn1.DERBitString": "undefined",
+    "PHCNTRUST.asn1.DEROctetString": "undefined",
+    "PHCNTRUST.asn1.DERNull": "undefined",
+    "PHCNTRUST.asn1.DERObjectIdentifier": "undefined",
+    "PHCNTRUST.asn1.DERUTF8String": "undefined",
+    "PHCNTRUST.asn1.DERNumericString": "undefined",
+    "PHCNTRUST.asn1.DERPrintableString": "undefined",
+    "wx.getDeviceInfo": "function",
+    "u.isEmptyValue": "undefined",
+    "Z": "undefined",
+    "$gwx_wx1629d117cf9be937": "undefined",
+    "C": "undefined",
+    "wx.requestVirtualPayment": "function",
+    "$gwx_wx6885acbedba59c14": "undefined",
+    "G.currDate": "undefined",
+    "SLConverter.LunarSolarConverter": "undefined",
+    "SL.Lunar": "undefined",
+    "util.getChineseWeekday": "undefined",
+    "SLConverter.Lunar": "undefined",
+    "wx.startAccelerometer": "function",
+    "wx.stopAccelerometer": "function",
+    "currentTime": "undefined",
+    "isRunning": "undefined",
+    "colorIndex": "undefined",
+    "$gwx_wxefa63d84fe9f64a2": "undefined",
+    "n.rebuildUrl": "undefined",
+    "$gwx_wx2b03c6e691cd7370": "undefined",
+    "nv_colFormatVehicleState": "undefined",
+    "nv_colFormatVehicleInfo": "undefined",
+    "nv_showBox": "undefined",
+    "nv_formatVehicleInfo": "undefined",
+    "nv_getTvlWidth": "undefined",
+    "nv_formatColorName": "undefined",
+    "nv_formatStationName": "undefined",
+    "nv_showLine": "undefined",
+    "wx.createInteractiveAd": "undefined",
+    "worker.postMessage": "undefined",
+    "e.request": "undefined",
+    "o.setCache": "undefined",
+    "nodeRequest": "undefined",
+    "n.nodeRequest": "undefined",
+    "n.wxCommonHost": "undefined",
+    "wx_login": "undefined",
+    "o.getThemePrimaryColor": "undefined",
+    "wxCommonHost": "undefined",
+    "t.init": "undefined",
+    "t.getWXContext": "undefined",
+    "wx.cloud.callFunction": "function",
+    "a.icon20": "undefined",
+    "i.icon20": "undefined",
+    "i.icon60": "undefined",
+    "t.computeFinalResults": "undefined",
+    "t.saveHistory": "undefined",
+    "nv_fmt1": "undefined",
+    "nv_fmt2": "undefined",
+    "nv_fmt1.nv_replace": "undefined",
+    "wx.getWeRunData": "function",
+    "wx.createWebViewContext": "undefined",
+    "wx.onMessage": "undefined",
+    "wx.exitMiniProgram": "function",
+    "$gwx_wx6afed118d9e81df9": "undefined",
+    "e.setupWechatPlatform": "undefined",
+    "e.configPlugin": "undefined",
+    "r.fileStorageIO": "undefined",
+    "o.localStorageIO": "undefined",
+    "describe": "undefined",
+    "t.md5": "undefined",
+    "api.loadWeatherData": "undefined",
+    "api.loadCityConf": "undefined",
+    "t.loadWeatherData": "undefined",
+    "t.loadCityConf": "undefined",
+    "$gwx_wx62d350f80724f9b0": "undefined",
+    "log.info": "undefined",
+    "nv_nt_1": "undefined",
+    "$gwx_wxdf01634fc34b7886": "undefined",
+    "t.ajax": "undefined",
+    "Object.is": "function",
+    "e.server_url": "undefined",
+    "nv_textViewInstance.nv_getBoundingClientRect": "undefined",
+    "nv_textViewInstance": "undefined",
+    "$gwx_wx71acb46aa72fff57": "undefined",
+    "e.utils.utf8.toBytes": "undefined",
+    "e.utils.utf8": "undefined",
+    "e.utils": "undefined",
+    "e.ModeOfOperation.cbc": "undefined",
+    "e.ModeOfOperation": "undefined",
+    "e.padding.pkcs7.pad": "undefined",
+    "e.padding.pkcs7": "undefined",
+    "e.padding": "undefined",
+    "Window": "undefined",
+    "worker.onMessage": "undefined",
+    "c.authorization": "undefined",
+    "c.join": "undefined",
+    "c.getUserStatus": "undefined",
+    "c.version": "undefined",
+    "wx.clearStorage": "function",
+    "u": "undefined",
+    "r.request": "undefined",
+    "c.report": "undefined",
+    "wx.MAX_REQUEST_COUNT": "undefined",
+    "a.request": "undefined",
+    "e.login": "undefined",
+    "a.upgrade": "undefined",
+    "e.index": "undefined",
+    "a.report": "undefined",
+    "s.request": "undefined",
+    "t.getuser": "undefined",
+    "t.join": "undefined",
+    "s.report": "undefined",
+    "wx.hideShareMenu": "function",
+    "e.upgrade": "undefined",
+    "e.getDeviceInfo": "undefined",
+    "res.data.data.group_id": "undefined",
+    "t.ranklist": "undefined",
+    "e.getWeRunAuthorization": "undefined",
+    "e.report": "undefined",
+    "e.delWeRunAuthorization": "undefined",
+    "wx.openSetting": "function",
+    "nv_size": "undefined",
+    "nv_style": "undefined",
+    "Type": "undefined",
+    "$gwx_wx63ffb7b7894e99ae": "undefined",
+    "Number.isInteger": "function",
+    "$gwx_wxee969de81bba9a45": "undefined",
+    "$gwx_wxf3f436ba9bd4be7b": "undefined",
+    "wx.getBluetoothDevices": "function",
+    "_require.MINI_PROGRAM_RUNTIME_CONFIG": "undefined",
+    "_require.MINI_PROGRAM_RUNTIME_CONFIG.defaultH5EntryUrl": "undefined",
+    "_require.buildWebViewUrl": "undefined",
+    "_require.DEFAULT_H5_ENTRY_URL": "undefined",
+    "_require2.MINI_PROGRAM_RUNTIME_CONFIG": "undefined",
+    "_require2.MINI_PROGRAM_RUNTIME_CONFIG.defaultH5EntryUrl": "undefined",
+    "Date.nv_parse": "function",
+    "$gwx_wx4a1d9449e295d1a3": "undefined",
+    "data": "undefined",
+    "l.strDiscode": "undefined",
+    "a.url": "undefined",
+    "uni.createInterstitialAd": "undefined",
+    "t.url": "undefined",
+    "tt.data.password": "undefined",
+    "tt.data": "undefined",
+    "tt.data.admin": "undefined",
+    "tt.data.user": "undefined",
+    "tt.onLaunch": "undefined",
+    "$gwx_wx97d76316fee0e8fe": "undefined",
+    "wx.showNavigationBarLoading": "function",
+    "VM2_INTERNAL_STATE_DO_NOT_USE_OR_PROGRAM_WILL_FAIL.handleException": "undefined",
+    "$gwx_wx63d6102e26f0a3f8": "undefined",
+    "r.hasOwnProperty": "undefined",
+    "r.UNKNOW_ERROR": "undefined",
+    "$gwx_wx013447465d3aa024": "undefined",
+    "config.API_BASE_URL": "undefined",
+    "config.WX_APP_ID": "undefined",
+    "b": "undefined",
+    "wx.BaaS.Query": "undefined",
+    "wx.BaaS": "undefined",
+    "wx.BaaS.TableObject": "undefined",
+    "r.strictEqual": "undefined",
+    "n.resolve": "undefined",
+    "__dirname": "undefined",
+    "i.readFileSync": "undefined",
+    "n.join": "undefined",
+    "$gwx_wx610ea582556c983e": "undefined",
+    "close": "undefined",
+    "t.LoginLFanyiLink": "undefined",
+    "o.readdir": "undefined",
+    "s.join": "undefined",
+    "o.stat": "undefined",
+    "o.open": "undefined",
+    "o.readFile": "undefined",
+    "t.resolve": "undefined",
+    "n.lookup": "undefined",
+    "o.close": "undefined",
+    "o.writeFile": "undefined",
+    "Date.prototype.Format": "undefined",
+    "o.isTest": "undefined",
+    "t.http": "undefined",
+    "t.http_form": "undefined",
+    "wx.confirm": "undefined",
+    "cb": "undefined",
+    "t.appId": "undefined",
+    "a.appId": "undefined",
+    "a._getAuthCode": "undefined",
+    "a._getSetting": "undefined",
+    "t.upLoadCode": "undefined",
+    "t.bindUser": "undefined",
+    "a._showToast": "undefined",
+    "a._alert": "undefined",
+    "a._getUserInfo": "undefined",
+    "wx.getAuthCode": "undefined",
+    "a._setStorage": "undefined",
+    "e.getRooms": "undefined",
+    "e.getPassword": "undefined",
+    "o._showToast": "undefined",
+    "o._alert": "undefined",
+    "e.update": "undefined",
+    "o._getAuthCode": "undefined",
+    "e.upLoadCode": "undefined",
+    "e.unBindUser": "undefined",
+    "t.userRegister": "undefined",
+    "t.checkCs": "undefined",
+    "t.getLastRooms": "undefined",
+    "e.getEqlist": "undefined",
+    "e.openEq": "undefined",
+    "n._showToast": "undefined",
+    "t._showToast": "undefined",
+    "n.apiKeys.weather": "undefined",
+    "n.apiKeys": "undefined",
+    "t.off": "undefined",
+    "t.on.apply": "undefined",
+    "t.on": "undefined",
+    "t.release": "undefined",
+    "t.saveState": "undefined",
+    "t.restoreState": "undefined",
+    "t.checkState": "undefined",
+    "r.isHigherVersion": "undefined",
+    "o.buttonClicked": "undefined",
+    "R": "undefined",
+    "p": "undefined",
+    "root._": "undefined",
+    "Crypto": "undefined",
+    "e.MD5": "undefined",
+    "_type": "undefined",
+    "o.login": "undefined",
+    "o.checkLogin": "undefined",
+    "__VUE_SSR_CONTEXT__": "undefined",
+    "eval": "undefined",
+    "DEBUG": "undefined",
+    "_array_like_to_array._": "undefined",
+    "_define_property._": "undefined",
+    "_array_with_holes._": "undefined",
+    "_iterable_to_array_limit._": "undefined",
+    "_unsupported_iterable_to_array._": "undefined",
+    "_non_iterable_rest._": "undefined",
+    "_array_without_holes._": "undefined",
+    "_iterable_to_array._": "undefined",
+    "_non_iterable_spread._": "undefined",
+    "o.Base": "undefined",
+    "e.$wuxToast.show": "undefined",
+    "e.$wuxToast": "undefined",
+    "e.toast": "undefined",
+    "e.openCamera": "undefined",
+    "HmacSHA1": "undefined",
+    "wx.getNetworkType": "function",
+    "t.wxUpload": "undefined",
+    "t.wxGet": "undefined",
+    "isCall": "undefined",
+    "e.formatScore": "undefined",
+    "t.toast": "undefined",
+    "e.wxGet": "undefined",
+    "_typeof3": "undefined",
+    "wx.onNetworkStatusChange": "function",
+    "Object.assign.bind": "function",
+    "FileReader": "undefined",
+    "constructor": "function",
+    "getItem": "undefined",
+    "setItem": "undefined",
+    "x.system.WsSystemReadyRequest": "undefined",
+    "x.system": "undefined",
+    "x.system.WsSystemReadyResponse": "undefined",
+    "$gwx_wx12cec70855c0cacf": "undefined",
+    "CONFIG.API_URL.BASE_URL": "undefined",
+    "CONFIG.API_URL": "undefined",
+    "$gwx_wx80b5f24d05ef8e63": "undefined",
+    "DIMOND_SERVER_DOMAIN": "undefined",
+    "n.Session.get": "undefined",
+    "n.Session": "undefined",
+    "Error.call": "function",
+    "noop": "undefined",
+    "n.cacheMiguToken.get": "undefined",
+    "n.cacheMiguToken": "undefined",
+    "n.cacheMiguToken.clear": "undefined",
+    "n.cacheUserInfo.get": "undefined",
+    "n.cacheUserInfo": "undefined",
+    "n.clearCache": "undefined",
+    "s.DIMOND_SERVER_DOMAIN": "undefined",
+    "t.setLoginUrl": "undefined",
+    "t.setSourceId": "undefined",
+    "t.login": "undefined",
+    "n.cacheUserInfo.set": "undefined",
+    "n.Session.set": "undefined",
+    "n.cacheMiguToken.set": "undefined",
+    "o.encrypt": "undefined",
+    "NaN": "number",
+    "String.prototype.charCodeAt.call": "function",
+    "Error.captureStackTrace": "function",
+    "Error.prototype": "object",
+    "window": "object",
+    "self": "object",
+    "Error.apply": "function",
+    "AES_set_key": "undefined",
+    "AES_CTR_set_options": "undefined",
+    "AES_set_iv": "undefined",
+    "AES_set_padding": "undefined",
+    "AES_reset": "undefined",
+    "AES_Encrypt_process": "undefined",
+    "AES_Encrypt_finish": "undefined",
+    "AES_Decrypt_process": "undefined",
+    "AES_Decrypt_finish": "undefined",
+    "encrypt": "undefined",
+    "decrypt": "undefined",
+    "SyntaxError": "function",
+    "String.fromCodePoint": "function",
+    "BigInt": "function",
+    "Uint8Array.prototype.indexOf": "function",
+    "Uint8Array.prototype.indexOf.call": "function",
+    "Uint8Array.prototype.lastIndexOf.call": "function",
+    "Uint8Array.prototype.lastIndexOf": "function",
+    "Symbol.species": "symbol",
+    "Uint8Array.prototype.set.call": "function",
+    "Uint8Array.prototype.set": "function",
+    "Reflect.decorate": "undefined",
+    "Reflect.metadata": "undefined",
+    "Iterator": "function",
+    "Symbol.asyncIterator": "symbol",
+    "AsyncIterator": "undefined",
+    "Symbol.asyncDispose": "symbol",
+    "Symbol.dispose": "symbol",
+    "SuppressedError": "function",
+    "crypto": "undefined",
+    "$gwx_wx4418e3e031e551be": "undefined",
+    "_classCallCheck2": "undefined",
+    "_createClass2": "undefined",
+    "_utils.showDeprecatedTips": "undefined",
+    "msg": "undefined",
+    "_constants.CERTIFICATE_TYPE.filter": "undefined",
+    "_constants.CERTIFICATE_TYPE": "undefined",
+    "e.detail.authSetting.scope.camera": "undefined",
+    "_chooseImage.takePhoto": "undefined",
+    "res": "undefined",
+    "wx.onBLECharacteristicValueChange": "function",
+    "words": "undefined",
+    "$gwx_wx9acc1deb2cb15bba": "undefined",
+    "Symbol.for": "function",
+    "r.colors.forEach": "undefined",
+    "r.colors": "undefined",
+    "r.BUNDLED_SBTI_SNAPSHOT.dimensionMeta": "undefined",
+    "r.BUNDLED_SBTI_SNAPSHOT": "undefined",
+    "r.BUNDLED_SBTI_SNAPSHOT.DIM_EXPLANATIONS": "undefined",
+    "r.BUNDLED_SBTI_SNAPSHOT.questions": "undefined",
+    "r.BUNDLED_SBTI_SNAPSHOT.TYPE_LIBRARY": "undefined",
+    "r.BUNDLED_SBTI_SNAPSHOT.NORMAL_TYPES": "undefined",
+    "r.BUNDLED_SBTI_SNAPSHOT.dimensionOrder": "undefined",
+    "r.BUNDLED_SBTI_SNAPSHOT.DRUNK_TRIGGER_QUESTION_ID": "undefined",
+    "r.BUNDLED_SBTI_SNAPSHOT.dimensionOrder.forEach": "undefined",
+    "r.BUNDLED_SBTI_SNAPSHOT.questions.forEach": "undefined",
+    "r.BUNDLED_SBTI_SNAPSHOT.dimensionOrder.map": "undefined",
+    "r.BUNDLED_SBTI_SNAPSHOT.NORMAL_TYPES.map": "undefined",
+    "themeListeners.forEach": "undefined",
+    "themeListeners.indexOf": "undefined",
+    "themeListeners.push": "undefined",
+    "themeListeners.splice": "undefined",
+    "WXEnvironment": "undefined",
+    "WXEnvironment.platform": "undefined",
+    "WXEnvironment.platform.toLowerCase": "undefined",
+    "wx.getStorageInfo": "function",
+    "app": "undefined",
+    "app.globalData.historyList": "undefined",
+    "app.globalData": "undefined",
+    "song.Id": "undefined",
+    "index": "undefined",
+    "array.splice": "undefined",
+    "e.get": "undefined",
+    "e.set": "undefined",
+    "e.SERVICE_HOST": "undefined",
+    "D.app_key.replace": "undefined",
+    "D.app_key": "undefined",
+    "D.useOpen": "undefined",
+    "wx.Queue.push": "undefined",
+    "wx.Queue": "undefined",
+    "nt_17": "undefined",
+    "wx.hideNavigationBarLoading": "function",
+    "my.getAuthCode": "undefined",
+    "wx.showRedPackage": "function",
+    "Math.nv_cos": "function",
+    "Math.nv_sin": "function",
+    "Math.nv_tan": "function",
+    "$gwx_wx308bd2aeb83d3345": "undefined",
+    "a.getData": "undefined",
+    "a.setData": "undefined",
+    "Buffer.alloc": "undefined",
+    "Buffer.isBuffer": "undefined",
+    "nt_19": "undefined",
+    "nv_const": "undefined",
+    "nv_address": "undefined",
+    "nv_v": "undefined",
+    "filterCode": "undefined",
+    "filterCode.0": "undefined",
+    "filterCode.1": "undefined",
+    "filterCode.2": "undefined",
+    "filterCode.3": "undefined",
+    "filterCode.4": "undefined",
+    "t.queryRouteList": "undefined",
+    "i.prcTripList": "undefined",
+    "e.load": "undefined",
+    "util.uploadError": "undefined",
+    "o.html2json": "undefined",
+    "e.Promise": "undefined",
+    "ios": "undefined",
+    "$gwx_wx032b78128e980502": "undefined",
+    "String.prototype.isPhone": "undefined",
+    "String.prototype.toTime": "undefined",
+    "Blob": "undefined",
+    "r.px": "undefined",
+    "r.app": "undefined",
+    "r.app.urls.bodyExamReport": "undefined",
+    "r.app.urls": "undefined",
+    "r.app.urls.bodyExamById": "undefined",
+    "active": "undefined",
+    "run": "undefined",
+    "on": "undefined",
+    "off": "undefined",
+    "stop": "undefined",
+    "nv_window.nv_onmousemove": "undefined",
+    "nv_window.nv_onmouseup": "undefined",
+    "e.isNotNull": "undefined",
+    "t.formatTimeFromStr": "undefined",
+    "t.isNotNull": "undefined",
+    "$gwx_wx70d57361939e63ef": "undefined",
+    "i.createStatis": "undefined",
+    "d.setDebug": "undefined",
+    "t.log": "undefined",
+    "i.log": "undefined",
+    "default.hex_sha1": "undefined",
+    "t.ExposureTimes": "undefined",
+    "t.FilterPositions": "undefined",
+    "t.FilterPositions.ND1024": "undefined",
+    "t.BasicShutters": "undefined",
+    "t.BasicShutters.1/3": "undefined",
+    "t.ExposureCalc": "undefined",
+    "t.TrueTimeFilter": "undefined",
+    "t.BasicShutters.1/3.length": "undefined",
+    "t.Results": "undefined",
+    "e.versionCompare": "undefined",
+    "r.secondsToTime": "undefined",
+    "r.secondsToPace": "undefined",
+    "o.zipSync": "undefined",
+    "o.unzipSync": "undefined",
+    "wx.reportAnalytics": "function",
+    "Observer": "undefined",
+    "onHide": "undefined",
+    "onHide.apply": "undefined",
+    "$gwx_wx69b7451feb427f0e": "undefined",
+    "result.errMsg": "undefined",
+    "$gwx_wxaae6519cee98d824": "undefined",
+    "e.getStorage": "undefined",
+    "e.setStorage": "undefined",
+    "e.navigateToMiniProgram": "undefined",
+    "$gwx_wxbc055599e4059c9f": "undefined",
+    "$gwx_wx5fcce12afdff9918": "undefined",
+    "wx.loadSubpackage": "undefined",
+    "wx.createImage": "undefined",
+    "wx.__first__canvas.width": "undefined",
+    "wx.__first__canvas": "undefined",
+    "wx.__first__canvas.height": "undefined",
+    "wx.__first__canvas.getContext": "undefined",
+    "GameGlobal": "undefined",
+    "wx.createCanvas": "undefined",
+    "loader.loadEngine": "undefined",
+    "first_scene.drawImg": "undefined",
+    "wx.isGl": "undefined",
+    "gl": "undefined",
+    "requestAnimationFrame": "function",
+    "globalThis.tt": "undefined",
+    "globalThis.ks": "undefined",
+    "globalThis.wx": "object",
+    "n.sm2": "undefined",
+    "t.getApplyDataImp": "undefined",
+    "t.getReqQRCodeDataImp": "undefined",
+    "t.getAuthQRCodeDataImp": "undefined",
+    "e.getAuthCodeDataImp": "undefined",
+    "i.getVersionCode": "undefined",
+    "r.getCodeNum": "undefined",
+    "e.getAuthIDCardDataImp": "undefined",
+    "e.getEnrollmentIDCardDataImp": "undefined",
+    "s.getDeviceId": "undefined",
+    "u.getBusinessInfo": "undefined",
+    "nv_owner.nv_callMethod": "undefined",
+    "t.bmiData": "undefined",
+    "t.bmiData.boy.findIndex": "undefined",
+    "t.bmiData.boy": "undefined",
+    "t.bmiData.girl.findIndex": "undefined",
+    "t.bmiData.girl": "undefined"
+  }
+}

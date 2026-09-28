@@ -1,0 +1,882 @@
+{
+  "generatedAt": "2026-09-24T07:24:30.709Z",
+  "referenceVersion": "differential-reference-v1",
+  "environment": {
+    "node": "v24.21.0",
+    "browserPath": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+    "browserVersion": {
+      "product": "Edg/150.0.4078.83",
+      "revision": "@7f302606e52ab615d52e1a0ab89ca415c8c843a3",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0",
+      "protocolVersion": "1.3"
+    },
+    "wechatReportPath": "E:\\读论文\\R97\\datasets\\wechat-live\\wechat-probe-report.json"
+  },
+  "caseCount": 16,
+  "runtimeAvailability": {
+    "language": true,
+    "node": true,
+    "edge": true,
+    "wechat": false
+  },
+  "byReferenceState": {
+    "REFERENCE_ALLOW_FOLD": 7,
+    "REFERENCE_BLOCK_FOLD": 6,
+    "REFERENCE_UNVERIFIED": 3
+  },
+  "results": [
+    {
+      "caseId": "language-object-keys",
+      "category": "language",
+      "source": "Object.keys({ value: 1 });",
+      "requiredRuntimes": [
+        "language",
+        "node",
+        "edge"
+      ],
+      "referenceState": "REFERENCE_ALLOW_FOLD",
+      "reason": "All required runtime observations are equivalent.",
+      "observations": {
+        "language": {
+          "status": "observed",
+          "outcome": "value",
+          "result": {
+            "kind": "array",
+            "length": 1,
+            "items": [
+              {
+                "kind": "string",
+                "value": "value"
+              }
+            ]
+          }
+        },
+        "node": {
+          "status": "observed",
+          "outcome": "value",
+          "result": {
+            "kind": "array",
+            "length": 1,
+            "items": [
+              {
+                "kind": "string",
+                "value": "value"
+              }
+            ]
+          }
+        },
+        "edge": {
+          "status": "observed",
+          "outcome": "value",
+          "result": {
+            "kind": "array",
+            "length": 1,
+            "items": [
+              {
+                "kind": "string",
+                "value": "value"
+              }
+            ]
+          }
+        }
+      },
+      "signature": "{\"kind\":\"array\",\"length\":1,\"items\":[{\"kind\":\"string\",\"value\":\"value\"}]}",
+      "r97": {
+        "knowledgeStates": [
+          "FOLD"
+        ],
+        "action": "ALLOW_FOLD",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ]
+      }
+    },
+    {
+      "caseId": "language-array-is-array",
+      "category": "language",
+      "source": "Array.isArray([1, 2, 3]);",
+      "requiredRuntimes": [
+        "language",
+        "node",
+        "edge"
+      ],
+      "referenceState": "REFERENCE_ALLOW_FOLD",
+      "reason": "All required runtime observations are equivalent.",
+      "observations": {
+        "language": {
+          "status": "observed",
+          "outcome": "value",
+          "result": {
+            "kind": "boolean",
+            "value": true
+          }
+        },
+        "node": {
+          "status": "observed",
+          "outcome": "value",
+          "result": {
+            "kind": "boolean",
+            "value": true
+          }
+        },
+        "edge": {
+          "status": "observed",
+          "outcome": "value",
+          "result": {
+            "kind": "boolean",
+            "value": true
+          }
+        }
+      },
+      "signature": "{\"kind\":\"boolean\",\"value\":true}",
+      "r97": {
+        "knowledgeStates": [
+          "FOLD"
+        ],
+        "action": "ALLOW_FOLD",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ]
+      }
+    },
+    {
+      "caseId": "language-json-parse",
+      "category": "language",
+      "source": "JSON.parse('{\"value\":1}');",
+      "requiredRuntimes": [
+        "language",
+        "node",
+        "edge"
+      ],
+      "referenceState": "REFERENCE_ALLOW_FOLD",
+      "reason": "All required runtime observations are equivalent.",
+      "observations": {
+        "language": {
+          "status": "observed",
+          "outcome": "value",
+          "result": {
+            "kind": "object",
+            "tag": "[object Object]",
+            "constructorName": "Object",
+            "keys": [
+              "value"
+            ],
+            "values": {
+              "value": {
+                "kind": "number",
+                "value": 1
+              }
+            }
+          }
+        },
+        "node": {
+          "status": "observed",
+          "outcome": "value",
+          "result": {
+            "kind": "object",
+            "tag": "[object Object]",
+            "constructorName": "Object",
+            "keys": [
+              "value"
+            ],
+            "values": {
+              "value": {
+                "kind": "number",
+                "value": 1
+              }
+            }
+          }
+        },
+        "edge": {
+          "status": "observed",
+          "outcome": "value",
+          "result": {
+            "kind": "object",
+            "tag": "[object Object]",
+            "constructorName": "Object",
+            "keys": [
+              "value"
+            ],
+            "values": {
+              "value": {
+                "kind": "number",
+                "value": 1
+              }
+            }
+          }
+        }
+      },
+      "signature": "{\"kind\":\"object\",\"tag\":\"[object Object]\",\"constructorName\":\"Object\",\"keys\":[\"value\"],\"values\":{\"value\":{\"kind\":\"number\",\"value\":1}}}",
+      "r97": {
+        "knowledgeStates": [
+          "FOLD"
+        ],
+        "action": "ALLOW_FOLD",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ]
+      }
+    },
+    {
+      "caseId": "language-math-max",
+      "category": "language",
+      "source": "Math.max(1, 2, 3);",
+      "requiredRuntimes": [
+        "language",
+        "node",
+        "edge"
+      ],
+      "referenceState": "REFERENCE_ALLOW_FOLD",
+      "reason": "All required runtime observations are equivalent.",
+      "observations": {
+        "language": {
+          "status": "observed",
+          "outcome": "value",
+          "result": {
+            "kind": "number",
+            "value": 3
+          }
+        },
+        "node": {
+          "status": "observed",
+          "outcome": "value",
+          "result": {
+            "kind": "number",
+            "value": 3
+          }
+        },
+        "edge": {
+          "status": "observed",
+          "outcome": "value",
+          "result": {
+            "kind": "number",
+            "value": 3
+          }
+        }
+      },
+      "signature": "{\"kind\":\"number\",\"value\":3}",
+      "r97": {
+        "knowledgeStates": [
+          "FOLD"
+        ],
+        "action": "ALLOW_FOLD",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ]
+      }
+    },
+    {
+      "caseId": "language-string-normalize",
+      "category": "language",
+      "source": "String(\"cafe\\u0301\").normalize(\"NFC\");",
+      "requiredRuntimes": [
+        "language",
+        "node",
+        "edge"
+      ],
+      "referenceState": "REFERENCE_ALLOW_FOLD",
+      "reason": "All required runtime observations are equivalent.",
+      "observations": {
+        "language": {
+          "status": "observed",
+          "outcome": "value",
+          "result": {
+            "kind": "string",
+            "value": "café"
+          }
+        },
+        "node": {
+          "status": "observed",
+          "outcome": "value",
+          "result": {
+            "kind": "string",
+            "value": "café"
+          }
+        },
+        "edge": {
+          "status": "observed",
+          "outcome": "value",
+          "result": {
+            "kind": "string",
+            "value": "café"
+          }
+        }
+      },
+      "signature": "{\"kind\":\"string\",\"value\":\"café\"}",
+      "r97": {
+        "knowledgeStates": [
+          "UNKNOWN"
+        ],
+        "action": "BLOCK_FOLD",
+        "reasonCodes": [
+          "CONTRACT_COVERAGE_MISSING"
+        ]
+      }
+    },
+    {
+      "caseId": "language-json-parse-error",
+      "category": "language",
+      "source": "JSON.parse('{');",
+      "requiredRuntimes": [
+        "language",
+        "node",
+        "edge"
+      ],
+      "referenceState": "REFERENCE_ALLOW_FOLD",
+      "reason": "All required runtime observations are equivalent.",
+      "observations": {
+        "language": {
+          "status": "observed",
+          "outcome": "exception",
+          "errorName": "SyntaxError",
+          "errorMessage": "Expected property name or '}' in JSON at position 1 (line 1 column 2)",
+          "result": {
+            "kind": "exception",
+            "name": "SyntaxError"
+          }
+        },
+        "node": {
+          "status": "observed",
+          "outcome": "exception",
+          "errorName": "SyntaxError",
+          "errorMessage": "Expected property name or '}' in JSON at position 1 (line 1 column 2)",
+          "result": {
+            "kind": "exception",
+            "name": "SyntaxError"
+          }
+        },
+        "edge": {
+          "status": "observed",
+          "outcome": "exception",
+          "errorName": "SyntaxError",
+          "errorMessage": "Expected property name or '}' in JSON at position 1 (line 1 column 2)",
+          "result": {
+            "kind": "exception",
+            "name": "SyntaxError"
+          }
+        }
+      },
+      "signature": "{\"kind\":\"exception\",\"name\":\"SyntaxError\"}",
+      "r97": {
+        "knowledgeStates": [
+          "FOLD"
+        ],
+        "action": "ALLOW_FOLD",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ]
+      }
+    },
+    {
+      "caseId": "language-missing-property",
+      "category": "language",
+      "source": "globalThis.__r97_missing__.value;",
+      "requiredRuntimes": [
+        "language",
+        "node",
+        "edge"
+      ],
+      "referenceState": "REFERENCE_ALLOW_FOLD",
+      "reason": "All required runtime observations are equivalent.",
+      "observations": {
+        "language": {
+          "status": "observed",
+          "outcome": "exception",
+          "errorName": "TypeError",
+          "errorMessage": "Cannot read properties of undefined (reading 'value')",
+          "result": {
+            "kind": "exception",
+            "name": "TypeError"
+          }
+        },
+        "node": {
+          "status": "observed",
+          "outcome": "exception",
+          "errorName": "TypeError",
+          "errorMessage": "Cannot read properties of undefined (reading 'value')",
+          "result": {
+            "kind": "exception",
+            "name": "TypeError"
+          }
+        },
+        "edge": {
+          "status": "observed",
+          "outcome": "exception",
+          "errorName": "TypeError",
+          "errorMessage": "Cannot read properties of undefined (reading 'value')",
+          "result": {
+            "kind": "exception",
+            "name": "TypeError"
+          }
+        }
+      },
+      "signature": "{\"kind\":\"exception\",\"name\":\"TypeError\"}",
+      "r97": {
+        "knowledgeStates": [
+          "FOLD"
+        ],
+        "action": "ALLOW_FOLD",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ]
+      }
+    },
+    {
+      "caseId": "node-process-version",
+      "category": "node",
+      "source": "process.version;",
+      "requiredRuntimes": [
+        "language",
+        "node",
+        "edge"
+      ],
+      "referenceState": "REFERENCE_BLOCK_FOLD",
+      "reason": "Runtime observations differ: node",
+      "observations": {
+        "language": {
+          "status": "observed",
+          "outcome": "exception",
+          "errorName": "ReferenceError",
+          "errorMessage": "process is not defined",
+          "result": {
+            "kind": "exception",
+            "name": "ReferenceError"
+          }
+        },
+        "node": {
+          "status": "observed",
+          "outcome": "value",
+          "result": {
+            "kind": "string",
+            "value": "v24.21.0"
+          }
+        },
+        "edge": {
+          "status": "observed",
+          "outcome": "exception",
+          "errorName": "ReferenceError",
+          "errorMessage": "process is not defined",
+          "result": {
+            "kind": "exception",
+            "name": "ReferenceError"
+          }
+        }
+      },
+      "signature": "{\"kind\":\"exception\",\"name\":\"ReferenceError\"}",
+      "r97": {
+        "knowledgeStates": [
+          "PROTECT"
+        ],
+        "action": "BLOCK_FOLD",
+        "reasonCodes": [
+          "CONTRACT_MISMATCH",
+          "ALL_TARGETS_MATCH"
+        ]
+      }
+    },
+    {
+      "caseId": "node-buffer-hex",
+      "category": "node",
+      "source": "Buffer.from(\"abc\").toString(\"hex\");",
+      "requiredRuntimes": [
+        "language",
+        "node",
+        "edge"
+      ],
+      "referenceState": "REFERENCE_BLOCK_FOLD",
+      "reason": "Runtime observations differ: node",
+      "observations": {
+        "language": {
+          "status": "observed",
+          "outcome": "exception",
+          "errorName": "ReferenceError",
+          "errorMessage": "Buffer is not defined",
+          "result": {
+            "kind": "exception",
+            "name": "ReferenceError"
+          }
+        },
+        "node": {
+          "status": "observed",
+          "outcome": "value",
+          "result": {
+            "kind": "string",
+            "value": "616263"
+          }
+        },
+        "edge": {
+          "status": "observed",
+          "outcome": "exception",
+          "errorName": "ReferenceError",
+          "errorMessage": "Buffer is not defined",
+          "result": {
+            "kind": "exception",
+            "name": "ReferenceError"
+          }
+        }
+      },
+      "signature": "{\"kind\":\"exception\",\"name\":\"ReferenceError\"}",
+      "r97": {
+        "knowledgeStates": [
+          "PROTECT"
+        ],
+        "action": "BLOCK_FOLD",
+        "reasonCodes": [
+          "CONTRACT_MISMATCH",
+          "CONTRACT_COVERAGE_MISSING"
+        ]
+      }
+    },
+    {
+      "caseId": "browser-window-document",
+      "category": "browser",
+      "source": "window.document;",
+      "requiredRuntimes": [
+        "language",
+        "node",
+        "edge"
+      ],
+      "referenceState": "REFERENCE_BLOCK_FOLD",
+      "reason": "Runtime observations differ: edge",
+      "observations": {
+        "language": {
+          "status": "observed",
+          "outcome": "exception",
+          "errorName": "ReferenceError",
+          "errorMessage": "window is not defined",
+          "result": {
+            "kind": "exception",
+            "name": "ReferenceError"
+          }
+        },
+        "node": {
+          "status": "observed",
+          "outcome": "exception",
+          "errorName": "ReferenceError",
+          "errorMessage": "window is not defined",
+          "result": {
+            "kind": "exception",
+            "name": "ReferenceError"
+          }
+        },
+        "edge": {
+          "status": "observed",
+          "outcome": "value",
+          "result": {
+            "kind": "object",
+            "tag": "[object HTMLDocument]",
+            "constructorName": "HTMLDocument",
+            "keys": [
+              "location"
+            ],
+            "values": null
+          }
+        }
+      },
+      "signature": "{\"kind\":\"exception\",\"name\":\"ReferenceError\"}",
+      "r97": {
+        "knowledgeStates": [
+          "PROTECT"
+        ],
+        "action": "BLOCK_FOLD",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ]
+      }
+    },
+    {
+      "caseId": "browser-local-storage",
+      "category": "browser",
+      "source": "localStorage.getItem(\"r97-key\");",
+      "requiredRuntimes": [
+        "language",
+        "node",
+        "edge"
+      ],
+      "referenceState": "REFERENCE_BLOCK_FOLD",
+      "reason": "Runtime observations differ: edge",
+      "observations": {
+        "language": {
+          "status": "observed",
+          "outcome": "exception",
+          "errorName": "ReferenceError",
+          "errorMessage": "localStorage is not defined",
+          "result": {
+            "kind": "exception",
+            "name": "ReferenceError"
+          }
+        },
+        "node": {
+          "status": "observed",
+          "outcome": "exception",
+          "errorName": "ReferenceError",
+          "errorMessage": "localStorage is not defined",
+          "result": {
+            "kind": "exception",
+            "name": "ReferenceError"
+          }
+        },
+        "edge": {
+          "status": "observed",
+          "outcome": "exception",
+          "errorName": "SecurityError",
+          "errorMessage": "Failed to read the 'localStorage' property from 'Window': Access is denied for this document.",
+          "result": {
+            "kind": "exception",
+            "name": "SecurityError"
+          }
+        }
+      },
+      "signature": "{\"kind\":\"exception\",\"name\":\"ReferenceError\"}",
+      "r97": {
+        "knowledgeStates": [
+          "PROTECT"
+        ],
+        "action": "BLOCK_FOLD",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ]
+      }
+    },
+    {
+      "caseId": "browser-navigator-user-agent",
+      "category": "browser",
+      "source": "navigator.userAgent;",
+      "requiredRuntimes": [
+        "language",
+        "node",
+        "edge"
+      ],
+      "referenceState": "REFERENCE_BLOCK_FOLD",
+      "reason": "Runtime observations differ: node, edge",
+      "observations": {
+        "language": {
+          "status": "observed",
+          "outcome": "exception",
+          "errorName": "ReferenceError",
+          "errorMessage": "navigator is not defined",
+          "result": {
+            "kind": "exception",
+            "name": "ReferenceError"
+          }
+        },
+        "node": {
+          "status": "observed",
+          "outcome": "value",
+          "result": {
+            "kind": "string",
+            "value": "Node.js/24"
+          }
+        },
+        "edge": {
+          "status": "observed",
+          "outcome": "value",
+          "result": {
+            "kind": "string",
+            "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0"
+          }
+        }
+      },
+      "signature": "{\"kind\":\"exception\",\"name\":\"ReferenceError\"}",
+      "r97": {
+        "knowledgeStates": [
+          "PROTECT"
+        ],
+        "action": "BLOCK_FOLD",
+        "reasonCodes": [
+          "CONTRACT_MISMATCH"
+        ]
+      }
+    },
+    {
+      "caseId": "host-timer-type",
+      "category": "host_global",
+      "source": "typeof setTimeout;",
+      "requiredRuntimes": [
+        "language",
+        "node",
+        "edge"
+      ],
+      "referenceState": "REFERENCE_BLOCK_FOLD",
+      "reason": "Runtime observations differ: node, edge",
+      "observations": {
+        "language": {
+          "status": "observed",
+          "outcome": "value",
+          "result": {
+            "kind": "string",
+            "value": "undefined"
+          }
+        },
+        "node": {
+          "status": "observed",
+          "outcome": "value",
+          "result": {
+            "kind": "string",
+            "value": "function"
+          }
+        },
+        "edge": {
+          "status": "observed",
+          "outcome": "value",
+          "result": {
+            "kind": "string",
+            "value": "function"
+          }
+        }
+      },
+      "signature": "{\"kind\":\"string\",\"value\":\"undefined\"}",
+      "r97": {
+        "knowledgeStates": [
+          "PROTECT"
+        ],
+        "action": "BLOCK_FOLD",
+        "reasonCodes": [
+          "CONTRACT_MISMATCH"
+        ]
+      }
+    },
+    {
+      "caseId": "unverified-network-fetch",
+      "category": "side_effect",
+      "source": "fetch(\"https://example.invalid\");",
+      "requiredRuntimes": [
+        "language",
+        "node",
+        "edge"
+      ],
+      "referenceState": "REFERENCE_UNVERIFIED",
+      "reason": "存在网络副作用，受控差分器不会执行该表达式",
+      "observations": {
+        "language": {
+          "status": "skipped",
+          "reason": "存在网络副作用，受控差分器不会执行该表达式"
+        },
+        "node": {
+          "status": "skipped",
+          "reason": "存在网络副作用，受控差分器不会执行该表达式"
+        },
+        "edge": {
+          "status": "skipped",
+          "reason": "存在网络副作用，受控差分器不会执行该表达式"
+        }
+      },
+      "signature": null,
+      "r97": {
+        "knowledgeStates": [
+          "PROTECT"
+        ],
+        "action": "BLOCK_FOLD",
+        "reasonCodes": [
+          "CONTRACT_MISMATCH"
+        ]
+      }
+    },
+    {
+      "caseId": "unverified-wechat-request",
+      "category": "wechat",
+      "source": "wx.request({ url: \"https://example.invalid\" });",
+      "requiredRuntimes": [
+        "language",
+        "node",
+        "edge",
+        "wechat"
+      ],
+      "referenceState": "REFERENCE_UNVERIFIED",
+      "reason": "缺少可执行的真实微信运行时，不能伪造微信调用结果",
+      "observations": {
+        "language": {
+          "status": "skipped",
+          "reason": "缺少可执行的真实微信运行时，不能伪造微信调用结果"
+        },
+        "node": {
+          "status": "skipped",
+          "reason": "缺少可执行的真实微信运行时，不能伪造微信调用结果"
+        },
+        "edge": {
+          "status": "skipped",
+          "reason": "缺少可执行的真实微信运行时，不能伪造微信调用结果"
+        },
+        "wechat": {
+          "status": "skipped",
+          "reason": "缺少可执行的真实微信运行时，不能伪造微信调用结果"
+        }
+      },
+      "signature": null,
+      "r97": {
+        "knowledgeStates": [
+          "PROTECT"
+        ],
+        "action": "BLOCK_FOLD",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ]
+      }
+    },
+    {
+      "caseId": "unverified-dynamic-property",
+      "category": "dynamic",
+      "source": "globalThis[globalThis.__r97_key__]();",
+      "requiredRuntimes": [
+        "language",
+        "node",
+        "edge"
+      ],
+      "referenceState": "REFERENCE_UNVERIFIED",
+      "reason": "动态属性无法在执行前确定目标，可能触发任意宿主 API",
+      "observations": {
+        "language": {
+          "status": "skipped",
+          "reason": "动态属性无法在执行前确定目标，可能触发任意宿主 API"
+        },
+        "node": {
+          "status": "skipped",
+          "reason": "动态属性无法在执行前确定目标，可能触发任意宿主 API"
+        },
+        "edge": {
+          "status": "skipped",
+          "reason": "动态属性无法在执行前确定目标，可能触发任意宿主 API"
+        }
+      },
+      "signature": null,
+      "r97": {
+        "knowledgeStates": [
+          "UNKNOWN",
+          "FOLD"
+        ],
+        "action": "BLOCK_FOLD",
+        "reasonCodes": [
+          "BINDING_UNRESOLVED",
+          "ALL_TARGETS_MATCH"
+        ]
+      }
+    }
+  ],
+  "r97Comparison": {
+    "availability": {
+      "language": true,
+      "node": true,
+      "edge": true,
+      "wechat": true,
+      "browserVersion": {
+        "product": "Edg/150.0.4078.83",
+        "revision": "@7f302606e52ab615d52e1a0ab89ca415c8c843a3",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0",
+        "protocolVersion": "1.3"
+      },
+      "wechatSdkVersion": "3.17.3"
+    },
+    "metrics": {
+      "comparable": 13,
+      "referenceAllowAndR97Allow": 6,
+      "referenceBlockAndR97Block": 6,
+      "referenceAllowButR97Block": 1,
+      "referenceBlockButR97Allow": 0,
+      "referenceUnverified": 3
+    },
+    "error": null
+  }
+}

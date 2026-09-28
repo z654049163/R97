@@ -1,0 +1,3257 @@
+{
+  "generatedAt": "2026-09-24T12:34:54.106Z",
+  "candidateCount": 230,
+  "checkedCount": 230,
+  "realMiniappCount": 30,
+  "realMiniapps": [
+    {
+      "fullName": "wuba/wwto",
+      "hits": 8,
+      "fileCount": 691,
+      "appJsonPaths": [
+        "demo/miniprogram-demo/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "demo/miniprogram-demo/page/API/pages/worker/worker.js",
+        "demo/miniprogram-demo/page/API/pages/worker/worker.json",
+        "demo/miniprogram-demo/page/API/pages/worker/worker.wxml",
+        "demo/miniprogram-demo/page/API/pages/worker/worker.wxss",
+        "demo/miniprogram-demo/workers/fib/index.js"
+      ],
+      "workerPathCount": 5,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "i7soft/new-best",
+      "hits": 4,
+      "fileCount": 639,
+      "appJsonPaths": [
+        "source/App/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "source/App/pages/test/framework/worker/pages/index/index.js",
+        "source/App/pages/test/framework/worker/pages/index/index.json",
+        "source/App/pages/test/framework/worker/pages/index/index.wxml",
+        "source/App/pages/test/framework/worker/pages/index/index.wxss",
+        "source/App/pages/test/framework/worker/pages/logs/logs.js",
+        "source/App/pages/test/framework/worker/pages/logs/logs.json",
+        "source/App/pages/test/framework/worker/pages/logs/logs.wxml",
+        "source/App/pages/test/framework/worker/pages/logs/logs.wxss",
+        "source/App/pages/test/framework/worker/utils/util.js",
+        "source/App/pages/test/framework/worker/workers/request/index2.js"
+      ],
+      "workerPathCount": 12,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "Siubaak/qtimer",
+      "hits": 3,
+      "fileCount": 107,
+      "appJsonPaths": [
+        "app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "workers/hotload.js",
+        "workers/interpreter/index.js",
+        "workers/interpreter/init.js",
+        "workers/interpreter/sval.min.js"
+      ],
+      "workerPathCount": 4,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "jgbjs/jgb-transform",
+      "hits": 3,
+      "fileCount": 1093,
+      "appJsonPaths": [
+        "examples/wx2aliapp/src/app.json",
+        "examples/wx2swan/src/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "examples/wx2aliapp/src/page/API/pages/worker/worker.js",
+        "examples/wx2aliapp/src/page/API/pages/worker/worker.json",
+        "examples/wx2aliapp/src/page/API/pages/worker/worker.wxml",
+        "examples/wx2aliapp/src/page/API/pages/worker/worker.wxss",
+        "examples/wx2aliapp/src/workers/fib/index.js",
+        "examples/wx2swan/src/page/API/pages/worker/worker.js",
+        "examples/wx2swan/src/page/API/pages/worker/worker.json",
+        "examples/wx2swan/src/page/API/pages/worker/worker.wxml",
+        "examples/wx2swan/src/page/API/pages/worker/worker.wxss",
+        "examples/wx2swan/src/workers/fib/index.js"
+      ],
+      "workerPathCount": 10,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "sanyuered/WeChat-MiniProgram-WebAR",
+      "hits": 2,
+      "fileCount": 116,
+      "appJsonPaths": [
+        "app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "workers/ImageTracker.js",
+        "workers/imageBusiness.js",
+        "workers/jsfeat.js",
+        "workers/tracking.js",
+        "workers/workerResponse.js"
+      ],
+      "workerPathCount": 5,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "Tencent/kbone",
+      "hits": 2,
+      "fileCount": 1111,
+      "appJsonPaths": [
+        "examples/demo21/mp/app.json",
+        "examples/demo32/mp/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "examples/demo25/src/worker/sharedWorker.js",
+        "examples/demo25/src/worker/worker.js"
+      ],
+      "workerPathCount": 2,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "rongwu/webrtc-vad",
+      "hits": 2,
+      "fileCount": 24,
+      "appJsonPaths": [
+        "app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "workers/request/index.js",
+        "workers/request/utils.js"
+      ],
+      "workerPathCount": 2,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "onlyxxp/miniprogram-xiaoxiao-open",
+      "hits": 2,
+      "fileCount": 456,
+      "appJsonPaths": [
+        "app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "page/API/pages/worker/worker.js",
+        "page/API/pages/worker/worker.json",
+        "page/API/pages/worker/worker.wxml",
+        "page/API/pages/worker/worker.wxss",
+        "workers/fib/index.js"
+      ],
+      "workerPathCount": 5,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "985ch/starrail",
+      "hits": 2,
+      "fileCount": 821,
+      "appJsonPaths": [
+        "app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "workers/main/index.js",
+        "workers/utils/base.js",
+        "workers/utils/bestwords.js",
+        "workers/utils/computer.js",
+        "workers/utils/equipdata.js",
+        "workers/utils/equipvalues.js",
+        "workers/utils/filter.js",
+        "workers/utils/selectequips.js",
+        "workers/utils/upgrade.js",
+        "workers/utils/words2groups.js"
+      ],
+      "workerPathCount": 10,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "Ke1992/wxapp-pack",
+      "hits": 2,
+      "fileCount": 144,
+      "appJsonPaths": [
+        "test/basis/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "test/basis/tools/workers/index.js"
+      ],
+      "workerPathCount": 1,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "docker-practice/miniprogram",
+      "hits": 2,
+      "fileCount": 450,
+      "appJsonPaths": [
+        "client/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "client/workers/test/index.ts"
+      ],
+      "workerPathCount": 1,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "241120nzdjjx/StringArtHelper",
+      "hits": 2,
+      "fileCount": 202,
+      "appJsonPaths": [
+        "wechat-miniprogram/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "wechat-miniprogram/workers/generator-core.js",
+        "wechat-miniprogram/workers/generator.js"
+      ],
+      "workerPathCount": 2,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "watsonLidaye/wechat_vue",
+      "hits": 1,
+      "fileCount": 44,
+      "appJsonPaths": [
+        "app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "workers/index.js"
+      ],
+      "workerPathCount": 1,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "AweiLoveAndroid/Hybrid-sample",
+      "hits": 1,
+      "fileCount": 853,
+      "appJsonPaths": [
+        "rn_demos/android/app/src/main/res/raw/app.json",
+        "rn_demos/app.json",
+        "weixin_demos/Demo1/miniprogram/app.json",
+        "weixin_demos/Demo2/app.json",
+        "weixin_demos/QiQuYouBa/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "weixin_demos/guanfang_demo/page/API/pages/worker/worker.js",
+        "weixin_demos/guanfang_demo/page/API/pages/worker/worker.json",
+        "weixin_demos/guanfang_demo/page/API/pages/worker/worker.wxml",
+        "weixin_demos/guanfang_demo/page/API/pages/worker/worker.wxss",
+        "weixin_demos/guanfang_demo/workers/fib/index.js"
+      ],
+      "workerPathCount": 5,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "zwlijun/wxmapp.danmu",
+      "hits": 1,
+      "fileCount": 16,
+      "appJsonPaths": [
+        "app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "res/workers/danmu.js"
+      ],
+      "workerPathCount": 1,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "lzljim/SQLStudy",
+      "hits": 1,
+      "fileCount": 65,
+      "appJsonPaths": [
+        "app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "workers/sql-worker.js"
+      ],
+      "workerPathCount": 1,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "clawit/MagCore",
+      "hits": 1,
+      "fileCount": 251,
+      "appJsonPaths": [
+        "src/miniprogram/app.json"
+      ],
+      "gameJsonPaths": [
+        "src/minigame/game.json"
+      ],
+      "workerPaths": [
+        "src/minigame/workers/request/index.js",
+        "src/minigame/workers/request/utils.js",
+        "src/minigame/workers/response/index.js"
+      ],
+      "workerPathCount": 3,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "axl-striv/tsinghua-110-miniprogram",
+      "hits": 1,
+      "fileCount": 1119,
+      "appJsonPaths": [
+        "miniprogram/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "miniprogram/packageAPI/pages/worker/worker.js",
+        "miniprogram/packageAPI/pages/worker/worker.json",
+        "miniprogram/packageAPI/pages/worker/worker.wxml",
+        "miniprogram/packageAPI/pages/worker/worker.wxss",
+        "miniprogram/workers/fib/index.js"
+      ],
+      "workerPathCount": 5,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "onekit-threex/three-weixin-demo",
+      "hits": 1,
+      "fileCount": 2301,
+      "appJsonPaths": [
+        "ar_demo/app.json",
+        "fps_demo/app.json",
+        "plugin_demo/app.json",
+        "pro_demo/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "plugin_demo/workers/dhtml-weixin/AudioContext.js",
+        "plugin_demo/workers/dhtml-weixin/Blob.js",
+        "plugin_demo/workers/dhtml-weixin/CSSStyleDeclaration.js",
+        "plugin_demo/workers/dhtml-weixin/ClassCollection.js",
+        "plugin_demo/workers/dhtml-weixin/Element.js",
+        "plugin_demo/workers/dhtml-weixin/Event.js",
+        "plugin_demo/workers/dhtml-weixin/EventTarget.js",
+        "plugin_demo/workers/dhtml-weixin/HTMLCanvasElement.js",
+        "plugin_demo/workers/dhtml-weixin/HTMLElement.js",
+        "plugin_demo/workers/dhtml-weixin/HTMLImageElement.js"
+      ],
+      "workerPathCount": 49,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "lihaizhong/CodeLabs",
+      "hits": 1,
+      "fileCount": 1318,
+      "appJsonPaths": [
+        "mp-harmony/ascf/ascf_src/app.json",
+        "mp-platform/alipay/app.json",
+        "mp-platform/tt/app.json",
+        "mp-platform/weapp/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "mp-harmony/ascf/ascf_src/workers/fflate.js",
+        "mp-harmony/ascf/ascf_src/workers/index.js",
+        "mp-harmony/ascf/ascf_src/workers/unzlib.js",
+        "mp-platform/alipay/workers/fflate.js",
+        "mp-platform/alipay/workers/index.js",
+        "mp-platform/alipay/workers/unzlib.js",
+        "mp-platform/tt/workers/fflate.js",
+        "mp-platform/tt/workers/index.js",
+        "mp-platform/tt/workers/unzlib.js",
+        "mp-platform/weapp/workers/fflate.js"
+      ],
+      "workerPathCount": 15,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "qiyan233/qikebiao-wechat-miniprogram",
+      "hits": 1,
+      "fileCount": 1136,
+      "appJsonPaths": [
+        "miniprogram/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "miniprogram/packageAPI/pages/worker/worker/worker.js",
+        "miniprogram/packageAPI/pages/worker/worker/worker.json",
+        "miniprogram/packageAPI/pages/worker/worker/worker.wxml",
+        "miniprogram/packageAPI/pages/worker/worker/worker.wxss",
+        "miniprogram/packageAPI/pages/worker/worker/worker/worker.js",
+        "miniprogram/packageAPI/pages/worker/worker/worker/worker.json",
+        "miniprogram/packageAPI/pages/worker/worker/worker/worker.wxml",
+        "miniprogram/packageAPI/pages/worker/worker/worker/worker.wxss",
+        "miniprogram/workers/fib/index.js"
+      ],
+      "workerPathCount": 9,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "maple-yf/wechat-foundation",
+      "hits": 1,
+      "fileCount": 1116,
+      "appJsonPaths": [
+        "miniprogram/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "miniprogram/packageAPI/pages/worker/worker/worker.js",
+        "miniprogram/packageAPI/pages/worker/worker/worker.json",
+        "miniprogram/packageAPI/pages/worker/worker/worker.wxml",
+        "miniprogram/packageAPI/pages/worker/worker/worker.wxss",
+        "miniprogram/packageAPI/pages/worker/worker/worker/worker.js",
+        "miniprogram/packageAPI/pages/worker/worker/worker/worker.json",
+        "miniprogram/packageAPI/pages/worker/worker/worker/worker.wxml",
+        "miniprogram/packageAPI/pages/worker/worker/worker/worker.wxss",
+        "miniprogram/workers/fib/index.js"
+      ],
+      "workerPathCount": 9,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "Larrylcc/OUC-AIchat-Edusystem",
+      "hits": 1,
+      "fileCount": 1225,
+      "appJsonPaths": [
+        "miniprogram/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "miniprogram/packageAPI/pages/worker/worker/worker.js",
+        "miniprogram/packageAPI/pages/worker/worker/worker.json",
+        "miniprogram/packageAPI/pages/worker/worker/worker.wxml",
+        "miniprogram/packageAPI/pages/worker/worker/worker.wxss",
+        "miniprogram/packageAPI/pages/worker/worker/worker/worker.js",
+        "miniprogram/packageAPI/pages/worker/worker/worker/worker.json",
+        "miniprogram/packageAPI/pages/worker/worker/worker/worker.wxml",
+        "miniprogram/packageAPI/pages/worker/worker/worker/worker.wxss",
+        "miniprogram/workers/fib/index.js"
+      ],
+      "workerPathCount": 9,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "vagrant04/Class_Schedule",
+      "hits": 1,
+      "fileCount": 1183,
+      "appJsonPaths": [
+        "miniprogram/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "miniprogram/packageAPI/pages/worker/worker/worker.js",
+        "miniprogram/packageAPI/pages/worker/worker/worker.json",
+        "miniprogram/packageAPI/pages/worker/worker/worker.wxml",
+        "miniprogram/packageAPI/pages/worker/worker/worker.wxss",
+        "miniprogram/packageAPI/pages/worker/worker/worker/worker.js",
+        "miniprogram/packageAPI/pages/worker/worker/worker/worker.json",
+        "miniprogram/packageAPI/pages/worker/worker/worker/worker.wxml",
+        "miniprogram/packageAPI/pages/worker/worker/worker/worker.wxss",
+        "miniprogram/workers/fib/index.js"
+      ],
+      "workerPathCount": 9,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "NetherEye/wx",
+      "hits": 1,
+      "fileCount": 1012,
+      "appJsonPaths": [
+        "GankCamp-WechatAPP-master/app.json",
+        "WeChatMeiZhi/app.json",
+        "code/app.json",
+        "netmusic-app-master/app.json",
+        "test/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "test/page/API/pages/worker/worker.js",
+        "test/page/API/pages/worker/worker.json",
+        "test/page/API/pages/worker/worker.wxml",
+        "test/page/API/pages/worker/worker.wxss",
+        "test/workers/fib/index.js"
+      ],
+      "workerPathCount": 5,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "hhxpoint/answer",
+      "hits": 1,
+      "fileCount": 96,
+      "appJsonPaths": [
+        "app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "worker/inpainting.js"
+      ],
+      "workerPathCount": 1,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "miaozhang9/WeAppDemo",
+      "hits": 1,
+      "fileCount": 1020,
+      "appJsonPaths": [
+        "demo下载微信客户端版本号：6.3.27 及以上 下载源码 版本20170111/app.json",
+        "demo下载微信客户端版本号：6.7.2 及以上 下载源码 版本20190221/app.json",
+        "old demo/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "demo下载微信客户端版本号：6.7.2 及以上 下载源码 版本20190221/page/API/pages/worker/worker.js",
+        "demo下载微信客户端版本号：6.7.2 及以上 下载源码 版本20190221/page/API/pages/worker/worker.json",
+        "demo下载微信客户端版本号：6.7.2 及以上 下载源码 版本20190221/page/API/pages/worker/worker.wxml",
+        "demo下载微信客户端版本号：6.7.2 及以上 下载源码 版本20190221/page/API/pages/worker/worker.wxss",
+        "demo下载微信客户端版本号：6.7.2 及以上 下载源码 版本20190221/workers/fib/index.js"
+      ],
+      "workerPathCount": 5,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "a764119732/seamless-long-image-miniapp",
+      "hits": 1,
+      "fileCount": 92,
+      "appJsonPaths": [
+        "miniprogram/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "miniprogram/workers/analyzer.js",
+        "miniprogram/workers/stitch-core.js"
+      ],
+      "workerPathCount": 2,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "xmxe/wechat_dev",
+      "hits": 1,
+      "fileCount": 2296,
+      "appJsonPaths": [
+        "blog/app.json",
+        "demo/app.json",
+        "official-miniprogram/miniprogram/app.json",
+        "onlineRetailers/app.json",
+        "petHospial/pet-hospital/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "official-miniprogram/miniprogram/packageAPI/pages/worker/worker.js",
+        "official-miniprogram/miniprogram/packageAPI/pages/worker/worker.json",
+        "official-miniprogram/miniprogram/packageAPI/pages/worker/worker.wxml",
+        "official-miniprogram/miniprogram/packageAPI/pages/worker/worker.wxss",
+        "official-miniprogram/miniprogram/workers/fib/index.js"
+      ],
+      "workerPathCount": 5,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "DuSenYao/study-notes",
+      "hits": 1,
+      "fileCount": 1350,
+      "appJsonPaths": [
+        "frontend/微信小程序/test/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "frontend/微信小程序/test/workers/request/index.js",
+        "frontend/微信小程序/test/workers/request/utils.js",
+        "frontend/微信小程序/test/workers/response/index.js"
+      ],
+      "workerPathCount": 3,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    }
+  ],
+  "checked": [
+    {
+      "fullName": "wuba/wwto",
+      "hits": 8,
+      "fileCount": 691,
+      "appJsonPaths": [
+        "demo/miniprogram-demo/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "demo/miniprogram-demo/page/API/pages/worker/worker.js",
+        "demo/miniprogram-demo/page/API/pages/worker/worker.json",
+        "demo/miniprogram-demo/page/API/pages/worker/worker.wxml",
+        "demo/miniprogram-demo/page/API/pages/worker/worker.wxss",
+        "demo/miniprogram-demo/workers/fib/index.js"
+      ],
+      "workerPathCount": 5,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "newbieYoung/Threejs_rubik",
+      "hits": 18,
+      "fileCount": 531,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "lesson/demo2/game.json",
+        "lesson/demo3/game.json",
+        "lesson/demo4/game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "fx67ll/fx67llHCLS",
+      "hits": 11,
+      "fileCount": 959,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "CSS3/css3-project/rubik-game/lesson/demo2/game.json",
+        "CSS3/css3-project/rubik-game/lesson/demo3/game.json",
+        "CSS3/css3-project/rubik-game/lesson/demo4/game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "Xichun123/weapp-docs",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "weapp-vite/weapp-vite",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "rixingyike/weapp_optimize_disc",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "wdk-docs/wxadev-docs",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "wepyjs/weapp-document-tracker",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "beforegolive/weapp-adapter",
+      "hits": 4,
+      "fileCount": 57,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "test/game.json"
+      ],
+      "workerPaths": [
+        "test/workers/my-worker.js"
+      ],
+      "workerPathCount": 1,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "N0v4ont0p/wxml-masterguide-",
+      "hits": 6,
+      "fileCount": 2623,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "yfsoftcom/weapp-adapter",
+      "hits": 4,
+      "fileCount": 57,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "test/game.json"
+      ],
+      "workerPaths": [
+        "test/workers/my-worker.js"
+      ],
+      "workerPathCount": 1,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "ihaiucom/learn.jsworker",
+      "hits": 4,
+      "fileCount": 129,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "LearnJsWorker/release/wxgame/game.json"
+      ],
+      "workerPaths": [
+        "LearnJsWorker/bin/workers/MWorker.js",
+        "LearnJsWorker/bin/workers/WorkerConfig.js",
+        "LearnJsWorker/bin/workers/index.js",
+        "LearnJsWorker/bin/workers/workercode.js",
+        "LearnJsWorker/release/wxgame/workers/MWorker.js",
+        "LearnJsWorker/release/wxgame/workers/index.js",
+        "LearnJsWorker/release/wxgame/workers/workercode.js",
+        "LearnJsWorker/release/wxgame/workers/workerconfig.js"
+      ],
+      "workerPathCount": 8,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "huangy-coder/wechat_miniprogram_docs",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "i7soft/new-best",
+      "hits": 4,
+      "fileCount": 639,
+      "appJsonPaths": [
+        "source/App/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "source/App/pages/test/framework/worker/pages/index/index.js",
+        "source/App/pages/test/framework/worker/pages/index/index.json",
+        "source/App/pages/test/framework/worker/pages/index/index.wxml",
+        "source/App/pages/test/framework/worker/pages/index/index.wxss",
+        "source/App/pages/test/framework/worker/pages/logs/logs.js",
+        "source/App/pages/test/framework/worker/pages/logs/logs.json",
+        "source/App/pages/test/framework/worker/pages/logs/logs.wxml",
+        "source/App/pages/test/framework/worker/pages/logs/logs.wxss",
+        "source/App/pages/test/framework/worker/utils/util.js",
+        "source/App/pages/test/framework/worker/workers/request/index2.js"
+      ],
+      "workerPathCount": 12,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "finscn/weapp-adapter",
+      "hits": 3,
+      "fileCount": 50,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "test/game.json"
+      ],
+      "workerPaths": [
+        "test/workers/my-worker.js"
+      ],
+      "workerPathCount": 1,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "Siubaak/qtimer",
+      "hits": 3,
+      "fileCount": 107,
+      "appJsonPaths": [
+        "app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "workers/hotload.js",
+        "workers/interpreter/index.js",
+        "workers/interpreter/init.js",
+        "workers/interpreter/sval.min.js"
+      ],
+      "workerPathCount": 4,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "remaxjs/v1.remaxjs.org",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "wx-minapp/minapp-generator",
+      "hits": 3,
+      "fileCount": 384,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "vlinr/CocosFilter",
+      "hits": 3,
+      "fileCount": 258,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "build/wechatgame/game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "haseeburrehmanfaheem/WeChat-Api-Fuzzer",
+      "hits": 3,
+      "fileCount": 48,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "genxium/DelayNoMore",
+      "hits": 3,
+      "fileCount": 787,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "adoggie/WriteLittleGames",
+      "hits": 4,
+      "fileCount": 1225,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "skywalker/game.json",
+        "skywalker_0.4/game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "liuxinyumocn/WX3DPhysicsTest",
+      "hits": 3,
+      "fileCount": 376,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "Demo/CocosCreator3_WX_JS/game.json",
+        "Demo/CocosCreator3_WX_WASM/game.json",
+        "Demo/Layabox_WX_JS/game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "chemzqm/wx-dash",
+      "hits": 3,
+      "fileCount": 1434,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "wxapp.docset/Contents/Resources/Documents/api/worker/Worker.html",
+        "wxapp.docset/Contents/Resources/Documents/api/worker/Worker.onMessage.html",
+        "wxapp.docset/Contents/Resources/Documents/api/worker/Worker.postMessage.html",
+        "wxapp.docset/Contents/Resources/Documents/api/worker/Worker.terminate.html",
+        "wxapp.docset/Contents/Resources/Documents/api/worker/wx.createWorker.html"
+      ],
+      "workerPathCount": 5,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "shunwuyu/lesson_md",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "dolphinDoReMi/mini-program-real-estate-price",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "wechat-miniprogram/minigame-api-typings",
+      "hits": 3,
+      "fileCount": 25,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "augustVino/V2048",
+      "hits": 3,
+      "fileCount": 374,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "2048/wechatgame/game.json",
+        "cocos/build/wechatgame/game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "rixingyike/wegame_dev_disc",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "TCMPP-Team/mini-games",
+      "hits": 3,
+      "fileCount": 838,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "Cocos-HopInCar/game.json",
+        "Game-Demo/game.json"
+      ],
+      "workerPaths": [
+        "Game-Demo/js/api/worker/index.js",
+        "Game-Demo/js/api/worker/view.js",
+        "Game-Demo/workers/index.js"
+      ],
+      "workerPathCount": 3,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "jgbjs/jgb-transform",
+      "hits": 3,
+      "fileCount": 1093,
+      "appJsonPaths": [
+        "examples/wx2aliapp/src/app.json",
+        "examples/wx2swan/src/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "examples/wx2aliapp/src/page/API/pages/worker/worker.js",
+        "examples/wx2aliapp/src/page/API/pages/worker/worker.json",
+        "examples/wx2aliapp/src/page/API/pages/worker/worker.wxml",
+        "examples/wx2aliapp/src/page/API/pages/worker/worker.wxss",
+        "examples/wx2aliapp/src/workers/fib/index.js",
+        "examples/wx2swan/src/page/API/pages/worker/worker.js",
+        "examples/wx2swan/src/page/API/pages/worker/worker.json",
+        "examples/wx2swan/src/page/API/pages/worker/worker.wxml",
+        "examples/wx2swan/src/page/API/pages/worker/worker.wxss",
+        "examples/wx2swan/src/workers/fib/index.js"
+      ],
+      "workerPathCount": 10,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "NervJS/taro-docs",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "YYC-Cube/YYC3-Knowledge-Base",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "jerrysheen/MiniGameDemo",
+      "hits": 3,
+      "fileCount": 2290,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "stephenml/wxgame-threejs",
+      "hits": 2,
+      "fileCount": 61,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "RedrockTeam/xyx",
+      "hits": 2,
+      "fileCount": 177,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "game.json"
+      ],
+      "workerPaths": [
+        "js/worker/index.js"
+      ],
+      "workerPathCount": 1,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "sanyuered/WeChat-MiniProgram-WebAR",
+      "hits": 2,
+      "fileCount": 116,
+      "appJsonPaths": [
+        "app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "workers/ImageTracker.js",
+        "workers/imageBusiness.js",
+        "workers/jsfeat.js",
+        "workers/tracking.js",
+        "workers/workerResponse.js"
+      ],
+      "workerPathCount": 5,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "Tencent/kbone",
+      "hits": 2,
+      "fileCount": 1111,
+      "appJsonPaths": [
+        "examples/demo21/mp/app.json",
+        "examples/demo32/mp/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "examples/demo25/src/worker/sharedWorker.js",
+        "examples/demo25/src/worker/worker.js"
+      ],
+      "workerPathCount": 2,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "wechat-miniprogram/minigame-demo",
+      "hits": 2,
+      "fileCount": 408,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "minicode/getUserInfo/minigame/game.json",
+        "minicode/requestSubscribeSystemMessage/minigame/game/game.json",
+        "miniprogram/game.json"
+      ],
+      "workerPaths": [
+        "miniprogram/js/api/worker/index.js",
+        "miniprogram/js/api/worker/view.js",
+        "miniprogram/workers/index.js"
+      ],
+      "workerPathCount": 3,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "Adherentman/Typescript-wxApi.d.ts",
+      "hits": 2,
+      "fileCount": 13,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "avantcontra/p5.we",
+      "hits": 2,
+      "fileCount": 56,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "wechat-miniprogram/miniprogram-demo",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "Muyuan-Zhang/PaintedTales",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "akeboshi1/Phaser-wx",
+      "hits": 2,
+      "fileCount": 43,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "game.json"
+      ],
+      "workerPaths": [
+        "js/worker/index.js",
+        "js/worker/worker.js"
+      ],
+      "workerPathCount": 2,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "rongwu/webrtc-vad",
+      "hits": 2,
+      "fileCount": 24,
+      "appJsonPaths": [
+        "app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "workers/request/index.js",
+        "workers/request/utils.js"
+      ],
+      "workerPathCount": 2,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "schizobulia/miniprogram-demo",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "kileroppo/miniprogram-demo",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "hwei/UnityProjectTinyToWeapp",
+      "hits": 2,
+      "fileCount": 51,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "wukaikailive/weixin-game-skill",
+      "hits": 2,
+      "fileCount": 10,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "examples/game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "cocos-creator-packages/adapters",
+      "hits": 2,
+      "fileCount": 345,
+      "appJsonPaths": [
+        "platforms/taobao/res/app.json"
+      ],
+      "gameJsonPaths": [
+        "platforms/alipay/res/game.json",
+        "platforms/baidu/res/game.json",
+        "platforms/bytedance/res/game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "matchvs/AnimalChecker",
+      "hits": 2,
+      "fileCount": 758,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "build/wechatgame/game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "onlyxxp/miniprogram-xiaoxiao-open",
+      "hits": 2,
+      "fileCount": 456,
+      "appJsonPaths": [
+        "app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "page/API/pages/worker/worker.js",
+        "page/API/pages/worker/worker.json",
+        "page/API/pages/worker/worker.wxml",
+        "page/API/pages/worker/worker.wxss",
+        "workers/fib/index.js"
+      ],
+      "workerPathCount": 5,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "kaidianxing/kaidianxing-mobile",
+      "hits": 2,
+      "fileCount": 656,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "src/wxcomponents/worker/index.js"
+      ],
+      "workerPathCount": 1,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "caochao/threejs-in-wechat-game",
+      "hits": 2,
+      "fileCount": 58,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "timi-liuliang/echo",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "yuchenyang1994/godot-minigame-template",
+      "hits": 2,
+      "fileCount": 18,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "game.json"
+      ],
+      "workerPaths": [
+        "js/worker/position_reporting.js"
+      ],
+      "workerPathCount": 1,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "GengineJS/geg-babylonjs",
+      "hits": 2,
+      "fileCount": 115,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "esengine/esengine",
+      "hits": 2,
+      "fileCount": 1200,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "examples/core-demos/workers/physics-worker.js",
+        "examples/core-demos/workers/worker-mapping.json",
+        "examples/wechat-worker-demo/workers/physics-worker.js",
+        "examples/wechat-worker-demo/workers/worker-mapping.json"
+      ],
+      "workerPathCount": 4,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "fenghw2087/wx-yx",
+      "error": "meta HTTP 0"
+    },
+    {
+      "fullName": "matchvs/DoubleShoot",
+      "hits": 2,
+      "fileCount": 774,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "build/wechatgame/game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "matchvs/RobCoin",
+      "hits": 2,
+      "fileCount": 610,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "build/wechatgame/game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "985ch/starrail",
+      "hits": 2,
+      "fileCount": 821,
+      "appJsonPaths": [
+        "app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "workers/main/index.js",
+        "workers/utils/base.js",
+        "workers/utils/bestwords.js",
+        "workers/utils/computer.js",
+        "workers/utils/equipdata.js",
+        "workers/utils/equipvalues.js",
+        "workers/utils/filter.js",
+        "workers/utils/selectequips.js",
+        "workers/utils/upgrade.js",
+        "workers/utils/words2groups.js"
+      ],
+      "workerPathCount": 10,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "ScalablyTyped/Distribution",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "Marco9442/wx-miniprogram-doc",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "morningtzh/dig_the_world",
+      "hits": 2,
+      "fileCount": 425,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "build/wechatgame/game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "LayaCharley/LayaAirDoc",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "remaxjs/antdm-case",
+      "hits": 2,
+      "fileCount": 212,
+      "appJsonPaths": [
+        "spec/wechat/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "junjie-xyz/mina-wiki",
+      "hits": 2,
+      "fileCount": 76,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "Ke1992/wxapp-pack",
+      "hits": 2,
+      "fileCount": 144,
+      "appJsonPaths": [
+        "test/basis/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "test/basis/tools/workers/index.js"
+      ],
+      "workerPathCount": 1,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "layabox/LayaAir-Doc-EN",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "kerlw/weapp-support-plugin",
+      "hits": 2,
+      "fileCount": 47,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "liuxin19960729/cocos-engine-2.4.11",
+      "hits": 2,
+      "fileCount": 1116,
+      "appJsonPaths": [
+        "adapters/platforms/taobao/res/app.json"
+      ],
+      "gameJsonPaths": [
+        "adapters/platforms/alipay/res/game.json",
+        "adapters/platforms/baidu/res/game.json",
+        "adapters/platforms/bytedance/res/game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "zhangyazhe/MaYa_Math",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "THUCampus/CloseTheLoop",
+      "hits": 2,
+      "fileCount": 168,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "workerscripts/workers/assets/Scripts/GameAI.js",
+        "workerscripts/workers/assets/Scripts/GameRoom.js",
+        "workerscripts/workers/assets/Scripts/IAdapter.js",
+        "workerscripts/workers/assets/Scripts/PayLoadProtobuf.js",
+        "workerscripts/workers/assets/Scripts/PlayerInfo.js",
+        "workerscripts/workers/assets/Scripts/ServerPlayerInfo.js",
+        "workerscripts/workers/assets/Scripts/Uint16PairQueue.js",
+        "workerscripts/workers/assets/Scripts/Uint16TripleQueue.js",
+        "workerscripts/workers/assets/Scripts/protobufjs.js",
+        "workerscripts/workers/workerscripts/WxRoomManager.js"
+      ],
+      "workerPathCount": 11,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "docker-practice/miniprogram",
+      "hits": 2,
+      "fileCount": 450,
+      "appJsonPaths": [
+        "client/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "client/workers/test/index.ts"
+      ],
+      "workerPathCount": 1,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "NervJS/taro-harmony-project",
+      "hits": 2,
+      "fileCount": 502,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "library/src/main/ets/npm/@tarojs/taro/types/api/worker/index.d.ts"
+      ],
+      "workerPathCount": 1,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "goplus/spx",
+      "hits": 2,
+      "fileCount": 1671,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "cmd/spx/template/platform/webminigame/game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "funcodingdev/n8n-nodes-wecom",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "chooaya/CocosCreator2.1.2Electron4.2.5",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "WenWeiTHU/Tango",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "tikivn/remax",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "niuniuzhu/KOW",
+      "hits": 2,
+      "fileCount": 1181,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "wx/game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "fishen/wxa-core",
+      "hits": 2,
+      "fileCount": 40,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "ronnycyy/learn-remax",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "a0979225002/cocos_example_object",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "arronzhang/wcc.js",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "YIIZ/weapp-adapter2",
+      "hits": 2,
+      "fileCount": 51,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "test/game.json"
+      ],
+      "workerPaths": [
+        "test/workers/my-worker.js"
+      ],
+      "workerPathCount": 1,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "maskletter/tenp-wx",
+      "hits": 2,
+      "fileCount": 93,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "hiloteam/seinjs-platform-demos",
+      "hits": 2,
+      "fileCount": 985,
+      "appJsonPaths": [
+        "my-tiny-program/app.json",
+        "wx-mini-program/app.json"
+      ],
+      "gameJsonPaths": [
+        "my-tiny-game/game.json",
+        "wx-mini-game/game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "sonnguyeninspirelife/custom-types",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "crazycrazyc/JsGames",
+      "hits": 2,
+      "fileCount": 1225,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "SkyWalker/game.json",
+        "skywalker_0.4/game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "241120nzdjjx/StringArtHelper",
+      "hits": 2,
+      "fileCount": 202,
+      "appJsonPaths": [
+        "wechat-miniprogram/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "wechat-miniprogram/workers/generator-core.js",
+        "wechat-miniprogram/workers/generator.js"
+      ],
+      "workerPathCount": 2,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "fakecoinbase/DefinitelyTypedslashDefinitelyTyped",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "GDGeekzhangqing/HappyBall-1.0.0",
+      "hits": 2,
+      "fileCount": 942,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "HappyBall1.0.0beta/build/wechatgame/game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "abhiomkar/DefinitelyTyped",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "foolhill1231/Test",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "YihaoWEI/MyCOCOS",
+      "hits": 2,
+      "fileCount": 395,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "complete_project/complete_project/build/wechatgame/game.json",
+        "polished_project/polished_project/build/wechatgame/game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "1ronName/A23-WXMiniprogram",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "shinku/gif",
+      "hits": 1,
+      "fileCount": 4,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "workers/gif.worker.js"
+      ],
+      "workerPathCount": 1,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "dcloudio/unidocs-en",
+      "hits": 1,
+      "fileCount": 867,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "dcloudio/unidocs-zh",
+      "hits": 1,
+      "fileCount": 562,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "zygameui/zygameui",
+      "hits": 1,
+      "fileCount": 943,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "Source/zygame/worker/BaseWorker.hx",
+        "Source/zygame/worker/Worker.hx",
+        "docs/zygame/worker/BaseWorker.html",
+        "docs/zygame/worker/Worker.html",
+        "docs/zygame/worker/index.html"
+      ],
+      "workerPathCount": 5,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "1924666540/miniprogram",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "qishilong/notes",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "Mister-Hope/Mister-Hope.github.io",
+      "hits": 1,
+      "fileCount": 1380,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "liuzhuan/hello-wxapp",
+      "hits": 1,
+      "fileCount": 133,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "docs/framework/workers/index.html",
+        "src/framework/workers/README.md"
+      ],
+      "workerPathCount": 2,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "Boen36/threejs-miniprogram-adapter",
+      "hits": 1,
+      "fileCount": 87,
+      "appJsonPaths": [
+        "examples/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "goodmind/FlowDefinitelyTyped",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "wdk-docs/wxa-docs",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "egret-labs/egret-docs",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "icebreaker-trash/wechat-miniprogram-docs-mirror",
+      "hits": 1,
+      "fileCount": 626,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "whinc/my-claude-plugins",
+      "hits": 1,
+      "fileCount": 129,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "Oceanusc/Oceanusc.github.io",
+      "hits": 1,
+      "fileCount": 865,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "houbb/houbb.github.io",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "haikelei/leo-docs",
+      "hits": 1,
+      "fileCount": 304,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "liaorenhua/blog_postgraduate",
+      "hits": 1,
+      "fileCount": 1437,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "chameleon-team/miniapp-enhance-demo",
+      "hits": 1,
+      "fileCount": 533,
+      "appJsonPaths": [
+        "miniprogram-2/miniprogram/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "WALL-E-WEB/-notes-",
+      "hits": 1,
+      "fileCount": 404,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "huyduc1602/uniapp-crawler",
+      "hits": 1,
+      "fileCount": 307,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "sunxen/codefinder",
+      "hits": 1,
+      "fileCount": 91,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "layabox/LayaAir-Doc-ZH",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "SperaC/SperaC.github.io",
+      "hits": 1,
+      "fileCount": 1244,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "XY0987/XY0987.github.io",
+      "hits": 1,
+      "fileCount": 1007,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "Mister-Duan/Mister-Duan.github.io",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "matchvs/GreedyStar",
+      "hits": 1,
+      "fileCount": 261,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "GreedyStarClient/build/wechatgame/game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "gitboyzcf/gitboyzcf.github.io",
+      "hits": 1,
+      "fileCount": 469,
+      "appJsonPaths": [
+        ".obsidian/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "diiyw/defold-wechat",
+      "hits": 1,
+      "fileCount": 57,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "yuen33/ThreejsMiniGameExample",
+      "hits": 1,
+      "fileCount": 60,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "watsonLidaye/wechat_vue",
+      "hits": 1,
+      "fileCount": 44,
+      "appJsonPaths": [
+        "app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "workers/index.js"
+      ],
+      "workerPathCount": 1,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "ZuoRight/Notes",
+      "hits": 1,
+      "fileCount": 325,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "Gifan/killMonster",
+      "hits": 1,
+      "fileCount": 435,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "build-templates/wechatgame/game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "diiyw/dw",
+      "hits": 1,
+      "fileCount": 60,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "template/game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "Beven91/webpack-wxapp-module-plugin",
+      "hits": 1,
+      "fileCount": 34,
+      "appJsonPaths": [
+        "test/sources/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "taokexia/threejs_rubik",
+      "hits": 1,
+      "fileCount": 49,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "jiangjiang1116/Rubik-ThreeJS",
+      "hits": 1,
+      "fileCount": 64,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "linhaiwei123/wgame-three.js",
+      "hits": 1,
+      "fileCount": 21,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "game.json"
+      ],
+      "workerPaths": [
+        "workers/request/ammo.min.js",
+        "workers/request/physijs_worker.js"
+      ],
+      "workerPathCount": 2,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "lqloveball/WeChatGameByCreatejs",
+      "hits": 1,
+      "fileCount": 87,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "wxgame/game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "hiloteam/seinjs-webpack-platform-plugin",
+      "hits": 1,
+      "fileCount": 129,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "amorwilliams/threejs-wx",
+      "hits": 1,
+      "fileCount": 175,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "AweiLoveAndroid/Hybrid-sample",
+      "hits": 1,
+      "fileCount": 853,
+      "appJsonPaths": [
+        "rn_demos/android/app/src/main/res/raw/app.json",
+        "rn_demos/app.json",
+        "weixin_demos/Demo1/miniprogram/app.json",
+        "weixin_demos/Demo2/app.json",
+        "weixin_demos/QiQuYouBa/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "weixin_demos/guanfang_demo/page/API/pages/worker/worker.js",
+        "weixin_demos/guanfang_demo/page/API/pages/worker/worker.json",
+        "weixin_demos/guanfang_demo/page/API/pages/worker/worker.wxml",
+        "weixin_demos/guanfang_demo/page/API/pages/worker/worker.wxss",
+        "weixin_demos/guanfang_demo/workers/fib/index.js"
+      ],
+      "workerPathCount": 5,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "yirit/weapp-mock",
+      "hits": 1,
+      "fileCount": 70,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "src/lib/Worker/index.js"
+      ],
+      "workerPathCount": 1,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "xyz3282836/blog",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "EvStorM/getUniapp-doc",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "onekit-threex/dhtml-weixin",
+      "hits": 1,
+      "fileCount": 71,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "ruifly2012/cocos_creator_mj",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "zwlijun/wxmapp.danmu",
+      "hits": 1,
+      "fileCount": 16,
+      "appJsonPaths": [
+        "app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "res/workers/danmu.js"
+      ],
+      "workerPathCount": 1,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "ScalablyTyped/SlinkyTyped",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "vazmin/t1t",
+      "hits": 1,
+      "fileCount": 218,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "lzljim/SQLStudy",
+      "hits": 1,
+      "fileCount": 65,
+      "appJsonPaths": [
+        "app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "workers/sql-worker.js"
+      ],
+      "workerPathCount": 1,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "ayarami/RunningBall3D",
+      "hits": 1,
+      "fileCount": 388,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "build/wechatgame/game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "TencentCloud/tcmpp-demo-miniprogram",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "waaaly/try-loveGit",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "yyp92/react-course-code",
+      "hits": 1,
+      "fileCount": 1118,
+      "appJsonPaths": [
+        "src/cloud-base/miniprogram/app.json",
+        "src/miniprogram-demo/app.json",
+        "src/wx-xr-frame/app.json"
+      ],
+      "gameJsonPaths": [
+        "src/wx-minigame/game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "larrygogo/immune-td",
+      "hits": 1,
+      "fileCount": 469,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "apps/wx/spike-wx/game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "yushk/self-car-washing-mp",
+      "hits": 1,
+      "fileCount": 84,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "vvenv/wxg",
+      "hits": 1,
+      "fileCount": 73,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "linwaiwai/openapplus-demo",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "caogtaa/cocos-minigame-adapters",
+      "hits": 1,
+      "fileCount": 247,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "platforms/alipay/res/game.json",
+        "platforms/baidu/res/game.json",
+        "platforms/bytedance/res/game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "yepat/DouDiZhu",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "nmhung1210/cocos-creator",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "clawit/MagCore",
+      "hits": 1,
+      "fileCount": 251,
+      "appJsonPaths": [
+        "src/miniprogram/app.json"
+      ],
+      "gameJsonPaths": [
+        "src/minigame/game.json"
+      ],
+      "workerPaths": [
+        "src/minigame/workers/request/index.js",
+        "src/minigame/workers/request/utils.js",
+        "src/minigame/workers/response/index.js"
+      ],
+      "workerPathCount": 3,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "yibingxiong/f-test",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "ambergarage/wx_minigame",
+      "hits": 1,
+      "fileCount": 85,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "axl-striv/tsinghua-110-miniprogram",
+      "hits": 1,
+      "fileCount": 1119,
+      "appJsonPaths": [
+        "miniprogram/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "miniprogram/packageAPI/pages/worker/worker.js",
+        "miniprogram/packageAPI/pages/worker/worker.json",
+        "miniprogram/packageAPI/pages/worker/worker.wxml",
+        "miniprogram/packageAPI/pages/worker/worker.wxss",
+        "miniprogram/workers/fib/index.js"
+      ],
+      "workerPathCount": 5,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "rangercyh/weixin2",
+      "hits": 1,
+      "fileCount": 47,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "changshazhou/loadcar",
+      "hits": 1,
+      "fileCount": 147,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "onekit-threex/three-weixin-demo",
+      "hits": 1,
+      "fileCount": 2301,
+      "appJsonPaths": [
+        "ar_demo/app.json",
+        "fps_demo/app.json",
+        "plugin_demo/app.json",
+        "pro_demo/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "plugin_demo/workers/dhtml-weixin/AudioContext.js",
+        "plugin_demo/workers/dhtml-weixin/Blob.js",
+        "plugin_demo/workers/dhtml-weixin/CSSStyleDeclaration.js",
+        "plugin_demo/workers/dhtml-weixin/ClassCollection.js",
+        "plugin_demo/workers/dhtml-weixin/Element.js",
+        "plugin_demo/workers/dhtml-weixin/Event.js",
+        "plugin_demo/workers/dhtml-weixin/EventTarget.js",
+        "plugin_demo/workers/dhtml-weixin/HTMLCanvasElement.js",
+        "plugin_demo/workers/dhtml-weixin/HTMLElement.js",
+        "plugin_demo/workers/dhtml-weixin/HTMLImageElement.js"
+      ],
+      "workerPathCount": 49,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "lihaizhong/CodeLabs",
+      "hits": 1,
+      "fileCount": 1318,
+      "appJsonPaths": [
+        "mp-harmony/ascf/ascf_src/app.json",
+        "mp-platform/alipay/app.json",
+        "mp-platform/tt/app.json",
+        "mp-platform/weapp/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "mp-harmony/ascf/ascf_src/workers/fflate.js",
+        "mp-harmony/ascf/ascf_src/workers/index.js",
+        "mp-harmony/ascf/ascf_src/workers/unzlib.js",
+        "mp-platform/alipay/workers/fflate.js",
+        "mp-platform/alipay/workers/index.js",
+        "mp-platform/alipay/workers/unzlib.js",
+        "mp-platform/tt/workers/fflate.js",
+        "mp-platform/tt/workers/index.js",
+        "mp-platform/tt/workers/unzlib.js",
+        "mp-platform/weapp/workers/fflate.js"
+      ],
+      "workerPathCount": 15,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "TCMPP-Team/mini-programs",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "remaxjs/remax-next",
+      "hits": 1,
+      "fileCount": 263,
+      "appJsonPaths": [
+        "e2e/wechat/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "qiyan233/qikebiao-wechat-miniprogram",
+      "hits": 1,
+      "fileCount": 1136,
+      "appJsonPaths": [
+        "miniprogram/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "miniprogram/packageAPI/pages/worker/worker/worker.js",
+        "miniprogram/packageAPI/pages/worker/worker/worker.json",
+        "miniprogram/packageAPI/pages/worker/worker/worker.wxml",
+        "miniprogram/packageAPI/pages/worker/worker/worker.wxss",
+        "miniprogram/packageAPI/pages/worker/worker/worker/worker.js",
+        "miniprogram/packageAPI/pages/worker/worker/worker/worker.json",
+        "miniprogram/packageAPI/pages/worker/worker/worker/worker.wxml",
+        "miniprogram/packageAPI/pages/worker/worker/worker/worker.wxss",
+        "miniprogram/workers/fib/index.js"
+      ],
+      "workerPathCount": 9,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "maple-yf/wechat-foundation",
+      "hits": 1,
+      "fileCount": 1116,
+      "appJsonPaths": [
+        "miniprogram/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "miniprogram/packageAPI/pages/worker/worker/worker.js",
+        "miniprogram/packageAPI/pages/worker/worker/worker.json",
+        "miniprogram/packageAPI/pages/worker/worker/worker.wxml",
+        "miniprogram/packageAPI/pages/worker/worker/worker.wxss",
+        "miniprogram/packageAPI/pages/worker/worker/worker/worker.js",
+        "miniprogram/packageAPI/pages/worker/worker/worker/worker.json",
+        "miniprogram/packageAPI/pages/worker/worker/worker/worker.wxml",
+        "miniprogram/packageAPI/pages/worker/worker/worker/worker.wxss",
+        "miniprogram/workers/fib/index.js"
+      ],
+      "workerPathCount": 9,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "kylechandev/NUIST-KE-CHENG-SHE-JI",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "Larrylcc/OUC-AIchat-Edusystem",
+      "hits": 1,
+      "fileCount": 1225,
+      "appJsonPaths": [
+        "miniprogram/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "miniprogram/packageAPI/pages/worker/worker/worker.js",
+        "miniprogram/packageAPI/pages/worker/worker/worker.json",
+        "miniprogram/packageAPI/pages/worker/worker/worker.wxml",
+        "miniprogram/packageAPI/pages/worker/worker/worker.wxss",
+        "miniprogram/packageAPI/pages/worker/worker/worker/worker.js",
+        "miniprogram/packageAPI/pages/worker/worker/worker/worker.json",
+        "miniprogram/packageAPI/pages/worker/worker/worker/worker.wxml",
+        "miniprogram/packageAPI/pages/worker/worker/worker/worker.wxss",
+        "miniprogram/workers/fib/index.js"
+      ],
+      "workerPathCount": 9,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "LJKOJBK/softwarePractice",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "allen-mk/killMonsterGame",
+      "hits": 1,
+      "fileCount": 499,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "build-templates/wechatgame/game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "Ngaizean/WeChat-Mini-Program-Development",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "huanhu83/CocosCreator3.8.6",
+      "hits": 1,
+      "fileCount": 374,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "AnranS/godot_for_minigame",
+      "hits": 1,
+      "fileCount": 125,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "addons/godot_mini_game/templates/common/js/worker/position_reporting.js",
+        "website/worker/index.ts"
+      ],
+      "workerPathCount": 2,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "vagrant04/Class_Schedule",
+      "hits": 1,
+      "fileCount": 1183,
+      "appJsonPaths": [
+        "miniprogram/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "miniprogram/packageAPI/pages/worker/worker/worker.js",
+        "miniprogram/packageAPI/pages/worker/worker/worker.json",
+        "miniprogram/packageAPI/pages/worker/worker/worker.wxml",
+        "miniprogram/packageAPI/pages/worker/worker/worker.wxss",
+        "miniprogram/packageAPI/pages/worker/worker/worker/worker.js",
+        "miniprogram/packageAPI/pages/worker/worker/worker/worker.json",
+        "miniprogram/packageAPI/pages/worker/worker/worker/worker.wxml",
+        "miniprogram/packageAPI/pages/worker/worker/worker/worker.wxss",
+        "miniprogram/workers/fib/index.js"
+      ],
+      "workerPathCount": 9,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "aoaotheone/buildding",
+      "hits": 1,
+      "fileCount": 33,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "NetherEye/wx",
+      "hits": 1,
+      "fileCount": 1012,
+      "appJsonPaths": [
+        "GankCamp-WechatAPP-master/app.json",
+        "WeChatMeiZhi/app.json",
+        "code/app.json",
+        "netmusic-app-master/app.json",
+        "test/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "test/page/API/pages/worker/worker.js",
+        "test/page/API/pages/worker/worker.json",
+        "test/page/API/pages/worker/worker.wxml",
+        "test/page/API/pages/worker/worker.wxss",
+        "test/workers/fib/index.js"
+      ],
+      "workerPathCount": 5,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "wxajs/wechat-mini-program-typings",
+      "hits": 1,
+      "fileCount": 18,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "kaiwu/weapp",
+      "hits": 1,
+      "fileCount": 88,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "huanhu83/CocosCreator3.8.5",
+      "hits": 1,
+      "fileCount": 1537,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "lynbklk/miniprogram-cut",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "ayarami/examples-game-FishingCat",
+      "hits": 1,
+      "fileCount": 710,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "zhangdaren/wepy-to-uniapp",
+      "hits": 1,
+      "fileCount": 32,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "hhxpoint/answer",
+      "hits": 1,
+      "fileCount": 96,
+      "appJsonPaths": [
+        "app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "worker/inpainting.js"
+      ],
+      "workerPathCount": 1,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "dwx1994/html",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "miaozhang9/WeAppDemo",
+      "hits": 1,
+      "fileCount": 1020,
+      "appJsonPaths": [
+        "demo下载微信客户端版本号：6.3.27 及以上 下载源码 版本20170111/app.json",
+        "demo下载微信客户端版本号：6.7.2 及以上 下载源码 版本20190221/app.json",
+        "old demo/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "demo下载微信客户端版本号：6.7.2 及以上 下载源码 版本20190221/page/API/pages/worker/worker.js",
+        "demo下载微信客户端版本号：6.7.2 及以上 下载源码 版本20190221/page/API/pages/worker/worker.json",
+        "demo下载微信客户端版本号：6.7.2 及以上 下载源码 版本20190221/page/API/pages/worker/worker.wxml",
+        "demo下载微信客户端版本号：6.7.2 及以上 下载源码 版本20190221/page/API/pages/worker/worker.wxss",
+        "demo下载微信客户端版本号：6.7.2 及以上 下载源码 版本20190221/workers/fib/index.js"
+      ],
+      "workerPathCount": 5,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "zhanmengao/bclient",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "tishoy/RPG",
+      "hits": 1,
+      "fileCount": 764,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "ninesword/wepy2uni",
+      "hits": 1,
+      "fileCount": 32,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "thorliu/NWProjects",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "remaxjs/promise-mini-api",
+      "hits": 1,
+      "fileCount": 13,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "may-today/screen-weapp",
+      "hits": 1,
+      "fileCount": 127,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "src/workers/index.ts"
+      ],
+      "workerPathCount": 1,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "k8w/pixi-minigame-test",
+      "hits": 1,
+      "fileCount": 77,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "game.json"
+      ],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "penduan/emscripten-wechat-filesystem",
+      "hits": 1,
+      "fileCount": 26,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "dum3ng/worker_test",
+      "hits": 1,
+      "fileCount": 35,
+      "appJsonPaths": [],
+      "gameJsonPaths": [
+        "build-templates/wechatgame/game.json"
+      ],
+      "workerPaths": [
+        "build-templates/wechatgame/workers/fn.js",
+        "build-templates/wechatgame/workers/fn.js.meta",
+        "build-templates/wechatgame/workers/worker.js",
+        "build-templates/wechatgame/workers/worker.js.meta"
+      ],
+      "workerPathCount": 4,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": true,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "daimawanjiaA/Intelligent_medical_system----Wechat_mini_program",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "a764119732/seamless-long-image-miniapp",
+      "hits": 1,
+      "fileCount": 92,
+      "appJsonPaths": [
+        "miniprogram/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "miniprogram/workers/analyzer.js",
+        "miniprogram/workers/stitch-core.js"
+      ],
+      "workerPathCount": 2,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "wechat-miniprogram/api-typings",
+      "hits": 1,
+      "fileCount": 51,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "xiaweiss/miniprogram-type",
+      "hits": 1,
+      "fileCount": 74,
+      "appJsonPaths": [
+        "example/miniprogram/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [],
+      "workerPathCount": 0,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "xmxe/wechat_dev",
+      "hits": 1,
+      "fileCount": 2296,
+      "appJsonPaths": [
+        "blog/app.json",
+        "demo/app.json",
+        "official-miniprogram/miniprogram/app.json",
+        "onlineRetailers/app.json",
+        "petHospial/pet-hospital/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "official-miniprogram/miniprogram/packageAPI/pages/worker/worker.js",
+        "official-miniprogram/miniprogram/packageAPI/pages/worker/worker.json",
+        "official-miniprogram/miniprogram/packageAPI/pages/worker/worker.wxml",
+        "official-miniprogram/miniprogram/packageAPI/pages/worker/worker.wxss",
+        "official-miniprogram/miniprogram/workers/fib/index.js"
+      ],
+      "workerPathCount": 5,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "bluebrid/base-knowledge",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "DuSenYao/study-notes",
+      "hits": 1,
+      "fileCount": 1350,
+      "appJsonPaths": [
+        "frontend/微信小程序/test/app.json"
+      ],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "frontend/微信小程序/test/workers/request/index.js",
+        "frontend/微信小程序/test/workers/request/utils.js",
+        "frontend/微信小程序/test/workers/response/index.js"
+      ],
+      "workerPathCount": 3,
+      "isMiniappWithWorker": true,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "hongyesuifeng/openClasses",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "Aimeryyds/WeChat_mini_project",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "Windseek/main-study",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "DefinitelyTyped/DefinitelyTyped",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "KottonKandee843/new",
+      "error": "tree HTTP 500"
+    },
+    {
+      "fullName": "KottonKandee843/Newest",
+      "error": "tree HTTP 500"
+    },
+    {
+      "fullName": "MaximeBlo/LeafletMarker",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "Eyenajaaa/Eyenajaaa",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "ohadApiiro/maximeblo-leafletmarker",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "snippergoals/DefinitelyTyped",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "UncAnnyZ/WeAi-open",
+      "hits": 1,
+      "fileCount": 106,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "types/taro/api/worker/index.d.ts"
+      ],
+      "workerPathCount": 1,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "Malkhalaf697/Visionx",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "starwolf0320/TS-Definitely-Typed",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "talentosagiles/Ti",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "Malkhalaf697/git-clone-https-github.com-docker-welcome-to-docker",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "Web-Dev-Collaborative/Github-Based-Projects",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "NervJS/taro",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "jd-opensource/taro",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "changshuai7/taro_my",
+      "error": "tree HTTP 0"
+    },
+    {
+      "fullName": "jianwei/taroApp",
+      "hits": 1,
+      "fileCount": 660,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "harmony/entry/src/main/ets/npm/@tarojs/taro/types/api/worker/index.d.ts",
+        "harmony/entry/src/main/ets/npm/@tarojs/taro/worker/index.ts"
+      ],
+      "workerPathCount": 2,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "specificshen/taro-lite",
+      "hits": 1,
+      "fileCount": 714,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "packages/taro/types/api/worker/index.d.ts"
+      ],
+      "workerPathCount": 1,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "hpsoar/taro_harmony_app_init",
+      "hits": 1,
+      "fileCount": 579,
+      "appJsonPaths": [],
+      "gameJsonPaths": [],
+      "workerPaths": [
+        "entry/src/main/ets/npm/@tarojs/taro/types/api/worker/index.d.ts",
+        "entry/src/main/ets/npm/@tarojs/taro/worker/index.ts"
+      ],
+      "workerPathCount": 2,
+      "isMiniappWithWorker": false,
+      "isMiniGameOnly": false,
+      "excludedAsDocRepo": false
+    },
+    {
+      "fullName": "heweishui/taro-demo",
+      "error": "tree HTTP 0"
+    }
+  ]
+}

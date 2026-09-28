@@ -1,0 +1,27 @@
+{
+  "validatedAt": "2026-09-23T04:45:05.727Z",
+  "snapshotPath": "E:\\读论文\\R97\\datasets\\wechat-live\\wechat-probe-report.json",
+  "snapshot": {
+    "generatedAt": "2026-09-23T02:48:13.005Z",
+    "sdkVersion": "3.17.3",
+    "probeImplementation": "r97-oracle-probe",
+    "entityCount": 1240
+  },
+  "current": {
+    "generatedAt": "2026-09-23T04:45:05.727Z",
+    "sdkVersion": "3.17.3",
+    "probeImplementation": "r97-oracle-probe",
+    "probeErrorCount": 0,
+    "appServiceReady": true
+  },
+  "sdkVersionChanged": false,
+  "comparedCount": 1240,
+  "unchangedCount": 1240,
+  "changedCount": 0,
+  "driftRate": 0,
+  "declinedCount": 0,
+  "improvedCount": 0,
+  "changedExamples": [],
+  "notRecollectedCount": 0,
+  "notRecollectedExamples": []
+}

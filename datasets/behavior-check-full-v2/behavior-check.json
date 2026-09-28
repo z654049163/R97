@@ -1,0 +1,1492 @@
+{
+  "generatedAt": "2026-09-24T07:25:28.937Z",
+  "entityCount": 1248,
+  "observationCoverage": {
+    "language": 1248,
+    "node": 1248,
+    "edge": 1248
+  },
+  "browserVersion": {
+    "product": "Edg/150.0.4078.83",
+    "revision": "@7f302606e52ab615d52e1a0ab89ca415c8c843a3",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0",
+    "protocolVersion": "1.3"
+  },
+  "decisionCounts": {
+    "FOLD": 300,
+    "PROTECT": 38,
+    "UNKNOWN": 910
+  },
+  "groundTruthDifferentialCount": 40,
+  "metrics": {
+    "foldSoundness": 1,
+    "foldCoverageAmongAgreeing": 0.24834437086092714,
+    "crossHostAgreementRate": 0.967948717948718,
+    "probeAgreementRate": 0.9879807692307693
+  },
+  "protectBreakdown": {
+    "crossHostDifference": 27,
+    "evaluatorBaselineOnly": 11
+  },
+  "disagreements": {
+    "foldThatDiffer": [],
+    "protectWithoutCrossHostDifference": [
+      {
+        "entityId": "node:fs.writeFileSync",
+        "decision": "PROTECT",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ],
+        "engineNode": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "engineEdge": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "directNode": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "directEdge": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "engineNodeMatchesDirect": false,
+        "engineEdgeMatchesDirect": true,
+        "groundTruthDifferential": false,
+        "directPairDifferential": false
+      },
+      {
+        "entityId": "node:assert.strictEqual",
+        "decision": "PROTECT",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ],
+        "engineNode": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "engineEdge": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "directNode": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "directEdge": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "engineNodeMatchesDirect": false,
+        "engineEdgeMatchesDirect": true,
+        "groundTruthDifferential": false,
+        "directPairDifferential": false
+      },
+      {
+        "entityId": "node:path.resolve",
+        "decision": "PROTECT",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ],
+        "engineNode": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "engineEdge": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "directNode": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "directEdge": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "engineNodeMatchesDirect": false,
+        "engineEdgeMatchesDirect": true,
+        "groundTruthDifferential": false,
+        "directPairDifferential": false
+      },
+      {
+        "entityId": "node:fs.readFileSync",
+        "decision": "PROTECT",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ],
+        "engineNode": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "engineEdge": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "directNode": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "directEdge": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "engineNodeMatchesDirect": false,
+        "engineEdgeMatchesDirect": true,
+        "groundTruthDifferential": false,
+        "directPairDifferential": false
+      },
+      {
+        "entityId": "node:path.join",
+        "decision": "PROTECT",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ],
+        "engineNode": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "engineEdge": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "directNode": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "directEdge": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "engineNodeMatchesDirect": false,
+        "engineEdgeMatchesDirect": true,
+        "groundTruthDifferential": false,
+        "directPairDifferential": false
+      },
+      {
+        "entityId": "node:fs.readdir",
+        "decision": "PROTECT",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ],
+        "engineNode": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "engineEdge": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "directNode": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "directEdge": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "engineNodeMatchesDirect": false,
+        "engineEdgeMatchesDirect": true,
+        "groundTruthDifferential": false,
+        "directPairDifferential": false
+      },
+      {
+        "entityId": "node:fs.stat",
+        "decision": "PROTECT",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ],
+        "engineNode": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "engineEdge": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "directNode": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "directEdge": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "engineNodeMatchesDirect": false,
+        "engineEdgeMatchesDirect": true,
+        "groundTruthDifferential": false,
+        "directPairDifferential": false
+      },
+      {
+        "entityId": "node:fs.open",
+        "decision": "PROTECT",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ],
+        "engineNode": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "engineEdge": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "directNode": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "directEdge": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "engineNodeMatchesDirect": false,
+        "engineEdgeMatchesDirect": true,
+        "groundTruthDifferential": false,
+        "directPairDifferential": false
+      },
+      {
+        "entityId": "node:fs.readFile",
+        "decision": "PROTECT",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ],
+        "engineNode": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "engineEdge": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "directNode": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "directEdge": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "engineNodeMatchesDirect": false,
+        "engineEdgeMatchesDirect": true,
+        "groundTruthDifferential": false,
+        "directPairDifferential": false
+      },
+      {
+        "entityId": "node:fs.close",
+        "decision": "PROTECT",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ],
+        "engineNode": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "engineEdge": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "directNode": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "directEdge": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "engineNodeMatchesDirect": false,
+        "engineEdgeMatchesDirect": true,
+        "groundTruthDifferential": false,
+        "directPairDifferential": false
+      },
+      {
+        "entityId": "node:fs.writeFile",
+        "decision": "PROTECT",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ],
+        "engineNode": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "engineEdge": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "directNode": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "directEdge": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "engineNodeMatchesDirect": false,
+        "engineEdgeMatchesDirect": true,
+        "groundTruthDifferential": false,
+        "directPairDifferential": false
+      }
+    ],
+    "probeMismatches": [
+      {
+        "entityId": "RegExp.$1",
+        "decision": "UNKNOWN",
+        "reasonCodes": [
+          "CONTRACT_COVERAGE_MISSING"
+        ],
+        "engineNode": {
+          "existence": true
+        },
+        "engineEdge": {
+          "existence": true
+        },
+        "directNode": {
+          "existence": true,
+          "type": "string",
+          "callability": false
+        },
+        "directEdge": {
+          "existence": true,
+          "type": "string",
+          "callability": false
+        },
+        "engineNodeMatchesDirect": false,
+        "engineEdgeMatchesDirect": false,
+        "groundTruthDifferential": false,
+        "directPairDifferential": false
+      },
+      {
+        "entityId": "RegExp.$2",
+        "decision": "UNKNOWN",
+        "reasonCodes": [
+          "CONTRACT_COVERAGE_MISSING"
+        ],
+        "engineNode": {
+          "existence": true
+        },
+        "engineEdge": {
+          "existence": true
+        },
+        "directNode": {
+          "existence": true,
+          "type": "string",
+          "callability": false
+        },
+        "directEdge": {
+          "existence": true,
+          "type": "string",
+          "callability": false
+        },
+        "engineNodeMatchesDirect": false,
+        "engineEdgeMatchesDirect": false,
+        "groundTruthDifferential": false,
+        "directPairDifferential": false
+      },
+      {
+        "entityId": "RegExp.$1.length",
+        "decision": "UNKNOWN",
+        "reasonCodes": [
+          "CONTRACT_COVERAGE_MISSING"
+        ],
+        "engineNode": {
+          "existence": true
+        },
+        "engineEdge": {
+          "existence": true
+        },
+        "directNode": {
+          "existence": true,
+          "type": "number",
+          "callability": false
+        },
+        "directEdge": {
+          "existence": true,
+          "type": "number",
+          "callability": false
+        },
+        "engineNodeMatchesDirect": false,
+        "engineEdgeMatchesDirect": false,
+        "groundTruthDifferential": false,
+        "directPairDifferential": false
+      },
+      {
+        "entityId": "node:fs.writeFileSync",
+        "decision": "PROTECT",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ],
+        "engineNode": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "engineEdge": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "directNode": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "directEdge": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "engineNodeMatchesDirect": false,
+        "engineEdgeMatchesDirect": true,
+        "groundTruthDifferential": false,
+        "directPairDifferential": false
+      },
+      {
+        "entityId": "node:assert.strictEqual",
+        "decision": "PROTECT",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ],
+        "engineNode": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "engineEdge": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "directNode": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "directEdge": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "engineNodeMatchesDirect": false,
+        "engineEdgeMatchesDirect": true,
+        "groundTruthDifferential": false,
+        "directPairDifferential": false
+      },
+      {
+        "entityId": "node:path.resolve",
+        "decision": "PROTECT",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ],
+        "engineNode": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "engineEdge": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "directNode": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "directEdge": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "engineNodeMatchesDirect": false,
+        "engineEdgeMatchesDirect": true,
+        "groundTruthDifferential": false,
+        "directPairDifferential": false
+      },
+      {
+        "entityId": "node:fs.readFileSync",
+        "decision": "PROTECT",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ],
+        "engineNode": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "engineEdge": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "directNode": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "directEdge": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "engineNodeMatchesDirect": false,
+        "engineEdgeMatchesDirect": true,
+        "groundTruthDifferential": false,
+        "directPairDifferential": false
+      },
+      {
+        "entityId": "node:path.join",
+        "decision": "PROTECT",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ],
+        "engineNode": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "engineEdge": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "directNode": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "directEdge": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "engineNodeMatchesDirect": false,
+        "engineEdgeMatchesDirect": true,
+        "groundTruthDifferential": false,
+        "directPairDifferential": false
+      },
+      {
+        "entityId": "node:fs.readdir",
+        "decision": "PROTECT",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ],
+        "engineNode": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "engineEdge": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "directNode": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "directEdge": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "engineNodeMatchesDirect": false,
+        "engineEdgeMatchesDirect": true,
+        "groundTruthDifferential": false,
+        "directPairDifferential": false
+      },
+      {
+        "entityId": "node:fs.stat",
+        "decision": "PROTECT",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ],
+        "engineNode": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "engineEdge": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "directNode": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "directEdge": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "engineNodeMatchesDirect": false,
+        "engineEdgeMatchesDirect": true,
+        "groundTruthDifferential": false,
+        "directPairDifferential": false
+      },
+      {
+        "entityId": "node:fs.open",
+        "decision": "PROTECT",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ],
+        "engineNode": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "engineEdge": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "directNode": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "directEdge": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "engineNodeMatchesDirect": false,
+        "engineEdgeMatchesDirect": true,
+        "groundTruthDifferential": false,
+        "directPairDifferential": false
+      },
+      {
+        "entityId": "node:fs.readFile",
+        "decision": "PROTECT",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ],
+        "engineNode": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "engineEdge": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "directNode": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "directEdge": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "engineNodeMatchesDirect": false,
+        "engineEdgeMatchesDirect": true,
+        "groundTruthDifferential": false,
+        "directPairDifferential": false
+      },
+      {
+        "entityId": "node:fs.close",
+        "decision": "PROTECT",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ],
+        "engineNode": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "engineEdge": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "directNode": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "directEdge": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "engineNodeMatchesDirect": false,
+        "engineEdgeMatchesDirect": true,
+        "groundTruthDifferential": false,
+        "directPairDifferential": false
+      },
+      {
+        "entityId": "node:fs.writeFile",
+        "decision": "PROTECT",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ],
+        "engineNode": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "engineEdge": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "directNode": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "directEdge": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "engineNodeMatchesDirect": false,
+        "engineEdgeMatchesDirect": true,
+        "groundTruthDifferential": false,
+        "directPairDifferential": false
+      },
+      {
+        "entityId": "self",
+        "decision": "UNKNOWN",
+        "reasonCodes": [
+          "BINDING_UNRESOLVED"
+        ],
+        "engineNode": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "engineEdge": {
+          "existence": true
+        },
+        "directNode": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "directEdge": {
+          "existence": true,
+          "type": "object",
+          "callability": false
+        },
+        "engineNodeMatchesDirect": true,
+        "engineEdgeMatchesDirect": false,
+        "groundTruthDifferential": true,
+        "directPairDifferential": true
+      }
+    ]
+  },
+  "differentialExamples": [
+    {
+      "entityId": "console.warn",
+      "decision": "PROTECT",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ],
+      "engineNode": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "engineEdge": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "directNode": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "directEdge": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "engineNodeMatchesDirect": true,
+      "engineEdgeMatchesDirect": true,
+      "groundTruthDifferential": true,
+      "directPairDifferential": false
+    },
+    {
+      "entityId": "console.log",
+      "decision": "PROTECT",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ],
+      "engineNode": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "engineEdge": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "directNode": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "directEdge": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "engineNodeMatchesDirect": true,
+      "engineEdgeMatchesDirect": true,
+      "groundTruthDifferential": true,
+      "directPairDifferential": false
+    },
+    {
+      "entityId": "console.error",
+      "decision": "PROTECT",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ],
+      "engineNode": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "engineEdge": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "directNode": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "directEdge": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "engineNodeMatchesDirect": true,
+      "engineEdgeMatchesDirect": true,
+      "groundTruthDifferential": true,
+      "directPairDifferential": false
+    },
+    {
+      "entityId": "require",
+      "decision": "PROTECT",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ],
+      "engineNode": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "engineEdge": {
+        "existence": false,
+        "type": "undefined",
+        "callability": false
+      },
+      "directNode": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "directEdge": {
+        "existence": false,
+        "type": "undefined",
+        "callability": false
+      },
+      "engineNodeMatchesDirect": true,
+      "engineEdgeMatchesDirect": true,
+      "groundTruthDifferential": true,
+      "directPairDifferential": true
+    },
+    {
+      "entityId": "setTimeout",
+      "decision": "PROTECT",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ],
+      "engineNode": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "engineEdge": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "directNode": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "directEdge": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "engineNodeMatchesDirect": true,
+      "engineEdgeMatchesDirect": true,
+      "groundTruthDifferential": true,
+      "directPairDifferential": false
+    },
+    {
+      "entityId": "clearTimeout",
+      "decision": "PROTECT",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ],
+      "engineNode": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "engineEdge": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "directNode": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "directEdge": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "engineNodeMatchesDirect": true,
+      "engineEdgeMatchesDirect": true,
+      "groundTruthDifferential": true,
+      "directPairDifferential": false
+    },
+    {
+      "entityId": "setInterval",
+      "decision": "PROTECT",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ],
+      "engineNode": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "engineEdge": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "directNode": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "directEdge": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "engineNodeMatchesDirect": true,
+      "engineEdgeMatchesDirect": true,
+      "groundTruthDifferential": true,
+      "directPairDifferential": false
+    },
+    {
+      "entityId": "clearInterval",
+      "decision": "PROTECT",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ],
+      "engineNode": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "engineEdge": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "directNode": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "directEdge": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "engineNodeMatchesDirect": true,
+      "engineEdgeMatchesDirect": true,
+      "groundTruthDifferential": true,
+      "directPairDifferential": false
+    },
+    {
+      "entityId": "console",
+      "decision": "PROTECT",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ],
+      "engineNode": {
+        "existence": true,
+        "type": "object",
+        "callability": false
+      },
+      "engineEdge": {
+        "existence": true,
+        "type": "object",
+        "callability": false
+      },
+      "directNode": {
+        "existence": true,
+        "type": "object",
+        "callability": false
+      },
+      "directEdge": {
+        "existence": true,
+        "type": "object",
+        "callability": false
+      },
+      "engineNodeMatchesDirect": true,
+      "engineEdgeMatchesDirect": true,
+      "groundTruthDifferential": true,
+      "directPairDifferential": false
+    },
+    {
+      "entityId": "process",
+      "decision": "PROTECT",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ],
+      "engineNode": {
+        "existence": true,
+        "type": "object",
+        "callability": false
+      },
+      "engineEdge": {
+        "existence": false,
+        "type": "undefined",
+        "callability": false
+      },
+      "directNode": {
+        "existence": true,
+        "type": "object",
+        "callability": false
+      },
+      "directEdge": {
+        "existence": false,
+        "type": "undefined",
+        "callability": false
+      },
+      "engineNodeMatchesDirect": true,
+      "engineEdgeMatchesDirect": true,
+      "groundTruthDifferential": true,
+      "directPairDifferential": true
+    },
+    {
+      "entityId": "MessageChannel",
+      "decision": "PROTECT",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ],
+      "engineNode": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "engineEdge": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "directNode": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "directEdge": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "engineNodeMatchesDirect": true,
+      "engineEdgeMatchesDirect": true,
+      "groundTruthDifferential": true,
+      "directPairDifferential": false
+    },
+    {
+      "entityId": "process.nextTick",
+      "decision": "PROTECT",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ],
+      "engineNode": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "engineEdge": {
+        "existence": false,
+        "type": "undefined",
+        "callability": false
+      },
+      "directNode": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "directEdge": {
+        "existence": false,
+        "type": "undefined",
+        "callability": false
+      },
+      "engineNodeMatchesDirect": true,
+      "engineEdgeMatchesDirect": true,
+      "groundTruthDifferential": true,
+      "directPairDifferential": true
+    },
+    {
+      "entityId": "console.dir",
+      "decision": "PROTECT",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ],
+      "engineNode": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "engineEdge": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "directNode": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "directEdge": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "engineNodeMatchesDirect": true,
+      "engineEdgeMatchesDirect": true,
+      "groundTruthDifferential": true,
+      "directPairDifferential": false
+    },
+    {
+      "entityId": "setImmediate",
+      "decision": "PROTECT",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ],
+      "engineNode": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "engineEdge": {
+        "existence": false,
+        "type": "undefined",
+        "callability": false
+      },
+      "directNode": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "directEdge": {
+        "existence": false,
+        "type": "undefined",
+        "callability": false
+      },
+      "engineNodeMatchesDirect": true,
+      "engineEdgeMatchesDirect": true,
+      "groundTruthDifferential": true,
+      "directPairDifferential": true
+    },
+    {
+      "entityId": "console.info",
+      "decision": "PROTECT",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ],
+      "engineNode": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "engineEdge": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "directNode": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "directEdge": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "engineNodeMatchesDirect": true,
+      "engineEdgeMatchesDirect": true,
+      "groundTruthDifferential": true,
+      "directPairDifferential": false
+    },
+    {
+      "entityId": "atob",
+      "decision": "UNKNOWN",
+      "reasonCodes": [
+        "BINDING_UNRESOLVED"
+      ],
+      "engineNode": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "engineEdge": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "directNode": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "directEdge": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "engineNodeMatchesDirect": true,
+      "engineEdgeMatchesDirect": true,
+      "groundTruthDifferential": true,
+      "directPairDifferential": false
+    },
+    {
+      "entityId": "btoa",
+      "decision": "UNKNOWN",
+      "reasonCodes": [
+        "BINDING_UNRESOLVED"
+      ],
+      "engineNode": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "engineEdge": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "directNode": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "directEdge": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "engineNodeMatchesDirect": true,
+      "engineEdgeMatchesDirect": true,
+      "groundTruthDifferential": true,
+      "directPairDifferential": false
+    },
+    {
+      "entityId": "Buffer",
+      "decision": "PROTECT",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ],
+      "engineNode": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "engineEdge": {
+        "existence": false,
+        "type": "undefined",
+        "callability": false
+      },
+      "directNode": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "directEdge": {
+        "existence": false,
+        "type": "undefined",
+        "callability": false
+      },
+      "engineNodeMatchesDirect": true,
+      "engineEdgeMatchesDirect": true,
+      "groundTruthDifferential": true,
+      "directPairDifferential": true
+    },
+    {
+      "entityId": "TextDecoder",
+      "decision": "PROTECT",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ],
+      "engineNode": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "engineEdge": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "directNode": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "directEdge": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "engineNodeMatchesDirect": true,
+      "engineEdgeMatchesDirect": true,
+      "groundTruthDifferential": true,
+      "directPairDifferential": false
+    },
+    {
+      "entityId": "TextEncoder",
+      "decision": "PROTECT",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ],
+      "engineNode": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "engineEdge": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "directNode": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "directEdge": {
+        "existence": true,
+        "type": "function",
+        "callability": true
+      },
+      "engineNodeMatchesDirect": true,
+      "engineEdgeMatchesDirect": true,
+      "groundTruthDifferential": true,
+      "directPairDifferential": false
+    }
+  ]
+}

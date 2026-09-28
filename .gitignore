@@ -1,0 +1,23 @@
+# ---- 运行时与依赖 ----
+.runtime/
+node_modules/
+
+# ---- 语料源（GB 级，可从公开来源重建）----
+datasets/real-miniapp-full/*.jsonl
+datasets/real-miniapp/*.jsonl
+datasets/external-*/
+datasets/public-*/
+datasets/real-node-repos/
+datasets/real-browser-repos/
+
+# ---- 下载的第三方示例项目（体积大，各有独立许可证）----
+datasets/worker-miniapp-projects/
+datasets/worker-miniapp-candidates/code-search*.json
+
+# ---- 大体积位图（保留 SVG 与报告）----
+datasets/**/*.png
+
+# ---- 系统与编辑器 ----
+.DS_Store
+Thumbs.db
+*.log

@@ -1,0 +1,477 @@
+{
+  "generatedAt": "2026-09-24T11:09:47.808Z",
+  "authenticated": false,
+  "searchQueries": [
+    "wechat miniprogram",
+    "微信小程序",
+    "miniprogram demo",
+    "miniprogram worker",
+    "wx.createWorker",
+    "小程序 多线程",
+    "miniprogram 多线程",
+    "wechat miniprogram worker"
+  ],
+  "repositoryCount": 119,
+  "checkedCount": 37,
+  "withWorkerCount": 5,
+  "withWorker": [
+    {
+      "fullName": "cloudtogo/pageplug",
+      "stars": 2182,
+      "defaultBranch": "open-v1.9.39",
+      "fileCount": 14858,
+      "workerPaths": [
+        "app/client/src/ce/workers/Evaluation/Actions.ts",
+        "app/client/src/ce/workers/Evaluation/PlatformFunctions.ts",
+        "app/client/src/ce/workers/Evaluation/__tests__/dataTreeUtils.test.ts",
+        "app/client/src/ce/workers/Evaluation/dataTreeUtils.ts",
+        "app/client/src/ce/workers/Evaluation/evalWorkerActions.ts",
+        "app/client/src/ce/workers/Evaluation/evaluationUtils.test.ts",
+        "app/client/src/ce/workers/Evaluation/evaluationUtils.ts",
+        "app/client/src/ce/workers/Evaluation/fns/index.ts",
+        "app/client/src/ce/workers/Evaluation/fns/utils/isRunNClearFnQualifierEntity.ts",
+        "app/client/src/ce/workers/Evaluation/generateOverrideContext.ts",
+        "app/client/src/ce/workers/Evaluation/getEntityForEvalContextMap.ts",
+        "app/client/src/ce/workers/Evaluation/getJSActionForEvalContext.ts",
+        "app/client/src/ce/workers/common/DataTreeEvaluator/types.ts",
+        "app/client/src/ce/workers/common/DependencyMap/utils/getEntityDependenciesByType.ts",
+        "app/client/src/ce/workers/common/types.ts",
+        "app/client/src/ee/workers/Evaluation/Actions.ts",
+        "app/client/src/ee/workers/Evaluation/PlatformFunctions.ts",
+        "app/client/src/ee/workers/Evaluation/dataTreeUtils.ts",
+        "app/client/src/ee/workers/Evaluation/evalWorkerActions.ts",
+        "app/client/src/ee/workers/Evaluation/evaluationUtils.ts"
+      ],
+      "workerPathCount": 136
+    },
+    {
+      "fullName": "deepkolos/three-platformize",
+      "stars": 592,
+      "defaultBranch": "main",
+      "fileCount": 1200,
+      "workerPaths": [
+        "examples/jsm/loaders/obj2/worker/main/WorkerExecutionSupport.d.ts",
+        "examples/jsm/loaders/obj2/worker/main/WorkerExecutionSupport.js",
+        "examples/jsm/loaders/obj2/worker/parallel/OBJLoader2JsmWorker.js",
+        "examples/jsm/loaders/obj2/worker/parallel/WorkerRunner.d.ts",
+        "examples/jsm/loaders/obj2/worker/parallel/WorkerRunner.js"
+      ],
+      "workerPathCount": 5
+    },
+    {
+      "fullName": "weapp-vite/weapp-vite",
+      "stars": 486,
+      "defaultBranch": "main",
+      "fileCount": 15945,
+      "workerPaths": [
+        "apps/vite-native-ts/miniprogram/workers/a.ts",
+        "apps/vite-native-ts/miniprogram/workers/aaaaaa.ts",
+        "apps/vite-native-ts/miniprogram/workers/b.js",
+        "apps/vite-native-ts/miniprogram/workers/index.js",
+        "apps/vite-native-ts/miniprogram/workers/lala.ts",
+        "apps/vite-native-ts/miniprogram/workers/other.ts",
+        "apps/vite-native-ts/miniprogram/workers/shared.ts",
+        "apps/vite-native/workers/index.js",
+        "apps/vite-native/workers/utils.js",
+        "apps/wevu-vue-demo/src/pages/api-demos/worker/index.vue",
+        "e2e-apps/chunk-modes/src/workers/index.ts",
+        "e2e-apps/chunk-modes/src/workers/worker-dynamic.ts",
+        "packages/weapp-vite/test/fixtures/workers/index.ts",
+        "packages/weapp-vite/test/fixtures/workers/request.js",
+        "packages/weapp-vite/test/fixtures/workers/utils.js",
+        "test/fixture-projects/weapp-vite/shared-chunk-modes/src/workers/index.ts",
+        "test/fixture-projects/weapp-vite/shared-chunk-modes/src/workers/worker-dynamic.ts",
+        "test/fixture-projects/weapp-vite/shared-chunk-modes/src/workers/worker-shared.ts",
+        "test/fixture-projects/weapp-vite/watch-no-npm/src/workers/hello.ts",
+        "test/fixture-projects/weapp-vite/watch-no-npm/src/workers/index.js"
+      ],
+      "workerPathCount": 30
+    },
+    {
+      "fullName": "YunaiV/ruoyi-vue-pro",
+      "stars": 39422,
+      "defaultBranch": "master",
+      "fileCount": 13068,
+      "workerPaths": [
+        "yudao-module-mes/src/main/java/cn/iocoder/yudao/module/mes/controller/admin/md/workstation/vo/worker/MesMdWorkstationWorkerRespVO.java",
+        "yudao-module-mes/src/main/java/cn/iocoder/yudao/module/mes/controller/admin/md/workstation/vo/worker/MesMdWorkstationWorkerSaveReqVO.java"
+      ],
+      "workerPathCount": 2
+    },
+    {
+      "fullName": "NervJS/taro",
+      "stars": 37694,
+      "defaultBranch": "main",
+      "fileCount": 6883,
+      "workerPaths": [
+        "examples/mini-program-example/src/pages/api/worker/index.config.ts",
+        "examples/mini-program-example/src/pages/api/worker/index.scss",
+        "examples/mini-program-example/src/pages/api/worker/index.tsx",
+        "packages/taro-h5/src/api/worker/index.ts",
+        "packages/taro-platform-harmony-cpp/src/runtime/apis/worker/index.ts",
+        "packages/taro-platform-harmony-hybrid/src/api/apis/worker/index.ts",
+        "packages/taro-platform-harmony/src/apis/worker/index.ts",
+        "packages/taro/types/api/worker/index.d.ts"
+      ],
+      "workerPathCount": 8
+    }
+  ],
+  "checked": [
+    {
+      "fullName": "justjavac/wechat-miniapp-radar",
+      "stars": 51199,
+      "defaultBranch": "main",
+      "fileCount": 228,
+      "workerPaths": [],
+      "workerPathCount": 0
+    },
+    {
+      "fullName": "binarywang/WxJava",
+      "stars": 33122,
+      "defaultBranch": "develop",
+      "fileCount": 6461,
+      "workerPaths": [],
+      "workerPathCount": 0
+    },
+    {
+      "fullName": "logamee/lin-ui",
+      "stars": 4144,
+      "defaultBranch": "master",
+      "fileCount": 1939,
+      "workerPaths": [],
+      "workerPathCount": 0
+    },
+    {
+      "fullName": "UxxHans/Rainbow-Cats-Personal-WeChat-MiniProgram",
+      "stars": 2267,
+      "defaultBranch": "main",
+      "fileCount": 4483,
+      "workerPaths": [],
+      "workerPathCount": 0
+    },
+    {
+      "fullName": "cloudtogo/pageplug",
+      "stars": 2182,
+      "defaultBranch": "open-v1.9.39",
+      "fileCount": 14858,
+      "workerPaths": [
+        "app/client/src/ce/workers/Evaluation/Actions.ts",
+        "app/client/src/ce/workers/Evaluation/PlatformFunctions.ts",
+        "app/client/src/ce/workers/Evaluation/__tests__/dataTreeUtils.test.ts",
+        "app/client/src/ce/workers/Evaluation/dataTreeUtils.ts",
+        "app/client/src/ce/workers/Evaluation/evalWorkerActions.ts",
+        "app/client/src/ce/workers/Evaluation/evaluationUtils.test.ts",
+        "app/client/src/ce/workers/Evaluation/evaluationUtils.ts",
+        "app/client/src/ce/workers/Evaluation/fns/index.ts",
+        "app/client/src/ce/workers/Evaluation/fns/utils/isRunNClearFnQualifierEntity.ts",
+        "app/client/src/ce/workers/Evaluation/generateOverrideContext.ts",
+        "app/client/src/ce/workers/Evaluation/getEntityForEvalContextMap.ts",
+        "app/client/src/ce/workers/Evaluation/getJSActionForEvalContext.ts",
+        "app/client/src/ce/workers/common/DataTreeEvaluator/types.ts",
+        "app/client/src/ce/workers/common/DependencyMap/utils/getEntityDependenciesByType.ts",
+        "app/client/src/ce/workers/common/types.ts",
+        "app/client/src/ee/workers/Evaluation/Actions.ts",
+        "app/client/src/ee/workers/Evaluation/PlatformFunctions.ts",
+        "app/client/src/ee/workers/Evaluation/dataTreeUtils.ts",
+        "app/client/src/ee/workers/Evaluation/evalWorkerActions.ts",
+        "app/client/src/ee/workers/Evaluation/evaluationUtils.ts"
+      ],
+      "workerPathCount": 136
+    },
+    {
+      "fullName": "ArtisanCloud/PowerWeChat",
+      "stars": 1815,
+      "defaultBranch": "release/3.4.0",
+      "fileCount": 1559,
+      "workerPaths": [],
+      "workerPathCount": 0
+    },
+    {
+      "fullName": "Tencent/tdesign-miniprogram",
+      "stars": 1768,
+      "defaultBranch": "develop",
+      "fileCount": 6761,
+      "workerPaths": [],
+      "workerPathCount": 0
+    },
+    {
+      "fullName": "royalrick/weapp",
+      "stars": 1508,
+      "defaultBranch": "master",
+      "fileCount": 168,
+      "workerPaths": [],
+      "workerPathCount": 0
+    },
+    {
+      "fullName": "weidian-inc/hera",
+      "stars": 1501,
+      "defaultBranch": "master",
+      "fileCount": 1236,
+      "workerPaths": [],
+      "workerPathCount": 0
+    },
+    {
+      "fullName": "JackonYang/money-maker-apps",
+      "stars": 1330,
+      "defaultBranch": "master",
+      "fileCount": 1206,
+      "workerPaths": [],
+      "workerPathCount": 0
+    },
+    {
+      "fullName": "ant-move/Antmove",
+      "stars": 1328,
+      "defaultBranch": "master",
+      "fileCount": 1610,
+      "workerPaths": [],
+      "workerPathCount": 0
+    },
+    {
+      "fullName": "msojocs/wechat-web-devtools-linux",
+      "stars": 1289,
+      "defaultBranch": "electron",
+      "fileCount": 174,
+      "workerPaths": [],
+      "workerPathCount": 0
+    },
+    {
+      "fullName": "kezhenxu94/mini-github",
+      "stars": 1181,
+      "defaultBranch": "master",
+      "fileCount": 755,
+      "workerPaths": [],
+      "workerPathCount": 0
+    },
+    {
+      "fullName": "Tencent/tdesign-miniprogram-starter-retail",
+      "stars": 859,
+      "defaultBranch": "main",
+      "fileCount": 529,
+      "workerPaths": [],
+      "workerPathCount": 0
+    },
+    {
+      "fullName": "wechat-miniprogram/threejs-miniprogram",
+      "stars": 800,
+      "defaultBranch": "master",
+      "fileCount": 39,
+      "workerPaths": [],
+      "workerPathCount": 0
+    },
+    {
+      "fullName": "fthux/juejin",
+      "stars": 779,
+      "defaultBranch": "master",
+      "fileCount": 672,
+      "workerPaths": [],
+      "workerPathCount": 0
+    },
+    {
+      "fullName": "LeeJim/HowToCookOnMiniprogram",
+      "stars": 753,
+      "defaultBranch": "main",
+      "fileCount": 230,
+      "workerPaths": [],
+      "workerPathCount": 0
+    },
+    {
+      "fullName": "ruanyf/wechat-miniprogram-demos",
+      "stars": 734,
+      "defaultBranch": "master",
+      "fileCount": 216,
+      "workerPaths": [],
+      "workerPathCount": 0
+    },
+    {
+      "fullName": "realyao/WXminiprogram-Focus-clock",
+      "stars": 727,
+      "defaultBranch": "master",
+      "fileCount": 102,
+      "workerPaths": [],
+      "workerPathCount": 0
+    },
+    {
+      "fullName": "oopsguy/wechat-miniprogram-examples",
+      "stars": 649,
+      "defaultBranch": "master",
+      "fileCount": 157,
+      "workerPaths": [],
+      "workerPathCount": 0
+    },
+    {
+      "fullName": "wechat-miniprogram/recycle-view",
+      "stars": 641,
+      "defaultBranch": "master",
+      "fileCount": 50,
+      "workerPaths": [],
+      "workerPathCount": 0
+    },
+    {
+      "fullName": "deepkolos/three-platformize",
+      "stars": 592,
+      "defaultBranch": "main",
+      "fileCount": 1200,
+      "workerPaths": [
+        "examples/jsm/loaders/obj2/worker/main/WorkerExecutionSupport.d.ts",
+        "examples/jsm/loaders/obj2/worker/main/WorkerExecutionSupport.js",
+        "examples/jsm/loaders/obj2/worker/parallel/OBJLoader2JsmWorker.js",
+        "examples/jsm/loaders/obj2/worker/parallel/WorkerRunner.d.ts",
+        "examples/jsm/loaders/obj2/worker/parallel/WorkerRunner.js"
+      ],
+      "workerPathCount": 5
+    },
+    {
+      "fullName": "ant-design/ant-design-mini",
+      "stars": 551,
+      "defaultBranch": "master",
+      "fileCount": 1934,
+      "workerPaths": [],
+      "workerPathCount": 0
+    },
+    {
+      "fullName": "weapp-vite/weapp-vite",
+      "stars": 486,
+      "defaultBranch": "main",
+      "fileCount": 15945,
+      "workerPaths": [
+        "apps/vite-native-ts/miniprogram/workers/a.ts",
+        "apps/vite-native-ts/miniprogram/workers/aaaaaa.ts",
+        "apps/vite-native-ts/miniprogram/workers/b.js",
+        "apps/vite-native-ts/miniprogram/workers/index.js",
+        "apps/vite-native-ts/miniprogram/workers/lala.ts",
+        "apps/vite-native-ts/miniprogram/workers/other.ts",
+        "apps/vite-native-ts/miniprogram/workers/shared.ts",
+        "apps/vite-native/workers/index.js",
+        "apps/vite-native/workers/utils.js",
+        "apps/wevu-vue-demo/src/pages/api-demos/worker/index.vue",
+        "e2e-apps/chunk-modes/src/workers/index.ts",
+        "e2e-apps/chunk-modes/src/workers/worker-dynamic.ts",
+        "packages/weapp-vite/test/fixtures/workers/index.ts",
+        "packages/weapp-vite/test/fixtures/workers/request.js",
+        "packages/weapp-vite/test/fixtures/workers/utils.js",
+        "test/fixture-projects/weapp-vite/shared-chunk-modes/src/workers/index.ts",
+        "test/fixture-projects/weapp-vite/shared-chunk-modes/src/workers/worker-dynamic.ts",
+        "test/fixture-projects/weapp-vite/shared-chunk-modes/src/workers/worker-shared.ts",
+        "test/fixture-projects/weapp-vite/watch-no-npm/src/workers/hello.ts",
+        "test/fixture-projects/weapp-vite/watch-no-npm/src/workers/index.js"
+      ],
+      "workerPathCount": 30
+    },
+    {
+      "fullName": "MellowCo/unocss-preset-weapp",
+      "stars": 456,
+      "defaultBranch": "main",
+      "fileCount": 737,
+      "workerPaths": [],
+      "workerPathCount": 0
+    },
+    {
+      "fullName": "innocces/taro-hooks",
+      "stars": 452,
+      "defaultBranch": "next",
+      "fileCount": 1256,
+      "workerPaths": [],
+      "workerPathCount": 0
+    },
+    {
+      "fullName": "thundersword/fire-shop-lite",
+      "stars": 448,
+      "defaultBranch": "master",
+      "fileCount": 572,
+      "workerPaths": [],
+      "workerPathCount": 0
+    },
+    {
+      "fullName": "wuba/Taro-Mortgage-Calculator",
+      "stars": 431,
+      "defaultBranch": "master",
+      "fileCount": 111,
+      "workerPaths": [],
+      "workerPathCount": 0
+    },
+    {
+      "fullName": "ecomfe/okam",
+      "stars": 414,
+      "defaultBranch": "master",
+      "fileCount": 1167,
+      "workerPaths": [],
+      "workerPathCount": 0
+    },
+    {
+      "fullName": "milkbobo/gopay",
+      "stars": 411,
+      "defaultBranch": "master",
+      "fileCount": 26,
+      "workerPaths": [],
+      "workerPathCount": 0
+    },
+    {
+      "fullName": "fighting41love/funNLP",
+      "stars": 83387,
+      "defaultBranch": "master",
+      "fileCount": 144,
+      "workerPaths": [],
+      "workerPathCount": 0
+    },
+    {
+      "fullName": "YunaiV/ruoyi-vue-pro",
+      "stars": 39422,
+      "defaultBranch": "master",
+      "fileCount": 13068,
+      "workerPaths": [
+        "yudao-module-mes/src/main/java/cn/iocoder/yudao/module/mes/controller/admin/md/workstation/vo/worker/MesMdWorkstationWorkerRespVO.java",
+        "yudao-module-mes/src/main/java/cn/iocoder/yudao/module/mes/controller/admin/md/workstation/vo/worker/MesMdWorkstationWorkerSaveReqVO.java"
+      ],
+      "workerPathCount": 2
+    },
+    {
+      "fullName": "NervJS/taro",
+      "stars": 37694,
+      "defaultBranch": "main",
+      "fileCount": 6883,
+      "workerPaths": [
+        "examples/mini-program-example/src/pages/api/worker/index.config.ts",
+        "examples/mini-program-example/src/pages/api/worker/index.scss",
+        "examples/mini-program-example/src/pages/api/worker/index.tsx",
+        "packages/taro-h5/src/api/worker/index.ts",
+        "packages/taro-platform-harmony-cpp/src/runtime/apis/worker/index.ts",
+        "packages/taro-platform-harmony-hybrid/src/api/apis/worker/index.ts",
+        "packages/taro-platform-harmony/src/apis/worker/index.ts",
+        "packages/taro/types/api/worker/index.d.ts"
+      ],
+      "workerPathCount": 8
+    },
+    {
+      "fullName": "Dujltqzv/Some-Many-Books",
+      "stars": 23938,
+      "defaultBranch": "main",
+      "fileCount": 135,
+      "workerPaths": [],
+      "workerPathCount": 0
+    },
+    {
+      "fullName": "EastWorld/wechat-app-mall",
+      "stars": 21830,
+      "defaultBranch": "master",
+      "fileCount": 1264,
+      "workerPaths": [],
+      "workerPathCount": 0
+    },
+    {
+      "fullName": "linlinjava/litemall",
+      "stars": 20370,
+      "defaultBranch": "master",
+      "fileCount": 2039,
+      "workerPaths": [],
+      "workerPathCount": 0
+    },
+    {
+      "fullName": "opendigg/awesome-github-wechat-weapp",
+      "stars": 9491,
+      "defaultBranch": "master",
+      "fileCount": 1,
+      "workerPaths": [],
+      "workerPathCount": 0
+    }
+  ]
+}

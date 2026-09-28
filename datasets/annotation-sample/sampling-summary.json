@@ -1,0 +1,19 @@
+{
+  "generatedAt": "2026-09-24T15:47:54.136Z",
+  "inputPath": "datasets\\benchmark-wechat\\benchmark-results.jsonl",
+  "seed": "r97-annotation-v1",
+  "requestedSize": 500,
+  "selectedSize": 500,
+  "populationSize": 3895,
+  "bucketCount": 9,
+  "byState": {
+    "UNKNOWN": 208,
+    "FOLD": 167,
+    "PROTECT": 125
+  },
+  "byTransformation": {
+    "CALL_EVAL": 181,
+    "CONST_EVAL": 197,
+    "BRANCH_PRUNE": 122
+  }
+}

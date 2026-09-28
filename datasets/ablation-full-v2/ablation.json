@@ -1,0 +1,139 @@
+{
+  "generatedAt": "2026-09-24T07:26:11.184Z",
+  "corpusPath": "E:\\读论文\\R97\\datasets\\real-miniapp-full\\real-miniapp-candidates.jsonl",
+  "sampleCount": 3895,
+  "entityCount": 1246,
+  "groundTruth": {
+    "browserDifferentialEntityCount": 40,
+    "evaluator": "r97-oracle-probe 在语言基线（隔离 vm）、真实 Node、真实 Edge 三列的直接读取"
+  },
+  "configs": [
+    {
+      "id": "E1-only",
+      "label": "仅语言基线",
+      "evaluatorRuntimeId": "e1-ecmascript",
+      "targetRuntimeIds": [
+        "e1-ecmascript"
+      ],
+      "evidenceAvailability": {
+        "language": true,
+        "node": true,
+        "wechat": false,
+        "browser": false
+      },
+      "allowedFold": 1404,
+      "blockedFold": 2491,
+      "unknown": 2436,
+      "protect": 55,
+      "unsafeFold": 66,
+      "unsafeFoldRate": 0.04700854700854701,
+      "overProtection": 2420,
+      "overProtectionRate": 0.6439595529536988,
+      "unsafeExamples": [
+        "console.warn",
+        "console.warn",
+        "console.warn",
+        "console.warn",
+        "console.warn",
+        "console.log",
+        "console.log",
+        "console.log",
+        "console.log",
+        "console.log",
+        "console.error",
+        "console.error",
+        "console.error",
+        "console.error",
+        "console.error"
+      ]
+    },
+    {
+      "id": "E1+E2",
+      "label": "语言基线 + Node",
+      "evaluatorRuntimeId": "e1-ecmascript",
+      "targetRuntimeIds": [
+        "e1-ecmascript",
+        "e2-node-24.21.0"
+      ],
+      "evidenceAvailability": {
+        "language": true,
+        "node": true,
+        "wechat": false,
+        "browser": false
+      },
+      "allowedFold": 1338,
+      "blockedFold": 2557,
+      "unknown": 2436,
+      "protect": 121,
+      "unsafeFold": 0,
+      "unsafeFoldRate": 0,
+      "overProtection": 2420,
+      "overProtectionRate": 0.6439595529536988,
+      "unsafeExamples": []
+    },
+    {
+      "id": "E1+E2+E5",
+      "label": "语言基线 + Node + 浏览器（当前方案）",
+      "evaluatorRuntimeId": "e1-ecmascript",
+      "targetRuntimeIds": [
+        "e1-ecmascript",
+        "e2-node-24.21.0",
+        "e5-edge-headless"
+      ],
+      "evidenceAvailability": {
+        "language": true,
+        "node": true,
+        "wechat": false,
+        "browser": true
+      },
+      "allowedFold": 1338,
+      "blockedFold": 2557,
+      "unknown": 2432,
+      "protect": 125,
+      "unsafeFold": 0,
+      "unsafeFoldRate": 0,
+      "overProtection": 2420,
+      "overProtectionRate": 0.6439595529536988,
+      "unsafeExamples": []
+    },
+    {
+      "id": "E2+E5",
+      "label": "Node 求值 + 浏览器目标（宽松）",
+      "evaluatorRuntimeId": "e2-node-24.21.0",
+      "targetRuntimeIds": [
+        "e5-edge-headless"
+      ],
+      "evidenceAvailability": {
+        "language": true,
+        "node": true,
+        "wechat": false,
+        "browser": true
+      },
+      "allowedFold": 1404,
+      "blockedFold": 2491,
+      "unknown": 2432,
+      "protect": 59,
+      "unsafeFold": 66,
+      "unsafeFoldRate": 0.04700854700854701,
+      "overProtection": 2420,
+      "overProtectionRate": 0.6439595529536988,
+      "unsafeExamples": [
+        "console.warn",
+        "console.warn",
+        "console.warn",
+        "console.warn",
+        "console.warn",
+        "console.log",
+        "console.log",
+        "console.log",
+        "console.log",
+        "console.log",
+        "console.error",
+        "console.error",
+        "console.error",
+        "console.error",
+        "console.error"
+      ]
+    }
+  ]
+}

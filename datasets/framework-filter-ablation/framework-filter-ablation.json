@@ -1,0 +1,453 @@
+{
+  "generatedAt": "2026-09-24T07:52:05.199Z",
+  "corpusPath": "E:\\读论文\\R97\\datasets\\real-miniapp-full\\real-miniapp-candidates.jsonl",
+  "wechatReportPath": "E:\\读论文\\R97\\datasets\\wechat-live\\wechat-probe-report.json",
+  "wechatMetadata": {
+    "generatedAt": "2026-09-23T02:48:13.005Z",
+    "runtimeId": "e4-wechat-real",
+    "sdkVersion": "3.17.3",
+    "platform": "devtools",
+    "probeErrorCount": 0
+  },
+  "edge": {
+    "available": true,
+    "error": null
+  },
+  "corpus": {
+    "rawRecordCount": 1200000,
+    "entityCount": 1248,
+    "totalOccurrences": 1200000,
+    "projectCount": 1519
+  },
+  "groundTruth": {
+    "nodeWechatComparableCount": 1227,
+    "nodeWechatDifferentialCount": 186,
+    "nodeWechatOnlyCount": 168,
+    "nodeEdgeDifferentialCount": 21,
+    "note": "Node-WeChat 是主真值；Node-Edge 只作为补充宿主验证。缺失观测不判为相同。"
+  },
+  "strategies": [
+    {
+      "id": "F0",
+      "label": "不过滤",
+      "description": "保留全部候选运行时实体",
+      "filteredEntityCount": 0,
+      "retainedEntityCount": 1248,
+      "entityReductionRate": 0,
+      "filteredOccurrences": 0,
+      "occurrenceReductionRate": 0,
+      "nodeWechatDifferentialRemoved": 0,
+      "nodeEdgeDifferentialRemoved": 0,
+      "anyDifferentialRemoved": 0,
+      "wechatOnlyRemoved": 0,
+      "safetyPassed": true,
+      "topK": [
+        {
+          "k": 100,
+          "retainedProbed": 100,
+          "nodeWechatDifferentialFound": 10,
+          "nodeEdgeDifferentialFound": 0
+        },
+        {
+          "k": 250,
+          "retainedProbed": 250,
+          "nodeWechatDifferentialFound": 27,
+          "nodeEdgeDifferentialFound": 1
+        },
+        {
+          "k": 500,
+          "retainedProbed": 500,
+          "nodeWechatDifferentialFound": 91,
+          "nodeEdgeDifferentialFound": 4
+        }
+      ],
+      "probesToFindAllKnownDifferentials": 1242,
+      "patternMatches": [],
+      "removedDifferentialExamples": [],
+      "removedWechatOnlyExamples": []
+    },
+    {
+      "id": "F1",
+      "label": "保守框架外壳过滤",
+      "description": "只删除高置信度的模板引擎、双下划线内部名和混淆器名称",
+      "filteredEntityCount": 5,
+      "retainedEntityCount": 1243,
+      "entityReductionRate": 0.004006410256410256,
+      "filteredOccurrences": 30,
+      "occurrenceReductionRate": 0.000025,
+      "nodeWechatDifferentialRemoved": 0,
+      "nodeEdgeDifferentialRemoved": 0,
+      "anyDifferentialRemoved": 0,
+      "wechatOnlyRemoved": 0,
+      "safetyPassed": true,
+      "topK": [
+        {
+          "k": 100,
+          "retainedProbed": 100,
+          "nodeWechatDifferentialFound": 10,
+          "nodeEdgeDifferentialFound": 0
+        },
+        {
+          "k": 250,
+          "retainedProbed": 250,
+          "nodeWechatDifferentialFound": 27,
+          "nodeEdgeDifferentialFound": 1
+        },
+        {
+          "k": 500,
+          "retainedProbed": 500,
+          "nodeWechatDifferentialFound": 91,
+          "nodeEdgeDifferentialFound": 4
+        }
+      ],
+      "probesToFindAllKnownDifferentials": 1237,
+      "patternMatches": [
+        {
+          "name": "wechat-template-shell",
+          "source": "^\\$gwx_\\d+$",
+          "entityCount": 0,
+          "occurrences": 0,
+          "nodeWechatDifferentialCount": 0,
+          "nodeEdgeDifferentialCount": 0,
+          "examples": []
+        },
+        {
+          "name": "dunder-internal",
+          "source": "^__\\w+__$",
+          "entityCount": 5,
+          "occurrences": 30,
+          "nodeWechatDifferentialCount": 0,
+          "nodeEdgeDifferentialCount": 0,
+          "examples": [
+            "__appServiceSDK__.loadSubpackage",
+            "__subContextEngine__.injectEntryFile",
+            "__subContextEngine__",
+            "__subContextEngine__.loadJsFiles",
+            "__VUE_SSR_CONTEXT__"
+          ]
+        },
+        {
+          "name": "obfuscator-hex",
+          "source": "^_0x[a-fA-F0-9]+$",
+          "entityCount": 0,
+          "occurrences": 0,
+          "nodeWechatDifferentialCount": 0,
+          "nodeEdgeDifferentialCount": 0,
+          "examples": []
+        }
+      ],
+      "removedDifferentialExamples": [],
+      "removedWechatOnlyExamples": []
+    },
+    {
+      "id": "F2",
+      "label": "旧系统完整模式过滤",
+      "description": "复现旧 S3 的全部 11 条正则，包括单字母编号和 nv_ 前缀",
+      "filteredEntityCount": 33,
+      "retainedEntityCount": 1215,
+      "entityReductionRate": 0.026442307692307692,
+      "filteredOccurrences": 534,
+      "occurrenceReductionRate": 0.000445,
+      "nodeWechatDifferentialRemoved": 0,
+      "nodeEdgeDifferentialRemoved": 0,
+      "anyDifferentialRemoved": 0,
+      "wechatOnlyRemoved": 0,
+      "safetyPassed": true,
+      "topK": [
+        {
+          "k": 100,
+          "retainedProbed": 100,
+          "nodeWechatDifferentialFound": 10,
+          "nodeEdgeDifferentialFound": 0
+        },
+        {
+          "k": 250,
+          "retainedProbed": 250,
+          "nodeWechatDifferentialFound": 27,
+          "nodeEdgeDifferentialFound": 1
+        },
+        {
+          "k": 500,
+          "retainedProbed": 500,
+          "nodeWechatDifferentialFound": 92,
+          "nodeEdgeDifferentialFound": 4
+        }
+      ],
+      "probesToFindAllKnownDifferentials": 1209,
+      "patternMatches": [
+        {
+          "name": "wechat-template-shell",
+          "source": "^\\$gwx_\\d+$",
+          "entityCount": 0,
+          "occurrences": 0,
+          "nodeWechatDifferentialCount": 0,
+          "nodeEdgeDifferentialCount": 0,
+          "examples": []
+        },
+        {
+          "name": "dunder-internal",
+          "source": "^__\\w+__$",
+          "entityCount": 5,
+          "occurrences": 30,
+          "nodeWechatDifferentialCount": 0,
+          "nodeEdgeDifferentialCount": 0,
+          "examples": [
+            "__appServiceSDK__.loadSubpackage",
+            "__subContextEngine__.injectEntryFile",
+            "__subContextEngine__",
+            "__subContextEngine__.loadJsFiles",
+            "__VUE_SSR_CONTEXT__"
+          ]
+        },
+        {
+          "name": "obfuscator-hex",
+          "source": "^_0x[a-fA-F0-9]+$",
+          "entityCount": 0,
+          "occurrences": 0,
+          "nodeWechatDifferentialCount": 0,
+          "nodeEdgeDifferentialCount": 0,
+          "examples": []
+        },
+        {
+          "name": "underscore-letter-number",
+          "source": "^_[a-zA-Z]\\d*$",
+          "entityCount": 0,
+          "occurrences": 0,
+          "nodeWechatDifferentialCount": 0,
+          "nodeEdgeDifferentialCount": 0,
+          "examples": []
+        },
+        {
+          "name": "underscore-capitalized",
+          "source": "^_[A-Z][a-z]+$",
+          "entityCount": 0,
+          "occurrences": 0,
+          "nodeWechatDifferentialCount": 0,
+          "nodeEdgeDifferentialCount": 0,
+          "examples": []
+        },
+        {
+          "name": "underscore-lowercase",
+          "source": "^_[a-z]{2,}$",
+          "entityCount": 12,
+          "occurrences": 379,
+          "nodeWechatDifferentialCount": 0,
+          "nodeEdgeDifferentialCount": 0,
+          "examples": [
+            "_typeof",
+            "_size",
+            "_util.Promise",
+            "_index.setEnv",
+            "_require.MINI_PROGRAM_RUNTIME_CONFIG"
+          ]
+        },
+        {
+          "name": "underscore-lowercase-number",
+          "source": "^_[a-z]+_\\d+$",
+          "entityCount": 0,
+          "occurrences": 0,
+          "nodeWechatDifferentialCount": 0,
+          "nodeEdgeDifferentialCount": 0,
+          "examples": []
+        },
+        {
+          "name": "underscore-snake-case",
+          "source": "^_[a-z]+_[a-z]+$",
+          "entityCount": 1,
+          "occurrences": 1,
+          "nodeWechatDifferentialCount": 0,
+          "nodeEdgeDifferentialCount": 0,
+          "examples": [
+            "_define_property._"
+          ]
+        },
+        {
+          "name": "wechat-native-wrapper",
+          "source": "^nv_[a-z]+$",
+          "entityCount": 12,
+          "occurrences": 98,
+          "nodeWechatDifferentialCount": 0,
+          "nodeEdgeDifferentialCount": 0,
+          "examples": [
+            "nv_navigator",
+            "nv_navigator.nv_userAgent.nv_indexOf",
+            "nv_navigator.nv_userAgent",
+            "nv_window",
+            "nv_size"
+          ]
+        },
+        {
+          "name": "one-letter-number",
+          "source": "^[a-z]\\d+[a-z]?$",
+          "entityCount": 3,
+          "occurrences": 26,
+          "nodeWechatDifferentialCount": 0,
+          "nodeEdgeDifferentialCount": 0,
+          "examples": [
+            "c1",
+            "c2",
+            "c3"
+          ]
+        },
+        {
+          "name": "two-letter-number",
+          "source": "^[a-z]{2}\\d+[a-z]?$",
+          "entityCount": 0,
+          "occurrences": 0,
+          "nodeWechatDifferentialCount": 0,
+          "nodeEdgeDifferentialCount": 0,
+          "examples": []
+        }
+      ],
+      "removedDifferentialExamples": [],
+      "removedWechatOnlyExamples": []
+    },
+    {
+      "id": "F3",
+      "label": "修正后宽口径框架族压力测试",
+      "description": "根据真实语料中的微信模板、渲染、运行时包装和打包器名称扩大过滤范围，仅用于测试安全边界",
+      "filteredEntityCount": 134,
+      "retainedEntityCount": 1114,
+      "entityReductionRate": 0.10737179487179487,
+      "filteredOccurrences": 231236,
+      "occurrenceReductionRate": 0.19269666666666665,
+      "nodeWechatDifferentialRemoved": 8,
+      "nodeEdgeDifferentialRemoved": 0,
+      "anyDifferentialRemoved": 8,
+      "wechatOnlyRemoved": 8,
+      "safetyPassed": false,
+      "topK": [
+        {
+          "k": 100,
+          "retainedProbed": 100,
+          "nodeWechatDifferentialFound": 2,
+          "nodeEdgeDifferentialFound": 0
+        },
+        {
+          "k": 250,
+          "retainedProbed": 250,
+          "nodeWechatDifferentialFound": 28,
+          "nodeEdgeDifferentialFound": 1
+        },
+        {
+          "k": 500,
+          "retainedProbed": 500,
+          "nodeWechatDifferentialFound": 112,
+          "nodeEdgeDifferentialFound": 8
+        }
+      ],
+      "probesToFindAllKnownDifferentials": null,
+      "patternMatches": [
+        {
+          "name": "wechat-template-prefix",
+          "source": "^\\$gwx_",
+          "entityCount": 61,
+          "occurrences": 2159,
+          "nodeWechatDifferentialCount": 0,
+          "nodeEdgeDifferentialCount": 0,
+          "examples": [
+            "$gwx_wx104a1a20c3f81ec2",
+            "$gwx_wx293c4b6097a8a4d0",
+            "$gwx_wx50b5593e81dd937a",
+            "$gwx_wx94a6522b1d640c3b",
+            "$gwx_wxefe655223916819e"
+          ]
+        },
+        {
+          "name": "wechat-runtime-helper",
+          "source": "^\\$(?:gwn|gwl)$",
+          "entityCount": 2,
+          "occurrences": 4516,
+          "nodeWechatDifferentialCount": 2,
+          "nodeEdgeDifferentialCount": 0,
+          "examples": [
+            "$gwn",
+            "$gwl"
+          ]
+        },
+        {
+          "name": "wechat-render-runtime",
+          "source": "^wh$",
+          "entityCount": 4,
+          "occurrences": 194830,
+          "nodeWechatDifferentialCount": 4,
+          "nodeEdgeDifferentialCount": 0,
+          "examples": [
+            "wh",
+            "wh.hn",
+            "wh.rv",
+            "wh.nh"
+          ]
+        },
+        {
+          "name": "wechat-generated-short-name",
+          "source": "^(?:gra|grb|snap_bb)$",
+          "entityCount": 3,
+          "occurrences": 20912,
+          "nodeWechatDifferentialCount": 2,
+          "nodeEdgeDifferentialCount": 0,
+          "examples": [
+            "snap_bb",
+            "gra",
+            "grb"
+          ]
+        },
+        {
+          "name": "wechat-native-or-transpiler-wrapper",
+          "source": "^(?:nv_|nt_)",
+          "entityCount": 59,
+          "occurrences": 8808,
+          "nodeWechatDifferentialCount": 0,
+          "nodeEdgeDifferentialCount": 0,
+          "examples": [
+            "nt_0",
+            "nt_1",
+            "nt_5",
+            "nt_6",
+            "nt_8"
+          ]
+        },
+        {
+          "name": "bundler-internal",
+          "source": "^_(?:util|require)$",
+          "entityCount": 5,
+          "occurrences": 11,
+          "nodeWechatDifferentialCount": 0,
+          "nodeEdgeDifferentialCount": 0,
+          "examples": [
+            "_util.Promise",
+            "_require.MINI_PROGRAM_RUNTIME_CONFIG",
+            "_require.MINI_PROGRAM_RUNTIME_CONFIG.defaultH5EntryUrl",
+            "_require.buildWebViewUrl",
+            "_require.DEFAULT_H5_ENTRY_URL"
+          ]
+        }
+      ],
+      "removedDifferentialExamples": [
+        "$gwl",
+        "$gwn",
+        "gra",
+        "grb",
+        "wh",
+        "wh.hn",
+        "wh.nh",
+        "wh.rv"
+      ],
+      "removedWechatOnlyExamples": [
+        "$gwl",
+        "$gwn",
+        "gra",
+        "grb",
+        "wh",
+        "wh.hn",
+        "wh.nh",
+        "wh.rv"
+      ]
+    }
+  ],
+  "recommendation": {
+    "decision": "keep-as-ranking-only",
+    "reason": "旧规则未删除真实差异，但只减少 0.04% 的调用点；保守过滤的实体缩减不足 2%，固定预算收益也近似噪声，不值得进入主决策链。 宽口径压力配置虽然缩减了 10.74% 的实体，却删除了 8 个真实 Node-微信差异和 8 个微信独有 API，不能用于正式决策。",
+    "selectedStrategy": "F0"
+  }
+}

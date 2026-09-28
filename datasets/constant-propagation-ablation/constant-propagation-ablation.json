@@ -1,0 +1,5978 @@
+{
+  "generatedAt": "2026-09-24T07:55:05.564Z",
+  "corpusPath": "E:\\读论文\\R97\\datasets\\real-miniapp-full\\real-miniapp-candidates.jsonl",
+  "wechatReportPath": "E:\\读论文\\R97\\datasets\\wechat-live\\wechat-probe-report.json",
+  "baseline": {
+    "dynamicRecordCount": 221,
+    "sourceFileCount": 25,
+    "state": "UNKNOWN"
+  },
+  "analysis": {
+    "comparedRecordCount": 221,
+    "resolvedByConstantPropagation": 0,
+    "unresolvedRecordCount": 221,
+    "resolvedRate": 0,
+    "resolutionIncreaseRate": 0,
+    "unknownReduction": 0,
+    "unknownReductionRate": 0,
+    "improvedStateDistribution": {
+      "UNKNOWN": 221
+    },
+    "resolvedEntityDistribution": {},
+    "resolvedExamples": [],
+    "remainingUnknownExamples": [
+      {
+        "sampleId": "d1a8416229415203d521d3cb",
+        "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\623abe86\\app-service.js",
+        "file": "623abe86\\app-service.js",
+        "programPoint": {
+          "filePath": "623abe86\\app-service.js",
+          "start": {
+            "line": 2278,
+            "column": 15
+          },
+          "end": {
+            "line": 2278,
+            "column": 43
+          },
+          "nodeType": "CallExpression"
+        },
+        "baselineState": "UNKNOWN",
+        "baselineEntityId": "wx",
+        "resolved": false,
+        "improvedEntityId": "wx",
+        "improvedState": "UNKNOWN",
+        "reasonCodes": []
+      },
+      {
+        "sampleId": "69ef70047fbddc9db4703345",
+        "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\623abe86\\app-service.js",
+        "file": "623abe86\\app-service.js",
+        "programPoint": {
+          "filePath": "623abe86\\app-service.js",
+          "start": {
+            "line": 2278,
+            "column": 15
+          },
+          "end": {
+            "line": 2278,
+            "column": 22
+          },
+          "nodeType": "MemberExpression"
+        },
+        "baselineState": "UNKNOWN",
+        "baselineEntityId": "wx",
+        "resolved": false,
+        "improvedEntityId": "wx",
+        "improvedState": "UNKNOWN",
+        "reasonCodes": []
+      },
+      {
+        "sampleId": "33c30066b319ad974d6e8976",
+        "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\8ca0548d\\app-service.js",
+        "file": "8ca0548d\\app-service.js",
+        "programPoint": {
+          "filePath": "8ca0548d\\app-service.js",
+          "start": {
+            "line": 2278,
+            "column": 15
+          },
+          "end": {
+            "line": 2278,
+            "column": 43
+          },
+          "nodeType": "CallExpression"
+        },
+        "baselineState": "UNKNOWN",
+        "baselineEntityId": "wx",
+        "resolved": false,
+        "improvedEntityId": "wx",
+        "improvedState": "UNKNOWN",
+        "reasonCodes": []
+      },
+      {
+        "sampleId": "a44b89186d4f9161b09f2139",
+        "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\8ca0548d\\app-service.js",
+        "file": "8ca0548d\\app-service.js",
+        "programPoint": {
+          "filePath": "8ca0548d\\app-service.js",
+          "start": {
+            "line": 2278,
+            "column": 15
+          },
+          "end": {
+            "line": 2278,
+            "column": 22
+          },
+          "nodeType": "MemberExpression"
+        },
+        "baselineState": "UNKNOWN",
+        "baselineEntityId": "wx",
+        "resolved": false,
+        "improvedEntityId": "wx",
+        "improvedState": "UNKNOWN",
+        "reasonCodes": []
+      },
+      {
+        "sampleId": "8d7f058957eefd98793f2d3c",
+        "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\亲戚计算器_b55e3d62\\app-service.js",
+        "file": "亲戚计算器_b55e3d62\\app-service.js",
+        "programPoint": {
+          "filePath": "亲戚计算器_b55e3d62\\app-service.js",
+          "start": {
+            "line": 1146,
+            "column": 1032
+          },
+          "end": {
+            "line": 1146,
+            "column": 1036
+          },
+          "nodeType": "MemberExpression"
+        },
+        "baselineState": "UNKNOWN",
+        "baselineEntityId": "e.RELATIONSHIP_MAP",
+        "resolved": false,
+        "improvedEntityId": "e.RELATIONSHIP_MAP",
+        "improvedState": "UNKNOWN",
+        "reasonCodes": []
+      },
+      {
+        "sampleId": "489e17621a8246f906c784f8",
+        "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\权大师商标查询_03d5d6b5\\app-service.js",
+        "file": "权大师商标查询_03d5d6b5\\app-service.js",
+        "programPoint": {
+          "filePath": "权大师商标查询_03d5d6b5\\app-service.js",
+          "start": {
+            "line": 1306,
+            "column": 17636
+          },
+          "end": {
+            "line": 1306,
+            "column": 17681
+          },
+          "nodeType": "CallExpression"
+        },
+        "baselineState": "UNKNOWN",
+        "baselineEntityId": "Object",
+        "resolved": false,
+        "improvedEntityId": "Object",
+        "improvedState": "UNKNOWN",
+        "reasonCodes": []
+      },
+      {
+        "sampleId": "801ecd14b1089157939589a5",
+        "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\权大师商标查询_03d5d6b5\\app-service.js",
+        "file": "权大师商标查询_03d5d6b5\\app-service.js",
+        "programPoint": {
+          "filePath": "权大师商标查询_03d5d6b5\\app-service.js",
+          "start": {
+            "line": 1306,
+            "column": 17772
+          },
+          "end": {
+            "line": 1306,
+            "column": 17790
+          },
+          "nodeType": "MemberExpression"
+        },
+        "baselineState": "UNKNOWN",
+        "baselineEntityId": "Symbol",
+        "resolved": false,
+        "improvedEntityId": "Symbol",
+        "improvedState": "UNKNOWN",
+        "reasonCodes": []
+      },
+      {
+        "sampleId": "f619c1e5a3d787fe5affcd31",
+        "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\权大师商标查询_03d5d6b5\\app-service.js",
+        "file": "权大师商标查询_03d5d6b5\\app-service.js",
+        "programPoint": {
+          "filePath": "权大师商标查询_03d5d6b5\\app-service.js",
+          "start": {
+            "line": 1306,
+            "column": 17792
+          },
+          "end": {
+            "line": 1306,
+            "column": 17850
+          },
+          "nodeType": "CallExpression"
+        },
+        "baselineState": "UNKNOWN",
+        "baselineEntityId": "Object",
+        "resolved": false,
+        "improvedEntityId": "Object",
+        "improvedState": "UNKNOWN",
+        "reasonCodes": []
+      },
+      {
+        "sampleId": "191eacecf41b4e90d4aa078c",
+        "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\权大师商标查询_03d5d6b5\\app-service.js",
+        "file": "权大师商标查询_03d5d6b5\\app-service.js",
+        "programPoint": {
+          "filePath": "权大师商标查询_03d5d6b5\\app-service.js",
+          "start": {
+            "line": 1306,
+            "column": 17813
+          },
+          "end": {
+            "line": 1306,
+            "column": 17831
+          },
+          "nodeType": "MemberExpression"
+        },
+        "baselineState": "UNKNOWN",
+        "baselineEntityId": "Symbol",
+        "resolved": false,
+        "improvedEntityId": "Symbol",
+        "improvedState": "UNKNOWN",
+        "reasonCodes": []
+      },
+      {
+        "sampleId": "e1254fce5af86eb65ded0de5",
+        "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\权大师商标查询_03d5d6b5\\app-service.js",
+        "file": "权大师商标查询_03d5d6b5\\app-service.js",
+        "programPoint": {
+          "filePath": "权大师商标查询_03d5d6b5\\app-service.js",
+          "start": {
+            "line": 1306,
+            "column": 17851
+          },
+          "end": {
+            "line": 1306,
+            "column": 17894
+          },
+          "nodeType": "CallExpression"
+        },
+        "baselineState": "UNKNOWN",
+        "baselineEntityId": "Object",
+        "resolved": false,
+        "improvedEntityId": "Object",
+        "improvedState": "UNKNOWN",
+        "reasonCodes": []
+      },
+      {
+        "sampleId": "9630323d9fd9bf2447bf8015",
+        "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\权大师商标查询_03d5d6b5\\app-service.js",
+        "file": "权大师商标查询_03d5d6b5\\app-service.js",
+        "programPoint": {
+          "filePath": "权大师商标查询_03d5d6b5\\app-service.js",
+          "start": {
+            "line": 1306,
+            "column": 18012
+          },
+          "end": {
+            "line": 1306,
+            "column": 18036
+          },
+          "nodeType": "CallExpression"
+        },
+        "baselineState": "UNKNOWN",
+        "baselineEntityId": "Object",
+        "resolved": false,
+        "improvedEntityId": "Object",
+        "improvedState": "UNKNOWN",
+        "reasonCodes": []
+      },
+      {
+        "sampleId": "0e53e030e91989406b006790",
+        "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\权大师商标查询_03d5d6b5\\app-service.js",
+        "file": "权大师商标查询_03d5d6b5\\app-service.js",
+        "programPoint": {
+          "filePath": "权大师商标查询_03d5d6b5\\app-service.js",
+          "start": {
+            "line": 1306,
+            "column": 18056
+          },
+          "end": {
+            "line": 1306,
+            "column": 18112
+          },
+          "nodeType": "CallExpression"
+        },
+        "baselineState": "UNKNOWN",
+        "baselineEntityId": "Object",
+        "resolved": false,
+        "improvedEntityId": "Object",
+        "improvedState": "UNKNOWN",
+        "reasonCodes": []
+      },
+      {
+        "sampleId": "0cc7eab4cd7b095843fde5ae",
+        "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\权大师商标查询_03d5d6b5\\app-service.js",
+        "file": "权大师商标查询_03d5d6b5\\app-service.js",
+        "programPoint": {
+          "filePath": "权大师商标查询_03d5d6b5\\app-service.js",
+          "start": {
+            "line": 1306,
+            "column": 18401
+          },
+          "end": {
+            "line": 1306,
+            "column": 18448
+          },
+          "nodeType": "CallExpression"
+        },
+        "baselineState": "UNKNOWN",
+        "baselineEntityId": "Object",
+        "resolved": false,
+        "improvedEntityId": "Object",
+        "improvedState": "UNKNOWN",
+        "reasonCodes": []
+      },
+      {
+        "sampleId": "50d785c77e9f656407c3be93",
+        "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\权大师商标查询_03d5d6b5\\app-service.js",
+        "file": "权大师商标查询_03d5d6b5\\app-service.js",
+        "programPoint": {
+          "filePath": "权大师商标查询_03d5d6b5\\app-service.js",
+          "start": {
+            "line": 1306,
+            "column": 18401
+          },
+          "end": {
+            "line": 1306,
+            "column": 18431
+          },
+          "nodeType": "MemberExpression"
+        },
+        "baselineState": "UNKNOWN",
+        "baselineEntityId": "Object",
+        "resolved": false,
+        "improvedEntityId": "Object",
+        "improvedState": "UNKNOWN",
+        "reasonCodes": []
+      },
+      {
+        "sampleId": "50d785c77e9f656407c3be93",
+        "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\权大师商标查询_03d5d6b5\\app-service.js",
+        "file": "权大师商标查询_03d5d6b5\\app-service.js",
+        "programPoint": {
+          "filePath": "权大师商标查询_03d5d6b5\\app-service.js",
+          "start": {
+            "line": 1306,
+            "column": 18401
+          },
+          "end": {
+            "line": 1306,
+            "column": 18419
+          },
+          "nodeType": "MemberExpression"
+        },
+        "baselineState": "UNKNOWN",
+        "baselineEntityId": "Object",
+        "resolved": false,
+        "improvedEntityId": "Object",
+        "improvedState": "UNKNOWN",
+        "reasonCodes": []
+      },
+      {
+        "sampleId": "36c7749e706caaf6442f1da1",
+        "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\权大师商标查询_03d5d6b5\\app-service.js",
+        "file": "权大师商标查询_03d5d6b5\\app-service.js",
+        "programPoint": {
+          "filePath": "权大师商标查询_03d5d6b5\\app-service.js",
+          "start": {
+            "line": 1306,
+            "column": 19316
+          },
+          "end": {
+            "line": 1306,
+            "column": 19334
+          },
+          "nodeType": "CallExpression"
+        },
+        "baselineState": "UNKNOWN",
+        "baselineEntityId": "Math",
+        "resolved": false,
+        "improvedEntityId": "Math",
+        "improvedState": "UNKNOWN",
+        "reasonCodes": []
+      },
+      {
+        "sampleId": "3592c4d42fad3d02165acf56",
+        "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\权大师商标查询_03d5d6b5\\app-service.js",
+        "file": "权大师商标查询_03d5d6b5\\app-service.js",
+        "programPoint": {
+          "filePath": "权大师商标查询_03d5d6b5\\app-service.js",
+          "start": {
+            "line": 1306,
+            "column": 19452
+          },
+          "end": {
+            "line": 1306,
+            "column": 19470
+          },
+          "nodeType": "CallExpression"
+        },
+        "baselineState": "UNKNOWN",
+        "baselineEntityId": "Math",
+        "resolved": false,
+        "improvedEntityId": "Math",
+        "improvedState": "UNKNOWN",
+        "reasonCodes": []
+      },
+      {
+        "sampleId": "f57e733934b0975fd30b2a41",
+        "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_0c7b9aca\\app-service.js",
+        "file": "商标查询_0c7b9aca\\app-service.js",
+        "programPoint": {
+          "filePath": "商标查询_0c7b9aca\\app-service.js",
+          "start": {
+            "line": 1306,
+            "column": 17636
+          },
+          "end": {
+            "line": 1306,
+            "column": 17681
+          },
+          "nodeType": "CallExpression"
+        },
+        "baselineState": "UNKNOWN",
+        "baselineEntityId": "Object",
+        "resolved": false,
+        "improvedEntityId": "Object",
+        "improvedState": "UNKNOWN",
+        "reasonCodes": []
+      },
+      {
+        "sampleId": "d41b337616881527a406c345",
+        "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_0c7b9aca\\app-service.js",
+        "file": "商标查询_0c7b9aca\\app-service.js",
+        "programPoint": {
+          "filePath": "商标查询_0c7b9aca\\app-service.js",
+          "start": {
+            "line": 1306,
+            "column": 17772
+          },
+          "end": {
+            "line": 1306,
+            "column": 17790
+          },
+          "nodeType": "MemberExpression"
+        },
+        "baselineState": "UNKNOWN",
+        "baselineEntityId": "Symbol",
+        "resolved": false,
+        "improvedEntityId": "Symbol",
+        "improvedState": "UNKNOWN",
+        "reasonCodes": []
+      },
+      {
+        "sampleId": "867278f89e9f16dfa71174d5",
+        "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_0c7b9aca\\app-service.js",
+        "file": "商标查询_0c7b9aca\\app-service.js",
+        "programPoint": {
+          "filePath": "商标查询_0c7b9aca\\app-service.js",
+          "start": {
+            "line": 1306,
+            "column": 17792
+          },
+          "end": {
+            "line": 1306,
+            "column": 17850
+          },
+          "nodeType": "CallExpression"
+        },
+        "baselineState": "UNKNOWN",
+        "baselineEntityId": "Object",
+        "resolved": false,
+        "improvedEntityId": "Object",
+        "improvedState": "UNKNOWN",
+        "reasonCodes": []
+      },
+      {
+        "sampleId": "1aa74619043208b9966e39ea",
+        "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_0c7b9aca\\app-service.js",
+        "file": "商标查询_0c7b9aca\\app-service.js",
+        "programPoint": {
+          "filePath": "商标查询_0c7b9aca\\app-service.js",
+          "start": {
+            "line": 1306,
+            "column": 17813
+          },
+          "end": {
+            "line": 1306,
+            "column": 17831
+          },
+          "nodeType": "MemberExpression"
+        },
+        "baselineState": "UNKNOWN",
+        "baselineEntityId": "Symbol",
+        "resolved": false,
+        "improvedEntityId": "Symbol",
+        "improvedState": "UNKNOWN",
+        "reasonCodes": []
+      },
+      {
+        "sampleId": "899d03f437c8ce08c405add0",
+        "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_0c7b9aca\\app-service.js",
+        "file": "商标查询_0c7b9aca\\app-service.js",
+        "programPoint": {
+          "filePath": "商标查询_0c7b9aca\\app-service.js",
+          "start": {
+            "line": 1306,
+            "column": 17851
+          },
+          "end": {
+            "line": 1306,
+            "column": 17894
+          },
+          "nodeType": "CallExpression"
+        },
+        "baselineState": "UNKNOWN",
+        "baselineEntityId": "Object",
+        "resolved": false,
+        "improvedEntityId": "Object",
+        "improvedState": "UNKNOWN",
+        "reasonCodes": []
+      },
+      {
+        "sampleId": "7533a27330db1945adcb2df8",
+        "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_0c7b9aca\\app-service.js",
+        "file": "商标查询_0c7b9aca\\app-service.js",
+        "programPoint": {
+          "filePath": "商标查询_0c7b9aca\\app-service.js",
+          "start": {
+            "line": 1306,
+            "column": 18012
+          },
+          "end": {
+            "line": 1306,
+            "column": 18036
+          },
+          "nodeType": "CallExpression"
+        },
+        "baselineState": "UNKNOWN",
+        "baselineEntityId": "Object",
+        "resolved": false,
+        "improvedEntityId": "Object",
+        "improvedState": "UNKNOWN",
+        "reasonCodes": []
+      },
+      {
+        "sampleId": "10c597553f9cc619fb1e66e2",
+        "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_0c7b9aca\\app-service.js",
+        "file": "商标查询_0c7b9aca\\app-service.js",
+        "programPoint": {
+          "filePath": "商标查询_0c7b9aca\\app-service.js",
+          "start": {
+            "line": 1306,
+            "column": 18056
+          },
+          "end": {
+            "line": 1306,
+            "column": 18112
+          },
+          "nodeType": "CallExpression"
+        },
+        "baselineState": "UNKNOWN",
+        "baselineEntityId": "Object",
+        "resolved": false,
+        "improvedEntityId": "Object",
+        "improvedState": "UNKNOWN",
+        "reasonCodes": []
+      },
+      {
+        "sampleId": "c2b2383c925dd1f581755510",
+        "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_0c7b9aca\\app-service.js",
+        "file": "商标查询_0c7b9aca\\app-service.js",
+        "programPoint": {
+          "filePath": "商标查询_0c7b9aca\\app-service.js",
+          "start": {
+            "line": 1306,
+            "column": 18401
+          },
+          "end": {
+            "line": 1306,
+            "column": 18448
+          },
+          "nodeType": "CallExpression"
+        },
+        "baselineState": "UNKNOWN",
+        "baselineEntityId": "Object",
+        "resolved": false,
+        "improvedEntityId": "Object",
+        "improvedState": "UNKNOWN",
+        "reasonCodes": []
+      },
+      {
+        "sampleId": "f1cdfd168b04cb95e267ec29",
+        "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_0c7b9aca\\app-service.js",
+        "file": "商标查询_0c7b9aca\\app-service.js",
+        "programPoint": {
+          "filePath": "商标查询_0c7b9aca\\app-service.js",
+          "start": {
+            "line": 1306,
+            "column": 18401
+          },
+          "end": {
+            "line": 1306,
+            "column": 18431
+          },
+          "nodeType": "MemberExpression"
+        },
+        "baselineState": "UNKNOWN",
+        "baselineEntityId": "Object",
+        "resolved": false,
+        "improvedEntityId": "Object",
+        "improvedState": "UNKNOWN",
+        "reasonCodes": []
+      },
+      {
+        "sampleId": "f1cdfd168b04cb95e267ec29",
+        "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_0c7b9aca\\app-service.js",
+        "file": "商标查询_0c7b9aca\\app-service.js",
+        "programPoint": {
+          "filePath": "商标查询_0c7b9aca\\app-service.js",
+          "start": {
+            "line": 1306,
+            "column": 18401
+          },
+          "end": {
+            "line": 1306,
+            "column": 18419
+          },
+          "nodeType": "MemberExpression"
+        },
+        "baselineState": "UNKNOWN",
+        "baselineEntityId": "Object",
+        "resolved": false,
+        "improvedEntityId": "Object",
+        "improvedState": "UNKNOWN",
+        "reasonCodes": []
+      },
+      {
+        "sampleId": "7df79447ecb4e9e70394388b",
+        "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_0c7b9aca\\app-service.js",
+        "file": "商标查询_0c7b9aca\\app-service.js",
+        "programPoint": {
+          "filePath": "商标查询_0c7b9aca\\app-service.js",
+          "start": {
+            "line": 1306,
+            "column": 19316
+          },
+          "end": {
+            "line": 1306,
+            "column": 19334
+          },
+          "nodeType": "CallExpression"
+        },
+        "baselineState": "UNKNOWN",
+        "baselineEntityId": "Math",
+        "resolved": false,
+        "improvedEntityId": "Math",
+        "improvedState": "UNKNOWN",
+        "reasonCodes": []
+      },
+      {
+        "sampleId": "9b04250f15fb56028ebcd6ff",
+        "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_0c7b9aca\\app-service.js",
+        "file": "商标查询_0c7b9aca\\app-service.js",
+        "programPoint": {
+          "filePath": "商标查询_0c7b9aca\\app-service.js",
+          "start": {
+            "line": 1306,
+            "column": 19452
+          },
+          "end": {
+            "line": 1306,
+            "column": 19470
+          },
+          "nodeType": "CallExpression"
+        },
+        "baselineState": "UNKNOWN",
+        "baselineEntityId": "Math",
+        "resolved": false,
+        "improvedEntityId": "Math",
+        "improvedState": "UNKNOWN",
+        "reasonCodes": []
+      },
+      {
+        "sampleId": "29ec0f194d04c9dd513b821b",
+        "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_371f1c63\\app-service.js",
+        "file": "商标查询_371f1c63\\app-service.js",
+        "programPoint": {
+          "filePath": "商标查询_371f1c63\\app-service.js",
+          "start": {
+            "line": 1306,
+            "column": 17636
+          },
+          "end": {
+            "line": 1306,
+            "column": 17681
+          },
+          "nodeType": "CallExpression"
+        },
+        "baselineState": "UNKNOWN",
+        "baselineEntityId": "Object",
+        "resolved": false,
+        "improvedEntityId": "Object",
+        "improvedState": "UNKNOWN",
+        "reasonCodes": []
+      }
+    ]
+  },
+  "files": [
+    {
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\623abe86\\app-service.js",
+      "status": "analyzed",
+      "recordCount": 2,
+      "findingCount": 3315,
+      "evidenceRecordCount": 9837
+    },
+    {
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\8ca0548d\\app-service.js",
+      "status": "analyzed",
+      "recordCount": 2,
+      "findingCount": 3199,
+      "evidenceRecordCount": 8911
+    },
+    {
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\亲戚计算器_b55e3d62\\app-service.js",
+      "status": "analyzed",
+      "recordCount": 1,
+      "findingCount": 790,
+      "evidenceRecordCount": 2344
+    },
+    {
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\权大师商标查询_03d5d6b5\\app-service.js",
+      "status": "analyzed",
+      "recordCount": 12,
+      "findingCount": 4310,
+      "evidenceRecordCount": 12430
+    },
+    {
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_0c7b9aca\\app-service.js",
+      "status": "analyzed",
+      "recordCount": 12,
+      "findingCount": 3833,
+      "evidenceRecordCount": 11168
+    },
+    {
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_371f1c63\\app-service.js",
+      "status": "analyzed",
+      "recordCount": 12,
+      "findingCount": 3834,
+      "evidenceRecordCount": 11171
+    },
+    {
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_4d064192\\app-service.js",
+      "status": "analyzed",
+      "recordCount": 12,
+      "findingCount": 3852,
+      "evidenceRecordCount": 11218
+    },
+    {
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_80d08813\\app-service.js",
+      "status": "analyzed",
+      "recordCount": 12,
+      "findingCount": 3833,
+      "evidenceRecordCount": 11168
+    },
+    {
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_959ade15\\app-service.js",
+      "status": "analyzed",
+      "recordCount": 12,
+      "findingCount": 3834,
+      "evidenceRecordCount": 11171
+    },
+    {
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_a679ec61\\app-service.js",
+      "status": "analyzed",
+      "recordCount": 45,
+      "findingCount": 3652,
+      "evidenceRecordCount": 10770
+    },
+    {
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_bbfedf0c\\app-service.js",
+      "status": "analyzed",
+      "recordCount": 12,
+      "findingCount": 3831,
+      "evidenceRecordCount": 11162
+    },
+    {
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_c3a07edb\\app-service.js",
+      "status": "analyzed",
+      "recordCount": 12,
+      "findingCount": 3834,
+      "evidenceRecordCount": 11171
+    },
+    {
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_cb9a99ea\\app-service.js",
+      "status": "analyzed",
+      "recordCount": 12,
+      "findingCount": 3836,
+      "evidenceRecordCount": 11174
+    },
+    {
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_d9d590b8\\app-service.js",
+      "status": "analyzed",
+      "recordCount": 12,
+      "findingCount": 3833,
+      "evidenceRecordCount": 11168
+    },
+    {
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_e9a6fd68\\app-service.js",
+      "status": "analyzed",
+      "recordCount": 12,
+      "findingCount": 3831,
+      "evidenceRecordCount": 11162
+    },
+    {
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\随身工具集_c3e85ae1\\app-service.js",
+      "status": "analyzed",
+      "recordCount": 2,
+      "findingCount": 878,
+      "evidenceRecordCount": 2617
+    },
+    {
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\微信运动群排行_484aa69a\\app-service.js",
+      "status": "analyzed",
+      "recordCount": 2,
+      "findingCount": 227,
+      "evidenceRecordCount": 643
+    },
+    {
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\小数报每日一题_aa13aa4b\\app-service.js",
+      "status": "analyzed",
+      "recordCount": 1,
+      "findingCount": 1060,
+      "evidenceRecordCount": 3154
+    },
+    {
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\英语点读_d42cf658\\app-service.js",
+      "status": "analyzed",
+      "recordCount": 2,
+      "findingCount": 6427,
+      "evidenceRecordCount": 18825
+    },
+    {
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\英语点读_dcb4ac01\\app-service.js",
+      "status": "analyzed",
+      "recordCount": 2,
+      "findingCount": 6428,
+      "evidenceRecordCount": 18827
+    },
+    {
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\逐浪小说_c41d4072\\app-service.js",
+      "status": "analyzed",
+      "recordCount": 2,
+      "findingCount": 380,
+      "evidenceRecordCount": 1132
+    },
+    {
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\NiSi耐司滤镜曝光计算器_2a3f2976\\app-service.js",
+      "status": "analyzed",
+      "recordCount": 13,
+      "findingCount": 89,
+      "evidenceRecordCount": 237
+    },
+    {
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\uni-app_b9f74cb0\\app-service.js",
+      "status": "analyzed",
+      "recordCount": 2,
+      "findingCount": 3024,
+      "evidenceRecordCount": 8992
+    },
+    {
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\Weekly To Do_ce5b8f16\\app-service.js",
+      "status": "analyzed",
+      "recordCount": 2,
+      "findingCount": 2233,
+      "evidenceRecordCount": 6544
+    },
+    {
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\Weixin_0cf7ecc3\\app-service.js",
+      "status": "analyzed",
+      "recordCount": 11,
+      "findingCount": 3064,
+      "evidenceRecordCount": 8687
+    }
+  ],
+  "comparisons": [
+    {
+      "sampleId": "d1a8416229415203d521d3cb",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\623abe86\\app-service.js",
+      "file": "623abe86\\app-service.js",
+      "programPoint": {
+        "filePath": "623abe86\\app-service.js",
+        "start": {
+          "line": 2278,
+          "column": 15
+        },
+        "end": {
+          "line": 2278,
+          "column": 43
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "wx",
+      "resolved": false,
+      "improvedEntityId": "wx",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "69ef70047fbddc9db4703345",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\623abe86\\app-service.js",
+      "file": "623abe86\\app-service.js",
+      "programPoint": {
+        "filePath": "623abe86\\app-service.js",
+        "start": {
+          "line": 2278,
+          "column": 15
+        },
+        "end": {
+          "line": 2278,
+          "column": 22
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "wx",
+      "resolved": false,
+      "improvedEntityId": "wx",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "33c30066b319ad974d6e8976",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\8ca0548d\\app-service.js",
+      "file": "8ca0548d\\app-service.js",
+      "programPoint": {
+        "filePath": "8ca0548d\\app-service.js",
+        "start": {
+          "line": 2278,
+          "column": 15
+        },
+        "end": {
+          "line": 2278,
+          "column": 43
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "wx",
+      "resolved": false,
+      "improvedEntityId": "wx",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "a44b89186d4f9161b09f2139",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\8ca0548d\\app-service.js",
+      "file": "8ca0548d\\app-service.js",
+      "programPoint": {
+        "filePath": "8ca0548d\\app-service.js",
+        "start": {
+          "line": 2278,
+          "column": 15
+        },
+        "end": {
+          "line": 2278,
+          "column": 22
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "wx",
+      "resolved": false,
+      "improvedEntityId": "wx",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "8d7f058957eefd98793f2d3c",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\亲戚计算器_b55e3d62\\app-service.js",
+      "file": "亲戚计算器_b55e3d62\\app-service.js",
+      "programPoint": {
+        "filePath": "亲戚计算器_b55e3d62\\app-service.js",
+        "start": {
+          "line": 1146,
+          "column": 1032
+        },
+        "end": {
+          "line": 1146,
+          "column": 1036
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "e.RELATIONSHIP_MAP",
+      "resolved": false,
+      "improvedEntityId": "e.RELATIONSHIP_MAP",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "489e17621a8246f906c784f8",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\权大师商标查询_03d5d6b5\\app-service.js",
+      "file": "权大师商标查询_03d5d6b5\\app-service.js",
+      "programPoint": {
+        "filePath": "权大师商标查询_03d5d6b5\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17636
+        },
+        "end": {
+          "line": 1306,
+          "column": 17681
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "801ecd14b1089157939589a5",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\权大师商标查询_03d5d6b5\\app-service.js",
+      "file": "权大师商标查询_03d5d6b5\\app-service.js",
+      "programPoint": {
+        "filePath": "权大师商标查询_03d5d6b5\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17772
+        },
+        "end": {
+          "line": 1306,
+          "column": 17790
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Symbol",
+      "resolved": false,
+      "improvedEntityId": "Symbol",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "f619c1e5a3d787fe5affcd31",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\权大师商标查询_03d5d6b5\\app-service.js",
+      "file": "权大师商标查询_03d5d6b5\\app-service.js",
+      "programPoint": {
+        "filePath": "权大师商标查询_03d5d6b5\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17792
+        },
+        "end": {
+          "line": 1306,
+          "column": 17850
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "191eacecf41b4e90d4aa078c",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\权大师商标查询_03d5d6b5\\app-service.js",
+      "file": "权大师商标查询_03d5d6b5\\app-service.js",
+      "programPoint": {
+        "filePath": "权大师商标查询_03d5d6b5\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17813
+        },
+        "end": {
+          "line": 1306,
+          "column": 17831
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Symbol",
+      "resolved": false,
+      "improvedEntityId": "Symbol",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "e1254fce5af86eb65ded0de5",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\权大师商标查询_03d5d6b5\\app-service.js",
+      "file": "权大师商标查询_03d5d6b5\\app-service.js",
+      "programPoint": {
+        "filePath": "权大师商标查询_03d5d6b5\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17851
+        },
+        "end": {
+          "line": 1306,
+          "column": 17894
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "9630323d9fd9bf2447bf8015",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\权大师商标查询_03d5d6b5\\app-service.js",
+      "file": "权大师商标查询_03d5d6b5\\app-service.js",
+      "programPoint": {
+        "filePath": "权大师商标查询_03d5d6b5\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18012
+        },
+        "end": {
+          "line": 1306,
+          "column": 18036
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "0e53e030e91989406b006790",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\权大师商标查询_03d5d6b5\\app-service.js",
+      "file": "权大师商标查询_03d5d6b5\\app-service.js",
+      "programPoint": {
+        "filePath": "权大师商标查询_03d5d6b5\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18056
+        },
+        "end": {
+          "line": 1306,
+          "column": 18112
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "0cc7eab4cd7b095843fde5ae",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\权大师商标查询_03d5d6b5\\app-service.js",
+      "file": "权大师商标查询_03d5d6b5\\app-service.js",
+      "programPoint": {
+        "filePath": "权大师商标查询_03d5d6b5\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18401
+        },
+        "end": {
+          "line": 1306,
+          "column": 18448
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "50d785c77e9f656407c3be93",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\权大师商标查询_03d5d6b5\\app-service.js",
+      "file": "权大师商标查询_03d5d6b5\\app-service.js",
+      "programPoint": {
+        "filePath": "权大师商标查询_03d5d6b5\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18401
+        },
+        "end": {
+          "line": 1306,
+          "column": 18431
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "50d785c77e9f656407c3be93",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\权大师商标查询_03d5d6b5\\app-service.js",
+      "file": "权大师商标查询_03d5d6b5\\app-service.js",
+      "programPoint": {
+        "filePath": "权大师商标查询_03d5d6b5\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18401
+        },
+        "end": {
+          "line": 1306,
+          "column": 18419
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "36c7749e706caaf6442f1da1",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\权大师商标查询_03d5d6b5\\app-service.js",
+      "file": "权大师商标查询_03d5d6b5\\app-service.js",
+      "programPoint": {
+        "filePath": "权大师商标查询_03d5d6b5\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 19316
+        },
+        "end": {
+          "line": 1306,
+          "column": 19334
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Math",
+      "resolved": false,
+      "improvedEntityId": "Math",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "3592c4d42fad3d02165acf56",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\权大师商标查询_03d5d6b5\\app-service.js",
+      "file": "权大师商标查询_03d5d6b5\\app-service.js",
+      "programPoint": {
+        "filePath": "权大师商标查询_03d5d6b5\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 19452
+        },
+        "end": {
+          "line": 1306,
+          "column": 19470
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Math",
+      "resolved": false,
+      "improvedEntityId": "Math",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "f57e733934b0975fd30b2a41",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_0c7b9aca\\app-service.js",
+      "file": "商标查询_0c7b9aca\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_0c7b9aca\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17636
+        },
+        "end": {
+          "line": 1306,
+          "column": 17681
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "d41b337616881527a406c345",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_0c7b9aca\\app-service.js",
+      "file": "商标查询_0c7b9aca\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_0c7b9aca\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17772
+        },
+        "end": {
+          "line": 1306,
+          "column": 17790
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Symbol",
+      "resolved": false,
+      "improvedEntityId": "Symbol",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "867278f89e9f16dfa71174d5",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_0c7b9aca\\app-service.js",
+      "file": "商标查询_0c7b9aca\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_0c7b9aca\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17792
+        },
+        "end": {
+          "line": 1306,
+          "column": 17850
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "1aa74619043208b9966e39ea",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_0c7b9aca\\app-service.js",
+      "file": "商标查询_0c7b9aca\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_0c7b9aca\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17813
+        },
+        "end": {
+          "line": 1306,
+          "column": 17831
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Symbol",
+      "resolved": false,
+      "improvedEntityId": "Symbol",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "899d03f437c8ce08c405add0",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_0c7b9aca\\app-service.js",
+      "file": "商标查询_0c7b9aca\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_0c7b9aca\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17851
+        },
+        "end": {
+          "line": 1306,
+          "column": 17894
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "7533a27330db1945adcb2df8",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_0c7b9aca\\app-service.js",
+      "file": "商标查询_0c7b9aca\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_0c7b9aca\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18012
+        },
+        "end": {
+          "line": 1306,
+          "column": 18036
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "10c597553f9cc619fb1e66e2",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_0c7b9aca\\app-service.js",
+      "file": "商标查询_0c7b9aca\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_0c7b9aca\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18056
+        },
+        "end": {
+          "line": 1306,
+          "column": 18112
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "c2b2383c925dd1f581755510",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_0c7b9aca\\app-service.js",
+      "file": "商标查询_0c7b9aca\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_0c7b9aca\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18401
+        },
+        "end": {
+          "line": 1306,
+          "column": 18448
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "f1cdfd168b04cb95e267ec29",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_0c7b9aca\\app-service.js",
+      "file": "商标查询_0c7b9aca\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_0c7b9aca\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18401
+        },
+        "end": {
+          "line": 1306,
+          "column": 18431
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "f1cdfd168b04cb95e267ec29",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_0c7b9aca\\app-service.js",
+      "file": "商标查询_0c7b9aca\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_0c7b9aca\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18401
+        },
+        "end": {
+          "line": 1306,
+          "column": 18419
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "7df79447ecb4e9e70394388b",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_0c7b9aca\\app-service.js",
+      "file": "商标查询_0c7b9aca\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_0c7b9aca\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 19316
+        },
+        "end": {
+          "line": 1306,
+          "column": 19334
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Math",
+      "resolved": false,
+      "improvedEntityId": "Math",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "9b04250f15fb56028ebcd6ff",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_0c7b9aca\\app-service.js",
+      "file": "商标查询_0c7b9aca\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_0c7b9aca\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 19452
+        },
+        "end": {
+          "line": 1306,
+          "column": 19470
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Math",
+      "resolved": false,
+      "improvedEntityId": "Math",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "29ec0f194d04c9dd513b821b",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_371f1c63\\app-service.js",
+      "file": "商标查询_371f1c63\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_371f1c63\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17636
+        },
+        "end": {
+          "line": 1306,
+          "column": 17681
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "542be61ca72ae12d71bbdae5",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_371f1c63\\app-service.js",
+      "file": "商标查询_371f1c63\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_371f1c63\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17772
+        },
+        "end": {
+          "line": 1306,
+          "column": 17790
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Symbol",
+      "resolved": false,
+      "improvedEntityId": "Symbol",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "6e53a9e4907b4103d627126c",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_371f1c63\\app-service.js",
+      "file": "商标查询_371f1c63\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_371f1c63\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17792
+        },
+        "end": {
+          "line": 1306,
+          "column": 17850
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "a07232ed84a2e7509e02cc9a",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_371f1c63\\app-service.js",
+      "file": "商标查询_371f1c63\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_371f1c63\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17813
+        },
+        "end": {
+          "line": 1306,
+          "column": 17831
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Symbol",
+      "resolved": false,
+      "improvedEntityId": "Symbol",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "2397254b167382db68b9a3c5",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_371f1c63\\app-service.js",
+      "file": "商标查询_371f1c63\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_371f1c63\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17851
+        },
+        "end": {
+          "line": 1306,
+          "column": 17894
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "47de42142b1f414f5a90f057",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_371f1c63\\app-service.js",
+      "file": "商标查询_371f1c63\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_371f1c63\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18012
+        },
+        "end": {
+          "line": 1306,
+          "column": 18036
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "a5c2191c6e0de8da51137e5e",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_371f1c63\\app-service.js",
+      "file": "商标查询_371f1c63\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_371f1c63\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18056
+        },
+        "end": {
+          "line": 1306,
+          "column": 18112
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "f2364ba2c27eb477749eba47",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_371f1c63\\app-service.js",
+      "file": "商标查询_371f1c63\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_371f1c63\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18401
+        },
+        "end": {
+          "line": 1306,
+          "column": 18448
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "0398be06ccbae20e49ff1015",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_371f1c63\\app-service.js",
+      "file": "商标查询_371f1c63\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_371f1c63\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18401
+        },
+        "end": {
+          "line": 1306,
+          "column": 18431
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "0398be06ccbae20e49ff1015",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_371f1c63\\app-service.js",
+      "file": "商标查询_371f1c63\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_371f1c63\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18401
+        },
+        "end": {
+          "line": 1306,
+          "column": 18419
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "a6cd06f7327dbaa0a2b59fbf",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_371f1c63\\app-service.js",
+      "file": "商标查询_371f1c63\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_371f1c63\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 19316
+        },
+        "end": {
+          "line": 1306,
+          "column": 19334
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Math",
+      "resolved": false,
+      "improvedEntityId": "Math",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "0ef384615d8495016bd005c9",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_371f1c63\\app-service.js",
+      "file": "商标查询_371f1c63\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_371f1c63\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 19452
+        },
+        "end": {
+          "line": 1306,
+          "column": 19470
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Math",
+      "resolved": false,
+      "improvedEntityId": "Math",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "4c0e055ad6ae86fbb97ab537",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_4d064192\\app-service.js",
+      "file": "商标查询_4d064192\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_4d064192\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17636
+        },
+        "end": {
+          "line": 1306,
+          "column": 17681
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "712b2668f7b1457fdd393b3c",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_4d064192\\app-service.js",
+      "file": "商标查询_4d064192\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_4d064192\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17772
+        },
+        "end": {
+          "line": 1306,
+          "column": 17790
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Symbol",
+      "resolved": false,
+      "improvedEntityId": "Symbol",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "0a6b87f1a27236fdf3a39449",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_4d064192\\app-service.js",
+      "file": "商标查询_4d064192\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_4d064192\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17792
+        },
+        "end": {
+          "line": 1306,
+          "column": 17850
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "6beda2f4d5cb6bee3f49584c",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_4d064192\\app-service.js",
+      "file": "商标查询_4d064192\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_4d064192\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17813
+        },
+        "end": {
+          "line": 1306,
+          "column": 17831
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Symbol",
+      "resolved": false,
+      "improvedEntityId": "Symbol",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "a444998c5568f920178c0013",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_4d064192\\app-service.js",
+      "file": "商标查询_4d064192\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_4d064192\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17851
+        },
+        "end": {
+          "line": 1306,
+          "column": 17894
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "e9ce3c7cf9387f097158182b",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_4d064192\\app-service.js",
+      "file": "商标查询_4d064192\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_4d064192\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18012
+        },
+        "end": {
+          "line": 1306,
+          "column": 18036
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "e69d6e8fc387838cea3648c8",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_4d064192\\app-service.js",
+      "file": "商标查询_4d064192\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_4d064192\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18056
+        },
+        "end": {
+          "line": 1306,
+          "column": 18112
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "8475dd96a65efe527da1894d",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_4d064192\\app-service.js",
+      "file": "商标查询_4d064192\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_4d064192\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18401
+        },
+        "end": {
+          "line": 1306,
+          "column": 18448
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "611a7e05aff1a2f81537e024",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_4d064192\\app-service.js",
+      "file": "商标查询_4d064192\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_4d064192\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18401
+        },
+        "end": {
+          "line": 1306,
+          "column": 18431
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "611a7e05aff1a2f81537e024",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_4d064192\\app-service.js",
+      "file": "商标查询_4d064192\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_4d064192\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18401
+        },
+        "end": {
+          "line": 1306,
+          "column": 18419
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "d41d13ba76f277b30277458f",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_4d064192\\app-service.js",
+      "file": "商标查询_4d064192\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_4d064192\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 19316
+        },
+        "end": {
+          "line": 1306,
+          "column": 19334
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Math",
+      "resolved": false,
+      "improvedEntityId": "Math",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "ae972d610477c44e94a2c64a",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_4d064192\\app-service.js",
+      "file": "商标查询_4d064192\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_4d064192\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 19452
+        },
+        "end": {
+          "line": 1306,
+          "column": 19470
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Math",
+      "resolved": false,
+      "improvedEntityId": "Math",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "3285e7cc3a8b1a7b0d56eda6",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_80d08813\\app-service.js",
+      "file": "商标查询_80d08813\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_80d08813\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17636
+        },
+        "end": {
+          "line": 1306,
+          "column": 17681
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "534e66e9aedafb822d051dfc",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_80d08813\\app-service.js",
+      "file": "商标查询_80d08813\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_80d08813\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17772
+        },
+        "end": {
+          "line": 1306,
+          "column": 17790
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Symbol",
+      "resolved": false,
+      "improvedEntityId": "Symbol",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "3a357196098e5c88d9c2eec7",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_80d08813\\app-service.js",
+      "file": "商标查询_80d08813\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_80d08813\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17792
+        },
+        "end": {
+          "line": 1306,
+          "column": 17850
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "870b08f5b7c739dcc9df16e2",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_80d08813\\app-service.js",
+      "file": "商标查询_80d08813\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_80d08813\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17813
+        },
+        "end": {
+          "line": 1306,
+          "column": 17831
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Symbol",
+      "resolved": false,
+      "improvedEntityId": "Symbol",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "0d51430eb84f7d466b5f719b",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_80d08813\\app-service.js",
+      "file": "商标查询_80d08813\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_80d08813\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17851
+        },
+        "end": {
+          "line": 1306,
+          "column": 17894
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "3212c32add68284f9ebc4ab8",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_80d08813\\app-service.js",
+      "file": "商标查询_80d08813\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_80d08813\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18012
+        },
+        "end": {
+          "line": 1306,
+          "column": 18036
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "d9ceb4b348215dafef1bb3c5",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_80d08813\\app-service.js",
+      "file": "商标查询_80d08813\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_80d08813\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18056
+        },
+        "end": {
+          "line": 1306,
+          "column": 18112
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "ec3c4729af8564e18e83551f",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_80d08813\\app-service.js",
+      "file": "商标查询_80d08813\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_80d08813\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18401
+        },
+        "end": {
+          "line": 1306,
+          "column": 18448
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "3d4421cd2e30beb727ed1c90",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_80d08813\\app-service.js",
+      "file": "商标查询_80d08813\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_80d08813\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18401
+        },
+        "end": {
+          "line": 1306,
+          "column": 18431
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "3d4421cd2e30beb727ed1c90",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_80d08813\\app-service.js",
+      "file": "商标查询_80d08813\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_80d08813\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18401
+        },
+        "end": {
+          "line": 1306,
+          "column": 18419
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "7710e28a029e55d0bf187672",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_80d08813\\app-service.js",
+      "file": "商标查询_80d08813\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_80d08813\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 19316
+        },
+        "end": {
+          "line": 1306,
+          "column": 19334
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Math",
+      "resolved": false,
+      "improvedEntityId": "Math",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "852723b47b04a1e623c2bf03",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_80d08813\\app-service.js",
+      "file": "商标查询_80d08813\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_80d08813\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 19452
+        },
+        "end": {
+          "line": 1306,
+          "column": 19470
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Math",
+      "resolved": false,
+      "improvedEntityId": "Math",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "1534e7872510deaf963cc888",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_959ade15\\app-service.js",
+      "file": "商标查询_959ade15\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_959ade15\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17636
+        },
+        "end": {
+          "line": 1306,
+          "column": 17681
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "4bca4fd6c530becf9492021d",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_959ade15\\app-service.js",
+      "file": "商标查询_959ade15\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_959ade15\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17772
+        },
+        "end": {
+          "line": 1306,
+          "column": 17790
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Symbol",
+      "resolved": false,
+      "improvedEntityId": "Symbol",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "63c93882abb2b84cbb5a8ecc",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_959ade15\\app-service.js",
+      "file": "商标查询_959ade15\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_959ade15\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17792
+        },
+        "end": {
+          "line": 1306,
+          "column": 17850
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "a7fadd2837284bf59c5e4595",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_959ade15\\app-service.js",
+      "file": "商标查询_959ade15\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_959ade15\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17813
+        },
+        "end": {
+          "line": 1306,
+          "column": 17831
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Symbol",
+      "resolved": false,
+      "improvedEntityId": "Symbol",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "6c3c6d73838cd41e3013942e",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_959ade15\\app-service.js",
+      "file": "商标查询_959ade15\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_959ade15\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17851
+        },
+        "end": {
+          "line": 1306,
+          "column": 17894
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "ebbb4cbd400e185467f25dd2",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_959ade15\\app-service.js",
+      "file": "商标查询_959ade15\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_959ade15\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18012
+        },
+        "end": {
+          "line": 1306,
+          "column": 18036
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "c1b6d326c88a222f77d40e5c",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_959ade15\\app-service.js",
+      "file": "商标查询_959ade15\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_959ade15\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18056
+        },
+        "end": {
+          "line": 1306,
+          "column": 18112
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "47007558f0e3d3adeeae1da4",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_959ade15\\app-service.js",
+      "file": "商标查询_959ade15\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_959ade15\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18401
+        },
+        "end": {
+          "line": 1306,
+          "column": 18448
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "27e873b6dcdbb1ffe18800d9",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_959ade15\\app-service.js",
+      "file": "商标查询_959ade15\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_959ade15\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18401
+        },
+        "end": {
+          "line": 1306,
+          "column": 18431
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "27e873b6dcdbb1ffe18800d9",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_959ade15\\app-service.js",
+      "file": "商标查询_959ade15\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_959ade15\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18401
+        },
+        "end": {
+          "line": 1306,
+          "column": 18419
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "cd3535908ef114b94c5b58c7",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_959ade15\\app-service.js",
+      "file": "商标查询_959ade15\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_959ade15\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 19316
+        },
+        "end": {
+          "line": 1306,
+          "column": 19334
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Math",
+      "resolved": false,
+      "improvedEntityId": "Math",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "ca198168a060452a8c181162",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_959ade15\\app-service.js",
+      "file": "商标查询_959ade15\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_959ade15\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 19452
+        },
+        "end": {
+          "line": 1306,
+          "column": 19470
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Math",
+      "resolved": false,
+      "improvedEntityId": "Math",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "e8ec8595d434a12e8e7526a7",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_a679ec61\\app-service.js",
+      "file": "商标查询_a679ec61\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_a679ec61\\app-service.js",
+        "start": {
+          "line": 1181,
+          "column": 25120
+        },
+        "end": {
+          "line": 1181,
+          "column": 25160
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "50eac480f92d6be70c9eb05a",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_a679ec61\\app-service.js",
+      "file": "商标查询_a679ec61\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_a679ec61\\app-service.js",
+        "start": {
+          "line": 1181,
+          "column": 25299
+        },
+        "end": {
+          "line": 1181,
+          "column": 25312
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Symbol",
+      "resolved": false,
+      "improvedEntityId": "Symbol",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "7e4d90aa01d4e4d1940de307",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_a679ec61\\app-service.js",
+      "file": "商标查询_a679ec61\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_a679ec61\\app-service.js",
+        "start": {
+          "line": 1181,
+          "column": 25314
+        },
+        "end": {
+          "line": 1181,
+          "column": 25358
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "6a2efb25f8165d5c9535abdc",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_a679ec61\\app-service.js",
+      "file": "商标查询_a679ec61\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_a679ec61\\app-service.js",
+        "start": {
+          "line": 1181,
+          "column": 25330
+        },
+        "end": {
+          "line": 1181,
+          "column": 25343
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Symbol",
+      "resolved": false,
+      "improvedEntityId": "Symbol",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "378fde1d6c8c43d0f4417908",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_a679ec61\\app-service.js",
+      "file": "商标查询_a679ec61\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_a679ec61\\app-service.js",
+        "start": {
+          "line": 1181,
+          "column": 25359
+        },
+        "end": {
+          "line": 1181,
+          "column": 25392
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "2b77e993eefc18d5b8910fab",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_a679ec61\\app-service.js",
+      "file": "商标查询_a679ec61\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_a679ec61\\app-service.js",
+        "start": {
+          "line": 1181,
+          "column": 25577
+        },
+        "end": {
+          "line": 1181,
+          "column": 25596
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "43dedaa2539c6f584302419c",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_a679ec61\\app-service.js",
+      "file": "商标查询_a679ec61\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_a679ec61\\app-service.js",
+        "start": {
+          "line": 1181,
+          "column": 25611
+        },
+        "end": {
+          "line": 1181,
+          "column": 25657
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "16be1b596c0f18ffe42f693b",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_a679ec61\\app-service.js",
+      "file": "商标查询_a679ec61\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_a679ec61\\app-service.js",
+        "start": {
+          "line": 1181,
+          "column": 26211
+        },
+        "end": {
+          "line": 1181,
+          "column": 26241
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "71f5333df15e82134365f6d7",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_a679ec61\\app-service.js",
+      "file": "商标查询_a679ec61\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_a679ec61\\app-service.js",
+        "start": {
+          "line": 1181,
+          "column": 26211
+        },
+        "end": {
+          "line": 1181,
+          "column": 26230
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "71f5333df15e82134365f6d7",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_a679ec61\\app-service.js",
+      "file": "商标查询_a679ec61\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_a679ec61\\app-service.js",
+        "start": {
+          "line": 1181,
+          "column": 26211
+        },
+        "end": {
+          "line": 1181,
+          "column": 26224
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "5bf7a03001e0f2c6fe24e20b",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_a679ec61\\app-service.js",
+      "file": "商标查询_a679ec61\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_a679ec61\\app-service.js",
+        "start": {
+          "line": 1181,
+          "column": 28256
+        },
+        "end": {
+          "line": 1181,
+          "column": 28272
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "String",
+      "resolved": false,
+      "improvedEntityId": "String",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "e58c21ab2806b7f2324b785f",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_a679ec61\\app-service.js",
+      "file": "商标查询_a679ec61\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_a679ec61\\app-service.js",
+        "start": {
+          "line": 1181,
+          "column": 28291
+        },
+        "end": {
+          "line": 1181,
+          "column": 28314
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "String",
+      "resolved": false,
+      "improvedEntityId": "String",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "57833e2e3f4359c5e8a6f9cb",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_a679ec61\\app-service.js",
+      "file": "商标查询_a679ec61\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_a679ec61\\app-service.js",
+        "start": {
+          "line": 1181,
+          "column": 28319
+        },
+        "end": {
+          "line": 1181,
+          "column": 28343
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "String",
+      "resolved": false,
+      "improvedEntityId": "String",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "9b47673168e5a62d463d6fa9",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_a679ec61\\app-service.js",
+      "file": "商标查询_a679ec61\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_a679ec61\\app-service.js",
+        "start": {
+          "line": 1181,
+          "column": 28347
+        },
+        "end": {
+          "line": 1181,
+          "column": 28373
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "String",
+      "resolved": false,
+      "improvedEntityId": "String",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "8a08086c2494074e97377de1",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_a679ec61\\app-service.js",
+      "file": "商标查询_a679ec61\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_a679ec61\\app-service.js",
+        "start": {
+          "line": 1181,
+          "column": 28378
+        },
+        "end": {
+          "line": 1181,
+          "column": 28401
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "String",
+      "resolved": false,
+      "improvedEntityId": "String",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "cda390dccfa3a6e3bba556b6",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_a679ec61\\app-service.js",
+      "file": "商标查询_a679ec61\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_a679ec61\\app-service.js",
+        "start": {
+          "line": 1181,
+          "column": 30945
+        },
+        "end": {
+          "line": 1181,
+          "column": 30961
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "955ef6e68c23e455239eb160",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_a679ec61\\app-service.js",
+      "file": "商标查询_a679ec61\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_a679ec61\\app-service.js",
+        "start": {
+          "line": 1181,
+          "column": 31993
+        },
+        "end": {
+          "line": 1181,
+          "column": 32005
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Math",
+      "resolved": false,
+      "improvedEntityId": "Math",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "a495836907d3a9b16caacb54",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_a679ec61\\app-service.js",
+      "file": "商标查询_a679ec61\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_a679ec61\\app-service.js",
+        "start": {
+          "line": 1181,
+          "column": 32213
+        },
+        "end": {
+          "line": 1181,
+          "column": 32225
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Math",
+      "resolved": false,
+      "improvedEntityId": "Math",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "011dec090f242153e8346efa",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_a679ec61\\app-service.js",
+      "file": "商标查询_a679ec61\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_a679ec61\\app-service.js",
+        "start": {
+          "line": 1181,
+          "column": 33990
+        },
+        "end": {
+          "line": 1181,
+          "column": 34003
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "console",
+      "resolved": false,
+      "improvedEntityId": "console",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "311591a45c59c641ab4c1e7b",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_a679ec61\\app-service.js",
+      "file": "商标查询_a679ec61\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_a679ec61\\app-service.js",
+        "start": {
+          "line": 1181,
+          "column": 34005
+        },
+        "end": {
+          "line": 1181,
+          "column": 34021
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "console",
+      "resolved": false,
+      "improvedEntityId": "console",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "83397f596904c31aa406c6ba",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_a679ec61\\app-service.js",
+      "file": "商标查询_a679ec61\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_a679ec61\\app-service.js",
+        "start": {
+          "line": 1181,
+          "column": 35527
+        },
+        "end": {
+          "line": 1181,
+          "column": 35864
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "wx",
+      "resolved": false,
+      "improvedEntityId": "wx",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "6bcc45db45a9aa613f412109",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_a679ec61\\app-service.js",
+      "file": "商标查询_a679ec61\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_a679ec61\\app-service.js",
+        "start": {
+          "line": 1181,
+          "column": 36154
+        },
+        "end": {
+          "line": 1181,
+          "column": 36472
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "wx",
+      "resolved": false,
+      "improvedEntityId": "wx",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "2fdcb8d32325499322d11b24",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_a679ec61\\app-service.js",
+      "file": "商标查询_a679ec61\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_a679ec61\\app-service.js",
+        "start": {
+          "line": 1181,
+          "column": 36562
+        },
+        "end": {
+          "line": 1181,
+          "column": 36899
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "wx",
+      "resolved": false,
+      "improvedEntityId": "wx",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "1d579bd04f84d07d27db5610",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_a679ec61\\app-service.js",
+      "file": "商标查询_a679ec61\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_a679ec61\\app-service.js",
+        "start": {
+          "line": 1181,
+          "column": 37223
+        },
+        "end": {
+          "line": 1181,
+          "column": 37560
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "wx",
+      "resolved": false,
+      "improvedEntityId": "wx",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "27b2475c2b9508b4df927a58",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_a679ec61\\app-service.js",
+      "file": "商标查询_a679ec61\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_a679ec61\\app-service.js",
+        "start": {
+          "line": 1181,
+          "column": 37715
+        },
+        "end": {
+          "line": 1181,
+          "column": 37734
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "08f0128b670f2abb3db698a6",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_a679ec61\\app-service.js",
+      "file": "商标查询_a679ec61\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_a679ec61\\app-service.js",
+        "start": {
+          "line": 1181,
+          "column": 38121
+        },
+        "end": {
+          "line": 1181,
+          "column": 38153
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Math",
+      "resolved": false,
+      "improvedEntityId": "Math",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "0db8557f7431d448aff57cb7",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_a679ec61\\app-service.js",
+      "file": "商标查询_a679ec61\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_a679ec61\\app-service.js",
+        "start": {
+          "line": 1181,
+          "column": 38140
+        },
+        "end": {
+          "line": 1181,
+          "column": 38152
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Math",
+      "resolved": false,
+      "improvedEntityId": "Math",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "b14e07c92e3977410f8261ae",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_a679ec61\\app-service.js",
+      "file": "商标查询_a679ec61\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_a679ec61\\app-service.js",
+        "start": {
+          "line": 1181,
+          "column": 40935
+        },
+        "end": {
+          "line": 1181,
+          "column": 40959
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Math",
+      "resolved": false,
+      "improvedEntityId": "Math",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "c9f5b68752d8871ee3ec90d9",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_a679ec61\\app-service.js",
+      "file": "商标查询_a679ec61\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_a679ec61\\app-service.js",
+        "start": {
+          "line": 1181,
+          "column": 41074
+        },
+        "end": {
+          "line": 1181,
+          "column": 41092
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Math",
+      "resolved": false,
+      "improvedEntityId": "Math",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "976b87e7901fc7f6bb53f665",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_a679ec61\\app-service.js",
+      "file": "商标查询_a679ec61\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_a679ec61\\app-service.js",
+        "start": {
+          "line": 1181,
+          "column": 44576
+        },
+        "end": {
+          "line": 1181,
+          "column": 44604
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Math",
+      "resolved": false,
+      "improvedEntityId": "Math",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "e38b99dcbec4d3fa2a62de1b",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_a679ec61\\app-service.js",
+      "file": "商标查询_a679ec61\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_a679ec61\\app-service.js",
+        "start": {
+          "line": 1181,
+          "column": 44771
+        },
+        "end": {
+          "line": 1181,
+          "column": 44799
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Math",
+      "resolved": false,
+      "improvedEntityId": "Math",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "421f41050e2ae0a50d98f723",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_a679ec61\\app-service.js",
+      "file": "商标查询_a679ec61\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_a679ec61\\app-service.js",
+        "start": {
+          "line": 1181,
+          "column": 45099
+        },
+        "end": {
+          "line": 1181,
+          "column": 45127
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Math",
+      "resolved": false,
+      "improvedEntityId": "Math",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "195a25155060bb7899e87bcf",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_a679ec61\\app-service.js",
+      "file": "商标查询_a679ec61\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_a679ec61\\app-service.js",
+        "start": {
+          "line": 1181,
+          "column": 45486
+        },
+        "end": {
+          "line": 1181,
+          "column": 45518
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Math",
+      "resolved": false,
+      "improvedEntityId": "Math",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "342da68d7c5daee13fd19ecc",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_a679ec61\\app-service.js",
+      "file": "商标查询_a679ec61\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_a679ec61\\app-service.js",
+        "start": {
+          "line": 1181,
+          "column": 47304
+        },
+        "end": {
+          "line": 1181,
+          "column": 47337
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Math",
+      "resolved": false,
+      "improvedEntityId": "Math",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "bf6347ca891f9f772e60cad1",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_a679ec61\\app-service.js",
+      "file": "商标查询_a679ec61\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_a679ec61\\app-service.js",
+        "start": {
+          "line": 1181,
+          "column": 50198
+        },
+        "end": {
+          "line": 1181,
+          "column": 50219
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "console",
+      "resolved": false,
+      "improvedEntityId": "console",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "8cde5f1ce0eb1b5036345f6f",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_a679ec61\\app-service.js",
+      "file": "商标查询_a679ec61\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_a679ec61\\app-service.js",
+        "start": {
+          "line": 1181,
+          "column": 50419
+        },
+        "end": {
+          "line": 1181,
+          "column": 50440
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "console",
+      "resolved": false,
+      "improvedEntityId": "console",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "1106558e97b68e8e3a88645a",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_a679ec61\\app-service.js",
+      "file": "商标查询_a679ec61\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_a679ec61\\app-service.js",
+        "start": {
+          "line": 1181,
+          "column": 51074
+        },
+        "end": {
+          "line": 1181,
+          "column": 51087
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "8ea0a14d55f100d203eee851",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_a679ec61\\app-service.js",
+      "file": "商标查询_a679ec61\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_a679ec61\\app-service.js",
+        "start": {
+          "line": 1181,
+          "column": 52535
+        },
+        "end": {
+          "line": 1181,
+          "column": 52552
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Math",
+      "resolved": false,
+      "improvedEntityId": "Math",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "d8005b7f057083a3e18b5d31",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_a679ec61\\app-service.js",
+      "file": "商标查询_a679ec61\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_a679ec61\\app-service.js",
+        "start": {
+          "line": 1181,
+          "column": 53375
+        },
+        "end": {
+          "line": 1181,
+          "column": 53390
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Math",
+      "resolved": false,
+      "improvedEntityId": "Math",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "109250e4e83ecf10cb561b5d",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_a679ec61\\app-service.js",
+      "file": "商标查询_a679ec61\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_a679ec61\\app-service.js",
+        "start": {
+          "line": 1181,
+          "column": 53391
+        },
+        "end": {
+          "line": 1181,
+          "column": 53425
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Math",
+      "resolved": false,
+      "improvedEntityId": "Math",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "def01daa28a6fd2177afada2",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_a679ec61\\app-service.js",
+      "file": "商标查询_a679ec61\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_a679ec61\\app-service.js",
+        "start": {
+          "line": 1181,
+          "column": 53431
+        },
+        "end": {
+          "line": 1181,
+          "column": 53450
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Math",
+      "resolved": false,
+      "improvedEntityId": "Math",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "55bc740e42a6121b5ccd4333",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_a679ec61\\app-service.js",
+      "file": "商标查询_a679ec61\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_a679ec61\\app-service.js",
+        "start": {
+          "line": 1181,
+          "column": 59320
+        },
+        "end": {
+          "line": 1181,
+          "column": 59339
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "String",
+      "resolved": false,
+      "improvedEntityId": "String",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "30f726bd277fde66921050f2",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_a679ec61\\app-service.js",
+      "file": "商标查询_a679ec61\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_a679ec61\\app-service.js",
+        "start": {
+          "line": 1181,
+          "column": 61145
+        },
+        "end": {
+          "line": 1181,
+          "column": 61161
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "String",
+      "resolved": false,
+      "improvedEntityId": "String",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "704c41961318321622b7dab8",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_a679ec61\\app-service.js",
+      "file": "商标查询_a679ec61\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_a679ec61\\app-service.js",
+        "start": {
+          "line": 1181,
+          "column": 61205
+        },
+        "end": {
+          "line": 1181,
+          "column": 61221
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "String",
+      "resolved": false,
+      "improvedEntityId": "String",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "3e0768fe24e948d87029e52e",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_a679ec61\\app-service.js",
+      "file": "商标查询_a679ec61\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_a679ec61\\app-service.js",
+        "start": {
+          "line": 1181,
+          "column": 61261
+        },
+        "end": {
+          "line": 1181,
+          "column": 61277
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "String",
+      "resolved": false,
+      "improvedEntityId": "String",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "f74126f5e82ebf3d7200b124",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_bbfedf0c\\app-service.js",
+      "file": "商标查询_bbfedf0c\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_bbfedf0c\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17636
+        },
+        "end": {
+          "line": 1306,
+          "column": 17681
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "e68bddffdb1fa0529cb05ab0",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_bbfedf0c\\app-service.js",
+      "file": "商标查询_bbfedf0c\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_bbfedf0c\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17772
+        },
+        "end": {
+          "line": 1306,
+          "column": 17790
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Symbol",
+      "resolved": false,
+      "improvedEntityId": "Symbol",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "9355aad2681e3770044ed397",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_bbfedf0c\\app-service.js",
+      "file": "商标查询_bbfedf0c\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_bbfedf0c\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17792
+        },
+        "end": {
+          "line": 1306,
+          "column": 17850
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "755425805112117515e5cce8",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_bbfedf0c\\app-service.js",
+      "file": "商标查询_bbfedf0c\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_bbfedf0c\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17813
+        },
+        "end": {
+          "line": 1306,
+          "column": 17831
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Symbol",
+      "resolved": false,
+      "improvedEntityId": "Symbol",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "b8488872f4766f01d068f85a",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_bbfedf0c\\app-service.js",
+      "file": "商标查询_bbfedf0c\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_bbfedf0c\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17851
+        },
+        "end": {
+          "line": 1306,
+          "column": 17894
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "6da3b0a1d0cd0edaba085647",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_bbfedf0c\\app-service.js",
+      "file": "商标查询_bbfedf0c\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_bbfedf0c\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18012
+        },
+        "end": {
+          "line": 1306,
+          "column": 18036
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "733a0c545e7d8ad3afe22bee",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_bbfedf0c\\app-service.js",
+      "file": "商标查询_bbfedf0c\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_bbfedf0c\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18056
+        },
+        "end": {
+          "line": 1306,
+          "column": 18112
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "7133aac4f1631517c1cbd1df",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_bbfedf0c\\app-service.js",
+      "file": "商标查询_bbfedf0c\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_bbfedf0c\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18401
+        },
+        "end": {
+          "line": 1306,
+          "column": 18448
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "1ed8f3aa9f9b2ef4db069ee3",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_bbfedf0c\\app-service.js",
+      "file": "商标查询_bbfedf0c\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_bbfedf0c\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18401
+        },
+        "end": {
+          "line": 1306,
+          "column": 18431
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "1ed8f3aa9f9b2ef4db069ee3",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_bbfedf0c\\app-service.js",
+      "file": "商标查询_bbfedf0c\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_bbfedf0c\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18401
+        },
+        "end": {
+          "line": 1306,
+          "column": 18419
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "404b02cff8d3559e48def9dd",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_bbfedf0c\\app-service.js",
+      "file": "商标查询_bbfedf0c\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_bbfedf0c\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 19316
+        },
+        "end": {
+          "line": 1306,
+          "column": 19334
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Math",
+      "resolved": false,
+      "improvedEntityId": "Math",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "5f15b8dc6091305e3a7167c6",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_bbfedf0c\\app-service.js",
+      "file": "商标查询_bbfedf0c\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_bbfedf0c\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 19452
+        },
+        "end": {
+          "line": 1306,
+          "column": 19470
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Math",
+      "resolved": false,
+      "improvedEntityId": "Math",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "28e1791ce5316d8167c6200d",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_c3a07edb\\app-service.js",
+      "file": "商标查询_c3a07edb\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_c3a07edb\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17636
+        },
+        "end": {
+          "line": 1306,
+          "column": 17681
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "6954b8c8cb0e75162111e688",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_c3a07edb\\app-service.js",
+      "file": "商标查询_c3a07edb\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_c3a07edb\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17772
+        },
+        "end": {
+          "line": 1306,
+          "column": 17790
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Symbol",
+      "resolved": false,
+      "improvedEntityId": "Symbol",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "93068ed9fa20461f639caac2",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_c3a07edb\\app-service.js",
+      "file": "商标查询_c3a07edb\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_c3a07edb\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17792
+        },
+        "end": {
+          "line": 1306,
+          "column": 17850
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "3a98965194f8cbbddd5460fb",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_c3a07edb\\app-service.js",
+      "file": "商标查询_c3a07edb\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_c3a07edb\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17813
+        },
+        "end": {
+          "line": 1306,
+          "column": 17831
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Symbol",
+      "resolved": false,
+      "improvedEntityId": "Symbol",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "71445b04367bae790de3c897",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_c3a07edb\\app-service.js",
+      "file": "商标查询_c3a07edb\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_c3a07edb\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17851
+        },
+        "end": {
+          "line": 1306,
+          "column": 17894
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "25ea148dd3f270cac24a1a36",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_c3a07edb\\app-service.js",
+      "file": "商标查询_c3a07edb\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_c3a07edb\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18012
+        },
+        "end": {
+          "line": 1306,
+          "column": 18036
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "3942fb3bfae943f83c9b3b7a",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_c3a07edb\\app-service.js",
+      "file": "商标查询_c3a07edb\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_c3a07edb\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18056
+        },
+        "end": {
+          "line": 1306,
+          "column": 18112
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "1f45241bae028be5d6545334",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_c3a07edb\\app-service.js",
+      "file": "商标查询_c3a07edb\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_c3a07edb\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18401
+        },
+        "end": {
+          "line": 1306,
+          "column": 18448
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "8401db45319ddc203427384c",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_c3a07edb\\app-service.js",
+      "file": "商标查询_c3a07edb\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_c3a07edb\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18401
+        },
+        "end": {
+          "line": 1306,
+          "column": 18431
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "8401db45319ddc203427384c",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_c3a07edb\\app-service.js",
+      "file": "商标查询_c3a07edb\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_c3a07edb\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18401
+        },
+        "end": {
+          "line": 1306,
+          "column": 18419
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "9803753a690197f278c342d9",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_c3a07edb\\app-service.js",
+      "file": "商标查询_c3a07edb\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_c3a07edb\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 19316
+        },
+        "end": {
+          "line": 1306,
+          "column": 19334
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Math",
+      "resolved": false,
+      "improvedEntityId": "Math",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "d2fa08808abbf74822d707dd",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_c3a07edb\\app-service.js",
+      "file": "商标查询_c3a07edb\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_c3a07edb\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 19452
+        },
+        "end": {
+          "line": 1306,
+          "column": 19470
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Math",
+      "resolved": false,
+      "improvedEntityId": "Math",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "8a7b64bc0e67765377348122",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_cb9a99ea\\app-service.js",
+      "file": "商标查询_cb9a99ea\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_cb9a99ea\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17636
+        },
+        "end": {
+          "line": 1306,
+          "column": 17681
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "a1435baa5c2fd01cdf519ee2",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_cb9a99ea\\app-service.js",
+      "file": "商标查询_cb9a99ea\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_cb9a99ea\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17772
+        },
+        "end": {
+          "line": 1306,
+          "column": 17790
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Symbol",
+      "resolved": false,
+      "improvedEntityId": "Symbol",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "1c2ffacc685f5a4e28ab4715",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_cb9a99ea\\app-service.js",
+      "file": "商标查询_cb9a99ea\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_cb9a99ea\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17792
+        },
+        "end": {
+          "line": 1306,
+          "column": 17850
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "8d121147b28b871bf6f71d95",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_cb9a99ea\\app-service.js",
+      "file": "商标查询_cb9a99ea\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_cb9a99ea\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17813
+        },
+        "end": {
+          "line": 1306,
+          "column": 17831
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Symbol",
+      "resolved": false,
+      "improvedEntityId": "Symbol",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "d04c4939e4a1601ba211ad0a",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_cb9a99ea\\app-service.js",
+      "file": "商标查询_cb9a99ea\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_cb9a99ea\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17851
+        },
+        "end": {
+          "line": 1306,
+          "column": 17894
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "65a43b760ebca9111a3b43ad",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_cb9a99ea\\app-service.js",
+      "file": "商标查询_cb9a99ea\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_cb9a99ea\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18012
+        },
+        "end": {
+          "line": 1306,
+          "column": 18036
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "6886805aabfa3621b37dbe0c",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_cb9a99ea\\app-service.js",
+      "file": "商标查询_cb9a99ea\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_cb9a99ea\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18056
+        },
+        "end": {
+          "line": 1306,
+          "column": 18112
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "fe9bd60fbb06febd558a9dbf",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_cb9a99ea\\app-service.js",
+      "file": "商标查询_cb9a99ea\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_cb9a99ea\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18401
+        },
+        "end": {
+          "line": 1306,
+          "column": 18448
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "f6e3661c7552f03550803d7b",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_cb9a99ea\\app-service.js",
+      "file": "商标查询_cb9a99ea\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_cb9a99ea\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18401
+        },
+        "end": {
+          "line": 1306,
+          "column": 18431
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "f6e3661c7552f03550803d7b",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_cb9a99ea\\app-service.js",
+      "file": "商标查询_cb9a99ea\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_cb9a99ea\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18401
+        },
+        "end": {
+          "line": 1306,
+          "column": 18419
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "39846b9bf5645dd0f02078e1",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_cb9a99ea\\app-service.js",
+      "file": "商标查询_cb9a99ea\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_cb9a99ea\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 19316
+        },
+        "end": {
+          "line": 1306,
+          "column": 19334
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Math",
+      "resolved": false,
+      "improvedEntityId": "Math",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "f30ca71d4c13295c48e3d802",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_cb9a99ea\\app-service.js",
+      "file": "商标查询_cb9a99ea\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_cb9a99ea\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 19452
+        },
+        "end": {
+          "line": 1306,
+          "column": 19470
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Math",
+      "resolved": false,
+      "improvedEntityId": "Math",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "6fbafc08a0d2211a506c8a1b",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_d9d590b8\\app-service.js",
+      "file": "商标查询_d9d590b8\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_d9d590b8\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17636
+        },
+        "end": {
+          "line": 1306,
+          "column": 17681
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "7eeef024c22e17baf2d8fff6",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_d9d590b8\\app-service.js",
+      "file": "商标查询_d9d590b8\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_d9d590b8\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17772
+        },
+        "end": {
+          "line": 1306,
+          "column": 17790
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Symbol",
+      "resolved": false,
+      "improvedEntityId": "Symbol",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "1509a518f624798d1060b50c",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_d9d590b8\\app-service.js",
+      "file": "商标查询_d9d590b8\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_d9d590b8\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17792
+        },
+        "end": {
+          "line": 1306,
+          "column": 17850
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "42df70d07936ebb91784e6d7",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_d9d590b8\\app-service.js",
+      "file": "商标查询_d9d590b8\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_d9d590b8\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17813
+        },
+        "end": {
+          "line": 1306,
+          "column": 17831
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Symbol",
+      "resolved": false,
+      "improvedEntityId": "Symbol",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "fb9376a099e60382b29131b0",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_d9d590b8\\app-service.js",
+      "file": "商标查询_d9d590b8\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_d9d590b8\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17851
+        },
+        "end": {
+          "line": 1306,
+          "column": 17894
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "25fabbf33cc6e9b801ba888c",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_d9d590b8\\app-service.js",
+      "file": "商标查询_d9d590b8\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_d9d590b8\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18012
+        },
+        "end": {
+          "line": 1306,
+          "column": 18036
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "83d1a11a9787a16ef82a8b39",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_d9d590b8\\app-service.js",
+      "file": "商标查询_d9d590b8\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_d9d590b8\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18056
+        },
+        "end": {
+          "line": 1306,
+          "column": 18112
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "6cd45f1faaf753f55c555282",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_d9d590b8\\app-service.js",
+      "file": "商标查询_d9d590b8\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_d9d590b8\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18401
+        },
+        "end": {
+          "line": 1306,
+          "column": 18448
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "ae1c340535f9863dc0cea128",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_d9d590b8\\app-service.js",
+      "file": "商标查询_d9d590b8\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_d9d590b8\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18401
+        },
+        "end": {
+          "line": 1306,
+          "column": 18431
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "ae1c340535f9863dc0cea128",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_d9d590b8\\app-service.js",
+      "file": "商标查询_d9d590b8\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_d9d590b8\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18401
+        },
+        "end": {
+          "line": 1306,
+          "column": 18419
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "c5c870a8b4f196231e98f28b",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_d9d590b8\\app-service.js",
+      "file": "商标查询_d9d590b8\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_d9d590b8\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 19316
+        },
+        "end": {
+          "line": 1306,
+          "column": 19334
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Math",
+      "resolved": false,
+      "improvedEntityId": "Math",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "259d671b462f6cdafccde2d1",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_d9d590b8\\app-service.js",
+      "file": "商标查询_d9d590b8\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_d9d590b8\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 19452
+        },
+        "end": {
+          "line": 1306,
+          "column": 19470
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Math",
+      "resolved": false,
+      "improvedEntityId": "Math",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "886a8b1cd8b8b59c7f3cc2c0",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_e9a6fd68\\app-service.js",
+      "file": "商标查询_e9a6fd68\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_e9a6fd68\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17636
+        },
+        "end": {
+          "line": 1306,
+          "column": 17681
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "c206c62f25dcd473846ba8c2",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_e9a6fd68\\app-service.js",
+      "file": "商标查询_e9a6fd68\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_e9a6fd68\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17772
+        },
+        "end": {
+          "line": 1306,
+          "column": 17790
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Symbol",
+      "resolved": false,
+      "improvedEntityId": "Symbol",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "41f67227d03b23766a2c5c81",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_e9a6fd68\\app-service.js",
+      "file": "商标查询_e9a6fd68\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_e9a6fd68\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17792
+        },
+        "end": {
+          "line": 1306,
+          "column": 17850
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "85dc6aa3a4d3d5ea0043ca42",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_e9a6fd68\\app-service.js",
+      "file": "商标查询_e9a6fd68\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_e9a6fd68\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17813
+        },
+        "end": {
+          "line": 1306,
+          "column": 17831
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Symbol",
+      "resolved": false,
+      "improvedEntityId": "Symbol",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "ff501a122f749bfe766de88b",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_e9a6fd68\\app-service.js",
+      "file": "商标查询_e9a6fd68\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_e9a6fd68\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 17851
+        },
+        "end": {
+          "line": 1306,
+          "column": 17894
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "e343723c1f12059caa9822b6",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_e9a6fd68\\app-service.js",
+      "file": "商标查询_e9a6fd68\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_e9a6fd68\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18012
+        },
+        "end": {
+          "line": 1306,
+          "column": 18036
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "669de83ea698c448874f2b2e",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_e9a6fd68\\app-service.js",
+      "file": "商标查询_e9a6fd68\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_e9a6fd68\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18056
+        },
+        "end": {
+          "line": 1306,
+          "column": 18112
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "5f40564355a08eeff8244e98",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_e9a6fd68\\app-service.js",
+      "file": "商标查询_e9a6fd68\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_e9a6fd68\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18401
+        },
+        "end": {
+          "line": 1306,
+          "column": 18448
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "5a6c91cfa5ebbeef7e5168c5",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_e9a6fd68\\app-service.js",
+      "file": "商标查询_e9a6fd68\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_e9a6fd68\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18401
+        },
+        "end": {
+          "line": 1306,
+          "column": 18431
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "5a6c91cfa5ebbeef7e5168c5",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_e9a6fd68\\app-service.js",
+      "file": "商标查询_e9a6fd68\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_e9a6fd68\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 18401
+        },
+        "end": {
+          "line": 1306,
+          "column": 18419
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Object",
+      "resolved": false,
+      "improvedEntityId": "Object",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "913b2fb364b14fce3aee6868",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_e9a6fd68\\app-service.js",
+      "file": "商标查询_e9a6fd68\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_e9a6fd68\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 19316
+        },
+        "end": {
+          "line": 1306,
+          "column": 19334
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Math",
+      "resolved": false,
+      "improvedEntityId": "Math",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "db05cf40a0f7d0c590b9b306",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\商标查询_e9a6fd68\\app-service.js",
+      "file": "商标查询_e9a6fd68\\app-service.js",
+      "programPoint": {
+        "filePath": "商标查询_e9a6fd68\\app-service.js",
+        "start": {
+          "line": 1306,
+          "column": 19452
+        },
+        "end": {
+          "line": 1306,
+          "column": 19470
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Math",
+      "resolved": false,
+      "improvedEntityId": "Math",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "965d85ddd97d569d4013fec3",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\随身工具集_c3e85ae1\\app-service.js",
+      "file": "随身工具集_c3e85ae1\\app-service.js",
+      "programPoint": {
+        "filePath": "随身工具集_c3e85ae1\\app-service.js",
+        "start": {
+          "line": 1190,
+          "column": 1643
+        },
+        "end": {
+          "line": 1190,
+          "column": 1661
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "i",
+      "resolved": false,
+      "improvedEntityId": "i",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "0d8f1f4a992ece3cf8dae367",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\随身工具集_c3e85ae1\\app-service.js",
+      "file": "随身工具集_c3e85ae1\\app-service.js",
+      "programPoint": {
+        "filePath": "随身工具集_c3e85ae1\\app-service.js",
+        "start": {
+          "line": 1190,
+          "column": 1761
+        },
+        "end": {
+          "line": 1190,
+          "column": 1779
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "i",
+      "resolved": false,
+      "improvedEntityId": "i",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "c6bf6991e64267c15320892a",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\微信运动群排行_484aa69a\\app-service.js",
+      "file": "微信运动群排行_484aa69a\\app-service.js",
+      "programPoint": {
+        "filePath": "微信运动群排行_484aa69a\\app-service.js",
+        "start": {
+          "line": 4,
+          "column": 2815
+        },
+        "end": {
+          "line": 4,
+          "column": 2839
+        },
+        "nodeType": "LogicalExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "u",
+      "resolved": false,
+      "improvedEntityId": "u",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "2f0a90548c679dca36e0bb84",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\微信运动群排行_484aa69a\\app-service.js",
+      "file": "微信运动群排行_484aa69a\\app-service.js",
+      "programPoint": {
+        "filePath": "微信运动群排行_484aa69a\\app-service.js",
+        "start": {
+          "line": 4,
+          "column": 2843
+        },
+        "end": {
+          "line": 4,
+          "column": 2847
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "u",
+      "resolved": false,
+      "improvedEntityId": "u",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "a4b67d7761939e38d3bb5ae5",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\小数报每日一题_aa13aa4b\\app-service.js",
+      "file": "小数报每日一题_aa13aa4b\\app-service.js",
+      "programPoint": {
+        "filePath": "小数报每日一题_aa13aa4b\\app-service.js",
+        "start": {
+          "line": 1564,
+          "column": 591
+        },
+        "end": {
+          "line": 1564,
+          "column": 599
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "wx",
+      "resolved": false,
+      "improvedEntityId": "wx",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "c88c8e824c2a6e83fdb9d066",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\英语点读_d42cf658\\app-service.js",
+      "file": "英语点读_d42cf658\\app-service.js",
+      "programPoint": {
+        "filePath": "英语点读_d42cf658\\app-service.js",
+        "start": {
+          "line": 1094,
+          "column": 2982
+        },
+        "end": {
+          "line": 1094,
+          "column": 2986
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "r",
+      "resolved": false,
+      "improvedEntityId": "r",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "c500363905386ac5f2b1bafd",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\英语点读_d42cf658\\app-service.js",
+      "file": "英语点读_d42cf658\\app-service.js",
+      "programPoint": {
+        "filePath": "英语点读_d42cf658\\app-service.js",
+        "start": {
+          "line": 1094,
+          "column": 3157
+        },
+        "end": {
+          "line": 1094,
+          "column": 3161
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "o",
+      "resolved": false,
+      "improvedEntityId": "o",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "45abb77cb24a3b5aaace2f5b",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\英语点读_dcb4ac01\\app-service.js",
+      "file": "英语点读_dcb4ac01\\app-service.js",
+      "programPoint": {
+        "filePath": "英语点读_dcb4ac01\\app-service.js",
+        "start": {
+          "line": 1094,
+          "column": 2982
+        },
+        "end": {
+          "line": 1094,
+          "column": 2986
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "r",
+      "resolved": false,
+      "improvedEntityId": "r",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "41892671957a799f3370d8e8",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\英语点读_dcb4ac01\\app-service.js",
+      "file": "英语点读_dcb4ac01\\app-service.js",
+      "programPoint": {
+        "filePath": "英语点读_dcb4ac01\\app-service.js",
+        "start": {
+          "line": 1094,
+          "column": 3157
+        },
+        "end": {
+          "line": 1094,
+          "column": 3161
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "o",
+      "resolved": false,
+      "improvedEntityId": "o",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "eb978422f45a773e50a5161f",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\逐浪小说_c41d4072\\app-service.js",
+      "file": "逐浪小说_c41d4072\\app-service.js",
+      "programPoint": {
+        "filePath": "逐浪小说_c41d4072\\app-service.js",
+        "start": {
+          "line": 7,
+          "column": 28101
+        },
+        "end": {
+          "line": 7,
+          "column": 28106
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Array.prototype",
+      "resolved": false,
+      "improvedEntityId": "Array.prototype",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "21d2ca28672e5370608e1315",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\逐浪小说_c41d4072\\app-service.js",
+      "file": "逐浪小说_c41d4072\\app-service.js",
+      "programPoint": {
+        "filePath": "逐浪小说_c41d4072\\app-service.js",
+        "start": {
+          "line": 7,
+          "column": 28188
+        },
+        "end": {
+          "line": 7,
+          "column": 28203
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "Array.prototype",
+      "resolved": false,
+      "improvedEntityId": "Array.prototype",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "735e6685c6af61204fa0c7d4",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\NiSi耐司滤镜曝光计算器_2a3f2976\\app-service.js",
+      "file": "NiSi耐司滤镜曝光计算器_2a3f2976\\app-service.js",
+      "programPoint": {
+        "filePath": "NiSi耐司滤镜曝光计算器_2a3f2976\\app-service.js",
+        "start": {
+          "line": 12,
+          "column": 675
+        },
+        "end": {
+          "line": 12,
+          "column": 700
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "t.FilterPositions",
+      "resolved": false,
+      "improvedEntityId": "t.FilterPositions",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "f8377ba1eaebff922a9fa349",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\NiSi耐司滤镜曝光计算器_2a3f2976\\app-service.js",
+      "file": "NiSi耐司滤镜曝光计算器_2a3f2976\\app-service.js",
+      "programPoint": {
+        "filePath": "NiSi耐司滤镜曝光计算器_2a3f2976\\app-service.js",
+        "start": {
+          "line": 12,
+          "column": 922
+        },
+        "end": {
+          "line": 12,
+          "column": 945
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "t.BasicShutters",
+      "resolved": false,
+      "improvedEntityId": "t.BasicShutters",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "d5693ab0f992bcb86446b4dd",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\NiSi耐司滤镜曝光计算器_2a3f2976\\app-service.js",
+      "file": "NiSi耐司滤镜曝光计算器_2a3f2976\\app-service.js",
+      "programPoint": {
+        "filePath": "NiSi耐司滤镜曝光计算器_2a3f2976\\app-service.js",
+        "start": {
+          "line": 12,
+          "column": 3000
+        },
+        "end": {
+          "line": 12,
+          "column": 3037
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "t.FilterPositions.ND1024",
+      "resolved": false,
+      "improvedEntityId": "t.FilterPositions.ND1024",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "de72947065bbbf806918ac1d",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\NiSi耐司滤镜曝光计算器_2a3f2976\\app-service.js",
+      "file": "NiSi耐司滤镜曝光计算器_2a3f2976\\app-service.js",
+      "programPoint": {
+        "filePath": "NiSi耐司滤镜曝光计算器_2a3f2976\\app-service.js",
+        "start": {
+          "line": 12,
+          "column": 3000
+        },
+        "end": {
+          "line": 12,
+          "column": 3027
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "t.FilterPositions.ND1024",
+      "resolved": false,
+      "improvedEntityId": "t.FilterPositions.ND1024",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "bfa3554b6f4962b9ad34886a",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\NiSi耐司滤镜曝光计算器_2a3f2976\\app-service.js",
+      "file": "NiSi耐司滤镜曝光计算器_2a3f2976\\app-service.js",
+      "programPoint": {
+        "filePath": "NiSi耐司滤镜曝光计算器_2a3f2976\\app-service.js",
+        "start": {
+          "line": 12,
+          "column": 3129
+        },
+        "end": {
+          "line": 12,
+          "column": 3146
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "t.ExposureCalc",
+      "resolved": false,
+      "improvedEntityId": "t.ExposureCalc",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "113684dddee556bba5a2b192",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\NiSi耐司滤镜曝光计算器_2a3f2976\\app-service.js",
+      "file": "NiSi耐司滤镜曝光计算器_2a3f2976\\app-service.js",
+      "programPoint": {
+        "filePath": "NiSi耐司滤镜曝光计算器_2a3f2976\\app-service.js",
+        "start": {
+          "line": 12,
+          "column": 3237
+        },
+        "end": {
+          "line": 12,
+          "column": 3259
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "t.TrueTimeFilter",
+      "resolved": false,
+      "improvedEntityId": "t.TrueTimeFilter",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "9123652f2e2d127f4d215c16",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\NiSi耐司滤镜曝光计算器_2a3f2976\\app-service.js",
+      "file": "NiSi耐司滤镜曝光计算器_2a3f2976\\app-service.js",
+      "programPoint": {
+        "filePath": "NiSi耐司滤镜曝光计算器_2a3f2976\\app-service.js",
+        "start": {
+          "line": 12,
+          "column": 3264
+        },
+        "end": {
+          "line": 12,
+          "column": 3286
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "t.TrueTimeFilter",
+      "resolved": false,
+      "improvedEntityId": "t.TrueTimeFilter",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "0370c55c32c91d253bb05bcb",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\NiSi耐司滤镜曝光计算器_2a3f2976\\app-service.js",
+      "file": "NiSi耐司滤镜曝光计算器_2a3f2976\\app-service.js",
+      "programPoint": {
+        "filePath": "NiSi耐司滤镜曝光计算器_2a3f2976\\app-service.js",
+        "start": {
+          "line": 12,
+          "column": 3337
+        },
+        "end": {
+          "line": 12,
+          "column": 3338
+        },
+        "nodeType": "Identifier"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "t.ExposureCalc",
+      "resolved": false,
+      "improvedEntityId": "t.ExposureCalc",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "3ae0b032b99538aee152754a",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\NiSi耐司滤镜曝光计算器_2a3f2976\\app-service.js",
+      "file": "NiSi耐司滤镜曝光计算器_2a3f2976\\app-service.js",
+      "programPoint": {
+        "filePath": "NiSi耐司滤镜曝光计算器_2a3f2976\\app-service.js",
+        "start": {
+          "line": 12,
+          "column": 3434
+        },
+        "end": {
+          "line": 12,
+          "column": 3462
+        },
+        "nodeType": "BinaryExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "t.BasicShutters.1/3",
+      "resolved": false,
+      "improvedEntityId": "t.BasicShutters.1/3",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "51d18f07f0ce03ab28a2c755",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\NiSi耐司滤镜曝光计算器_2a3f2976\\app-service.js",
+      "file": "NiSi耐司滤镜曝光计算器_2a3f2976\\app-service.js",
+      "programPoint": {
+        "filePath": "NiSi耐司滤镜曝光计算器_2a3f2976\\app-service.js",
+        "start": {
+          "line": 12,
+          "column": 3480
+        },
+        "end": {
+          "line": 12,
+          "column": 3496
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "t.Results",
+      "resolved": false,
+      "improvedEntityId": "t.Results",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "31a4e9c56acde791aa5000ad",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\NiSi耐司滤镜曝光计算器_2a3f2976\\app-service.js",
+      "file": "NiSi耐司滤镜曝光计算器_2a3f2976\\app-service.js",
+      "programPoint": {
+        "filePath": "NiSi耐司滤镜曝光计算器_2a3f2976\\app-service.js",
+        "start": {
+          "line": 12,
+          "column": 3525
+        },
+        "end": {
+          "line": 12,
+          "column": 3526
+        },
+        "nodeType": "Identifier"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "t.ExposureCalc",
+      "resolved": false,
+      "improvedEntityId": "t.ExposureCalc",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "999c5ef81faee47e38fe1e19",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\NiSi耐司滤镜曝光计算器_2a3f2976\\app-service.js",
+      "file": "NiSi耐司滤镜曝光计算器_2a3f2976\\app-service.js",
+      "programPoint": {
+        "filePath": "NiSi耐司滤镜曝光计算器_2a3f2976\\app-service.js",
+        "start": {
+          "line": 12,
+          "column": 3542
+        },
+        "end": {
+          "line": 12,
+          "column": 3543
+        },
+        "nodeType": "Identifier"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "t.ExposureCalc",
+      "resolved": false,
+      "improvedEntityId": "t.ExposureCalc",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "482698ec30df2adf5c78139e",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\NiSi耐司滤镜曝光计算器_2a3f2976\\app-service.js",
+      "file": "NiSi耐司滤镜曝光计算器_2a3f2976\\app-service.js",
+      "programPoint": {
+        "filePath": "NiSi耐司滤镜曝光计算器_2a3f2976\\app-service.js",
+        "start": {
+          "line": 12,
+          "column": 3606
+        },
+        "end": {
+          "line": 12,
+          "column": 3607
+        },
+        "nodeType": "Identifier"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "t.ExposureCalc",
+      "resolved": false,
+      "improvedEntityId": "t.ExposureCalc",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "f28bacb33733cc46765c3fec",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\uni-app_b9f74cb0\\app-service.js",
+      "file": "uni-app_b9f74cb0\\app-service.js",
+      "programPoint": {
+        "filePath": "uni-app_b9f74cb0\\app-service.js",
+        "start": {
+          "line": 2278,
+          "column": 15
+        },
+        "end": {
+          "line": 2278,
+          "column": 43
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "wx",
+      "resolved": false,
+      "improvedEntityId": "wx",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "2080f3d767c90104305d1bf0",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\uni-app_b9f74cb0\\app-service.js",
+      "file": "uni-app_b9f74cb0\\app-service.js",
+      "programPoint": {
+        "filePath": "uni-app_b9f74cb0\\app-service.js",
+        "start": {
+          "line": 2278,
+          "column": 15
+        },
+        "end": {
+          "line": 2278,
+          "column": 22
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "wx",
+      "resolved": false,
+      "improvedEntityId": "wx",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "833b43c999e7da3fa4d80ff5",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\Weekly To Do_ce5b8f16\\app-service.js",
+      "file": "Weekly To Do_ce5b8f16\\app-service.js",
+      "programPoint": {
+        "filePath": "Weekly To Do_ce5b8f16\\app-service.js",
+        "start": {
+          "line": 2278,
+          "column": 15
+        },
+        "end": {
+          "line": 2278,
+          "column": 43
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "wx",
+      "resolved": false,
+      "improvedEntityId": "wx",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "2b738a9c2d603160c7e4a6bd",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\Weekly To Do_ce5b8f16\\app-service.js",
+      "file": "Weekly To Do_ce5b8f16\\app-service.js",
+      "programPoint": {
+        "filePath": "Weekly To Do_ce5b8f16\\app-service.js",
+        "start": {
+          "line": 2278,
+          "column": 15
+        },
+        "end": {
+          "line": 2278,
+          "column": 22
+        },
+        "nodeType": "MemberExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "wx",
+      "resolved": false,
+      "improvedEntityId": "wx",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "81a1927651536a45dcc204f3",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\Weixin_0cf7ecc3\\app-service.js",
+      "file": "Weixin_0cf7ecc3\\app-service.js",
+      "programPoint": {
+        "filePath": "Weixin_0cf7ecc3\\app-service.js",
+        "start": {
+          "line": 1075,
+          "column": 35
+        },
+        "end": {
+          "line": 1075,
+          "column": 51
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "wx",
+      "resolved": false,
+      "improvedEntityId": "wx",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "6d5595bd9f36cb4562e4df71",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\Weixin_0cf7ecc3\\app-service.js",
+      "file": "Weixin_0cf7ecc3\\app-service.js",
+      "programPoint": {
+        "filePath": "Weixin_0cf7ecc3\\app-service.js",
+        "start": {
+          "line": 1075,
+          "column": 79
+        },
+        "end": {
+          "line": 1075,
+          "column": 94
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "n",
+      "resolved": false,
+      "improvedEntityId": "n",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "2c6ca0f50c77f0ef29ea61f1",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\Weixin_0cf7ecc3\\app-service.js",
+      "file": "Weixin_0cf7ecc3\\app-service.js",
+      "programPoint": {
+        "filePath": "Weixin_0cf7ecc3\\app-service.js",
+        "start": {
+          "line": 1075,
+          "column": 97
+        },
+        "end": {
+          "line": 1075,
+          "column": 111
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "i",
+      "resolved": false,
+      "improvedEntityId": "i",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "2c39f9361dc7ad72cede4ad4",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\Weixin_0cf7ecc3\\app-service.js",
+      "file": "Weixin_0cf7ecc3\\app-service.js",
+      "programPoint": {
+        "filePath": "Weixin_0cf7ecc3\\app-service.js",
+        "start": {
+          "line": 1075,
+          "column": 114
+        },
+        "end": {
+          "line": 1075,
+          "column": 128
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "n",
+      "resolved": false,
+      "improvedEntityId": "n",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "b00eb527e85563950ee4c3fa",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\Weixin_0cf7ecc3\\app-service.js",
+      "file": "Weixin_0cf7ecc3\\app-service.js",
+      "programPoint": {
+        "filePath": "Weixin_0cf7ecc3\\app-service.js",
+        "start": {
+          "line": 1075,
+          "column": 131
+        },
+        "end": {
+          "line": 1075,
+          "column": 146
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "wx",
+      "resolved": false,
+      "improvedEntityId": "wx",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "00ff4de9c61f9e73f094446d",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\Weixin_0cf7ecc3\\app-service.js",
+      "file": "Weixin_0cf7ecc3\\app-service.js",
+      "programPoint": {
+        "filePath": "Weixin_0cf7ecc3\\app-service.js",
+        "start": {
+          "line": 1075,
+          "column": 149
+        },
+        "end": {
+          "line": 1075,
+          "column": 179
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "n",
+      "resolved": false,
+      "improvedEntityId": "n",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "4af38654ad8758bbbecac2e3",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\Weixin_0cf7ecc3\\app-service.js",
+      "file": "Weixin_0cf7ecc3\\app-service.js",
+      "programPoint": {
+        "filePath": "Weixin_0cf7ecc3\\app-service.js",
+        "start": {
+          "line": 1075,
+          "column": 161
+        },
+        "end": {
+          "line": 1075,
+          "column": 178
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "i",
+      "resolved": false,
+      "improvedEntityId": "i",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "8024c1d609c081ba7eb6fe68",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\Weixin_0cf7ecc3\\app-service.js",
+      "file": "Weixin_0cf7ecc3\\app-service.js",
+      "programPoint": {
+        "filePath": "Weixin_0cf7ecc3\\app-service.js",
+        "start": {
+          "line": 1075,
+          "column": 182
+        },
+        "end": {
+          "line": 1075,
+          "column": 207
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "n",
+      "resolved": false,
+      "improvedEntityId": "n",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "1921dd82954093e54ce0f6cd",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\Weixin_0cf7ecc3\\app-service.js",
+      "file": "Weixin_0cf7ecc3\\app-service.js",
+      "programPoint": {
+        "filePath": "Weixin_0cf7ecc3\\app-service.js",
+        "start": {
+          "line": 1075,
+          "column": 210
+        },
+        "end": {
+          "line": 1075,
+          "column": 224
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "n",
+      "resolved": false,
+      "improvedEntityId": "n",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "b5a21fc93287410eb435a943",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\Weixin_0cf7ecc3\\app-service.js",
+      "file": "Weixin_0cf7ecc3\\app-service.js",
+      "programPoint": {
+        "filePath": "Weixin_0cf7ecc3\\app-service.js",
+        "start": {
+          "line": 1075,
+          "column": 506
+        },
+        "end": {
+          "line": 1075,
+          "column": 522
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "wx",
+      "resolved": false,
+      "improvedEntityId": "wx",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    },
+    {
+      "sampleId": "0bee8b0c16f67ddb0537e273",
+      "sourcePath": "E:\\复现\\sample_collector\\可用于实验的干净源码包\\Weixin_0cf7ecc3\\app-service.js",
+      "file": "Weixin_0cf7ecc3\\app-service.js",
+      "programPoint": {
+        "filePath": "Weixin_0cf7ecc3\\app-service.js",
+        "start": {
+          "line": 1075,
+          "column": 548
+        },
+        "end": {
+          "line": 1075,
+          "column": 626
+        },
+        "nodeType": "CallExpression"
+      },
+      "baselineState": "UNKNOWN",
+      "baselineEntityId": "wx",
+      "resolved": false,
+      "improvedEntityId": "wx",
+      "improvedState": "UNKNOWN",
+      "reasonCodes": []
+    }
+  ]
+}

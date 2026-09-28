@@ -1,0 +1,845 @@
+{
+  "generatedAt": "2026-09-23T08:47:48.991Z",
+  "sourceRoots": [
+    "E:\\复现\\sample_collector\\可用于实验的干净源码包"
+  ],
+  "sourceKind": "miniapp",
+  "config": {
+    "projectLayout": "children",
+    "extensions": [
+      ".js"
+    ],
+    "includeExtensionless": false,
+    "limitProjects": 1572,
+    "maxFilesPerProject": 60,
+    "maxFileBytes": 3145728,
+    "maxFindingsPerFile": 800,
+    "maxFindingsPerProject": 1200,
+    "maxRecords": 1200000
+  },
+  "projectsSeen": 1572,
+  "projectsSampled": 1519,
+  "filesDiscovered": 1583,
+  "filesScanned": 1583,
+  "filesParsed": 1583,
+  "filesFailed": 0,
+  "filesSkippedTooLarge": 0,
+  "findingCount": 1200000,
+  "uniqueEntityCount": 1248,
+  "parseSuccessRate": 1,
+  "byTransformation": {
+    "CONST_EVAL": 666207,
+    "CALL_EVAL": 509935,
+    "BRANCH_PRUNE": 23858
+  },
+  "byBindingKind": {
+    "unresolved_global": 285958,
+    "runtime_global": 909158,
+    "module_import": 4663,
+    "dynamic": 221
+  },
+  "byCapabilityDomain": {
+    "unknown": 1194875,
+    "crypto": 1692,
+    "network": 378,
+    "module_runtime": 479,
+    "visible_ui": 1185,
+    "timing": 491,
+    "storage": 703,
+    "native_bridge": 179,
+    "payment": 18
+  },
+  "byRuntimeRoot": {
+    "$gwx": 49545,
+    "console": 13915,
+    "$gwn": 3006,
+    "$gwl": 1510,
+    "wh": 194830,
+    "undefined": 43102,
+    "snap_bb": 2992,
+    "gra": 5976,
+    "grb": 11944,
+    "JSON": 13769,
+    "Object": 235544,
+    "Function": 18207,
+    "Array": 100185,
+    "String": 89195,
+    "Boolean": 10681,
+    "Number": 40736,
+    "Math": 80489,
+    "Date": 210275,
+    "RegExp": 28533,
+    "parseInt": 1935,
+    "parseFloat": 1666,
+    "isNaN": 2120,
+    "isFinite": 1549,
+    "decodeURI": 1509,
+    "decodeURIComponent": 1569,
+    "encodeURI": 1503,
+    "encodeURIComponent": 1628,
+    "define": 4799,
+    "App": 162,
+    "wx": 3092,
+    "require": 362,
+    "getApp": 253,
+    "Page": 354,
+    "setTimeout": 254,
+    "nt_0": 3234,
+    "nt_1": 1213,
+    "nt_5": 758,
+    "nt_6": 755,
+    "nt_8": 554,
+    "nt_9": 463,
+    "nt_2": 560,
+    "cloud": 17,
+    "Promise": 896,
+    "toPropertyKey": 374,
+    "Symbol": 2525,
+    "t": 358,
+    "Error": 566,
+    "TypeError": 1464,
+    "_typeof": 356,
+    "globalThis": 27,
+    "e": 1534,
+    "Proxy": 28,
+    "Reflect": 290,
+    "a": 79,
+    "nv_nt_0": 69,
+    "clearTimeout": 101,
+    "nv_navigator": 62,
+    "nt_3": 330,
+    "nt_7": 236,
+    "arrayLikeToArray": 343,
+    "defineProperty": 131,
+    "arrayWithoutHoles": 62,
+    "iterableToArray": 61,
+    "unsupportedIterableToArray": 80,
+    "nonIterableSpread": 57,
+    "toPrimitive": 95,
+    "n": 112,
+    "res": 7,
+    "CryptoJS": 95,
+    "layer": 2,
+    "_size": 6,
+    "setInterval": 61,
+    "l": 4,
+    "i": 30,
+    "r": 107,
+    "s": 51,
+    "clearInterval": 73,
+    "$gwx_wx104a1a20c3f81ec2": 20,
+    "ReferenceError": 116,
+    "isNativeReflectConstruct": 75,
+    "getPrototypeOf": 97,
+    "possibleConstructorReturn": 42,
+    "setPrototypeOf": 62,
+    "assertThisInitialized": 10,
+    "$gwx_wx293c4b6097a8a4d0": 154,
+    "nt_4": 190,
+    "resolve": 19,
+    "process": 32,
+    "Uint8ClampedArray": 13,
+    "importScripts": 3,
+    "MessageChannel": 6,
+    "result": 2,
+    "my": 6,
+    "unescape": 29,
+    "$gwx_wx50b5593e81dd937a": 170,
+    "WeakMap": 38,
+    "util": 3,
+    "R_htmlToWxml": 1,
+    "_util": 6,
+    "__wxConfig": 39,
+    "WeixinJSBridge": 7,
+    "__appServiceSDK__": 7,
+    "__subContextEngine__": 21,
+    "Reporter": 7,
+    "requireOnce": 7,
+    "$gwx_wx94a6522b1d640c3b": 362,
+    "nv__startMovingY": 17,
+    "Uint8Array": 183,
+    "Uint32Array": 23,
+    "DataView": 10,
+    "getCurrentPages": 27,
+    "nv_window": 21,
+    "$gwx_wxefe655223916819e": 27,
+    "objectWithoutPropertiesLoose": 7,
+    "arrayWithHoles": 25,
+    "iterableToArrayLimit": 24,
+    "nonIterableRest": 24,
+    "h": 7,
+    "nt_12": 16,
+    "nt_13": 19,
+    "$gwx_wxd1d3a59c204109d4": 126,
+    "setImmediate": 2,
+    "superPropBase": 6,
+    "$gwx_wx82e6ae1175f264fa": 28,
+    "o": 83,
+    "$gwx_wx4664e59e8a284069": 3,
+    "complete": 1,
+    "u": 5,
+    "c": 10,
+    "$gwx_wxa16657d57059e0f0": 63,
+    "$gwx_wxa75efa648b60994b": 84,
+    "$gwx_wxdabb25f880cb2a03": 3,
+    "atob": 2,
+    "btoa": 5,
+    "Buffer": 15,
+    "TextDecoder": 2,
+    "TextEncoder": 4,
+    "escape": 11,
+    "ArrayBuffer": 44,
+    "Int8Array": 17,
+    "Int16Array": 4,
+    "Uint16Array": 13,
+    "Int32Array": 10,
+    "Float32Array": 16,
+    "Float64Array": 6,
+    "$gwx_wxe6129e9cc9619c07": 18,
+    "aesjs": 22,
+    "m": 12,
+    "$gwx_wx5ec22d3a6a176039": 7,
+    "c1": 3,
+    "c2": 15,
+    "c3": 8,
+    "$gwx_wx92c68dae5a8bb046": 15,
+    "debugInfo": 8,
+    "RangeError": 83,
+    "Map": 5,
+    "SVGRect": 5,
+    "WebKitCSSMatrix": 3,
+    "Image": 3,
+    "$gwx_wx5917c8c26f85c588": 5,
+    "$gwx_wx069ba97219f66d99": 104,
+    "nt_10": 65,
+    "nt_18": 10,
+    "nt_21": 5,
+    "nt_22": 5,
+    "nt_23": 5,
+    "nt_24": 5,
+    "nt_29": 5,
+    "nt_30": 2,
+    "$gwx_wx0e203209e27b1e66": 7,
+    "ws": 9,
+    "that": 18,
+    "nv_Array": 16,
+    "$gwx_wxd65104595293601e": 9,
+    "storage": 3,
+    "selectedIds": 1,
+    "nt_11": 55,
+    "nt_14": 30,
+    "nt_15": 29,
+    "nt_16": 11,
+    "$gwx_wxf51d01cf670e28d3": 7,
+    "orderId": 2,
+    "swan": 2,
+    "tt": 11,
+    "Taro": 3,
+    "$gwx_wxdd4927ede9acd724": 42,
+    "$gwx_wxb7c8f9ea9ceb4663": 34,
+    "$gwx_wx7a4658085b18b581": 61,
+    "_index": 1,
+    "_appNavigater": 1,
+    "$gwx_wx34345ae5855f892d": 2,
+    "nv_nt_5": 5,
+    "nv_nt_6": 5,
+    "savedAppid": 4,
+    "$gwx_wx8d04ad0492dab24d": 7,
+    "checkLogin": 1,
+    "nv_instanceLen": 2,
+    "toString": 2,
+    "$gwx_wx3b49cd549eb1ae7f": 3,
+    "version": 2,
+    "$gwx_wx116d0dd5e6a39ac7": 9,
+    "$gwx_wx4d2deeab3aed6e5a": 33,
+    "default": 5,
+    "devices_list": 1,
+    "$gwx_wx1fe8d9a3cb067a75": 36,
+    "$gwx_wxbe275ff84246f1a4": 14,
+    "WeakSet": 1,
+    "AdManager": 1,
+    "$gwx_wx3eb462803881d2f1": 14,
+    "$gwx_wx76a9a06e5b4e693e": 26,
+    "$gwx_wx43d5971c94455481": 5,
+    "$gwx_wx043a474648d3d591": 3,
+    "Set": 16,
+    "f": 5,
+    "buildInAppellationObj": 6,
+    "node:fs": 12,
+    "calc": 1,
+    "d": 5,
+    "$gwx_wx4ed749733ed0e8e8": 41,
+    "PHCNTRUST": 16,
+    "BigInteger": 2,
+    "PHCrypJS": 6,
+    "Z": 18,
+    "$gwx_wx1629d117cf9be937": 55,
+    "C": 33,
+    "$gwx_wx6885acbedba59c14": 30,
+    "G": 1,
+    "SLConverter": 2,
+    "SL": 12,
+    "currentTime": 1,
+    "isRunning": 1,
+    "colorIndex": 1,
+    "$gwx_wxefa63d84fe9f64a2": 10,
+    "$gwx_wx2b03c6e691cd7370": 140,
+    "nv_colFormatVehicleState": 2,
+    "nv_colFormatVehicleInfo": 2,
+    "nv_showBox": 2,
+    "nv_formatVehicleInfo": 2,
+    "nv_getTvlWidth": 2,
+    "nv_formatColorName": 2,
+    "nv_formatStationName": 2,
+    "nv_showLine": 2,
+    "worker": 3,
+    "nodeRequest": 2,
+    "wx_login": 2,
+    "wxCommonHost": 1,
+    "nv_fmt1": 2,
+    "nv_fmt2": 2,
+    "$gwx_wx6afed118d9e81df9": 5,
+    "describe": 1,
+    "api": 6,
+    "$gwx_wx62d350f80724f9b0": 7,
+    "log": 2,
+    "nv_nt_1": 15,
+    "$gwx_wxdf01634fc34b7886": 21,
+    "nv_textViewInstance": 3,
+    "$gwx_wx71acb46aa72fff57": 7,
+    "Window": 1,
+    "nv_size": 4,
+    "nv_style": 2,
+    "Type": 3,
+    "$gwx_wx63ffb7b7894e99ae": 26,
+    "$gwx_wxee969de81bba9a45": 56,
+    "$gwx_wxf3f436ba9bd4be7b": 19,
+    "_require": 5,
+    "_require2": 3,
+    "$gwx_wx4a1d9449e295d1a3": 7,
+    "data": 1,
+    "uni": 2,
+    "$gwx_wx97d76316fee0e8fe": 37,
+    "VM2_INTERNAL_STATE_DO_NOT_USE_OR_PROGRAM_WILL_FAIL": 4,
+    "$gwx_wx63d6102e26f0a3f8": 6,
+    "$gwx_wx013447465d3aa024": 3,
+    "config": 2,
+    "b": 2,
+    "node:assert": 2,
+    "node:path": 6,
+    "__dirname": 1,
+    "$gwx_wx610ea582556c983e": 5,
+    "close": 2,
+    "cb": 4,
+    "R": 6,
+    "p": 33,
+    "root": 1,
+    "Crypto": 1,
+    "_type": 1,
+    "__VUE_SSR_CONTEXT__": 2,
+    "eval": 2,
+    "DEBUG": 1,
+    "_array_like_to_array": 1,
+    "_define_property": 1,
+    "_array_with_holes": 1,
+    "_iterable_to_array_limit": 1,
+    "_unsupported_iterable_to_array": 2,
+    "_non_iterable_rest": 1,
+    "_array_without_holes": 1,
+    "_iterable_to_array": 1,
+    "_non_iterable_spread": 1,
+    "HmacSHA1": 1,
+    "isCall": 1,
+    "_typeof3": 1,
+    "FileReader": 3,
+    "constructor": 5,
+    "getItem": 1,
+    "setItem": 1,
+    "x": 3,
+    "$gwx_wx12cec70855c0cacf": 7,
+    "CONFIG": 2,
+    "$gwx_wx80b5f24d05ef8e63": 15,
+    "DIMOND_SERVER_DOMAIN": 1,
+    "noop": 9,
+    "NaN": 3,
+    "window": 4,
+    "self": 2,
+    "AES_set_key": 1,
+    "AES_CTR_set_options": 1,
+    "AES_set_iv": 1,
+    "AES_set_padding": 1,
+    "AES_reset": 1,
+    "AES_Encrypt_process": 1,
+    "AES_Encrypt_finish": 1,
+    "AES_Decrypt_process": 1,
+    "AES_Decrypt_finish": 1,
+    "encrypt": 1,
+    "decrypt": 1,
+    "SyntaxError": 4,
+    "BigInt": 2,
+    "Iterator": 2,
+    "AsyncIterator": 2,
+    "SuppressedError": 2,
+    "crypto": 1,
+    "$gwx_wx4418e3e031e551be": 7,
+    "_classCallCheck2": 1,
+    "_createClass2": 1,
+    "_utils": 2,
+    "msg": 1,
+    "_constants": 2,
+    "_chooseImage": 2,
+    "words": 1,
+    "$gwx_wx9acc1deb2cb15bba": 23,
+    "themeListeners": 5,
+    "WXEnvironment": 4,
+    "app": 8,
+    "song": 1,
+    "index": 2,
+    "array": 1,
+    "D": 3,
+    "nt_17": 1,
+    "$gwx_wx308bd2aeb83d3345": 3,
+    "nt_19": 2,
+    "nv_const": 2,
+    "nv_address": 4,
+    "nv_v": 1,
+    "filterCode": 6,
+    "ios": 1,
+    "$gwx_wx032b78128e980502": 9,
+    "Blob": 2,
+    "active": 1,
+    "run": 2,
+    "on": 1,
+    "off": 1,
+    "stop": 2,
+    "$gwx_wx70d57361939e63ef": 5,
+    "Observer": 2,
+    "onHide": 2,
+    "$gwx_wx69b7451feb427f0e": 27,
+    "$gwx_wxaae6519cee98d824": 9,
+    "$gwx_wxbc055599e4059c9f": 11,
+    "$gwx_wx5fcce12afdff9918": 67,
+    "GameGlobal": 8,
+    "loader": 3,
+    "first_scene": 4,
+    "gl": 1,
+    "requestAnimationFrame": 2,
+    "nv_owner": 2
+  },
+  "bySourceKind": {
+    "miniapp": 1200000
+  },
+  "topEntities": [
+    {
+      "entityId": "Object.defineProperty",
+      "count": 217346
+    },
+    {
+      "entityId": "Date.prototype",
+      "count": 130086
+    },
+    {
+      "entityId": "wh.rv",
+      "count": 109452
+    },
+    {
+      "entityId": "Array.prototype",
+      "count": 63556
+    },
+    {
+      "entityId": "String.prototype",
+      "count": 59848
+    },
+    {
+      "entityId": "$gwx",
+      "count": 49545
+    },
+    {
+      "entityId": "wh.hn",
+      "count": 44950
+    },
+    {
+      "entityId": "undefined",
+      "count": 43102
+    },
+    {
+      "entityId": "Math",
+      "count": 39004
+    },
+    {
+      "entityId": "wh.nh",
+      "count": 38923
+    },
+    {
+      "entityId": "Number.prototype",
+      "count": 19448
+    },
+    {
+      "entityId": "RegExp.prototype",
+      "count": 17940
+    },
+    {
+      "entityId": "JSON.stringify",
+      "count": 12114
+    },
+    {
+      "entityId": "grb",
+      "count": 11944
+    },
+    {
+      "entityId": "Date",
+      "count": 10909
+    },
+    {
+      "entityId": "Boolean.prototype",
+      "count": 7497
+    },
+    {
+      "entityId": "Function.prototype",
+      "count": 7483
+    },
+    {
+      "entityId": "Number",
+      "count": 6305
+    },
+    {
+      "entityId": "RegExp",
+      "count": 6061
+    },
+    {
+      "entityId": "gra",
+      "count": 5976
+    },
+    {
+      "entityId": "console.warn",
+      "count": 5461
+    },
+    {
+      "entityId": "console.log",
+      "count": 5153
+    },
+    {
+      "entityId": "Object.prototype",
+      "count": 5029
+    },
+    {
+      "entityId": "define",
+      "count": 4772
+    },
+    {
+      "entityId": "Function",
+      "count": 4665
+    },
+    {
+      "entityId": "Array.prototype.slice",
+      "count": 4525
+    },
+    {
+      "entityId": "nt_0",
+      "count": 3234
+    },
+    {
+      "entityId": "Array.prototype.slice.call",
+      "count": 3054
+    },
+    {
+      "entityId": "$gwn",
+      "count": 3006
+    },
+    {
+      "entityId": "Function.prototype.bind",
+      "count": 2995
+    },
+    {
+      "entityId": "snap_bb",
+      "count": 2992
+    },
+    {
+      "entityId": "Function.prototype.bind.apply",
+      "count": 2990
+    },
+    {
+      "entityId": "Object",
+      "count": 2967
+    },
+    {
+      "entityId": "console.error",
+      "count": 2951
+    },
+    {
+      "entityId": "Array",
+      "count": 2316
+    },
+    {
+      "entityId": "Object.prototype.hasOwnProperty.call",
+      "count": 2191
+    },
+    {
+      "entityId": "isNaN",
+      "count": 2120
+    },
+    {
+      "entityId": "parseInt",
+      "count": 1935
+    },
+    {
+      "entityId": "Date.now",
+      "count": 1920
+    },
+    {
+      "entityId": "Math.max",
+      "count": 1898
+    },
+    {
+      "entityId": "Math.abs",
+      "count": 1863
+    },
+    {
+      "entityId": "Math.floor",
+      "count": 1732
+    },
+    {
+      "entityId": "parseFloat",
+      "count": 1666
+    },
+    {
+      "entityId": "JSON.parse",
+      "count": 1652
+    },
+    {
+      "entityId": "encodeURIComponent",
+      "count": 1628
+    },
+    {
+      "entityId": "Object.prototype.toString.call",
+      "count": 1607
+    },
+    {
+      "entityId": "Math.random",
+      "count": 1593
+    },
+    {
+      "entityId": "Object.prototype.toString",
+      "count": 1592
+    },
+    {
+      "entityId": "Math.round",
+      "count": 1586
+    },
+    {
+      "entityId": "Math.PI",
+      "count": 1574
+    },
+    {
+      "entityId": "Math.pow",
+      "count": 1574
+    },
+    {
+      "entityId": "decodeURIComponent",
+      "count": 1569
+    },
+    {
+      "entityId": "Math.min",
+      "count": 1566
+    },
+    {
+      "entityId": "isFinite",
+      "count": 1549
+    },
+    {
+      "entityId": "Symbol",
+      "count": 1547
+    },
+    {
+      "entityId": "Math.sin",
+      "count": 1542
+    },
+    {
+      "entityId": "Math.ceil",
+      "count": 1537
+    },
+    {
+      "entityId": "Math.cos",
+      "count": 1533
+    },
+    {
+      "entityId": "Math.sqrt",
+      "count": 1523
+    },
+    {
+      "entityId": "Date.parse",
+      "count": 1520
+    },
+    {
+      "entityId": "Boolean.prototype.valueOf",
+      "count": 1515
+    },
+    {
+      "entityId": "Date.UTC",
+      "count": 1512
+    },
+    {
+      "entityId": "Math.log",
+      "count": 1511
+    },
+    {
+      "entityId": "$gwl",
+      "count": 1510
+    },
+    {
+      "entityId": "decodeURI",
+      "count": 1509
+    },
+    {
+      "entityId": "Date.prototype.toString",
+      "count": 1508
+    },
+    {
+      "entityId": "Number.NEGATIVE_INFINITY",
+      "count": 1507
+    },
+    {
+      "entityId": "Number.POSITIVE_INFINITY",
+      "count": 1506
+    },
+    {
+      "entityId": "wh",
+      "count": 1505
+    },
+    {
+      "entityId": "Array.prototype.map",
+      "count": 1504
+    },
+    {
+      "entityId": "encodeURI",
+      "count": 1503
+    },
+    {
+      "entityId": "Math.atan",
+      "count": 1502
+    },
+    {
+      "entityId": "Math.exp",
+      "count": 1501
+    },
+    {
+      "entityId": "Array.prototype.filter",
+      "count": 1500
+    },
+    {
+      "entityId": "Array.prototype.forEach",
+      "count": 1500
+    },
+    {
+      "entityId": "Array.prototype.push",
+      "count": 1500
+    },
+    {
+      "entityId": "Array.prototype.unshift",
+      "count": 1500
+    },
+    {
+      "entityId": "Math.LN2",
+      "count": 1500
+    },
+    {
+      "entityId": "Array.prototype.concat",
+      "count": 1499
+    },
+    {
+      "entityId": "Array.prototype.reduce",
+      "count": 1498
+    },
+    {
+      "entityId": "Math.SQRT1_2",
+      "count": 1498
+    },
+    {
+      "entityId": "Math.tan",
+      "count": 1498
+    },
+    {
+      "entityId": "String.prototype.charCodeAt",
+      "count": 1498
+    },
+    {
+      "entityId": "Array.prototype.some",
+      "count": 1497
+    },
+    {
+      "entityId": "Math.asin",
+      "count": 1497
+    },
+    {
+      "entityId": "Math.atan2",
+      "count": 1497
+    },
+    {
+      "entityId": "Array.prototype.every",
+      "count": 1496
+    },
+    {
+      "entityId": "Array.prototype.indexOf",
+      "count": 1496
+    },
+    {
+      "entityId": "Array.prototype.lastIndexOf",
+      "count": 1496
+    },
+    {
+      "entityId": "Array.prototype.pop",
+      "count": 1496
+    },
+    {
+      "entityId": "Array.prototype.reduceRight",
+      "count": 1496
+    },
+    {
+      "entityId": "Array.prototype.reverse",
+      "count": 1496
+    },
+    {
+      "entityId": "Array.prototype.shift",
+      "count": 1496
+    },
+    {
+      "entityId": "Array.prototype.sort",
+      "count": 1496
+    },
+    {
+      "entityId": "Array.prototype.splice",
+      "count": 1496
+    },
+    {
+      "entityId": "Boolean.prototype.toString",
+      "count": 1496
+    },
+    {
+      "entityId": "Math.acos",
+      "count": 1496
+    },
+    {
+      "entityId": "Math.E",
+      "count": 1496
+    },
+    {
+      "entityId": "Math.LN10",
+      "count": 1496
+    },
+    {
+      "entityId": "Math.LOG10E",
+      "count": 1496
+    }
+  ],
+  "timing": {
+    "totalMs": 624934.5083,
+    "analysisMs": 586930.928700001,
+    "filesPerSecond": 2.533065431618125,
+    "findingsPerSecond": 1920.2012115867021,
+    "averageAnalysisMsPerFile": 370.7712752368926
+  },
+  "output": {
+    "records": "E:\\读论文\\R97\\datasets\\real-miniapp-full-next\\real-miniapp-candidates.jsonl",
+    "failures": "E:\\读论文\\R97\\datasets\\real-miniapp-full-next\\real-miniapp-parse-failures.jsonl"
+  }
+}

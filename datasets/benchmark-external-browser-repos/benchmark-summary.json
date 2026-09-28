@@ -1,0 +1,1217 @@
+{
+  "generatedAt": "2026-09-24T08:03:26.504Z",
+  "environment": {
+    "node": "v24.21.0",
+    "targetRuntimeIds": [
+      "e1-ecmascript",
+      "e2-node-24.21.0",
+      "e5-edge-headless"
+    ],
+    "evaluatorRuntimeId": "e1-ecmascript",
+    "legacySource": "E:\\复现\\JSIMPLIFIER\\jsimplifier_dataset\\jsimplifier\\data\\pra-rule-map.json",
+    "legacySymbolCount": 147,
+    "corpusPath": "E:\\读论文\\R97\\datasets\\external-browser-repos\\real-miniapp-candidates.jsonl",
+    "wechatReportPath": null
+  },
+  "synthetic": {
+    "caseCount": 16,
+    "evidenceAvailability": {
+      "language": true,
+      "node": true,
+      "wechat": false,
+      "browser": true
+    },
+    "results": [
+      {
+        "caseId": "safe-object-keys",
+        "category": "language",
+        "source": "Object.keys({ value: 1 });",
+        "expected": "FOLD",
+        "rationale": "ECMAScript 内建对象在语言基线和 Node 中语义一致",
+        "entityId": "Object.keys",
+        "actualStates": [
+          "FOLD"
+        ],
+        "action": "ALLOW_FOLD",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ],
+        "correct": true
+      },
+      {
+        "caseId": "safe-array-is-array",
+        "category": "language",
+        "source": "Array.isArray([]);",
+        "expected": "FOLD",
+        "rationale": "标准语言 API 在评估运行时和目标运行时一致",
+        "entityId": "Array.isArray",
+        "actualStates": [
+          "FOLD"
+        ],
+        "action": "ALLOW_FOLD",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ],
+        "correct": true
+      },
+      {
+        "caseId": "safe-json-parse",
+        "category": "language",
+        "source": "JSON.parse('{\"value\":1}');",
+        "expected": "FOLD",
+        "rationale": "标准语言 API 在评估运行时和目标运行时一致",
+        "entityId": "JSON.parse",
+        "actualStates": [
+          "FOLD"
+        ],
+        "action": "ALLOW_FOLD",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ],
+        "correct": true
+      },
+      {
+        "caseId": "safe-math-max",
+        "category": "language",
+        "source": "Math.max(1, 2, 3);",
+        "expected": "FOLD",
+        "rationale": "标准语言 API 在评估运行时和目标运行时一致",
+        "entityId": "Math.max",
+        "actualStates": [
+          "FOLD"
+        ],
+        "action": "ALLOW_FOLD",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ],
+        "correct": true
+      },
+      {
+        "caseId": "unsafe-process-version",
+        "category": "node",
+        "source": "process.version;",
+        "expected": "PROTECT",
+        "rationale": "Node 宿主实体在语言基线中不存在",
+        "entityId": "process.version",
+        "actualStates": [
+          "PROTECT"
+        ],
+        "action": "BLOCK_FOLD",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ],
+        "correct": true
+      },
+      {
+        "caseId": "unsafe-node-buffer",
+        "category": "node",
+        "source": "Buffer.from('abc');",
+        "expected": "PROTECT",
+        "rationale": "Buffer 是 Node 宿主实体，不能跨语言基线折叠",
+        "entityId": "Buffer.from",
+        "actualStates": [
+          "PROTECT"
+        ],
+        "action": "BLOCK_FOLD",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ],
+        "correct": true
+      },
+      {
+        "caseId": "unsafe-browser-window",
+        "category": "browser",
+        "source": "window.document;",
+        "expected": "PROTECT",
+        "rationale": "缺少真实浏览器证据时只能阻断，不能把缺失证据写成安全",
+        "entityId": "window.document",
+        "actualStates": [
+          "PROTECT"
+        ],
+        "action": "BLOCK_FOLD",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ],
+        "correct": true
+      },
+      {
+        "caseId": "unsafe-browser-document",
+        "category": "browser",
+        "source": "document.createElement('div');",
+        "expected": "PROTECT",
+        "rationale": "缺少真实浏览器证据时只能阻断，不能把缺失证据写成安全",
+        "entityId": "document.createElement",
+        "actualStates": [
+          "PROTECT"
+        ],
+        "action": "BLOCK_FOLD",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ],
+        "correct": true
+      },
+      {
+        "caseId": "unsafe-browser-storage",
+        "category": "browser",
+        "source": "localStorage.getItem('key');",
+        "expected": "PROTECT",
+        "rationale": "缺少真实浏览器证据时只能阻断，不能把缺失证据写成安全",
+        "entityId": "localStorage.getItem",
+        "actualStates": [
+          "PROTECT"
+        ],
+        "action": "BLOCK_FOLD",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ],
+        "correct": true
+      },
+      {
+        "caseId": "unsafe-wechat-request",
+        "category": "miniapp",
+        "source": "wx.request({ url: 'https://example.invalid' });",
+        "expected": "UNKNOWN",
+        "rationale": "缺少真实微信证据时只能阻断，不能把缺失证据写成安全",
+        "entityId": "wx.request",
+        "actualStates": [
+          "UNKNOWN"
+        ],
+        "action": "BLOCK_FOLD",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "EVIDENCE_MISSING"
+        ],
+        "correct": true
+      },
+      {
+        "caseId": "unsafe-wechat-get-app",
+        "category": "miniapp",
+        "source": "getApp();",
+        "expected": "UNKNOWN",
+        "rationale": "缺少真实微信证据时只能阻断，不能把缺失证据写成安全",
+        "entityId": "getApp",
+        "actualStates": [
+          "UNKNOWN"
+        ],
+        "action": "BLOCK_FOLD",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "EVIDENCE_MISSING"
+        ],
+        "correct": true
+      },
+      {
+        "caseId": "unsafe-wechat-page",
+        "category": "miniapp",
+        "source": "Page({});",
+        "expected": "UNKNOWN",
+        "rationale": "缺少真实微信证据时只能阻断，不能把缺失证据写成安全",
+        "entityId": "Page",
+        "actualStates": [
+          "UNKNOWN"
+        ],
+        "action": "BLOCK_FOLD",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "EVIDENCE_MISSING"
+        ],
+        "correct": true
+      },
+      {
+        "caseId": "unsafe-timing-set-timeout",
+        "category": "host_global",
+        "source": "setTimeout(function () {}, 0);",
+        "expected": "PROTECT",
+        "rationale": "定时器不是 ECMAScript 语言内建对象",
+        "entityId": "setTimeout",
+        "actualStates": [
+          "PROTECT"
+        ],
+        "action": "BLOCK_FOLD",
+        "reasonCodes": [
+          "CONTRACT_COVERAGE_MISSING",
+          "CONTRACT_MISMATCH"
+        ],
+        "correct": true
+      },
+      {
+        "caseId": "unsafe-host-fetch",
+        "category": "host_global",
+        "source": "fetch('https://example.invalid');",
+        "expected": "PROTECT",
+        "rationale": "fetch 不是 ECMAScript 语言内建对象",
+        "entityId": "fetch",
+        "actualStates": [
+          "PROTECT"
+        ],
+        "action": "BLOCK_FOLD",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ],
+        "correct": true
+      },
+      {
+        "caseId": "unknown-unresolved-global",
+        "category": "unknown",
+        "source": "foo.bar();",
+        "expected": "UNKNOWN",
+        "rationale": "无法确认 foo 的来源，不能把未知实体当作安全",
+        "entityId": "foo.bar",
+        "actualStates": [
+          "UNKNOWN"
+        ],
+        "action": "BLOCK_FOLD",
+        "reasonCodes": [
+          "BINDING_UNRESOLVED"
+        ],
+        "correct": true
+      },
+      {
+        "caseId": "unknown-dynamic-property",
+        "category": "unknown",
+        "source": "globalThis[key]();",
+        "expected": "UNKNOWN",
+        "rationale": "动态属性访问无法建立稳定的运行时实体",
+        "entityId": "globalThis",
+        "actualStates": [
+          "UNKNOWN"
+        ],
+        "action": "BLOCK_FOLD",
+        "reasonCodes": [
+          "BINDING_UNRESOLVED"
+        ],
+        "correct": true
+      }
+    ],
+    "metrics": {
+      "A0-aggressive-fold": {
+        "total": 16,
+        "allowedFold": 16,
+        "blockedFold": 0,
+        "unsafeFold": 12,
+        "unsafeFoldMeasured": 0,
+        "usefulFold": 4,
+        "overProtection": 0,
+        "unknown": 0,
+        "correctState": 4,
+        "foldRate": 1,
+        "unknownRate": 0,
+        "decidableRate": 1,
+        "unsafeFoldMeasuredRate": 0,
+        "exactStateAccuracy": 0.25,
+        "safeFoldCoverage": 1,
+        "overProtectionRate": 0,
+        "unsafeFoldRate": 1,
+        "blockedNonFoldRate": 0
+      },
+      "A1-legacy-blacklist": {
+        "total": 16,
+        "allowedFold": 5,
+        "blockedFold": 11,
+        "unsafeFold": 1,
+        "unsafeFoldMeasured": 0,
+        "usefulFold": 4,
+        "overProtection": 0,
+        "unknown": 0,
+        "correctState": 11,
+        "foldRate": 0.3125,
+        "unknownRate": 0,
+        "decidableRate": 1,
+        "unsafeFoldMeasuredRate": 0,
+        "exactStateAccuracy": 0.6875,
+        "safeFoldCoverage": 1,
+        "overProtectionRate": 0,
+        "unsafeFoldRate": 0.08333333333333333,
+        "blockedNonFoldRate": 0.9166666666666666
+      },
+      "A2-prefix-blacklist": {
+        "total": 16,
+        "allowedFold": 5,
+        "blockedFold": 11,
+        "unsafeFold": 1,
+        "unsafeFoldMeasured": 0,
+        "usefulFold": 4,
+        "overProtection": 0,
+        "unknown": 0,
+        "correctState": 11,
+        "foldRate": 0.3125,
+        "unknownRate": 0,
+        "decidableRate": 1,
+        "unsafeFoldMeasuredRate": 0,
+        "exactStateAccuracy": 0.6875,
+        "safeFoldCoverage": 1,
+        "overProtectionRate": 0,
+        "unsafeFoldRate": 0.08333333333333333,
+        "blockedNonFoldRate": 0.9166666666666666
+      },
+      "A-safe-all-protect": {
+        "total": 16,
+        "allowedFold": 0,
+        "blockedFold": 16,
+        "unsafeFold": 0,
+        "unsafeFoldMeasured": 0,
+        "usefulFold": 0,
+        "overProtection": 4,
+        "unknown": 0,
+        "correctState": 7,
+        "foldRate": 0,
+        "unknownRate": 0,
+        "decidableRate": 1,
+        "unsafeFoldMeasuredRate": 0,
+        "exactStateAccuracy": 0.4375,
+        "safeFoldCoverage": 0,
+        "overProtectionRate": 1,
+        "unsafeFoldRate": 0,
+        "blockedNonFoldRate": 1
+      },
+      "R97-full": {
+        "total": 16,
+        "allowedFold": 4,
+        "blockedFold": 12,
+        "unsafeFold": 0,
+        "unsafeFoldMeasured": 0,
+        "usefulFold": 4,
+        "overProtection": 0,
+        "unknown": 5,
+        "correctState": 16,
+        "foldRate": 0.25,
+        "unknownRate": 0.3125,
+        "decidableRate": 0.6875,
+        "unsafeFoldMeasuredRate": 0,
+        "exactStateAccuracy": 1,
+        "safeFoldCoverage": 1,
+        "overProtectionRate": 0,
+        "unsafeFoldRate": 0,
+        "blockedNonFoldRate": 1
+      }
+    }
+  },
+  "corpus": {
+    "corpusPath": "E:\\读论文\\R97\\datasets\\external-browser-repos\\real-miniapp-candidates.jsonl",
+    "sampling": {
+      "mode": "per-entity-cap",
+      "perEntityCap": 5
+    },
+    "rawRecordCount": 3666,
+    "deduplicatedCount": 3664,
+    "sampleCount": 3664,
+    "entityView": {
+      "total": 1835,
+      "fold": 83,
+      "protect": 112,
+      "unknown": 1640,
+      "entitiesWithUnsafeFold": 0,
+      "foldRate": 0.045231607629427795,
+      "protectRate": 0.06103542234332425,
+      "unknownRate": 0.8937329700272479,
+      "decidableRate": 0.10626702997275204
+    },
+    "independentReference": {
+      "description": "判卷探针 r97-oracle-probe 在 e2-node-24.21.0 / e5-edge-headless 上的直接读取",
+      "oracleRuntimeIds": [
+        "e2-node-24.21.0",
+        "e5-edge-headless"
+      ],
+      "oracleInScope": true,
+      "targetRuntimeIds": [
+        "e1-ecmascript",
+        "e2-node-24.21.0",
+        "e5-edge-headless"
+      ],
+      "provenance": {
+        "runtimes": [
+          {
+            "runtimeId": "e1-ecmascript",
+            "probeImplementation": "r97-oracle-probe（隔离 vm，非宿主）",
+            "isHost": false,
+            "observedEntityCount": 1835,
+            "collectedAt": null,
+            "versionProfile": null
+          },
+          {
+            "runtimeId": "e2-node-24.21.0",
+            "probeImplementation": "r97-oracle-probe",
+            "isHost": true,
+            "observedEntityCount": 1835,
+            "collectedAt": null,
+            "versionProfile": "v24.21.0"
+          },
+          {
+            "runtimeId": "e5-edge-headless",
+            "probeImplementation": "r97-oracle-probe",
+            "isHost": true,
+            "observedEntityCount": 1835,
+            "collectedAt": null,
+            "versionProfile": null
+          }
+        ]
+      },
+      "excluded": [],
+      "entityCount": 1835,
+      "differentialEntityCount": 136,
+      "differentialRecordCount": 296,
+      "differentialEntities": [
+        "Animation",
+        "window",
+        "stop",
+        "console.error",
+        "console.warn",
+        "document.getElementById",
+        "Element",
+        "Path2D",
+        "addEventListener",
+        "removeEventListener",
+        "MutationObserver",
+        "document",
+        "window.devicePixelRatio",
+        "window.addEventListener",
+        "window.removeEventListener",
+        "ResizeObserver",
+        "location.href",
+        "location.protocol",
+        "window.setTimeout",
+        "window.clearTimeout"
+      ],
+      "differentialRoots": {
+        "window": 58,
+        "document": 32,
+        "navigator": 9,
+        "console": 2,
+        "location": 2,
+        "module": 2,
+        "Animation": 1,
+        "stop": 1,
+        "Element": 1,
+        "Path2D": 1,
+        "addEventListener": 1,
+        "removeEventListener": 1,
+        "MutationObserver": 1,
+        "ResizeObserver": 1,
+        "clearTimeout": 1,
+        "setTimeout": 1,
+        "PointerEvent": 1,
+        "MouseEvent": 1,
+        "HTMLLabelElement": 1,
+        "HTMLInputElement": 1,
+        "HTMLSelectElement": 1,
+        "requestAnimationFrame": 1,
+        "cancelAnimationFrame": 1,
+        "close": 1,
+        "getComputedStyle": 1,
+        "URL": 1,
+        "name": 1,
+        "focus": 1,
+        "blur": 1,
+        "setInterval": 1,
+        "clearInterval": 1,
+        "EventTarget": 1,
+        "open": 1,
+        "MediaError": 1,
+        "TextTrack": 1,
+        "TextTrackCueList": 1,
+        "length": 1
+      },
+      "allowedFold": 276,
+      "allowedFoldOnDifferentialEntity": 0,
+      "allowedFoldOnDifferentialExamples": []
+    },
+    "evidenceAvailability": {
+      "language": true,
+      "node": true,
+      "wechat": false,
+      "browser": true
+    },
+    "runtimeEvidence": {
+      "wechat": null,
+      "browser": {
+        "runtimeId": "e5-edge-headless",
+        "observedEntityCount": 1835,
+        "browserVersion": {
+          "product": "Edg/150.0.4078.83",
+          "revision": "@7f302606e52ab615d52e1a0ab89ca415c8c843a3",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0",
+          "protocolVersion": "1.3"
+        }
+      }
+    },
+    "byExpected": {
+      "UNKNOWN": 3207,
+      "FOLD": 309,
+      "PROTECT": 148
+    },
+    "byActual": {
+      "UNKNOWN": 3145,
+      "FOLD": 276,
+      "PROTECT": 243
+    },
+    "byTransformation": {
+      "CALL_EVAL": 1350,
+      "BRANCH_PRUNE": 245,
+      "CONST_EVAL": 2069
+    },
+    "byReasonCode": {
+      "BINDING_UNRESOLVED": 3093,
+      "ALL_TARGETS_MATCH": 565,
+      "CONTRACT_COVERAGE_MISSING": 6,
+      "CONTRACT_MISMATCH": 243,
+      "EVIDENCE_MISSING": 46
+    },
+    "byUncertaintySource": {
+      "binding": 3093,
+      "runtime": 46,
+      "behavior": 6
+    },
+    "byTargetRuntimeStatus": {
+      "confirmed": 3664
+    },
+    "targetRuntimeImpact": {
+      "confirmed": {
+        "sampleCount": 3664,
+        "unsafeFold": 0,
+        "overProtection": 33,
+        "overProtectionRate": 0.10679611650485436,
+        "blockedForUnconfirmedTarget": 0
+      }
+    },
+    "examples": [
+      {
+        "sampleId": "070001d6bee116bd76a5a2db",
+        "project": "chartjs",
+        "file": "chartjs\\files\\src\\core\\core.scale.js",
+        "entityId": "Math.min",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "FOLD",
+        "actualState": "FOLD",
+        "actualAction": "ALLOW_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ]
+      },
+      {
+        "sampleId": "29b8a5a4464905d630e9d301",
+        "project": "leaflet",
+        "file": "leaflet\\files\\src\\layer\\marker\\Marker.Drag.js",
+        "entityId": "Math.min",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "FOLD",
+        "actualState": "FOLD",
+        "actualAction": "ALLOW_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ]
+      },
+      {
+        "sampleId": "889dfd7bf2f0be29fee44f7d",
+        "project": "chartjs",
+        "file": "chartjs\\files\\src\\plugins\\plugin.filler\\filler.drawing.js",
+        "entityId": "Math.min",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "FOLD",
+        "actualState": "FOLD",
+        "actualAction": "ALLOW_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ]
+      },
+      {
+        "sampleId": "5fa585d63a1e99a10e425689",
+        "project": "chartjs",
+        "file": "chartjs\\files\\src\\plugins\\plugin.legend.js",
+        "entityId": "Math.min",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "FOLD",
+        "actualState": "FOLD",
+        "actualAction": "ALLOW_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ]
+      },
+      {
+        "sampleId": "bd9b2f636970b1be046790a1",
+        "project": "chartjs",
+        "file": "chartjs\\files\\src\\scales\\scale.linear.js",
+        "entityId": "Math.min",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "FOLD",
+        "actualState": "FOLD",
+        "actualAction": "ALLOW_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ]
+      },
+      {
+        "sampleId": "981eadbf7b2104bbcfa5cf65",
+        "project": "chartjs",
+        "file": "chartjs\\files\\src\\scales\\scale.radialLinear.js",
+        "entityId": "Math.abs",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "FOLD",
+        "actualState": "FOLD",
+        "actualAction": "ALLOW_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ]
+      },
+      {
+        "sampleId": "528da647af79aa7a7016b7b7",
+        "project": "leaflet",
+        "file": "leaflet\\files\\src\\map\\handler\\DragHandler.js",
+        "entityId": "Math.abs",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "FOLD",
+        "actualState": "FOLD",
+        "actualAction": "ALLOW_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ]
+      },
+      {
+        "sampleId": "f7d747ab86ec51355863ed4e",
+        "project": "leaflet",
+        "file": "leaflet\\files\\src\\geometry\\Bounds.js",
+        "entityId": "Math.abs",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "FOLD",
+        "actualState": "FOLD",
+        "actualAction": "ALLOW_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ]
+      },
+      {
+        "sampleId": "3d5bb5d53988120927fd0aec",
+        "project": "videojs",
+        "file": "videojs\\files\\src\\js\\live-tracker.js",
+        "entityId": "Math.abs",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "FOLD",
+        "actualState": "FOLD",
+        "actualAction": "ALLOW_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ]
+      },
+      {
+        "sampleId": "a40ea7e6c07de08d6e9bdbe5",
+        "project": "leaflet",
+        "file": "leaflet\\files\\src\\map\\handler\\ScrollWheelZoomHandler.js",
+        "entityId": "Math.abs",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "FOLD",
+        "actualState": "FOLD",
+        "actualAction": "ALLOW_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ]
+      },
+      {
+        "sampleId": "f1d24e4809c2d20feefa48e3",
+        "project": "jquery",
+        "file": "jquery\\files\\src\\wrapper.js",
+        "entityId": "window",
+        "transformationKind": "CONST_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "PROTECT",
+        "actualState": "PROTECT",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ]
+      },
+      {
+        "sampleId": "9a0de44330cb3fd1afd1365a",
+        "project": "chartjs",
+        "file": "chartjs\\files\\src\\platform\\platform.dom.js",
+        "entityId": "window",
+        "transformationKind": "CONST_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "PROTECT",
+        "actualState": "PROTECT",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ]
+      },
+      {
+        "sampleId": "e63db28f469114069a595372",
+        "project": "leaflet",
+        "file": "leaflet\\files\\src\\core\\Browser.js",
+        "entityId": "window",
+        "transformationKind": "CONST_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "PROTECT",
+        "actualState": "PROTECT",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ]
+      },
+      {
+        "sampleId": "7a77426291aec81b894eb5c0",
+        "project": "jquery",
+        "file": "jquery\\files\\src\\ajax\\jsonp.js",
+        "entityId": "window",
+        "transformationKind": "CONST_EVAL",
+        "bindingKind": "dynamic",
+        "resolutionStatus": "dynamic",
+        "expected": "PROTECT",
+        "actualState": "PROTECT",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ]
+      },
+      {
+        "sampleId": "4aceae7a28d6e60c1a266d5b",
+        "project": "jquery",
+        "file": "jquery\\files\\src\\ajax\\jsonp.js",
+        "entityId": "window",
+        "transformationKind": "CONST_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "PROTECT",
+        "actualState": "PROTECT",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ]
+      },
+      {
+        "sampleId": "efc91a00ae10362b5529803a",
+        "project": "chartjs",
+        "file": "chartjs\\files\\src\\core\\core.config.js",
+        "entityId": "console.error",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "PROTECT",
+        "actualState": "PROTECT",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ]
+      },
+      {
+        "sampleId": "c9bf2eff7605fb745f279cac",
+        "project": "chartjs",
+        "file": "chartjs\\files\\src\\core\\core.controller.js",
+        "entityId": "console.error",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "PROTECT",
+        "actualState": "PROTECT",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ]
+      },
+      {
+        "sampleId": "8bdcdf81cce0256d9a635b6e",
+        "project": "leaflet",
+        "file": "leaflet\\files\\src\\core\\Events.js",
+        "entityId": "console.error",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "PROTECT",
+        "actualState": "PROTECT",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ]
+      },
+      {
+        "sampleId": "ab8464a9065d2642c5877e76",
+        "project": "leaflet",
+        "file": "leaflet\\files\\src\\core\\Events.js",
+        "entityId": "console.warn",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "PROTECT",
+        "actualState": "PROTECT",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ]
+      },
+      {
+        "sampleId": "b46fab84e3848448b59a0cfc",
+        "project": "leaflet",
+        "file": "leaflet\\files\\src\\geometry\\PolyUtil.js",
+        "entityId": "console.warn",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "PROTECT",
+        "actualState": "PROTECT",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ]
+      },
+      {
+        "sampleId": "a8a3b330713031a703632e44",
+        "project": "chartjs",
+        "file": "chartjs\\files\\src\\controllers\\controller.bar.js",
+        "entityId": "_arrayUnique",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "module_import",
+        "resolutionStatus": "resolved",
+        "expected": "UNKNOWN",
+        "actualState": "UNKNOWN",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": "binding",
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "BINDING_UNRESOLVED"
+        ]
+      },
+      {
+        "sampleId": "ba71138c58f0952fe7597aea",
+        "project": "chartjs",
+        "file": "chartjs\\files\\src\\scales\\scale.time.js",
+        "entityId": "_arrayUnique",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "module_import",
+        "resolutionStatus": "resolved",
+        "expected": "UNKNOWN",
+        "actualState": "UNKNOWN",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": "binding",
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "BINDING_UNRESOLVED"
+        ]
+      },
+      {
+        "sampleId": "da8d9894f8c8d8c37dfb5c43",
+        "project": "chartjs",
+        "file": "chartjs\\files\\src\\controllers\\controller.bar.js",
+        "entityId": "defined",
+        "transformationKind": "BRANCH_PRUNE",
+        "bindingKind": "module_import",
+        "resolutionStatus": "resolved",
+        "expected": "UNKNOWN",
+        "actualState": "UNKNOWN",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": "binding",
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "BINDING_UNRESOLVED"
+        ]
+      },
+      {
+        "sampleId": "b4475cef0e5829b54a6e0a9e",
+        "project": "chartjs",
+        "file": "chartjs\\files\\src\\core\\core.datasetController.js",
+        "entityId": "defined",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "module_import",
+        "resolutionStatus": "resolved",
+        "expected": "UNKNOWN",
+        "actualState": "UNKNOWN",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": "binding",
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "BINDING_UNRESOLVED"
+        ]
+      },
+      {
+        "sampleId": "f483033c86cc2296aa4ec4a0",
+        "project": "chartjs",
+        "file": "chartjs\\files\\src\\core\\core.layouts.js",
+        "entityId": "defined",
+        "transformationKind": "BRANCH_PRUNE",
+        "bindingKind": "module_import",
+        "resolutionStatus": "resolved",
+        "expected": "UNKNOWN",
+        "actualState": "UNKNOWN",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": "binding",
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "BINDING_UNRESOLVED"
+        ]
+      },
+      {
+        "sampleId": "7565249b1a0be985bb365cb2",
+        "project": "chartjs",
+        "file": "chartjs\\files\\src\\core\\core.layouts.js",
+        "entityId": "defined",
+        "transformationKind": "BRANCH_PRUNE",
+        "bindingKind": "module_import",
+        "resolutionStatus": "resolved",
+        "expected": "UNKNOWN",
+        "actualState": "UNKNOWN",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": "binding",
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "BINDING_UNRESOLVED"
+        ]
+      },
+      {
+        "sampleId": "4e20e78a80a1a7815020ea8b",
+        "project": "chartjs",
+        "file": "chartjs\\files\\src\\scales\\scale.linearbase.js",
+        "entityId": "isNullOrUndef",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "module_import",
+        "resolutionStatus": "resolved",
+        "expected": "UNKNOWN",
+        "actualState": "UNKNOWN",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": "binding",
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "BINDING_UNRESOLVED"
+        ]
+      },
+      {
+        "sampleId": "532b15c4053b4853b36d9a9b",
+        "project": "chartjs",
+        "file": "chartjs\\files\\src\\scales\\scale.linearbase.js",
+        "entityId": "isNullOrUndef",
+        "transformationKind": "BRANCH_PRUNE",
+        "bindingKind": "module_import",
+        "resolutionStatus": "resolved",
+        "expected": "UNKNOWN",
+        "actualState": "UNKNOWN",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": "binding",
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "BINDING_UNRESOLVED"
+        ]
+      },
+      {
+        "sampleId": "4deaf6160dccc44eb5c38689",
+        "project": "chartjs",
+        "file": "chartjs\\files\\src\\core\\core.controller.js",
+        "entityId": "isNullOrUndef",
+        "transformationKind": "BRANCH_PRUNE",
+        "bindingKind": "module_import",
+        "resolutionStatus": "resolved",
+        "expected": "UNKNOWN",
+        "actualState": "UNKNOWN",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": "binding",
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "BINDING_UNRESOLVED"
+        ]
+      },
+      {
+        "sampleId": "c7be961072c7739aefcde659",
+        "project": "chartjs",
+        "file": "chartjs\\files\\src\\core\\core.interaction.js",
+        "entityId": "isNullOrUndef",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "module_import",
+        "resolutionStatus": "resolved",
+        "expected": "UNKNOWN",
+        "actualState": "UNKNOWN",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": "binding",
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "BINDING_UNRESOLVED"
+        ]
+      }
+    ],
+    "metrics": {
+      "A0-aggressive-fold": {
+        "total": 3664,
+        "allowedFold": 3664,
+        "blockedFold": 0,
+        "unsafeFold": 3355,
+        "unsafeFoldMeasured": 296,
+        "usefulFold": 309,
+        "overProtection": 0,
+        "unknown": 0,
+        "correctState": 309,
+        "foldRate": 1,
+        "unknownRate": 0,
+        "decidableRate": 1,
+        "unsafeFoldMeasuredRate": 0.08078602620087336,
+        "exactStateAccuracy": 0.08433406113537117,
+        "safeFoldCoverage": 1,
+        "overProtectionRate": 0,
+        "unsafeFoldRate": 1,
+        "blockedNonFoldRate": 0
+      },
+      "A1-legacy-blacklist": {
+        "total": 3664,
+        "allowedFold": 3350,
+        "blockedFold": 314,
+        "unsafeFold": 3074,
+        "unsafeFoldMeasured": 39,
+        "usefulFold": 276,
+        "overProtection": 33,
+        "unknown": 0,
+        "correctState": 424,
+        "foldRate": 0.9143013100436681,
+        "unknownRate": 0,
+        "decidableRate": 1,
+        "unsafeFoldMeasuredRate": 0.011641791044776119,
+        "exactStateAccuracy": 0.11572052401746726,
+        "safeFoldCoverage": 0.8932038834951457,
+        "overProtectionRate": 0.10679611650485436,
+        "unsafeFoldRate": 0.9162444113263786,
+        "blockedNonFoldRate": 0.08375558867362146
+      },
+      "A2-prefix-blacklist": {
+        "total": 3664,
+        "allowedFold": 3435,
+        "blockedFold": 229,
+        "unsafeFold": 3153,
+        "unsafeFoldMeasured": 107,
+        "usefulFold": 282,
+        "overProtection": 27,
+        "unknown": 0,
+        "correctState": 398,
+        "foldRate": 0.9375,
+        "unknownRate": 0,
+        "decidableRate": 1,
+        "unsafeFoldMeasuredRate": 0.031149927219796217,
+        "exactStateAccuracy": 0.10862445414847162,
+        "safeFoldCoverage": 0.912621359223301,
+        "overProtectionRate": 0.08737864077669903,
+        "unsafeFoldRate": 0.9397913561847988,
+        "blockedNonFoldRate": 0.06020864381520119
+      },
+      "A-safe-all-protect": {
+        "total": 3664,
+        "allowedFold": 0,
+        "blockedFold": 3664,
+        "unsafeFold": 0,
+        "unsafeFoldMeasured": 0,
+        "usefulFold": 0,
+        "overProtection": 309,
+        "unknown": 0,
+        "correctState": 148,
+        "foldRate": 0,
+        "unknownRate": 0,
+        "decidableRate": 1,
+        "unsafeFoldMeasuredRate": 0,
+        "exactStateAccuracy": 0.04039301310043668,
+        "safeFoldCoverage": 0,
+        "overProtectionRate": 1,
+        "unsafeFoldRate": 0,
+        "blockedNonFoldRate": 1
+      },
+      "R97-full": {
+        "total": 3664,
+        "allowedFold": 276,
+        "blockedFold": 3388,
+        "unsafeFold": 0,
+        "unsafeFoldMeasured": 0,
+        "usefulFold": 276,
+        "overProtection": 33,
+        "unknown": 3145,
+        "correctState": 3536,
+        "foldRate": 0.07532751091703056,
+        "unknownRate": 0.8583515283842795,
+        "decidableRate": 0.14164847161572053,
+        "unsafeFoldMeasuredRate": 0,
+        "exactStateAccuracy": 0.9650655021834061,
+        "safeFoldCoverage": 0.8932038834951457,
+        "overProtectionRate": 0.10679611650485436,
+        "unsafeFoldRate": 0,
+        "blockedNonFoldRate": 1,
+        "elapsedMs": 1130.2037999999993,
+        "decisionsPerSecond": 3241.89318775959
+      }
+    },
+    "foldRateConfidence": {
+      "point": 0.07532751091703056,
+      "lower": 0.05453991468616697,
+      "upper": 0.09807589524318547,
+      "iterations": 2000,
+      "clusterKey": "project",
+      "clusterCount": 4
+    }
+  }
+}

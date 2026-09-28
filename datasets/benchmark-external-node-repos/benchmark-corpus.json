@@ -1,0 +1,820 @@
+{
+  "corpusPath": "E:\\读论文\\R97\\datasets\\external-node-repos\\real-miniapp-candidates.jsonl",
+  "sampling": {
+    "mode": "per-entity-cap",
+    "perEntityCap": 5
+  },
+  "rawRecordCount": 2461,
+  "deduplicatedCount": 2460,
+  "sampleCount": 2460,
+  "entityView": {
+    "total": 1385,
+    "fold": 100,
+    "protect": 108,
+    "unknown": 1177,
+    "entitiesWithUnsafeFold": 0,
+    "foldRate": 0.07220216606498195,
+    "protectRate": 0.0779783393501805,
+    "unknownRate": 0.8498194945848375,
+    "decidableRate": 0.15018050541516245
+  },
+  "independentReference": {
+    "description": "判卷探针 r97-oracle-probe 在 e2-node-24.21.0 / e5-edge-headless 上的直接读取",
+    "oracleRuntimeIds": [
+      "e2-node-24.21.0",
+      "e5-edge-headless"
+    ],
+    "oracleInScope": true,
+    "targetRuntimeIds": [
+      "e1-ecmascript",
+      "e2-node-24.21.0",
+      "e5-edge-headless"
+    ],
+    "provenance": {
+      "runtimes": [
+        {
+          "runtimeId": "e1-ecmascript",
+          "probeImplementation": "r97-oracle-probe（隔离 vm，非宿主）",
+          "isHost": false,
+          "observedEntityCount": 1385,
+          "collectedAt": null,
+          "versionProfile": null
+        },
+        {
+          "runtimeId": "e2-node-24.21.0",
+          "probeImplementation": "r97-oracle-probe",
+          "isHost": true,
+          "observedEntityCount": 1385,
+          "collectedAt": null,
+          "versionProfile": "v24.21.0"
+        },
+        {
+          "runtimeId": "e5-edge-headless",
+          "probeImplementation": "r97-oracle-probe",
+          "isHost": true,
+          "observedEntityCount": 1385,
+          "collectedAt": null,
+          "versionProfile": null
+        }
+      ]
+    },
+    "excluded": [],
+    "entityCount": 1385,
+    "differentialEntityCount": 43,
+    "differentialRecordCount": 126,
+    "differentialEntities": [
+      "require",
+      "module.exports",
+      "URL",
+      "__filename",
+      "Buffer.from",
+      "process.cwd",
+      "process.hrtime.bigint",
+      "process.hrtime",
+      "__dirname",
+      "SharedArrayBuffer",
+      "AbortController",
+      "structuredClone",
+      "location",
+      "length",
+      "exports",
+      "process.env",
+      "console.error",
+      "setImmediate",
+      "process.nextTick",
+      "Buffer.byteLength"
+    ],
+    "differentialRoots": {
+      "process": 6,
+      "Buffer": 4,
+      "console": 4,
+      "URLSearchParams": 4,
+      "require": 2,
+      "module": 1,
+      "URL": 1,
+      "__filename": 1,
+      "__dirname": 1,
+      "SharedArrayBuffer": 1,
+      "AbortController": 1,
+      "structuredClone": 1,
+      "location": 1,
+      "length": 1,
+      "exports": 1,
+      "setImmediate": 1,
+      "Request": 1,
+      "clearTimeout": 1,
+      "setTimeout": 1,
+      "FormData": 1,
+      "Blob": 1,
+      "TextDecoder": 1,
+      "name": 1,
+      "Response": 1,
+      "Headers": 1,
+      "status": 1,
+      "File": 1,
+      "print": 1
+    },
+    "allowedFold": 327,
+    "allowedFoldOnDifferentialEntity": 0,
+    "allowedFoldOnDifferentialExamples": []
+  },
+  "evidenceAvailability": {
+    "language": true,
+    "node": true,
+    "wechat": false,
+    "browser": true
+  },
+  "runtimeEvidence": {
+    "wechat": null,
+    "browser": {
+      "runtimeId": "e5-edge-headless",
+      "observedEntityCount": 1387,
+      "browserVersion": {
+        "product": "Edg/150.0.4078.83",
+        "revision": "@7f302606e52ab615d52e1a0ab89ca415c8c843a3",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0",
+        "protocolVersion": "1.3"
+      }
+    }
+  },
+  "byExpected": {
+    "PROTECT": 272,
+    "FOLD": 441,
+    "UNKNOWN": 1747
+  },
+  "byActual": {
+    "PROTECT": 281,
+    "FOLD": 327,
+    "UNKNOWN": 1852
+  },
+  "byTransformation": {
+    "CALL_EVAL": 905,
+    "CONST_EVAL": 1383,
+    "BRANCH_PRUNE": 172
+  },
+  "byReasonCode": {
+    "ALL_TARGETS_MATCH": 722,
+    "CONTRACT_MISMATCH": 281,
+    "BINDING_UNRESOLVED": 1731,
+    "EVIDENCE_MISSING": 114,
+    "CONTRACT_COVERAGE_MISSING": 7
+  },
+  "byUncertaintySource": {
+    "binding": 1731,
+    "runtime": 114,
+    "behavior": 7
+  },
+  "byTargetRuntimeStatus": {
+    "confirmed": 2460
+  },
+  "targetRuntimeImpact": {
+    "confirmed": {
+      "sampleCount": 2460,
+      "unsafeFold": 0,
+      "overProtection": 114,
+      "overProtectionRate": 0.2585034013605442,
+      "blockedForUnconfirmedTarget": 0
+    }
+  },
+  "examples": [
+    {
+      "sampleId": "d41d8634cf72369df4e2ca61",
+      "project": "webpack",
+      "file": "webpack\\files\\lib\\loaders\\LoaderRunner.js",
+      "entityId": "JSON.stringify",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "expected": "FOLD",
+      "actualState": "FOLD",
+      "actualAction": "ALLOW_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH"
+      ]
+    },
+    {
+      "sampleId": "8dbb718e9b72d84189ece083",
+      "project": "webpack",
+      "file": "webpack\\files\\lib\\wasm-sync\\WasmChunkLoadingRuntimeModule.js",
+      "entityId": "JSON.stringify",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "expected": "FOLD",
+      "actualState": "FOLD",
+      "actualAction": "ALLOW_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH"
+      ]
+    },
+    {
+      "sampleId": "5277e8c94798ac3206384986",
+      "project": "webpack",
+      "file": "webpack\\files\\lib\\ConcatenationScope.js",
+      "entityId": "JSON.stringify",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "expected": "FOLD",
+      "actualState": "FOLD",
+      "actualAction": "ALLOW_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH"
+      ]
+    },
+    {
+      "sampleId": "ed63e9b91d2a9bde64cea10d",
+      "project": "webpack",
+      "file": "webpack\\files\\lib\\dependencies\\CommonJsImportsParserPlugin.js",
+      "entityId": "JSON.stringify",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "expected": "FOLD",
+      "actualState": "FOLD",
+      "actualAction": "ALLOW_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH"
+      ]
+    },
+    {
+      "sampleId": "dc108ceec02b85136cffc8a9",
+      "project": "webpack",
+      "file": "webpack\\files\\lib\\prefetch\\ChunkPrefetchStartupRuntimeModule.js",
+      "entityId": "JSON.stringify",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "expected": "FOLD",
+      "actualState": "FOLD",
+      "actualAction": "ALLOW_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH"
+      ]
+    },
+    {
+      "sampleId": "ec18b9dabd4d703825cf87e0",
+      "project": "webpack",
+      "file": "webpack\\files\\lib\\ConcatenationScope.js",
+      "entityId": "Number",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "expected": "FOLD",
+      "actualState": "FOLD",
+      "actualAction": "ALLOW_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH"
+      ]
+    },
+    {
+      "sampleId": "8d83e38ff710a13a139c4772",
+      "project": "fastify",
+      "file": "fastify\\files\\lib\\reply.js",
+      "entityId": "Number",
+      "transformationKind": "BRANCH_PRUNE",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "expected": "FOLD",
+      "actualState": "FOLD",
+      "actualAction": "ALLOW_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH"
+      ]
+    },
+    {
+      "sampleId": "d0d461471e2b084347408666",
+      "project": "fastify",
+      "file": "fastify\\files\\lib\\content-type-parser.js",
+      "entityId": "Number",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "expected": "FOLD",
+      "actualState": "FOLD",
+      "actualAction": "ALLOW_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH"
+      ]
+    },
+    {
+      "sampleId": "d690c34f47da6dca9a3a8eea",
+      "project": "eslint",
+      "file": "eslint\\files\\lib\\rules\\for-direction.js",
+      "entityId": "Number",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "expected": "FOLD",
+      "actualState": "FOLD",
+      "actualAction": "ALLOW_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH"
+      ]
+    },
+    {
+      "sampleId": "c68b3e1bc0c25deb42a97181",
+      "project": "eslint",
+      "file": "eslint\\files\\lib\\rules\\prefer-named-capture-group.js",
+      "entityId": "Number",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "expected": "FOLD",
+      "actualState": "FOLD",
+      "actualAction": "ALLOW_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH"
+      ]
+    },
+    {
+      "sampleId": "623d2698ee4ae50f8d2cdc40",
+      "project": "webpack",
+      "file": "webpack\\files\\lib\\JavascriptMetaInfoPlugin.js",
+      "entityId": "require",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "expected": "PROTECT",
+      "actualState": "PROTECT",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ]
+    },
+    {
+      "sampleId": "678d7dc4580d1242cf254f93",
+      "project": "eslint",
+      "file": "eslint\\files\\lib\\rules\\no-unreachable.js",
+      "entityId": "require",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "expected": "PROTECT",
+      "actualState": "PROTECT",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ]
+    },
+    {
+      "sampleId": "914155c33e529796db4aa1fe",
+      "project": "webpack",
+      "file": "webpack\\files\\lib\\css\\CssModulesPlugin.js",
+      "entityId": "require",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "expected": "PROTECT",
+      "actualState": "PROTECT",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ]
+    },
+    {
+      "sampleId": "b2090328266ed77e33bce515",
+      "project": "webpack",
+      "file": "webpack\\files\\lib\\util\\internalSerializables.js",
+      "entityId": "require",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "expected": "PROTECT",
+      "actualState": "PROTECT",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ]
+    },
+    {
+      "sampleId": "b55aff4357dfd150c92a4db7",
+      "project": "webpack",
+      "file": "webpack\\files\\lib\\util\\internalSerializables.js",
+      "entityId": "require",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "expected": "PROTECT",
+      "actualState": "PROTECT",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ]
+    },
+    {
+      "sampleId": "30ec40c793166e0ba1544426",
+      "project": "webpack",
+      "file": "webpack\\files\\lib\\InitFragment.js",
+      "entityId": "module.exports",
+      "transformationKind": "CONST_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "expected": "PROTECT",
+      "actualState": "PROTECT",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ]
+    },
+    {
+      "sampleId": "67bb2a382d15c83790d96792",
+      "project": "eslint",
+      "file": "eslint\\files\\lib\\rules\\indent.js",
+      "entityId": "module.exports",
+      "transformationKind": "CONST_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "expected": "PROTECT",
+      "actualState": "PROTECT",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ]
+    },
+    {
+      "sampleId": "5a2a93df7150aa69e682d8a2",
+      "project": "webpack",
+      "file": "webpack\\files\\lib\\wasm-async\\AsyncWebAssemblyGenerator.js",
+      "entityId": "module.exports",
+      "transformationKind": "CONST_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "expected": "PROTECT",
+      "actualState": "PROTECT",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ]
+    },
+    {
+      "sampleId": "81f54710f22d77b4a8ed94f4",
+      "project": "webpack",
+      "file": "webpack\\files\\lib\\optimize\\ModuleConcatenationPlugin.js",
+      "entityId": "module.exports",
+      "transformationKind": "CONST_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "expected": "PROTECT",
+      "actualState": "PROTECT",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ]
+    },
+    {
+      "sampleId": "11e818747ac6b380e3e2fd4f",
+      "project": "webpack",
+      "file": "webpack\\files\\lib\\dependencies\\CommonJsDependencyHelpers.js",
+      "entityId": "module.exports",
+      "transformationKind": "CONST_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "expected": "PROTECT",
+      "actualState": "PROTECT",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ]
+    },
+    {
+      "sampleId": "71b5a54a98c65fe402e52107",
+      "project": "eslint",
+      "file": "eslint\\files\\lib\\cli.js",
+      "entityId": "node:fs.promises.mkdir",
+      "transformationKind": "CONST_EVAL",
+      "bindingKind": "module_import",
+      "resolutionStatus": "resolved",
+      "expected": "UNKNOWN",
+      "actualState": "PROTECT",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ]
+    },
+    {
+      "sampleId": "3c96b4f0e8192553d656d541",
+      "project": "eslint",
+      "file": "eslint\\files\\lib\\cli.js",
+      "entityId": "node:fs.promises.mkdir",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "module_import",
+      "resolutionStatus": "resolved",
+      "expected": "UNKNOWN",
+      "actualState": "PROTECT",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ]
+    },
+    {
+      "sampleId": "72309f6bb2b207337934c279",
+      "project": "eslint",
+      "file": "eslint\\files\\lib\\cli.js",
+      "entityId": "node:fs.promises.stat",
+      "transformationKind": "CONST_EVAL",
+      "bindingKind": "module_import",
+      "resolutionStatus": "resolved",
+      "expected": "UNKNOWN",
+      "actualState": "PROTECT",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ]
+    },
+    {
+      "sampleId": "cb1b1bbe31ed4b3d92817a7a",
+      "project": "eslint",
+      "file": "eslint\\files\\lib\\cli.js",
+      "entityId": "node:fs.promises.stat",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "module_import",
+      "resolutionStatus": "resolved",
+      "expected": "UNKNOWN",
+      "actualState": "PROTECT",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ]
+    },
+    {
+      "sampleId": "4473c112c36dace53ac2ec46",
+      "project": "eslint",
+      "file": "eslint\\files\\lib\\cli.js",
+      "entityId": "node:fs.promises.writeFile",
+      "transformationKind": "CONST_EVAL",
+      "bindingKind": "module_import",
+      "resolutionStatus": "resolved",
+      "expected": "UNKNOWN",
+      "actualState": "PROTECT",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ]
+    },
+    {
+      "sampleId": "7039946ca46113d4f21c56ff",
+      "project": "eslint",
+      "file": "eslint\\files\\lib\\cli.js",
+      "entityId": "node:fs.promises.writeFile",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "module_import",
+      "resolutionStatus": "resolved",
+      "expected": "UNKNOWN",
+      "actualState": "PROTECT",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ]
+    },
+    {
+      "sampleId": "6352cadd72fbaa5a0f654331",
+      "project": "eslint",
+      "file": "eslint\\files\\lib\\eslint\\eslint.js",
+      "entityId": "node:fs.promises.writeFile",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "module_import",
+      "resolutionStatus": "resolved",
+      "expected": "UNKNOWN",
+      "actualState": "PROTECT",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ]
+    },
+    {
+      "sampleId": "9ca7c433f658b782f760496a",
+      "project": "eslint",
+      "file": "eslint\\files\\lib\\cli.js",
+      "entityId": "__filename",
+      "transformationKind": "CONST_EVAL",
+      "bindingKind": "unresolved_global",
+      "resolutionStatus": "unresolved",
+      "expected": "UNKNOWN",
+      "actualState": "UNKNOWN",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": "binding",
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "BINDING_UNRESOLVED"
+      ]
+    },
+    {
+      "sampleId": "8892054725997f745d1f4a24",
+      "project": "webpack",
+      "file": "webpack\\files\\lib\\ErrorHelpers.js",
+      "entityId": "__filename",
+      "transformationKind": "CONST_EVAL",
+      "bindingKind": "unresolved_global",
+      "resolutionStatus": "unresolved",
+      "expected": "UNKNOWN",
+      "actualState": "UNKNOWN",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": "binding",
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "BINDING_UNRESOLVED"
+      ]
+    },
+    {
+      "sampleId": "c4138deadbdc05b228c153ac",
+      "project": "eslint",
+      "file": "eslint\\files\\lib\\cli.js",
+      "entityId": "log.error",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "module_import",
+      "resolutionStatus": "resolved",
+      "expected": "UNKNOWN",
+      "actualState": "UNKNOWN",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": "binding",
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "BINDING_UNRESOLVED"
+      ]
+    }
+  ],
+  "metrics": {
+    "A0-aggressive-fold": {
+      "total": 2460,
+      "allowedFold": 2460,
+      "blockedFold": 0,
+      "unsafeFold": 2019,
+      "unsafeFoldMeasured": 126,
+      "usefulFold": 441,
+      "overProtection": 0,
+      "unknown": 0,
+      "correctState": 441,
+      "foldRate": 1,
+      "unknownRate": 0,
+      "decidableRate": 1,
+      "unsafeFoldMeasuredRate": 0.05121951219512195,
+      "exactStateAccuracy": 0.17926829268292682,
+      "safeFoldCoverage": 1,
+      "overProtectionRate": 0,
+      "unsafeFoldRate": 1,
+      "blockedNonFoldRate": 0
+    },
+    "A1-legacy-blacklist": {
+      "total": 2460,
+      "allowedFold": 2224,
+      "blockedFold": 236,
+      "unsafeFold": 1898,
+      "unsafeFoldMeasured": 5,
+      "usefulFold": 326,
+      "overProtection": 115,
+      "unknown": 0,
+      "correctState": 439,
+      "foldRate": 0.9040650406504065,
+      "unknownRate": 0,
+      "decidableRate": 1,
+      "unsafeFoldMeasuredRate": 0.0022482014388489208,
+      "exactStateAccuracy": 0.17845528455284554,
+      "safeFoldCoverage": 0.7392290249433107,
+      "overProtectionRate": 0.26077097505668934,
+      "unsafeFoldRate": 0.9400693412580485,
+      "blockedNonFoldRate": 0.05993065874195146
+    },
+    "A2-prefix-blacklist": {
+      "total": 2460,
+      "allowedFold": 2406,
+      "blockedFold": 54,
+      "unsafeFold": 1966,
+      "unsafeFoldMeasured": 73,
+      "usefulFold": 440,
+      "overProtection": 1,
+      "unknown": 0,
+      "correctState": 493,
+      "foldRate": 0.9780487804878049,
+      "unknownRate": 0,
+      "decidableRate": 1,
+      "unsafeFoldMeasuredRate": 0.030340814630091438,
+      "exactStateAccuracy": 0.20040650406504065,
+      "safeFoldCoverage": 0.9977324263038548,
+      "overProtectionRate": 0.0022675736961451248,
+      "unsafeFoldRate": 0.9737493808816245,
+      "blockedNonFoldRate": 0.026250619118375434
+    },
+    "A-safe-all-protect": {
+      "total": 2460,
+      "allowedFold": 0,
+      "blockedFold": 2460,
+      "unsafeFold": 0,
+      "unsafeFoldMeasured": 0,
+      "usefulFold": 0,
+      "overProtection": 441,
+      "unknown": 0,
+      "correctState": 272,
+      "foldRate": 0,
+      "unknownRate": 0,
+      "decidableRate": 1,
+      "unsafeFoldMeasuredRate": 0,
+      "exactStateAccuracy": 0.11056910569105691,
+      "safeFoldCoverage": 0,
+      "overProtectionRate": 1,
+      "unsafeFoldRate": 0,
+      "blockedNonFoldRate": 1
+    },
+    "R97-full": {
+      "total": 2460,
+      "allowedFold": 327,
+      "blockedFold": 2133,
+      "unsafeFold": 0,
+      "unsafeFoldMeasured": 0,
+      "usefulFold": 327,
+      "overProtection": 114,
+      "unknown": 1852,
+      "correctState": 2337,
+      "foldRate": 0.1329268292682927,
+      "unknownRate": 0.7528455284552845,
+      "decidableRate": 0.24715447154471545,
+      "unsafeFoldMeasuredRate": 0,
+      "exactStateAccuracy": 0.95,
+      "safeFoldCoverage": 0.7414965986394558,
+      "overProtectionRate": 0.2585034013605442,
+      "unsafeFoldRate": 0,
+      "blockedNonFoldRate": 1,
+      "elapsedMs": 994.5574999999999,
+      "decisionsPerSecond": 2473.4618159332167
+    }
+  },
+  "foldRateConfidence": {
+    "point": 0.1329268292682927,
+    "lower": 0.10268123138033763,
+    "upper": 0.24874791318864775,
+    "iterations": 2000,
+    "clusterKey": "project",
+    "clusterCount": 5
+  }
+}

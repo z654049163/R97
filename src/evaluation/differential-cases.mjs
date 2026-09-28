@@ -1,0 +1,112 @@
+export const DEFAULT_DIFFERENTIAL_RUNTIMES = Object.freeze([
+  "language",
+  "node",
+  "edge",
+]);
+
+export const DIFFERENTIAL_CASES = Object.freeze([
+  {
+    caseId: "language-object-keys",
+    category: "language",
+    source: "Object.keys({ value: 1 });",
+    rationale: "标准语言内建，三端应返回相同的键数组",
+  },
+  {
+    caseId: "language-array-is-array",
+    category: "language",
+    source: "Array.isArray([1, 2, 3]);",
+    rationale: "标准语言内建，三端应返回相同的布尔值",
+  },
+  {
+    caseId: "language-json-parse",
+    category: "language",
+    source: "JSON.parse('{\"value\":1}');",
+    rationale: "标准语言内建，三端应得到相同的 JSON 对象",
+  },
+  {
+    caseId: "language-math-max",
+    category: "language",
+    source: "Math.max(1, 2, 3);",
+    rationale: "纯数值计算，三端应返回相同数值",
+  },
+  {
+    caseId: "language-string-normalize",
+    category: "language",
+    source: "String(\"cafe\\u0301\").normalize(\"NFC\");",
+    rationale: "标准字符串处理，三端应得到相同 Unicode 结果",
+  },
+  {
+    caseId: "language-json-parse-error",
+    category: "language",
+    source: "JSON.parse('{');",
+    rationale: "稳定异常行为也应参与差分，三端应抛出同类异常",
+  },
+  {
+    caseId: "language-missing-property",
+    category: "language",
+    source: "globalThis.__r97_missing__.value;",
+    rationale: "读取不存在的属性应产生可比较的同类运行时异常",
+  },
+  {
+    caseId: "node-process-version",
+    category: "node",
+    source: "process.version;",
+    rationale: "process 只存在于 Node，语言基线和浏览器应缺失",
+  },
+  {
+    caseId: "node-buffer-hex",
+    category: "node",
+    source: "Buffer.from(\"abc\").toString(\"hex\");",
+    rationale: "Buffer 只存在于 Node，跨运行时结果应不同",
+  },
+  {
+    caseId: "browser-window-document",
+    category: "browser",
+    source: "window.document;",
+    rationale: "window/document 只存在于浏览器，跨运行时结果应不同",
+  },
+  {
+    caseId: "browser-local-storage",
+    category: "browser",
+    source: "localStorage.getItem(\"r97-key\");",
+    rationale: "localStorage 只存在于浏览器宿主，目录为空时应稳定返回空值",
+  },
+  {
+    caseId: "browser-navigator-user-agent",
+    category: "browser",
+    source: "navigator.userAgent;",
+    rationale: "导航器标识随宿主变化，不应被视为跨运行时等价结果",
+  },
+  {
+    caseId: "host-timer-type",
+    category: "host_global",
+    source: "typeof setTimeout;",
+    rationale: "定时器不是 ECMAScript 语言基线的一部分",
+  },
+  {
+    caseId: "unverified-network-fetch",
+    category: "side_effect",
+    source: "fetch(\"https://example.invalid\");",
+    requiredRuntimes: ["language", "node", "edge"],
+    executionPolicy: "do-not-execute",
+    unverifiedReason: "存在网络副作用，受控差分器不会执行该表达式",
+    rationale: "有副作用的表达式不能仅凭一个小样本宣称可折叠",
+  },
+  {
+    caseId: "unverified-wechat-request",
+    category: "wechat",
+    source: "wx.request({ url: \"https://example.invalid\" });",
+    requiredRuntimes: ["language", "node", "edge", "wechat"],
+    executionPolicy: "do-not-execute",
+    unverifiedReason: "缺少可执行的真实微信运行时，不能伪造微信调用结果",
+    rationale: "微信 API 只能在真实微信运行时中核验，当前只保留未决状态",
+  },
+  {
+    caseId: "unverified-dynamic-property",
+    category: "dynamic",
+    source: "globalThis[globalThis.__r97_key__]();",
+    executionPolicy: "do-not-execute",
+    unverifiedReason: "动态属性无法在执行前确定目标，可能触发任意宿主 API",
+    rationale: "动态调用不能用于建立稳定的差分真值",
+  },
+]);

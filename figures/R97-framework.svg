@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="title description">
+<title id="title">R97 整体框架</title>
+<desc id="description">静态侧 required 分析、外部侧 target 解析、三值决策与独立判卷验证层的整体结构。</desc>
+<defs>
+<marker id="arrow-0F172A" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker>
+<marker id="arrow-475569" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker>
+<marker id="arrow-64748B" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker>
+<marker id="arrow-CBD5E1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#CBD5E1"/></marker>
+<marker id="arrow-1D4ED8" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#1D4ED8"/></marker>
+<marker id="arrow-EFF6FF" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#EFF6FF"/></marker>
+<marker id="arrow-93C5FD" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#93C5FD"/></marker>
+<marker id="arrow-C2410C" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker>
+<marker id="arrow-FFF7ED" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#FFF7ED"/></marker>
+<marker id="arrow-FDBA74" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#FDBA74"/></marker>
+<marker id="arrow-6D28D9" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#6D28D9"/></marker>
+<marker id="arrow-F5F3FF" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#F5F3FF"/></marker>
+<marker id="arrow-C4B5FD" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C4B5FD"/></marker>
+<marker id="arrow-15803D" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#15803D"/></marker>
+<marker id="arrow-F0FDF4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#F0FDF4"/></marker>
+<marker id="arrow-86EFAC" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#86EFAC"/></marker>
+<marker id="arrow-B91C1C" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#B91C1C"/></marker>
+<marker id="arrow-FEF2F2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#FEF2F2"/></marker>
+<marker id="arrow-FCA5A5" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#FCA5A5"/></marker>
+<marker id="arrow-F8FAFC" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#F8FAFC"/></marker>
+<marker id="arrow-0F766E" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker>
+<marker id="arrow-F0FDFA" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#F0FDFA"/></marker>
+<marker id="arrow-5EEAD4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#5EEAD4"/></marker>
+<filter id="shadow" x="-6%" y="-6%" width="112%" height="116%"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.07"/></filter>
+</defs>
+<rect width="1920" height="1080" fill="#FFFFFF"/>
+<text x="60" y="58" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="34" font-weight="700" fill="#0F172A" text-anchor="start">R97：目标运行时感知的反混淆折叠保护</text>
+<text x="60" y="92" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="17" font-weight="400" fill="#475569" text-anchor="start">代码依赖什么（required）× 实际运行在哪（target）→ 三值决策 → 独立判卷验证</text>
+<rect x="60" y="116" width="1800" height="78" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+<text x="92" y="150" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="20" font-weight="600" fill="#0F172A" text-anchor="start">输入：反混淆器候选折叠点</text>
+<text x="92" y="178" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#475569" text-anchor="start">常量求值 / 分支剪枝 / 调用求值 / 死代码删除　·　分析单位：单文件 AST</text>
+<text x="1828" y="166" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#64748B" text-anchor="end">跨模块依赖、函数返回值形状 → UNKNOWN</text>
+<line x1="490" y1="194" x2="490" y2="220" stroke="#1D4ED8" stroke-width="2" marker-end="url(#arrow-1D4ED8)"/>
+<line x1="1430" y1="194" x2="1430" y2="220" stroke="#C2410C" stroke-width="2" marker-end="url(#arrow-C2410C)"/>
+<rect x="60" y="220" width="860" height="332" rx="8" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1.5"/>
+<text x="90" y="258" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="19" font-weight="700" fill="#1D4ED8" text-anchor="start">静态侧 · required runtime：代码依赖什么</text>
+<rect x="90" y="280" width="240" height="100" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+<text x="110" y="318" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#0F172A" text-anchor="start">AST 与绑定解析</text>
+<text x="110" y="344" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="14" font-weight="400" fill="#475569" text-anchor="start">作用域 · 别名</text>
+<text x="110" y="366" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="14" font-weight="400" fill="#475569" text-anchor="start">局部 / 参数 / 导入遮蔽</text>
+<rect x="350" y="280" width="240" height="100" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+<text x="370" y="318" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#0F172A" text-anchor="start">运行时实体识别</text>
+<text x="370" y="344" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="14" font-weight="400" fill="#475569" text-anchor="start">wx · window · process</text>
+<text x="370" y="366" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="14" font-weight="400" fill="#475569" text-anchor="start">模块导入 → definite</text>
+<rect x="610" y="280" width="280" height="100" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+<text x="630" y="318" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#0F172A" text-anchor="start">required 三态</text>
+<text x="630" y="348" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="14" font-weight="400" fill="#475569" text-anchor="start">definite / possible / not_required</text>
+<rect x="90" y="402" width="800" height="126" rx="8" fill="#FFFFFF" stroke="#93C5FD" stroke-width="1.5"/>
+<text x="112" y="434" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#475569" text-anchor="start">遮蔽：局部变量、函数参数、导入变量 → not_required</text>
+<text x="112" y="466" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#475569" text-anchor="start">别名：const w = wx → 继承宿主属性，仍是 definite</text>
+<text x="112" y="498" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#475569" text-anchor="start">动态：无法解析的作用域 / 动态属性 → possible</text>
+<rect x="1000" y="220" width="860" height="332" rx="8" fill="#FFF7ED" stroke="#FDBA74" stroke-width="1.5"/>
+<text x="1030" y="258" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="19" font-weight="700" fill="#C2410C" text-anchor="start">外部侧 · target runtime：实际运行在哪</text>
+<rect x="1030" y="280" width="240" height="100" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+<text x="1050" y="318" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#0F172A" text-anchor="start">外部证据</text>
+<text x="1050" y="344" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="14" font-weight="400" fill="#475569" text-anchor="start">官方项目配置 · 部署配置</text>
+<text x="1050" y="366" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="14" font-weight="400" fill="#475569" text-anchor="start">运行轨迹 · 运行时指纹</text>
+<rect x="1290" y="280" width="240" height="100" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+<text x="1310" y="314" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#0F172A" text-anchor="start">Target Runtime</text>
+<text x="1310" y="336" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#0F172A" text-anchor="start">Resolver</text>
+<text x="1310" y="360" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="14" font-weight="400" fill="#475569" text-anchor="start">族 · 表面 · 版本 · 作用域</text>
+<rect x="1550" y="280" width="280" height="100" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+<text x="1570" y="314" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#0F172A" text-anchor="start">目标状态（七态）</text>
+<text x="1570" y="340" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#475569" text-anchor="start">confirmed / corroborated / declared</text>
+<text x="1570" y="362" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#475569" text-anchor="start">inferred / context_unknown / conflict / unknown</text>
+<rect x="1030" y="402" width="800" height="126" rx="8" fill="#FFFFFF" stroke="#FDBA74" stroke-width="1.5"/>
+<text x="1052" y="434" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#475569" text-anchor="start">代码里出现 wx 只产生候选，不能确认目标</text>
+<text x="1052" y="466" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#475569" text-anchor="start">禁止循环论证：代码 → 推断目标 → 目标反过来验证代码</text>
+<text x="1052" y="498" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#475569" text-anchor="start">confirmed 需要 ≥2 条独立、权威、绑定当前产物的证据</text>
+<path d="M 490 552 V 566 H 940 V 578" fill="none" stroke="#1D4ED8" stroke-width="2.5" marker-end="url(#arrow-1D4ED8)"/>
+<path d="M 1430 552 V 566 H 980 V 578" fill="none" stroke="#C2410C" stroke-width="2.5" marker-end="url(#arrow-C2410C)"/>
+<rect x="260" y="580" width="1400" height="148" rx="8" fill="#F5F3FF" stroke="#C4B5FD" stroke-width="1.5"/>
+<text x="290" y="618" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="19" font-weight="700" fill="#6D28D9" text-anchor="start">决策引擎 · 证据门：顺序固定，不跳步</text>
+<rect x="290" y="636" width="188" height="54" rx="8" fill="#FFFFFF" stroke="#C4B5FD" stroke-width="1.5"/>
+<text x="384" y="670" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="16" font-weight="600" fill="#0F172A" text-anchor="middle">绑定解析</text>
+<line x1="478" y1="663" x2="493" y2="663" stroke="#6D28D9" stroke-width="2" marker-end="url(#arrow-6D28D9)"/>
+<rect x="495" y="636" width="188" height="54" rx="8" fill="#FFFFFF" stroke="#C4B5FD" stroke-width="1.5"/>
+<text x="589" y="670" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="16" font-weight="600" fill="#0F172A" text-anchor="middle">契约覆盖</text>
+<line x1="683" y1="663" x2="698" y2="663" stroke="#6D28D9" stroke-width="2" marker-end="url(#arrow-6D28D9)"/>
+<rect x="700" y="636" width="188" height="54" rx="8" fill="#FFFFFF" stroke="#C4B5FD" stroke-width="1.5"/>
+<text x="794" y="670" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="16" font-weight="600" fill="#0F172A" text-anchor="middle">required 三态</text>
+<line x1="888" y1="663" x2="903" y2="663" stroke="#6D28D9" stroke-width="2" marker-end="url(#arrow-6D28D9)"/>
+<rect x="905" y="636" width="188" height="54" rx="8" fill="#FFFFFF" stroke="#C4B5FD" stroke-width="1.5"/>
+<text x="999" y="670" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="16" font-weight="600" fill="#0F172A" text-anchor="middle">target 状态</text>
+<line x1="1093" y1="663" x2="1108" y2="663" stroke="#6D28D9" stroke-width="2" marker-end="url(#arrow-6D28D9)"/>
+<rect x="1110" y="636" width="188" height="54" rx="8" fill="#FFFFFF" stroke="#C4B5FD" stroke-width="1.5"/>
+<text x="1204" y="670" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="16" font-weight="600" fill="#0F172A" text-anchor="middle">证据比对</text>
+<line x1="1298" y1="663" x2="1313" y2="663" stroke="#6D28D9" stroke-width="2" marker-end="url(#arrow-6D28D9)"/>
+<rect x="1315" y="636" width="188" height="54" rx="8" fill="#FFFFFF" stroke="#C4B5FD" stroke-width="1.5"/>
+<text x="1409" y="670" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="16" font-weight="600" fill="#0F172A" text-anchor="middle">三值输出</text>
+<text x="290" y="716" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#6D28D9" text-anchor="start">只有 confirmed target + definite required + 真实冲突 → 硬 PROTECT；弱来源目标不硬保护</text>
+<path d="M 960 728 V 744 H 480 V 762" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow-475569)"/>
+<path d="M 960 728 V 762" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow-475569)"/>
+<path d="M 960 728 V 744 H 1440 V 762" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow-475569)"/>
+<rect x="300" y="762" width="360" height="92" rx="8" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1.5"/>
+<text x="480" y="800" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="26" font-weight="700" fill="#15803D" text-anchor="middle">FOLD</text>
+<text x="480" y="830" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="16" font-weight="400" fill="#15803D" text-anchor="middle">ALLOW_FOLD</text>
+<rect x="780" y="762" width="360" height="92" rx="8" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+<text x="960" y="800" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="26" font-weight="700" fill="#B91C1C" text-anchor="middle">PROTECT</text>
+<text x="960" y="830" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="16" font-weight="400" fill="#B91C1C" text-anchor="middle">BLOCK_FOLD</text>
+<rect x="1260" y="762" width="360" height="92" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+<text x="1440" y="800" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="26" font-weight="700" fill="#475569" text-anchor="middle">UNKNOWN</text>
+<text x="1440" y="830" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="16" font-weight="400" fill="#475569" text-anchor="middle">BLOCK_FOLD（未知 ≠ 安全）</text>
+<rect x="60" y="878" width="1800" height="178" rx="8" fill="#F0FDFA" stroke="#5EEAD4" stroke-width="1.5"/>
+<text x="90" y="916" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="19" font-weight="700" fill="#0F766E" text-anchor="start">独立判卷与验证层（不参与决策，只提供外部真值与回归）</text>
+<rect x="90" y="932" width="410" height="66" rx="8" fill="#FFFFFF" stroke="#5EEAD4" stroke-width="1.5"/>
+<text x="110" y="958" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="16" font-weight="600" fill="#0F172A" text-anchor="start">判卷探针</text>
+<text x="110" y="982" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#475569" text-anchor="start">一份实现跑四环境：语言 vm · Node · Edge · 微信 AppService</text>
+<rect x="530" y="932" width="410" height="66" rx="8" fill="#FFFFFF" stroke="#5EEAD4" stroke-width="1.5"/>
+<text x="550" y="958" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="16" font-weight="600" fill="#0F172A" text-anchor="start">实测差分真值</text>
+<text x="550" y="982" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#475569" text-anchor="start">208 实体 / 785 记录（含真实微信）</text>
+<rect x="970" y="932" width="410" height="66" rx="8" fill="#FFFFFF" stroke="#5EEAD4" stroke-width="1.5"/>
+<text x="990" y="958" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="16" font-weight="600" fill="#0F172A" text-anchor="start">变换执行验证</text>
+<text x="990" y="982" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#475569" text-anchor="start">386 条可执行 / 0 条行为不一致</text>
+<rect x="1410" y="932" width="410" height="66" rx="8" fill="#FFFFFF" stroke="#5EEAD4" stroke-width="1.5"/>
+<text x="1430" y="958" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="16" font-weight="600" fill="#0F172A" text-anchor="start">稳定性与变异</text>
+<text x="1430" y="982" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="13" font-weight="400" fill="#475569" text-anchor="start">微信重复观测差异 0 / 变异 20 断言全过</text>
+<rect x="90" y="1012" width="1740" height="32" rx="8" fill="#FFFFFF" stroke="#5EEAD4" stroke-width="1.5"/>
+<text x="960" y="1034" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="15" font-weight="600" fill="#0F766E" text-anchor="middle">3895 条实体分层样本：FOLD 1193（30.63%）· PROTECT 695 · UNKNOWN 2007；R97 放行落在实测差分上：0</text>
+</svg>

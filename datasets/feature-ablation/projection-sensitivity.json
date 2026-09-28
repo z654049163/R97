@@ -1,0 +1,114 @@
+{
+  "generatedAt": "2026-09-18T10:40:42.648Z",
+  "description": "受控机制实验：只检验 observation_projection 在无关维度差异出现时能否避免过度保护。",
+  "scopeWarning": "该实验使用人工观测，不代表真实语料上的频率或收益；真实探针当前仅稳定产出 existence/type/callability。",
+  "caseCount": 7,
+  "counts": {
+    "projectedFold": 3,
+    "projectedProtect": 4,
+    "allDimensionsFold": 0,
+    "allDimensionsProtect": 7,
+    "projectedUnsafeFolds": 0,
+    "projectedOverprotectionAvoided": 3
+  },
+  "rows": [
+    {
+      "id": "ignored-callback-differs",
+      "label": "回调未参与变换，但两个运行时的 callback_behavior 不同",
+      "expectedSafe": true,
+      "projectedState": "FOLD",
+      "projectedReasonCodes": [
+        "ALL_TARGETS_MATCH"
+      ],
+      "allDimensionsState": "PROTECT",
+      "allDimensionsReasonCodes": [
+        "CONTRACT_MISMATCH"
+      ],
+      "avoidsOverprotection": true
+    },
+    {
+      "id": "ignored-return-differs",
+      "label": "返回值没有被使用，但两个运行时的 return_value 不同",
+      "expectedSafe": true,
+      "projectedState": "FOLD",
+      "projectedReasonCodes": [
+        "ALL_TARGETS_MATCH"
+      ],
+      "allDimensionsState": "PROTECT",
+      "allDimensionsReasonCodes": [
+        "CONTRACT_MISMATCH"
+      ],
+      "avoidsOverprotection": true
+    },
+    {
+      "id": "not-awaited-async-differs",
+      "label": "调用没有被 await，但两个运行时的 async_behavior 不同",
+      "expectedSafe": true,
+      "projectedState": "FOLD",
+      "projectedReasonCodes": [
+        "ALL_TARGETS_MATCH"
+      ],
+      "allDimensionsState": "PROTECT",
+      "allDimensionsReasonCodes": [
+        "CONTRACT_MISMATCH"
+      ],
+      "avoidsOverprotection": true
+    },
+    {
+      "id": "callback-is-used",
+      "label": "回调参与变换，callback_behavior 不同",
+      "expectedSafe": true,
+      "projectedState": "PROTECT",
+      "projectedReasonCodes": [
+        "CONTRACT_MISMATCH"
+      ],
+      "allDimensionsState": "PROTECT",
+      "allDimensionsReasonCodes": [
+        "CONTRACT_MISMATCH"
+      ],
+      "avoidsOverprotection": false
+    },
+    {
+      "id": "return-value-is-used",
+      "label": "返回值参与变换，return_value 不同",
+      "expectedSafe": true,
+      "projectedState": "PROTECT",
+      "projectedReasonCodes": [
+        "CONTRACT_MISMATCH"
+      ],
+      "allDimensionsState": "PROTECT",
+      "allDimensionsReasonCodes": [
+        "CONTRACT_MISMATCH"
+      ],
+      "avoidsOverprotection": false
+    },
+    {
+      "id": "awaited-async-differs",
+      "label": "调用被 await，async_behavior 不同",
+      "expectedSafe": true,
+      "projectedState": "PROTECT",
+      "projectedReasonCodes": [
+        "CONTRACT_MISMATCH"
+      ],
+      "allDimensionsState": "PROTECT",
+      "allDimensionsReasonCodes": [
+        "CONTRACT_MISMATCH"
+      ],
+      "avoidsOverprotection": false
+    },
+    {
+      "id": "existence-differs",
+      "label": "实体存在性不同",
+      "expectedSafe": true,
+      "projectedState": "PROTECT",
+      "projectedReasonCodes": [
+        "CONTRACT_MISMATCH"
+      ],
+      "allDimensionsState": "PROTECT",
+      "allDimensionsReasonCodes": [
+        "CONTRACT_MISMATCH"
+      ],
+      "avoidsOverprotection": false
+    }
+  ]
+}

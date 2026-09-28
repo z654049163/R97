@@ -1,0 +1,143 @@
+{
+  "generatedAt": "2026-09-24T08:16:21.627Z",
+  "corpusPath": "E:\\读论文\\R97\\datasets\\real-miniapp-full\\real-miniapp-candidates.jsonl",
+  "perEntityCap": 5,
+  "sampleCount": 3895,
+  "byState": {
+    "FOLD": 1193,
+    "PROTECT": 687,
+    "UNKNOWN": 2015
+  },
+  "unknownTotal": 2015,
+  "buckets": {
+    "module-boundary": 970,
+    "code-defined-global": 571,
+    "unresolved-global": 334,
+    "wechat-base-library-private-global": 72,
+    "wechat-public-host-api": 68
+  },
+  "topWechatPrivateRoots": [
+    {
+      "root": "nv_navigator",
+      "count": 15
+    },
+    {
+      "root": "__subContextEngine__",
+      "count": 15
+    },
+    {
+      "root": "__wxConfig",
+      "count": 14
+    },
+    {
+      "root": "nv_Array",
+      "count": 10
+    },
+    {
+      "root": "nv_window",
+      "count": 9
+    },
+    {
+      "root": "nv_instanceLen",
+      "count": 2
+    },
+    {
+      "root": "nv_style",
+      "count": 2
+    },
+    {
+      "root": "nv_const",
+      "count": 2
+    },
+    {
+      "root": "nv_owner",
+      "count": 2
+    },
+    {
+      "root": "nv_v",
+      "count": 1
+    }
+  ],
+  "topCodeDefinedRoots": [
+    {
+      "root": "wh",
+      "count": 20
+    },
+    {
+      "root": "PHCNTRUST",
+      "count": 15
+    },
+    {
+      "root": "tt",
+      "count": 9
+    },
+    {
+      "root": "$gwx",
+      "count": 5
+    },
+    {
+      "root": "$gwn",
+      "count": 5
+    },
+    {
+      "root": "$gwl",
+      "count": 5
+    },
+    {
+      "root": "snap_bb",
+      "count": 5
+    },
+    {
+      "root": "gra",
+      "count": 5
+    },
+    {
+      "root": "grb",
+      "count": 5
+    },
+    {
+      "root": "nt_0",
+      "count": 5
+    },
+    {
+      "root": "nt_1",
+      "count": 5
+    },
+    {
+      "root": "nt_5",
+      "count": 5
+    },
+    {
+      "root": "nt_6",
+      "count": 5
+    },
+    {
+      "root": "nt_8",
+      "count": 5
+    },
+    {
+      "root": "nt_9",
+      "count": 5
+    },
+    {
+      "root": "nt_2",
+      "count": 5
+    },
+    {
+      "root": "nv_nt_0",
+      "count": 5
+    },
+    {
+      "root": "nt_3",
+      "count": 5
+    },
+    {
+      "root": "nt_7",
+      "count": 5
+    },
+    {
+      "root": "_size",
+      "count": 5
+    }
+  ]
+}

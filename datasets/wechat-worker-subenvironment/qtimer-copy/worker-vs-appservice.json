@@ -1,0 +1,142 @@
+{
+  "generatedAt": "2026-09-24T14:23:24.131Z",
+  "projectPath": "E:\\读论文\\R97\\datasets\\worker-miniapp-projects\\qtimer-copy",
+  "workerScript": "workers/r97probe/index.js",
+  "workerEnvironment": {
+    "hasWx": false,
+    "hasGlobalThis": true,
+    "hasSelf": false,
+    "hasDocument": false
+  },
+  "entityCount": 12,
+  "observations": {
+    "wx": {
+      "appService": {
+        "existence": true,
+        "type": "object"
+      },
+      "worker": {
+        "existence": false,
+        "type": "undefined"
+      }
+    },
+    "wx.request": {
+      "appService": {
+        "existence": true,
+        "type": "function"
+      },
+      "worker": {
+        "existence": false,
+        "type": "undefined"
+      }
+    },
+    "Page": {
+      "appService": {
+        "existence": true,
+        "type": "function"
+      },
+      "worker": {
+        "existence": false,
+        "type": "undefined"
+      }
+    },
+    "getApp": {
+      "appService": {
+        "existence": true,
+        "type": "function"
+      },
+      "worker": {
+        "existence": false,
+        "type": "undefined"
+      }
+    },
+    "Math": {
+      "appService": {
+        "existence": true,
+        "type": "object"
+      },
+      "worker": {
+        "existence": true,
+        "type": "object"
+      }
+    },
+    "Math.max": {
+      "appService": {
+        "existence": true,
+        "type": "function"
+      },
+      "worker": {
+        "existence": true,
+        "type": "function"
+      }
+    },
+    "JSON": {
+      "appService": {
+        "existence": true,
+        "type": "object"
+      },
+      "worker": {
+        "existence": true,
+        "type": "object"
+      }
+    },
+    "console": {
+      "appService": {
+        "existence": true,
+        "type": "object"
+      },
+      "worker": {
+        "existence": true,
+        "type": "object"
+      }
+    },
+    "setTimeout": {
+      "appService": {
+        "existence": true,
+        "type": "function"
+      },
+      "worker": {
+        "existence": true,
+        "type": "function"
+      }
+    },
+    "globalThis": {
+      "appService": {
+        "existence": true,
+        "type": "object"
+      },
+      "worker": {
+        "existence": true,
+        "type": "object"
+      }
+    },
+    "self": {
+      "appService": {
+        "existence": true,
+        "type": "object"
+      },
+      "worker": {
+        "existence": true,
+        "type": "object"
+      }
+    },
+    "document": {
+      "appService": {
+        "existence": true,
+        "type": "object"
+      },
+      "worker": {
+        "existence": false,
+        "type": "undefined"
+      }
+    }
+  },
+  "divergentEntities": [
+    "wx",
+    "wx.request",
+    "Page",
+    "getApp",
+    "document"
+  ],
+  "divergentCount": 5
+}

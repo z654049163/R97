@@ -1,0 +1,374 @@
+{
+  "caseCount": 16,
+  "evidenceAvailability": {
+    "language": true,
+    "node": true,
+    "wechat": false,
+    "browser": true
+  },
+  "results": [
+    {
+      "caseId": "safe-object-keys",
+      "category": "language",
+      "source": "Object.keys({ value: 1 });",
+      "expected": "FOLD",
+      "rationale": "ECMAScript 内建对象在语言基线和 Node 中语义一致",
+      "entityId": "Object.keys",
+      "actualStates": [
+        "FOLD"
+      ],
+      "action": "ALLOW_FOLD",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH"
+      ],
+      "correct": true
+    },
+    {
+      "caseId": "safe-array-is-array",
+      "category": "language",
+      "source": "Array.isArray([]);",
+      "expected": "FOLD",
+      "rationale": "标准语言 API 在评估运行时和目标运行时一致",
+      "entityId": "Array.isArray",
+      "actualStates": [
+        "FOLD"
+      ],
+      "action": "ALLOW_FOLD",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH"
+      ],
+      "correct": true
+    },
+    {
+      "caseId": "safe-json-parse",
+      "category": "language",
+      "source": "JSON.parse('{\"value\":1}');",
+      "expected": "FOLD",
+      "rationale": "标准语言 API 在评估运行时和目标运行时一致",
+      "entityId": "JSON.parse",
+      "actualStates": [
+        "FOLD"
+      ],
+      "action": "ALLOW_FOLD",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH"
+      ],
+      "correct": true
+    },
+    {
+      "caseId": "safe-math-max",
+      "category": "language",
+      "source": "Math.max(1, 2, 3);",
+      "expected": "FOLD",
+      "rationale": "标准语言 API 在评估运行时和目标运行时一致",
+      "entityId": "Math.max",
+      "actualStates": [
+        "FOLD"
+      ],
+      "action": "ALLOW_FOLD",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH"
+      ],
+      "correct": true
+    },
+    {
+      "caseId": "unsafe-process-version",
+      "category": "node",
+      "source": "process.version;",
+      "expected": "PROTECT",
+      "rationale": "Node 宿主实体在语言基线中不存在",
+      "entityId": "process.version",
+      "actualStates": [
+        "PROTECT"
+      ],
+      "action": "BLOCK_FOLD",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ],
+      "correct": true
+    },
+    {
+      "caseId": "unsafe-node-buffer",
+      "category": "node",
+      "source": "Buffer.from('abc');",
+      "expected": "PROTECT",
+      "rationale": "Buffer 是 Node 宿主实体，不能跨语言基线折叠",
+      "entityId": "Buffer.from",
+      "actualStates": [
+        "PROTECT"
+      ],
+      "action": "BLOCK_FOLD",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ],
+      "correct": true
+    },
+    {
+      "caseId": "unsafe-browser-window",
+      "category": "browser",
+      "source": "window.document;",
+      "expected": "PROTECT",
+      "rationale": "缺少真实浏览器证据时只能阻断，不能把缺失证据写成安全",
+      "entityId": "window.document",
+      "actualStates": [
+        "PROTECT"
+      ],
+      "action": "BLOCK_FOLD",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ],
+      "correct": true
+    },
+    {
+      "caseId": "unsafe-browser-document",
+      "category": "browser",
+      "source": "document.createElement('div');",
+      "expected": "PROTECT",
+      "rationale": "缺少真实浏览器证据时只能阻断，不能把缺失证据写成安全",
+      "entityId": "document.createElement",
+      "actualStates": [
+        "PROTECT"
+      ],
+      "action": "BLOCK_FOLD",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ],
+      "correct": true
+    },
+    {
+      "caseId": "unsafe-browser-storage",
+      "category": "browser",
+      "source": "localStorage.getItem('key');",
+      "expected": "PROTECT",
+      "rationale": "缺少真实浏览器证据时只能阻断，不能把缺失证据写成安全",
+      "entityId": "localStorage.getItem",
+      "actualStates": [
+        "PROTECT"
+      ],
+      "action": "BLOCK_FOLD",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ],
+      "correct": true
+    },
+    {
+      "caseId": "unsafe-wechat-request",
+      "category": "miniapp",
+      "source": "wx.request({ url: 'https://example.invalid' });",
+      "expected": "UNKNOWN",
+      "rationale": "缺少真实微信证据时只能阻断，不能把缺失证据写成安全",
+      "entityId": "wx.request",
+      "actualStates": [
+        "UNKNOWN"
+      ],
+      "action": "BLOCK_FOLD",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "EVIDENCE_MISSING"
+      ],
+      "correct": true
+    },
+    {
+      "caseId": "unsafe-wechat-get-app",
+      "category": "miniapp",
+      "source": "getApp();",
+      "expected": "UNKNOWN",
+      "rationale": "缺少真实微信证据时只能阻断，不能把缺失证据写成安全",
+      "entityId": "getApp",
+      "actualStates": [
+        "UNKNOWN"
+      ],
+      "action": "BLOCK_FOLD",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "EVIDENCE_MISSING"
+      ],
+      "correct": true
+    },
+    {
+      "caseId": "unsafe-wechat-page",
+      "category": "miniapp",
+      "source": "Page({});",
+      "expected": "UNKNOWN",
+      "rationale": "缺少真实微信证据时只能阻断，不能把缺失证据写成安全",
+      "entityId": "Page",
+      "actualStates": [
+        "UNKNOWN"
+      ],
+      "action": "BLOCK_FOLD",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "EVIDENCE_MISSING"
+      ],
+      "correct": true
+    },
+    {
+      "caseId": "unsafe-timing-set-timeout",
+      "category": "host_global",
+      "source": "setTimeout(function () {}, 0);",
+      "expected": "PROTECT",
+      "rationale": "定时器不是 ECMAScript 语言内建对象",
+      "entityId": "setTimeout",
+      "actualStates": [
+        "PROTECT"
+      ],
+      "action": "BLOCK_FOLD",
+      "reasonCodes": [
+        "CONTRACT_COVERAGE_MISSING",
+        "CONTRACT_MISMATCH"
+      ],
+      "correct": true
+    },
+    {
+      "caseId": "unsafe-host-fetch",
+      "category": "host_global",
+      "source": "fetch('https://example.invalid');",
+      "expected": "PROTECT",
+      "rationale": "fetch 不是 ECMAScript 语言内建对象",
+      "entityId": "fetch",
+      "actualStates": [
+        "PROTECT"
+      ],
+      "action": "BLOCK_FOLD",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ],
+      "correct": true
+    },
+    {
+      "caseId": "unknown-unresolved-global",
+      "category": "unknown",
+      "source": "foo.bar();",
+      "expected": "UNKNOWN",
+      "rationale": "无法确认 foo 的来源，不能把未知实体当作安全",
+      "entityId": "foo.bar",
+      "actualStates": [
+        "UNKNOWN"
+      ],
+      "action": "BLOCK_FOLD",
+      "reasonCodes": [
+        "BINDING_UNRESOLVED"
+      ],
+      "correct": true
+    },
+    {
+      "caseId": "unknown-dynamic-property",
+      "category": "unknown",
+      "source": "globalThis[key]();",
+      "expected": "UNKNOWN",
+      "rationale": "动态属性访问无法建立稳定的运行时实体",
+      "entityId": "globalThis",
+      "actualStates": [
+        "UNKNOWN"
+      ],
+      "action": "BLOCK_FOLD",
+      "reasonCodes": [
+        "BINDING_UNRESOLVED"
+      ],
+      "correct": true
+    }
+  ],
+  "metrics": {
+    "A0-aggressive-fold": {
+      "total": 16,
+      "allowedFold": 16,
+      "blockedFold": 0,
+      "unsafeFold": 12,
+      "unsafeFoldMeasured": 0,
+      "usefulFold": 4,
+      "overProtection": 0,
+      "unknown": 0,
+      "correctState": 4,
+      "foldRate": 1,
+      "unknownRate": 0,
+      "unsafeFoldMeasuredRate": 0,
+      "exactStateAccuracy": 0.25,
+      "safeFoldCoverage": 1,
+      "overProtectionRate": 0,
+      "unsafeFoldRate": 1,
+      "blockedNonFoldRate": 0
+    },
+    "A1-legacy-blacklist": {
+      "total": 16,
+      "allowedFold": 5,
+      "blockedFold": 11,
+      "unsafeFold": 1,
+      "unsafeFoldMeasured": 0,
+      "usefulFold": 4,
+      "overProtection": 0,
+      "unknown": 0,
+      "correctState": 11,
+      "foldRate": 0.3125,
+      "unknownRate": 0,
+      "unsafeFoldMeasuredRate": 0,
+      "exactStateAccuracy": 0.6875,
+      "safeFoldCoverage": 1,
+      "overProtectionRate": 0,
+      "unsafeFoldRate": 0.08333333333333333,
+      "blockedNonFoldRate": 0.9166666666666666
+    },
+    "A2-prefix-blacklist": {
+      "total": 16,
+      "allowedFold": 5,
+      "blockedFold": 11,
+      "unsafeFold": 1,
+      "unsafeFoldMeasured": 0,
+      "usefulFold": 4,
+      "overProtection": 0,
+      "unknown": 0,
+      "correctState": 11,
+      "foldRate": 0.3125,
+      "unknownRate": 0,
+      "unsafeFoldMeasuredRate": 0,
+      "exactStateAccuracy": 0.6875,
+      "safeFoldCoverage": 1,
+      "overProtectionRate": 0,
+      "unsafeFoldRate": 0.08333333333333333,
+      "blockedNonFoldRate": 0.9166666666666666
+    },
+    "A-safe-all-protect": {
+      "total": 16,
+      "allowedFold": 0,
+      "blockedFold": 16,
+      "unsafeFold": 0,
+      "unsafeFoldMeasured": 0,
+      "usefulFold": 0,
+      "overProtection": 4,
+      "unknown": 0,
+      "correctState": 7,
+      "foldRate": 0,
+      "unknownRate": 0,
+      "unsafeFoldMeasuredRate": 0,
+      "exactStateAccuracy": 0.4375,
+      "safeFoldCoverage": 0,
+      "overProtectionRate": 1,
+      "unsafeFoldRate": 0,
+      "blockedNonFoldRate": 1
+    },
+    "R97-full": {
+      "total": 16,
+      "allowedFold": 4,
+      "blockedFold": 12,
+      "unsafeFold": 0,
+      "unsafeFoldMeasured": 0,
+      "usefulFold": 4,
+      "overProtection": 0,
+      "unknown": 5,
+      "correctState": 16,
+      "foldRate": 0.25,
+      "unknownRate": 0.3125,
+      "unsafeFoldMeasuredRate": 0,
+      "exactStateAccuracy": 1,
+      "safeFoldCoverage": 1,
+      "overProtectionRate": 0,
+      "unsafeFoldRate": 0,
+      "blockedNonFoldRate": 1
+    }
+  }
+}

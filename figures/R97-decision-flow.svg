@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="1060" viewBox="0 0 1680 1060" role="img" aria-labelledby="title description">
+<title id="title">R97 判定流程</title>
+<desc id="description">八步判定优先级：绑定、契约、required 三态、target confirmed、硬冲突、证据、副作用、全一致。</desc>
+<defs>
+<marker id="arrow-0F172A" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F172A"/></marker>
+<marker id="arrow-475569" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#475569"/></marker>
+<marker id="arrow-64748B" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#64748B"/></marker>
+<marker id="arrow-CBD5E1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#CBD5E1"/></marker>
+<marker id="arrow-1D4ED8" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#1D4ED8"/></marker>
+<marker id="arrow-EFF6FF" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#EFF6FF"/></marker>
+<marker id="arrow-93C5FD" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#93C5FD"/></marker>
+<marker id="arrow-C2410C" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker>
+<marker id="arrow-FFF7ED" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#FFF7ED"/></marker>
+<marker id="arrow-FDBA74" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#FDBA74"/></marker>
+<marker id="arrow-6D28D9" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#6D28D9"/></marker>
+<marker id="arrow-F5F3FF" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#F5F3FF"/></marker>
+<marker id="arrow-C4B5FD" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C4B5FD"/></marker>
+<marker id="arrow-15803D" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#15803D"/></marker>
+<marker id="arrow-F0FDF4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#F0FDF4"/></marker>
+<marker id="arrow-86EFAC" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#86EFAC"/></marker>
+<marker id="arrow-B91C1C" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#B91C1C"/></marker>
+<marker id="arrow-FEF2F2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#FEF2F2"/></marker>
+<marker id="arrow-FCA5A5" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#FCA5A5"/></marker>
+<marker id="arrow-F8FAFC" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#F8FAFC"/></marker>
+<marker id="arrow-0F766E" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0F766E"/></marker>
+<marker id="arrow-F0FDFA" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#F0FDFA"/></marker>
+<marker id="arrow-5EEAD4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#5EEAD4"/></marker>
+<filter id="shadow" x="-6%" y="-6%" width="112%" height="116%"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.07"/></filter>
+</defs>
+<rect width="1680" height="1060" fill="#FFFFFF"/>
+<text x="60" y="56" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="32" font-weight="700" fill="#0F172A" text-anchor="start">R97 判定流程：顺序固定，弱目标不能提前硬保护</text>
+<text x="60" y="88" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="16" font-weight="400" fill="#475569" text-anchor="start">每一步先看“否”分支；UNKNOWN 和 PROTECT 的强制动作都是 BLOCK_FOLD</text>
+<rect x="60" y="106" width="1560" height="48" rx="8" fill="#F5F3FF" stroke="#C4B5FD" stroke-width="1.5"/>
+<text x="840" y="136" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="16" font-weight="600" fill="#6D28D9" text-anchor="middle">①—③ 前置证据门　|　④ 早于 ⑤：target 未确认只做候选扩展　|　只有 confirmed + definite + 真实冲突才硬 PROTECT</text>
+<rect x="120" y="169" width="420" height="56" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+<text x="330" y="204" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="17" font-weight="600" fill="#0F172A" text-anchor="middle">候选折叠点（已解析为独立表达式）</text>
+<line x1="330" y1="225" x2="330" y2="243" stroke="#475569" stroke-width="2" marker-end="url(#arrow-475569)"/>
+<rect x="120" y="245" width="420" height="60" rx="8" fill="#FFFFFF" stroke="#1D4ED8" stroke-width="2"/>
+<text x="138" y="271" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="18" font-weight="700" fill="#1D4ED8" text-anchor="start">①</text>
+<text x="168" y="282" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="16" font-weight="600" fill="#0F172A" text-anchor="start">绑定已解析且非动态？</text>
+<line x1="540" y1="275" x2="620" y2="275" stroke="#475569" stroke-width="2" marker-end="url(#arrow-475569)"/>
+<rect x="620" y="245" width="420" height="60" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+<text x="640" y="270" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="15" font-weight="600" fill="#475569" text-anchor="start">绑定未解析 / 动态属性</text>
+<text x="640" y="292" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#475569" text-anchor="start">→ UNKNOWN</text>
+<text x="552" y="267" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#475569" text-anchor="start">否</text>
+<line x1="330" y1="305" x2="330" y2="334" stroke="#1D4ED8" stroke-width="2" marker-end="url(#arrow-1D4ED8)"/>
+<text x="340" y="329" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1D4ED8" text-anchor="start">是</text>
+<rect x="120" y="333" width="420" height="60" rx="8" fill="#FFFFFF" stroke="#1D4ED8" stroke-width="2"/>
+<text x="138" y="359" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="18" font-weight="700" fill="#1D4ED8" text-anchor="start">②</text>
+<text x="168" y="370" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="16" font-weight="600" fill="#0F172A" text-anchor="start">契约覆盖完整？</text>
+<line x1="540" y1="363" x2="620" y2="363" stroke="#475569" stroke-width="2" marker-end="url(#arrow-475569)"/>
+<rect x="620" y="333" width="420" height="60" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+<text x="640" y="358" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="15" font-weight="600" fill="#475569" text-anchor="start">契约缺可观察维度</text>
+<text x="640" y="380" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#475569" text-anchor="start">→ UNKNOWN</text>
+<text x="552" y="355" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#475569" text-anchor="start">否</text>
+<line x1="330" y1="393" x2="330" y2="422" stroke="#1D4ED8" stroke-width="2" marker-end="url(#arrow-1D4ED8)"/>
+<text x="340" y="417" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1D4ED8" text-anchor="start">是</text>
+<rect x="120" y="421" width="420" height="60" rx="8" fill="#FFFFFF" stroke="#1D4ED8" stroke-width="2"/>
+<text x="138" y="447" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="18" font-weight="700" fill="#1D4ED8" text-anchor="start">③</text>
+<text x="168" y="458" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="16" font-weight="600" fill="#0F172A" text-anchor="start">required 是 definite？</text>
+<line x1="540" y1="451" x2="620" y2="451" stroke="#475569" stroke-width="2" marker-end="url(#arrow-475569)"/>
+<rect x="620" y="421" width="420" height="60" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+<text x="640" y="446" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="15" font-weight="600" fill="#475569" text-anchor="start">possible / 模糊</text>
+<text x="640" y="468" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#475569" text-anchor="start">→ UNKNOWN</text>
+<text x="552" y="443" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#475569" text-anchor="start">否</text>
+<line x1="330" y1="481" x2="330" y2="510" stroke="#1D4ED8" stroke-width="2" marker-end="url(#arrow-1D4ED8)"/>
+<text x="340" y="505" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1D4ED8" text-anchor="start">是</text>
+<rect x="120" y="509" width="420" height="60" rx="8" fill="#FFFFFF" stroke="#1D4ED8" stroke-width="2"/>
+<text x="138" y="535" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="18" font-weight="700" fill="#1D4ED8" text-anchor="start">④</text>
+<text x="168" y="546" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="16" font-weight="600" fill="#0F172A" text-anchor="start">target 达到 confirmed？</text>
+<line x1="540" y1="539" x2="620" y2="539" stroke="#475569" stroke-width="2" marker-end="url(#arrow-475569)"/>
+<rect x="620" y="509" width="420" height="60" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+<text x="640" y="534" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="15" font-weight="600" fill="#475569" text-anchor="start">弱来源只扩展候选</text>
+<text x="640" y="556" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#475569" text-anchor="start">→ UNKNOWN（不硬保护）</text>
+<text x="552" y="531" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#475569" text-anchor="start">否</text>
+<line x1="330" y1="569" x2="330" y2="598" stroke="#1D4ED8" stroke-width="2" marker-end="url(#arrow-1D4ED8)"/>
+<text x="340" y="593" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1D4ED8" text-anchor="start">是</text>
+<rect x="120" y="597" width="420" height="60" rx="8" fill="#FFFFFF" stroke="#B91C1C" stroke-width="2"/>
+<text x="138" y="623" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="18" font-weight="700" fill="#B91C1C" text-anchor="start">⑤</text>
+<text x="168" y="634" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="16" font-weight="600" fill="#0F172A" text-anchor="start">confirmed 与 definite required 冲突？</text>
+<line x1="540" y1="627" x2="1120" y2="627" stroke="#B91C1C" stroke-width="2.5" marker-end="url(#arrow-B91C1C)"/>
+<rect x="1120" y="597" width="420" height="60" rx="8" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+<text x="1140" y="622" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" fill="#B91C1C" text-anchor="start">硬冲突</text>
+<text x="1140" y="644" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#B91C1C" text-anchor="start">→ PROTECT</text>
+<text x="552" y="619" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#B91C1C" text-anchor="start">是</text>
+<line x1="330" y1="657" x2="330" y2="686" stroke="#B91C1C" stroke-width="2" marker-end="url(#arrow-B91C1C)"/>
+<text x="340" y="681" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#475569" text-anchor="start">否</text>
+<rect x="120" y="685" width="420" height="60" rx="8" fill="#FFFFFF" stroke="#1D4ED8" stroke-width="2"/>
+<text x="138" y="711" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="18" font-weight="700" fill="#1D4ED8" text-anchor="start">⑥</text>
+<text x="168" y="722" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="16" font-weight="600" fill="#0F172A" text-anchor="start">证据完整、有效、无冲突？</text>
+<line x1="540" y1="715" x2="620" y2="715" stroke="#475569" stroke-width="2" marker-end="url(#arrow-475569)"/>
+<rect x="620" y="685" width="420" height="60" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+<text x="640" y="710" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="15" font-weight="600" fill="#475569" text-anchor="start">缺证据 / 过期 / 冲突</text>
+<text x="640" y="732" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#475569" text-anchor="start">→ UNKNOWN</text>
+<text x="552" y="707" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#475569" text-anchor="start">否</text>
+<line x1="330" y1="745" x2="330" y2="774" stroke="#1D4ED8" stroke-width="2" marker-end="url(#arrow-1D4ED8)"/>
+<text x="340" y="769" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1D4ED8" text-anchor="start">是</text>
+<rect x="120" y="773" width="420" height="60" rx="8" fill="#FFFFFF" stroke="#B91C1C" stroke-width="2"/>
+<text x="138" y="799" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="18" font-weight="700" fill="#B91C1C" text-anchor="start">⑦</text>
+<text x="168" y="810" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="16" font-weight="600" fill="#0F172A" text-anchor="start">存在禁止副作用或已观测差异？</text>
+<line x1="540" y1="803" x2="1120" y2="803" stroke="#B91C1C" stroke-width="2.5" marker-end="url(#arrow-B91C1C)"/>
+<rect x="1120" y="773" width="420" height="60" rx="8" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+<text x="1140" y="798" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" fill="#B91C1C" text-anchor="start">副作用 / 语义不一致</text>
+<text x="1140" y="820" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#B91C1C" text-anchor="start">→ PROTECT</text>
+<text x="552" y="795" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#B91C1C" text-anchor="start">是</text>
+<line x1="330" y1="833" x2="330" y2="862" stroke="#B91C1C" stroke-width="2" marker-end="url(#arrow-B91C1C)"/>
+<text x="340" y="857" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#475569" text-anchor="start">否</text>
+<rect x="120" y="861" width="420" height="60" rx="8" fill="#FFFFFF" stroke="#15803D" stroke-width="2"/>
+<text x="138" y="887" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="18" font-weight="700" fill="#15803D" text-anchor="start">⑧</text>
+<text x="168" y="898" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="16" font-weight="600" fill="#0F172A" text-anchor="start">全部目标观测一致？</text>
+<line x1="540" y1="891" x2="620" y2="891" stroke="#475569" stroke-width="2" marker-end="url(#arrow-475569)"/>
+<rect x="620" y="861" width="420" height="60" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+<text x="640" y="886" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="15" font-weight="600" fill="#475569" text-anchor="start">仍有一致性缺口</text>
+<text x="640" y="908" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="15" font-weight="400" fill="#475569" text-anchor="start">→ UNKNOWN</text>
+<text x="552" y="883" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#475569" text-anchor="start">否</text>
+<line x1="330" y1="921" x2="330" y2="955" stroke="#15803D" stroke-width="2.5" marker-end="url(#arrow-15803D)"/>
+<text x="340" y="945" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#15803D" text-anchor="start">是</text>
+<rect x="120" y="957" width="420" height="72" rx="8" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1.5"/>
+<text x="330" y="991" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="22" font-weight="700" fill="#15803D" text-anchor="middle">FOLD → ALLOW_FOLD</text>
+<text x="330" y="1015" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="14" font-weight="400" fill="#15803D" text-anchor="middle">所有目标观测一致</text>
+<rect x="1120" y="957" width="420" height="72" rx="8" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1.5"/>
+<text x="1330" y="991" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="22" font-weight="700" fill="#B91C1C" text-anchor="middle">PROTECT → BLOCK_FOLD</text>
+<text x="1330" y="1015" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="14" font-weight="400" fill="#B91C1C" text-anchor="middle">真实冲突 / 禁止副作用 / 已观测差异</text>
+<rect x="620" y="957" width="420" height="72" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+<text x="830" y="991" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="22" font-weight="700" fill="#475569" text-anchor="middle">UNKNOWN → BLOCK_FOLD</text>
+<text x="830" y="1015" font-family="'Microsoft YaHei','Segoe UI',Arial,sans-serif" font-size="14" font-weight="400" fill="#475569" text-anchor="middle">证据不足时宁可折叠失败，也不放行</text>
+</svg>

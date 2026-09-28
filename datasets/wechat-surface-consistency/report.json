@@ -1,0 +1,161 @@
+{
+  "generatedAt": "2026-09-24T14:38:22.099Z",
+  "reportsRoot": "datasets\\wechat-worker-subenvironment",
+  "reportCount": 6,
+  "independentProjectCount": 5,
+  "consistent": true,
+  "environmentConsistent": true,
+  "signatures": [
+    {
+      "divergentEntities": [
+        "Page",
+        "document",
+        "getApp",
+        "wx",
+        "wx.request"
+      ],
+      "projects": [
+        "fixture",
+        "miniprogram-xiaoxiao-open",
+        "qtimer",
+        "qtimer-copy",
+        "StringArtHelper",
+        "WeChat-MiniProgram-WebAR"
+      ]
+    }
+  ],
+  "environments": [
+    {
+      "environment": {
+        "hasWx": false,
+        "hasGlobalThis": true,
+        "hasSelf": false,
+        "hasDocument": false
+      },
+      "projects": [
+        "fixture",
+        "miniprogram-xiaoxiao-open",
+        "qtimer",
+        "qtimer-copy",
+        "StringArtHelper",
+        "WeChat-MiniProgram-WebAR"
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "id": "fixture",
+      "entityCount": 12,
+      "divergentCount": 5,
+      "divergentEntities": [
+        "Page",
+        "document",
+        "getApp",
+        "wx",
+        "wx.request"
+      ],
+      "workerEnvironment": {
+        "hasWx": false,
+        "hasGlobalThis": true,
+        "hasSelf": false,
+        "hasDocument": false
+      },
+      "generatedAt": "2026-09-24T10:42:27.032Z"
+    },
+    {
+      "id": "miniprogram-xiaoxiao-open",
+      "entityCount": 12,
+      "divergentCount": 5,
+      "divergentEntities": [
+        "Page",
+        "document",
+        "getApp",
+        "wx",
+        "wx.request"
+      ],
+      "workerEnvironment": {
+        "hasWx": false,
+        "hasGlobalThis": true,
+        "hasSelf": false,
+        "hasDocument": false
+      },
+      "generatedAt": "2026-09-24T14:28:05.699Z"
+    },
+    {
+      "id": "qtimer",
+      "entityCount": 12,
+      "divergentCount": 5,
+      "divergentEntities": [
+        "Page",
+        "document",
+        "getApp",
+        "wx",
+        "wx.request"
+      ],
+      "workerEnvironment": {
+        "hasWx": false,
+        "hasGlobalThis": true,
+        "hasSelf": false,
+        "hasDocument": false
+      },
+      "generatedAt": "2026-09-24T14:37:04.276Z"
+    },
+    {
+      "id": "qtimer-copy",
+      "entityCount": 12,
+      "divergentCount": 5,
+      "divergentEntities": [
+        "Page",
+        "document",
+        "getApp",
+        "wx",
+        "wx.request"
+      ],
+      "workerEnvironment": {
+        "hasWx": false,
+        "hasGlobalThis": true,
+        "hasSelf": false,
+        "hasDocument": false
+      },
+      "generatedAt": "2026-09-24T14:23:24.131Z"
+    },
+    {
+      "id": "StringArtHelper",
+      "entityCount": 12,
+      "divergentCount": 5,
+      "divergentEntities": [
+        "Page",
+        "document",
+        "getApp",
+        "wx",
+        "wx.request"
+      ],
+      "workerEnvironment": {
+        "hasWx": false,
+        "hasGlobalThis": true,
+        "hasSelf": false,
+        "hasDocument": false
+      },
+      "generatedAt": "2026-09-24T14:27:24.231Z"
+    },
+    {
+      "id": "WeChat-MiniProgram-WebAR",
+      "entityCount": 12,
+      "divergentCount": 5,
+      "divergentEntities": [
+        "Page",
+        "document",
+        "getApp",
+        "wx",
+        "wx.request"
+      ],
+      "workerEnvironment": {
+        "hasWx": false,
+        "hasGlobalThis": true,
+        "hasSelf": false,
+        "hasDocument": false
+      },
+      "generatedAt": "2026-09-24T14:37:44.603Z"
+    }
+  ]
+}

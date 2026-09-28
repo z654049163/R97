@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2100" height="1240" viewBox="0 0 2100 1240" role="img" aria-labelledby="title description">
+<title id="title">R97 模型图：目标运行时感知的折叠保护</title><desc id="description">代码先经过 AST 与绑定解析，再进入 Target Runtime Resolver；只有 confirmed 目标才允许硬冲突判断，corroborated、declared、inferred、conflict 和 unknown 只扩展候选环境或返回 UNKNOWN，最后对折叠点执行 FOLD、PROTECT 或 UNKNOWN 决策。</desc>
+<defs>
+  <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#1D4ED8"/></marker>
+  <marker id="arrow-slate" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#334155"/></marker>
+  <marker id="arrow-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#15803D"/></marker>
+  <marker id="arrow-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#B91C1C"/></marker>
+  <filter id="soft-shadow" x="-8%" y="-8%" width="116%" height="120%"><feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#0F172A" flood-opacity="0.09"/></filter>
+</defs>
+<rect x="0" y="0" width="2100" height="1240" rx="0" fill="#F8FAFC" stroke="none" stroke-width="1"/>
+<text x="70" y="72" fill="#0F172A" font-size="44" font-weight="700" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">R97 模型图：目标运行时感知的折叠保护</text>
+<text x="70" y="113" fill="#475569" font-size="22" font-weight="400" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">先判断代码真正运行在哪里，再决定每个折叠点需要什么证据，或者是否只能保守阻断。</text>
+<rect x="70" y="148" width="1960" height="88" rx="14" fill="#FFF7ED" stroke="#F59E0B" stroke-width="2"/>
+<text x="98" y="184" fill="#7C2D12" font-size="22" font-weight="700" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">核心问题</text>
+<text x="210" y="184" fill="#7C2D12" font-size="21" font-weight="400" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">反混淆器的求值环境 ≠ 代码真正的目标环境；把求值结果直接折叠，可能改坏目标环境中的程序。</text>
+<text x="98" y="219" fill="#9A3412" font-size="20" font-weight="700" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">结论条件</text>
+<text x="210" y="219" fill="#9A3412" font-size="19" font-weight="400" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">只有外部证据确认的目标，或表达式本身不依赖宿主环境时，才允许折叠。</text>
+<rect x="70" y="270" width="330" height="720" rx="16" fill="#FFFFFF" stroke="#1D4ED8" stroke-width="2" filter="url(#soft-shadow)"/>
+<rect x="70" y="270" width="330" height="70" rx="16" fill="#DBEAFE" stroke="none" stroke-width="1"/>
+<rect x="70" y="326" width="330" height="14" rx="0" fill="#DBEAFE" stroke="none" stroke-width="1"/>
+<text x="92" y="312" fill="#1D4ED8" font-size="25" font-weight="700" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">AST 与绑定解析</text>
+<text x="96" y="380" fill="#475569" font-size="18" font-weight="400" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">输入：代码与折叠点</text>
+<text x="96" y="419" fill="#475569" font-size="18" font-weight="400" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">AST 解析</text>
+<text x="96" y="458" fill="#475569" font-size="18" font-weight="400" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">作用域与遮蔽</text>
+<text x="96" y="497" fill="#475569" font-size="18" font-weight="400" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">别名与赋值状态</text>
+<text x="96" y="536" fill="#475569" font-size="18" font-weight="400" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">局部 / 参数 / 导入</text>
+<text x="96" y="575" fill="#475569" font-size="18" font-weight="400" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">运行时全局</text>
+<line x1="96" y1="680" x2="374" y2="680" stroke="#CBD5E1" stroke-width="1.2"/>
+<text x="96" y="724" fill="#1D4ED8" font-size="19" font-weight="700" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">输出：唯一运行时实体</text>
+<rect x="96" y="810" width="278" height="40" rx="12" fill="#FEE2E2" stroke="#B91C1C" stroke-width="1.5"/>
+<text x="235" y="837" fill="#B91C1C" font-size="16" font-weight="700" text-anchor="middle" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">未解析 / 动态绑定 → 阻断</text>
+<text x="96" y="892" fill="#475569" font-size="17" font-weight="400" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">先判断这个 wx 到底是谁，</text>
+<text x="96" y="919" fill="#475569" font-size="17" font-weight="400" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">再判断它属于哪个平台。</text>
+<rect x="440" y="270" width="350" height="720" rx="16" fill="#FFFFFF" stroke="#334155" stroke-width="2" filter="url(#soft-shadow)"/>
+<rect x="440" y="270" width="350" height="70" rx="16" fill="#E2E8F0" stroke="none" stroke-width="1"/>
+<rect x="440" y="326" width="350" height="14" rx="0" fill="#E2E8F0" stroke="none" stroke-width="1"/>
+<text x="462" y="312" fill="#334155" font-size="25" font-weight="700" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">Target Runtime Resolver</text>
+<text x="466" y="380" fill="#334155" font-size="19" font-weight="700" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">外部证据</text>
+<text x="466" y="418" fill="#475569" font-size="16" font-weight="400" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">来源 / 部署 / 项目结构 / 用户指定</text>
+<text x="466" y="474" fill="#475569" font-size="16" font-weight="400" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">confirmed</text>
+<text x="466" y="510" fill="#475569" font-size="16" font-weight="400" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">外部证据满足全部硬门槛</text>
+<text x="466" y="546" fill="#475569" font-size="16" font-weight="400" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif"></text>
+<text x="466" y="582" fill="#475569" font-size="16" font-weight="400" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">未确认（其余五态）</text>
+<text x="466" y="618" fill="#475569" font-size="16" font-weight="400" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">corroborated / declared /</text>
+<text x="466" y="654" fill="#475569" font-size="16" font-weight="400" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">inferred / conflict / unknown</text>
+<text x="466" y="690" fill="#475569" font-size="16" font-weight="400" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">只扩展候选环境，最多 UNKNOWN</text>
+<line x1="466" y1="850" x2="764" y2="850" stroke="#CBD5E1" stroke-width="1.2"/>
+<text x="466" y="889" fill="#475569" font-size="16" font-weight="400" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">只有 confirmed 才可硬 PROTECT</text>
+<rect x="466" y="925" width="298" height="40" rx="12" fill="#FEF3C7" stroke="#B45309" stroke-width="1.5"/>
+<text x="615" y="952" fill="#B45309" font-size="16" font-weight="700" text-anchor="middle" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">离散状态，不用概率 confidence</text>
+<rect x="830" y="270" width="520" height="720" rx="16" fill="#FFFFFF" stroke="#0F766E" stroke-width="2" filter="url(#soft-shadow)"/>
+<rect x="830" y="270" width="520" height="70" rx="16" fill="#CCFBF1" stroke="none" stroke-width="1"/>
+<rect x="830" y="326" width="520" height="14" rx="0" fill="#CCFBF1" stroke="none" stroke-width="1"/>
+<text x="852" y="312" fill="#0F766E" font-size="25" font-weight="700" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">路线选择</text>
+<rect x="860" y="378" width="460" height="166" rx="14" fill="#CCFBF1" stroke="#0F766E" stroke-width="1.8"/>
+<text x="884" y="420" fill="#0F766E" font-size="22" font-weight="700" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">confirmed target</text>
+<text x="884" y="460" fill="#475569" font-size="17" font-weight="400" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">平台、执行表面与版本已知</text>
+<text x="884" y="492" fill="#475569" font-size="17" font-weight="400" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">检查真实目标证据</text>
+<text x="884" y="524" fill="#475569" font-size="17" font-weight="400" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">真实冲突或缺证据 → 阻断</text>
+<rect x="860" y="578" width="460" height="166" rx="14" fill="#FEF3C7" stroke="#B45309" stroke-width="1.8"/>
+<text x="884" y="620" fill="#B45309" font-size="22" font-weight="700" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">目标未确认</text>
+<text x="884" y="660" fill="#475569" font-size="17" font-weight="400" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">corroborated / declared / inferred</text>
+<text x="884" y="692" fill="#475569" font-size="17" font-weight="400" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">只扩展候选环境</text>
+<text x="884" y="724" fill="#475569" font-size="17" font-weight="400" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">证据不足 → UNKNOWN</text>
+<rect x="860" y="778" width="460" height="166" rx="14" fill="#E2E8F0" stroke="#334155" stroke-width="1.8"/>
+<text x="884" y="820" fill="#334155" font-size="22" font-weight="700" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">conflict / unknown</text>
+<text x="884" y="860" fill="#475569" font-size="17" font-weight="400" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">没有可用目标：只放行纯计算</text>
+<text x="884" y="892" fill="#475569" font-size="17" font-weight="400" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">不默认成 Node，也不任选平台</text>
+<text x="884" y="924" fill="#475569" font-size="17" font-weight="400" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">宿主依赖和动态属性阻断</text>
+<rect x="1390" y="270" width="640" height="720" rx="16" fill="#FFFFFF" stroke="#334155" stroke-width="2" filter="url(#soft-shadow)"/>
+<rect x="1390" y="270" width="640" height="70" rx="16" fill="#E2E8F0" stroke="none" stroke-width="1"/>
+<rect x="1390" y="326" width="640" height="14" rx="0" fill="#E2E8F0" stroke="none" stroke-width="1"/>
+<text x="1412" y="312" fill="#334155" font-size="25" font-weight="700" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">折叠点分类与决策门</text>
+<rect x="1418" y="382" width="584" height="96" rx="13" fill="#DCFCE7" stroke="#15803D" stroke-width="1.6"/>
+<text x="1442" y="420" fill="#0F172A" font-size="18" font-weight="700" text-anchor="start" font-family="Consolas, &quot;Courier New&quot;, monospace">1 + 2</text>
+<text x="1442" y="455" fill="#475569" font-size="18" font-weight="400" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">纯常量计算</text>
+<text x="1978" y="437" fill="#15803D" font-size="19" font-weight="700" text-anchor="end" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">FOLD</text>
+<rect x="1418" y="504" width="584" height="96" rx="13" fill="#DCFCE7" stroke="#15803D" stroke-width="1.6"/>
+<text x="1442" y="542" fill="#0F172A" font-size="18" font-weight="700" text-anchor="start" font-family="Consolas, &quot;Courier New&quot;, monospace">const k = &quot;request&quot;</text>
+<text x="1442" y="577" fill="#475569" font-size="18" font-weight="400" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">已知唯一局部常量</text>
+<text x="1978" y="559" fill="#15803D" font-size="19" font-weight="700" text-anchor="end" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">FOLD</text>
+<rect x="1418" y="626" width="584" height="96" rx="13" fill="#FEF3C7" stroke="#B45309" stroke-width="1.6"/>
+<text x="1442" y="664" fill="#0F172A" font-size="18" font-weight="700" text-anchor="start" font-family="Consolas, &quot;Courier New&quot;, monospace">wx.request(...)</text>
+<text x="1442" y="699" fill="#475569" font-size="18" font-weight="400" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">运行时依赖（required）</text>
+<text x="1978" y="681" fill="#B45309" font-size="19" font-weight="700" text-anchor="end" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">目标未 confirmed → UNKNOWN</text>
+<rect x="1418" y="748" width="584" height="96" rx="13" fill="#FEE2E2" stroke="#B91C1C" stroke-width="1.6"/>
+<text x="1442" y="786" fill="#0F172A" font-size="18" font-weight="700" text-anchor="start" font-family="Consolas, &quot;Courier New&quot;, monospace">foo() / obj[key]</text>
+<text x="1442" y="821" fill="#475569" font-size="18" font-weight="400" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">无法证明纯度和唯一性</text>
+<text x="1978" y="803" fill="#B91C1C" font-size="19" font-weight="700" text-anchor="end" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">PROTECT / UNKNOWN</text>
+<rect x="1418" y="884" width="584" height="74" rx="13" fill="#FFFFFF" stroke="#334155" stroke-width="1.6"/>
+<text x="1450" y="929" fill="#15803D" font-size="19" font-weight="700" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">FOLD → ALLOW_FOLD</text>
+<text x="1740" y="929" fill="#B91C1C" font-size="17" font-weight="700" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">PROTECT / UNKNOWN → BLOCK_FOLD</text>
+<path d="M 400 628 H 440" fill="none" stroke="#1D4ED8" stroke-width="4" marker-end="url(#arrow-blue)"/>
+<path d="M 790 628 H 830" fill="none" stroke="#334155" stroke-width="4" marker-end="url(#arrow-slate)"/>
+<path d="M 1350 628 H 1390" fill="none" stroke="#0F766E" stroke-width="4" marker-end="url(#arrow-slate)"/>
+<rect x="440" y="1030" width="1590" height="120" rx="14" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.6"/>
+<text x="466" y="1072" fill="#334155" font-size="21" font-weight="700" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">证据来源</text>
+<rect x="605" y="1048" width="260" height="40" rx="12" fill="#DBEAFE" stroke="#1D4ED8" stroke-width="1.5"/>
+<text x="735" y="1075" fill="#1D4ED8" font-size="17" font-weight="700" text-anchor="middle" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">E1  语言基线</text>
+<rect x="885" y="1048" width="230" height="40" rx="12" fill="#DBEAFE" stroke="#1D4ED8" stroke-width="1.5"/>
+<text x="1000" y="1075" fill="#1D4ED8" font-size="17" font-weight="700" text-anchor="middle" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">E2  Node</text>
+<rect x="1135" y="1048" width="250" height="40" rx="12" fill="#DBEAFE" stroke="#1D4ED8" stroke-width="1.5"/>
+<text x="1260" y="1075" fill="#1D4ED8" font-size="17" font-weight="700" text-anchor="middle" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">E5  浏览器</text>
+<rect x="1405" y="1048" width="340" height="40" rx="12" fill="#DBEAFE" stroke="#1D4ED8" stroke-width="1.5"/>
+<text x="1575" y="1075" fill="#1D4ED8" font-size="17" font-weight="700" text-anchor="middle" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">E4  微信开发者工具报告</text>
+<text x="1780" y="1074" fill="#475569" font-size="18" font-weight="400" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">只提供可追溯事实；没有证据就阻断。</text>
+<text x="466" y="1124" fill="#64748B" font-size="17" font-weight="400" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">证据必须检查来源、作用域、有效期、冲突和契约覆盖，命中缓存仍要重新进入决策门。</text>
+<rect x="70" y="1030" width="330" height="120" rx="14" fill="#FFFBEB" stroke="#B45309" stroke-width="1.6" stroke-dasharray="8 7"/>
+<text x="96" y="1073" fill="#B45309" font-size="20" font-weight="700" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">实验旁路</text>
+<text x="96" y="1110" fill="#475569" font-size="17" font-weight="400" text-anchor="start" font-family="Consolas, &quot;Courier New&quot;, monospace">缓存 / ML / LLM / 外部基线</text>
+<text x="96" y="1137" fill="#475569" font-size="17" font-weight="400" text-anchor="start" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">只优化顺序和成本，不改变安全结论。</text>
+<text x="1050" y="1200" fill="#64748B" font-size="18" font-weight="400" text-anchor="middle" font-family="Times New Roman, Microsoft YaHei, Noto Sans CJK SC, SimSun, sans-serif">R97 只负责运行时语义兼容性；基础变换仍需检查语法、作用域和求值顺序。</text>
+</svg>

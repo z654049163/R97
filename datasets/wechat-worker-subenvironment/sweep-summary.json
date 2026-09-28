@@ -1,0 +1,95 @@
+{
+  "generatedAt": "2026-09-24T14:38:08.320Z",
+  "port": 9421,
+  "records": [
+    {
+      "project": "wechat_vue",
+      "status": "failed",
+      "error": "verify 退出码 1",
+      "appRoot": "datasets\\worker-miniapp-projects\\wechat_vue",
+      "workerScript": "workers/r97probe/index.js",
+      "isolatedWorker": false,
+      "minimalHostRewritten": false,
+      "rewrittenAppIds": [],
+      "log": "datasets\\wechat-worker-subenvironment\\wechat_vue\\probe.log",
+      "portClosed": false
+    },
+    {
+      "project": "wxmapp.danmu",
+      "status": "failed",
+      "error": "verify 退出码 1",
+      "appRoot": "datasets\\worker-miniapp-projects\\wxmapp.danmu",
+      "workerScript": "res/workers/r97probe/index.js",
+      "isolatedWorker": false,
+      "minimalHostRewritten": false,
+      "rewrittenAppIds": [],
+      "log": "datasets\\wechat-worker-subenvironment\\wxmapp.danmu\\probe.log",
+      "portClosed": false
+    },
+    {
+      "project": "StringArtHelper",
+      "status": "ok",
+      "error": null,
+      "appRoot": "datasets\\worker-miniapp-projects\\StringArtHelper\\wechat-miniprogram",
+      "workerScript": "workers/r97probe/index.js",
+      "isolatedWorker": false,
+      "minimalHostRewritten": false,
+      "rewrittenAppIds": [],
+      "log": "datasets\\wechat-worker-subenvironment\\StringArtHelper\\probe.log",
+      "portClosed": false
+    },
+    {
+      "project": "miniprogram-xiaoxiao-open",
+      "status": "ok",
+      "error": null,
+      "appRoot": "datasets\\worker-miniapp-projects\\miniprogram-xiaoxiao-open",
+      "workerScript": "workers/r97probe/index.js",
+      "isolatedWorker": false,
+      "minimalHostRewritten": false,
+      "rewrittenAppIds": [],
+      "log": "datasets\\wechat-worker-subenvironment\\miniprogram-xiaoxiao-open\\probe.log",
+      "portClosed": false
+    },
+    {
+      "project": "wechat-foundation",
+      "status": "failed",
+      "error": "verify 退出码 1",
+      "appRoot": "datasets\\worker-miniapp-projects\\wechat-foundation\\miniprogram",
+      "workerScript": "workers/r97probe/index.js",
+      "isolatedWorker": false,
+      "minimalHostRewritten": false,
+      "rewrittenAppIds": [],
+      "log": "datasets\\wechat-worker-subenvironment\\wechat-foundation\\probe.log",
+      "portClosed": false
+    },
+    {
+      "project": "qtimer",
+      "status": "ok",
+      "error": null,
+      "appRoot": "datasets\\worker-miniapp-projects\\qtimer",
+      "workerScript": "workers/r97probe/index.js",
+      "isolatedWorker": false,
+      "minimalHostRewritten": false,
+      "rewrittenAppIds": [],
+      "log": "datasets\\wechat-worker-subenvironment\\qtimer\\probe.log",
+      "portClosed": false
+    },
+    {
+      "project": "WeChat-MiniProgram-WebAR",
+      "status": "ok",
+      "error": null,
+      "appRoot": "datasets\\worker-miniapp-projects\\WeChat-MiniProgram-WebAR",
+      "workerScript": "workers/r97probe/index.js",
+      "isolatedWorker": false,
+      "minimalHostRewritten": false,
+      "rewrittenAppIds": [
+        {
+          "file": "project.config.json",
+          "original": "wx9222f90024d17a42"
+        }
+      ],
+      "log": "datasets\\wechat-worker-subenvironment\\WeChat-MiniProgram-WebAR\\probe.log",
+      "portClosed": false
+    }
+  ]
+}

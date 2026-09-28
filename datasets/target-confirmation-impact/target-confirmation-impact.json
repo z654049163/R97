@@ -1,0 +1,82 @@
+{
+  "generatedAt": "2026-09-24T08:16:55.733Z",
+  "corpusPath": "E:\\读论文\\R97\\datasets\\real-miniapp-full\\real-miniapp-candidates.jsonl",
+  "perEntityCap": 5,
+  "sampleCount": 3895,
+  "configurations": {
+    "no_target": {
+      "label": "目标未知",
+      "sampleCount": 3895,
+      "byState": {
+        "FOLD": 1262,
+        "PROTECT": 0,
+        "UNKNOWN": 2633
+      },
+      "byTargetStatus": {
+        "unknown": 3269,
+        "inferred": 626
+      },
+      "foldRate": 0.32400513478819,
+      "unknownRate": 0.67599486521181,
+      "decidableRate": 0.32400513478819
+    },
+    "context_unknown": {
+      "label": "平台族已确认、版本未知",
+      "sampleCount": 3895,
+      "byState": {
+        "FOLD": 1193,
+        "PROTECT": 129,
+        "UNKNOWN": 2573
+      },
+      "byTargetStatus": {
+        "context_unknown": 3843,
+        "unknown": 22,
+        "inferred": 30
+      },
+      "foldRate": 0.3062901155327343,
+      "unknownRate": 0.6605905006418485,
+      "decidableRate": 0.33940949935815146
+    },
+    "confirmed": {
+      "label": "部署指纹齐全、目标已确认",
+      "sampleCount": 3895,
+      "byState": {
+        "FOLD": 1193,
+        "PROTECT": 687,
+        "UNKNOWN": 2015
+      },
+      "byTargetStatus": {
+        "confirmed": 3895
+      },
+      "foldRate": 0.3062901155327343,
+      "unknownRate": 0.5173299101412067,
+      "decidableRate": 0.48267008985879334
+    }
+  },
+  "delta": {
+    "contextUnknownToConfirmed": {
+      "fold": 0,
+      "protect": 558,
+      "unknown": -558,
+      "gapRecovery": {
+        "unknownBefore": 2573,
+        "toFold": 0,
+        "toProtect": 558,
+        "stillUnknown": 2015,
+        "recovered": 558,
+        "rate": 0.21686746987951808
+      },
+      "transitions": {
+        "UNKNOWN_FOLD": 0,
+        "UNKNOWN_PROTECT": 558,
+        "UNKNOWN_UNKNOWN": 2015,
+        "FOLD_FOLD": 1193,
+        "FOLD_PROTECT": 0,
+        "FOLD_UNKNOWN": 0,
+        "PROTECT_PROTECT": 129,
+        "PROTECT_FOLD": 0,
+        "PROTECT_UNKNOWN": 0
+      }
+    }
+  }
+}

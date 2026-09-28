@@ -1,0 +1,28 @@
+{
+  "generatedAt": "2026-09-24T08:09:33.545Z",
+  "runtimeId": "e4-wechat-real",
+  "provenance": "runtime_observed",
+  "corpusPath": "E:\\读论文\\R97\\datasets\\real-miniapp-full\\real-miniapp-candidates.jsonl",
+  "scannedRecordCount": 1200000,
+  "entityCount": 1248,
+  "observedEntityCount": 451,
+  "missingEntityCount": 0,
+  "byType": {
+    "function": 397,
+    "object": 24,
+    "undefined": 3,
+    "number": 15,
+    "symbol": 8,
+    "string": 4
+  },
+  "appServiceReady": true,
+  "readinessAttempts": 2,
+  "sdkVersion": "3.17.3",
+  "platform": "devtools",
+  "projectPath": "E:\\读论文\\R97\\fixtures\\wechat-miniapp",
+  "cliPath": "E:\\微信开发者工具\\cli.bat",
+  "connectionMode": "connect",
+  "wsEndpoint": "ws://127.0.0.1:9420",
+  "reportPath": "E:\\读论文\\R97\\datasets\\wechat-live\\wechat-probe-report.json",
+  "observationsPath": "E:\\读论文\\R97\\datasets\\wechat-live\\wechat-observations.json"
+}

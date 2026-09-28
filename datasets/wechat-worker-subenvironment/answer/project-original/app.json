@@ -1,0 +1,81 @@
+{
+  "lazyCodeLoading": "requiredComponents",
+  "componentPlaceholder": {
+    "your-component-name": "view"
+  },
+  "pages": [
+    "pages/index/index",
+    "pages/search/search",
+    "pages/quiz/quiz",
+    "pages/detail/detail",
+    "pages/calc/calc",
+    "pages/word/word",
+
+    "pages/exam/exam",
+    "pages/algorithm/algorithm",
+
+    "pages/about/about",
+    "pages/process/process",
+
+    "pages/emotion-analysis/emotion-analysis",
+
+    "pages/emotion-history/emotion-history"
+
+  ],
+
+
+
+  "workers": "worker",
+
+  "window": {
+    "navigationBarTitleText": "机器学习问答",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#4b7bec",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "assets/home.png",
+        "selectedIconPath": "assets/home-active.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "搜索",
+        "iconPath": "assets/search.png",
+        "selectedIconPath": "assets/search-active.png"
+      },
+      {
+        "pagePath": "pages/quiz/quiz",
+        "text": "题库",
+        "iconPath": "assets/book.png",
+        "selectedIconPath": "assets/book-active.png"
+      },
+
+      {
+        "pagePath": "pages/about/about",
+        "text": "关于",
+        "iconPath": "assets/bo.png",
+        "selectedIconPath": "assets/bo.png"
+      }
+
+
+    ]
+  },
+
+
+   
+  "usingComponents": {
+    
+
+    
+  },
+
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1230" viewBox="0 0 2400 1230">
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L12,6 L0,12 z" fill="#374151"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L12,6 L0,12 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrowDash" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L12,6 L0,12 z" fill="#7c3aed"/>
+    </marker>
+    <style>
+      .title { font: 700 44px "Times New Roman", SimSun, serif; fill: #111827; letter-spacing: 0; }
+      .subtitle { font: 400 23px "Times New Roman", SimSun, serif; fill: #4b5563; letter-spacing: 0; }
+      .panel-title { font: 700 28px "Times New Roman", SimSun, serif; fill: #111827; letter-spacing: 0; }
+      .group-title { font: 700 25px "Times New Roman", SimSun, serif; fill: #111827; letter-spacing: 0; }
+      .body { font: 400 20px "Times New Roman", SimSun, serif; fill: #1f2937; letter-spacing: 0; }
+      .body-bold { font: 700 20px "Times New Roman", SimSun, serif; fill: #111827; letter-spacing: 0; }
+      .small { font: 400 17px "Times New Roman", SimSun, serif; fill: #4b5563; letter-spacing: 0; }
+      .small-bold { font: 700 17px "Times New Roman", SimSun, serif; fill: #374151; letter-spacing: 0; }
+      .code { font: 400 18px Consolas, "Courier New", monospace; fill: #111827; letter-spacing: 0; }
+      .tag { font: 700 16px "Times New Roman", SimSun, serif; letter-spacing: 0; }
+      .lane-title { font: 700 21px "Times New Roman", SimSun, serif; fill: #111827; letter-spacing: 0; }
+      .lane-sub { font: 400 17px "Times New Roman", SimSun, serif; fill: #4b5563; letter-spacing: 0; }
+      .panel { fill: #ffffff; stroke: #9ca3af; stroke-width: 2; }
+      .soft { fill: #f8fafc; stroke: #cbd5e1; stroke-width: 2; }
+      .blue { fill: #eff6ff; stroke: #2563eb; stroke-width: 2; }
+      .teal { fill: #f0fdfa; stroke: #0f766e; stroke-width: 2; }
+      .amber { fill: #fffbeb; stroke: #d97706; stroke-width: 2; }
+      .red { fill: #fef2f2; stroke: #dc2626; stroke-width: 2; }
+      .violet { fill: #f5f3ff; stroke: #7c3aed; stroke-width: 2; stroke-dasharray: 8 7; }
+      .connector { fill: none; stroke: #374151; stroke-width: 3; marker-end: url(#arrow); }
+      .connector-blue { fill: none; stroke: #2563eb; stroke-width: 3; marker-end: url(#arrowBlue); }
+      .connector-dash { fill: none; stroke: #7c3aed; stroke-width: 3; stroke-dasharray: 9 7; marker-end: url(#arrowDash); }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="2400" height="1230" fill="#ffffff"/>
+
+  <text x="80" y="72" class="title">R97: Runtime-Aware Semantic Protection for JavaScript Deobfuscation</text>
+  <text x="82" y="110" class="subtitle">A contract-and-evidence guard that decides whether a concrete API use can be safely folded or simplified.</text>
+
+  <!-- Input -->
+  <rect x="72" y="326" width="258" height="286" rx="4" class="soft"/>
+  <text x="201" y="365" text-anchor="middle" class="panel-title">Source JavaScript</text>
+  <text x="201" y="398" text-anchor="middle" class="small">obfuscated mini-program code</text>
+  <rect x="90" y="424" width="222" height="142" rx="3" fill="#111827"/>
+  <text x="104" y="458" class="code" style="fill:#e5e7eb">wx.request({ ... });</text>
+  <text x="104" y="490" class="code" style="fill:#e5e7eb">process.env.NODE_ENV;</text>
+  <text x="104" y="522" class="code" style="fill:#e5e7eb">document.cookie;</text>
+  <text x="104" y="554" class="code" style="fill:#e5e7eb">Math.max(a, b);</text>
+
+  <!-- Analyzer -->
+  <rect x="390" y="270" width="338" height="398" rx="4" class="blue"/>
+  <text x="559" y="315" text-anchor="middle" class="panel-title">1. Static Analyzer</text>
+  <text x="559" y="346" text-anchor="middle" class="small">resolve names before reasoning about APIs</text>
+  <line x1="414" y1="366" x2="704" y2="366" stroke="#bfdbfe" stroke-width="2"/>
+  <rect x="420" y="392" width="278" height="72" rx="3" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+  <text x="559" y="422" text-anchor="middle" class="body-bold">BindingRef</text>
+  <text x="559" y="446" text-anchor="middle" class="small">resolved / unresolved / dynamic</text>
+  <rect x="420" y="482" width="278" height="72" rx="3" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+  <text x="559" y="512" text-anchor="middle" class="body-bold">RuntimeEntity</text>
+  <text x="559" y="536" text-anchor="middle" class="small">stable normalized path</text>
+  <rect x="420" y="572" width="278" height="72" rx="3" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+  <text x="559" y="602" text-anchor="middle" class="body-bold">UsageContext</text>
+  <text x="559" y="626" text-anchor="middle" class="small">access, callback, return, async</text>
+
+  <!-- Contract -->
+  <rect x="778" y="246" width="342" height="446" rx="4" class="teal"/>
+  <text x="949" y="292" text-anchor="middle" class="panel-title">2. Semantic Contract</text>
+  <text x="949" y="324" text-anchor="middle" class="small">compare only what this transformation needs</text>
+  <line x1="802" y1="346" x2="1096" y2="346" stroke="#99f6e4" stroke-width="2"/>
+  <rect x="808" y="372" width="282" height="100" rx="3" fill="#ffffff" stroke="#5eead4" stroke-width="2"/>
+  <text x="949" y="404" text-anchor="middle" class="small-bold">Transformation kind</text>
+  <text x="949" y="432" text-anchor="middle" class="body">CONST_EVAL  CALL_EVAL</text>
+  <text x="949" y="458" text-anchor="middle" class="body">BRANCH_PRUNE</text>
+  <rect x="808" y="488" width="282" height="132" rx="3" fill="#ffffff" stroke="#5eead4" stroke-width="2"/>
+  <text x="949" y="520" text-anchor="middle" class="small-bold">Required dimensions</text>
+  <rect x="828" y="538" width="242" height="31" rx="15.5" fill="#ccfbf1"/>
+  <text x="949" y="560" text-anchor="middle" class="tag" fill="#115e59">existence  |  type  |  callability</text>
+  <text x="949" y="594" text-anchor="middle" class="small">callback, return value and async behavior</text>
+  <text x="949" y="614" text-anchor="middle" class="small">are added only when used by the program point</text>
+
+  <!-- Evidence panel -->
+  <rect x="1186" y="186" width="736" height="592" rx="4" class="panel"/>
+  <text x="1554" y="232" text-anchor="middle" class="panel-title">3. Runtime Evidence</text>
+  <text x="1554" y="263" text-anchor="middle" class="small">safe probes observe names, not business behavior</text>
+  <line x1="1210" y1="284" x2="1898" y2="284" stroke="#d1d5db" stroke-width="2"/>
+
+  <!-- Evidence lanes -->
+  <rect x="1212" y="306" width="684" height="82" rx="3" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+  <circle cx="1244" cy="347" r="17" fill="#2563eb"/>
+  <text x="1244" y="354" text-anchor="middle" class="tag" fill="#ffffff">E1</text>
+  <text x="1276" y="338" class="lane-title">ECMAScript Baseline</text>
+  <text x="1276" y="365" class="lane-sub">language built-ins only: Math, JSON, Array, Object, RegExp</text>
+  <rect x="1763" y="329" width="110" height="34" rx="17" fill="#dbeafe"/>
+  <text x="1818" y="352" text-anchor="middle" class="tag" fill="#1d4ed8">language</text>
+
+  <rect x="1212" y="404" width="684" height="82" rx="3" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <circle cx="1244" cy="445" r="17" fill="#16a34a"/>
+  <text x="1244" y="452" text-anchor="middle" class="tag" fill="#ffffff">E2</text>
+  <text x="1276" y="436" class="lane-title">Node Runtime</text>
+  <text x="1276" y="463" class="lane-sub">server host surface: process, Buffer, require, module</text>
+  <rect x="1763" y="427" width="110" height="34" rx="17" fill="#dcfce7"/>
+  <text x="1818" y="450" text-anchor="middle" class="tag" fill="#15803d">v24.21.0</text>
+
+  <rect x="1212" y="502" width="684" height="82" rx="3" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+  <circle cx="1244" cy="543" r="17" fill="#ea580c"/>
+  <text x="1244" y="550" text-anchor="middle" class="tag" fill="#ffffff">E5</text>
+  <text x="1276" y="534" class="lane-title">Browser Runtime</text>
+  <text x="1276" y="561" class="lane-sub">web host surface: window, document, location, localStorage</text>
+  <rect x="1763" y="525" width="110" height="34" rx="17" fill="#ffedd5"/>
+  <text x="1818" y="548" text-anchor="middle" class="tag" fill="#c2410c">Edge 150</text>
+
+  <rect x="1212" y="600" width="684" height="82" rx="3" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+  <circle cx="1244" cy="641" r="17" fill="#dc2626"/>
+  <text x="1244" y="648" text-anchor="middle" class="tag" fill="#ffffff">E4</text>
+  <text x="1276" y="632" class="lane-title">WeChat AppService</text>
+  <text x="1276" y="659" class="lane-sub">real mini-program host surface: wx, App, Page, Component</text>
+  <rect x="1763" y="623" width="110" height="34" rx="17" fill="#fee2e2"/>
+  <text x="1818" y="646" text-anchor="middle" class="tag" fill="#b91c1c">SDK 3.17.3</text>
+
+  <!-- Evidence record -->
+  <rect x="1336" y="704" width="436" height="55" rx="3" fill="#f3f4f6" stroke="#6b7280" stroke-width="2"/>
+  <text x="1554" y="726" text-anchor="middle" class="small-bold">Versioned EvidenceRecord</text>
+  <text x="1554" y="747" text-anchor="middle" class="small">runtime + observation + validity + provenance</text>
+  <path d="M1554,682 L1554,704" class="connector"/>
+
+  <!-- Decision panel -->
+  <rect x="1968" y="236" width="362" height="542" rx="4" class="amber"/>
+  <text x="2149" y="282" text-anchor="middle" class="panel-title">4. Decision Guard</text>
+  <text x="2149" y="314" text-anchor="middle" class="small">evidence is necessary, never optional</text>
+  <line x1="1994" y1="336" x2="2304" y2="336" stroke="#fcd34d" stroke-width="2"/>
+  <rect x="1994" y="360" width="310" height="82" rx="3" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="2149" y="389" text-anchor="middle" class="body-bold">Host coverage check</text>
+  <text x="2149" y="416" text-anchor="middle" class="small">wx.* needs WeChat; process needs Node;</text>
+  <text x="2149" y="435" text-anchor="middle" class="small">document needs Browser</text>
+  <rect x="1994" y="458" width="310" height="118" rx="3" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="2149" y="488" text-anchor="middle" class="body-bold">Contract comparison</text>
+  <text x="2149" y="517" text-anchor="middle" class="small">missing or conflicting evidence</text>
+  <text x="2149" y="540" text-anchor="middle" class="small">observed semantic mismatch</text>
+  <text x="2149" y="563" text-anchor="middle" class="small">complete matching evidence</text>
+  <rect x="1994" y="592" width="310" height="152" rx="3" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="2149" y="621" text-anchor="middle" class="body-bold">Conservative order</text>
+  <rect x="2020" y="639" width="258" height="28" rx="14" fill="#fee2e2"/>
+  <text x="2149" y="660" text-anchor="middle" class="tag" fill="#b91c1c">PROTECT  &gt;  UNKNOWN  &gt;  FOLD</text>
+  <text x="2149" y="693" text-anchor="middle" class="small">Unknown and missing evidence block folding.</text>
+  <text x="2149" y="718" text-anchor="middle" class="small">Only a complete FOLD authorizes simplification.</text>
+
+  <!-- Flow connectors -->
+  <path d="M330,470 L390,470" class="connector"/>
+  <path d="M728,470 L778,470" class="connector"/>
+  <path d="M1120,222 L1120,158 L2149,158 L2149,236" class="connector-blue"/>
+  <text x="1635" y="143" text-anchor="middle" class="small-bold" fill="#1d4ed8">required semantic dimensions</text>
+  <path d="M1772,731 L1968,731" class="connector"/>
+  <text x="1868" y="716" text-anchor="middle" class="small-bold">observations</text>
+
+  <!-- Outcome -->
+  <rect x="1994" y="788" width="310" height="142" rx="4" fill="#ffffff" stroke="#374151" stroke-width="2"/>
+  <text x="2149" y="819" text-anchor="middle" class="body-bold">Output to simplifier</text>
+  <rect x="2018" y="838" width="262" height="35" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="2149" y="862" text-anchor="middle" class="tag" fill="#166534">FOLD: allow simplification</text>
+  <rect x="2018" y="882" width="262" height="35" rx="4" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="2149" y="906" text-anchor="middle" class="tag" fill="#991b1b">PROTECT / UNKNOWN: block</text>
+
+  <!-- Side path -->
+  <rect x="1190" y="1010" width="732" height="168" rx="4" class="violet"/>
+  <text x="1556" y="1054" text-anchor="middle" class="group-title">Side path: Probe Priority</text>
+  <text x="1556" y="1086" text-anchor="middle" class="small">frequency + missing host + probe cost</text>
+  <rect x="1230" y="1108" width="194" height="44" rx="3" fill="#ffffff" stroke="#a78bfa" stroke-width="2"/>
+  <text x="1327" y="1136" text-anchor="middle" class="small-bold">statistical ranking</text>
+  <rect x="1458" y="1108" width="194" height="44" rx="3" fill="#ffffff" stroke="#a78bfa" stroke-width="2"/>
+  <text x="1555" y="1136" text-anchor="middle" class="small-bold">optional ML ranking</text>
+  <rect x="1686" y="1108" width="194" height="44" rx="3" fill="#ffffff" stroke="#a78bfa" stroke-width="2"/>
+  <text x="1783" y="1136" text-anchor="middle" class="small-bold">probe order only</text>
+  <path d="M1922,1094 L1790,1094 L1790,778" class="connector-dash"/>
+  <text x="2060" y="1078" class="small-bold" fill="#6d28d9">cannot authorize FOLD</text>
+
+  <!-- Invariant -->
+  <rect x="72" y="1010" width="1046" height="168" rx="4" class="soft"/>
+  <text x="595" y="1057" text-anchor="middle" class="group-title">Global invariant</text>
+  <text x="595" y="1095" text-anchor="middle" class="body">A fold is valid only when every required runtime has complete, valid and matching evidence.</text>
+  <rect x="112" y="1120" width="966" height="38" rx="4" fill="#111827"/>
+  <text x="595" y="1147" text-anchor="middle" class="tag" fill="#f9fafb">FOLD is a proof of compatibility for this program point, not a global API-name verdict.</text>
+</svg>

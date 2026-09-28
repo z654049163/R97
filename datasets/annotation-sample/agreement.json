@@ -1,0 +1,15 @@
+{
+  "generatedAt": "2026-09-24T15:47:54.205Z",
+  "labelsPath": "datasets\\annotation-sample\\labels.tsv",
+  "totalRows": 500,
+  "labeledBoth": 0,
+  "unlabeled": 500,
+  "agreementCount": 0,
+  "conflictCount": 0,
+  "adjudicatedConflictCount": 0,
+  "agreementRate": null,
+  "expectedAgreement": null,
+  "cohenKappa": null,
+  "byLabel": [],
+  "conflicts": []
+}

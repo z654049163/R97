@@ -1,0 +1,859 @@
+{
+  "generatedAt": "2026-09-24T08:10:23.910Z",
+  "corpusPath": "E:\\读论文\\R97\\datasets\\real-miniapp-full\\real-miniapp-candidates.jsonl",
+  "wechatReportPaths": [
+    "E:\\读论文\\R97\\datasets\\wechat-live\\wechat-probe-report.json",
+    "E:\\读论文\\R97\\datasets\\wechat-repeat-validation\\wechat-probe-report.json"
+  ],
+  "config": {
+    "nodeRepeatCount": 20,
+    "edgeRepeatCount": 5,
+    "frequentThreshold": 100
+  },
+  "corpus": {
+    "recordCount": 1200000,
+    "entityCount": 1248,
+    "projectCount": 1519
+  },
+  "repeatability": {
+    "node": {
+      "available": true,
+      "repeatCount": 20,
+      "uniqueSnapshotCount": 1,
+      "stable": true
+    },
+    "edge": {
+      "available": true,
+      "repeatCount": 5,
+      "uniqueSnapshotCount": 1,
+      "stable": true
+    },
+    "wechat": {
+      "available": true,
+      "commonEntityCount": 1227,
+      "differentObservationCount": 0,
+      "examples": []
+    }
+  },
+  "crossRuntime": {
+    "commonEntityCount": 1238,
+    "differentObservationCount": 186
+  },
+  "frequent": {
+    "entityCount": 240,
+    "differentialEntityCount": 25,
+    "differentialRate": 0.10416666666666667,
+    "examples": [
+      {
+        "entityId": "Object.defineProperty",
+        "occurrences": 217346,
+        "projectCount": 1510,
+        "nodeObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "wechatObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "differential": false
+      },
+      {
+        "entityId": "Date.prototype",
+        "occurrences": 130086,
+        "projectCount": 1498,
+        "nodeObservation": {
+          "existence": true,
+          "type": "object",
+          "callability": false
+        },
+        "wechatObservation": {
+          "existence": true,
+          "type": "object",
+          "callability": false
+        },
+        "differential": false
+      },
+      {
+        "entityId": "wh.rv",
+        "occurrences": 109452,
+        "projectCount": 1496,
+        "nodeObservation": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "wechatObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "differential": true
+      },
+      {
+        "entityId": "Array.prototype",
+        "occurrences": 63556,
+        "projectCount": 1501,
+        "nodeObservation": {
+          "existence": true,
+          "type": "object",
+          "callability": false
+        },
+        "wechatObservation": {
+          "existence": true,
+          "type": "object",
+          "callability": false
+        },
+        "differential": false
+      },
+      {
+        "entityId": "String.prototype",
+        "occurrences": 59848,
+        "projectCount": 1497,
+        "nodeObservation": {
+          "existence": true,
+          "type": "object",
+          "callability": false
+        },
+        "wechatObservation": {
+          "existence": true,
+          "type": "object",
+          "callability": false
+        },
+        "differential": false
+      },
+      {
+        "entityId": "$gwx",
+        "occurrences": 49545,
+        "projectCount": 1352,
+        "nodeObservation": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "wechatObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "differential": true
+      },
+      {
+        "entityId": "wh.hn",
+        "occurrences": 44950,
+        "projectCount": 1496,
+        "nodeObservation": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "wechatObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "differential": true
+      },
+      {
+        "entityId": "undefined",
+        "occurrences": 43102,
+        "projectCount": 1497,
+        "nodeObservation": {
+          "existence": true,
+          "type": "undefined",
+          "callability": false
+        },
+        "wechatObservation": {
+          "existence": true,
+          "type": "undefined",
+          "callability": false
+        },
+        "differential": false
+      },
+      {
+        "entityId": "Math",
+        "occurrences": 39004,
+        "projectCount": 1498,
+        "nodeObservation": {
+          "existence": true,
+          "type": "object",
+          "callability": false
+        },
+        "wechatObservation": {
+          "existence": true,
+          "type": "object",
+          "callability": false
+        },
+        "differential": false
+      },
+      {
+        "entityId": "wh.nh",
+        "occurrences": 38923,
+        "projectCount": 1496,
+        "nodeObservation": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "wechatObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "differential": true
+      },
+      {
+        "entityId": "Number.prototype",
+        "occurrences": 19448,
+        "projectCount": 1496,
+        "nodeObservation": {
+          "existence": true,
+          "type": "object",
+          "callability": false
+        },
+        "wechatObservation": {
+          "existence": true,
+          "type": "object",
+          "callability": false
+        },
+        "differential": false
+      },
+      {
+        "entityId": "RegExp.prototype",
+        "occurrences": 17940,
+        "projectCount": 1495,
+        "nodeObservation": {
+          "existence": true,
+          "type": "object",
+          "callability": false
+        },
+        "wechatObservation": {
+          "existence": true,
+          "type": "object",
+          "callability": false
+        },
+        "differential": false
+      },
+      {
+        "entityId": "JSON.stringify",
+        "occurrences": 12114,
+        "projectCount": 1503,
+        "nodeObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "wechatObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "differential": false
+      },
+      {
+        "entityId": "grb",
+        "occurrences": 11944,
+        "projectCount": 1496,
+        "nodeObservation": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "wechatObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "differential": true
+      },
+      {
+        "entityId": "Date",
+        "occurrences": 10909,
+        "projectCount": 1506,
+        "nodeObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "wechatObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "differential": false
+      },
+      {
+        "entityId": "Boolean.prototype",
+        "occurrences": 7497,
+        "projectCount": 1496,
+        "nodeObservation": {
+          "existence": true,
+          "type": "object",
+          "callability": false
+        },
+        "wechatObservation": {
+          "existence": true,
+          "type": "object",
+          "callability": false
+        },
+        "differential": false
+      },
+      {
+        "entityId": "Number",
+        "occurrences": 6305,
+        "projectCount": 1503,
+        "nodeObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "wechatObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "differential": false
+      },
+      {
+        "entityId": "RegExp",
+        "occurrences": 6061,
+        "projectCount": 1500,
+        "nodeObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "wechatObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "differential": false
+      },
+      {
+        "entityId": "gra",
+        "occurrences": 5976,
+        "projectCount": 1496,
+        "nodeObservation": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "wechatObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "differential": true
+      },
+      {
+        "entityId": "console.warn",
+        "occurrences": 5461,
+        "projectCount": 1364,
+        "nodeObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "wechatObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "differential": false
+      },
+      {
+        "entityId": "console.log",
+        "occurrences": 5153,
+        "projectCount": 1371,
+        "nodeObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "wechatObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "differential": false
+      },
+      {
+        "entityId": "Object.prototype",
+        "occurrences": 5029,
+        "projectCount": 1508,
+        "nodeObservation": {
+          "existence": true,
+          "type": "object",
+          "callability": false
+        },
+        "wechatObservation": {
+          "existence": true,
+          "type": "object",
+          "callability": false
+        },
+        "differential": false
+      },
+      {
+        "entityId": "define",
+        "occurrences": 4772,
+        "projectCount": 831,
+        "nodeObservation": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "wechatObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "differential": true
+      },
+      {
+        "entityId": "Array.prototype.slice",
+        "occurrences": 4525,
+        "projectCount": 1497,
+        "nodeObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "wechatObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "differential": false
+      },
+      {
+        "entityId": "nt_0",
+        "occurrences": 3234,
+        "projectCount": 363,
+        "nodeObservation": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "wechatObservation": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "differential": false
+      },
+      {
+        "entityId": "Array.prototype.slice.call",
+        "occurrences": 3054,
+        "projectCount": 1496,
+        "nodeObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "wechatObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "differential": false
+      },
+      {
+        "entityId": "$gwn",
+        "occurrences": 3006,
+        "projectCount": 1496,
+        "nodeObservation": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "wechatObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "differential": true
+      },
+      {
+        "entityId": "snap_bb",
+        "occurrences": 2992,
+        "projectCount": 1496,
+        "nodeObservation": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "wechatObservation": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "differential": false
+      },
+      {
+        "entityId": "Object",
+        "occurrences": 2967,
+        "projectCount": 1503,
+        "nodeObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "wechatObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "differential": false
+      },
+      {
+        "entityId": "console.error",
+        "occurrences": 2951,
+        "projectCount": 1354,
+        "nodeObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "wechatObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "differential": false
+      }
+    ],
+    "differentialExamples": [
+      {
+        "entityId": "wh.rv",
+        "occurrences": 109452,
+        "projectCount": 1496,
+        "nodeObservation": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "wechatObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "differential": true
+      },
+      {
+        "entityId": "$gwx",
+        "occurrences": 49545,
+        "projectCount": 1352,
+        "nodeObservation": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "wechatObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "differential": true
+      },
+      {
+        "entityId": "wh.hn",
+        "occurrences": 44950,
+        "projectCount": 1496,
+        "nodeObservation": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "wechatObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "differential": true
+      },
+      {
+        "entityId": "wh.nh",
+        "occurrences": 38923,
+        "projectCount": 1496,
+        "nodeObservation": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "wechatObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "differential": true
+      },
+      {
+        "entityId": "grb",
+        "occurrences": 11944,
+        "projectCount": 1496,
+        "nodeObservation": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "wechatObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "differential": true
+      },
+      {
+        "entityId": "gra",
+        "occurrences": 5976,
+        "projectCount": 1496,
+        "nodeObservation": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "wechatObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "differential": true
+      },
+      {
+        "entityId": "define",
+        "occurrences": 4772,
+        "projectCount": 831,
+        "nodeObservation": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "wechatObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "differential": true
+      },
+      {
+        "entityId": "$gwn",
+        "occurrences": 3006,
+        "projectCount": 1496,
+        "nodeObservation": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "wechatObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "differential": true
+      },
+      {
+        "entityId": "$gwl",
+        "occurrences": 1510,
+        "projectCount": 1496,
+        "nodeObservation": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "wechatObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "differential": true
+      },
+      {
+        "entityId": "wh",
+        "occurrences": 1505,
+        "projectCount": 1496,
+        "nodeObservation": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "wechatObservation": {
+          "existence": true,
+          "type": "object",
+          "callability": false
+        },
+        "differential": true
+      },
+      {
+        "entityId": "Page",
+        "occurrences": 354,
+        "projectCount": 132,
+        "nodeObservation": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "wechatObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "differential": true
+      },
+      {
+        "entityId": "wx.showToast",
+        "occurrences": 353,
+        "projectCount": 93,
+        "nodeObservation": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "wechatObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "differential": true
+      },
+      {
+        "entityId": "wx.getStorageSync",
+        "occurrences": 317,
+        "projectCount": 111,
+        "nodeObservation": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "wechatObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "differential": true
+      },
+      {
+        "entityId": "wx.request",
+        "occurrences": 287,
+        "projectCount": 110,
+        "nodeObservation": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "wechatObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "differential": true
+      },
+      {
+        "entityId": "getApp",
+        "occurrences": 253,
+        "projectCount": 123,
+        "nodeObservation": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "wechatObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "differential": true
+      },
+      {
+        "entityId": "wx.setStorageSync",
+        "occurrences": 213,
+        "projectCount": 91,
+        "nodeObservation": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "wechatObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "differential": true
+      },
+      {
+        "entityId": "Math.nv_max",
+        "occurrences": 206,
+        "projectCount": 66,
+        "nodeObservation": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "wechatObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "differential": true
+      },
+      {
+        "entityId": "wx.hideLoading",
+        "occurrences": 188,
+        "projectCount": 51,
+        "nodeObservation": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "wechatObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "differential": true
+      },
+      {
+        "entityId": "Math.nv_abs",
+        "occurrences": 185,
+        "projectCount": 78,
+        "nodeObservation": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "wechatObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "differential": true
+      },
+      {
+        "entityId": "App",
+        "occurrences": 162,
+        "projectCount": 156,
+        "nodeObservation": {
+          "existence": false,
+          "type": "undefined",
+          "callability": false
+        },
+        "wechatObservation": {
+          "existence": true,
+          "type": "function",
+          "callability": true
+        },
+        "differential": true
+      }
+    ]
+  },
+  "decision": {
+    "safeStaticResolutionCache": true,
+    "safeRuntimeObservationCache": true,
+    "safeApiNameOnlyCache": false,
+    "frequencyCanGrantFold": false,
+    "frequencyCanAdmitCache": true,
+    "reason": "同一微信 SDK 与同一运行时指纹下重复观测差异数为 0；但高频实体中仍有 25 个存在 Node-微信差异，因此缓存键必须包含目标运行时，频率不能变成安全结论。"
+  }
+}

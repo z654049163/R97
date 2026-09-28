@@ -1,0 +1,1203 @@
+{
+  "generatedAt": "2026-09-24T07:57:05.864Z",
+  "environment": {
+    "node": "v24.21.0",
+    "targetRuntimeIds": [
+      "e1-ecmascript",
+      "e2-node-24.21.0",
+      "e5-edge-headless"
+    ],
+    "evaluatorRuntimeId": "e1-ecmascript",
+    "legacySource": "E:\\复现\\JSIMPLIFIER\\jsimplifier_dataset\\jsimplifier\\data\\pra-rule-map.json",
+    "legacySymbolCount": 147,
+    "corpusPath": "E:\\读论文\\R97\\datasets\\external-browser-wpt\\real-miniapp-candidates.jsonl",
+    "wechatReportPath": null
+  },
+  "synthetic": {
+    "caseCount": 16,
+    "evidenceAvailability": {
+      "language": true,
+      "node": true,
+      "wechat": false,
+      "browser": true
+    },
+    "results": [
+      {
+        "caseId": "safe-object-keys",
+        "category": "language",
+        "source": "Object.keys({ value: 1 });",
+        "expected": "FOLD",
+        "rationale": "ECMAScript 内建对象在语言基线和 Node 中语义一致",
+        "entityId": "Object.keys",
+        "actualStates": [
+          "FOLD"
+        ],
+        "action": "ALLOW_FOLD",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ],
+        "correct": true
+      },
+      {
+        "caseId": "safe-array-is-array",
+        "category": "language",
+        "source": "Array.isArray([]);",
+        "expected": "FOLD",
+        "rationale": "标准语言 API 在评估运行时和目标运行时一致",
+        "entityId": "Array.isArray",
+        "actualStates": [
+          "FOLD"
+        ],
+        "action": "ALLOW_FOLD",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ],
+        "correct": true
+      },
+      {
+        "caseId": "safe-json-parse",
+        "category": "language",
+        "source": "JSON.parse('{\"value\":1}');",
+        "expected": "FOLD",
+        "rationale": "标准语言 API 在评估运行时和目标运行时一致",
+        "entityId": "JSON.parse",
+        "actualStates": [
+          "FOLD"
+        ],
+        "action": "ALLOW_FOLD",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ],
+        "correct": true
+      },
+      {
+        "caseId": "safe-math-max",
+        "category": "language",
+        "source": "Math.max(1, 2, 3);",
+        "expected": "FOLD",
+        "rationale": "标准语言 API 在评估运行时和目标运行时一致",
+        "entityId": "Math.max",
+        "actualStates": [
+          "FOLD"
+        ],
+        "action": "ALLOW_FOLD",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ],
+        "correct": true
+      },
+      {
+        "caseId": "unsafe-process-version",
+        "category": "node",
+        "source": "process.version;",
+        "expected": "PROTECT",
+        "rationale": "Node 宿主实体在语言基线中不存在",
+        "entityId": "process.version",
+        "actualStates": [
+          "PROTECT"
+        ],
+        "action": "BLOCK_FOLD",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ],
+        "correct": true
+      },
+      {
+        "caseId": "unsafe-node-buffer",
+        "category": "node",
+        "source": "Buffer.from('abc');",
+        "expected": "PROTECT",
+        "rationale": "Buffer 是 Node 宿主实体，不能跨语言基线折叠",
+        "entityId": "Buffer.from",
+        "actualStates": [
+          "PROTECT"
+        ],
+        "action": "BLOCK_FOLD",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ],
+        "correct": true
+      },
+      {
+        "caseId": "unsafe-browser-window",
+        "category": "browser",
+        "source": "window.document;",
+        "expected": "PROTECT",
+        "rationale": "缺少真实浏览器证据时只能阻断，不能把缺失证据写成安全",
+        "entityId": "window.document",
+        "actualStates": [
+          "PROTECT"
+        ],
+        "action": "BLOCK_FOLD",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ],
+        "correct": true
+      },
+      {
+        "caseId": "unsafe-browser-document",
+        "category": "browser",
+        "source": "document.createElement('div');",
+        "expected": "PROTECT",
+        "rationale": "缺少真实浏览器证据时只能阻断，不能把缺失证据写成安全",
+        "entityId": "document.createElement",
+        "actualStates": [
+          "PROTECT"
+        ],
+        "action": "BLOCK_FOLD",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ],
+        "correct": true
+      },
+      {
+        "caseId": "unsafe-browser-storage",
+        "category": "browser",
+        "source": "localStorage.getItem('key');",
+        "expected": "PROTECT",
+        "rationale": "缺少真实浏览器证据时只能阻断，不能把缺失证据写成安全",
+        "entityId": "localStorage.getItem",
+        "actualStates": [
+          "PROTECT"
+        ],
+        "action": "BLOCK_FOLD",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ],
+        "correct": true
+      },
+      {
+        "caseId": "unsafe-wechat-request",
+        "category": "miniapp",
+        "source": "wx.request({ url: 'https://example.invalid' });",
+        "expected": "UNKNOWN",
+        "rationale": "缺少真实微信证据时只能阻断，不能把缺失证据写成安全",
+        "entityId": "wx.request",
+        "actualStates": [
+          "UNKNOWN"
+        ],
+        "action": "BLOCK_FOLD",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "EVIDENCE_MISSING"
+        ],
+        "correct": true
+      },
+      {
+        "caseId": "unsafe-wechat-get-app",
+        "category": "miniapp",
+        "source": "getApp();",
+        "expected": "UNKNOWN",
+        "rationale": "缺少真实微信证据时只能阻断，不能把缺失证据写成安全",
+        "entityId": "getApp",
+        "actualStates": [
+          "UNKNOWN"
+        ],
+        "action": "BLOCK_FOLD",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "EVIDENCE_MISSING"
+        ],
+        "correct": true
+      },
+      {
+        "caseId": "unsafe-wechat-page",
+        "category": "miniapp",
+        "source": "Page({});",
+        "expected": "UNKNOWN",
+        "rationale": "缺少真实微信证据时只能阻断，不能把缺失证据写成安全",
+        "entityId": "Page",
+        "actualStates": [
+          "UNKNOWN"
+        ],
+        "action": "BLOCK_FOLD",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "EVIDENCE_MISSING"
+        ],
+        "correct": true
+      },
+      {
+        "caseId": "unsafe-timing-set-timeout",
+        "category": "host_global",
+        "source": "setTimeout(function () {}, 0);",
+        "expected": "PROTECT",
+        "rationale": "定时器不是 ECMAScript 语言内建对象",
+        "entityId": "setTimeout",
+        "actualStates": [
+          "PROTECT"
+        ],
+        "action": "BLOCK_FOLD",
+        "reasonCodes": [
+          "CONTRACT_COVERAGE_MISSING",
+          "CONTRACT_MISMATCH"
+        ],
+        "correct": true
+      },
+      {
+        "caseId": "unsafe-host-fetch",
+        "category": "host_global",
+        "source": "fetch('https://example.invalid');",
+        "expected": "PROTECT",
+        "rationale": "fetch 不是 ECMAScript 语言内建对象",
+        "entityId": "fetch",
+        "actualStates": [
+          "PROTECT"
+        ],
+        "action": "BLOCK_FOLD",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ],
+        "correct": true
+      },
+      {
+        "caseId": "unknown-unresolved-global",
+        "category": "unknown",
+        "source": "foo.bar();",
+        "expected": "UNKNOWN",
+        "rationale": "无法确认 foo 的来源，不能把未知实体当作安全",
+        "entityId": "foo.bar",
+        "actualStates": [
+          "UNKNOWN"
+        ],
+        "action": "BLOCK_FOLD",
+        "reasonCodes": [
+          "BINDING_UNRESOLVED"
+        ],
+        "correct": true
+      },
+      {
+        "caseId": "unknown-dynamic-property",
+        "category": "unknown",
+        "source": "globalThis[key]();",
+        "expected": "UNKNOWN",
+        "rationale": "动态属性访问无法建立稳定的运行时实体",
+        "entityId": "globalThis",
+        "actualStates": [
+          "UNKNOWN"
+        ],
+        "action": "BLOCK_FOLD",
+        "reasonCodes": [
+          "BINDING_UNRESOLVED"
+        ],
+        "correct": true
+      }
+    ],
+    "metrics": {
+      "A0-aggressive-fold": {
+        "total": 16,
+        "allowedFold": 16,
+        "blockedFold": 0,
+        "unsafeFold": 12,
+        "unsafeFoldMeasured": 0,
+        "usefulFold": 4,
+        "overProtection": 0,
+        "unknown": 0,
+        "correctState": 4,
+        "foldRate": 1,
+        "unknownRate": 0,
+        "decidableRate": 1,
+        "unsafeFoldMeasuredRate": 0,
+        "exactStateAccuracy": 0.25,
+        "safeFoldCoverage": 1,
+        "overProtectionRate": 0,
+        "unsafeFoldRate": 1,
+        "blockedNonFoldRate": 0
+      },
+      "A1-legacy-blacklist": {
+        "total": 16,
+        "allowedFold": 5,
+        "blockedFold": 11,
+        "unsafeFold": 1,
+        "unsafeFoldMeasured": 0,
+        "usefulFold": 4,
+        "overProtection": 0,
+        "unknown": 0,
+        "correctState": 11,
+        "foldRate": 0.3125,
+        "unknownRate": 0,
+        "decidableRate": 1,
+        "unsafeFoldMeasuredRate": 0,
+        "exactStateAccuracy": 0.6875,
+        "safeFoldCoverage": 1,
+        "overProtectionRate": 0,
+        "unsafeFoldRate": 0.08333333333333333,
+        "blockedNonFoldRate": 0.9166666666666666
+      },
+      "A2-prefix-blacklist": {
+        "total": 16,
+        "allowedFold": 5,
+        "blockedFold": 11,
+        "unsafeFold": 1,
+        "unsafeFoldMeasured": 0,
+        "usefulFold": 4,
+        "overProtection": 0,
+        "unknown": 0,
+        "correctState": 11,
+        "foldRate": 0.3125,
+        "unknownRate": 0,
+        "decidableRate": 1,
+        "unsafeFoldMeasuredRate": 0,
+        "exactStateAccuracy": 0.6875,
+        "safeFoldCoverage": 1,
+        "overProtectionRate": 0,
+        "unsafeFoldRate": 0.08333333333333333,
+        "blockedNonFoldRate": 0.9166666666666666
+      },
+      "A-safe-all-protect": {
+        "total": 16,
+        "allowedFold": 0,
+        "blockedFold": 16,
+        "unsafeFold": 0,
+        "unsafeFoldMeasured": 0,
+        "usefulFold": 0,
+        "overProtection": 4,
+        "unknown": 0,
+        "correctState": 7,
+        "foldRate": 0,
+        "unknownRate": 0,
+        "decidableRate": 1,
+        "unsafeFoldMeasuredRate": 0,
+        "exactStateAccuracy": 0.4375,
+        "safeFoldCoverage": 0,
+        "overProtectionRate": 1,
+        "unsafeFoldRate": 0,
+        "blockedNonFoldRate": 1
+      },
+      "R97-full": {
+        "total": 16,
+        "allowedFold": 4,
+        "blockedFold": 12,
+        "unsafeFold": 0,
+        "unsafeFoldMeasured": 0,
+        "usefulFold": 4,
+        "overProtection": 0,
+        "unknown": 5,
+        "correctState": 16,
+        "foldRate": 0.25,
+        "unknownRate": 0.3125,
+        "decidableRate": 0.6875,
+        "unsafeFoldMeasuredRate": 0,
+        "exactStateAccuracy": 1,
+        "safeFoldCoverage": 1,
+        "overProtectionRate": 0,
+        "unsafeFoldRate": 0,
+        "blockedNonFoldRate": 1
+      }
+    }
+  },
+  "corpus": {
+    "corpusPath": "E:\\读论文\\R97\\datasets\\external-browser-wpt\\real-miniapp-candidates.jsonl",
+    "sampling": {
+      "mode": "per-entity-cap",
+      "perEntityCap": 5
+    },
+    "rawRecordCount": 336,
+    "deduplicatedCount": 336,
+    "sampleCount": 336,
+    "entityView": {
+      "total": 122,
+      "fold": 21,
+      "protect": 38,
+      "unknown": 63,
+      "entitiesWithUnsafeFold": 0,
+      "foldRate": 0.1721311475409836,
+      "protectRate": 0.3114754098360656,
+      "unknownRate": 0.5163934426229508,
+      "decidableRate": 0.48360655737704916
+    },
+    "independentReference": {
+      "description": "判卷探针 r97-oracle-probe 在 e2-node-24.21.0 / e5-edge-headless 上的直接读取",
+      "oracleRuntimeIds": [
+        "e2-node-24.21.0",
+        "e5-edge-headless"
+      ],
+      "oracleInScope": true,
+      "targetRuntimeIds": [
+        "e1-ecmascript",
+        "e2-node-24.21.0",
+        "e5-edge-headless"
+      ],
+      "provenance": {
+        "runtimes": [
+          {
+            "runtimeId": "e1-ecmascript",
+            "probeImplementation": "r97-oracle-probe（隔离 vm，非宿主）",
+            "isHost": false,
+            "observedEntityCount": 122,
+            "collectedAt": null,
+            "versionProfile": null
+          },
+          {
+            "runtimeId": "e2-node-24.21.0",
+            "probeImplementation": "r97-oracle-probe",
+            "isHost": true,
+            "observedEntityCount": 122,
+            "collectedAt": null,
+            "versionProfile": "v24.21.0"
+          },
+          {
+            "runtimeId": "e5-edge-headless",
+            "probeImplementation": "r97-oracle-probe",
+            "isHost": true,
+            "observedEntityCount": 122,
+            "collectedAt": null,
+            "versionProfile": null
+          }
+        ]
+      },
+      "excluded": [],
+      "entityCount": 122,
+      "differentialEntityCount": 53,
+      "differentialRecordCount": 148,
+      "differentialEntities": [
+        "AbortSignal",
+        "AbortController",
+        "AbortSignal.timeout",
+        "DOMException",
+        "fetch",
+        "document.createElement",
+        "document.body.appendChild",
+        "document.body",
+        "URL",
+        "location.href",
+        "Worker",
+        "self.FormData",
+        "Blob",
+        "URLSearchParams",
+        "location.origin",
+        "FormData",
+        "Request",
+        "Response",
+        "Response.prototype",
+        "Request.prototype"
+      ],
+      "differentialRoots": {
+        "location": 12,
+        "self": 4,
+        "document": 3,
+        "Response": 3,
+        "AbortSignal": 2,
+        "URL": 2,
+        "Request": 2,
+        "window": 2,
+        "AbortController": 1,
+        "DOMException": 1,
+        "fetch": 1,
+        "Worker": 1,
+        "Blob": 1,
+        "URLSearchParams": 1,
+        "FormData": 1,
+        "ReadableStream": 1,
+        "TextEncoder": 1,
+        "Headers": 1,
+        "TextDecoder": 1,
+        "SharedWorker": 1,
+        "ErrorEvent": 1,
+        "postMessage": 1,
+        "MessageEvent": 1,
+        "close": 1,
+        "onmessage": 1,
+        "setTimeout": 1,
+        "setInterval": 1,
+        "clearTimeout": 1,
+        "clearInterval": 1,
+        "atob": 1,
+        "btoa": 1
+      },
+      "allowedFold": 52,
+      "allowedFoldOnDifferentialEntity": 0,
+      "allowedFoldOnDifferentialExamples": []
+    },
+    "evidenceAvailability": {
+      "language": true,
+      "node": true,
+      "wechat": false,
+      "browser": true
+    },
+    "runtimeEvidence": {
+      "wechat": null,
+      "browser": {
+        "runtimeId": "e5-edge-headless",
+        "observedEntityCount": 122,
+        "browserVersion": {
+          "product": "Edg/150.0.4078.83",
+          "revision": "@7f302606e52ab615d52e1a0ab89ca415c8c843a3",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0",
+          "protocolVersion": "1.3"
+        }
+      }
+    },
+    "byExpected": {
+      "UNKNOWN": 214,
+      "PROTECT": 70,
+      "FOLD": 52
+    },
+    "byActual": {
+      "UNKNOWN": 168,
+      "PROTECT": 116,
+      "FOLD": 52
+    },
+    "byTransformation": {
+      "CALL_EVAL": 231,
+      "CONST_EVAL": 101,
+      "BRANCH_PRUNE": 4
+    },
+    "byReasonCode": {
+      "BINDING_UNRESOLVED": 167,
+      "ALL_TARGETS_MATCH": 168,
+      "CONTRACT_MISMATCH": 116,
+      "CONTRACT_COVERAGE_MISSING": 1
+    },
+    "byUncertaintySource": {
+      "binding": 167,
+      "runtime": 0,
+      "behavior": 1
+    },
+    "byTargetRuntimeStatus": {
+      "confirmed": 336
+    },
+    "targetRuntimeImpact": {
+      "confirmed": {
+        "sampleCount": 336,
+        "unsafeFold": 0,
+        "overProtection": 0,
+        "overProtectionRate": 0,
+        "blockedForUnconfirmedTarget": 0
+      }
+    },
+    "examples": [
+      {
+        "sampleId": "2b858c196396903549198c71",
+        "project": "files",
+        "file": "fetch\\api\\basic\\header-value-null-byte.any.js",
+        "entityId": "TypeError",
+        "transformationKind": "CONST_EVAL",
+        "bindingKind": "unresolved_global",
+        "resolutionStatus": "unresolved",
+        "expected": "FOLD",
+        "actualState": "FOLD",
+        "actualAction": "ALLOW_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ]
+      },
+      {
+        "sampleId": "0a6a40eabab37275de2740fe",
+        "project": "files",
+        "file": "fetch\\api\\basic\\response-null-body.any.js",
+        "entityId": "TypeError",
+        "transformationKind": "CONST_EVAL",
+        "bindingKind": "unresolved_global",
+        "resolutionStatus": "unresolved",
+        "expected": "FOLD",
+        "actualState": "FOLD",
+        "actualAction": "ALLOW_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ]
+      },
+      {
+        "sampleId": "4769f92bd925e17d177a2b10",
+        "project": "files",
+        "file": "fetch\\api\\basic\\scheme-data.any.js",
+        "entityId": "TypeError",
+        "transformationKind": "CONST_EVAL",
+        "bindingKind": "unresolved_global",
+        "resolutionStatus": "unresolved",
+        "expected": "FOLD",
+        "actualState": "FOLD",
+        "actualAction": "ALLOW_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ]
+      },
+      {
+        "sampleId": "cfafb464080461237def99d8",
+        "project": "files",
+        "file": "fetch\\api\\cors\\resources\\corspreflight.js",
+        "entityId": "TypeError",
+        "transformationKind": "CONST_EVAL",
+        "bindingKind": "unresolved_global",
+        "resolutionStatus": "unresolved",
+        "expected": "FOLD",
+        "actualState": "FOLD",
+        "actualAction": "ALLOW_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ]
+      },
+      {
+        "sampleId": "de20c31e22d0671a4573d71f",
+        "project": "files",
+        "file": "fetch\\api\\redirect\\redirect-schemes.any.js",
+        "entityId": "TypeError",
+        "transformationKind": "CONST_EVAL",
+        "bindingKind": "unresolved_global",
+        "resolutionStatus": "unresolved",
+        "expected": "FOLD",
+        "actualState": "FOLD",
+        "actualAction": "ALLOW_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ]
+      },
+      {
+        "sampleId": "70720f28086cb302657575d5",
+        "project": "files",
+        "file": "fetch\\api\\basic\\header-value-null-byte.any.js",
+        "entityId": "encodeURIComponent",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "FOLD",
+        "actualState": "FOLD",
+        "actualAction": "ALLOW_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ]
+      },
+      {
+        "sampleId": "a8e368e06219dde6918b07d4",
+        "project": "files",
+        "file": "fetch\\api\\resources\\utils.js",
+        "entityId": "encodeURIComponent",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "FOLD",
+        "actualState": "FOLD",
+        "actualAction": "ALLOW_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ]
+      },
+      {
+        "sampleId": "726667d766b299c91c61aeb5",
+        "project": "files",
+        "file": "fetch\\api\\cors\\cors-filtering.sub.any.js",
+        "entityId": "encodeURIComponent",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "FOLD",
+        "actualState": "FOLD",
+        "actualAction": "ALLOW_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ]
+      },
+      {
+        "sampleId": "98fe3ab942a84928da806060",
+        "project": "files",
+        "file": "fetch\\api\\cors\\cors-origin.any.js",
+        "entityId": "encodeURIComponent",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "FOLD",
+        "actualState": "FOLD",
+        "actualAction": "ALLOW_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ]
+      },
+      {
+        "sampleId": "124b98b0a5228d709da01176",
+        "project": "files",
+        "file": "fetch\\api\\redirect\\redirect-method.any.js",
+        "entityId": "encodeURIComponent",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "FOLD",
+        "actualState": "FOLD",
+        "actualAction": "ALLOW_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ]
+      },
+      {
+        "sampleId": "ac9264524be4fe192a5700b9",
+        "project": "files",
+        "file": "dom\\abort\\abort-signal-any.any.js",
+        "entityId": "AbortSignal",
+        "transformationKind": "CONST_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "PROTECT",
+        "actualState": "PROTECT",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ]
+      },
+      {
+        "sampleId": "aed5f8eff0968efe4d536133",
+        "project": "files",
+        "file": "dom\\abort\\abort-signal-any.any.js",
+        "entityId": "AbortSignal",
+        "transformationKind": "CONST_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "PROTECT",
+        "actualState": "PROTECT",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ]
+      },
+      {
+        "sampleId": "18107006863265a5da083582",
+        "project": "files",
+        "file": "dom\\abort\\timeout.any.js",
+        "entityId": "AbortSignal",
+        "transformationKind": "CONST_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "PROTECT",
+        "actualState": "PROTECT",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ]
+      },
+      {
+        "sampleId": "05799eb6e40e5d1478136426",
+        "project": "files",
+        "file": "dom\\abort\\abort-signal-any.any.js",
+        "entityId": "AbortController",
+        "transformationKind": "CONST_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "PROTECT",
+        "actualState": "PROTECT",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ]
+      },
+      {
+        "sampleId": "474a5cfacadd35b75f5107f3",
+        "project": "files",
+        "file": "dom\\abort\\timeout.any.js",
+        "entityId": "AbortSignal.timeout",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "PROTECT",
+        "actualState": "PROTECT",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ]
+      },
+      {
+        "sampleId": "76c8f1202a8d9b978b29adf5",
+        "project": "files",
+        "file": "dom\\abort\\timeout.any.js",
+        "entityId": "AbortSignal.timeout",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "PROTECT",
+        "actualState": "PROTECT",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ]
+      },
+      {
+        "sampleId": "09f5ea141ba5573d11d66ffa",
+        "project": "files",
+        "file": "dom\\abort\\timeout.any.js",
+        "entityId": "AbortSignal.timeout",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "PROTECT",
+        "actualState": "PROTECT",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ]
+      },
+      {
+        "sampleId": "8b26b402f76cc1f435da9e09",
+        "project": "files",
+        "file": "dom\\abort\\timeout.any.js",
+        "entityId": "AbortSignal.timeout",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "PROTECT",
+        "actualState": "PROTECT",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ]
+      },
+      {
+        "sampleId": "d10197659099db5532d7ee22",
+        "project": "files",
+        "file": "fetch\\api\\basic\\response-null-body.any.js",
+        "entityId": "fetch",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "PROTECT",
+        "actualState": "PROTECT",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ]
+      },
+      {
+        "sampleId": "5bf71acd61a7ad5a441ef337",
+        "project": "files",
+        "file": "fetch\\api\\response\\response-cancel-stream.any.js",
+        "entityId": "fetch",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "expected": "PROTECT",
+        "actualState": "PROTECT",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH",
+          "CONTRACT_MISMATCH"
+        ]
+      },
+      {
+        "sampleId": "129ce0a71935b625e4a6bf93",
+        "project": "files",
+        "file": "dom\\abort\\abort-signal-any.any.js",
+        "entityId": "abortSignalAnySignalOnlyTests",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "unresolved_global",
+        "resolutionStatus": "unresolved",
+        "expected": "UNKNOWN",
+        "actualState": "UNKNOWN",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": "binding",
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "BINDING_UNRESOLVED"
+        ]
+      },
+      {
+        "sampleId": "4cac77c45f7fadc7318d9825",
+        "project": "files",
+        "file": "dom\\abort\\abort-signal-any.any.js",
+        "entityId": "abortSignalAnyTests",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "unresolved_global",
+        "resolutionStatus": "unresolved",
+        "expected": "UNKNOWN",
+        "actualState": "UNKNOWN",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": "binding",
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "BINDING_UNRESOLVED"
+        ]
+      },
+      {
+        "sampleId": "86c7abe60a34097e6f987982",
+        "project": "files",
+        "file": "fetch\\api\\request\\request-error.any.js",
+        "entityId": "test",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "unresolved_global",
+        "resolutionStatus": "unresolved",
+        "expected": "UNKNOWN",
+        "actualState": "UNKNOWN",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": "binding",
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "BINDING_UNRESOLVED"
+        ]
+      },
+      {
+        "sampleId": "5a4248a1a3a13d86d006a604",
+        "project": "files",
+        "file": "fetch\\api\\request\\request-error.any.js",
+        "entityId": "test",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "unresolved_global",
+        "resolutionStatus": "unresolved",
+        "expected": "UNKNOWN",
+        "actualState": "UNKNOWN",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": "binding",
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "BINDING_UNRESOLVED"
+        ]
+      },
+      {
+        "sampleId": "c7834a7faaa58fc98b694175",
+        "project": "files",
+        "file": "fetch\\api\\request\\request-init-contenttype.any.js",
+        "entityId": "test",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "unresolved_global",
+        "resolutionStatus": "unresolved",
+        "expected": "UNKNOWN",
+        "actualState": "UNKNOWN",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": "binding",
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "BINDING_UNRESOLVED"
+        ]
+      },
+      {
+        "sampleId": "28fcf3ebea0f42e18b9a45c8",
+        "project": "files",
+        "file": "fetch\\api\\request\\request-init-contenttype.any.js",
+        "entityId": "test",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "unresolved_global",
+        "resolutionStatus": "unresolved",
+        "expected": "UNKNOWN",
+        "actualState": "UNKNOWN",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": "binding",
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "BINDING_UNRESOLVED"
+        ]
+      },
+      {
+        "sampleId": "c99c4a8cba9fc41e48c850a9",
+        "project": "files",
+        "file": "workers\\Worker-replace-self.any.js",
+        "entityId": "test",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "unresolved_global",
+        "resolutionStatus": "unresolved",
+        "expected": "UNKNOWN",
+        "actualState": "UNKNOWN",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": "binding",
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "BINDING_UNRESOLVED"
+        ]
+      },
+      {
+        "sampleId": "be3e40592b158b6737d1dbed",
+        "project": "files",
+        "file": "workers\\Worker-replace-self.any.js",
+        "entityId": "assert_true",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "unresolved_global",
+        "resolutionStatus": "unresolved",
+        "expected": "UNKNOWN",
+        "actualState": "UNKNOWN",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": "binding",
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "BINDING_UNRESOLVED"
+        ]
+      },
+      {
+        "sampleId": "1eb057f7b1441a9776a24030",
+        "project": "files",
+        "file": "fetch\\api\\body\\textstream.any.js",
+        "entityId": "assert_true",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "unresolved_global",
+        "resolutionStatus": "unresolved",
+        "expected": "UNKNOWN",
+        "actualState": "UNKNOWN",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": "binding",
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "BINDING_UNRESOLVED"
+        ]
+      },
+      {
+        "sampleId": "4ea075a198fbe875068d85d7",
+        "project": "files",
+        "file": "workers\\Worker-location.sub.any.js",
+        "entityId": "assert_true",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "unresolved_global",
+        "resolutionStatus": "unresolved",
+        "expected": "UNKNOWN",
+        "actualState": "UNKNOWN",
+        "actualAction": "BLOCK_FOLD",
+        "uncertaintySource": "binding",
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "BINDING_UNRESOLVED"
+        ]
+      }
+    ],
+    "metrics": {
+      "A0-aggressive-fold": {
+        "total": 336,
+        "allowedFold": 336,
+        "blockedFold": 0,
+        "unsafeFold": 284,
+        "unsafeFoldMeasured": 148,
+        "usefulFold": 52,
+        "overProtection": 0,
+        "unknown": 0,
+        "correctState": 52,
+        "foldRate": 1,
+        "unknownRate": 0,
+        "decidableRate": 1,
+        "unsafeFoldMeasuredRate": 0.44047619047619047,
+        "exactStateAccuracy": 0.15476190476190477,
+        "safeFoldCoverage": 1,
+        "overProtectionRate": 0,
+        "unsafeFoldRate": 1,
+        "blockedNonFoldRate": 0
+      },
+      "A1-legacy-blacklist": {
+        "total": 336,
+        "allowedFold": 204,
+        "blockedFold": 132,
+        "unsafeFold": 154,
+        "unsafeFoldMeasured": 20,
+        "usefulFold": 50,
+        "overProtection": 2,
+        "unknown": 0,
+        "correctState": 120,
+        "foldRate": 0.6071428571428571,
+        "unknownRate": 0,
+        "decidableRate": 1,
+        "unsafeFoldMeasuredRate": 0.09803921568627451,
+        "exactStateAccuracy": 0.35714285714285715,
+        "safeFoldCoverage": 0.9615384615384616,
+        "overProtectionRate": 0.038461538461538464,
+        "unsafeFoldRate": 0.5422535211267606,
+        "blockedNonFoldRate": 0.45774647887323944
+      },
+      "A2-prefix-blacklist": {
+        "total": 336,
+        "allowedFold": 315,
+        "blockedFold": 21,
+        "unsafeFold": 263,
+        "unsafeFoldMeasured": 127,
+        "usefulFold": 52,
+        "overProtection": 0,
+        "unknown": 0,
+        "correctState": 67,
+        "foldRate": 0.9375,
+        "unknownRate": 0,
+        "decidableRate": 1,
+        "unsafeFoldMeasuredRate": 0.4031746031746032,
+        "exactStateAccuracy": 0.19940476190476192,
+        "safeFoldCoverage": 1,
+        "overProtectionRate": 0,
+        "unsafeFoldRate": 0.926056338028169,
+        "blockedNonFoldRate": 0.07394366197183098
+      },
+      "A-safe-all-protect": {
+        "total": 336,
+        "allowedFold": 0,
+        "blockedFold": 336,
+        "unsafeFold": 0,
+        "unsafeFoldMeasured": 0,
+        "usefulFold": 0,
+        "overProtection": 52,
+        "unknown": 0,
+        "correctState": 70,
+        "foldRate": 0,
+        "unknownRate": 0,
+        "decidableRate": 1,
+        "unsafeFoldMeasuredRate": 0,
+        "exactStateAccuracy": 0.20833333333333334,
+        "safeFoldCoverage": 0,
+        "overProtectionRate": 1,
+        "unsafeFoldRate": 0,
+        "blockedNonFoldRate": 1
+      },
+      "R97-full": {
+        "total": 336,
+        "allowedFold": 52,
+        "blockedFold": 284,
+        "unsafeFold": 0,
+        "unsafeFoldMeasured": 0,
+        "usefulFold": 52,
+        "overProtection": 0,
+        "unknown": 168,
+        "correctState": 290,
+        "foldRate": 0.15476190476190477,
+        "unknownRate": 0.5,
+        "decidableRate": 0.5,
+        "unsafeFoldMeasuredRate": 0,
+        "exactStateAccuracy": 0.8630952380952381,
+        "safeFoldCoverage": 1,
+        "overProtectionRate": 0,
+        "unsafeFoldRate": 0,
+        "blockedNonFoldRate": 1,
+        "elapsedMs": 48.55689999999959,
+        "decisionsPerSecond": 6919.716868251533
+      }
+    },
+    "foldRateConfidence": null
+  }
+}

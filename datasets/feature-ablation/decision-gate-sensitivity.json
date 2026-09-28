@@ -1,0 +1,161 @@
+{
+  "generatedAt": "2026-09-18T10:40:42.271Z",
+  "description": "受控机制实验：逐项关闭决策护栏，比较 R97 护栏与只做字段比较的宽松基线。",
+  "scopeWarning": "该实验用于验证护栏机制，不代表真实语料中的触发频率。环境指纹失效未加入，因为当前证据记录和决策查询还没有携带可比较的运行时环境指纹。",
+  "caseCount": 12,
+  "counts": {
+    "guardedFold": 0,
+    "guardedProtect": 3,
+    "guardedUnknown": 9,
+    "naiveFold": 11,
+    "guardedUnsafeFolds": 0,
+    "naiveUnsafeFolds": 11,
+    "preventedUnsafeFolds": 11
+  },
+  "rows": [
+    {
+      "id": "binding-unresolved",
+      "label": "绑定未解析",
+      "guard": "绑定解析门槛",
+      "expectedSafe": false,
+      "guardedState": "UNKNOWN",
+      "guardedReasonCodes": [
+        "BINDING_UNRESOLVED"
+      ],
+      "naiveState": "FOLD",
+      "preventedUnsafeFold": true
+    },
+    {
+      "id": "target-runtime-inferred",
+      "label": "目标运行时只来自静态推断",
+      "guard": "运行时来源门槛",
+      "expectedSafe": false,
+      "guardedState": "UNKNOWN",
+      "guardedReasonCodes": [
+        "TARGET_RUNTIME_INFERRED"
+      ],
+      "naiveState": "FOLD",
+      "preventedUnsafeFold": true
+    },
+    {
+      "id": "required-runtime-missing",
+      "label": "契约要求微信运行时，但当前比较没有覆盖微信",
+      "guard": "必需运行时覆盖",
+      "expectedSafe": false,
+      "guardedState": "PROTECT",
+      "guardedReasonCodes": [
+        "REQUIRED_RUNTIME_MISSING"
+      ],
+      "naiveState": "FOLD",
+      "preventedUnsafeFold": true
+    },
+    {
+      "id": "evidence-missing",
+      "label": "没有对应的真实运行时证据",
+      "guard": "证据存在性",
+      "expectedSafe": false,
+      "guardedState": "UNKNOWN",
+      "guardedReasonCodes": [
+        "EVIDENCE_MISSING"
+      ],
+      "naiveState": "FOLD",
+      "preventedUnsafeFold": true
+    },
+    {
+      "id": "evidence-expired",
+      "label": "证据超出有效期",
+      "guard": "证据有效期",
+      "expectedSafe": false,
+      "guardedState": "UNKNOWN",
+      "guardedReasonCodes": [
+        "EVIDENCE_EXPIRED"
+      ],
+      "naiveState": "FOLD",
+      "preventedUnsafeFold": true
+    },
+    {
+      "id": "evidence-conflict",
+      "label": "同一运行时存在冲突观测",
+      "guard": "冲突阻断",
+      "expectedSafe": false,
+      "guardedState": "UNKNOWN",
+      "guardedReasonCodes": [
+        "EVIDENCE_CONFLICT"
+      ],
+      "naiveState": "FOLD",
+      "preventedUnsafeFold": true
+    },
+    {
+      "id": "evidence-not-fold-eligible",
+      "label": "只有 LLM 候选，没有可授权 FOLD 的真实观测",
+      "guard": "证据来源等级",
+      "expectedSafe": false,
+      "guardedState": "UNKNOWN",
+      "guardedReasonCodes": [
+        "EVIDENCE_NOT_FOLD_ELIGIBLE"
+      ],
+      "naiveState": "FOLD",
+      "preventedUnsafeFold": true
+    },
+    {
+      "id": "policy-version-mismatch",
+      "label": "证据来自旧策略版本",
+      "guard": "策略版本有效性",
+      "expectedSafe": false,
+      "guardedState": "UNKNOWN",
+      "guardedReasonCodes": [
+        "EVIDENCE_EXPIRED"
+      ],
+      "naiveState": "FOLD",
+      "preventedUnsafeFold": true
+    },
+    {
+      "id": "wrong-evaluator-scope",
+      "label": "证据求值运行时与查询作用域不一致",
+      "guard": "证据作用域身份",
+      "expectedSafe": false,
+      "guardedState": "UNKNOWN",
+      "guardedReasonCodes": [
+        "EVIDENCE_MISSING"
+      ],
+      "naiveState": "FOLD",
+      "preventedUnsafeFold": true
+    },
+    {
+      "id": "contract-coverage-missing",
+      "label": "契约要求 return_value，但探针没有观测该维度",
+      "guard": "契约覆盖完整性",
+      "expectedSafe": false,
+      "guardedState": "UNKNOWN",
+      "guardedReasonCodes": [
+        "CONTRACT_COVERAGE_MISSING"
+      ],
+      "naiveState": "FOLD",
+      "preventedUnsafeFold": true
+    },
+    {
+      "id": "forbidden-side-effect",
+      "label": "值相同，但观测到网络副作用",
+      "guard": "禁止副作用",
+      "expectedSafe": false,
+      "guardedState": "PROTECT",
+      "guardedReasonCodes": [
+        "FORBIDDEN_SIDE_EFFECT"
+      ],
+      "naiveState": "FOLD",
+      "preventedUnsafeFold": true
+    },
+    {
+      "id": "confirmed-contract-mismatch",
+      "label": "目标运行时存在明确语义差异",
+      "guard": "确认差异保护",
+      "expectedSafe": true,
+      "guardedState": "PROTECT",
+      "guardedReasonCodes": [
+        "CONTRACT_MISMATCH"
+      ],
+      "naiveState": "PROTECT",
+      "preventedUnsafeFold": false
+    }
+  ]
+}

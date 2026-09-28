@@ -1,0 +1,2222 @@
+{
+  "candidateCount": 230,
+  "formula": "log2(1+occurrences) * (1+log2(1+projectCount)) * (1+0.5*unresolvedRatio) * capabilityWeight * transformationWeight",
+  "results": [
+    {
+      "rank": 1,
+      "entityId": "wh.rv",
+      "occurrences": 14112,
+      "projectCount": 196,
+      "unresolvedRatio": 1,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CALL_EVAL"
+      ],
+      "score": 254.93907875276304,
+      "scoreFactors": {
+        "frequency": 13.78473707372698,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1.5,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1.3
+      },
+      "normalizedPriority": 1
+    },
+    {
+      "rank": 2,
+      "entityId": "wh.hn",
+      "occurrences": 5880,
+      "projectCount": 196,
+      "unresolvedRatio": 1,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "BRANCH_PRUNE",
+        "CALL_EVAL"
+      ],
+      "score": 231.58278675393382,
+      "scoreFactors": {
+        "frequency": 12.521845775161932,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1.5,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1.3
+      },
+      "normalizedPriority": 0.908385
+    },
+    {
+      "rank": 3,
+      "entityId": "wh.nh",
+      "occurrences": 5096,
+      "projectCount": 196,
+      "unresolvedRatio": 1,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CALL_EVAL"
+      ],
+      "score": 227.76532003163047,
+      "scoreFactors": {
+        "frequency": 12.315432637905376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1.5,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1.3
+      },
+      "normalizedPriority": 0.893411
+    },
+    {
+      "rank": 4,
+      "entityId": "grb",
+      "occurrences": 1568,
+      "projectCount": 196,
+      "unresolvedRatio": 1,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CALL_EVAL",
+        "CONST_EVAL"
+      ],
+      "score": 196.32865143197554,
+      "scoreFactors": {
+        "frequency": 10.615629636968098,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1.5,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1.3
+      },
+      "normalizedPriority": 0.7701
+    },
+    {
+      "rank": 5,
+      "entityId": "gra",
+      "occurrences": 784,
+      "projectCount": 196,
+      "unresolvedRatio": 1,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CALL_EVAL",
+        "CONST_EVAL"
+      ],
+      "score": 177.85135036682394,
+      "scoreFactors": {
+        "frequency": 9.61654884377899,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1.5,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1.3
+      },
+      "normalizedPriority": 0.697623
+    },
+    {
+      "rank": 6,
+      "entityId": "Object.defineProperty",
+      "occurrences": 18432,
+      "projectCount": 198,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CALL_EVAL",
+        "CONST_EVAL"
+      ],
+      "score": 175.00482874085938,
+      "scoreFactors": {
+        "frequency": 14.170003270534473,
+        "projectSpread": 8.63662462054365,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1.3
+      },
+      "normalizedPriority": 0.686457
+    },
+    {
+      "rank": 7,
+      "entityId": "$gwn",
+      "occurrences": 392,
+      "projectCount": 196,
+      "unresolvedRatio": 1,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CALL_EVAL",
+        "CONST_EVAL"
+      ],
+      "score": 159.39101692912672,
+      "scoreFactors": {
+        "frequency": 8.618385502258606,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1.5,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1.3
+      },
+      "normalizedPriority": 0.625212
+    },
+    {
+      "rank": 8,
+      "entityId": "Boolean.prototype",
+      "occurrences": 980,
+      "projectCount": 196,
+      "unresolvedRatio": 1,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 141.38337443684023,
+      "scoreFactors": {
+        "frequency": 9.938109326219239,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1.5,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.554577
+    },
+    {
+      "rank": 9,
+      "entityId": "undefined",
+      "occurrences": 4123,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "BRANCH_PRUNE",
+        "CONST_EVAL"
+      ],
+      "score": 136.6851613798941,
+      "scoreFactors": {
+        "frequency": 12.00982861736811,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1.2
+      },
+      "normalizedPriority": 0.536148
+    },
+    {
+      "rank": 10,
+      "entityId": "Math.random",
+      "occurrences": 199,
+      "projectCount": 197,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "crypto"
+      ],
+      "transformationKinds": [
+        "CALL_EVAL",
+        "CONST_EVAL"
+      ],
+      "score": 128.62504397762956,
+      "scoreFactors": {
+        "frequency": 7.643856189774724,
+        "projectSpread": 8.629356620079609,
+        "uncertainty": 1,
+        "capabilityWeight": 1.5,
+        "transformationWeight": 1.3
+      },
+      "normalizedPriority": 0.504532
+    },
+    {
+      "rank": 11,
+      "entityId": "JSON.stringify",
+      "occurrences": 1177,
+      "projectCount": 197,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "BRANCH_PRUNE",
+        "CALL_EVAL"
+      ],
+      "score": 125.8940036040019,
+      "scoreFactors": {
+        "frequency": 10.20212382383046,
+        "projectSpread": 8.629356620079609,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1.3
+      },
+      "normalizedPriority": 0.49382
+    },
+    {
+      "rank": 12,
+      "entityId": "Array.prototype",
+      "occurrences": 7842,
+      "projectCount": 197,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 122.80358769805751,
+      "scoreFactors": {
+        "frequency": 12.937189885081185,
+        "projectSpread": 8.629356620079609,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.481698
+    },
+    {
+      "rank": 13,
+      "entityId": "String.prototype",
+      "occurrences": 7840,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 122.6961441029431,
+      "scoreFactors": {
+        "frequency": 12.93682194449238,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.481276
+    },
+    {
+      "rank": 14,
+      "entityId": "snap_bb",
+      "occurrences": 392,
+      "projectCount": 196,
+      "unresolvedRatio": 1,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 122.60847456086671,
+      "scoreFactors": {
+        "frequency": 8.618385502258606,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1.5,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.480932
+    },
+    {
+      "rank": 15,
+      "entityId": "Math",
+      "occurrences": 5088,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 116.78123535921533,
+      "scoreFactors": {
+        "frequency": 12.313166475977198,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.458075
+    },
+    {
+      "rank": 16,
+      "entityId": "console.warn",
+      "occurrences": 733,
+      "projectCount": 185,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CALL_EVAL",
+        "CONST_EVAL"
+      ],
+      "score": 116.24425067542369,
+      "scoreFactors": {
+        "frequency": 9.519636252843213,
+        "projectSpread": 8.539158811108031,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1.3
+      },
+      "normalizedPriority": 0.455969
+    },
+    {
+      "rank": 17,
+      "entityId": "Function",
+      "occurrences": 589,
+      "projectCount": 197,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "BRANCH_PRUNE",
+        "CALL_EVAL",
+        "CONST_EVAL"
+      ],
+      "score": 113.58422352222749,
+      "scoreFactors": {
+        "frequency": 9.204571144249204,
+        "projectSpread": 8.629356620079609,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1.3
+      },
+      "normalizedPriority": 0.445535
+    },
+    {
+      "rank": 18,
+      "entityId": "$gwl",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 1,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 108.43424750059216,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1.5,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.425334
+    },
+    {
+      "rank": 19,
+      "entityId": "Boolean.prototype.toString",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 1,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 108.43424750059216,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1.5,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.425334
+    },
+    {
+      "rank": 20,
+      "entityId": "Boolean.prototype.valueOf",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 1,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 108.43424750059216,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1.5,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.425334
+    },
+    {
+      "rank": 21,
+      "entityId": "wh",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 1,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 108.43424750059216,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1.5,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.425334
+    },
+    {
+      "rank": 22,
+      "entityId": "Number.prototype",
+      "occurrences": 2548,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 107.32115545547148,
+      "scoreFactors": {
+        "frequency": 11.315715658022201,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.420968
+    },
+    {
+      "rank": 23,
+      "entityId": "$gwx",
+      "occurrences": 182,
+      "projectCount": 182,
+      "unresolvedRatio": 1,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 105.60238243082027,
+      "scoreFactors": {
+        "frequency": 7.515699838284043,
+        "projectSpread": 8.515699838284043,
+        "uncertainty": 1.5,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.414226
+    },
+    {
+      "rank": 24,
+      "entityId": "console.log",
+      "occurrences": 256,
+      "projectCount": 184,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CALL_EVAL",
+        "CONST_EVAL"
+      ],
+      "score": 97.66762270815109,
+      "scoreFactors": {
+        "frequency": 8.005624549193879,
+        "projectSpread": 8.531381460516311,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1.3
+      },
+      "normalizedPriority": 0.383102
+    },
+    {
+      "rank": 25,
+      "entityId": "Math.floor",
+      "occurrences": 199,
+      "projectCount": 198,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CALL_EVAL",
+        "CONST_EVAL"
+      ],
+      "score": 94.40447668723982,
+      "scoreFactors": {
+        "frequency": 7.643856189774724,
+        "projectSpread": 8.63662462054365,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1.3
+      },
+      "normalizedPriority": 0.370302
+    },
+    {
+      "rank": 26,
+      "entityId": "Object.prototype.toString.call",
+      "occurrences": 199,
+      "projectCount": 198,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CALL_EVAL"
+      ],
+      "score": 94.40447668723982,
+      "scoreFactors": {
+        "frequency": 7.643856189774724,
+        "projectSpread": 8.63662462054365,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1.3
+      },
+      "normalizedPriority": 0.370302
+    },
+    {
+      "rank": 27,
+      "entityId": "Math.abs",
+      "occurrences": 197,
+      "projectCount": 197,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CALL_EVAL",
+        "CONST_EVAL"
+      ],
+      "score": 94.14610785069802,
+      "scoreFactors": {
+        "frequency": 7.6293566200796095,
+        "projectSpread": 8.629356620079609,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1.3
+      },
+      "normalizedPriority": 0.369289
+    },
+    {
+      "rank": 28,
+      "entityId": "Date.now",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CALL_EVAL",
+        "CONST_EVAL"
+      ],
+      "score": 93.97634783384656,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1.3
+      },
+      "normalizedPriority": 0.368623
+    },
+    {
+      "rank": 29,
+      "entityId": "Math.max",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CALL_EVAL",
+        "CONST_EVAL"
+      ],
+      "score": 93.97634783384656,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1.3
+      },
+      "normalizedPriority": 0.368623
+    },
+    {
+      "rank": 30,
+      "entityId": "console.error",
+      "occurrences": 203,
+      "projectCount": 185,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CALL_EVAL"
+      ],
+      "score": 93.68796359989415,
+      "scoreFactors": {
+        "frequency": 7.672425341971495,
+        "projectSpread": 8.539158811108031,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1.3
+      },
+      "normalizedPriority": 0.367492
+    },
+    {
+      "rank": 31,
+      "entityId": "Date.prototype",
+      "occurrences": 806,
+      "projectCount": 195,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 91.50602816150176,
+      "scoreFactors": {
+        "frequency": 9.656424863277781,
+        "projectSpread": 8.614709844115207,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.358933
+    },
+    {
+      "rank": 32,
+      "entityId": "Number",
+      "occurrences": 785,
+      "projectCount": 197,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 91.30052646923235,
+      "scoreFactors": {
+        "frequency": 9.618385502258606,
+        "projectSpread": 8.629356620079609,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.358127
+    },
+    {
+      "rank": 33,
+      "entityId": "Object.prototype",
+      "occurrences": 594,
+      "projectCount": 198,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 87.56173162020163,
+      "scoreFactors": {
+        "frequency": 9.216745858195306,
+        "projectSpread": 8.63662462054365,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.343461
+    },
+    {
+      "rank": 34,
+      "entityId": "Function.prototype",
+      "occurrences": 588,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 87.27530730393234,
+      "scoreFactors": {
+        "frequency": 9.20212382383046,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.342338
+    },
+    {
+      "rank": 35,
+      "entityId": "Date",
+      "occurrences": 585,
+      "projectCount": 195,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 87.13117862684084,
+      "scoreFactors": {
+        "frequency": 9.194756854422248,
+        "projectSpread": 8.614709844115207,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.341773
+    },
+    {
+      "rank": 36,
+      "entityId": "Object.prototype.toString",
+      "occurrences": 199,
+      "projectCount": 198,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.6188282209537,
+      "scoreFactors": {
+        "frequency": 7.643856189774724,
+        "projectSpread": 8.63662462054365,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.284848
+    },
+    {
+      "rank": 37,
+      "entityId": "Array.prototype.concat",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 38,
+      "entityId": "Array.prototype.every",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 39,
+      "entityId": "Array.prototype.filter",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 40,
+      "entityId": "Array.prototype.forEach",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 41,
+      "entityId": "Array.prototype.indexOf",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 42,
+      "entityId": "Array.prototype.lastIndexOf",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 43,
+      "entityId": "Array.prototype.map",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 44,
+      "entityId": "Array.prototype.pop",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 45,
+      "entityId": "Array.prototype.push",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 46,
+      "entityId": "Array.prototype.reduce",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 47,
+      "entityId": "Array.prototype.reduceRight",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 48,
+      "entityId": "Array.prototype.reverse",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 49,
+      "entityId": "Array.prototype.shift",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 50,
+      "entityId": "Array.prototype.slice",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 51,
+      "entityId": "Array.prototype.some",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 52,
+      "entityId": "Array.prototype.sort",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 53,
+      "entityId": "Array.prototype.splice",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 54,
+      "entityId": "Array.prototype.unshift",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 55,
+      "entityId": "Math.acos",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 56,
+      "entityId": "Math.asin",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 57,
+      "entityId": "Math.atan",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 58,
+      "entityId": "Math.atan2",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 59,
+      "entityId": "Math.ceil",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 60,
+      "entityId": "Math.cos",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 61,
+      "entityId": "Math.E",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 62,
+      "entityId": "Math.exp",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 63,
+      "entityId": "Math.LN10",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 64,
+      "entityId": "Math.LN2",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 65,
+      "entityId": "Math.log",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 66,
+      "entityId": "Math.LOG10E",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 67,
+      "entityId": "Math.LOG2E",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 68,
+      "entityId": "Math.PI",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 69,
+      "entityId": "Math.SQRT1_2",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 70,
+      "entityId": "Math.SQRT2",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 71,
+      "entityId": "Number.MAX_VALUE",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 72,
+      "entityId": "Number.MIN_VALUE",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 73,
+      "entityId": "Number.NEGATIVE_INFINITY",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 74,
+      "entityId": "Number.POSITIVE_INFINITY",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 75,
+      "entityId": "Number.prototype.toExponential",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 76,
+      "entityId": "Number.prototype.toFixed",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 77,
+      "entityId": "Number.prototype.toLocaleString",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 78,
+      "entityId": "Number.prototype.toPrecision",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 79,
+      "entityId": "Number.prototype.toString",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 80,
+      "entityId": "Number.prototype.valueOf",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 81,
+      "entityId": "String.prototype.charAt",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 82,
+      "entityId": "String.prototype.charCodeAt",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 83,
+      "entityId": "String.prototype.concat",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 84,
+      "entityId": "String.prototype.indexOf",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 85,
+      "entityId": "String.prototype.lastIndexOf",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 86,
+      "entityId": "String.prototype.localeCompare",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 87,
+      "entityId": "String.prototype.match",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 88,
+      "entityId": "String.prototype.replace",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 89,
+      "entityId": "String.prototype.search",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 90,
+      "entityId": "String.prototype.slice",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 91,
+      "entityId": "String.prototype.split",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 92,
+      "entityId": "String.prototype.substring",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 93,
+      "entityId": "String.prototype.toLocaleLowerCase",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 94,
+      "entityId": "String.prototype.toLocaleUpperCase",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 95,
+      "entityId": "String.prototype.toLowerCase",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 96,
+      "entityId": "String.prototype.toString",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 97,
+      "entityId": "String.prototype.toUpperCase",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 98,
+      "entityId": "String.prototype.trim",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 99,
+      "entityId": "String.prototype.valueOf",
+      "occurrences": 196,
+      "projectCount": 196,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.28949833372812,
+      "scoreFactors": {
+        "frequency": 7.622051819456376,
+        "projectSpread": 8.622051819456377,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283556
+    },
+    {
+      "rank": 100,
+      "entityId": "Date.parse",
+      "occurrences": 195,
+      "projectCount": 195,
+      "unresolvedRatio": 0,
+      "capabilityDomains": [
+        "unknown"
+      ],
+      "transformationKinds": [
+        "CONST_EVAL"
+      ],
+      "score": 72.1583674395983,
+      "scoreFactors": {
+        "frequency": 7.614709844115208,
+        "projectSpread": 8.614709844115207,
+        "uncertainty": 1,
+        "capabilityWeight": 1.1,
+        "transformationWeight": 1
+      },
+      "normalizedPriority": 0.283042
+    }
+  ]
+}

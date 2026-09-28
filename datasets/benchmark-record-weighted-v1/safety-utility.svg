@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="520" viewBox="0 0 860 520" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<rect width="860" height="520" fill="#ffffff"/>
+<text x="96" y="34" font-size="19" font-weight="600" fill="#1b2733">R97 safety-utility 权衡</text>
+<text x="96" y="55" font-size="12.5" fill="#5b6b7c">纵轴真值来自真实 Node 与真实 Edge 的直接读取，共 29 条实测跨宿主不一致记录；本样本覆盖 229 个实体。</text>
+<line x1="96" y1="446" x2="650" y2="446" stroke="#e4e9ee" stroke-width="1"/>
+<text x="84" y="450" font-size="11.5" fill="#5b6b7c" text-anchor="end">0.0%</text>
+<line x1="96" y1="64" x2="96" y2="446" stroke="#f0f3f6" stroke-width="1"/>
+<text x="96" y="468" font-size="11.5" fill="#5b6b7c" text-anchor="middle">0.0%</text>
+<line x1="96" y1="369.6" x2="650" y2="369.6" stroke="#e4e9ee" stroke-width="1"/>
+<text x="84" y="373.6" font-size="11.5" fill="#5b6b7c" text-anchor="end">20.0%</text>
+<line x1="206.8" y1="64" x2="206.8" y2="446" stroke="#f0f3f6" stroke-width="1"/>
+<text x="206.8" y="468" font-size="11.5" fill="#5b6b7c" text-anchor="middle">20.0%</text>
+<line x1="96" y1="293.2" x2="650" y2="293.2" stroke="#e4e9ee" stroke-width="1"/>
+<text x="84" y="297.2" font-size="11.5" fill="#5b6b7c" text-anchor="end">40.0%</text>
+<line x1="317.6" y1="64" x2="317.6" y2="446" stroke="#f0f3f6" stroke-width="1"/>
+<text x="317.6" y="468" font-size="11.5" fill="#5b6b7c" text-anchor="middle">40.0%</text>
+<line x1="96" y1="216.8" x2="650" y2="216.8" stroke="#e4e9ee" stroke-width="1"/>
+<text x="84" y="220.8" font-size="11.5" fill="#5b6b7c" text-anchor="end">60.0%</text>
+<line x1="428.4" y1="64" x2="428.4" y2="446" stroke="#f0f3f6" stroke-width="1"/>
+<text x="428.4" y="468" font-size="11.5" fill="#5b6b7c" text-anchor="middle">60.0%</text>
+<line x1="96" y1="140.39999999999998" x2="650" y2="140.39999999999998" stroke="#e4e9ee" stroke-width="1"/>
+<text x="84" y="144.39999999999998" font-size="11.5" fill="#5b6b7c" text-anchor="end">80.0%</text>
+<line x1="539.2" y1="64" x2="539.2" y2="446" stroke="#f0f3f6" stroke-width="1"/>
+<text x="539.2" y="468" font-size="11.5" fill="#5b6b7c" text-anchor="middle">80.0%</text>
+<line x1="96" y1="64" x2="650" y2="64" stroke="#e4e9ee" stroke-width="1"/>
+<text x="84" y="68" font-size="11.5" fill="#5b6b7c" text-anchor="end">100.0%</text>
+<line x1="650" y1="64" x2="650" y2="446" stroke="#f0f3f6" stroke-width="1"/>
+<text x="650" y="468" font-size="11.5" fill="#5b6b7c" text-anchor="middle">100.0%</text>
+<line x1="96" y1="446" x2="650" y2="446" stroke="#9aa7b4" stroke-width="1.4"/>
+<line x1="96" y1="64" x2="96" y2="446" stroke="#9aa7b4" stroke-width="1.4"/>
+<text x="373" y="496" font-size="13" fill="#33414f" text-anchor="middle">放行率（效用）</text>
+<text x="26" y="255" font-size="13" fill="#33414f" text-anchor="middle" transform="rotate(-90 26 255)">放行中落在实测差分记录上的比例（不安全）</text>
+<circle cx="530.7053333333333" cy="446" r="6.5" fill="#e67e22" fill-opacity="0.92" stroke="#ffffff" stroke-width="1.6"/>
+<line x1="538.7053333333333" y1="446" x2="659" y2="290" stroke="#e67e22" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.7"/>
+<circle cx="666" cy="290" r="5" fill="#e67e22"/>
+<text x="678" y="294" font-size="12.5" fill="#26333f">A1-legacy-blacklist</text>
+<text x="678" y="309" font-size="11" fill="#6b7a89">放行 2354，其中实测差分 0</text>
+<circle cx="96" cy="446" r="6.5" fill="#7f8c8d" fill-opacity="0.92" stroke="#ffffff" stroke-width="1.6"/>
+<line x1="104" y1="446" x2="659" y2="324" stroke="#7f8c8d" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.7"/>
+<circle cx="666" cy="324" r="5" fill="#7f8c8d"/>
+<text x="678" y="328" font-size="12.5" fill="#26333f">A-safe-all-protect</text>
+<text x="678" y="343" font-size="11" fill="#6b7a89">放行 0，其中实测差分 0</text>
+<circle cx="512.7926666666667" cy="446" r="6.5" fill="#1a7f5a" fill-opacity="0.92" stroke="#ffffff" stroke-width="1.6"/>
+<line x1="520.7926666666667" y1="446" x2="659" y2="358" stroke="#1a7f5a" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.7"/>
+<circle cx="666" cy="358" r="5" fill="#1a7f5a"/>
+<text x="678" y="362" font-size="12.5" fill="#26333f">R97-full</text>
+<text x="678" y="377" font-size="11" fill="#6b7a89">放行 2257，其中实测差分 0</text>
+<circle cx="647.5993333333333" cy="77.17241379310343" r="6.5" fill="#8e44ad" fill-opacity="0.92" stroke="#ffffff" stroke-width="1.6"/>
+<line x1="655.5993333333333" y1="77.17241379310343" x2="659" y2="392" stroke="#8e44ad" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.7"/>
+<circle cx="666" cy="392" r="5" fill="#8e44ad"/>
+<text x="678" y="396" font-size="12.5" fill="#26333f">A2-prefix-blacklist</text>
+<text x="678" y="411" font-size="11" fill="#6b7a89">放行 2987，其中实测差分 28</text>
+<circle cx="650" cy="64" r="6.5" fill="#c0392b" fill-opacity="0.92" stroke="#ffffff" stroke-width="1.6"/>
+<line x1="658" y1="64" x2="659" y2="426" stroke="#c0392b" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.7"/>
+<circle cx="666" cy="426" r="5" fill="#c0392b"/>
+<text x="678" y="430" font-size="12.5" fill="#26333f">A0-aggressive-fold</text>
+<text x="678" y="445" font-size="11" fill="#6b7a89">放行 3000，其中实测差分 29</text>
+<text x="96" y="514" font-size="11" fill="#7a8896">R97 严格优于全量保护（同为 0 不安全，但恢复放行）；黑名单是另一条取舍曲线，不是被支配。</text>
+</svg>
