@@ -38,7 +38,7 @@ const LANGUAGE_BUILTIN_SET = new Set(LANGUAGE_BUILTIN_ROOTS);
  * 模块导出可能套好几层：`exports.a = b`、`b` 又是另一个模块的导出。
  * 超过深度就返回"未知"，退回原来的 module_import 行为，不做猜测。
  */
-const MAX_BUNDLE_EXPORT_DEPTH = 4;
+const MAX_BUNDLE_EXPORT_DEPTH = 8;
 
 const FUNCTION_NODE_TYPES = new Set([
   "ArrowFunctionExpression",
@@ -60,6 +60,7 @@ export const analyzeSource = ({
   filePath = "<inline>",
   runtimeGlobals = [],
   sourceType = "auto",
+  collectProvenanceDiagnostics = false,
 }) => {
   if (typeof source !== "string") {
     throw new TypeError("source must be a string");
@@ -88,6 +89,7 @@ export const analyzeSource = ({
     implicitGlobalAssignments: scopes.implicitGlobalAssignments,
     bundleModules,
     bundleExportCache: new Map(),
+    provenanceDiagnostics: collectProvenanceDiagnostics ? [] : null,
     consumedNodes: new Set(),
     findings: [],
   };
@@ -99,6 +101,7 @@ export const analyzeSource = ({
     sourceHash,
     findingCount: context.findings.length,
     findings: Object.freeze(context.findings),
+    provenanceDiagnostics: context.provenanceDiagnostics,
   });
 };
 
@@ -778,17 +781,20 @@ const bundleExportsFor = (modulePath, context) => {
  */
 const analyzeExportProvenance = (node, context, seen, depth) => {
   let verdict = { kind: "pure" };
+  const recordUnknown = (reason) => {
+    verdict = { kind: "unknown", reason };
+  };
   const visit = (current, currentDepth) => {
     if (!current || typeof current.type !== "string") return;
     if (verdict.kind !== "pure") return;
     if (currentDepth > MAX_BUNDLE_EXPORT_DEPTH) {
-      verdict = { kind: "unknown" };
+      recordUnknown("depth_limit");
       return;
     }
     if (current.type === "Identifier") {
       if (BUNDLE_SYSTEM_SYMBOLS.has(current.name)) {
         if (current.name !== "define") {
-          verdict = { kind: "unknown" };
+          recordUnknown(`bundle_symbol:${current.name}`);
         }
         return;
       }
@@ -802,7 +808,7 @@ const analyzeExportProvenance = (node, context, seen, depth) => {
         if (LANGUAGE_BUILTIN_SET.has(current.name)) {
           return;
         }
-        verdict = { kind: "unknown" };
+        recordUnknown(`unresolved_global:${current.name}`);
         return;
       }
       if (seen.has(binding)) return;
@@ -815,7 +821,7 @@ const analyzeExportProvenance = (node, context, seen, depth) => {
           visit(nested.defaultExport, currentDepth + 1);
           return;
         }
-        verdict = { kind: "unknown" };
+        recordUnknown(`bundle_ref:${binding.bundleModulePath}`);
         return;
       }
       if (binding.aliasNode && !binding.mutated) {
@@ -832,12 +838,12 @@ const analyzeExportProvenance = (node, context, seen, depth) => {
         visit(declaration.body, currentDepth + 1);
         return;
       }
-      verdict = { kind: "unknown" };
+      recordUnknown(`binding_kind:${binding.kind}:${current.name}`);
       return;
     }
     if (isRequireCall(current)) {
       // 导出值里再 require：v1 不做跨模块串联解析，保守返回未知。
-      verdict = { kind: "unknown" };
+      recordUnknown("nested_require");
       return;
     }
     // 成员表达式的属性名不是变量引用：`r.length` 里的 length 不能被当成
@@ -935,6 +941,12 @@ const resolveBundleExport = (modulePath, exportName, context, depth, seen) => {
       scopeId: null,
     };
   }
+  // 诊断模式：记录「哪个模块的哪个导出、因为什么原因没解析出来」。
+  context.provenanceDiagnostics?.push({
+    modulePath,
+    exportName,
+    reason: verdict.reason ?? "unknown",
+  });
   return null;
 };
 

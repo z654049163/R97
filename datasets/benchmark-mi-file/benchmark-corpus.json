@@ -539,8 +539,8 @@
       "overProtectionRate": 0,
       "unsafeFoldRate": 0,
       "blockedNonFoldRate": 1,
-      "elapsedMs": 39596.4513,
-      "decisionsPerSecond": 14.092171941681046
+      "elapsedMs": 30846.722199999997,
+      "decisionsPerSecond": 18.08944225522931
     }
   },
   "foldRateConfidence": {
