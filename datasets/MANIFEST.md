@@ -20,6 +20,25 @@ GitHub 对**单个文件**有 100 MB 硬限制，超过会被服务端直接拒�
 跑出同样的数字。评测产物（`benchmark-results.jsonl`、各 `*-summary.json`）都已入库，
 所以每个论文数字都能在仓库里直接核对。
 
+## 完整语料快照（GitHub Release）
+
+需要原始语料时从 Release 下载，不占用 git 历史：
+
+https://github.com/z654049163/R97/releases/tag/data-v1
+
+| 附件 | 大小 | 内容 | SHA256 |
+|---|---:|---|---|
+| `r97-miniapp-corpus.tar.gz` | 64.6 MB | `real-miniapp-full` + `real-miniapp` | `2089FE08A9168CF4C8515FFB0CD1E5231049A72E073E598AE9CCA9B61F360761` |
+| `r97-external-and-worker.tar.gz` | 37.9 MB | 外部语料 + Worker 小程序项目 | `5E1082EF9B9A52922851EDBFF0F28E6AB1FDBA51F76DAC9DF6F764C946643076` |
+
+```bash
+tar -xzf r97-miniapp-corpus.tar.gz -C datasets/
+tar -xzf r97-external-and-worker.tar.gz -C datasets/
+```
+
+两个压缩包合计 102 MB，对应解压后 1.4 GB（JSON 语料重复度高，gzip 压缩约 14 倍）。
+解压后目录结构与仓库内 `datasets/` 一致。
+
 ## 语料源（本地，可重建）
 
 | 数据集 | 大小 | 内容 | 重建方式 |
