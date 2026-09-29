@@ -22,7 +22,6 @@ datasets/.smoke-corpus.jsonl
 datasets/.mi-corpus.jsonl
 datasets/benchmark-file-smoke/
 datasets/benchmark-file-smoke-base/
-datasets/benchmark-stratified-file-v1/
 
 # ---- 系统与编辑器 ----
 .DS_Store
