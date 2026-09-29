@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T03:01:43.805Z",
+  "generatedAt": "2026-09-29T06:39:51.968Z",
   "environment": {
     "node": "v24.21.0",
     "targetRuntimeIds": [
@@ -400,17 +400,17 @@
     },
     "rawRecordCount": 3900,
     "deduplicatedCount": 3895,
-    "sampleCount": 3718,
+    "sampleCount": 3652,
     "entityView": {
-      "total": 1155,
-      "fold": 390,
-      "protect": 34,
-      "unknown": 731,
+      "total": 1114,
+      "fold": 403,
+      "protect": 47,
+      "unknown": 664,
       "entitiesWithUnsafeFold": 0,
-      "foldRate": 0.33766233766233766,
-      "protectRate": 0.02943722943722944,
-      "unknownRate": 0.6329004329004329,
-      "decidableRate": 0.3670995670995671
+      "foldRate": 0.3617594254937163,
+      "protectRate": 0.0421903052064632,
+      "unknownRate": 0.5960502692998204,
+      "decidableRate": 0.40394973070017953
     },
     "excludedFromEvaluation": {
       "recordCount": 5,
@@ -450,7 +450,7 @@
       "enabled": true,
       "sourceRoot": "E:\\复现\\sample_collector\\可用于实验的干净源码包",
       "filesAnalyzed": 233,
-      "unmatchedDecisionCount": 177
+      "unmatchedDecisionCount": 243
     },
     "independentReference": {
       "description": "判卷探针 r97-oracle-probe 在 e2-node-24.21.0 / e5-edge-headless 上的直接读取",
@@ -470,7 +470,7 @@
             "runtimeId": "e1-ecmascript",
             "probeImplementation": "r97-oracle-probe（隔离 vm，非宿主）",
             "isHost": false,
-            "observedEntityCount": 1155,
+            "observedEntityCount": 1114,
             "collectedAt": null,
             "versionProfile": null
           },
@@ -478,7 +478,7 @@
             "runtimeId": "e2-node-24.21.0",
             "probeImplementation": "r97-oracle-probe",
             "isHost": true,
-            "observedEntityCount": 1155,
+            "observedEntityCount": 1114,
             "collectedAt": null,
             "versionProfile": "v24.21.0"
           },
@@ -486,7 +486,7 @@
             "runtimeId": "e5-edge-headless",
             "probeImplementation": "r97-oracle-probe",
             "isHost": true,
-            "observedEntityCount": 1155,
+            "observedEntityCount": 1114,
             "collectedAt": null,
             "versionProfile": null
           }
@@ -511,7 +511,7 @@
           ]
         }
       ],
-      "entityCount": 1155,
+      "entityCount": 1114,
       "differentialEntityCount": 40,
       "differentialRecordCount": 137,
       "differentialEntities": [
@@ -566,7 +566,7 @@
         "stop": 1,
         "requestAnimationFrame": 1
       },
-      "allowedFold": 1549,
+      "allowedFold": 1582,
       "allowedFoldOnDifferentialEntity": 0,
       "allowedFoldOnDifferentialExamples": []
     },
@@ -580,7 +580,7 @@
       "wechat": null,
       "browser": {
         "runtimeId": "e5-edge-headless",
-        "observedEntityCount": 1079,
+        "observedEntityCount": 1005,
         "browserVersion": {
           "product": "Edg/150.0.4078.83",
           "revision": "@7f302606e52ab615d52e1a0ab89ca415c8c843a3",
@@ -590,38 +590,38 @@
       }
     },
     "byExpected": {
-      "UNKNOWN": 2081,
-      "PROTECT": 88,
-      "FOLD": 1549
+      "UNKNOWN": 1973,
+      "PROTECT": 97,
+      "FOLD": 1582
     },
     "byActual": {
-      "UNKNOWN": 2045,
-      "PROTECT": 124,
-      "FOLD": 1549
+      "UNKNOWN": 1932,
+      "PROTECT": 138,
+      "FOLD": 1582
     },
     "byTransformation": {
-      "CONST_EVAL": 1912,
-      "CALL_EVAL": 1685,
+      "CONST_EVAL": 1868,
+      "CALL_EVAL": 1663,
       "BRANCH_PRUNE": 121
     },
     "byReasonCode": {
       "BINDING_UNRESOLVED": 864,
-      "ALL_TARGETS_MATCH": 2093,
-      "CONTRACT_MISMATCH": 124,
-      "CONTRACT_COVERAGE_MISSING": 761,
-      "EVIDENCE_MISSING": 625
+      "ALL_TARGETS_MATCH": 2124,
+      "CONTRACT_MISMATCH": 138,
+      "CONTRACT_COVERAGE_MISSING": 664,
+      "EVIDENCE_MISSING": 635
     },
     "byUncertaintySource": {
       "binding": 864,
-      "runtime": 625,
-      "behavior": 556
+      "runtime": 635,
+      "behavior": 433
     },
     "byTargetRuntimeStatus": {
-      "confirmed": 3718
+      "confirmed": 3652
     },
     "targetRuntimeImpact": {
       "confirmed": {
-        "sampleCount": 3718,
+        "sampleCount": 3652,
         "unsafeFold": 0,
         "overProtection": 0,
         "overProtectionRate": 0,
@@ -720,6 +720,42 @@
         ]
       },
       {
+        "sampleId": "3e71cc911d8988d33abdcb95",
+        "project": "喝酒摇骰子_21a80905",
+        "file": "喝酒摇骰子_21a80905\\app-service.js",
+        "entityId": "JSON.stringify",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "generatedSource": "JSON.stringify();",
+        "expected": "FOLD",
+        "actualState": "FOLD",
+        "actualAction": "ALLOW_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ]
+      },
+      {
+        "sampleId": "c1f8aa14dabfa0162c4bd69e",
+        "project": "透明头像小助手_a2856cae",
+        "file": "透明头像小助手_a2856cae\\app-service.js",
+        "entityId": "JSON.stringify",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "runtime_global",
+        "resolutionStatus": "resolved",
+        "generatedSource": "JSON.stringify();",
+        "expected": "FOLD",
+        "actualState": "FOLD",
+        "actualAction": "ALLOW_FOLD",
+        "uncertaintySource": null,
+        "targetRuntimeStatus": "confirmed",
+        "reasonCodes": [
+          "ALL_TARGETS_MATCH"
+        ]
+      },
+      {
         "sampleId": "b68fea6a4c68c469710f499a",
         "project": "霍兰德职业性格测试_2f55af3e",
         "file": "霍兰德职业性格测试_2f55af3e\\app-service.js",
@@ -764,42 +800,6 @@
         "bindingKind": "runtime_global",
         "resolutionStatus": "resolved",
         "generatedSource": "if (JSON.stringify) {}",
-        "expected": "FOLD",
-        "actualState": "FOLD",
-        "actualAction": "ALLOW_FOLD",
-        "uncertaintySource": null,
-        "targetRuntimeStatus": "confirmed",
-        "reasonCodes": [
-          "ALL_TARGETS_MATCH"
-        ]
-      },
-      {
-        "sampleId": "b374a40da90281b00e858d1a",
-        "project": "测网速_27431281",
-        "file": "测网速_27431281\\app-service.js",
-        "entityId": "Object.prototype.toString.call",
-        "transformationKind": "CALL_EVAL",
-        "bindingKind": "runtime_global",
-        "resolutionStatus": "resolved",
-        "generatedSource": "Object.prototype.toString.call();",
-        "expected": "FOLD",
-        "actualState": "FOLD",
-        "actualAction": "ALLOW_FOLD",
-        "uncertaintySource": null,
-        "targetRuntimeStatus": "confirmed",
-        "reasonCodes": [
-          "ALL_TARGETS_MATCH"
-        ]
-      },
-      {
-        "sampleId": "9be579bf3711ce3d2e95b541",
-        "project": "HealthScale_d39b2b89",
-        "file": "HealthScale_d39b2b89\\app-service.js",
-        "entityId": "Object.prototype.toString.call",
-        "transformationKind": "CALL_EVAL",
-        "bindingKind": "runtime_global",
-        "resolutionStatus": "resolved",
-        "generatedSource": "Object.prototype.toString.call();",
         "expected": "FOLD",
         "actualState": "FOLD",
         "actualAction": "ALLOW_FOLD",
@@ -1182,115 +1182,115 @@
     ],
     "metrics": {
       "A0-aggressive-fold": {
-        "total": 3718,
-        "allowedFold": 3718,
+        "total": 3652,
+        "allowedFold": 3652,
         "blockedFold": 0,
-        "unsafeFold": 2169,
+        "unsafeFold": 2070,
         "unsafeFoldMeasured": 137,
-        "usefulFold": 1549,
+        "usefulFold": 1582,
         "overProtection": 0,
         "unknown": 0,
-        "correctState": 1549,
+        "correctState": 1582,
         "foldRate": 1,
         "unknownRate": 0,
         "decidableRate": 1,
-        "unsafeFoldMeasuredRate": 0.036847767616998386,
-        "exactStateAccuracy": 0.41662183969876276,
+        "unsafeFoldMeasuredRate": 0.03751369112814896,
+        "exactStateAccuracy": 0.43318729463307776,
         "safeFoldCoverage": 1,
         "overProtectionRate": 0,
         "unsafeFoldRate": 1,
         "blockedNonFoldRate": 0
       },
       "A1-legacy-blacklist": {
-        "total": 3718,
-        "allowedFold": 2942,
+        "total": 3652,
+        "allowedFold": 2876,
         "blockedFold": 776,
-        "unsafeFold": 1401,
+        "unsafeFold": 1302,
         "unsafeFoldMeasured": 20,
-        "usefulFold": 1541,
+        "usefulFold": 1574,
         "overProtection": 8,
         "unknown": 0,
-        "correctState": 1628,
-        "foldRate": 0.7912856374394835,
+        "correctState": 1661,
+        "foldRate": 0.787513691128149,
         "unknownRate": 0,
         "decidableRate": 1,
-        "unsafeFoldMeasuredRate": 0.006798096532970768,
-        "exactStateAccuracy": 0.4378698224852071,
-        "safeFoldCoverage": 0.9948353776630084,
-        "overProtectionRate": 0.005164622336991607,
-        "unsafeFoldRate": 0.6459197786998617,
-        "blockedNonFoldRate": 0.35408022130013833
+        "unsafeFoldMeasuredRate": 0.006954102920723227,
+        "exactStateAccuracy": 0.45481927710843373,
+        "safeFoldCoverage": 0.9949431099873578,
+        "overProtectionRate": 0.0050568900126422255,
+        "unsafeFoldRate": 0.6289855072463768,
+        "blockedNonFoldRate": 0.3710144927536232
       },
       "A2-prefix-blacklist": {
-        "total": 3718,
-        "allowedFold": 3097,
+        "total": 3652,
+        "allowedFold": 3031,
         "blockedFold": 621,
-        "unsafeFold": 1556,
+        "unsafeFold": 1457,
         "unsafeFoldMeasured": 90,
-        "usefulFold": 1541,
+        "usefulFold": 1574,
         "overProtection": 8,
         "unknown": 0,
-        "correctState": 1584,
-        "foldRate": 0.8329747175901022,
+        "correctState": 1617,
+        "foldRate": 0.8299561883899234,
         "unknownRate": 0,
         "decidableRate": 1,
-        "unsafeFoldMeasuredRate": 0.029060381013884404,
-        "exactStateAccuracy": 0.4260355029585799,
-        "safeFoldCoverage": 0.9948353776630084,
-        "overProtectionRate": 0.005164622336991607,
-        "unsafeFoldRate": 0.7173812816966344,
-        "blockedNonFoldRate": 0.2826187183033656
+        "unsafeFoldMeasuredRate": 0.029693170570768722,
+        "exactStateAccuracy": 0.4427710843373494,
+        "safeFoldCoverage": 0.9949431099873578,
+        "overProtectionRate": 0.0050568900126422255,
+        "unsafeFoldRate": 0.7038647342995169,
+        "blockedNonFoldRate": 0.2961352657004831
       },
       "A-safe-all-protect": {
-        "total": 3718,
+        "total": 3652,
         "allowedFold": 0,
-        "blockedFold": 3718,
+        "blockedFold": 3652,
         "unsafeFold": 0,
         "unsafeFoldMeasured": 0,
         "usefulFold": 0,
-        "overProtection": 1549,
+        "overProtection": 1582,
         "unknown": 0,
-        "correctState": 88,
+        "correctState": 97,
         "foldRate": 0,
         "unknownRate": 0,
         "decidableRate": 1,
         "unsafeFoldMeasuredRate": 0,
-        "exactStateAccuracy": 0.023668639053254437,
+        "exactStateAccuracy": 0.02656078860898138,
         "safeFoldCoverage": 0,
         "overProtectionRate": 1,
         "unsafeFoldRate": 0,
         "blockedNonFoldRate": 1
       },
       "R97-full": {
-        "total": 3718,
-        "allowedFold": 1549,
-        "blockedFold": 2169,
+        "total": 3652,
+        "allowedFold": 1582,
+        "blockedFold": 2070,
         "unsafeFold": 0,
         "unsafeFoldMeasured": 0,
-        "usefulFold": 1549,
+        "usefulFold": 1582,
         "overProtection": 0,
-        "unknown": 2045,
-        "correctState": 3682,
-        "foldRate": 0.41662183969876276,
-        "unknownRate": 0.5500268961807423,
-        "decidableRate": 0.44997310381925765,
+        "unknown": 1932,
+        "correctState": 3611,
+        "foldRate": 0.43318729463307776,
+        "unknownRate": 0.5290251916757941,
+        "decidableRate": 0.4709748083242059,
         "unsafeFoldMeasuredRate": 0,
-        "exactStateAccuracy": 0.9903173749327595,
+        "exactStateAccuracy": 0.9887732749178533,
         "safeFoldCoverage": 1,
         "overProtectionRate": 0,
         "unsafeFoldRate": 0,
         "blockedNonFoldRate": 1,
-        "elapsedMs": 344570.4583,
-        "decisionsPerSecond": 10.790245972749428
+        "elapsedMs": 315787.8164,
+        "decisionsPerSecond": 11.56472735912683
       }
     },
     "foldRateConfidence": {
-      "point": 0.41662183969876276,
-      "lower": 0.3786112519006589,
-      "upper": 0.45803494700658837,
+      "point": 0.43318729463307776,
+      "lower": 0.3937144271219995,
+      "upper": 0.4767545158424637,
       "iterations": 2000,
       "clusterKey": "project",
-      "clusterCount": 1037
+      "clusterCount": 1036
     }
   }
 }

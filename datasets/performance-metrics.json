@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-29T04:16:01.264Z",
-  "generatedAtBeijing": "2026/9/29 12:16:01",
+  "generatedAt": "2026-09-29T06:40:53.394Z",
+  "generatedAtBeijing": "2026/9/29 14:40:53",
   "corpus": {
     "generatedAt": "2026-09-23T08:47:48.991Z",
     "sourceRoots": [
@@ -1093,168 +1093,46 @@
     "benchmark-stratified-file-v1": {
       "label": "分层 3 宿主（文件级分析）",
       "directory": "benchmark-stratified-file-v1",
-      "generatedAt": "2026-09-29T03:01:43.805Z",
-      "generatedAtBeijing": "2026/9/29 11:01:43",
+      "generatedAt": "2026-09-29T06:39:51.968Z",
+      "generatedAtBeijing": "2026/9/29 14:39:51",
       "targetRuntimeIds": [
         "e1-ecmascript",
         "e2-node-24.21.0",
         "e5-edge-headless"
       ],
       "includesWechat": false,
-      "sampleCount": 3718,
-      "entityCount": 1155,
-      "entityFold": 390,
-      "entityProtect": 34,
-      "entityUnknown": 731,
-      "entityFoldRate": 0.33766233766233766,
-      "entityDecidableRate": 0.3670995670995671,
-      "fold": 1549,
-      "protect": 124,
-      "unknown": 2045,
-      "foldRate": 0.41662183969876276,
-      "unknownRate": 0.5500268961807423,
-      "decidableRate": 0.44997310381925765,
+      "sampleCount": 3652,
+      "entityCount": 1114,
+      "entityFold": 403,
+      "entityProtect": 47,
+      "entityUnknown": 664,
+      "entityFoldRate": 0.3617594254937163,
+      "entityDecidableRate": 0.40394973070017953,
+      "fold": 1582,
+      "protect": 138,
+      "unknown": 1932,
+      "foldRate": 0.43318729463307776,
+      "unknownRate": 0.5290251916757941,
+      "decidableRate": 0.4709748083242059,
       "unsafeFold": 0,
       "unsafeFoldMeasured": 0,
       "differentialEntityCount": 40,
       "differentialRecordCount": 137,
       "allowedFoldOnDifferentialEntity": 0,
-      "elapsedMs": 344570.4583,
-      "decisionsPerSecond": 10.790245972749428,
+      "elapsedMs": 315787.8164,
+      "decisionsPerSecond": 11.56472735912683,
       "confidenceInterval": {
-        "point": 0.41662183969876276,
-        "lower": 0.3786112519006589,
-        "upper": 0.45803494700658837,
-        "iterations": 2000,
-        "clusterKey": "project",
-        "clusterCount": 1037
-      },
-      "uncertainty": {
-        "binding": 864,
-        "runtime": 625,
-        "behavior": 556
-      },
-      "excluded": {
-        "recordCount": 5,
-        "entityIds": [
-          "default",
-          "default.hex_sha1"
-        ],
-        "examples": [
-          {
-            "entityId": "default",
-            "transformationKind": "CONST_EVAL",
-            "bindingKind": "module_import"
-          },
-          {
-            "entityId": "default",
-            "transformationKind": "CALL_EVAL",
-            "bindingKind": "module_import"
-          },
-          {
-            "entityId": "default",
-            "transformationKind": "CALL_EVAL",
-            "bindingKind": "module_import"
-          },
-          {
-            "entityId": "default",
-            "transformationKind": "CONST_EVAL",
-            "bindingKind": "module_import"
-          },
-          {
-            "entityId": "default.hex_sha1",
-            "transformationKind": "CALL_EVAL",
-            "bindingKind": "module_import"
-          }
-        ]
-      },
-      "strategies": {
-        "A0-aggressive-fold": {
-          "allowedFold": 3718,
-          "foldRate": 1,
-          "unsafeFold": 2169,
-          "unsafeFoldMeasured": 137,
-          "overProtection": 0,
-          "unknown": 0
-        },
-        "A1-legacy-blacklist": {
-          "allowedFold": 2942,
-          "foldRate": 0.7912856374394835,
-          "unsafeFold": 1401,
-          "unsafeFoldMeasured": 20,
-          "overProtection": 8,
-          "unknown": 0
-        },
-        "A2-prefix-blacklist": {
-          "allowedFold": 3097,
-          "foldRate": 0.8329747175901022,
-          "unsafeFold": 1556,
-          "unsafeFoldMeasured": 90,
-          "overProtection": 8,
-          "unknown": 0
-        },
-        "A-safe-all-protect": {
-          "allowedFold": 0,
-          "foldRate": 0,
-          "unsafeFold": 0,
-          "unsafeFoldMeasured": 0,
-          "overProtection": 1549,
-          "unknown": 0
-        },
-        "R97-full": {
-          "allowedFold": 1549,
-          "foldRate": 0.41662183969876276,
-          "unsafeFold": 0,
-          "unsafeFoldMeasured": 0,
-          "overProtection": 0,
-          "unknown": 2045
-        }
-      }
-    },
-    "benchmark-wechat-file-v1": {
-      "label": "分层 4 宿主（文件级分析）",
-      "directory": "benchmark-wechat-file-v1",
-      "generatedAt": "2026-09-29T04:14:50.515Z",
-      "generatedAtBeijing": "2026/9/29 12:14:50",
-      "targetRuntimeIds": [
-        "e1-ecmascript",
-        "e2-node-24.21.0",
-        "e5-edge-headless",
-        "e4-wechat-real"
-      ],
-      "includesWechat": true,
-      "sampleCount": 3652,
-      "entityCount": 1114,
-      "entityFold": 214,
-      "entityProtect": 227,
-      "entityUnknown": 673,
-      "entityFoldRate": 0.19210053859964094,
-      "entityDecidableRate": 0.39587073608617596,
-      "fold": 1119,
-      "protect": 762,
-      "unknown": 1771,
-      "foldRate": 0.30640744797371305,
-      "unknownRate": 0.48493975903614456,
-      "decidableRate": 0.5150602409638554,
-      "unsafeFold": 0,
-      "unsafeFoldMeasured": 0,
-      "differentialEntityCount": 208,
-      "differentialRecordCount": 785,
-      "allowedFoldOnDifferentialEntity": 0,
-      "elapsedMs": 428776.31779999996,
-      "decisionsPerSecond": 8.517261444703792,
-      "confidenceInterval": {
-        "point": 0.30640744797371305,
-        "lower": 0.26968659468001055,
-        "upper": 0.35085646780862373,
+        "point": 0.43318729463307776,
+        "lower": 0.3937144271219995,
+        "upper": 0.4767545158424637,
         "iterations": 2000,
         "clusterKey": "project",
         "clusterCount": 1036
       },
       "uncertainty": {
         "binding": 864,
-        "runtime": 818,
-        "behavior": 89
+        "runtime": 635,
+        "behavior": 433
       },
       "excluded": {
         "recordCount": 5,
@@ -1294,7 +1172,129 @@
         "A0-aggressive-fold": {
           "allowedFold": 3652,
           "foldRate": 1,
-          "unsafeFold": 2533,
+          "unsafeFold": 2070,
+          "unsafeFoldMeasured": 137,
+          "overProtection": 0,
+          "unknown": 0
+        },
+        "A1-legacy-blacklist": {
+          "allowedFold": 2876,
+          "foldRate": 0.787513691128149,
+          "unsafeFold": 1302,
+          "unsafeFoldMeasured": 20,
+          "overProtection": 8,
+          "unknown": 0
+        },
+        "A2-prefix-blacklist": {
+          "allowedFold": 3031,
+          "foldRate": 0.8299561883899234,
+          "unsafeFold": 1457,
+          "unsafeFoldMeasured": 90,
+          "overProtection": 8,
+          "unknown": 0
+        },
+        "A-safe-all-protect": {
+          "allowedFold": 0,
+          "foldRate": 0,
+          "unsafeFold": 0,
+          "unsafeFoldMeasured": 0,
+          "overProtection": 1582,
+          "unknown": 0
+        },
+        "R97-full": {
+          "allowedFold": 1582,
+          "foldRate": 0.43318729463307776,
+          "unsafeFold": 0,
+          "unsafeFoldMeasured": 0,
+          "overProtection": 0,
+          "unknown": 1932
+        }
+      }
+    },
+    "benchmark-wechat-file-v1": {
+      "label": "分层 4 宿主（文件级分析）",
+      "directory": "benchmark-wechat-file-v1",
+      "generatedAt": "2026-09-29T06:32:28.324Z",
+      "generatedAtBeijing": "2026/9/29 14:32:28",
+      "targetRuntimeIds": [
+        "e1-ecmascript",
+        "e2-node-24.21.0",
+        "e5-edge-headless",
+        "e4-wechat-real"
+      ],
+      "includesWechat": true,
+      "sampleCount": 3652,
+      "entityCount": 1114,
+      "entityFold": 255,
+      "entityProtect": 227,
+      "entityUnknown": 632,
+      "entityFoldRate": 0.2289048473967684,
+      "entityDecidableRate": 0.4326750448833034,
+      "fold": 1188,
+      "protect": 762,
+      "unknown": 1702,
+      "foldRate": 0.3253012048192771,
+      "unknownRate": 0.4660460021905805,
+      "decidableRate": 0.5339539978094195,
+      "unsafeFold": 0,
+      "unsafeFoldMeasured": 0,
+      "differentialEntityCount": 208,
+      "differentialRecordCount": 785,
+      "allowedFoldOnDifferentialEntity": 0,
+      "elapsedMs": 353278.7696,
+      "decisionsPerSecond": 10.337445423439902,
+      "confidenceInterval": {
+        "point": 0.3253012048192771,
+        "lower": 0.2900162778079219,
+        "upper": 0.3683179401063532,
+        "iterations": 2000,
+        "clusterKey": "project",
+        "clusterCount": 1036
+      },
+      "uncertainty": {
+        "binding": 864,
+        "runtime": 818,
+        "behavior": 20
+      },
+      "excluded": {
+        "recordCount": 5,
+        "entityIds": [
+          "default",
+          "default.hex_sha1"
+        ],
+        "examples": [
+          {
+            "entityId": "default",
+            "transformationKind": "CONST_EVAL",
+            "bindingKind": "module_import"
+          },
+          {
+            "entityId": "default",
+            "transformationKind": "CALL_EVAL",
+            "bindingKind": "module_import"
+          },
+          {
+            "entityId": "default",
+            "transformationKind": "CALL_EVAL",
+            "bindingKind": "module_import"
+          },
+          {
+            "entityId": "default",
+            "transformationKind": "CONST_EVAL",
+            "bindingKind": "module_import"
+          },
+          {
+            "entityId": "default.hex_sha1",
+            "transformationKind": "CALL_EVAL",
+            "bindingKind": "module_import"
+          }
+        ]
+      },
+      "strategies": {
+        "A0-aggressive-fold": {
+          "allowedFold": 3652,
+          "foldRate": 1,
+          "unsafeFold": 2464,
           "unsafeFoldMeasured": 785,
           "overProtection": 0,
           "unknown": 0
@@ -1302,7 +1302,7 @@
         "A1-legacy-blacklist": {
           "allowedFold": 2876,
           "foldRate": 0.787513691128149,
-          "unsafeFold": 1762,
+          "unsafeFold": 1693,
           "unsafeFoldMeasured": 115,
           "overProtection": 5,
           "unknown": 0
@@ -1310,7 +1310,7 @@
         "A2-prefix-blacklist": {
           "allowedFold": 3031,
           "foldRate": 0.8299561883899234,
-          "unsafeFold": 1917,
+          "unsafeFold": 1848,
           "unsafeFoldMeasured": 239,
           "overProtection": 5,
           "unknown": 0
@@ -1320,16 +1320,16 @@
           "foldRate": 0,
           "unsafeFold": 0,
           "unsafeFoldMeasured": 0,
-          "overProtection": 1119,
+          "overProtection": 1188,
           "unknown": 0
         },
         "R97-full": {
-          "allowedFold": 1119,
-          "foldRate": 0.30640744797371305,
+          "allowedFold": 1188,
+          "foldRate": 0.3253012048192771,
           "unsafeFold": 0,
           "unsafeFoldMeasured": 0,
           "overProtection": 0,
-          "unknown": 1771
+          "unknown": 1702
         }
       }
     },
