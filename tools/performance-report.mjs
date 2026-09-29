@@ -45,6 +45,8 @@ const num = (value) =>
 const BENCHMARKS = [
   ["benchmark-stratified-v1", "分层 3 宿主（语言 + Node + Edge）"],
   ["benchmark-wechat", "分层 4 宿主（+ 真实微信 AppService）"],
+  ["benchmark-stratified-file-v1", "分层 3 宿主（文件级分析）"],
+  ["benchmark-wechat-file-v1", "分层 4 宿主（文件级分析）"],
   ["benchmark-record-weighted-v1", "自然分布（记录加权）"],
   ["benchmark-external-node-tarball", "Node 官方测试语料"],
   ["benchmark-external-browser-tarball", "浏览器 WPT 语料"],
