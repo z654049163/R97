@@ -17,6 +17,7 @@ import {
   TARGET_RUNTIME_SOURCE,
   TRANSFORMATION_KIND,
 } from "../constants.mjs";
+import { analyzeSource } from "../analyzer.mjs";
 import { buildEvidenceRecords } from "../evidence/evidence-builder.mjs";
 import { collectBrowserObservations } from "../evidence/browser-probe.mjs";
 import { collectLanguageObservations } from "../evidence/language-probe.mjs";
@@ -112,6 +113,7 @@ export const runBenchmark = ({
   targetRuntimeIds = DEFAULT_TARGET_RUNTIME_IDS,
   evaluatorRuntimeId = RUNTIME_IDS.LANGUAGE,
   wechatReportPath = null,
+  sourceRoot = null,
 }) => {
   return runBenchmarkAsync({
     outputDir,
@@ -123,6 +125,7 @@ export const runBenchmark = ({
     targetRuntimeIds,
     evaluatorRuntimeId,
     wechatReportPath,
+    sourceRoot,
   });
 };
 
@@ -136,6 +139,7 @@ const runBenchmarkAsync = async ({
   targetRuntimeIds,
   evaluatorRuntimeId,
   wechatReportPath,
+  sourceRoot,
 }) => {
   mkdirSync(outputDir, { recursive: true });
   const legacy = loadLegacyBlacklist(legacyMapPath);
@@ -153,7 +157,8 @@ const runBenchmarkAsync = async ({
           legacy,
           targetRuntimeIds,
           evaluatorRuntimeId,
-        wechatReportPath,
+          wechatReportPath,
+          sourceRoot,
       })
     : null;
   const corpusResults = corpus?.results ?? null;
@@ -310,6 +315,7 @@ export const runCorpusBenchmark = async ({
   targetRuntimeIds = DEFAULT_TARGET_RUNTIME_IDS,
   evaluatorRuntimeId = RUNTIME_IDS.LANGUAGE,
   wechatReportPath = null,
+  sourceRoot = null,
 }) => {
   if (!existsSync(corpusPath)) {
     throw new Error(`Corpus file does not exist: ${corpusPath}`);
@@ -337,18 +343,137 @@ export const runCorpusBenchmark = async ({
   const excludedRecords = mappedRecords.filter(
     (record) => record.generatedSource === null,
   );
-  const initial = records.map((record) =>
-    analyzeAndDecide({
-      source: record.generatedSource,
-      filePath: record.file,
-      targetRuntimeIds,
-      targetRuntimeSource: TARGET_RUNTIME_SOURCE.EXPERIMENT_CONFIG,
-      evaluatorRuntimeId,
-      policyVersion: "benchmark-policy-v1",
-      contractVersion: "benchmark-v1",
-    }),
-  );
-  const allPlans = initial.flatMap((result) => result.decisions);
+  // ---- 文件级分析（迭代 2.5）----
+  //
+  // 记录重建出来的表达式（`cloud.init();` 这种）没有 define/require 上下文，
+  // bundle 模块表解析看不到任何东西。传入 sourceRoot 后改为分析原始
+  // app-service.js，再按 programPointId 把判定回填到记录上；同一文件只分析一次。
+  // 必须显式传 --source-root 才启用：语料记录里虽然带 sourceRoot 字段，
+  // 但那个目录一旦不存在，静默退化成"所有记录都匹配不到判定"会污染基准结果。
+  const effectiveSourceRoot = sourceRoot ?? null;
+  const analyzedFiles = new Set();
+  const readRecordSource = (record) => {
+    if (!effectiveSourceRoot) return null;
+    const absolutePath = path.join(effectiveSourceRoot, record.file);
+    return existsSync(absolutePath) ? readFileSync(absolutePath, "utf8") : null;
+  };
+
+  const analyzeRecords = (recordList, evidenceRecords) => {
+    const decisionsBySampleId = new Map();
+    if (!effectiveSourceRoot) {
+      for (const record of recordList) {
+        const result = analyzeAndDecide({
+          source: record.generatedSource,
+          filePath: record.file,
+          targetRuntimeIds,
+          targetRuntimeSource: TARGET_RUNTIME_SOURCE.EXPERIMENT_CONFIG,
+          evaluatorRuntimeId,
+          policyVersion: "benchmark-policy-v1",
+          contractVersion: "benchmark-v1",
+          evidenceRecords,
+        });
+        decisionsBySampleId.set(record.sampleId, result.decisions[0] ?? null);
+      }
+      return decisionsBySampleId;
+    }
+
+    const byFile = new Map();
+    for (const record of recordList) {
+      const bucket = byFile.get(record.file) ?? [];
+      bucket.push(record);
+      byFile.set(record.file, bucket);
+    }
+    for (const [file, bucket] of byFile.entries()) {
+      // 只有含 module_import 记录的文件才需要文件级分析——它们是 bundle 模块表
+      // 解析的唯一受益者。其余文件走表达式模式，避免给 1000+ 个大文件建 AST
+      // （实测把 1046 个文件的 analysis 全缓存下来会吃掉 4.7 GB 内存）。
+      const needsFileAnalysis = bucket.some(
+        (record) => record.bindingKind === "module_import",
+      );
+      if (!needsFileAnalysis) {
+        for (const record of bucket) {
+          const result = analyzeAndDecide({
+            source: record.generatedSource,
+            filePath: record.file,
+            targetRuntimeIds,
+            targetRuntimeSource: TARGET_RUNTIME_SOURCE.EXPERIMENT_CONFIG,
+            evaluatorRuntimeId,
+            policyVersion: "benchmark-policy-v1",
+            contractVersion: "benchmark-v1",
+            evidenceRecords,
+          });
+          decisionsBySampleId.set(record.sampleId, result.decisions[0] ?? null);
+        }
+        continue;
+      }
+      const source = readRecordSource(bucket[0]);
+      if (source === null) {
+        for (const record of bucket) {
+          decisionsBySampleId.set(record.sampleId, null);
+        }
+        continue;
+      }
+      const analysis = analyzeSource({ source, filePath: file });
+      analyzedFiles.add(file);
+      const result = analyzeAndDecide({
+        source,
+        filePath: file,
+        precomputedAnalysis: analysis,
+        targetRuntimeIds,
+        targetRuntimeSource: TARGET_RUNTIME_SOURCE.EXPERIMENT_CONFIG,
+        evaluatorRuntimeId,
+        policyVersion: "benchmark-policy-v1",
+        contractVersion: "benchmark-v1",
+        evidenceRecords,
+      });
+      const byPointId = new Map();
+      const byEntity = new Map();
+      const byEntityIdOnly = new Map();
+      const byLocation = new Map();
+      for (const decision of result.decisions) {
+        if (!byPointId.has(decision.programPointId)) {
+          byPointId.set(decision.programPointId, decision);
+        }
+        const entityKey = `${decision.runtimeEntity.entityId}\u0000${decision.query.transformationKind}`;
+        if (!byEntity.has(entityKey)) {
+          byEntity.set(entityKey, decision);
+        }
+        if (!byEntityIdOnly.has(decision.runtimeEntity.entityId)) {
+          byEntityIdOnly.set(decision.runtimeEntity.entityId, decision);
+        }
+        // 语料记录和重新分析共用同一份源码，行列号是最稳的关联键：
+        // bundle 解析会改变 entityId 与 programPointId，但不会改变位置。
+        const start = decision.programPoint?.start;
+        if (start) {
+          const locationKey = `${start.line}:${start.column}`;
+          if (!byLocation.has(locationKey)) {
+            byLocation.set(locationKey, decision);
+          }
+        }
+      }
+      for (const record of bucket) {
+        const direct = byPointId.get(record.programPointId);
+        const fallback = byEntity.get(
+          `${record.entityId}\u0000${record.transformationKind}`,
+        );
+        const looser = byEntityIdOnly.get(record.entityId);
+        const recordStart = record.programPoint?.start;
+        const byPosition = recordStart
+          ? byLocation.get(`${recordStart.line}:${recordStart.column}`)
+          : undefined;
+        decisionsBySampleId.set(
+          record.sampleId,
+          direct ?? byPosition ?? fallback ?? looser ?? null,
+        );
+      }
+    }
+    return decisionsBySampleId;
+  };
+
+  const initialDecisions = analyzeRecords(records, []);
+  const allPlans = records
+    .map((record) => initialDecisions.get(record.sampleId))
+    .filter(Boolean);
   const evidence = await buildRuntimeEvidence(
     allPlans,
     targetRuntimeIds,
@@ -356,18 +481,16 @@ export const runCorpusBenchmark = async ({
     wechatReportPath,
   );
   const startedAt = performance.now();
-  const results = records.map((record, index) => {
-    const result = analyzeAndDecide({
-      source: record.generatedSource,
-      filePath: record.file,
-      targetRuntimeIds,
-      targetRuntimeSource: TARGET_RUNTIME_SOURCE.EXPERIMENT_CONFIG,
-      evaluatorRuntimeId,
-      policyVersion: "benchmark-policy-v1",
-      contractVersion: "benchmark-v1",
-      evidenceRecords: evidence.records,
-    });
-    const decision = result.decisions[0];
+  const finalDecisions = analyzeRecords(records, evidence.records);
+  // 文件级分析下，部分记录在重新分析后不再产生对应 finding——例如 bundle 导出
+  // 被判定为纯语言（finding 消失），或实体路径改成宿主根。这些不能当成 UNKNOWN
+  // 计入结果，否则会虚高未决率；显式排除并单独计数。
+  const matchedRecords = records.filter((record) =>
+    Boolean(finalDecisions.get(record.sampleId)),
+  );
+  const unmatchedDecisionCount = records.length - matchedRecords.length;
+  const results = matchedRecords.map((record) => {
+    const decision = finalDecisions.get(record.sampleId);
     const expected = expectedStateFromEvidence(decision, evidence.records);
     const actualState = decision?.decision.knowledgeState ?? "UNKNOWN";
     const actualAction =
@@ -439,6 +562,12 @@ export const runCorpusBenchmark = async ({
         transformationKind: record.transformationKind,
         bindingKind: record.bindingKind,
       })),
+    },
+    fileLevelAnalysis: {
+      enabled: Boolean(effectiveSourceRoot),
+      sourceRoot: effectiveSourceRoot,
+      filesAnalyzed: analyzedFiles.size,
+      unmatchedDecisionCount,
     },
     independentReference,
     evidenceAvailability: evidence.availability,
@@ -1685,6 +1814,12 @@ export const parseBenchmarkArgs = (argv) => {
         options.wechatReportPath = path.resolve(value(argument, next));
         index += 1;
         break;
+      case "--source-root":
+        // 迭代 2.5：指定原始 app-service.js 的根目录后，基准改按文件分析，
+        // 而不是用记录重建的单条表达式。
+        options.sourceRoot = path.resolve(value(argument, next));
+        index += 1;
+        break;
       case "--corpus-limit":
         options.corpusLimit = positiveInteger(argument, next);
         index += 1;
@@ -1789,6 +1924,7 @@ if (isMain()) {
         "  --evaluator <id>      Evaluator runtime: language,node,browser,wechat",
         "  --include-browser     Add the real headless Edge runtime to targets",
         "  --include-wechat      Add the real WeChat runtime to targets",
+        "  --source-root <path>  Analyze original app-service.js files instead of rebuilt snippets",
       ].join("\n"),
     );
   } else {

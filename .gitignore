@@ -17,6 +17,13 @@ datasets/worker-miniapp-candidates/code-search*.json
 # ---- 大体积位图（保留 SVG 与报告）----
 datasets/**/*.png
 
+# ---- 迭代 2.5 验证用的临时语料与冒烟产物 ----
+datasets/.smoke-corpus.jsonl
+datasets/.mi-corpus.jsonl
+datasets/benchmark-file-smoke/
+datasets/benchmark-file-smoke-base/
+datasets/benchmark-stratified-file-v1/
+
 # ---- 系统与编辑器 ----
 .DS_Store
 Thumbs.db

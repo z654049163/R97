@@ -25,12 +25,17 @@ export const analyzeAndDecide = ({
   asOf = new Date().toISOString(),
   evidenceRecords = [],
   contractVersion = "v1",
+  precomputedAnalysis = null,
 }) => {
-  const analysis = analyzeSource({
-    source,
-    filePath,
-    runtimeGlobals,
-  });
+  // 文件级分析（迭代 2.5）：同一份源码要跑两次决策（建 plans / 带证据终判），
+  // 传入预分析结果可以跳过第二次 AST 解析与绑定构建。
+  const analysis =
+    precomputedAnalysis ??
+    analyzeSource({
+      source,
+      filePath,
+      runtimeGlobals,
+    });
 
   const decisions = analysis.findings.map((finding) => {
     const semanticContract = buildSemanticContract({

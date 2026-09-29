@@ -1,0 +1,554 @@
+{
+  "corpusPath": "E:\\读论文\\R97\\datasets\\.mi-corpus.jsonl",
+  "sampling": {
+    "mode": "record-reservoir",
+    "corpusLimit": 5000
+  },
+  "rawRecordCount": 600,
+  "deduplicatedCount": 600,
+  "sampleCount": 565,
+  "entityView": {
+    "total": 108,
+    "fold": 42,
+    "protect": 1,
+    "unknown": 65,
+    "entitiesWithUnsafeFold": 0,
+    "foldRate": 0.3888888888888889,
+    "protectRate": 0.009259259259259259,
+    "unknownRate": 0.6018518518518519,
+    "decidableRate": 0.39814814814814814
+  },
+  "excludedFromEvaluation": {
+    "recordCount": 0,
+    "entityIds": [],
+    "examples": []
+  },
+  "fileLevelAnalysis": {
+    "enabled": true,
+    "sourceRoot": "E:\\复现\\sample_collector\\可用于实验的干净源码包",
+    "filesAnalyzed": 88,
+    "unmatchedDecisionCount": 35
+  },
+  "independentReference": null,
+  "evidenceAvailability": {
+    "language": true,
+    "node": true,
+    "wechat": false,
+    "browser": false
+  },
+  "runtimeEvidence": {
+    "wechat": null,
+    "browser": null
+  },
+  "byExpected": {
+    "FOLD": 190,
+    "UNKNOWN": 375
+  },
+  "byActual": {
+    "FOLD": 190,
+    "UNKNOWN": 374,
+    "PROTECT": 1
+  },
+  "byTransformation": {
+    "CALL_EVAL": 390,
+    "CONST_EVAL": 130,
+    "BRANCH_PRUNE": 45
+  },
+  "byReasonCode": {
+    "ALL_TARGETS_MATCH": 193,
+    "CONTRACT_COVERAGE_MISSING": 372,
+    "CONTRACT_MISMATCH": 1,
+    "EVIDENCE_MISSING": 10
+  },
+  "byUncertaintySource": {
+    "binding": 0,
+    "runtime": 10,
+    "behavior": 364
+  },
+  "byTargetRuntimeStatus": {
+    "confirmed": 565
+  },
+  "targetRuntimeImpact": {
+    "confirmed": {
+      "sampleCount": 565,
+      "unsafeFold": 0,
+      "overProtection": 0,
+      "overProtectionRate": 0,
+      "blockedForUnconfirmedTarget": 0
+    }
+  },
+  "examples": [
+    {
+      "sampleId": "df4cbc6e02eb60272bbd591c",
+      "project": "006dbcc9",
+      "file": "006dbcc9\\app-service.js",
+      "entityId": "cloud.init",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "module_import",
+      "resolutionStatus": "resolved",
+      "generatedSource": "cloud.init();",
+      "expected": "FOLD",
+      "actualState": "FOLD",
+      "actualAction": "ALLOW_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH"
+      ]
+    },
+    {
+      "sampleId": "bc1423a544c6b643cc82a240",
+      "project": "006dbcc9",
+      "file": "006dbcc9\\app-service.js",
+      "entityId": "cloud.DYNAMIC_CURRENT_ENV",
+      "transformationKind": "CONST_EVAL",
+      "bindingKind": "module_import",
+      "resolutionStatus": "resolved",
+      "generatedSource": "cloud.DYNAMIC_CURRENT_ENV;",
+      "expected": "FOLD",
+      "actualState": "FOLD",
+      "actualAction": "ALLOW_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH"
+      ]
+    },
+    {
+      "sampleId": "3d892fe8033f0f8964825dfe",
+      "project": "006dbcc9",
+      "file": "006dbcc9\\app-service.js",
+      "entityId": "cloud.init",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "module_import",
+      "resolutionStatus": "resolved",
+      "generatedSource": "cloud.init();",
+      "expected": "FOLD",
+      "actualState": "FOLD",
+      "actualAction": "ALLOW_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH"
+      ]
+    },
+    {
+      "sampleId": "7e2a75f05e61127e6c1e1f86",
+      "project": "006dbcc9",
+      "file": "006dbcc9\\app-service.js",
+      "entityId": "cloud.DYNAMIC_CURRENT_ENV",
+      "transformationKind": "CONST_EVAL",
+      "bindingKind": "module_import",
+      "resolutionStatus": "resolved",
+      "generatedSource": "cloud.DYNAMIC_CURRENT_ENV;",
+      "expected": "FOLD",
+      "actualState": "FOLD",
+      "actualAction": "ALLOW_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH"
+      ]
+    },
+    {
+      "sampleId": "debba8fd1513f2a521510d4b",
+      "project": "006dbcc9",
+      "file": "006dbcc9\\app-service.js",
+      "entityId": "cloud.init",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "module_import",
+      "resolutionStatus": "resolved",
+      "generatedSource": "cloud.init();",
+      "expected": "FOLD",
+      "actualState": "FOLD",
+      "actualAction": "ALLOW_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH"
+      ]
+    },
+    {
+      "sampleId": "d200dde1e23b02ab7d7ea514",
+      "project": "006dbcc9",
+      "file": "006dbcc9\\app-service.js",
+      "entityId": "cloud.DYNAMIC_CURRENT_ENV",
+      "transformationKind": "CONST_EVAL",
+      "bindingKind": "module_import",
+      "resolutionStatus": "resolved",
+      "generatedSource": "cloud.DYNAMIC_CURRENT_ENV;",
+      "expected": "FOLD",
+      "actualState": "FOLD",
+      "actualAction": "ALLOW_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH"
+      ]
+    },
+    {
+      "sampleId": "7ade5d39f660d6cc84215049",
+      "project": "006dbcc9",
+      "file": "006dbcc9\\app-service.js",
+      "entityId": "cloud.init",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "module_import",
+      "resolutionStatus": "resolved",
+      "generatedSource": "cloud.init();",
+      "expected": "FOLD",
+      "actualState": "FOLD",
+      "actualAction": "ALLOW_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH"
+      ]
+    },
+    {
+      "sampleId": "9dea3ee67574585b8dcf8852",
+      "project": "006dbcc9",
+      "file": "006dbcc9\\app-service.js",
+      "entityId": "cloud.DYNAMIC_CURRENT_ENV",
+      "transformationKind": "CONST_EVAL",
+      "bindingKind": "module_import",
+      "resolutionStatus": "resolved",
+      "generatedSource": "cloud.DYNAMIC_CURRENT_ENV;",
+      "expected": "FOLD",
+      "actualState": "FOLD",
+      "actualAction": "ALLOW_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH"
+      ]
+    },
+    {
+      "sampleId": "a23644908f1733ac7965411f",
+      "project": "006dbcc9",
+      "file": "006dbcc9\\app-service.js",
+      "entityId": "cloud.init",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "module_import",
+      "resolutionStatus": "resolved",
+      "generatedSource": "cloud.init();",
+      "expected": "FOLD",
+      "actualState": "FOLD",
+      "actualAction": "ALLOW_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH"
+      ]
+    },
+    {
+      "sampleId": "6bb0f759a232f3aec662390b",
+      "project": "006dbcc9",
+      "file": "006dbcc9\\app-service.js",
+      "entityId": "cloud.DYNAMIC_CURRENT_ENV",
+      "transformationKind": "CONST_EVAL",
+      "bindingKind": "module_import",
+      "resolutionStatus": "resolved",
+      "generatedSource": "cloud.DYNAMIC_CURRENT_ENV;",
+      "expected": "FOLD",
+      "actualState": "FOLD",
+      "actualAction": "ALLOW_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH"
+      ]
+    },
+    {
+      "sampleId": "7e83ff8d87f76832ca7fef07",
+      "project": "006dbcc9",
+      "file": "006dbcc9\\app-service.js",
+      "entityId": "cloud.database",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "module_import",
+      "resolutionStatus": "resolved",
+      "generatedSource": "cloud.database();",
+      "expected": "UNKNOWN",
+      "actualState": "UNKNOWN",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": "behavior",
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "CONTRACT_COVERAGE_MISSING"
+      ]
+    },
+    {
+      "sampleId": "6e8c0a482aabe6fea910182c",
+      "project": "006dbcc9",
+      "file": "006dbcc9\\app-service.js",
+      "entityId": "cloud.getWXContext",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "module_import",
+      "resolutionStatus": "resolved",
+      "generatedSource": "cloud.getWXContext();",
+      "expected": "UNKNOWN",
+      "actualState": "UNKNOWN",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": "behavior",
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "CONTRACT_COVERAGE_MISSING"
+      ]
+    },
+    {
+      "sampleId": "b26b014d8201190ee6188db2",
+      "project": "006dbcc9",
+      "file": "006dbcc9\\app-service.js",
+      "entityId": "cloud.database",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "module_import",
+      "resolutionStatus": "resolved",
+      "generatedSource": "cloud.database();",
+      "expected": "UNKNOWN",
+      "actualState": "UNKNOWN",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": "behavior",
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "CONTRACT_COVERAGE_MISSING"
+      ]
+    },
+    {
+      "sampleId": "b8d4245074cd961fb1bd646a",
+      "project": "006dbcc9",
+      "file": "006dbcc9\\app-service.js",
+      "entityId": "cloud.getWXContext",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "module_import",
+      "resolutionStatus": "resolved",
+      "generatedSource": "cloud.getWXContext();",
+      "expected": "UNKNOWN",
+      "actualState": "UNKNOWN",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": "behavior",
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "CONTRACT_COVERAGE_MISSING"
+      ]
+    },
+    {
+      "sampleId": "6852e71d014c712e5c1f2d49",
+      "project": "006dbcc9",
+      "file": "006dbcc9\\app-service.js",
+      "entityId": "cloud.database",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "module_import",
+      "resolutionStatus": "resolved",
+      "generatedSource": "cloud.database();",
+      "expected": "UNKNOWN",
+      "actualState": "UNKNOWN",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": "behavior",
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "CONTRACT_COVERAGE_MISSING"
+      ]
+    },
+    {
+      "sampleId": "18783727ba70fb187361c562",
+      "project": "006dbcc9",
+      "file": "006dbcc9\\app-service.js",
+      "entityId": "cloud.database",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "module_import",
+      "resolutionStatus": "resolved",
+      "generatedSource": "cloud.database();",
+      "expected": "UNKNOWN",
+      "actualState": "UNKNOWN",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": "behavior",
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "CONTRACT_COVERAGE_MISSING"
+      ]
+    },
+    {
+      "sampleId": "bea535020f2af2e40c2d89de",
+      "project": "006dbcc9",
+      "file": "006dbcc9\\app-service.js",
+      "entityId": "cloud.database",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "module_import",
+      "resolutionStatus": "resolved",
+      "generatedSource": "cloud.database();",
+      "expected": "UNKNOWN",
+      "actualState": "UNKNOWN",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": "behavior",
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "CONTRACT_COVERAGE_MISSING"
+      ]
+    },
+    {
+      "sampleId": "38c11b2e9166829167931a18",
+      "project": "00b1fe38",
+      "file": "00b1fe38\\app-service.js",
+      "entityId": "toPropertyKey",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "module_import",
+      "resolutionStatus": "resolved",
+      "generatedSource": "toPropertyKey();",
+      "expected": "UNKNOWN",
+      "actualState": "UNKNOWN",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": "behavior",
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "CONTRACT_COVERAGE_MISSING"
+      ]
+    },
+    {
+      "sampleId": "dc50b736b56f5e10335963ec",
+      "project": "00b1fe38",
+      "file": "00b1fe38\\app-service.js",
+      "entityId": "t",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "module_import",
+      "resolutionStatus": "resolved",
+      "generatedSource": "t();",
+      "expected": "UNKNOWN",
+      "actualState": "UNKNOWN",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": "behavior",
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "CONTRACT_COVERAGE_MISSING"
+      ]
+    },
+    {
+      "sampleId": "9aaef751cef615cc982438bd",
+      "project": "03a6c031",
+      "file": "03a6c031\\app-service.js",
+      "entityId": "a",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "module_import",
+      "resolutionStatus": "resolved",
+      "generatedSource": "a();",
+      "expected": "UNKNOWN",
+      "actualState": "UNKNOWN",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": "behavior",
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "CONTRACT_COVERAGE_MISSING"
+      ]
+    }
+  ],
+  "metrics": {
+    "A0-aggressive-fold": {
+      "total": 565,
+      "allowedFold": 565,
+      "blockedFold": 0,
+      "unsafeFold": 375,
+      "unsafeFoldMeasured": 0,
+      "usefulFold": 190,
+      "overProtection": 0,
+      "unknown": 0,
+      "correctState": 190,
+      "foldRate": 1,
+      "unknownRate": 0,
+      "decidableRate": 1,
+      "unsafeFoldMeasuredRate": 0,
+      "exactStateAccuracy": 0.336283185840708,
+      "safeFoldCoverage": 1,
+      "overProtectionRate": 0,
+      "unsafeFoldRate": 1,
+      "blockedNonFoldRate": 0
+    },
+    "A1-legacy-blacklist": {
+      "total": 565,
+      "allowedFold": 562,
+      "blockedFold": 3,
+      "unsafeFold": 372,
+      "unsafeFoldMeasured": 0,
+      "usefulFold": 190,
+      "overProtection": 0,
+      "unknown": 0,
+      "correctState": 190,
+      "foldRate": 0.9946902654867257,
+      "unknownRate": 0,
+      "decidableRate": 1,
+      "unsafeFoldMeasuredRate": 0,
+      "exactStateAccuracy": 0.336283185840708,
+      "safeFoldCoverage": 1,
+      "overProtectionRate": 0,
+      "unsafeFoldRate": 0.992,
+      "blockedNonFoldRate": 0.008
+    },
+    "A2-prefix-blacklist": {
+      "total": 565,
+      "allowedFold": 562,
+      "blockedFold": 3,
+      "unsafeFold": 372,
+      "unsafeFoldMeasured": 0,
+      "usefulFold": 190,
+      "overProtection": 0,
+      "unknown": 0,
+      "correctState": 190,
+      "foldRate": 0.9946902654867257,
+      "unknownRate": 0,
+      "decidableRate": 1,
+      "unsafeFoldMeasuredRate": 0,
+      "exactStateAccuracy": 0.336283185840708,
+      "safeFoldCoverage": 1,
+      "overProtectionRate": 0,
+      "unsafeFoldRate": 0.992,
+      "blockedNonFoldRate": 0.008
+    },
+    "A-safe-all-protect": {
+      "total": 565,
+      "allowedFold": 0,
+      "blockedFold": 565,
+      "unsafeFold": 0,
+      "unsafeFoldMeasured": 0,
+      "usefulFold": 0,
+      "overProtection": 190,
+      "unknown": 0,
+      "correctState": 0,
+      "foldRate": 0,
+      "unknownRate": 0,
+      "decidableRate": 1,
+      "unsafeFoldMeasuredRate": 0,
+      "exactStateAccuracy": 0,
+      "safeFoldCoverage": 0,
+      "overProtectionRate": 1,
+      "unsafeFoldRate": 0,
+      "blockedNonFoldRate": 1
+    },
+    "R97-full": {
+      "total": 565,
+      "allowedFold": 190,
+      "blockedFold": 375,
+      "unsafeFold": 0,
+      "unsafeFoldMeasured": 0,
+      "usefulFold": 190,
+      "overProtection": 0,
+      "unknown": 374,
+      "correctState": 564,
+      "foldRate": 0.336283185840708,
+      "unknownRate": 0.6619469026548672,
+      "decidableRate": 0.3380530973451327,
+      "unsafeFoldMeasuredRate": 0,
+      "exactStateAccuracy": 0.9982300884955753,
+      "safeFoldCoverage": 1,
+      "overProtectionRate": 0,
+      "unsafeFoldRate": 0,
+      "blockedNonFoldRate": 1,
+      "elapsedMs": 42884.36469999999,
+      "decisionsPerSecond": 13.174964907431638
+    }
+  },
+  "foldRateConfidence": {
+    "point": 0.336283185840708,
+    "lower": 0.2194616977225673,
+    "upper": 0.4485981308411215,
+    "iterations": 2000,
+    "clusterKey": "project",
+    "clusterCount": 86
+  }
+}
