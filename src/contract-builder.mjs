@@ -7,8 +7,11 @@ import {
   TRANSFORMATION_KIND,
 } from "./constants.mjs";
 import { createSemanticContract } from "./model.mjs";
+import { LANGUAGE_BUILTIN_ROOTS } from "./global-roots.mjs";
 import { NODE_BUILTIN_ROOTS } from "./module-runtime.mjs";
 import { RUNTIME_IDS } from "./runtime-profiles.mjs";
+
+const LANGUAGE_BUILTIN_SET = new Set(LANGUAGE_BUILTIN_ROOTS);
 
 /**
  * 宿主归属表：根节点 → 必须参与比较的运行时。
@@ -193,7 +196,24 @@ const requiredDimensionsFor = (finding) => {
     dimensions.add(SEMANTIC_DIMENSION.ASYNC_BEHAVIOR);
   }
   if (finding.usageContext.returnValueUsage) {
-    dimensions.add(SEMANTIC_DIMENSION.RETURN_VALUE);
+    // 纯语言实体的返回值由语言语义决定，跨宿主一致，不需要独立的 return_value
+    // 观测——现有探针本来也不产出该维度，要求它只会把判定卡死在 UNKNOWN。
+    //
+    // 两类实体适用：
+    //   1. 根是 ECMAScript 语言内建（`Error.call`、`String.prototype.charCodeAt.call`）
+    //   2. 已证明无宿主依赖的 bundle 内导出（`bundle-export:` / `bundle-default:`）
+    //
+    // 宿主导出的实体（`cloud.database`、`wx.request`）**不适用**：它们的返回值
+    // 取决于宿主行为，必须继续要求观测。
+    const root = finding.runtimeEntity.normalizedPath.split(".")[0];
+    const origin = finding.bindingRef.bindingOrigin ?? "";
+    const isPureLanguageEntity =
+      LANGUAGE_BUILTIN_SET.has(root) ||
+      origin.startsWith("bundle-export:") ||
+      origin.startsWith("bundle-default:");
+    if (!isPureLanguageEntity) {
+      dimensions.add(SEMANTIC_DIMENSION.RETURN_VALUE);
+    }
   }
   return [...dimensions];
 };

@@ -35,11 +35,11 @@
 <circle cx="666" cy="290" r="5" fill="#7f8c8d"/>
 <text x="678" y="294" font-size="12.5" fill="#26333f">A-safe-all-protect</text>
 <text x="678" y="309" font-size="11" fill="#6b7a89">放行 0，其中实测差分 0</text>
-<circle cx="265.749726177437" cy="446" r="6.5" fill="#1a7f5a" fill-opacity="0.92" stroke="#ffffff" stroke-width="1.6"/>
-<line x1="273.749726177437" y1="446" x2="659" y2="324" stroke="#1a7f5a" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.7"/>
+<circle cx="276.2168674698795" cy="446" r="6.5" fill="#1a7f5a" fill-opacity="0.92" stroke="#ffffff" stroke-width="1.6"/>
+<line x1="284.2168674698795" y1="446" x2="659" y2="324" stroke="#1a7f5a" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.7"/>
 <circle cx="666" cy="324" r="5" fill="#1a7f5a"/>
 <text x="678" y="328" font-size="12.5" fill="#26333f">R97-full</text>
-<text x="678" y="343" font-size="11" fill="#6b7a89">放行 1119，其中实测差分 0</text>
+<text x="678" y="343" font-size="11" fill="#6b7a89">放行 1188，其中实测差分 0</text>
 <circle cx="532.2825848849945" cy="390.03821656050957" r="6.5" fill="#e67e22" fill-opacity="0.92" stroke="#ffffff" stroke-width="1.6"/>
 <line x1="540.2825848849945" y1="390.03821656050957" x2="659" y2="358" stroke="#e67e22" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.7"/>
 <circle cx="666" cy="358" r="5" fill="#e67e22"/>

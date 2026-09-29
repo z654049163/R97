@@ -9,14 +9,14 @@
   "sampleCount": 3652,
   "entityView": {
     "total": 1114,
-    "fold": 214,
+    "fold": 255,
     "protect": 227,
-    "unknown": 673,
+    "unknown": 632,
     "entitiesWithUnsafeFold": 0,
-    "foldRate": 0.19210053859964094,
+    "foldRate": 0.2289048473967684,
     "protectRate": 0.20377019748653502,
-    "unknownRate": 0.604129263913824,
-    "decidableRate": 0.39587073608617596
+    "unknownRate": 0.5673249551166966,
+    "decidableRate": 0.4326750448833034
   },
   "excludedFromEvaluation": {
     "recordCount": 5,
@@ -205,7 +205,7 @@
       "requestAnimationFrame": 1,
       "globalThis": 1
     },
-    "allowedFold": 1119,
+    "allowedFold": 1188,
     "allowedFoldOnDifferentialEntity": 0,
     "allowedFoldOnDifferentialExamples": []
   },
@@ -233,14 +233,14 @@
     }
   },
   "byExpected": {
-    "UNKNOWN": 2010,
+    "UNKNOWN": 1941,
     "PROTECT": 523,
-    "FOLD": 1119
+    "FOLD": 1188
   },
   "byActual": {
-    "UNKNOWN": 1771,
+    "UNKNOWN": 1702,
     "PROTECT": 762,
-    "FOLD": 1119
+    "FOLD": 1188
   },
   "byTransformation": {
     "CONST_EVAL": 1868,
@@ -249,15 +249,15 @@
   },
   "byReasonCode": {
     "BINDING_UNRESOLVED": 864,
-    "ALL_TARGETS_MATCH": 2049,
+    "ALL_TARGETS_MATCH": 2124,
     "CONTRACT_MISMATCH": 762,
-    "CONTRACT_COVERAGE_MISSING": 739,
-    "EVIDENCE_MISSING": 869
+    "EVIDENCE_MISSING": 869,
+    "CONTRACT_COVERAGE_MISSING": 664
   },
   "byUncertaintySource": {
     "binding": 864,
     "runtime": 818,
-    "behavior": 89
+    "behavior": 20
   },
   "byTargetRuntimeStatus": {
     "confirmed": 3652
@@ -363,6 +363,42 @@
       ]
     },
     {
+      "sampleId": "3e71cc911d8988d33abdcb95",
+      "project": "喝酒摇骰子_21a80905",
+      "file": "喝酒摇骰子_21a80905\\app-service.js",
+      "entityId": "JSON.stringify",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "generatedSource": "JSON.stringify();",
+      "expected": "FOLD",
+      "actualState": "FOLD",
+      "actualAction": "ALLOW_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH"
+      ]
+    },
+    {
+      "sampleId": "c1f8aa14dabfa0162c4bd69e",
+      "project": "透明头像小助手_a2856cae",
+      "file": "透明头像小助手_a2856cae\\app-service.js",
+      "entityId": "JSON.stringify",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "generatedSource": "JSON.stringify();",
+      "expected": "FOLD",
+      "actualState": "FOLD",
+      "actualAction": "ALLOW_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH"
+      ]
+    },
+    {
       "sampleId": "b68fea6a4c68c469710f499a",
       "project": "霍兰德职业性格测试_2f55af3e",
       "file": "霍兰德职业性格测试_2f55af3e\\app-service.js",
@@ -407,42 +443,6 @@
       "bindingKind": "runtime_global",
       "resolutionStatus": "resolved",
       "generatedSource": "if (JSON.stringify) {}",
-      "expected": "FOLD",
-      "actualState": "FOLD",
-      "actualAction": "ALLOW_FOLD",
-      "uncertaintySource": null,
-      "targetRuntimeStatus": "confirmed",
-      "reasonCodes": [
-        "ALL_TARGETS_MATCH"
-      ]
-    },
-    {
-      "sampleId": "b374a40da90281b00e858d1a",
-      "project": "测网速_27431281",
-      "file": "测网速_27431281\\app-service.js",
-      "entityId": "Object.prototype.toString.call",
-      "transformationKind": "CALL_EVAL",
-      "bindingKind": "runtime_global",
-      "resolutionStatus": "resolved",
-      "generatedSource": "Object.prototype.toString.call();",
-      "expected": "FOLD",
-      "actualState": "FOLD",
-      "actualAction": "ALLOW_FOLD",
-      "uncertaintySource": null,
-      "targetRuntimeStatus": "confirmed",
-      "reasonCodes": [
-        "ALL_TARGETS_MATCH"
-      ]
-    },
-    {
-      "sampleId": "9be579bf3711ce3d2e95b541",
-      "project": "HealthScale_d39b2b89",
-      "file": "HealthScale_d39b2b89\\app-service.js",
-      "entityId": "Object.prototype.toString.call",
-      "transformationKind": "CALL_EVAL",
-      "bindingKind": "runtime_global",
-      "resolutionStatus": "resolved",
-      "generatedSource": "Object.prototype.toString.call();",
       "expected": "FOLD",
       "actualState": "FOLD",
       "actualAction": "ALLOW_FOLD",
@@ -828,17 +828,17 @@
       "total": 3652,
       "allowedFold": 3652,
       "blockedFold": 0,
-      "unsafeFold": 2533,
+      "unsafeFold": 2464,
       "unsafeFoldMeasured": 785,
-      "usefulFold": 1119,
+      "usefulFold": 1188,
       "overProtection": 0,
       "unknown": 0,
-      "correctState": 1119,
+      "correctState": 1188,
       "foldRate": 1,
       "unknownRate": 0,
       "decidableRate": 1,
       "unsafeFoldMeasuredRate": 0.21495071193866375,
-      "exactStateAccuracy": 0.30640744797371305,
+      "exactStateAccuracy": 0.3253012048192771,
       "safeFoldCoverage": 1,
       "overProtectionRate": 0,
       "unsafeFoldRate": 1,
@@ -848,41 +848,41 @@
       "total": 3652,
       "allowedFold": 2876,
       "blockedFold": 776,
-      "unsafeFold": 1762,
+      "unsafeFold": 1693,
       "unsafeFoldMeasured": 115,
-      "usefulFold": 1114,
+      "usefulFold": 1183,
       "overProtection": 5,
       "unknown": 0,
-      "correctState": 1537,
+      "correctState": 1606,
       "foldRate": 0.787513691128149,
       "unknownRate": 0,
       "decidableRate": 1,
       "unsafeFoldMeasuredRate": 0.03998609179415855,
-      "exactStateAccuracy": 0.42086527929901424,
-      "safeFoldCoverage": 0.9955317247542449,
-      "overProtectionRate": 0.004468275245755138,
-      "unsafeFoldRate": 0.6956178444532175,
-      "blockedNonFoldRate": 0.3043821555467825
+      "exactStateAccuracy": 0.4397590361445783,
+      "safeFoldCoverage": 0.9957912457912458,
+      "overProtectionRate": 0.004208754208754209,
+      "unsafeFoldRate": 0.6870941558441559,
+      "blockedNonFoldRate": 0.31290584415584416
     },
     "A2-prefix-blacklist": {
       "total": 3652,
       "allowedFold": 3031,
       "blockedFold": 621,
-      "unsafeFold": 1917,
+      "unsafeFold": 1848,
       "unsafeFoldMeasured": 239,
-      "usefulFold": 1114,
+      "usefulFold": 1183,
       "overProtection": 5,
       "unknown": 0,
-      "correctState": 1498,
+      "correctState": 1567,
       "foldRate": 0.8299561883899234,
       "unknownRate": 0,
       "decidableRate": 1,
       "unsafeFoldMeasuredRate": 0.07885186407126361,
-      "exactStateAccuracy": 0.41018619934282585,
-      "safeFoldCoverage": 0.9955317247542449,
-      "overProtectionRate": 0.004468275245755138,
-      "unsafeFoldRate": 0.7568101065929728,
-      "blockedNonFoldRate": 0.24318989340702724
+      "exactStateAccuracy": 0.4290799561883899,
+      "safeFoldCoverage": 0.9957912457912458,
+      "overProtectionRate": 0.004208754208754209,
+      "unsafeFoldRate": 0.75,
+      "blockedNonFoldRate": 0.25
     },
     "A-safe-all-protect": {
       "total": 3652,
@@ -891,7 +891,7 @@
       "unsafeFold": 0,
       "unsafeFoldMeasured": 0,
       "usefulFold": 0,
-      "overProtection": 1119,
+      "overProtection": 1188,
       "unknown": 0,
       "correctState": 523,
       "foldRate": 0,
@@ -906,31 +906,31 @@
     },
     "R97-full": {
       "total": 3652,
-      "allowedFold": 1119,
-      "blockedFold": 2533,
+      "allowedFold": 1188,
+      "blockedFold": 2464,
       "unsafeFold": 0,
       "unsafeFoldMeasured": 0,
-      "usefulFold": 1119,
+      "usefulFold": 1188,
       "overProtection": 0,
-      "unknown": 1771,
+      "unknown": 1702,
       "correctState": 3413,
-      "foldRate": 0.30640744797371305,
-      "unknownRate": 0.48493975903614456,
-      "decidableRate": 0.5150602409638554,
+      "foldRate": 0.3253012048192771,
+      "unknownRate": 0.4660460021905805,
+      "decidableRate": 0.5339539978094195,
       "unsafeFoldMeasuredRate": 0,
       "exactStateAccuracy": 0.9345564074479737,
       "safeFoldCoverage": 1,
       "overProtectionRate": 0,
       "unsafeFoldRate": 0,
       "blockedNonFoldRate": 1,
-      "elapsedMs": 428776.31779999996,
-      "decisionsPerSecond": 8.517261444703792
+      "elapsedMs": 353278.7696,
+      "decisionsPerSecond": 10.337445423439902
     }
   },
   "foldRateConfidence": {
-    "point": 0.30640744797371305,
-    "lower": 0.26968659468001055,
-    "upper": 0.35085646780862373,
+    "point": 0.3253012048192771,
+    "lower": 0.2900162778079219,
+    "upper": 0.3683179401063532,
     "iterations": 2000,
     "clusterKey": "project",
     "clusterCount": 1036
