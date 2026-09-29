@@ -808,6 +808,13 @@ const analyzeExportProvenance = (node, context, seen, depth) => {
       if (seen.has(binding)) return;
       seen.add(binding);
       if (binding.bundleModulePath) {
+        // 导出值引用了另一个 bundle 模块：继续往里追一层（深度受限）。
+        // 典型形态：`var helper = require("./helper"); exports.run = helper.run;`
+        const nested = bundleExportsFor(binding.bundleModulePath, context);
+        if (nested?.defaultExport && !nested.dynamic) {
+          visit(nested.defaultExport, currentDepth + 1);
+          return;
+        }
         verdict = { kind: "unknown" };
         return;
       }
@@ -865,6 +872,30 @@ const analyzeExportProvenance = (node, context, seen, depth) => {
 };
 
 /**
+ * 从对象字面量里取静态属性值。
+ *
+ * 微信用得很广的一种导出形态：`module.exports = { post: ..., get: ... }`。
+ * 调用方写 `http.post(...)`，属性在整体导出对象里，不在命名导出表里。
+ */
+const getObjectLiteralProperty = (node, name) => {
+  if (node?.type !== "ObjectExpression") return null;
+  for (const property of node.properties) {
+    if (property.type !== "Property" || property.computed) continue;
+    let key = null;
+    if (property.key.type === "Identifier") {
+      key = property.key.name;
+    } else if (
+      property.key.type === "Literal" &&
+      typeof property.key.value === "string"
+    ) {
+      key = property.key.value;
+    }
+    if (key === name) return property.value;
+  }
+  return null;
+};
+
+/**
  * 把一个 bundle 模块的命名导出解析成绑定解析结果。
  *
  * 返回 null 表示无法确定，调用方保持原来的 module_import 行为（UNKNOWN）。
@@ -873,9 +904,13 @@ const resolveBundleExport = (modulePath, exportName, context, depth, seen) => {
   if (depth > MAX_BUNDLE_EXPORT_DEPTH) return null;
   const exports = bundleExportsFor(modulePath, context);
   if (!exports || exports.dynamic) return null;
-  const valueNode =
+  let valueNode =
     exports.named.get(exportName) ??
     (exportName === "default" ? exports.defaultExport : null);
+  if (!valueNode && exports.defaultExport) {
+    // 模块整体导出是对象字面量：按属性名从对象里取。
+    valueNode = getObjectLiteralProperty(exports.defaultExport, exportName);
+  }
   if (!valueNode) return null;
   const verdict = analyzeExportProvenance(valueNode, context, seen, depth);
   if (verdict.kind === "pure") {
@@ -961,6 +996,9 @@ const resolveExpressionPath = (node, context, resolving = new Set()) => {
             origin: verdict.root,
             path: verdict.path,
             root: verdict.root,
+            // 保留模块路径：外层 `http.post` 还要靠它做属性级解析，
+            // 否则会被拼成 `wx.post` 这种不精确的实体路径。
+            bundleModulePath: binding.bundleModulePath,
             aliasChain: [node.name, verdict.root],
             mutationStatus: "stable",
             scopeId: scopeId(binding.scope),

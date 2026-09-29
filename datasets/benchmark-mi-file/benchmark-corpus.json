@@ -6,17 +6,17 @@
   },
   "rawRecordCount": 600,
   "deduplicatedCount": 600,
-  "sampleCount": 565,
+  "sampleCount": 558,
   "entityView": {
-    "total": 108,
-    "fold": 42,
+    "total": 103,
+    "fold": 38,
     "protect": 1,
-    "unknown": 65,
+    "unknown": 64,
     "entitiesWithUnsafeFold": 0,
-    "foldRate": 0.3888888888888889,
-    "protectRate": 0.009259259259259259,
-    "unknownRate": 0.6018518518518519,
-    "decidableRate": 0.39814814814814814
+    "foldRate": 0.36893203883495146,
+    "protectRate": 0.009708737864077669,
+    "unknownRate": 0.6213592233009708,
+    "decidableRate": 0.3786407766990291
   },
   "excludedFromEvaluation": {
     "recordCount": 0,
@@ -27,7 +27,7 @@
     "enabled": true,
     "sourceRoot": "E:\\复现\\sample_collector\\可用于实验的干净源码包",
     "filesAnalyzed": 88,
-    "unmatchedDecisionCount": 35
+    "unmatchedDecisionCount": 42
   },
   "independentReference": null,
   "evidenceAvailability": {
@@ -41,36 +41,36 @@
     "browser": null
   },
   "byExpected": {
-    "FOLD": 190,
-    "UNKNOWN": 375
+    "FOLD": 186,
+    "UNKNOWN": 372
   },
   "byActual": {
-    "FOLD": 190,
-    "UNKNOWN": 374,
+    "FOLD": 186,
+    "UNKNOWN": 371,
     "PROTECT": 1
   },
   "byTransformation": {
     "CALL_EVAL": 390,
-    "CONST_EVAL": 130,
+    "CONST_EVAL": 123,
     "BRANCH_PRUNE": 45
   },
   "byReasonCode": {
-    "ALL_TARGETS_MATCH": 193,
+    "ALL_TARGETS_MATCH": 186,
     "CONTRACT_COVERAGE_MISSING": 372,
     "CONTRACT_MISMATCH": 1,
-    "EVIDENCE_MISSING": 10
+    "EVIDENCE_MISSING": 9
   },
   "byUncertaintySource": {
     "binding": 0,
-    "runtime": 10,
-    "behavior": 364
+    "runtime": 9,
+    "behavior": 362
   },
   "byTargetRuntimeStatus": {
-    "confirmed": 565
+    "confirmed": 558
   },
   "targetRuntimeImpact": {
     "confirmed": {
-      "sampleCount": 565,
+      "sampleCount": 558,
       "unsafeFold": 0,
       "overProtection": 0,
       "overProtectionRate": 0,
@@ -441,73 +441,73 @@
   ],
   "metrics": {
     "A0-aggressive-fold": {
-      "total": 565,
-      "allowedFold": 565,
+      "total": 558,
+      "allowedFold": 558,
       "blockedFold": 0,
-      "unsafeFold": 375,
+      "unsafeFold": 372,
       "unsafeFoldMeasured": 0,
-      "usefulFold": 190,
+      "usefulFold": 186,
       "overProtection": 0,
       "unknown": 0,
-      "correctState": 190,
+      "correctState": 186,
       "foldRate": 1,
       "unknownRate": 0,
       "decidableRate": 1,
       "unsafeFoldMeasuredRate": 0,
-      "exactStateAccuracy": 0.336283185840708,
+      "exactStateAccuracy": 0.3333333333333333,
       "safeFoldCoverage": 1,
       "overProtectionRate": 0,
       "unsafeFoldRate": 1,
       "blockedNonFoldRate": 0
     },
     "A1-legacy-blacklist": {
-      "total": 565,
-      "allowedFold": 562,
+      "total": 558,
+      "allowedFold": 555,
       "blockedFold": 3,
-      "unsafeFold": 372,
+      "unsafeFold": 369,
       "unsafeFoldMeasured": 0,
-      "usefulFold": 190,
+      "usefulFold": 186,
       "overProtection": 0,
       "unknown": 0,
-      "correctState": 190,
-      "foldRate": 0.9946902654867257,
+      "correctState": 186,
+      "foldRate": 0.9946236559139785,
       "unknownRate": 0,
       "decidableRate": 1,
       "unsafeFoldMeasuredRate": 0,
-      "exactStateAccuracy": 0.336283185840708,
+      "exactStateAccuracy": 0.3333333333333333,
       "safeFoldCoverage": 1,
       "overProtectionRate": 0,
-      "unsafeFoldRate": 0.992,
-      "blockedNonFoldRate": 0.008
+      "unsafeFoldRate": 0.9919354838709677,
+      "blockedNonFoldRate": 0.008064516129032258
     },
     "A2-prefix-blacklist": {
-      "total": 565,
-      "allowedFold": 562,
+      "total": 558,
+      "allowedFold": 555,
       "blockedFold": 3,
-      "unsafeFold": 372,
+      "unsafeFold": 369,
       "unsafeFoldMeasured": 0,
-      "usefulFold": 190,
+      "usefulFold": 186,
       "overProtection": 0,
       "unknown": 0,
-      "correctState": 190,
-      "foldRate": 0.9946902654867257,
+      "correctState": 186,
+      "foldRate": 0.9946236559139785,
       "unknownRate": 0,
       "decidableRate": 1,
       "unsafeFoldMeasuredRate": 0,
-      "exactStateAccuracy": 0.336283185840708,
+      "exactStateAccuracy": 0.3333333333333333,
       "safeFoldCoverage": 1,
       "overProtectionRate": 0,
-      "unsafeFoldRate": 0.992,
-      "blockedNonFoldRate": 0.008
+      "unsafeFoldRate": 0.9919354838709677,
+      "blockedNonFoldRate": 0.008064516129032258
     },
     "A-safe-all-protect": {
-      "total": 565,
+      "total": 558,
       "allowedFold": 0,
-      "blockedFold": 565,
+      "blockedFold": 558,
       "unsafeFold": 0,
       "unsafeFoldMeasured": 0,
       "usefulFold": 0,
-      "overProtection": 190,
+      "overProtection": 186,
       "unknown": 0,
       "correctState": 0,
       "foldRate": 0,
@@ -521,32 +521,32 @@
       "blockedNonFoldRate": 1
     },
     "R97-full": {
-      "total": 565,
-      "allowedFold": 190,
-      "blockedFold": 375,
+      "total": 558,
+      "allowedFold": 186,
+      "blockedFold": 372,
       "unsafeFold": 0,
       "unsafeFoldMeasured": 0,
-      "usefulFold": 190,
+      "usefulFold": 186,
       "overProtection": 0,
-      "unknown": 374,
-      "correctState": 564,
-      "foldRate": 0.336283185840708,
-      "unknownRate": 0.6619469026548672,
-      "decidableRate": 0.3380530973451327,
+      "unknown": 371,
+      "correctState": 557,
+      "foldRate": 0.3333333333333333,
+      "unknownRate": 0.6648745519713262,
+      "decidableRate": 0.33512544802867383,
       "unsafeFoldMeasuredRate": 0,
-      "exactStateAccuracy": 0.9982300884955753,
+      "exactStateAccuracy": 0.9982078853046595,
       "safeFoldCoverage": 1,
       "overProtectionRate": 0,
       "unsafeFoldRate": 0,
       "blockedNonFoldRate": 1,
-      "elapsedMs": 42884.36469999999,
-      "decisionsPerSecond": 13.174964907431638
+      "elapsedMs": 39596.4513,
+      "decisionsPerSecond": 14.092171941681046
     }
   },
   "foldRateConfidence": {
-    "point": 0.336283185840708,
-    "lower": 0.2194616977225673,
-    "upper": 0.4485981308411215,
+    "point": 0.3333333333333333,
+    "lower": 0.21189591078066913,
+    "upper": 0.45072992700729925,
     "iterations": 2000,
     "clusterKey": "project",
     "clusterCount": 86
