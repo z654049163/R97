@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-28T17:22:18.975Z",
+  "generatedAt": "2026-09-30T09:31:46.028Z",
   "environment": {
     "node": "v24.21.0",
     "targetRuntimeIds": [
@@ -446,6 +446,12 @@
         }
       ]
     },
+    "fileLevelAnalysis": {
+      "enabled": false,
+      "sourceRoot": null,
+      "filesAnalyzed": 0,
+      "unmatchedDecisionCount": 0
+    },
     "independentReference": {
       "description": "判卷探针 r97-oracle-probe 在 e2-node-24.21.0 / e5-edge-headless 上的直接读取",
       "oracleRuntimeIds": [
@@ -574,7 +580,7 @@
       "wechat": null,
       "browser": {
         "runtimeId": "e5-edge-headless",
-        "observedEntityCount": 1248,
+        "observedEntityCount": 1246,
         "browserVersion": {
           "product": "Edg/150.0.4078.83",
           "revision": "@7f302606e52ab615d52e1a0ab89ca415c8c843a3",
@@ -1274,8 +1280,8 @@
         "overProtectionRate": 0,
         "unsafeFoldRate": 0,
         "blockedNonFoldRate": 1,
-        "elapsedMs": 4223.4124999999985,
-        "decisionsPerSecond": 922.2400132594203
+        "elapsedMs": 3222.7966000000015,
+        "decisionsPerSecond": 1208.5776682276498
       }
     },
     "foldRateConfidence": {
