@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-29T06:40:53.394Z",
-  "generatedAtBeijing": "2026/9/29 14:40:53",
+  "generatedAt": "2026-10-03T09:30:58.712Z",
+  "generatedAtBeijing": "2026/10/3 17:30:58",
   "corpus": {
     "generatedAt": "2026-09-23T08:47:48.991Z",
     "sourceRoots": [
@@ -850,8 +850,8 @@
     "benchmark-stratified-v1": {
       "label": "分层 3 宿主（语言 + Node + Edge）",
       "directory": "benchmark-stratified-v1",
-      "generatedAt": "2026-09-28T17:22:18.975Z",
-      "generatedAtBeijing": "2026/9/29 01:22:18",
+      "generatedAt": "2026-09-30T09:31:46.028Z",
+      "generatedAtBeijing": "2026/9/30 17:31:46",
       "targetRuntimeIds": [
         "e1-ecmascript",
         "e2-node-24.21.0",
@@ -876,8 +876,8 @@
       "differentialEntityCount": 40,
       "differentialRecordCount": 137,
       "allowedFoldOnDifferentialEntity": 0,
-      "elapsedMs": 4223.4124999999985,
-      "decisionsPerSecond": 922.2400132594203,
+      "elapsedMs": 3222.7966000000015,
+      "decisionsPerSecond": 1208.5776682276498,
       "confidenceInterval": {
         "point": 0.3435173299101412,
         "lower": 0.30566905005107253,
@@ -971,8 +971,8 @@
     "benchmark-wechat": {
       "label": "分层 4 宿主（+ 真实微信 AppService）",
       "directory": "benchmark-wechat",
-      "generatedAt": "2026-09-24T15:46:29.158Z",
-      "generatedAtBeijing": "2026/9/24 23:46:29",
+      "generatedAt": "2026-09-30T09:32:22.484Z",
+      "generatedAtBeijing": "2026/9/30 17:32:22",
       "targetRuntimeIds": [
         "e1-ecmascript",
         "e2-node-24.21.0",
@@ -998,8 +998,8 @@
       "differentialEntityCount": 208,
       "differentialRecordCount": 785,
       "allowedFoldOnDifferentialEntity": 0,
-      "elapsedMs": 5841.514300000001,
-      "decisionsPerSecond": 666.7791603283415,
+      "elapsedMs": 4207.566699999999,
+      "decisionsPerSecond": 925.7131919025788,
       "confidenceInterval": {
         "point": 0.3062901155327343,
         "lower": 0.27066326530612245,
@@ -22067,5 +22067,48 @@
     "cohenKappa": null,
     "byLabel": [],
     "conflicts": []
+  },
+  "memoryBenchmark": {
+    "generatedAt": "2026-10-03T09:27:56.768Z",
+    "node": "v24.21.0",
+    "platform": "win32 x64",
+    "cpu": "13th Gen Intel(R) Core(TM) i7-13700H",
+    "totalMemoryMB": 16006,
+    "corpus": "datasets/real-miniapp-full/real-miniapp-candidates.jsonl",
+    "perEntityCap": 5,
+    "fileLimit": 100,
+    "gcEvery": 25,
+    "sourceRootProvided": true,
+    "finalRss": 928.7,
+    "scenarios": [
+      {
+        "scenario": "语料流式读取 + 分层抽样",
+        "detail": "3900 条样本 / 1051 个文件",
+        "before": 51.5,
+        "peak": 578.7,
+        "delta": 527.2,
+        "steadyDelta": 466.8,
+        "steadyHeapDelta": 3.9
+      },
+      {
+        "scenario": "表达式模式分析",
+        "detail": "3895 条记录",
+        "before": 509.7,
+        "peak": 538.8,
+        "delta": 29.1,
+        "steadyDelta": 26.4,
+        "steadyHeapDelta": 1.2
+      },
+      {
+        "scenario": "文件级分析（原始 app-service.js）",
+        "detail": "100 个文件",
+        "before": 536.1,
+        "peak": 1141.9,
+        "delta": 605.8,
+        "steady": 939.6,
+        "steadyDelta": 403.5,
+        "steadyHeapDelta": 8.2
+      }
+    ]
   }
 }

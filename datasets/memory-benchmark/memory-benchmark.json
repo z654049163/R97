@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-10-03T09:27:56.768Z",
+  "node": "v24.21.0",
+  "platform": "win32 x64",
+  "cpu": "13th Gen Intel(R) Core(TM) i7-13700H",
+  "totalMemoryMB": 16006,
+  "corpus": "datasets/real-miniapp-full/real-miniapp-candidates.jsonl",
+  "perEntityCap": 5,
+  "fileLimit": 100,
+  "gcEvery": 25,
+  "sourceRootProvided": true,
+  "finalRss": 928.7,
+  "scenarios": [
+    {
+      "scenario": "语料流式读取 + 分层抽样",
+      "detail": "3900 条样本 / 1051 个文件",
+      "before": 51.5,
+      "peak": 578.7,
+      "delta": 527.2,
+      "steadyDelta": 466.8,
+      "steadyHeapDelta": 3.9
+    },
+    {
+      "scenario": "表达式模式分析",
+      "detail": "3895 条记录",
+      "before": 509.7,
+      "peak": 538.8,
+      "delta": 29.1,
+      "steadyDelta": 26.4,
+      "steadyHeapDelta": 1.2
+    },
+    {
+      "scenario": "文件级分析（原始 app-service.js）",
+      "detail": "100 个文件",
+      "before": 536.1,
+      "peak": 1141.9,
+      "delta": 605.8,
+      "steady": 939.6,
+      "steadyDelta": 403.5,
+      "steadyHeapDelta": 8.2
+    }
+  ]
+}

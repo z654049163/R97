@@ -57,7 +57,8 @@
     "eval:constant-propagation": "node --max-old-space-size=4096 src/evaluation/constant-propagation-ablation.mjs --out datasets/constant-propagation-ablation",
     "eval:result-reuse": "node --max-old-space-size=4096 src/evaluation/result-reuse-validation.mjs --out datasets/result-reuse-validation",
     "eval:differential": "node src/evaluation/differential-reference.mjs --out datasets/differential-reference",
-    "eval:external-baselines": "node src/evaluation/external-tool-baseline.mjs --out datasets/external-tool-baseline"
+    "eval:external-baselines": "node src/evaluation/external-tool-baseline.mjs --out datasets/external-tool-baseline",
+    "eval:memory": "node --expose-gc src/evaluation/memory-benchmark.mjs --per-entity-cap 5 --out datasets/memory-benchmark"
   },
   "engines": {
     "node": ">=20"
