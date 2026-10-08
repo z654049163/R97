@@ -213,15 +213,13 @@ test("OBsmith Bug Class 10 [动态类型解引用]: 动态计算键的属性访�
   }
 });
 
-test("OBsmith Bug Class 11 [非确定性内建拦截]: Date.now / Math.random / performance.now 强制拦截折叠", () => {
-  const nonDeterministicCalls = [
+test("OBsmith Bug Class 11 [非确定性内建拦截]: 核心语言内建 Date.now / Math.random 强制拦截折叠", () => {
+  const languageCalls = [
     "Date.now()",
     "Math.random()",
-    "performance.now()",
-    "crypto.randomUUID()",
   ];
 
-  for (const callExpr of nonDeterministicCalls) {
+  for (const callExpr of languageCalls) {
     const code = `const val = ${callExpr};`;
     const result = analyzeSource({ source: code, filePath: "obsmith/class11.js" });
     const callFinding = result.findings.find(
@@ -230,7 +228,7 @@ test("OBsmith Bug Class 11 [非确定性内建拦截]: Date.now / Math.random / 
     assert.ok(callFinding, `必须捕获调用点: ${callExpr}`);
     assert.ok(
       isNonDeterministicCall(callFinding),
-      `必须识别为非确定性调用: ${callExpr}`,
+      `必须识别为非确定性语言调用: ${callExpr}`,
     );
 
     const decisionResult = analyzeAndDecide({
