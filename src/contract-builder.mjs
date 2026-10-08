@@ -140,18 +140,21 @@ export const buildSemanticContract = ({
 };
 
 /**
- * 规范直接规定的非确定性语言内建成员。
+ * 规范直接规定的非确定性语言与运行时内建成员。
  *
- * 只列 ECMAScript 内建里结果必然随时间或随机源变化的成员。宿主 API 里也有
- * 同类（`performance.now`、`crypto.randomUUID`），但那些属于运行时能力，
- * 不在 v1 的这条规则里。
+ * 对标 OBsmith (OOPSLA '26) 与程序等价性验证规范：调用结果依赖调用时刻、
+ * 随机源或环境调度的内建调用，在任何环境下两次调用都不保证自等，
+ * 属于动态差分与常量折叠的天然不可比较边界。
  */
-const NON_DETERMINISTIC_LANGUAGE_MEMBERS = new Set([
+export const NON_DETERMINISTIC_BUILTIN_MEMBERS = Object.freeze(new Set([
   "Date.now",
   "Math.random",
-]);
+  "performance.now",
+  "crypto.randomUUID",
+  "crypto.getRandomValues",
+]));
 
-const isNonDeterministicCall = (finding) => {
+export const isNonDeterministicCall = (finding) => {
   if (finding.transformationKind !== TRANSFORMATION_KIND.CALL_EVAL) {
     return false;
   }
@@ -159,7 +162,7 @@ const isNonDeterministicCall = (finding) => {
   // `Date()` 无参调用取当前时间；`Date` 作为命名空间本身是确定的，
   // 所以只对调用点判定。
   return (
-    NON_DETERMINISTIC_LANGUAGE_MEMBERS.has(entityId) || entityId === "Date"
+    NON_DETERMINISTIC_BUILTIN_MEMBERS.has(entityId) || entityId === "Date"
   );
 };
 

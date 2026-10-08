@@ -151,6 +151,16 @@ const summarizeDecision = (decisions) => {
   };
 };
 
+/**
+ * 形式化观测等价性判定（对标 OBsmith Section 3.4 的 Observational Equivalence 定义）：
+ * P ≈_E Q ⟺ Norm(Trace_E(P)) = Norm(Trace_E(Q))
+ * 比较规范化后的执行终结状态、异常类型或序列化返回值。
+ */
+export const isObservationallyEquivalent = (beforeObs, afterObs) => {
+  const comp = compareBehavior(beforeObs, afterObs);
+  return comp.verified && comp.same === true;
+};
+
 const compareBehavior = (before, after) => {
   const beforeShape = observationShape(before);
   const afterShape = observationShape(after);

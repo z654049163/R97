@@ -1,0 +1,831 @@
+import os
+import subprocess
+
+html_content = """<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    width: 1600px;
+    height: 1060px;
+    background: #F8FAFC;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    color: #1E293B;
+    overflow: hidden;
+    position: relative;
+    padding: 24px 32px;
+  }
+
+  /* 顶部标题栏 */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 14px;
+    border-bottom: 2px solid #E2E8F0;
+    margin-bottom: 16px;
+  }
+  .title-area h1 {
+    font-size: 26px;
+    font-weight: 800;
+    color: #0F172A;
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .title-area h1 .tag {
+    font-size: 13px;
+    font-weight: 700;
+    background: #0284C7;
+    color: #FFF;
+    padding: 3px 10px;
+    border-radius: 6px;
+    letter-spacing: 0.5px;
+  }
+  .title-area p {
+    font-size: 13px;
+    color: #64748B;
+    margin-top: 4px;
+    font-weight: 500;
+  }
+  .header-meta {
+    text-align: right;
+    font-size: 12px;
+    color: #64748B;
+    line-height: 1.5;
+  }
+  .header-meta strong {
+    color: #0F172A;
+  }
+
+  /* 主网格结构 */
+  .main-layout {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 16px;
+    height: 875px;
+  }
+
+  /* 左侧：禁止循环论证 */
+  .left-invariant-bar {
+    background: linear-gradient(180deg, #FEF2F2 0%, #FFF1F2 50%, #FEF2F2 100%);
+    border: 2px dashed #F87171;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.06);
+  }
+  .left-invariant-bar .badge-top {
+    background: #EF4444;
+    color: white;
+    font-size: 13px;
+    font-weight: 800;
+    padding: 6px 8px;
+    border-radius: 6px;
+    writing-mode: vertical-lr;
+    letter-spacing: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 180px;
+    box-shadow: 0 2px 6px rgba(239, 68, 68, 0.25);
+  }
+  .left-invariant-bar .icon-box {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background: #FEE2E2;
+    border: 2px solid #EF4444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: #DC2626;
+  }
+  .left-invariant-bar .desc {
+    font-size: 11px;
+    line-height: 1.5;
+    color: #991B1B;
+    font-weight: 600;
+    background: #FFF;
+    padding: 10px 8px;
+    border-radius: 8px;
+    border: 1px solid #FECACA;
+  }
+  .left-invariant-bar .desc strong {
+    color: #B91C1C;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  /* 右侧主体：三行结构 */
+  .content-tracks {
+    display: grid;
+    grid-template-rows: 235px 335px 210px 65px;
+    gap: 12px;
+  }
+
+  /* 通用卡片容器 */
+  .track-card {
+    background: #FFFFFF;
+    border: 1.5px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 14px 18px;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .track-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .track-title {
+    font-size: 14px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .track-badge {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 5px;
+  }
+
+  /* 上轨：代码侧 */
+  .code-track {
+    border-color: #BAE6FD;
+    background: linear-gradient(180deg, #F0F9FF 0%, #FFFFFF 100%);
+  }
+  .code-track .track-title { color: #0369A1; }
+  .code-track .track-badge { background: #E0F2FE; color: #0284C7; }
+
+  /* 下轨：证据侧 */
+  .evidence-track {
+    border-color: #DDD6FE;
+    background: linear-gradient(180deg, #F5F3FF 0%, #FFFFFF 100%);
+  }
+  .evidence-track .track-title { color: #4338CA; }
+  .evidence-track .track-badge { background: #EDE9FE; color: #4F46E5; }
+
+  /* 流程管道布局 */
+  .flow-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+  }
+  .flow-node {
+    background: #FFFFFF;
+    border: 1.5px solid #CBD5E1;
+    border-radius: 8px;
+    padding: 9px 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 145px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+  }
+  .flow-node .node-type {
+    font-size: 10px;
+    font-weight: 700;
+    color: #64748B;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+  .flow-node .node-title {
+    font-size: 13px;
+    font-weight: 750;
+    color: #0F172A;
+  }
+  .flow-node .node-sub {
+    font-size: 11px;
+    color: #64748B;
+    margin-top: 2px;
+    line-height: 1.3;
+  }
+
+  /* 箭头 */
+  .flow-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #94A3B8;
+    font-size: 18px;
+    font-weight: 800;
+  }
+
+  /* 状态输出卡片组 */
+  .status-cluster {
+    background: #F8FAFC;
+    border: 1.5px solid #E2E8F0;
+    border-radius: 8px;
+    padding: 8px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 250px;
+  }
+  .status-cluster-title {
+    font-size: 11.5px;
+    font-weight: 800;
+    color: #334155;
+    margin-bottom: 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .status-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-weight: 600;
+  }
+  .status-item.definite { background: #DCFCE7; color: #15803D; border: 1px solid #86EFAC; }
+  .status-item.possible { background: #FEF9C3; color: #A16207; border: 1px solid #FDE047; }
+  .status-item.not-req { background: #F1F5F9; color: #475569; border: 1px solid #CBD5E1; }
+
+  .status-item.confirmed { background: #DCFCE7; color: #15803D; border: 1px solid #86EFAC; }
+  .status-item.corroborated { background: #E0E7FF; color: #4338CA; border: 1px solid #A5B4FC; }
+  .status-item.declared { background: #FEF3C7; color: #B45309; border: 1px solid #FCD34D; }
+  .status-item.inferred { background: #FFEDD5; color: #C2410C; border: 1px solid #FDBA74; }
+  .status-item.conflict { background: #FEE2E2; color: #B91C1C; border: 1px solid #FCA5A5; }
+  .status-item.unknown { background: #F1F5F9; color: #475569; border: 1px solid #CBD5E1; }
+
+  /* 中轨：判定核心 (8步判定引擎) */
+  .decision-track {
+    border-color: #FCD34D;
+    background: #FFFFFF;
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 16px;
+    padding: 14px 18px;
+  }
+  .decision-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .decision-formula-bar {
+    background: #0F172A;
+    color: #F8FAFC;
+    padding: 8px 14px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "JetBrains Mono", Consolas, monospace;
+    font-size: 13px;
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.15);
+  }
+  .decision-formula-bar .math-func {
+    color: #38BDF8;
+    font-weight: 700;
+  }
+  .decision-formula-bar .math-args {
+    color: #E2E8F0;
+  }
+  .decision-formula-bar .math-return {
+    color: #4ADE80;
+    font-weight: 700;
+  }
+  .decision-rules {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-top: 8px;
+  }
+  .rule-card {
+    border-radius: 8px;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1.5px solid transparent;
+    font-size: 11.5px;
+  }
+  .rule-card.protect-rule {
+    background: #FEF2F2;
+    border-color: #FECACA;
+    color: #991B1B;
+  }
+  .rule-card.fold-rule {
+    background: #F0FDF4;
+    border-color: #BBF7D0;
+    color: #166534;
+  }
+  .rule-card.unknown-rule {
+    background: #FFFBEB;
+    border-color: #FDE68A;
+    color: #92400E;
+  }
+  .rule-expr {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+  }
+  .rule-expr .hl {
+    background: rgba(255,255,255,0.85);
+    padding: 2px 7px;
+    border-radius: 4px;
+    font-weight: 750;
+    border: 1px solid rgba(0,0,0,0.08);
+  }
+  .rule-action {
+    font-weight: 800;
+    font-size: 11.5px;
+    padding: 3px 8px;
+    border-radius: 5px;
+    color: white;
+    letter-spacing: 0.5px;
+  }
+  .rule-action.protect-btn { background: #DC2626; }
+  .rule-action.fold-btn { background: #16A34A; }
+  .rule-action.unknown-btn { background: #D97706; }
+
+  /* 判定输出区 (三值卡片) */
+  .verdict-column {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .verdict-header {
+    font-size: 11.5px;
+    font-weight: 800;
+    color: #475569;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .verdict-card {
+    border-radius: 8px;
+    padding: 8px 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    border: 1.5px solid transparent;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+  }
+  .verdict-card.fold {
+    background: #ECFDF5;
+    border-color: #6EE7B7;
+  }
+  .verdict-card.protect {
+    background: #FEF2F2;
+    border-color: #FCA5A5;
+  }
+  .verdict-card.unknown {
+    background: #FFFBEB;
+    border-color: #FCD34D;
+  }
+  .verdict-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .verdict-name {
+    font-size: 13.5px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .verdict-card.fold .verdict-name { color: #047857; }
+  .verdict-card.protect .verdict-name { color: #B91C1C; }
+  .verdict-card.unknown .verdict-name { color: #B45309; }
+  .verdict-tag {
+    font-size: 10px;
+    font-weight: 700;
+    padding: 1px 5px;
+    border-radius: 4px;
+  }
+  .verdict-card.fold .verdict-tag { background: #A7F3D0; color: #065F46; }
+  .verdict-card.protect .verdict-tag { background: #FECACA; color: #991B1B; }
+  .verdict-card.unknown .verdict-tag { background: #FDE68A; color: #92400E; }
+  .verdict-desc {
+    font-size: 10.5px;
+    line-height: 1.35;
+    color: #475569;
+    margin-top: 2px;
+  }
+
+  /* 细粒度归因小字 */
+  .attribution-chips {
+    display: flex;
+    gap: 4px;
+    margin-top: 3px;
+  }
+  .attr-chip {
+    font-size: 9.5px;
+    font-weight: 600;
+    background: #FEF3C7;
+    color: #92400E;
+    border: 1px solid #FDE68A;
+    padding: 1px 4px;
+    border-radius: 3px;
+  }
+
+  /* 底部横幅：三大安全不变量 */
+  .footer-invariants {
+    background: #0F172A;
+    border-radius: 10px;
+    padding: 8px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #F8FAFC;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+  }
+  .footer-title {
+    font-size: 13px;
+    font-weight: 800;
+    color: #38BDF8;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+  }
+  .invariants-list {
+    display: flex;
+    gap: 14px;
+    flex: 1;
+    margin-left: 20px;
+  }
+  .inv-item {
+    background: #1E293B;
+    border: 1px solid #334155;
+    border-radius: 6px;
+    padding: 5px 10px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+  }
+  .inv-item .inv-badge {
+    background: #EF4444;
+    color: white;
+    font-size: 9.5px;
+    font-weight: 750;
+    padding: 1px 5px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+  .inv-item .inv-text strong {
+    color: #F1F5F9;
+  }
+  .inv-item .inv-text span {
+    color: #94A3B8;
+    font-size: 10px;
+  }
+
+  /* 探针观测小浮层 */
+  .probes-strip {
+    background: #F1F5F9;
+    border: 1px solid #CBD5E1;
+    border-radius: 6px;
+    padding: 5px 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 10.5px;
+    color: #475569;
+    margin-top: 6px;
+  }
+  .probes-strip strong { color: #0F172A; }
+  .probe-tag {
+    background: #FFFFFF;
+    border: 1px solid #CBD5E1;
+    border-radius: 4px;
+    padding: 1px 5px;
+    font-size: 10px;
+    font-weight: 600;
+    color: #334155;
+  }
+</style>
+</head>
+<body>
+
+  <!-- 顶部标题 -->
+  <div class="header">
+    <div class="title-area">
+      <h1>
+        R97: 目标运行时感知的三值折叠判定模型
+        <span class="tag">Decision Model</span>
+      </h1>
+      <p>Target-Runtime-Aware Tri-State Folding Decision Architecture with Zero Unsafe Folds</p>
+    </div>
+    <div class="header-meta">
+      <div><strong>设计哲学：</strong>代码能力需求与外部部署证据严格正交解耦 · 实测探针驱动</div>
+      <div><strong>安全实证：</strong>785 条跨环境差分 0 误放行 · 变换动态验证不一致率 0.00%</div>
+    </div>
+  </div>
+
+  <div class="main-layout">
+
+    <!-- 左侧红线栏：禁止循环论证 -->
+    <div class="left-invariant-bar">
+      <div class="badge-top">禁止循环论证</div>
+      <div class="icon-box">🚫</div>
+      <div class="desc">
+        <strong>核心安全边界</strong>
+        代码内部特征仅能产生<br>
+        <code>required</code> 能力需求<br><br>
+        <strong>严禁反推</strong><br>
+        代码出现 <code>wx</code> 绝不等于<br>
+        部署目标为微信平台<br><br>
+        <strong>隔离红线</strong><br>
+        目标必须且仅能由<br>外部独立证据确立
+      </div>
+    </div>
+
+    <!-- 右侧主体轨道 -->
+    <div class="content-tracks">
+
+      <!-- 上轨：代码侧 (内部证据) -->
+      <div class="track-card code-track">
+        <div class="track-title-row">
+          <div class="track-title">
+            <span>💻</span> 代码侧（内部证据）：必需运行时与语义契约提取
+          </div>
+          <div class="track-badge">Required Runtime Analysis & Contract Extraction</div>
+        </div>
+        <div class="flow-row">
+          <div class="flow-node">
+            <div class="node-type">Input Source</div>
+            <div class="node-title">混淆后的 JavaScript</div>
+            <div class="node-sub">代码文本 / 混淆 AST 节点</div>
+          </div>
+          <div class="flow-arrow">➔</div>
+          <div class="flow-node">
+            <div class="node-type">Static Analyzer</div>
+            <div class="node-title">AST 与绑定解析</div>
+            <div class="node-sub">作用域链 · 遮蔽检测 · 常量别名跟踪</div>
+          </div>
+          <div class="flow-arrow">➔</div>
+          <div class="flow-node">
+            <div class="node-type">Entity Resolver</div>
+            <div class="node-title">运行时实体识别</div>
+            <div class="node-sub">归一化路径 · 宿主专属根节点表匹配</div>
+          </div>
+          <div class="flow-arrow">➔</div>
+          <div class="flow-node" style="border-color:#38BDF8; background:#F0F9FF;">
+            <div class="node-type" style="color:#0284C7;">Contract Spec</div>
+            <div class="node-title" style="color:#0369A1;">语义契约构建 C</div>
+            <div class="node-sub">变换维度提取 (typeof / truthiness)<br>拦截非确定性内建 (Date.now)</div>
+          </div>
+          <div class="flow-arrow">➔</div>
+          <div class="status-cluster">
+            <div class="status-cluster-title">
+              <span>必需运行时 required</span>
+              <span style="font-size:10px; color:#64748B;">状态输出</span>
+            </div>
+            <div class="status-item definite">
+              <span>确定依赖 definite</span>
+              <span>静态绑定的宿主 API</span>
+            </div>
+            <div class="status-item possible">
+              <span>可能依赖 possible</span>
+              <span>动态属性 / 未完全解析</span>
+            </div>
+            <div class="status-item not-req">
+              <span>不依赖 not_required</span>
+              <span>ECMA 内建 / 纯局部变量</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 中轨：判定核心 (Decision Engine) -->
+      <div class="track-card decision-track">
+        <div class="decision-left">
+          <div class="track-title-row" style="margin-bottom:6px;">
+            <div class="track-title" style="color:#0F172A;">
+              <span>⚖️</span> 判定核心：8步安全判定引擎 D(required, target, contract, evidence)
+            </div>
+            <div class="track-badge" style="background:#FEF3C7; color:#B45309;">Fail-Safe Verification Engine</div>
+          </div>
+
+          <!-- 数学公式条 -->
+          <div class="decision-formula-bar">
+            <div>
+              <span class="math-func">D</span><span class="math-args">(required, target, contract, evidence)</span>
+              <span> ➔ </span>
+              <span class="math-return">{ FOLD, PROTECT, UNKNOWN }</span>
+            </div>
+            <span style="font-size:11px; color:#94A3B8; font-family:sans-serif;">总函数 · 默认保守输出 UNKNOWN</span>
+          </div>
+
+          <!-- 核心判定规则 -->
+          <div class="decision-rules">
+            <div class="rule-card protect-rule">
+              <div class="rule-expr">
+                <span>[规则 1 · 冲突保护]</span>
+                <span class="hl">已确认目标 confirmed</span> +
+                <span class="hl">确定依赖 definite</span> +
+                <span class="hl" style="color:#B91C1C;">实测维度真实冲突</span>
+              </div>
+              <div class="rule-action protect-btn">PROTECT 保护</div>
+            </div>
+
+            <div class="rule-card fold-rule">
+              <div class="rule-expr">
+                <span>[规则 2 · 等价放行]</span>
+                <span class="hl">已确认目标 confirmed</span> +
+                <span class="hl">契约维度严格一致 strict_equal</span> +
+                <span class="hl" style="color:#15803D;">实测证据可折叠 foldEligible</span>
+              </div>
+              <div class="rule-action fold-btn">FOLD 折叠</div>
+            </div>
+
+            <div class="rule-card unknown-rule">
+              <div class="rule-expr">
+                <span>[规则 3 · 安全兜底]</span>
+                <span class="hl">目标未确认</span> 或
+                <span class="hl">契约维度缺失</span> 或
+                <span class="hl">证据过期/非确定性调用</span>
+              </div>
+              <div class="rule-action unknown-btn">UNKNOWN 未决</div>
+            </div>
+          </div>
+
+          <!-- 4 宿主探针观测输入 -->
+          <div class="probes-strip">
+            <strong>🔭 4 宿主实测探针基准支撑：</strong>
+            <span class="probe-tag">1. Isolated VM (纯 ECMA)</span>
+            <span class="probe-tag">2. Node.js Native</span>
+            <span class="probe-tag">3. Microsoft Edge (Browser)</span>
+            <span class="probe-tag">4. 微信开发者工具 (SDK 3.17.3, AppService + Worker)</span>
+          </div>
+        </div>
+
+        <!-- 右侧：三值判定产物 -->
+        <div class="verdict-column">
+          <div class="verdict-header">
+            <span>判定出口 (Verdicts)</span>
+            <span>下游优化器动作</span>
+          </div>
+
+          <div class="verdict-card fold">
+            <div class="verdict-title-row">
+              <div class="verdict-name"><span>✅</span> FOLD (折叠)</div>
+              <div class="verdict-tag">放行率 ~43%</div>
+            </div>
+            <div class="verdict-desc">
+              证明在目标环境下与求值环境行为完全一致。安全执行常量折叠与死分支消除（0 误放行）。
+            </div>
+          </div>
+
+          <div class="verdict-card protect">
+            <div class="verdict-title-row">
+              <div class="verdict-name"><span>🛡️</span> PROTECT (保护)</div>
+              <div class="verdict-tag">强力拦截</div>
+            </div>
+            <div class="verdict-desc">
+              实测存在异构冲突（如 wx 差异）。严禁折叠，原样保留分支与宿主调用，防止逻辑破坏。
+            </div>
+          </div>
+
+          <div class="verdict-card unknown">
+            <div class="verdict-title-row">
+              <div class="verdict-name"><span>⚠️</span> UNKNOWN (未决)</div>
+              <div class="verdict-tag">保守安全</div>
+            </div>
+            <div class="verdict-desc">
+              证据不完备时保守兜底。附三层细粒度归因：
+            </div>
+            <div class="attribution-chips">
+              <span class="attr-chip">binding 语法未决</span>
+              <span class="attr-chip">runtime 目标未定</span>
+              <span class="attr-chip">behavior 契约不全</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 下轨：证据侧 (外部证据) -->
+      <div class="track-card evidence-track">
+        <div class="track-title-row">
+          <div class="track-title">
+            <span>📦</span> 证据侧（外部证据）：目标运行时解析与证据链
+          </div>
+          <div class="track-badge">Target Runtime Resolution (External Proof Only)</div>
+        </div>
+        <div class="flow-row">
+          <div class="flow-node">
+            <div class="node-type">External Artifacts</div>
+            <div class="node-title">项目与部署配置</div>
+            <div class="node-sub">project.config.json · app.json<br>package.json · 清单配置</div>
+          </div>
+          <div class="flow-arrow">➔</div>
+          <div class="flow-node">
+            <div class="node-type">Execution Context</div>
+            <div class="node-title">环境指纹与轨迹</div>
+            <div class="node-sub">平台版本 · SDK 基线 · 部署指纹<br>排除被分析代码本身的字符干扰</div>
+          </div>
+          <div class="flow-arrow">➔</div>
+          <div class="flow-node" style="border-color:#818CF8; background:#EEF2FF;">
+            <div class="node-type" style="color:#4F46E5;">Target Resolver</div>
+            <div class="node-title" style="color:#3730A3;">目标运行时解析器</div>
+            <div class="node-sub">严格证据定级 · 冲突检测<br>仅接受外部客观事实</div>
+          </div>
+          <div class="flow-arrow">➔</div>
+          <div class="status-cluster" style="min-width: 320px;">
+            <div class="status-cluster-title">
+              <span>目标运行时 target</span>
+              <span style="font-size:10px; color:#64748B;">状态定级</span>
+            </div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:4px;">
+              <div class="status-item confirmed"><span>confirmed 已确认</span></div>
+              <div class="status-item corroborated"><span>corroborated 已佐证</span></div>
+              <div class="status-item declared"><span>declared 仅声明</span></div>
+              <div class="status-item inferred"><span>inferred 推断 (禁折叠)</span></div>
+              <div class="status-item conflict"><span>conflict 冲突 (互斥)</span></div>
+              <div class="status-item unknown"><span>unknown 未知</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 底部横幅：安全不变量 -->
+      <div class="footer-invariants">
+        <div class="footer-title">
+          <span>🔒</span> 核心安全不变量 (Core Safety Invariants)
+        </div>
+        <div class="invariants-list">
+          <div class="inv-item">
+            <span class="inv-badge">不变量 1</span>
+            <div class="inv-text">
+              <strong>必需 ≠ 目标（正交解耦）</strong><br>
+              <span>代码依赖什么宿主，绝不能证明代码运行在什么宿主</span>
+            </div>
+          </div>
+          <div class="inv-item">
+            <span class="inv-badge">不变量 2</span>
+            <div class="inv-text">
+              <strong>弱来源不授权折叠</strong><br>
+              <span>declared、inferred、experiment_config 严禁触发 FOLD</span>
+            </div>
+          </div>
+          <div class="inv-item">
+            <span class="inv-badge">不变量 3</span>
+            <div class="inv-text">
+              <strong>默认目标未知 (unknown)</strong><br>
+              <span>缺失外部独立证据时严格归入 unknown，保守不折叠</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
+"""
+
+os.makedirs("docs", exist_ok=True)
+with open("docs/r97-model-architecture.html", "w", encoding="utf-8") as f:
+    f.write(html_content)
+
+print("Saved HTML to docs/r97-model-architecture.html")
+
+edge_path = r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
+html_abs = os.path.abspath("docs/r97-model-architecture.html")
+png_abs = os.path.abspath("docs/r97-model-architecture.png")
+
+cmd = [
+    edge_path,
+    "--headless=new",
+    "--disable-gpu",
+    "--force-device-scale-factor=2",
+    "--window-size=1600,1080",
+    f"--screenshot={png_abs}",
+    f"file:///{html_abs.replace(os.sep, '/')}"
+]
+
+print("Rendering PNG with headless Edge...")
+res = subprocess.run(cmd, capture_output=True, text=True)
+if os.path.exists(png_abs):
+    print("Success! PNG size:", os.path.getsize(png_abs))
+else:
+    print("Failed to render PNG.")
+    print("Stderr:", res.stderr)

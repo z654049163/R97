@@ -36,6 +36,21 @@ const C = {
   teal: "#0F766E",
   tealBg: "#F0FDFA",
   tealBorder: "#5EEAD4",
+  // 模型图（R97-model.svg）专用：状态强度梯度与三值输出配色
+  foldGreen: "#3FA34D",
+  amber: "#D97706",
+  tealSolid: "#0F9E8E",
+  tealSoft: "#CCFBF1",
+  skySoft: "#E0F2FE",
+  skyBorder: "#7DD3FC",
+  skyDeep: "#075985",
+  redSoft: "#FEE2E2",
+  slateSoft: "#F1F5F9",
+  requiredStrong: "#3F4A5A",
+  bandBlue: "#EAF2FB",
+  bandBlueBorder: "#BFD7EE",
+  bandGray: "#F4F6F8",
+  bandGrayBorder: "#D8DEE6",
 };
 
 const esc = (value) =>
@@ -763,6 +778,288 @@ const decisionSvg = () => {
   });
 };
 
+const modelSvg = () => {
+  const W = 1780;
+  const H = 1250;
+  const parts = [];
+
+  const plain = ({ x1, y1, x2, y2, color = C.ink, width = 2, dash = null }) =>
+    `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${color}" stroke-width="${width}"${dash ? ` stroke-dasharray="${dash}"` : ""}/>`;
+
+  const stepBox = ({ x, y, w, h, content, size = 17, fill = "#FFFFFF", stroke = C.blueBorder }) => [
+    box({ x, y, w, h, fill, stroke, rx: 8 }),
+    text({ x: x + w / 2, y: y + h / 2 + 6, content, size, weight: 600, anchor: "middle" }),
+  ];
+
+  const stateRow = ({ x, y, w, h, name, token, fill, stroke, color, dash = null }) => [
+    box({ x, y, w, h, fill, stroke, rx: 7, sw: 1.4, dash }),
+    text({ x: x + 18, y: y + h / 2 + 5, content: name, size: 14.5, weight: 600, fill: color }),
+    text({
+      x: x + w - 18,
+      y: y + h / 2 + 5,
+      content: token,
+      size: 12.5,
+      fill: color,
+      anchor: "end",
+    }),
+  ];
+
+  parts.push(
+    text({
+      x: 980,
+      y: 62,
+      content: "R97：目标运行时感知的三值折叠判定模型",
+      size: 34,
+      weight: 700,
+      anchor: "middle",
+    }),
+  );
+
+  // 左侧留白条 + 禁止循环论证
+  parts.push(
+    box({ x: 30, y: 96, w: 150, h: 1118, fill: "#FFFFFF", stroke: "#E2E8F0", rx: 12, dash: "6 6" }),
+    `<circle cx="105" cy="590" r="44" fill="none" stroke="#DC2626" stroke-width="9"/>`,
+    `<line x1="74" y1="559" x2="136" y2="621" stroke="#DC2626" stroke-width="9"/>`,
+    text({
+      x: 105,
+      y: 668,
+      content: "禁止循环论证",
+      size: 15,
+      weight: 700,
+      fill: C.red,
+      anchor: "middle",
+    }),
+    text({
+      x: 105,
+      y: 692,
+      content: "代码出现 wx",
+      size: 12,
+      fill: C.faint,
+      anchor: "middle",
+    }),
+    text({
+      x: 105,
+      y: 710,
+      content: "≠ 目标已确认",
+      size: 12,
+      fill: C.faint,
+      anchor: "middle",
+    }),
+  );
+
+  // 第一条横带：代码侧
+  parts.push(
+    box({ x: 210, y: 96, w: 1540, h: 320, fill: C.bandBlue, stroke: C.bandBlueBorder, rx: 12 }),
+    text({ x: 240, y: 132, content: "代码侧（内部证据）", size: 19, weight: 700, fill: C.blue }),
+    ...stepBox({ x: 250, y: 225, w: 190, h: 70, content: "混淆后的 JS" }),
+    ...stepBox({ x: 470, y: 225, w: 200, h: 70, content: "AST 与绑定解析" }),
+    ...stepBox({ x: 700, y: 225, w: 200, h: 70, content: "运行时实体识别" }),
+    arrow({ x1: 442, y1: 260, x2: 466, y2: 260, color: C.blue }),
+    arrow({ x1: 672, y1: 260, x2: 696, y2: 260, color: C.blue }),
+    arrow({ x1: 902, y1: 260, x2: 984, y2: 260, color: C.blue }),
+    box({ x: 990, y: 152, w: 470, h: 216, fill: "#FFFFFF", stroke: C.blueBorder, rx: 10 }),
+    text({ x: 1014, y: 184, content: "必需运行时 required", size: 17, weight: 700 }),
+    ...stateRow({
+      x: 1010,
+      y: 196,
+      w: 430,
+      h: 38,
+      name: "确定依赖",
+      token: "definite",
+      fill: C.requiredStrong,
+      stroke: C.requiredStrong,
+      color: "#FFFFFF",
+    }),
+    ...stateRow({
+      x: 1010,
+      y: 240,
+      w: 430,
+      h: 38,
+      name: "可能依赖",
+      token: "possible",
+      fill: "#FFFFFF",
+      stroke: "#64748B",
+      color: C.ink,
+      dash: "7 5",
+    }),
+    ...stateRow({
+      x: 1010,
+      y: 284,
+      w: 430,
+      h: 38,
+      name: "歧义依赖",
+      token: "ambiguous",
+      fill: C.slateSoft,
+      stroke: "#94A3B8",
+      color: C.ink,
+      dash: "2 4",
+    }),
+    ...stateRow({
+      x: 1010,
+      y: 328,
+      w: 430,
+      h: 38,
+      name: "不依赖",
+      token: "not_required",
+      fill: "#FFFFFF",
+      stroke: C.bandBlueBorder,
+      color: C.faint,
+    }),
+    text({
+      x: 250,
+      y: 350,
+      content: "注：not_required = 未检出宿主依赖（派生状态）",
+      size: 13,
+      fill: C.faint,
+    }),
+    text({
+      x: 250,
+      y: 374,
+      content: "possible / ambiguous 均不足以授权折叠，只能进入候选比较",
+      size: 13,
+      fill: C.faint,
+    }),
+  );
+
+  // 第二条横带：判定核心
+  parts.push(
+    box({ x: 210, y: 440, w: 1540, h: 300, fill: "#FFFFFF", stroke: C.line, rx: 12 }),
+    text({ x: 240, y: 476, content: "判定核心", size: 19, weight: 700 }),
+    box({ x: 560, y: 565, w: 380, h: 74, fill: C.grayBg, stroke: C.grayBorder, rx: 8 }),
+    text({ x: 580, y: 598, content: "语义契约 semantic contract", size: 16, weight: 700 }),
+    text({ x: 580, y: 624, content: "由绑定解析与运行时实体识别产出", size: 13, fill: C.muted }),
+    arrow({ x1: 940, y1: 602, x2: 984, y2: 602, color: C.gray }),
+    box({ x: 990, y: 490, w: 470, h: 220, fill: "#F8FBFF", stroke: C.blueBorder, rx: 10, sw: 2 }),
+    text({ x: 1014, y: 526, content: "判定函数 D", size: 20, weight: 700 }),
+    text({
+      x: 1014,
+      y: 560,
+      content: "D(必需, 目标, 契约) → { FOLD, PROTECT, UNKNOWN }",
+      size: 16,
+    }),
+    text({ x: 1014, y: 586, content: "总函数 · 默认输出 UNKNOWN", size: 13, fill: C.muted }),
+  );
+
+  const bullets = [
+    "已确认目标 + 确定依赖 + 真实冲突 → PROTECT",
+    "全部目标契约一致且证据可折叠 → FOLD",
+    "目标未确认或证据不足 → UNKNOWN",
+  ];
+  bullets.forEach((line, index) => {
+    const baseline = 614 + index * 28;
+    parts.push(
+      box({ x: 1014, y: baseline - 11, w: 10, h: 10, fill: "#94A3B8", stroke: "#94A3B8", rx: 2, sw: 0 }),
+      text({ x: 1032, y: baseline, content: line, size: 14 }),
+    );
+  });
+
+  const outputs = [
+    { label: "FOLD 折叠", y: 500, fill: C.foldGreen },
+    { label: "PROTECT 保护", y: 575, fill: C.red },
+    { label: "UNKNOWN 未决", y: 650, fill: C.amber },
+  ];
+  outputs.forEach((item) => {
+    parts.push(
+      box({ x: 1500, y: item.y, w: 240, h: 60, fill: item.fill, stroke: item.fill, rx: 8 }),
+      text({
+        x: 1620,
+        y: item.y + 38,
+        content: item.label,
+        size: 19,
+        weight: 700,
+        fill: "#FFFFFF",
+        anchor: "middle",
+      }),
+    );
+  });
+
+  parts.push(
+    plain({ x1: 1460, y1: 605, x2: 1480, y2: 605 }),
+    plain({ x1: 1480, y1: 530, x2: 1480, y2: 680 }),
+    arrow({ x1: 1480, y1: 530, x2: 1496, y2: 530, color: C.ink }),
+    arrow({ x1: 1480, y1: 605, x2: 1496, y2: 605, color: C.ink }),
+    arrow({ x1: 1480, y1: 680, x2: 1496, y2: 680, color: C.ink }),
+    text({
+      x: 1470,
+      y: 726,
+      content: "三值输出互斥，未知不是安全",
+      size: 12.5,
+      fill: C.faint,
+      anchor: "end",
+    }),
+    arrow({ x1: 1225, y1: 368, x2: 1225, y2: 486, color: C.blue, width: 2.5 }),
+    arrow({ x1: 1225, y1: 806, x2: 1225, y2: 714, color: C.orange, width: 2.5 }),
+  );
+
+  // 第三条横带：证据侧
+  parts.push(
+    box({ x: 210, y: 764, w: 1540, h: 360, fill: C.bandGray, stroke: C.bandGrayBorder, rx: 12 }),
+    text({ x: 240, y: 800, content: "证据侧（外部证据）", size: 19, weight: 700, fill: C.orange }),
+    ...stepBox({ x: 250, y: 910, w: 190, h: 70, content: "项目与部署配置", size: 15 }),
+    ...stepBox({ x: 470, y: 910, w: 220, h: 70, content: "运行轨迹与运行时指纹", size: 15 }),
+    ...stepBox({ x: 720, y: 910, w: 210, h: 70, content: "目标运行时解析器", size: 15 }),
+    arrow({ x1: 442, y1: 945, x2: 466, y2: 945, color: C.orange }),
+    arrow({ x1: 692, y1: 945, x2: 716, y2: 945, color: C.orange }),
+    arrow({ x1: 932, y1: 945, x2: 984, y2: 945, color: C.orange }),
+    box({ x: 990, y: 800, w: 470, h: 296, fill: "#FFFFFF", stroke: C.orangeBorder, rx: 10 }),
+    text({ x: 1014, y: 832, content: "目标运行时 target（七态）", size: 17, weight: 700 }),
+  );
+
+  const targetStates = [
+    ["已确认", "confirmed", C.tealSolid, C.tealSolid, "#FFFFFF"],
+    ["已佐证", "corroborated", C.tealSoft, C.tealBorder, C.teal],
+    ["平台已知", "context_unknown", C.skySoft, C.skyBorder, C.skyDeep],
+    ["仅声明", "declared", "#FFFFFF", C.line, C.muted],
+    ["推断", "inferred", "#FFFFFF", "#94A3B8", C.muted],
+    ["冲突", "conflict", C.redSoft, C.redBorder, C.red],
+    ["未知", "unknown", C.slateSoft, C.line, C.faint],
+  ];
+  targetStates.forEach(([name, token, fill, stroke, color], index) => {
+    parts.push(
+      ...stateRow({
+        x: 1010,
+        y: 842 + index * 36,
+        w: 430,
+        h: 34,
+        name,
+        token,
+        fill,
+        stroke,
+        color,
+        dash: token === "inferred" ? "7 5" : null,
+      }),
+    );
+  });
+  parts.push(
+    text({
+      x: 1010,
+      y: 1116,
+      content: "只有 confirmed 有资格触发硬冲突 PROTECT；declared / inferred 只产生候选",
+      size: 12.5,
+      fill: C.faint,
+    }),
+  );
+
+  // 安全不变量
+  parts.push(
+    box({ x: 210, y: 1148, w: 1540, h: 66, fill: C.bandBlue, stroke: C.bandBlueBorder, rx: 10 }),
+    text({ x: 240, y: 1190, content: "安全不变量", size: 17, weight: 700, fill: C.blue }),
+    plain({ x1: 705, y1: 1166, x2: 705, y2: 1196, color: C.bandBlueBorder }),
+    plain({ x1: 1175, y1: 1166, x2: 1175, y2: 1196, color: C.bandBlueBorder }),
+    text({ x: 545, y: 1190, content: "必需 ≠ 目标", size: 16, anchor: "middle" }),
+    text({ x: 940, y: 1190, content: "弱来源不授权折叠", size: 16, anchor: "middle" }),
+    text({ x: 1445, y: 1190, content: "默认目标 unknown", size: 16, anchor: "middle" }),
+  );
+
+  return svg({
+    width: W,
+    height: H,
+    title: "R97 三值折叠判定模型",
+    desc: "代码侧 required 三态、证据侧 target 七态、判定函数 D 的三值输出与安全不变量。",
+    body: parts.join("\n"),
+  });
+};
+
 const outputDir = path.resolve("figures");
 mkdirSync(outputDir, { recursive: true });
 writeFileSync(
@@ -775,4 +1072,7 @@ writeFileSync(
   decisionSvg(),
   "utf8",
 );
-console.log("已生成 figures/R97-framework.svg 与 figures/R97-decision-flow.svg");
+writeFileSync(path.join(outputDir, "R97-model.svg"), modelSvg(), "utf8");
+console.log(
+  "已生成 figures/R97-framework.svg、figures/R97-decision-flow.svg 与 figures/R97-model.svg",
+);

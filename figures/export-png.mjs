@@ -28,6 +28,12 @@ const figures = [
     width: 1680,
     height: 1060,
   },
+  {
+    svg: "figures/R97-model.svg",
+    png: "figures/R97-model.png",
+    width: 1780,
+    height: 1250,
+  },
 ];
 
 const profileDir = path.join(process.cwd(), ".runtime", "figure-profile");
