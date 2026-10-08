@@ -1,0 +1,18 @@
+{
+  "hooks": {
+    "enabled": true,
+    "events": {
+      "Stop": [
+        {
+          "matcher": ".*",
+          "hooks": [
+            {
+              "type": "command",
+              "command": "python C:/Users/happy/.zcode/scripts/notify_task_done.py"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
