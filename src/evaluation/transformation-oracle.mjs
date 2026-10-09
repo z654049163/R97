@@ -181,12 +181,23 @@ const compareBehavior = (before, after) => {
 };
 
 /**
- * 只比较**可观察的行为形状**：返回值的规范化结果，或者异常的类名。
- *
- * 与判卷探针保持同一个口径——不比较错误消息文本，避免把环境措辞差异当成
- * 语义差异。
+ * 形式化可观察行为形状（对标 OBsmith Section 3.4 Operational Semantic Equivalence）：
+ * 1. 正常执行：比对序列化值（严格归一化结果）；
+ * 2. 异常退出：比对归一化异常类名；针对未声明标识符异常（ReferenceError），
+ *    进一步提取并比对未解析符号名，既屏蔽了跨浏览器引擎的表述差异（如
+ *    "x is not defined" 与 "Can't find variable: x"），又杜绝了标识符静默漂移。
  */
-const observationShape = (observation) => {
+export const extractUnresolvedTarget = (errorMessage) => {
+  if (typeof errorMessage !== "string") {
+    return null;
+  }
+  const match =
+    errorMessage.match(/([a-zA-Z_$][a-zA-Z0-9_$]*)\s+is not defined/u) ||
+    errorMessage.match(/Can't find variable:\s*([a-zA-Z_$][a-zA-Z0-9_$]*)/u);
+  return match ? match[1] : null;
+};
+
+export const observationShape = (observation) => {
   if (!observation || typeof observation !== "object") {
     return null;
   }
@@ -194,7 +205,14 @@ const observationShape = (observation) => {
     return `${observation.status}`;
   }
   if (observation.outcome === "exception") {
-    return `exception:${observation.errorName}`;
+    const errorName = observation.errorName || "Error";
+    if (errorName === "ReferenceError") {
+      const target = extractUnresolvedTarget(observation.errorMessage);
+      return target
+        ? `exception:ReferenceError:target=${target}`
+        : `exception:ReferenceError`;
+    }
+    return `exception:${errorName}`;
   }
   return `value:${JSON.stringify(observation.result)}`;
 };
