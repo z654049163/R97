@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 760" width="1440" height="760" style="background:#FFFFFF; font-family:-apple-system, BlinkMacSystemFont, 'Nunito', 'Poppins', 'Segoe UI', Arial, sans-serif;">
+import os
+import subprocess
+
+svg_pastel = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 760" width="1440" height="760" style="background:#FFFFFF; font-family:-apple-system, BlinkMacSystemFont, 'Nunito', 'Poppins', 'Segoe UI', Arial, sans-serif;">
   <defs>
     <!-- Soft Ambient Shadow for Floating Panels -->
     <filter id="card-shadow" x="-5%" y="-3%" width="110%" height="108%" filterUnits="userSpaceOnUse">
@@ -422,3 +425,28 @@
     </text>
   </g>
 </svg>
+'''
+
+with open("docs/r97_academic_figure_generator_model.svg", "w", encoding="utf-8") as f:
+    f.write(svg_pastel)
+
+print("Saved modern pastel SVG.")
+
+html_wrap = f'''<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * {{ margin:0; padding:0; box-sizing:border-box; }}
+  body {{ background:#ffffff; width:1440px; height:760px; overflow:hidden; }}
+</style>
+</head>
+<body>
+{svg_pastel}
+</body>
+</html>'''
+
+with open("docs/r97_academic_figure_generator_model.html", "w", encoding="utf-8") as f:
+    f.write(html_wrap)
+
+print("Saved modern pastel HTML.")
