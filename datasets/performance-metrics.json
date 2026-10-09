@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-03T09:30:58.712Z",
-  "generatedAtBeijing": "2026/10/3 17:30:58",
+  "generatedAt": "2026-10-09T03:48:28.154Z",
+  "generatedAtBeijing": "2026/10/9 11:48:28",
   "corpus": {
     "generatedAt": "2026-09-23T08:47:48.991Z",
     "sourceRoots": [
@@ -15594,15 +15594,14 @@
     "unsafeExamples": []
   },
   "oracle": {
-    "generatedAt": "2026-09-23T10:47:52.675Z",
+    "generatedAt": "2026-10-09T03:47:10.616Z",
     "caseCount": 20,
     "verifiedCaseCount": 20,
     "byVerdict": {
       "correct-block": 10,
-      "correct-allow": 9,
-      "over-protection": 1
+      "correct-allow": 10
     },
-    "allowedFoldCount": 9,
+    "allowedFoldCount": 10,
     "unsafeAllowCount": 0,
     "foldPrecision": 1,
     "divergentTransformationCount": 10,
@@ -15919,12 +15918,12 @@
         "description": "纯语言表达式，但折叠点带属性访问，需要的可观察维度现有契约没有声明——考察是否被误拦",
         "evaluatorRuntime": "language",
         "targetRuntime": "edge",
-        "r97Action": "BLOCK",
+        "r97Action": "ALLOW",
         "r97States": [
-          "UNKNOWN"
+          "FOLD"
         ],
         "r97ReasonCodes": [
-          "CONTRACT_COVERAGE_MISSING"
+          "ALL_TARGETS_MATCH"
         ],
         "behavior": {
           "verified": true,
@@ -15932,7 +15931,7 @@
           "before": "value:{\"kind\":\"number\",\"value\":1}",
           "after": "value:{\"kind\":\"number\",\"value\":1}"
         },
-        "verdict": "over-protection"
+        "verdict": "correct-allow"
       },
       {
         "caseId": "pure-string-method-chain",

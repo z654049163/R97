@@ -1,6 +1,6 @@
 # Transformation Oracle（Level 2）
 
-生成时间：2026-09-23T10:47:52.675Z
+生成时间：2026-10-09T03:47:10.616Z
 
 判卷（Level 1）问的是「实体观测能不能迁移」；这一层问的是
 「变换前后在**目标环境**里的行为一样吗」：
@@ -15,7 +15,7 @@ unsafe  ⟺  Obs(P, R_t) ≠ Obs(T(P), R_t)
 |---|---:|
 | 用例 | 20 |
 | 可执行验证 | 20 |
-| R97 放行 | 9 |
+| R97 放行 | 10 |
 | **放行中在目标环境改变行为** | **0** |
 | Fold Precision（变换口径） | 100.00% |
 | 已知会改变行为的变换 | 10 |
@@ -39,7 +39,7 @@ unsafe  ⟺  Obs(P, R_t) ≠ Obs(T(P), R_t)
 | `pure-array-is-array` | pure-language | edge | ALLOW | value:{"kind":"boolean","value":true} | value:{"kind":"boolean","value":true} | 正确放行 |
 | `typeof-math-stable` | pure-language | edge | ALLOW | value:{"kind":"string","value":"object"} | value:{"kind":"string","value":"object"} | 正确放行 |
 | `pure-undefined-identity` | pure-language | edge | ALLOW | value:{"kind":"boolean","value":true} | value:{"kind":"boolean","value":true} | 正确放行 |
-| `pure-json-property-access` | contract-coverage | edge | BLOCK | value:{"kind":"number","value":1} | value:{"kind":"number","value":1} | 过度保护 |
+| `pure-json-property-access` | contract-coverage | edge | ALLOW | value:{"kind":"number","value":1} | value:{"kind":"number","value":1} | 正确放行 |
 | `pure-string-method-chain` | contract-coverage | edge | ALLOW | value:{"kind":"string","value":"ABC"} | value:{"kind":"string","value":"ABC"} | 正确放行 |
 | `pure-const-arithmetic` | contract-coverage | edge | ALLOW | value:{"kind":"number","value":9} | value:{"kind":"number","value":9} | 正确放行 |
 | `shadowed-window-local` | shadowed-binding | edge | ALLOW | value:{"kind":"string","value":"local"} | value:{"kind":"string","value":"local"} | 正确放行 |
