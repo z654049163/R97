@@ -38,7 +38,7 @@
   }
   .badge {
     font-size: 11px;
-    background: #059669;
+    background: #0072B2;
     color: #FFF;
     padding: 2px 8px;
     border-radius: 4px;
@@ -48,15 +48,15 @@
   .controls {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 7px;
   }
   button {
     background: #334155;
     color: #F1F5F9;
     border: 1px solid #475569;
-    padding: 6px 11px;
+    padding: 5px 10px;
     border-radius: 6px;
-    font-size: 12px;
+    font-size: 11.5px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.15s ease;
@@ -66,13 +66,18 @@
     color: #FFF;
   }
   button.active {
-    background: #0284C7;
-    border-color: #38BDF8;
+    background: #0072B2;
+    border-color: #56B4E9;
     color: #FFF;
   }
   button.nature-active {
     background: #059669;
     border-color: #34D399;
+    color: #FFF;
+  }
+  button.afg-active {
+    background: #0072B2;
+    border-color: #56B4E9;
     color: #FFF;
   }
   button.ai-active {
@@ -82,15 +87,15 @@
   }
   .divider {
     width: 1px;
-    height: 20px;
+    height: 18px;
     background: #475569;
-    margin: 0 4px;
+    margin: 0 3px;
   }
   .zoom-indicator {
     font-family: monospace;
-    font-size: 13px;
+    font-size: 12.5px;
     color: #94A3B8;
-    min-width: 50px;
+    min-width: 48px;
     text-align: center;
   }
   /* 画布展示区 */
@@ -147,14 +152,15 @@
   <div class="toolbar">
     <div class="title-area">
       <h1>R97 系统架构模型图</h1>
-      <span class="badge" id="badgeTag">Nature 顶刊机制图规范</span>
+      <span class="badge" id="badgeTag">Okabe-Ito 学术标准色系</span>
     </div>
     <div class="controls">
       <!-- 风格切换 -->
       <span style="font-size:11.5px; color:#94A3B8; margin-right:2px;">版本对比:</span>
-      <button onclick="setVersion('nature')" id="btnVerNature" class="nature-active">🌿 Nature 旗舰版 (推荐 · 矢量无损)</button>
+      <button onclick="setVersion('afg')" id="btnVerAfg" class="afg-active">🎨 Academic Figure 版 (Okabe-Ito 色系)</button>
+      <button onclick="setVersion('nature')" id="btnVerNature">🌿 Nature 旗舰版</button>
       <button onclick="setVersion('academic')" id="btnVerAcademic">🏛️ USENIX/IEEE 顶会版</button>
-      <button onclick="setVersion('ai')" id="btnVerAi">🤖 GPT Image 2 AI 生成图 (对比)</button>
+      <button onclick="setVersion('ai')" id="btnVerAi">🤖 GPT Image 2 (对比)</button>
       <div class="divider"></div>
 
       <!-- 格式切换 -->
@@ -173,7 +179,7 @@
 
   <div class="viewport" id="viewport">
     <div class="container" id="container">
-      <img id="diagramImg" src="r97_nature_model_architecture.svg" alt="R97 Architecture" width="1440" height="760">
+      <img id="diagramImg" src="r97_academic_figure_generator_model.svg" alt="R97 Architecture" width="1440" height="760">
     </div>
     <div class="hint-bar">
       <div>🖱️ <span>滚轮缩放</span> (15% ~ 600%)</div>
@@ -183,8 +189,8 @@
   </div>
 
 <script>
-  let currentVersion = 'nature'; // 'nature', 'academic', or 'ai'
-  let currentFormat = 'svg';     // 'svg' or 'png'
+  let currentVersion = 'afg'; // 'afg', 'nature', 'academic', or 'ai'
+  let currentFormat = 'svg';   // 'svg' or 'png'
   let scale = 1.0;
   let posX = 0;
   let posY = 0;
@@ -198,6 +204,7 @@
   const img = document.getElementById('diagramImg');
   const badgeTag = document.getElementById('badgeTag');
 
+  const btnVerAfg = document.getElementById('btnVerAfg');
   const btnVerNature = document.getElementById('btnVerNature');
   const btnVerAcademic = document.getElementById('btnVerAcademic');
   const btnVerAi = document.getElementById('btnVerAi');
@@ -219,31 +226,39 @@
     btnFmtSvg.style.display = 'inline-block';
     btnFmtPng.style.display = 'inline-block';
 
-    const filename = currentVersion === 'nature'
-      ? `r97_nature_model_architecture.${currentFormat}`
-      : `r97_system_architecture_academic.${currentFormat}`;
-    
-    img.src = filename;
-    if (currentVersion === 'nature') {
+    let filename = '';
+    if (currentVersion === 'afg') {
+      filename = `r97_academic_figure_generator_model.${currentFormat}`;
+      img.width = 1440;
+      img.height = 760;
+      badgeTag.textContent = 'Academic Figure Generator 重绘版 (Okabe-Ito 学术标准色系)';
+      badgeTag.style.background = '#0072B2';
+    } else if (currentVersion === 'nature') {
+      filename = `r97_nature_model_architecture.${currentFormat}`;
       img.width = 1440;
       img.height = 760;
       badgeTag.textContent = 'Nature 旗舰版 (多面板机制图规范)';
       badgeTag.style.background = '#059669';
     } else {
+      filename = `r97_system_architecture_academic.${currentFormat}`;
       img.width = 1440;
       img.height = 720;
       badgeTag.textContent = 'USENIX/IEEE 顶会版 (Stage I-V 管道架构)';
       badgeTag.style.background = '#0284C7';
     }
+    img.src = filename;
   }
 
   function setVersion(ver) {
     currentVersion = ver;
+    btnVerAfg.className = '';
     btnVerNature.className = '';
     btnVerAcademic.className = '';
     btnVerAi.className = '';
 
-    if (ver === 'nature') {
+    if (ver === 'afg') {
+      btnVerAfg.className = 'afg-active';
+    } else if (ver === 'nature') {
       btnVerNature.className = 'nature-active';
     } else if (ver === 'academic') {
       btnVerAcademic.className = 'active';
