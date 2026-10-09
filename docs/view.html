@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
-<title>R97 论文模型图 - 交互式高清查看器</title>
+<title>R97 论文模型图 - 交互式全景查看器</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
@@ -38,7 +38,7 @@
   }
   .badge {
     font-size: 11px;
-    background: #0072B2;
+    background: #0284C7;
     color: #FFF;
     padding: 2px 8px;
     border-radius: 4px;
@@ -48,13 +48,13 @@
   .controls {
     display: flex;
     align-items: center;
-    gap: 7px;
+    gap: 6px;
   }
   button {
     background: #334155;
     color: #F1F5F9;
     border: 1px solid #475569;
-    padding: 5px 10px;
+    padding: 5px 9px;
     border-radius: 6px;
     font-size: 11.5px;
     font-weight: 600;
@@ -66,18 +66,18 @@
     color: #FFF;
   }
   button.active {
-    background: #0072B2;
-    border-color: #56B4E9;
+    background: #0284C7;
+    border-color: #38BDF8;
+    color: #FFF;
+  }
+  button.complete-active {
+    background: #0284C7;
+    border-color: #38BDF8;
     color: #FFF;
   }
   button.nature-active {
     background: #059669;
     border-color: #34D399;
-    color: #FFF;
-  }
-  button.afg-active {
-    background: #0072B2;
-    border-color: #56B4E9;
     color: #FFF;
   }
   button.ai-active {
@@ -93,7 +93,7 @@
   }
   .zoom-indicator {
     font-family: monospace;
-    font-size: 12.5px;
+    font-size: 12px;
     color: #94A3B8;
     min-width: 48px;
     text-align: center;
@@ -152,12 +152,12 @@
   <div class="toolbar">
     <div class="title-area">
       <h1>R97 系统架构模型图</h1>
-      <span class="badge" id="badgeTag">Okabe-Ito 学术标准色系</span>
+      <span class="badge" id="badgeTag">全景系统架构完整版</span>
     </div>
     <div class="controls">
       <!-- 风格切换 -->
-      <span style="font-size:11.5px; color:#94A3B8; margin-right:2px;">版本对比:</span>
-      <button onclick="setVersion('afg')" id="btnVerAfg" class="afg-active">🎨 Academic Figure 版 (Okabe-Ito 色系)</button>
+      <span style="font-size:11.5px; color:#94A3B8; margin-right:2px;">版本:</span>
+      <button onclick="setVersion('complete')" id="btnVerComplete" class="complete-active">💎 全景系统完整版 (推荐 · 三域输入+实测比对+下游对比)</button>
       <button onclick="setVersion('nature')" id="btnVerNature">🌿 Nature 旗舰版</button>
       <button onclick="setVersion('academic')" id="btnVerAcademic">🏛️ USENIX/IEEE 顶会版</button>
       <button onclick="setVersion('ai')" id="btnVerAi">🤖 GPT Image 2 (对比)</button>
@@ -179,7 +179,7 @@
 
   <div class="viewport" id="viewport">
     <div class="container" id="container">
-      <img id="diagramImg" src="r97_academic_figure_generator_model.svg" alt="R97 Architecture" width="1440" height="760">
+      <img id="diagramImg" src="r97_scientific_complete_architecture.svg" alt="R97 Architecture" width="1440" height="780">
     </div>
     <div class="hint-bar">
       <div>🖱️ <span>滚轮缩放</span> (15% ~ 600%)</div>
@@ -189,8 +189,8 @@
   </div>
 
 <script>
-  let currentVersion = 'afg'; // 'afg', 'nature', 'academic', or 'ai'
-  let currentFormat = 'svg';   // 'svg' or 'png'
+  let currentVersion = 'complete'; // 'complete', 'nature', 'academic', or 'ai'
+  let currentFormat = 'svg';       // 'svg' or 'png'
   let scale = 1.0;
   let posX = 0;
   let posY = 0;
@@ -204,7 +204,7 @@
   const img = document.getElementById('diagramImg');
   const badgeTag = document.getElementById('badgeTag');
 
-  const btnVerAfg = document.getElementById('btnVerAfg');
+  const btnVerComplete = document.getElementById('btnVerComplete');
   const btnVerNature = document.getElementById('btnVerNature');
   const btnVerAcademic = document.getElementById('btnVerAcademic');
   const btnVerAi = document.getElementById('btnVerAi');
@@ -227,12 +227,12 @@
     btnFmtPng.style.display = 'inline-block';
 
     let filename = '';
-    if (currentVersion === 'afg') {
-      filename = `r97_academic_figure_generator_model.${currentFormat}`;
+    if (currentVersion === 'complete') {
+      filename = `r97_scientific_complete_architecture.${currentFormat}`;
       img.width = 1440;
-      img.height = 760;
-      badgeTag.textContent = 'Academic Figure Generator 重绘版 (Okabe-Ito 学术标准色系)';
-      badgeTag.style.background = '#0072B2';
+      img.height = 780;
+      badgeTag.textContent = '全景系统架构完整版 (三域输入 · 探针实测读数对比 · 下游守门对比)';
+      badgeTag.style.background = '#0284C7';
     } else if (currentVersion === 'nature') {
       filename = `r97_nature_model_architecture.${currentFormat}`;
       img.width = 1440;
@@ -251,13 +251,13 @@
 
   function setVersion(ver) {
     currentVersion = ver;
-    btnVerAfg.className = '';
+    btnVerComplete.className = '';
     btnVerNature.className = '';
     btnVerAcademic.className = '';
     btnVerAi.className = '';
 
-    if (ver === 'afg') {
-      btnVerAfg.className = 'afg-active';
+    if (ver === 'complete') {
+      btnVerComplete.className = 'complete-active';
     } else if (ver === 'nature') {
       btnVerNature.className = 'nature-active';
     } else if (ver === 'academic') {
@@ -306,8 +306,9 @@
   function fitWindow() {
     const vw = viewport.clientWidth - 80;
     const vh = viewport.clientHeight - 80;
-    let iw = 1440, ih = 760;
+    let iw = 1440, ih = 780;
     if (currentVersion === 'academic') { iw = 1440; ih = 720; }
+    if (currentVersion === 'nature') { iw = 1440; ih = 760; }
     if (currentVersion === 'ai') { iw = 1672; ih = 940; }
     scale = Math.min(vw / iw, vh / ih);
     posX = 0;
