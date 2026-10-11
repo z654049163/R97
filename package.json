@@ -58,7 +58,8 @@
     "eval:result-reuse": "node --max-old-space-size=4096 src/evaluation/result-reuse-validation.mjs --out datasets/result-reuse-validation",
     "eval:differential": "node src/evaluation/differential-reference.mjs --out datasets/differential-reference",
     "eval:external-baselines": "node src/evaluation/external-tool-baseline.mjs --out datasets/external-tool-baseline",
-    "eval:memory": "node --expose-gc src/evaluation/memory-benchmark.mjs --per-entity-cap 5 --out datasets/memory-benchmark"
+    "eval:memory": "node --expose-gc src/evaluation/memory-benchmark.mjs --per-entity-cap 5 --out datasets/memory-benchmark",
+    "eval:obfuscation-invariance": "node --max-old-space-size=4096 src/evaluation/obfuscation-invariance.mjs --out datasets/obfuscation-invariance"
   },
   "engines": {
     "node": ">=20"
@@ -67,6 +68,7 @@
     "eslint": "^10.11.0",
     "espree": "^10.3.0",
     "globals": "^17.12.0",
+    "javascript-obfuscator": "^5.9.0",
     "miniprogram-automator": "^0.12.1",
     "terser": "^5.51.2",
     "webcrack": "^2.16.0"
