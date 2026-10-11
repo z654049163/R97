@@ -91,11 +91,34 @@
 
 - `npm run eval:host-attribution` **并非纯本地**（含 Edge CDP），已修正周期 2 的假设；无人值守期间任何依赖 CDP 的评测一律不跑。
 
-### 周期 4+ 建议
+### 周期 5+ 建议
 
-1. 周期主题：度量与基准方向（Collberg potency/resilience 在 JS 的现代实测、混淆强度度量）+ LLM 辅助分析的第二轮（DIMVA 2025 Hajipour 等候选核验）。
-2. 代码面：本周期已完成 P2 + P1(代码部分)；P3 待在场验证。剩余可无人值守做的：提案级工作（如 P4 候选：host-attribution 产物时间戳与根数漂移的口径说明）——按"宁可不改"原则，若无充分论证不动代码。
-3. 周期 8 收尾任务不变：task_report.md 汇总。
+1. 周期主题：防护与折叠策略相关（protection、bundling、capability 分析）或补洞周期——按章程周期表推进。
+2. 文献面：候选还有 Herrera "Optimizing Away JavaScript Obfuscation"（arXiv:2009.09170，非顶会，三问评估后再定）与 Hammad ICSE 2018 Android 混淆测量（potency/cost 方法论，跨域类比慎引）。
+3. 周期 8 收尾：task_report.md 汇总全部提交、文献、提案与"待用户在场执行"清单（P1 基准补跑、P3 验证、83-bug 分类核对）。
+
+---
+
+## 周期 5（2026-10-12 05:13–05:3x，自动化触发执行）
+
+### 文献：新增 1 篇 + 一批候选被过滤（过滤记录全部留痕于全景录）
+
+- **收录**：Optimizing Away JavaScript Obfuscation / SAFE-Deobs——**IEEE SCAM 2020**（10.1109/scam51674.2020.00029，pp.215–220，arXiv:2009.09170 双通道核实；venue 为工作会议、如实标注非 CCF-A）。价值：其核心操作正是 R97 守门的 CONST_EVAL，作为"反混淆器内部大量使用常量折叠"的工具证据，补全"混淆器—反混淆器—守门"链条引用面。条目 22。
+- **过滤（三问/核验未过，未收录）**：
+  - webcrack：社区工具，无同行评审论文；
+  - "Understanding and Detecting Minification Bugs in JavaScript Minifiers" 与 "Minifying Bug Detection via LLM-based Test Generation"（检索称 ISSTA 2024）：CrossRef 查无，疑幻觉题名；
+  - Hammad/Garcia/Malek ICSE 2018（Android 混淆测量）：跨域类比弱于已有 ISSTA 2023 条目。
+- 笔记见 `literature/safe-deobs-scam20.md`。
+
+### 代码面：本周期无实施
+
+- 无新过三问的候选；P2/P1-M3 状态不变。任务启动以来代码改动仍为 2 处（均有验证背书），符合"正向收益、宁缺毋滥"。
+
+### 周期 6–7 建议
+
+1. 周期 6 按周期表是"已知边界实施"——但 P3 验证被 CDP 挡住、其他候选未过三问：预计为**纯检索+提案巩固**周期；可把前五个周期文献中浮现的写作级论点（混淆器—反混淆器—守门链条、TV 脉络、宿主能力谱系）整理进 task_report.md 草稿。
+2. 若发现新的可无人值守验证的代码项（纯本地、有测试覆盖），仍按"小步+测试门禁"执行。
+3. 周期 8 收尾：task_report.md 定稿（含"待用户在场执行"清单）。
 
 ---
 
