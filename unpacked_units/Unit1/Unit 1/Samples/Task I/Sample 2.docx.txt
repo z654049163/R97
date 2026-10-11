@@ -1,0 +1,67 @@
+Sample 2
+Date and venue
+ACM Sensys 2009 Berkeley,California-November4-6 2009
+SenSys is sponsored by SIGCOMM²,SIGMOBILE³,
+SIGARCH⁴,SIGOPS⁵,SIGMETRICS⁶,SIGBED⁷and NSF⁸
+Call for papers
+The·7th ACM Conference on Embedded Networked Sensor Systems(SenSys '09)solicits innovative research papers on the systems issues of networked,embedded sensing  and  control.The  conference  brings  together  academic,industry,and  government professionals to a premier single-track,highly selective forum on the design, implementation, and application of sensor networks.   theme
+SenSys takes a broad view of embedded networked sensor systems to include any  distributed  systems  that  collectively  interact  with  the  physical  world. We  invite submissions covering a broad range of networked sensing systems including conventional wireless sensor networks as well as novel platforms such as mobile sensors ,cellphones, and domain-specific systems.
+We seek technical papers describing original ideas,groundbreaking results and/or
+quantified system experiences. We especially encourage submissions that highlight
+real-world sensor network deployments,  new application domains, and retrospectives
+on the state-of-the-art. Topics of interest include, but are not limited to, the following:
+o System and network architecture;
+o Operating systems;
+o Services for time,location,and power management;
+o Reliability and fault tolerance;
+o Protocols at all layers(physical,link,network,and above);        suggested topics
+o Programming models and languages;
+o Data storage,retrieval,and processing;
+o  System security and data integrity;
+o  Novel applications and real-world deployments;
+o Actuation and control;and
+o Privacy and social implications.
+A good paper will:
+o  Consider a significant problem;
+o Propose an interesting,compelling solution;
+o  Demonstrate the practicality and benefits of the solution;    structure & contents
+o  Draw appropriate conclusions;
+o  Clearly describe what the authors have done;and
+o Clearly articulate the advances beyond previous work.
+Submissions must be  full  papers,at  most  14  single-spaced  8.5“x11”pages, including
+figures, tables, and references, two-column format, using 10-point type on 12-point
+(single-spaced) leading,with  a maximum text block  of 7“wide x 9” deep with .25”
+intercolumn space. Papers that do not meet the size and formatting requirements will not
+be reviewed. Submissions  will  be  judged  on  originality,  significance, interest, clarity,
+relevance, and correctness.   criteria of paper review
+Submissions will be subject to rigorous peer review and the top quality papers will be published in the conference proceedings.All papers will be presented orally at the conference.
+For more information,see the Paper Submission Instruction
+Key dates:
+Paper Registration&Abstract
+Paper Submission Deadline
+Notification of Paper Acceptance
+Conference-Berkeley,CA
+April  1,2009,11:59 pm Eastern Time
+April 8,2009,11:59 pm Eastern Time July 20,2009
+November 4-6,2009
+These are “hard deadlines”-no extensions will be granted.
+Technical Program Committee
+Jie Liu(Microsoft Research)co-chair Tarek Abdelzaher,(UIUC)
+Philippe Bonnet,(DIKU)
+Andrew Campbell,(Dartmouth) Andrew Christian,(Nokia)
+Amol Deshpande,(Maryland) Adam Dunkels,(SICS)
+Jakob Eriksson,(UIC)
+Kevin Fu,(UMass Amherst)
+David Gay,(Intel)
+John Heidemann,(USC) Polly Huang,(NTU)
+Matt Welsh (Harvard University)co-chair
+Zachary Ives,(UPenn)
+Bhaskar Krishnamachari,(USC)
+Philip Levis,(Stanford)
+Nithya Ramanathan,(UCLA)
+John Regehr,(Utah)
+Alex Snoeren,(UCSD)
+Subhash Suri,(UCSB)
+Andreas Terzis,(JHU)
+Fan Ye,(IBM Watson Lab)
+Feng Zhao,(MSR)

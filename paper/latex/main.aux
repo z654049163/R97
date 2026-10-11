@@ -1,0 +1,161 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{webcrack}
+\citation{jsimplifier}
+\citation{terser}
+\citation{fv8}
+\citation{obsmith}
+\citation{cascade}
+\@writefile{toc}{\contentsline {section}{Abstract}{1}{section*.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\newlabel{lst:transport}{{1}{1}{Real-world transport-layer selection (Axios/Taro pattern)}{lstlisting.1}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {1}{\ignorespaces Real-world transport-layer selection (Axios/Taro pattern).}}{1}{lstlisting.1}\protected@file@percent }
+\citation{obsmith}
+\citation{wemint,fv8,appsecret}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Background and Motivating Example}{2}{section.2}\protected@file@percent }
+\newlabel{sec:background}{{2}{2}{Background and Motivating Example}{section.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Why Environment Sniffing Is Ubiquitous}{2}{subsection.2.1}\protected@file@percent }
+\newlabel{lst:storage}{{2}{2}{Storage fallback selection}{lstlisting.2}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {2}{\ignorespaces Storage fallback selection.}}{2}{lstlisting.2}\protected@file@percent }
+\citation{fv8}
+\citation{fv8}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Why Hosts Genuinely Differ}{3}{subsection.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Why the Fix Cannot Be ``Run Everything for Real''}{3}{subsection.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Threat Model and Problem Statement}{3}{section.3}\protected@file@percent }
+\newlabel{sec:threat}{{3}{3}{Threat Model and Problem Statement}{section.3}{}}
+\@writefile{toc}{\contentsline {paragraph}{Setting.}{3}{section*.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Adversary and failure sources.}{3}{section*.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{R97's contract.}{3}{section*.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Scope boundaries.}{4}{section*.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Problem statement.}{4}{section*.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Design}{4}{section.4}\protected@file@percent }
+\newlabel{sec:design}{{4}{4}{Design}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Overview}{4}{subsection.4.1}\protected@file@percent }
+\newlabel{lst:pipeline}{{3}{4}{R97 pipeline}{lstlisting.3}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {3}{\ignorespaces R97 pipeline.}}{4}{lstlisting.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}The Orthogonality Axiom: required $\perp $ target}{4}{subsection.4.2}\protected@file@percent }
+\newlabel{sec:axiom}{{4.2}{4}{The Orthogonality Axiom: required $\perp $ target}{subsection.4.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{Required: what the code needs.}{4}{section*.8}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces The target-evidence lattice. Only \texttt  {confirmed} authorizes folds; only \texttt  {confirmed}+conflict or \texttt  {conflict} trigger hard protection.}}{4}{table.caption.9}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{tab:lattice}{{1}{4}{The target-evidence lattice. Only \texttt {confirmed} authorizes folds; only \texttt {confirmed}+conflict or \texttt {conflict} trigger hard protection}{table.caption.9}{}}
+\@writefile{toc}{\contentsline {paragraph}{Target: where the code runs.}{4}{section*.10}\protected@file@percent }
+\citation{ecma262}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Contract dimension projection by transformation kind.}}{5}{table.caption.12}\protected@file@percent }
+\newlabel{tab:contract}{{2}{5}{Contract dimension projection by transformation kind}{table.caption.12}{}}
+\@writefile{toc}{\contentsline {paragraph}{Host-attribution coverage is measured, not assumed.}{5}{section*.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Semantic Contracts: Projecting Only What a Fold Needs}{5}{subsection.4.3}\protected@file@percent }
+\newlabel{sec:contract}{{4.3}{5}{Semantic Contracts: Projecting Only What a Fold Needs}{subsection.4.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}The Eight-Stage Short-Circuit Decision}{5}{subsection.4.4}\protected@file@percent }
+\newlabel{sec:funnel}{{4.4}{5}{The Eight-Stage Short-Circuit Decision}{subsection.4.4}{}}
+\citation{obsmith}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Resolving the Target from External Evidence}{6}{subsection.4.5}\protected@file@percent }
+\newlabel{sec:resolver}{{4.5}{6}{Resolving the Target from External Evidence}{subsection.4.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}The Four-Host Probe Matrix}{6}{subsection.4.6}\protected@file@percent }
+\newlabel{sec:probe}{{4.6}{6}{The Four-Host Probe Matrix}{subsection.4.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.7}The Two-Level Independent Oracle}{6}{subsection.4.7}\protected@file@percent }
+\newlabel{sec:oracle}{{4.7}{6}{The Two-Level Independent Oracle}{subsection.4.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Implementation}{6}{section.5}\protected@file@percent }
+\newlabel{sec:impl}{{5}{6}{Implementation}{section.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Evaluation}{7}{section.6}\protected@file@percent }
+\newlabel{sec:eval}{{6}{7}{Evaluation}{section.6}{}}
+\@writefile{toc}{\contentsline {paragraph}{Datasets.}{7}{section*.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Sampling calibres.}{7}{section*.14}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Measured cross-host divergences and R97 soundness.}}{7}{table.caption.18}\protected@file@percent }
+\newlabel{tab:soundness}{{3}{7}{Measured cross-host divergences and R97 soundness}{table.caption.18}{}}
+\@writefile{toc}{\contentsline {paragraph}{Statistics.}{7}{section*.15}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Oracle scoping.}{7}{section*.16}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}RQ1: Soundness}{7}{subsection.6.1}\protected@file@percent }
+\newlabel{sec:rq1}{{6.1}{7}{RQ1: Soundness}{subsection.6.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{Ground truth.}{7}{section*.17}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Hard set: recall, not coverage.}{7}{section*.19}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Utility by sampling calibre. The two calibres answer different questions and are never merged.}}{8}{table.caption.22}\protected@file@percent }
+\newlabel{tab:utility}{{4}{8}{Utility by sampling calibre. The two calibres answer different questions and are never merged}{table.caption.22}{}}
+\@writefile{toc}{\contentsline {paragraph}{Level-2 transformation oracle.}{8}{section*.20}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Mutation benchmark.}{8}{section*.21}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}RQ2: Utility}{8}{subsection.6.2}\protected@file@percent }
+\newlabel{sec:rq2}{{6.2}{8}{RQ2: Utility}{subsection.6.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Strategy comparison on the 4-host benchmark (785 measured-differential records).}}{8}{table.caption.23}\protected@file@percent }
+\newlabel{tab:strategy}{{5}{8}{Strategy comparison on the 4-host benchmark (785 measured-differential records)}{table.caption.23}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}RQ3: Design Necessity (Ablations)}{8}{subsection.6.3}\protected@file@percent }
+\newlabel{sec:rq3}{{6.3}{8}{RQ3: Design Necessity (Ablations)}{subsection.6.3}{}}
+\@writefile{toc}{\contentsline {paragraph}{The third value is load-bearing.}{8}{section*.24}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Evidence layers.}{8}{section*.25}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Attribution coverage.}{8}{section*.26}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4}RQ4: Target Confirmation}{8}{subsection.6.4}\protected@file@percent }
+\newlabel{sec:rq4}{{6.4}{8}{RQ4: Target Confirmation}{subsection.6.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Effect of target confirmation, everything else fixed.}}{9}{table.caption.27}\protected@file@percent }
+\newlabel{tab:confirmation}{{6}{9}{Effect of target confirmation, everything else fixed}{table.caption.27}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Obfuscation invariance under two controlled obfuscation configurations.}}{9}{table.caption.28}\protected@file@percent }
+\newlabel{tab:obfuscation}{{7}{9}{Obfuscation invariance under two controlled obfuscation configurations}{table.caption.28}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.5}RQ5: Obfuscation Invariance}{9}{subsection.6.5}\protected@file@percent }
+\newlabel{sec:rq5}{{6.5}{9}{RQ5: Obfuscation Invariance}{subsection.6.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.6}RQ6: Real Tools under the Guard}{9}{subsection.6.6}\protected@file@percent }
+\newlabel{sec:rq6}{{6.6}{9}{RQ6: Real Tools under the Guard}{subsection.6.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.7}RQ7: Cost}{9}{subsection.6.7}\protected@file@percent }
+\newlabel{sec:rq7}{{6.7}{9}{RQ7: Cost}{subsection.6.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Discussion}{9}{section.7}\protected@file@percent }
+\newlabel{sec:discussion}{{7}{9}{Discussion}{section.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Five Extrapolation Failures---and Why We Publish Them}{9}{subsection.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{(1) Evaluation-reference pollution.}{9}{section*.29}\protected@file@percent }
+\citation{jstill}
+\citation{ludebray}
+\citation{jsimplifier}
+\citation{webcrack}
+\citation{terser}
+\citation{obsmith}
+\@writefile{toc}{\contentsline {paragraph}{(2) Probe-environment misattribution.}{10}{section*.30}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{(3) Absence extrapolation.}{10}{section*.31}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{(4) Name misattribution.}{10}{section*.32}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{(5) Definition drift.}{10}{section*.33}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Honest Scope of the Safety Claim}{10}{subsection.7.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3}Known Limitations}{10}{subsection.7.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8}Related Work}{10}{section.8}\protected@file@percent }
+\newlabel{sec:related}{{8}{10}{Related Work}{section.8}{}}
+\@writefile{toc}{\contentsline {paragraph}{Deobfuscation and simplification.}{10}{section*.34}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Obfuscator testing.}{10}{section*.35}\protected@file@percent }
+\citation{fv8}
+\citation{visiblev8}
+\citation{wemint}
+\citation{appsecret}
+\citation{donapi}
+\citation{jscamd}
+\citation{pnueli}
+\citation{jest}
+\bibstyle{ACM-Reference-Format}
+\bibdata{refs}
+\bibcite{terser}{{1}{2026}{{Bazon et~al\mbox  {.}}}{{}}}
+\bibcite{ecma262}{{2}{2024}{{ECMA International}}{{}}}
+\bibcite{donapi}{{3}{2024}{{Huang et~al\mbox  {.}}}{{}}}
+\bibcite{webcrack}{{4}{2026}{{j4k0xb}}{{}}}
+\bibcite{jscamd}{{5}{2026}{{Jia et~al\mbox  {.}}}{{}}}
+\bibcite{cascade}{{6}{2026a}{{Jiang et~al\mbox  {.}}}{{}}}
+\bibcite{obsmith}{{7}{2026b}{{Jiang et~al\mbox  {.}}}{{}}}
+\bibcite{visiblev8}{{8}{2019}{{Jueckstock and Kapravelos}}{{}}}
+\bibcite{ludebray}{{9}{2012}{{Lu and Debray}}{{}}}
+\bibcite{wemint}{{10}{2023}{{Meng et~al\mbox  {.}}}{{}}}
+\bibcite{fv8}{{11}{2024}{{Pantelaios and Kapravelos}}{{}}}
+\bibcite{jest}{{12}{2021}{{Park et~al\mbox  {.}}}{{}}}
+\bibcite{pnueli}{{13}{1998}{{Pnueli et~al\mbox  {.}}}{{}}}
+\bibcite{jstill}{{14}{2013}{{Xu et~al\mbox  {.}}}{{}}}
+\bibcite{appsecret}{{15}{2023}{{Zhang et~al\mbox  {.}}}{{}}}
+\@writefile{toc}{\contentsline {paragraph}{Dynamic analysis of hostile JavaScript.}{11}{section*.36}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Hybrid static/dynamic analysis.}{11}{section*.37}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Translation validation.}{11}{section*.38}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Differential testing of engines.}{11}{section*.39}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {9}Conclusion}{11}{section.9}\protected@file@percent }
+\newlabel{sec:conclusion}{{9}{11}{Conclusion}{section.9}{}}
+\@writefile{toc}{\contentsline {paragraph}{Artifacts.}{11}{section*.40}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{References}{11}{section*.42}\protected@file@percent }
+\bibcite{jsimplifier}{{16}{2026}{{Zhou et~al\mbox  {.}}}{{}}}
+\newlabel{tocindent-1}{0pt}
+\newlabel{tocindent0}{0pt}
+\newlabel{tocindent1}{4.185pt}
+\newlabel{tocindent2}{10.34999pt}
+\newlabel{tocindent3}{0pt}
+\newlabel{tocindent4}{0pt}
+\newlabel{tocindent5}{0pt}
+\newlabel{TotPages}{{12}{12}{}{page.12}{}}
+\gdef \@abspage@last{12}

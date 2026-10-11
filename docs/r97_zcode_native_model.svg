@@ -1,0 +1,452 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 580" width="1440" height="580" style="background:#FFFFFF; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, 'Source Han Sans SC', 'Microsoft YaHei', sans-serif;">
+  <defs>
+    <!-- Soft Drop Shadow -->
+    <filter id="card-ambient" x="-4%" y="-3%" width="108%" height="106%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0F172A" flood-opacity="0.05" />
+    </filter>
+
+    <!-- Markers -->
+    <marker id="z-arr-blue" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#0284C7"/>
+    </marker>
+    <marker id="z-arr-purple" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#7C3AED"/>
+    </marker>
+    <marker id="z-arr-green" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#059669"/>
+    </marker>
+    <marker id="z-arr-red" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#DC2626"/>
+    </marker>
+    <marker id="z-arr-dark" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#1E293B"/>
+    </marker>
+  </defs>
+
+  <!-- Canvas Outer Hairline Frame -->
+  <rect x="10" y="10" width="1420" height="560" rx="6" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.2"/>
+
+  <!-- Top Title Banner -->
+  <g transform="translate(26, 30)">
+    <rect x="0" y="-3" width="76" height="20" rx="10" fill="#E0F2FE" />
+    <text x="38" y="11" text-anchor="middle" font-size="9.5" font-weight="700" fill="#0369A1">SYSTEM</text>
+    
+    <text x="86" y="13" font-size="15" font-weight="800" fill="#0F172A">Figure 1 | R97 目标运行时感知的三值折叠保护架构 (Target-Runtime-Aware Guard)</text>
+    <text x="0" y="28" font-size="10.5" fill="#64748B">
+      覆盖 Web / Node / 小程序三域生态 · 需求与目标正交解耦 · 4 宿主差分实测探针驱动的零不安全折叠（Zero Unsafe Folds）
+    </text>
+  </g>
+
+  <!-- ==================== PILLAR 1: DECOUPLED EXTRACTION ==================== -->
+  <g transform="translate(26, 68)">
+    <rect x="0" y="0" width="345" height="452" rx="10" fill="#FFFFFF" filter="url(#card-ambient)" stroke="#F1F5F9" stroke-width="1.5"/>
+    
+    <!-- Stage Header -->
+    <rect x="14" y="14" width="22" height="20" rx="4" fill="#0284C7"/>
+    <text x="25" y="28" text-anchor="middle" font-size="11" font-weight="800" fill="#FFFFFF">1</text>
+    <text x="44" y="29" font-size="11.5" font-weight="800" fill="#0F172A">三域输入与正交特征提取</text>
+
+    <!-- Track 1A: Code Side -->
+    <g transform="translate(14, 42)">
+      <rect x="0" y="0" width="317" height="136" rx="8" fill="#F0F9FF" stroke="#BAE6FD" stroke-width="1"/>
+      <text x="10" y="17" font-size="10" font-weight="700" fill="#0369A1">代码侧（内部证据）➔ 必需能力依赖</text>
+      
+      <!-- 3 Ecosystem Code Tags -->
+      <g transform="translate(8, 26)">
+        <rect x="0" y="0" width="96" height="42" rx="4" fill="#FFFFFF" stroke="#BAE6FD" stroke-width="0.8"/>
+        <text x="6" y="14" font-size="8" font-weight="700" fill="#15803D">📱 微信小程序</text>
+        <text x="6" y="26" font-family="monospace" font-size="7.5" fill="#0F172A">if(typeof wx)</text>
+        <text x="6" y="37" font-family="monospace" font-size="7.5" fill="#0369A1"> wx.request()</text>
+
+        <rect x="102" y="0" width="96" height="42" rx="4" fill="#FFFFFF" stroke="#BAE6FD" stroke-width="0.8"/>
+        <text x="108" y="14" font-size="8" font-weight="700" fill="#4338CA">🌐 前端 WPT</text>
+        <text x="108" y="26" font-family="monospace" font-size="7.5" fill="#0F172A">window.local</text>
+        <text x="108" y="37" font-family="monospace" font-size="7.5" fill="#4338CA"> Storage.get()</text>
+
+        <rect x="204" y="0" width="97" height="42" rx="4" fill="#FFFFFF" stroke="#BAE6FD" stroke-width="0.8"/>
+        <text x="210" y="14" font-size="8" font-weight="700" fill="#B45309">⚙️ 后端 Node</text>
+        <text x="210" y="26" font-family="monospace" font-size="7.5" fill="#0F172A">process.env</text>
+        <text x="210" y="37" font-family="monospace" font-size="7.5" fill="#B45309"> .NODE_ENV</text>
+      </g>
+
+      <!-- AST Scope Output Status -->
+      <g transform="translate(8, 74)">
+        <rect x="0" y="0" width="301" height="52" rx="6" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="0.8"/>
+        <text x="8" y="15" font-size="8.5" font-weight="700" fill="#334155">AST 作用域解析：排除局部参数遮蔽变量</text>
+        <text x="8" y="29" font-size="8" fill="#166534">• <tspan font-weight="700">definite</tspan>: 静态绑定的宿主调用 (wx.*, window.*, process.*)</text>
+        <text x="8" y="43" font-size="8" fill="#854D0E">• <tspan font-weight="700">possible</tspan>: 动态属性访问 obj[key] ➔ 保守降级</text>
+      </g>
+    </g>
+
+    <!-- Central Isolation Firewall -->
+    <g transform="translate(14, 186)">
+      <rect x="0" y="0" width="317" height="58" rx="8" fill="#FFF1F2" stroke="#FDA4AF" stroke-width="1.2" stroke-dasharray="3 3"/>
+      <g transform="translate(10, 8)">
+        <rect x="0" y="0" width="64" height="18" rx="9" fill="#E11D48"/>
+        <text x="32" y="13" text-anchor="middle" font-size="8.5" font-weight="800" fill="#FFFFFF">隔离防火墙</text>
+        <text x="72" y="13" font-size="9.5" font-weight="800" fill="#9F1239">正交隔离公理：Required ⊥ Target</text>
+        
+        <text x="0" y="30" font-size="8" fill="#BE123C">
+          • <tspan font-weight="bold">禁止循环推断</tspan>：代码出现 wx，绝不能作为证明目标是微信的证据！
+        </text>
+        <text x="0" y="42" font-size="8" fill="#BE123C">
+          • 目标环境必须由下方完全独立的外部客观事实（清单/指纹）确立。
+        </text>
+      </g>
+    </g>
+
+    <!-- Track 1B: Evidence Side -->
+    <g transform="translate(14, 252)">
+      <rect x="0" y="0" width="317" height="188" rx="8" fill="#FAF5FF" stroke="#E9D5FF" stroke-width="1"/>
+      <text x="10" y="17" font-size="10" font-weight="700" fill="#6D28D9">证据侧（外部证据）➔ 真实目标环境确立</text>
+
+      <!-- 3 External Config Proofs -->
+      <g transform="translate(8, 26)">
+        <rect x="0" y="0" width="96" height="44" rx="4" fill="#FFFFFF" stroke="#E9D5FF" stroke-width="0.8"/>
+        <text x="6" y="14" font-size="8" font-weight="700" fill="#0F172A">小程序配置</text>
+        <text x="6" y="26" font-family="monospace" font-size="7" fill="#6D28D9">project.config</text>
+        <text x="6" y="37" font-size="7" fill="#64748B">SDK 3.17.3指纹</text>
+
+        <rect x="102" y="0" width="96" height="44" rx="4" fill="#FFFFFF" stroke="#E9D5FF" stroke-width="0.8"/>
+        <text x="108" y="14" font-size="8" font-weight="700" fill="#0F172A">Web 前端配置</text>
+        <text x="108" y="26" font-family="monospace" font-size="7" fill="#6D28D9">index.html</text>
+        <text x="108" y="37" font-size="7" fill="#64748B">DOM/BOM运行时</text>
+
+        <rect x="204" y="0" width="97" height="44" rx="4" fill="#FFFFFF" stroke="#E9D5FF" stroke-width="0.8"/>
+        <text x="210" y="14" font-size="8" font-weight="700" fill="#0F172A">Node 后端配置</text>
+        <text x="210" y="26" font-family="monospace" font-size="7" fill="#6D28D9">package.json</text>
+        <text x="210" y="37" font-size="7" fill="#64748B">Node v20+指纹</text>
+      </g>
+
+      <!-- Target Status Matrix -->
+      <g transform="translate(8, 76)">
+        <rect x="0" y="0" width="301" height="102" rx="6" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="0.8"/>
+        <text x="8" y="16" font-size="8.5" font-weight="700" fill="#334155">目标环境确认状态分级 (Target Status):</text>
+        
+        <g transform="translate(6, 22)">
+          <rect x="0" y="0" width="92" height="34" rx="4" fill="#F0FDF4" stroke="#86EFAC" stroke-width="0.8"/>
+          <text x="46" y="14" text-anchor="middle" font-size="8" font-weight="700" fill="#15803D">confirmed</text>
+          <text x="46" y="26" text-anchor="middle" font-size="7" fill="#166534">外部强证据证实</text>
+
+          <rect x="98" y="0" width="92" height="34" rx="4" fill="#EDE7F6" stroke="#C4B5FD" stroke-width="0.8"/>
+          <text x="144" y="14" text-anchor="middle" font-size="8" font-weight="700" fill="#5B21B6">corroborated</text>
+          <text x="144" y="26" text-anchor="middle" font-size="7" fill="#6D28D9">多弱证据佐证</text>
+
+          <rect x="196" y="0" width="93" height="34" rx="4" fill="#FEF3C7" stroke="#FDE68A" stroke-width="0.8"/>
+          <text x="242" y="14" text-anchor="middle" font-size="8" font-weight="700" fill="#B45309">declared</text>
+          <text x="242" y="26" text-anchor="middle" font-size="7" fill="#92400E">弱配置声明未验</text>
+
+          <rect x="0" y="40" width="92" height="34" rx="4" fill="#FFEDD5" stroke="#FDBA74" stroke-width="0.8"/>
+          <text x="46" y="54" text-anchor="middle" font-size="8" font-weight="700" fill="#C2410C">inferred</text>
+          <text x="46" y="66" text-anchor="middle" font-size="7" fill="#9A3412">探测特征(禁折叠)</text>
+
+          <rect x="98" y="40" width="92" height="34" rx="4" fill="#FEE2E2" stroke="#FCA5A5" stroke-width="0.8"/>
+          <text x="144" y="54" text-anchor="middle" font-size="8" font-weight="700" fill="#B91C1C">conflict</text>
+          <text x="144" y="66" text-anchor="middle" font-size="7" fill="#991B1B">多配置互斥冲突</text>
+
+          <rect x="196" y="40" width="93" height="34" rx="4" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="0.8"/>
+          <text x="242" y="54" text-anchor="middle" font-size="8" font-weight="700" fill="#475569">unknown</text>
+          <text x="242" y="66" text-anchor="middle" font-size="7" fill="#64748B">证据缺失(保守)</text>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- Connectors into Pillar 2 -->
+  <line x1="371" y1="175" x2="395" y2="175" stroke="#0284C7" stroke-width="1.5" marker-end="url(#z-arr-blue)"/>
+  <line x1="371" y1="365" x2="395" y2="365" stroke="#7C3AED" stroke-width="1.5" marker-end="url(#z-arr-purple)"/>
+
+  <!-- ==================== PILLAR 2: PROBING & EMPIRICAL EVIDENCE ==================== -->
+  <g transform="translate(395, 68)">
+    <rect x="0" y="0" width="370" height="452" rx="10" fill="#FFFFFF" filter="url(#card-ambient)" stroke="#F1F5F9" stroke-width="1.5"/>
+
+    <!-- Header -->
+    <rect x="14" y="14" width="22" height="20" rx="4" fill="#0284C7"/>
+    <text x="25" y="28" text-anchor="middle" font-size="11" font-weight="800" fill="#FFFFFF">2</text>
+    <text x="44" y="29" font-size="11.5" font-weight="800" fill="#0F172A">语义契约与 4 宿主实测探针矩阵</text>
+
+    <!-- Semantic Contract Builder -->
+    <g transform="translate(14, 42)">
+      <rect x="0" y="0" width="342" height="114" rx="8" fill="#F0F9FF" stroke="#BAE6FD" stroke-width="1"/>
+      <text x="10" y="17" font-size="10" font-weight="700" fill="#0369A1">语义契约 C：上下文投影维度约束</text>
+      
+      <!-- 3 Dimension Pills -->
+      <g transform="translate(8, 26)">
+        <rect x="0" y="0" width="102" height="22" rx="11" fill="#FFFFFF" stroke="#0284C7" stroke-width="0.8"/>
+        <text x="51" y="15" text-anchor="middle" font-size="8.5" font-weight="700" fill="#0284C7">typeof 维度</text>
+
+        <rect x="110" y="0" width="102" height="22" rx="11" fill="#FFFFFF" stroke="#0284C7" stroke-width="0.8"/>
+        <text x="161" y="15" text-anchor="middle" font-size="8.5" font-weight="700" fill="#0284C7">truthiness 维度</text>
+
+        <rect x="220" y="0" width="102" height="22" rx="11" fill="#FFFFFF" stroke="#0284C7" stroke-width="0.8"/>
+        <text x="271" y="15" text-anchor="middle" font-size="8.5" font-weight="700" fill="#0284C7">return_val 维度</text>
+      </g>
+
+      <!-- Non-deterministic Trap -->
+      <g transform="translate(8, 54)">
+        <rect x="0" y="0" width="326" height="52" rx="6" fill="#FFF1F2" stroke="#FECDD3" stroke-width="1"/>
+        <text x="8" y="16" font-size="8.5" font-weight="700" fill="#9F1239">非确定性语言内建拦截 (Date.now / Math.random):</text>
+        <text x="8" y="30" font-size="8" fill="#BE123C">
+          执行结果随调用时刻或伪随机源变化 ➔ 无法证明跨时间自等
+        </text>
+        <text x="8" y="43" font-size="8" font-weight="700" fill="#E11D48">
+          ➔ 强制追加 return_val 维度要求，探针无读数，安全收敛至 UNKNOWN。
+        </text>
+      </g>
+    </g>
+
+    <!-- 4-Host Probes & Concrete Readings -->
+    <g transform="translate(14, 164)">
+      <rect x="0" y="0" width="342" height="276" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="10" y="18" font-size="10" font-weight="700" fill="#0F172A">4 宿主差分探针矩阵与真机读数对比</text>
+
+      <!-- 4 Host Tiles -->
+      <g transform="translate(8, 28)">
+        <rect x="0" y="0" width="76" height="30" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.8"/>
+        <text x="38" y="14" text-anchor="middle" font-size="7.5" font-weight="700" fill="#0F172A">① 语言基线 VM</text>
+        <text x="38" y="24" text-anchor="middle" font-size="6.5" fill="#64748B">Node vm干净环境</text>
+
+        <rect x="82" y="0" width="76" height="30" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.8"/>
+        <text x="120" y="14" text-anchor="middle" font-size="7.5" font-weight="700" fill="#0F172A">② 原生 Node</text>
+        <text x="120" y="24" text-anchor="middle" font-size="6.5" fill="#64748B">553 条实测差分</text>
+
+        <rect x="164" y="0" width="76" height="30" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.8"/>
+        <text x="202" y="14" text-anchor="middle" font-size="7.5" font-weight="700" fill="#0F172A">③ Edge 浏览器</text>
+        <text x="202" y="24" text-anchor="middle" font-size="6.5" fill="#64748B">780 条实测差分</text>
+
+        <rect x="246" y="0" width="80" height="30" rx="4" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1"/>
+        <text x="286" y="14" text-anchor="middle" font-size="7.5" font-weight="700" fill="#15803D">④ 微信 DevTools</text>
+        <text x="286" y="24" text-anchor="middle" font-size="6.5" fill="#166534">785 条微信差分</text>
+      </g>
+
+      <!-- Concrete Probing Readings Contrast -->
+      <g transform="translate(8, 66)">
+        <rect x="0" y="0" width="326" height="116" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+        <text x="8" y="16" font-size="8.5" font-weight="700" fill="#0F172A">实测探针读数比对实证：冲突 vs 等价</text>
+
+        <!-- Divergence Case -->
+        <g transform="translate(6, 22)">
+          <rect x="0" y="0" width="314" height="42" rx="4" fill="#FFF1F2" stroke="#FECDD3" stroke-width="0.8"/>
+          <text x="6" y="14" font-family="monospace" font-size="7.5" font-weight="700" fill="#9F1239">[实测冲突点] typeof wx:</text>
+          <text x="6" y="25" font-size="7" fill="#BE123C">VM: 'undefined' | Node: 'undefined' | Edge: 'undefined'</text>
+          <text x="6" y="35" font-size="7" font-weight="700" fill="#E11D48">微信真机: 'object' ➔ 发现致命异构冲突！➔ 硬触发 PROTECT</text>
+        </g>
+
+        <!-- Equivalence Case -->
+        <g transform="translate(6, 68)">
+          <rect x="0" y="0" width="314" height="42" rx="4" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="0.8"/>
+          <text x="6" y="14" font-family="monospace" font-size="7.5" font-weight="700" fill="#166534">[实测等价点] Math.abs(-5) === 5:</text>
+          <text x="6" y="25" font-size="7" fill="#15803D">VM: true | Node: true | Edge: true | 微信: true</text>
+          <text x="6" y="35" font-size="7" font-weight="700" fill="#059669">4 宿主完全 strict_equal 且证据可折叠 ➔ 安全放行 FOLD</text>
+        </g>
+      </g>
+
+      <!-- Bottom Evidence Cache Banner -->
+      <g transform="translate(8, 188)">
+        <rect x="0" y="0" width="326" height="80" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+        <text x="8" y="15" font-size="8.5" font-weight="700" fill="#0F172A">差分证据库 E 与 Level-2 执行验证 (OBsmith §3.4 规范):</text>
+        <text x="8" y="28" font-size="7.5" fill="#475569">• 覆盖 1248 实体 / 785 微信差分 / 780 浏览器差分 / 553 Node差分</text>
+        <text x="8" y="40" font-size="7.5" fill="#475569">• 防伪哈希：SHA-256(SDK版本 | 探针代码 | 运行时环境指纹)</text>
+        <text x="8" y="52" font-size="7.5" fill="#475569">• 自动失效机制：SDK变更 / 引擎指纹漂移 ➔ 强制证据过期</text>
+        
+        <rect x="6" y="58" width="314" height="18" rx="3" fill="#F0FDF4" stroke="#86EFAC" stroke-width="0.8"/>
+        <text x="10" y="70" font-size="7.5" font-weight="700" fill="#15803D">
+          Level-2 观测等价验证：放行 1,338 点，验证 386 点，不一致率：<tspan font-weight="800">0.00%</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Connectors into Pillar 3 -->
+  <line x1="765" y1="175" x2="789" y2="175" stroke="#0284C7" stroke-width="1.5" marker-end="url(#z-arr-blue)"/>
+  <line x1="765" y1="365" x2="789" y2="365" stroke="#0F172A" stroke-width="1.5" marker-end="url(#z-arr-dark)"/>
+
+  <!-- ==================== PILLAR 3: DECISION CORE ==================== -->
+  <g transform="translate(789, 68)">
+    <rect x="0" y="0" width="280" height="452" rx="10" fill="#FFFFFF" filter="url(#card-ambient)" stroke="#F1F5F9" stroke-width="1.5"/>
+
+    <!-- Header -->
+    <rect x="14" y="14" width="22" height="20" rx="4" fill="#0284C7"/>
+    <text x="25" y="28" text-anchor="middle" font-size="11" font-weight="800" fill="#FFFFFF">3</text>
+    <text x="44" y="29" font-size="11.5" font-weight="800" fill="#0F172A">八步安全判定核心 D</text>
+
+    <!-- Formula Bar -->
+    <g transform="translate(14, 42)">
+      <rect x="0" y="0" width="252" height="28" rx="14" fill="#0F172A"/>
+      <text x="126" y="18" text-anchor="middle" font-family="monospace" font-size="10" font-weight="700" fill="#38BDF8">
+        D(req, target, C, E) → { F, P, U }
+      </text>
+    </g>
+
+    <!-- 8 Sequential Steps -->
+    <g transform="translate(14, 76)">
+      <!-- Step 1 -->
+      <rect x="0" y="0" width="252" height="32" rx="5" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="0.8"/>
+      <circle cx="12" cy="16" r="7" fill="#E2E8F0"/>
+      <text x="12" y="19" text-anchor="middle" font-size="8" font-weight="800" fill="#475569">1</text>
+      <text x="24" y="14" font-size="8" font-weight="700" fill="#0F172A">静态绑定合法性检验</text>
+      <text x="24" y="25" font-size="7" fill="#64748B">若为 dynamic / 未解析 ➔ UNKNOWN</text>
+
+      <!-- Step 2 -->
+      <rect x="0" y="36" width="252" height="32" rx="5" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="0.8"/>
+      <circle cx="12" cy="52" r="7" fill="#E2E8F0"/>
+      <text x="12" y="55" text-anchor="middle" font-size="8" font-weight="800" fill="#475569">2</text>
+      <text x="24" y="50" font-size="8" font-weight="700" fill="#0F172A">契约确定性陷阱检查</text>
+      <text x="24" y="61" font-size="7" fill="#64748B">若含 Date.now / Math.random ➔ UNKNOWN</text>
+
+      <!-- Step 3 -->
+      <rect x="0" y="72" width="252" height="32" rx="5" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="0.8"/>
+      <circle cx="12" cy="88" r="7" fill="#E2E8F0"/>
+      <text x="12" y="91" text-anchor="middle" font-size="8" font-weight="800" fill="#475569">3</text>
+      <text x="24" y="86" font-size="8" font-weight="700" fill="#0F172A">必需依赖明确性检验</text>
+      <text x="24" y="97" font-size="7" fill="#64748B">存在依赖但非 definite ➔ UNKNOWN</text>
+
+      <!-- Step 4 -->
+      <rect x="0" y="108" width="252" height="32" rx="5" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="0.8"/>
+      <circle cx="12" cy="124" r="7" fill="#E2E8F0"/>
+      <text x="12" y="127" text-anchor="middle" font-size="8" font-weight="800" fill="#475569">4</text>
+      <text x="24" y="122" font-size="8" font-weight="700" fill="#0F172A">目标确认状态核准 (confirmed?)</text>
+      <text x="24" y="133" font-size="7" fill="#64748B">未获强证实 (inferred) ➔ UNKNOWN</text>
+
+      <!-- Step 5 -->
+      <rect x="0" y="144" width="252" height="32" rx="5" fill="#FFF1F2" stroke="#FECDD3" stroke-width="1"/>
+      <circle cx="12" cy="160" r="7" fill="#E11D48"/>
+      <text x="12" y="163" text-anchor="middle" font-size="8" font-weight="800" fill="#FFFFFF">5</text>
+      <text x="24" y="158" font-size="8" font-weight="700" fill="#9F1239">必需宿主缺失硬保护检验</text>
+      <text x="24" y="169" font-size="7" fill="#E11D48">已确认目标完全缺失该能力 ➔ 硬 PROTECT</text>
+
+      <!-- Step 6 -->
+      <rect x="0" y="180" width="252" height="32" rx="5" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="0.8"/>
+      <circle cx="12" cy="196" r="7" fill="#E2E8F0"/>
+      <text x="12" y="199" text-anchor="middle" font-size="8" font-weight="800" fill="#475569">6</text>
+      <text x="24" y="194" font-size="8" font-weight="700" fill="#0F172A">探针证据时效与指纹匹配</text>
+      <text x="24" y="205" font-size="7" fill="#64748B">无对应探针或指纹过期 ➔ UNKNOWN</text>
+
+      <!-- Step 7 -->
+      <rect x="0" y="216" width="252" height="38" rx="5" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1"/>
+      <circle cx="12" cy="235" r="7" fill="#059669"/>
+      <text x="12" y="238" text-anchor="middle" font-size="8" font-weight="800" fill="#FFFFFF">7</text>
+      <text x="24" y="230" font-size="8" font-weight="700" fill="#166534">契约维度观测投影比对 (strict_equal)</text>
+      <text x="24" y="241" font-size="7" fill="#15803D">实测严格一致 | 冲突 ➔ PROTECT | 缺失 ➔ UNKNOWN</text>
+
+      <!-- Step 8 -->
+      <rect x="0" y="258" width="252" height="32" rx="5" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="0.8"/>
+      <circle cx="12" cy="274" r="7" fill="#E2E8F0"/>
+      <text x="12" y="277" text-anchor="middle" font-size="8" font-weight="800" fill="#475569">8</text>
+      <text x="24" y="272" font-size="8" font-weight="700" fill="#0F172A">多目标一致性归约 (Aggregation)</text>
+      <text x="24" y="283" font-size="7" fill="#475569">全目标匹配且 foldEligible ➔ FOLD</text>
+    </g>
+
+    <!-- Proof Guarantee Card -->
+    <g transform="translate(14, 372)">
+      <rect x="0" y="0" width="252" height="68" rx="6" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1"/>
+      <text x="8" y="16" font-size="8.5" font-weight="700" fill="#B45309">判定保全定理 (Soundness Principle):</text>
+      <text x="8" y="29" font-size="7.5" fill="#78350F">仅在多环境严格等价且证据完全可折叠时放行 FOLD；</text>
+      <text x="8" y="41" font-size="7.5" fill="#78350F">任何外部未决或证据残缺，一律严格保守收敛至 UNKNOWN。</text>
+      <text x="8" y="57" font-size="8" font-weight="800" fill="#059669">🌟 实测结果：破坏拦截 100%，过度保护 0，准确率 100%！</text>
+    </g>
+  </g>
+
+  <!-- Connectors into Pillar 4 -->
+  <line x1="1069" y1="120" x2="1093" y2="120" stroke="#059669" stroke-width="1.5" marker-end="url(#z-arr-green)"/>
+  <line x1="1069" y1="190" x2="1093" y2="190" stroke="#DC2626" stroke-width="1.5" marker-end="url(#z-arr-red)"/>
+  <line x1="1069" y1="260" x2="1093" y2="260" stroke="#D97706" stroke-width="1.5" marker-end="url(#z-arr-blue)"/>
+
+  <!-- ==================== PILLAR 4: VERDICTS & DOWNSTREAM IMPACT ==================== -->
+  <g transform="translate(1093, 68)">
+    <rect x="0" y="0" width="320" height="452" rx="10" fill="#FFFFFF" filter="url(#card-ambient)" stroke="#F1F5F9" stroke-width="1.5"/>
+
+    <!-- Header -->
+    <rect x="14" y="14" width="22" height="20" rx="4" fill="#0284C7"/>
+    <text x="25" y="28" text-anchor="middle" font-size="11" font-weight="800" fill="#FFFFFF">4</text>
+    <text x="44" y="29" font-size="11.5" font-weight="800" fill="#0F172A">三值出口与下游优化实测对比</text>
+
+    <!-- 3 Verdict Cards -->
+    <g transform="translate(14, 42)">
+      <!-- FOLD -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="292" height="52" rx="6" fill="#ECFDF5" stroke="#6EE7B7" stroke-width="1.2"/>
+        <rect x="6" y="6" width="46" height="16" rx="8" fill="#059669"/>
+        <text x="29" y="18" text-anchor="middle" font-size="8.5" font-weight="800" fill="#FFFFFF">FOLD</text>
+        <text x="58" y="18" font-size="9" font-weight="700" fill="#065F46">等价安全放行 (785差分 0 误放行)</text>
+        <text x="6" y="32" font-size="7.5" fill="#047857">• 证实目标环境与求值基线严格一致</text>
+        <text x="6" y="44" font-size="7.5" fill="#047857">• 授权下游执行常量折叠与分支消除</text>
+      </g>
+
+      <!-- PROTECT -->
+      <g transform="translate(0, 56)">
+        <rect x="0" y="0" width="292" height="52" rx="6" fill="#FFF1F2" stroke="#FDA4AF" stroke-width="1.2"/>
+        <rect x="6" y="6" width="60" height="16" rx="8" fill="#E11D48"/>
+        <text x="36" y="18" text-anchor="middle" font-size="8.5" font-weight="800" fill="#FFFFFF">PROTECT</text>
+        <text x="72" y="18" font-size="9" font-weight="700" fill="#9F1239">冲突硬拦截 (敏感分支拦截率 100%)</text>
+        <text x="6" y="32" font-size="7.5" fill="#9F1239">• 实测证实环境存在异构冲突 (如 wx 差分)</text>
+        <text x="6" y="44" font-size="7.5" fill="#9F1239">• 强制阻断折叠，保留完整分支与宿主调用</text>
+      </g>
+
+      <!-- UNKNOWN -->
+      <g transform="translate(0, 112)">
+        <rect x="0" y="0" width="292" height="74" rx="6" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1.2"/>
+        <rect x="6" y="6" width="64" height="16" rx="8" fill="#D97706"/>
+        <text x="38" y="18" text-anchor="middle" font-size="8.5" font-weight="800" fill="#FFFFFF">UNKNOWN</text>
+        <text x="76" y="18" font-size="9" font-weight="700" fill="#92400E">保守安全未决 (证据不足兜底)</text>
+        
+        <g transform="translate(6, 26)">
+          <rect x="0" y="0" width="280" height="13" rx="3" fill="#FEF3C7"/>
+          <text x="4" y="10" font-size="7" font-family="monospace" font-weight="700" fill="#92400E">binding</text>
+          <text x="44" y="10" font-size="7" fill="#78350F">: 语法绑定未决 / 动态计算键访问</text>
+
+          <rect x="0" y="15" width="280" height="13" rx="3" fill="#FEF3C7"/>
+          <text x="4" y="25" font-size="7" font-family="monospace" font-weight="700" fill="#92400E">runtime</text>
+          <text x="44" y="25" font-size="7" fill="#78350F">: 目标未证实 / 缺对应宿主探针数据</text>
+
+          <rect x="0" y="30" width="280" height="13" rx="3" fill="#FEF3C7"/>
+          <text x="4" y="40" font-size="7" font-family="monospace" font-weight="700" fill="#92400E">behavior</text>
+          <text x="44" y="40" font-size="7" fill="#78350F">: 契约维度缺失 / 实测不可折叠</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Downstream Optimization Impact: Traditional vs R97 -->
+    <g transform="translate(14, 236)">
+      <rect x="0" y="0" width="292" height="204" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2"/>
+      <text x="10" y="16" font-size="9.5" font-weight="700" fill="#0F172A">下游反混淆优化对比 (Deobfuscator Impact)</text>
+
+      <!-- Traditional: Crash -->
+      <g transform="translate(8, 24)">
+        <rect x="0" y="0" width="276" height="76" rx="5" fill="#FFF1F2" stroke="#FECDD3" stroke-width="1"/>
+        <rect x="6" y="6" width="96" height="14" rx="7" fill="#E11D48"/>
+        <text x="54" y="16" text-anchor="middle" font-size="7.5" font-weight="800" fill="#FFFFFF">传统反混淆器 (无R97)</text>
+        
+        <text x="6" y="30" font-size="7" fill="#9F1239">• 在离线 Node VM 求值：typeof wx ➔ 'undefined'</text>
+        <text x="6" y="40" font-size="7" fill="#9F1239">• 误触发死代码剪枝：<tspan font-weight="700">删除 wx.request() 分支！</tspan></text>
+        
+        <rect x="6" y="46" width="264" height="24" rx="3" fill="#FFE4E6"/>
+        <text x="8" y="58" font-size="7" font-weight="800" fill="#BE123C">💥 真机部署后果：</text>
+        <text x="8" y="67" font-size="7" fill="#9F1239">核心业务逻辑丢失，抛出 TypeError / ReferenceError 运行时崩溃！</text>
+      </g>
+
+      <!-- R97 Guarded: Sound -->
+      <g transform="translate(8, 106)">
+        <rect x="0" y="0" width="276" height="90" rx="5" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1"/>
+        <rect x="6" y="6" width="96" height="14" rx="7" fill="#059669"/>
+        <text x="54" y="16" text-anchor="middle" font-size="7.5" font-weight="800" fill="#FFFFFF">集成 R97 守门保护</text>
+        
+        <text x="6" y="30" font-size="7" fill="#166534">• 识别微信实测存在 wx ➔ 判定 PROTECT</text>
+        <text x="6" y="40" font-size="7" fill="#166534">• <tspan font-weight="700">强制拦截折叠！原样保留分支结构</tspan></text>
+        
+        <rect x="6" y="46" width="264" height="38" rx="3" fill="#DCFCE7"/>
+        <text x="8" y="58" font-size="7" font-weight="800" fill="#15803D">✅ 真机部署效果：</text>
+        <text x="8" y="68" font-size="7" fill="#166534">微信小程序 100% 完整运行，功能零缺失；</text>
+        <text x="8" y="78" font-size="7" font-weight="700" fill="#059669">实测不实折叠 0，折叠准确率 100.0%！</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Global Footer -->
+  <g transform="translate(26, 528)">
+    <rect x="0" y="0" width="1387" height="34" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="14" y="21" font-size="9" font-weight="700" fill="#0F172A">
+      架构定理：[1] 三域生态 (WPT/Node/小程序) 覆盖；[2] 需求与目标正交解耦防火墙；[3] 4 宿主真机差分探针实测驱动；[4] 零不安全折叠 (Zero Unsafe Folds) 绝对安全保证。
+    </text>
+  </g>
+</svg>

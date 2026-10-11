@@ -1,0 +1,181 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{16}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{} and \showURL{}.  The latter does
+%%% not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showURL}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showURL #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi
+% The following commands are used for tagged output and should be
+% invisible to TeX
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+\makeatletter
+\@ifundefined{NAT@parse@date}{}{\let\NAT@parse@date@orig\NAT@parse@date}
+\@ifundefined{NAT@parse@date}{}{\def\NAT@parse@date#1#2#3#4#5#6@@{\NAT@parse@date@orig#1#2#3#4#5#6@@\def\NAT@tempyear{0000}\def\NAT@tempexlab{{?}}\ifx\NAT@year\NAT@tempyear\ifx\NAT@exlab\NAT@tempexlab\def\NAT@date{[n.\,d.]}\else\edef\NAT@date{[n.\,d.]\NAT@exlab}\fi\fi}}
+\makeatother
+
+\bibitem[Bazon et~al\mbox{.}(2026)]%
+        {terser}
+\bibfield{author}{\bibinfo{person}{Mihai Bazon} {et~al\mbox{.}}} \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{Terser: {JavaScript} parser, mangler and compressor toolkit for {ES6+}}.
+\newblock \bibinfo{howpublished}{\url{https://github.com/terser/terser}}.
+\newblock
+\newblock
+\shownote{Version 5.51.2, accessed 2026-10-12}.
+
+
+\bibitem[{ECMA International}(2024)]%
+        {ecma262}
+\bibfield{author}{\bibinfo{person}{{ECMA International}}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \bibinfo{title}{{ECMAScript} Language Specification ({ECMA}-262)}.
+\newblock \bibinfo{howpublished}{\url{https://tc39.es/ecma262/}}.
+\newblock
+\newblock
+\shownote{Accessed 2026-10-12}.
+
+
+\bibitem[Huang et~al\mbox{.}(2024)]%
+        {donapi}
+\bibfield{author}{\bibinfo{person}{Cheng Huang}, \bibinfo{person}{Nannan Wang}, \bibinfo{person}{Ziyan Wang}, \bibinfo{person}{Siqi Sun}, \bibinfo{person}{Lingzi Li}, \bibinfo{person}{Junren Chen}, \bibinfo{person}{Qianchong Zhao}, \bibinfo{person}{Jiaxuan Han}, \bibinfo{person}{Zhen Yang}, {and} \bibinfo{person}{Lei Shi}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{{DONAPI}: Malicious {NPM} Packages Detector using Behavior Sequence Knowledge Mapping}. In \bibinfo{booktitle}{\emph{Proceedings of the 33rd USENIX Security Symposium}}.
+\newblock
+
+
+\bibitem[{j4k0xb}(2026)]%
+        {webcrack}
+\bibfield{author}{\bibinfo{person}{{j4k0xb}}.} \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{webcrack: Deobfuscate, unminify and unpack bundled {JavaScript}}.
+\newblock \bibinfo{howpublished}{\url{https://github.com/j4k0xb/webcrack}}.
+\newblock
+\newblock
+\shownote{Version 2.16.0, accessed 2026-10-12}.
+
+
+\bibitem[Jia et~al\mbox{.}(2026)]%
+        {jscamd}
+\bibfield{author}{\bibinfo{person}{Shijie Jia}, \bibinfo{person}{Bowen Xu}, \bibinfo{person}{Yuan Ma}, \bibinfo{person}{Yingjiao Niu}, \bibinfo{person}{Limin Liu}, \bibinfo{person}{Daren Zha}, {and} \bibinfo{person}{Jingqiang Lin}.} \bibinfo{year}{2026}\natexlab{}.
+\newblock \showarticletitle{{JScamd}: An Automated Static Taint Analysis Framework for Detecting Cryptographic {API} Misuses in {JavaScript}}. In \bibinfo{booktitle}{\emph{Proceedings of the 35th USENIX Security Symposium}}.
+\newblock
+
+
+\bibitem[Jiang et~al\mbox{.}(2026a)]%
+        {cascade}
+\bibfield{author}{\bibinfo{person}{Shan Jiang}, \bibinfo{person}{Pranoy Kovuri}, \bibinfo{person}{David Tao}, {and} \bibinfo{person}{Zhixun Tan}.} \bibinfo{year}{2026}\natexlab{a}.
+\newblock \showarticletitle{{CASCADE}: {LLM}-powered {JavaScript} Deobfuscator at {Google}}. In \bibinfo{booktitle}{\emph{Companion Proceedings of the 48th International Conference on Software Engineering (ICSE-SEIP '26)}}. \bibinfo{pages}{292--302}.
+\newblock
+\href{https://doi.org/10.1145/3786583.3786873}{doi:\nolinkurl{10.1145/3786583.3786873}}
+
+
+\bibitem[Jiang et~al\mbox{.}(2026b)]%
+        {obsmith}
+\bibfield{author}{\bibinfo{person}{Shan Jiang}, \bibinfo{person}{Chenguang Zhu}, {and} \bibinfo{person}{Sarfraz Khurshid}.} \bibinfo{year}{2026}\natexlab{b}.
+\newblock \showarticletitle{{OBsmith}: {LLM}-Powered {JavaScript} Obfuscator Testing}.
+\newblock \bibinfo{journal}{\emph{Proceedings of the ACM on Programming Languages}} \bibinfo{volume}{10}, \bibinfo{number}{OOPSLA1} (\bibinfo{year}{2026}), \bibinfo{pages}{114--142}.
+\newblock
+\href{https://doi.org/10.1145/3798204}{doi:\nolinkurl{10.1145/3798204}}
+
+
+\bibitem[Jueckstock and Kapravelos(2019)]%
+        {visiblev8}
+\bibfield{author}{\bibinfo{person}{Jordan Jueckstock} {and} \bibinfo{person}{Alexandros Kapravelos}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{{VisibleV8}: In-browser Monitoring of {JavaScript} in the Wild}. In \bibinfo{booktitle}{\emph{Proceedings of the ACM Internet Measurement Conference (IMC)}}. \bibinfo{pages}{393--405}.
+\newblock
+\href{https://doi.org/10.1145/3355369.3355599}{doi:\nolinkurl{10.1145/3355369.3355599}}
+
+
+\bibitem[Lu and Debray(2012)]%
+        {ludebray}
+\bibfield{author}{\bibinfo{person}{Gen Lu} {and} \bibinfo{person}{Saumya Debray}.} \bibinfo{year}{2012}\natexlab{}.
+\newblock \showarticletitle{Automatic Simplification of Obfuscated {JavaScript} Code: A Semantics-Based Approach}. In \bibinfo{booktitle}{\emph{Proceedings of the 2012 IEEE Sixth International Conference on Software Security and Reliability (SERE)}}. \bibinfo{pages}{31--40}.
+\newblock
+\href{https://doi.org/10.1109/SERE.2012.13}{doi:\nolinkurl{10.1109/SERE.2012.13}}
+
+
+\bibitem[Meng et~al\mbox{.}(2023)]%
+        {wemint}
+\bibfield{author}{\bibinfo{person}{Shi Meng}, \bibinfo{person}{Liu Wang}, \bibinfo{person}{Shenao Wang}, \bibinfo{person}{Kailong Wang}, \bibinfo{person}{Xusheng Xiao}, \bibinfo{person}{Guangdong Bai}, {and} \bibinfo{person}{Haoyu Wang}.} \bibinfo{year}{2023}\natexlab{}.
+\newblock \showarticletitle{Wemint: Tainting Sensitive Data Leaks in {WeChat} Mini-Programs}. In \bibinfo{booktitle}{\emph{Proceedings of the 38th IEEE/ACM International Conference on Automated Software Engineering (ASE)}}. \bibinfo{pages}{1403--1415}.
+\newblock
+\href{https://doi.org/10.1109/ASE56229.2023.00151}{doi:\nolinkurl{10.1109/ASE56229.2023.00151}}
+
+
+\bibitem[Pantelaios and Kapravelos(2024)]%
+        {fv8}
+\bibfield{author}{\bibinfo{person}{Nikolaos Pantelaios} {and} \bibinfo{person}{Alexandros Kapravelos}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{{FV8}: A Forced Execution {JavaScript} Engine for Detecting Evasive Techniques}. In \bibinfo{booktitle}{\emph{Proceedings of the 33rd USENIX Security Symposium}}.
+\newblock
+\newblock
+\shownote{arXiv:2405.13175}.
+
+
+\bibitem[Park et~al\mbox{.}(2021)]%
+        {jest}
+\bibfield{author}{\bibinfo{person}{Jihyeok Park}, \bibinfo{person}{Seungmin An}, \bibinfo{person}{Dongjun Youn}, \bibinfo{person}{Gyeongwon Kim}, {and} \bibinfo{person}{Sukyoung Ryu}.} \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{{JEST}: N+1-Version Differential Testing of Both {JavaScript} Engines and Specification}. In \bibinfo{booktitle}{\emph{Proceedings of the 43rd International Conference on Software Engineering (ICSE)}}. \bibinfo{pages}{13--24}.
+\newblock
+\href{https://doi.org/10.1109/ICSE43902.2021.00015}{doi:\nolinkurl{10.1109/ICSE43902.2021.00015}}
+
+
+\bibitem[Pnueli et~al\mbox{.}(1998)]%
+        {pnueli}
+\bibfield{author}{\bibinfo{person}{Amir Pnueli}, \bibinfo{person}{Michael Siegel}, {and} \bibinfo{person}{Eli Singerman}.} \bibinfo{year}{1998}\natexlab{}.
+\newblock \showarticletitle{Translation Validation}. In \bibinfo{booktitle}{\emph{Proceedings of the 4th International Conference on Tools and Algorithms for the Construction and Analysis of Systems (TACAS), LNCS 1384}}. \bibinfo{pages}{151--166}.
+\newblock
+\href{https://doi.org/10.1007/BFb0054170}{doi:\nolinkurl{10.1007/BFb0054170}}
+
+
+\bibitem[Xu et~al\mbox{.}(2013)]%
+        {jstill}
+\bibfield{author}{\bibinfo{person}{Wei Xu}, \bibinfo{person}{Fangfang Zhang}, {and} \bibinfo{person}{Sencun Zhu}.} \bibinfo{year}{2013}\natexlab{}.
+\newblock \showarticletitle{{JStill}: Mostly Static Detection of Obfuscated Malicious {JavaScript} Code}. In \bibinfo{booktitle}{\emph{Proceedings of the Third ACM Conference on Data and Application Security and Privacy (CODASPY)}}. \bibinfo{pages}{117--128}.
+\newblock
+\href{https://doi.org/10.1145/2435349.2435364}{doi:\nolinkurl{10.1145/2435349.2435364}}
+
+
+\bibitem[Zhang et~al\mbox{.}(2023)]%
+        {appsecret}
+\bibfield{author}{\bibinfo{person}{Yue Zhang}, \bibinfo{person}{Yuqing Yang}, {and} \bibinfo{person}{Zhiqiang Lin}.} \bibinfo{year}{2023}\natexlab{}.
+\newblock \showarticletitle{Don't Leak Your Keys: Understanding, Measuring, and Exploiting the {AppSecret} Leaks in Mini-Programs}. In \bibinfo{booktitle}{\emph{Proceedings of the 2023 ACM SIGSAC Conference on Computer and Communications Security (CCS)}}. \bibinfo{pages}{2411--2425}.
+\newblock
+\href{https://doi.org/10.1145/3576915.3616591}{doi:\nolinkurl{10.1145/3576915.3616591}}
+\newblock
+\shownote{arXiv:2306.08151}.
+
+
+\bibitem[Zhou et~al\mbox{.}(2026)]%
+        {jsimplifier}
+\bibfield{author}{\bibinfo{person}{Dongchao Zhou}, \bibinfo{person}{Lingyun Ying}, \bibinfo{person}{Huajun Chai}, {and} \bibinfo{person}{Dongbin Wang}.} \bibinfo{year}{2026}\natexlab{}.
+\newblock \showarticletitle{From Obfuscated to Obvious: A Comprehensive {JavaScript} Deobfuscation Tool for Security Analysis}. In \bibinfo{booktitle}{\emph{Proceedings of the Network and Distributed System Security Symposium (NDSS)}}.
+\newblock
+\href{https://doi.org/10.14722/ndss.2026.242198}{doi:\nolinkurl{10.14722/ndss.2026.242198}}
+\newblock
+\shownote{arXiv:2512.14070}.
+
+
+\end{thebibliography}

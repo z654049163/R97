@@ -1,0 +1,84 @@
+Sample  
+The Second International Conference on  
+Wireless and Mobile Communications 
+ICWMC 1 2006 
+Bucharest, Romania, July 29-31, 2006 
+ 
+Submission deadline:  March 1, 2006 
+Notification:  March 25, 2006 
+Camera ready:  April 15, 2006 
+ 
+General:  
+http://www.iaria.org/conferences/ICW06.html  
+Call for Submissions:  http://www.iaria.org/conferences/CfPICW06.html  
+ 
+ICWMC 2006 addresses wireless related topics (techn ologies, networking, 
+applications) concerning integration of latest technological advances to realize mobile 
+and ubiquitous service environments for advanced ap plications and services in 
+wireless networks. Mobility and wireless, special s ervices and lessons learnt from 
+particular deployment complement the traditional wireless topics. 
+ 
+We welcome technical papers presenting research and  practical results, position 
+papers addressing the pros and cons of specific pro posals, such as those being 
+discussed in the standard fora 2 or in industry consortia,  3  survey papers addressing the 
+key problems and solutions on any of topics, short papers on work in progress, 
+workshops and panel proposals. 
+ 
+We are inviting your contributions to the conference with some of the following: 
+ 
+·
+Distribute the Call for Submissions  
+·Submit contributions  
+·Organize a special session  
+·Propose a panel, a tutorial, or a workshop 
+ 
+The following topics are suggested (but not limited to): 
+ 
+·
+Wireless communications basics  
+·Radio Interfaces and Systems  
+·Spectrum allocation and management  
+·Circuits for wireless communications  
+date & venue 
+important dates  
+important links 
+theme and 
+goal 
+paper 
+requirements
+ 
+suggested paper topics  ·Wireless and mobility  
+·Protocols for wireless and mobility  
+·Traffic and congestion control, QoS 4, resource management  
+·Wireless and mobile technologies  
+·Performance evaluation, simulation and modeling of wireless networks and systems  
+·Management of wireless and mobile networks  
+·Security in wireless and mobile environment  
+·Networks convergence and integration  
+·Applications and services based on wireless infrastructures  
+·Standardization and regulations  
+·Wireless and mobile network deployment 
+ 
+The conference proceedings will be published by the  IEEE 
+5 Computer Society Press 
+and posted on the IEEE Xplore portal. 
+ 
+Industry is welcome to participate with special contributions. 
+ 
+For submissions, please go to the conference site and click “Submit a paper”. 
+ 
+We look forward to collaborating with you on making ICWMC 2006 a successful and 
+enjoyable conference. 
+ 
+On behalf of the Advisory Committee 
+Petre Dini, pdini@cisco.com 
+ 
+ 
+ICWMC 2006 TPC Chairs 
+Christer ahlund, Lule SPAN University of Technology, Sweden, 
+christer.ahlund@ltu.se 
+Nicolae Chiurtu, Stanford University, USA,  
+nchiurtu@stanford.edu 
+ 
+submission  
+contact info 

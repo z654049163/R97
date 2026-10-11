@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
-<title>R97 论文模型图 - 交互式全景查看器</title>
+<title>R97 论文图集 - 交互式全景查看器</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
@@ -70,19 +70,19 @@
     border-color: #38BDF8;
     color: #FFF;
   }
-  button.complete-active {
+  button.horizontal-active {
     background: #0284C7;
     border-color: #38BDF8;
     color: #FFF;
   }
-  button.nature-active {
-    background: #059669;
-    border-color: #34D399;
+  button.advisor-active {
+    background: #0369A1;
+    border-color: #38BDF8;
     color: #FFF;
   }
-  button.ai-active {
-    background: #7C3AED;
-    border-color: #A78BFA;
+  button.workflow-active {
+    background: #0D9488;
+    border-color: #2DD4BF;
     color: #FFF;
   }
   .divider {
@@ -151,16 +151,16 @@
 
   <div class="toolbar">
     <div class="title-area">
-      <h1>R97 系统架构模型图</h1>
-      <span class="badge" id="badgeTag">全景系统架构完整版</span>
+      <h1>R97 论文图集</h1>
+      <span class="badge" id="badgeTag">左右结构·中文科研框架图 (终极力荐)</span>
     </div>
     <div class="controls">
       <!-- 风格切换 -->
-      <span style="font-size:11.5px; color:#94A3B8; margin-right:2px;">版本:</span>
-      <button onclick="setVersion('complete')" id="btnVerComplete" class="complete-active">💎 全景系统完整版 (推荐 · 三域输入+实测比对+下游对比)</button>
-      <button onclick="setVersion('nature')" id="btnVerNature">🌿 Nature 旗舰版</button>
-      <button onclick="setVersion('academic')" id="btnVerAcademic">🏛️ USENIX/IEEE 顶会版</button>
-      <button onclick="setVersion('ai')" id="btnVerAi">🤖 GPT Image 2 (对比)</button>
+      <span style="font-size:11.5px; color:#94A3B8; margin-right:2px;">视图:</span>
+      <button onclick="setVersion('horizontal')" id="btnVerHorizontal" class="horizontal-active">👑 左右结构·中文科研框架图 (终极力荐 · 5阶段流式横向)</button>
+      <button onclick="setVersion('advisor')" id="btnVerAdvisor">🏛️ 上下结构·五层框架图</button>
+      <button onclick="setVersion('workflow')" id="btnVerWorkflow">⚡ MINIAUTH 风格工作流图</button>
+      <button onclick="setVersion('minimal')" id="btnVerMinimal">✨ 纯净极简模型图</button>
       <div class="divider"></div>
 
       <!-- 格式切换 -->
@@ -179,7 +179,7 @@
 
   <div class="viewport" id="viewport">
     <div class="container" id="container">
-      <img id="diagramImg" src="r97_scientific_complete_architecture.svg" alt="R97 Architecture" width="1440" height="780">
+      <img id="diagramImg" src="r97_horizontal_framework.svg" alt="R97 Architecture" width="1440" height="580">
     </div>
     <div class="hint-bar">
       <div>🖱️ <span>滚轮缩放</span> (15% ~ 600%)</div>
@@ -189,8 +189,8 @@
   </div>
 
 <script>
-  let currentVersion = 'complete'; // 'complete', 'nature', 'academic', or 'ai'
-  let currentFormat = 'svg';       // 'svg' or 'png'
+  let currentVersion = 'horizontal'; // 'horizontal', 'advisor', 'workflow', 'minimal'
+  let currentFormat = 'svg';          // 'svg' or 'png'
   let scale = 1.0;
   let posX = 0;
   let posY = 0;
@@ -204,46 +204,38 @@
   const img = document.getElementById('diagramImg');
   const badgeTag = document.getElementById('badgeTag');
 
-  const btnVerComplete = document.getElementById('btnVerComplete');
-  const btnVerNature = document.getElementById('btnVerNature');
-  const btnVerAcademic = document.getElementById('btnVerAcademic');
-  const btnVerAi = document.getElementById('btnVerAi');
+  const btnVerHorizontal = document.getElementById('btnVerHorizontal');
+  const btnVerAdvisor = document.getElementById('btnVerAdvisor');
+  const btnVerWorkflow = document.getElementById('btnVerWorkflow');
+  const btnVerMinimal = document.getElementById('btnVerMinimal');
   const btnFmtSvg = document.getElementById('btnFmtSvg');
   const btnFmtPng = document.getElementById('btnFmtPng');
 
   function updateImageSrc() {
-    if (currentVersion === 'ai') {
-      img.src = 'gpt_image2_result.png';
-      img.width = 1672;
-      img.height = 940;
-      badgeTag.textContent = 'GPT Image 2 AI 生成图 (存在字迹幻觉)';
-      badgeTag.style.background = '#7C3AED';
-      btnFmtSvg.style.display = 'none';
-      btnFmtPng.style.display = 'none';
-      return;
-    }
-
-    btnFmtSvg.style.display = 'inline-block';
-    btnFmtPng.style.display = 'inline-block';
-
     let filename = '';
-    if (currentVersion === 'complete') {
-      filename = `r97_scientific_complete_architecture.${currentFormat}`;
+    if (currentVersion === 'horizontal') {
+      filename = `r97_horizontal_framework.${currentFormat}`;
       img.width = 1440;
-      img.height = 780;
-      badgeTag.textContent = '全景系统架构完整版 (三域输入 · 探针实测读数对比 · 下游守门对比)';
+      img.height = 580;
+      badgeTag.textContent = '左右结构·中文科研框架图 (中文为主 · 横向5阶段 · 5秒抓重点)';
       badgeTag.style.background = '#0284C7';
-    } else if (currentVersion === 'nature') {
-      filename = `r97_nature_model_architecture.${currentFormat}`;
+    } else if (currentVersion === 'advisor') {
+      filename = `r97_advisor_framework.${currentFormat}`;
+      img.width = 1200;
+      img.height = 740;
+      badgeTag.textContent = '上下结构·五层框架图 (垂直纵向排版)';
+      badgeTag.style.background = '#0369A1';
+    } else if (currentVersion === 'workflow') {
+      filename = `r97_workflow_architecture.${currentFormat}`;
       img.width = 1440;
-      img.height = 760;
-      badgeTag.textContent = 'Nature 旗舰版 (多面板机制图规范)';
-      badgeTag.style.background = '#059669';
-    } else {
-      filename = `r97_system_architecture_academic.${currentFormat}`;
-      img.width = 1440;
-      img.height = 720;
-      badgeTag.textContent = 'USENIX/IEEE 顶会版 (Stage I-V 管道架构)';
+      img.height = 520;
+      badgeTag.textContent = 'MINIAUTH 风格端到端工作流图 (流式推进 · 宽屏扁平)';
+      badgeTag.style.background = '#0D9488';
+    } else if (currentVersion === 'minimal') {
+      filename = `r97_minimal_pure_architecture.${currentFormat}`;
+      img.width = 1360;
+      img.height = 520;
+      badgeTag.textContent = '纯净极简模型图 (删减冗杂文字 · 聚焦重点)';
       badgeTag.style.background = '#0284C7';
     }
     img.src = filename;
@@ -251,19 +243,19 @@
 
   function setVersion(ver) {
     currentVersion = ver;
-    btnVerComplete.className = '';
-    btnVerNature.className = '';
-    btnVerAcademic.className = '';
-    btnVerAi.className = '';
+    btnVerHorizontal.className = '';
+    btnVerAdvisor.className = '';
+    btnVerWorkflow.className = '';
+    btnVerMinimal.className = '';
 
-    if (ver === 'complete') {
-      btnVerComplete.className = 'complete-active';
-    } else if (ver === 'nature') {
-      btnVerNature.className = 'nature-active';
-    } else if (ver === 'academic') {
-      btnVerAcademic.className = 'active';
-    } else {
-      btnVerAi.className = 'ai-active';
+    if (ver === 'horizontal') {
+      btnVerHorizontal.className = 'horizontal-active';
+    } else if (ver === 'advisor') {
+      btnVerAdvisor.className = 'advisor-active';
+    } else if (ver === 'workflow') {
+      btnVerWorkflow.className = 'workflow-active';
+    } else if (ver === 'minimal') {
+      btnVerMinimal.className = 'active';
     }
     updateImageSrc();
     fitWindow();
@@ -306,10 +298,10 @@
   function fitWindow() {
     const vw = viewport.clientWidth - 80;
     const vh = viewport.clientHeight - 80;
-    let iw = 1440, ih = 780;
-    if (currentVersion === 'academic') { iw = 1440; ih = 720; }
-    if (currentVersion === 'nature') { iw = 1440; ih = 760; }
-    if (currentVersion === 'ai') { iw = 1672; ih = 940; }
+    let iw = 1440, ih = 580;
+    if (currentVersion === 'advisor') { iw = 1200; ih = 740; }
+    if (currentVersion === 'workflow') { iw = 1440; ih = 520; }
+    if (currentVersion === 'minimal') { iw = 1360; ih = 520; }
     scale = Math.min(vw / iw, vh / ih);
     posX = 0;
     posY = 0;

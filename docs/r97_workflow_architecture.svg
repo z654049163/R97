@@ -1,0 +1,241 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 520" width="1440" height="520" style="background:#FFFFFF; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, 'Source Han Sans SC', 'Microsoft YaHei', sans-serif;">
+  <defs>
+    <marker id="wf-arr-blue" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#0284C7"/>
+    </marker>
+    <marker id="wf-arr-green" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#059669"/>
+    </marker>
+    <marker id="wf-arr-red" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#DC2626"/>
+    </marker>
+    <marker id="wf-arr-purple" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#7C3AED"/>
+    </marker>
+    <marker id="wf-arr-dark" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#334155"/>
+    </marker>
+  </defs>
+
+  <!-- Outer Border -->
+  <rect x="12" y="12" width="1416" height="496" rx="4" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.2"/>
+
+  <!-- Workflow Header -->
+  <g transform="translate(28, 30)">
+    <rect x="0" y="-3" width="80" height="20" rx="10" fill="#F1F5F9"/>
+    <text x="40" y="11" text-anchor="middle" font-size="10" font-weight="700" fill="#475569">PIPELINE</text>
+    <text x="90" y="13" font-size="15" font-weight="800" fill="#0F172A">Figure 2 | R97 端到端工作流 (End-to-End Workflow Pipeline)</text>
+    <text x="0" y="28" font-size="10.5" fill="#64748B">
+      对标 MINIAUTH (ACM CCS) 宽屏分层工作流范式 · 从混淆输入到保语义代码生成的全流程流水线
+    </text>
+  </g>
+
+  <!-- Phase 1: Ingestion & Static AST Analysis -->
+  <g transform="translate(28, 70)">
+    <rect x="0" y="0" width="310" height="390" rx="6" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+    <text x="12" y="20" font-size="11" font-weight="800" fill="#0F172A">阶段 I: 语法解析与特征提取 (Ingestion)</text>
+
+    <!-- Block 1: Source Files -->
+    <g transform="translate(12, 34)">
+      <rect x="0" y="0" width="286" height="88" rx="4" fill="#FFFFFF" stroke="#BAE6FD" stroke-width="1"/>
+      <text x="10" y="18" font-size="9.5" font-weight="700" fill="#0369A1">1. 多源混淆代码包输入</text>
+      <text x="10" y="32" font-size="8.5" fill="#64748B">• 微信小程序包 (app-service.js / 1572项目)</text>
+      <text x="10" y="46" font-size="8.5" fill="#64748B">• 前端 Web 平台测试包 (WPT / 900文件)</text>
+      <text x="10" y="60" font-size="8.5" fill="#64748B">• 后端 Node.js 服务端包 (Node / 900文件)</text>
+      <text x="10" y="74" font-size="8" fill="#0284C7">➔ 生成解析用例流与原始 AST 节点</text>
+    </g>
+
+    <!-- Block 2: Scope & Shadowing Engine -->
+    <g transform="translate(12, 132)">
+      <rect x="0" y="0" width="286" height="110" rx="4" fill="#FFFFFF" stroke="#0284C7" stroke-width="1.2"/>
+      <text x="10" y="18" font-size="9.5" font-weight="700" fill="#0284C7">2. AST 作用域与词法遮蔽分析器</text>
+      <text x="10" y="34" font-size="8.5" fill="#334155">• 词法作用域树构建：自顶向下解析作用域链</text>
+      <text x="10" y="48" font-size="8.5" fill="#334155">• 形参遮蔽过滤：function(wx) 消除全局伪依赖</text>
+      <text x="10" y="62" font-size="8.5" fill="#334155">• 常量别名链追踪：const client = wx 追溯</text>
+      <text x="10" y="76" font-size="8.5" fill="#334155">• 宿主归属表匹配：区分宿主专属根与语言内建</text>
+      <line x1="8" y1="84" x2="278" y2="84" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="10" y="98" font-size="8.5" font-weight="700" fill="#15803D">➔ 产出待折叠候选集合 (Candidate Findings)</text>
+    </g>
+
+    <!-- Block 3: Pre-filter -->
+    <g transform="translate(12, 252)">
+      <rect x="0" y="0" width="286" height="124" rx="4" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="10" y="18" font-size="9.5" font-weight="700" fill="#0F172A">3. 前置极简快速分流 (Pre-Filter)</text>
+      <g transform="translate(8, 26)">
+        <rect x="0" y="0" width="270" height="42" rx="3" fill="#F0FDF4" stroke="#86EFAC" stroke-width="0.8"/>
+        <text x="8" y="16" font-size="8" font-weight="700" fill="#15803D">分支 A: 纯局部变量 / 纯内建数值计算</text>
+        <text x="8" y="30" font-size="7.5" fill="#166534">不依赖宿主能力 ➔ 快速通道直接放行 (Fast-Path)</text>
+
+        <rect x="0" y="48" width="270" height="42" rx="3" fill="#FEF3C7" stroke="#FDE68A" stroke-width="0.8"/>
+        <text x="8" y="64" font-size="8" font-weight="700" fill="#B45309">分支 B: 包含外部宿主 API 访问或动态键</text>
+        <text x="8" y="78" font-size="7.5" fill="#92400E">进入 R97 核心守门流水线 (Guard Pipeline) ➔</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Flow Arrow from Phase 1 to Phase 2 -->
+  <line x1="338" y1="365" x2="368" y2="365" stroke="#D97706" stroke-width="1.5" marker-end="url(#wf-arr-blue)"/>
+
+  <!-- Phase 2: Evidence Resolution & Firewall -->
+  <g transform="translate(368, 70)">
+    <rect x="0" y="0" width="310" height="390" rx="6" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+    <text x="12" y="20" font-size="11" font-weight="800" fill="#0F172A">阶段 II: 证据确立与隔离审查</text>
+
+    <!-- Block 1: Manifest Resolver -->
+    <g transform="translate(12, 34)">
+      <rect x="0" y="0" width="286" height="110" rx="4" fill="#FFFFFF" stroke="#DDD6FE" stroke-width="1.2"/>
+      <text x="10" y="18" font-size="9.5" font-weight="700" fill="#6D28D9">1. 外部部署证据解析 (Target Resolver)</text>
+      <text x="10" y="34" font-size="8.5" fill="#475569">• 摄取 project.config.json / package.json</text>
+      <text x="10" y="48" font-size="8.5" fill="#475569">• 提取平台标识、基础库版本、构建指纹</text>
+      <text x="10" y="62" font-size="8.5" fill="#475569">• 证据定级：confirmed (强证实) vs inferred</text>
+      <line x1="8" y1="72" x2="278" y2="72" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="10" y="88" font-size="8.5" font-weight="700" fill="#5B21B6">➔ 输出客观目标环境: target = { Wechat, confirmed }</text>
+      <text x="10" y="100" font-size="7.5" fill="#DC2626">未确认目标一律禁止授权折叠！</text>
+    </g>
+
+    <!-- Block 2: Firewall -->
+    <g transform="translate(12, 154)">
+      <rect x="0" y="0" width="286" height="90" rx="4" fill="#FFF1F2" stroke="#FDA4AF" stroke-width="1.2" stroke-dasharray="3 3"/>
+      <text x="143" y="20" text-anchor="middle" font-size="9.5" font-weight="800" fill="#E11D48">🔒 正交隔离审查防火墙</text>
+      <text x="143" y="36" text-anchor="middle" font-size="8.5" font-weight="700" fill="#9F1239">Required ⊥ Target (禁止循环论证)</text>
+      <text x="14" y="54" font-size="8" fill="#BE123C">• 代码有 wx 仅代表依赖需求 (required)</text>
+      <text x="14" y="68" font-size="8" fill="#BE123C">• 严禁借此反推目标环境！目标必须由外部独立给出</text>
+      <text x="14" y="82" font-size="7.5" font-weight="700" fill="#E11D48">➔ 审查通过后构造 DecisionQuery 进入判卷</text>
+    </g>
+
+    <!-- Block 3: Query Dispatcher -->
+    <g transform="translate(12, 254)">
+      <rect x="0" y="0" width="286" height="122" rx="4" fill="#FFFFFF" stroke="#0284C7" stroke-width="1"/>
+      <text x="10" y="18" font-size="9.5" font-weight="700" fill="#0284C7">3. 判定查询构造 (DecisionQuery)</text>
+      <text x="10" y="34" font-size="8.5" fill="#334155">• 将每个候选点绑定为五元组：</text>
+      <text x="18" y="48" font-family="monospace" font-size="8" fill="#0369A1">Query = ⟨pointId, entity, target, evalHost, version⟩</text>
+      <text x="10" y="64" font-size="8.5" fill="#334155">• 为每个点定制唯一的 SHA-256 唯一防伪 ID</text>
+      <line x1="8" y1="74" x2="278" y2="74" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="10" y="90" font-size="8.5" font-weight="700" fill="#0284C7">➔ 并行分发给中央决策引擎与探针比对 ➔</text>
+    </g>
+  </g>
+
+  <!-- Flow Arrow from Phase 2 to Phase 3 -->
+  <line x1="678" y1="265" x2="708" y2="265" stroke="#0284C7" stroke-width="1.5" marker-end="url(#wf-arr-blue)"/>
+
+  <!-- Phase 3: Semantic Verification & Probing -->
+  <g transform="translate(708, 70)">
+    <rect x="0" y="0" width="370" height="390" rx="6" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+    <text x="12" y="20" font-size="11" font-weight="800" fill="#0F172A">阶段 III: 契约核验与探针实测 (Probing)</text>
+
+    <!-- Block 1: Contract Checking -->
+    <g transform="translate(12, 34)">
+      <rect x="0" y="0" width="346" height="84" rx="4" fill="#FFFFFF" stroke="#BAE6FD" stroke-width="1"/>
+      <text x="10" y="18" font-size="9.5" font-weight="700" fill="#0369A1">1. 语义契约投影与非确定性陷阱核验</text>
+      <text x="10" y="34" font-size="8.5" fill="#475569">• 投影 AST 运算维度：[typeof, truthiness, return_val]</text>
+      <text x="10" y="48" font-size="8.5" fill="#DC2626">• 拦截 Date.now / Math.random 等时变调用 (OBsmith §3.1)</text>
+      <text x="10" y="62" font-size="8.5" fill="#0284C7">➔ 契约约束集生成：C = ⟨strict_equal, requiredDims⟩</text>
+    </g>
+
+    <!-- Block 2: 4-Host Empirical Dispatch -->
+    <g transform="translate(12, 126)">
+      <rect x="0" y="0" width="346" height="150" rx="4" fill="#FFFFFF" stroke="#0284C7" stroke-width="1.2"/>
+      <text x="10" y="18" font-size="9.5" font-weight="700" fill="#0284C7">2. 4 宿主多执行面实测比对 (JEST 拓扑对标)</text>
+      
+      <!-- 4 Host Matrix -->
+      <g transform="translate(8, 26)">
+        <rect x="0" y="0" width="78" height="28" rx="3" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="0.8"/>
+        <text x="39" y="14" text-anchor="middle" font-size="7.5" font-weight="700" fill="#0F172A">① 隔离 VM</text>
+        <text x="39" y="23" text-anchor="middle" font-size="6.5" fill="#64748B">纯语言基线</text>
+
+        <rect x="83" y="0" width="78" height="28" rx="3" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="0.8"/>
+        <text x="122" y="14" text-anchor="middle" font-size="7.5" font-weight="700" fill="#0F172A">② 原生 Node</text>
+        <text x="122" y="23" text-anchor="middle" font-size="6.5" fill="#64748B">553 条实测差分</text>
+
+        <rect x="166" y="0" width="78" height="28" rx="3" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="0.8"/>
+        <text x="205" y="14" text-anchor="middle" font-size="7.5" font-weight="700" fill="#0F172A">③ Edge 浏览器</text>
+        <text x="205" y="23" text-anchor="middle" font-size="6.5" fill="#64748B">780 条实测差分</text>
+
+        <rect x="249" y="0" width="81" height="28" rx="3" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1"/>
+        <text x="289" y="14" text-anchor="middle" font-size="7.5" font-weight="700" fill="#15803D">④ 微信 DevTools</text>
+        <text x="289" y="23" text-anchor="middle" font-size="6.5" fill="#166534">785 条微信差分</text>
+      </g>
+
+      <!-- Comparison outcome banner -->
+      <g transform="translate(8, 62)">
+        <rect x="0" y="0" width="330" height="42" rx="3" fill="#FFF1F2" stroke="#FECDD3" stroke-width="0.8"/>
+        <text x="8" y="14" font-family="monospace" font-size="7.5" font-weight="700" fill="#9F1239">实测差异案例：typeof wx</text>
+        <text x="8" y="26" font-size="7" fill="#BE123C">VM/Node/Edge: 'undefined' ≠ 微信真机: 'object'</text>
+        <text x="8" y="36" font-size="7" font-weight="700" fill="#E11D48">➔ 检测到跨宿主执行分歧 (Divergence Detected)!</text>
+      </g>
+      <text x="10" y="118" font-size="8" fill="#475569">• 证据库持久化：SHA-256 签名 + SDK版本时效失效机制</text>
+      <text x="10" y="132" font-size="8" font-weight="700" fill="#15803D">• Level-2 动态执行验证：386 样本行为不一致率 0.00%</text>
+    </g>
+
+    <!-- Block 3: Decision Engine Execution -->
+    <g transform="translate(12, 284)">
+      <rect x="0" y="0" width="346" height="94" rx="4" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/>
+      <text x="10" y="18" font-size="9.5" font-weight="700" fill="#0F172A">3. 八步安全判定核心 D(req, target, C, E)</text>
+      <text x="10" y="34" font-size="8" fill="#334155">①绑定 ➔ ②契约 ➔ ③明确性 ➔ ④目标证实 ➔ ⑤硬缺 ➔ ⑥证据 ➔ ⑦投影 ➔ ⑧归约</text>
+      <line x1="8" y1="42" x2="338" y2="42" stroke="#E2E8F0" stroke-width="1"/>
+      <g transform="translate(8, 50)">
+        <text x="0" y="12" font-size="8" font-weight="700" fill="#059669">• 严格等价且可折叠 ➔ 发放 FOLD 凭证</text>
+        <text x="0" y="24" font-size="8" font-weight="700" fill="#DC2626">• 实测存在环境冲突 ➔ 输出 PROTECT 强力拦截</text>
+        <text x="0" y="36" font-size="8" font-weight="700" fill="#D97706">• 目标未确认或证据不足 ➔ 安全兜底 UNKNOWN</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Flow Arrow from Phase 3 to Phase 4 -->
+  <line x1="1078" y1="265" x2="1108" y2="265" stroke="#0F172A" stroke-width="1.5" marker-end="url(#wf-arr-dark)"/>
+
+  <!-- Phase 4: Downstream Guard & Sound Code Emission -->
+  <g transform="translate(1108, 70)">
+    <rect x="0" y="0" width="304" height="390" rx="6" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+    <text x="12" y="20" font-size="11" font-weight="800" fill="#0F172A">阶段 IV: 守门裁决与保语义代码生成</text>
+
+    <!-- Block 1: Gatekeeper Multiplexer -->
+    <g transform="translate(12, 34)">
+      <rect x="0" y="0" width="280" height="150" rx="4" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.2"/>
+      <text x="10" y="18" font-size="9.5" font-weight="700" fill="#0F172A">三值判定网关 (Tri-State Decision Gate)</text>
+
+      <g transform="translate(8, 26)">
+        <rect x="0" y="0" width="264" height="34" rx="3" fill="#ECFDF5" stroke="#6EE7B7" stroke-width="0.8"/>
+        <text x="8" y="14" font-size="8.5" font-weight="800" fill="#059669">✅ FOLD (等价安全放行)</text>
+        <text x="8" y="26" font-size="7.5" fill="#047857">授权下游执行常量折叠 (实测差分误放行: 0)</text>
+
+        <rect x="0" y="38" width="264" height="34" rx="3" fill="#FFF1F2" stroke="#FDA4AF" stroke-width="0.8"/>
+        <text x="8" y="52" font-size="8.5" font-weight="800" fill="#E11D48">🛡️ PROTECT (冲突硬拦截)</text>
+        <text x="8" y="64" font-size="7.5" fill="#9F1239">强制拦截折叠！保留完整敏感分支结构</text>
+
+        <rect x="0" y="76" width="264" height="38" rx="3" fill="#FFFBEB" stroke="#FDE68A" stroke-width="0.8"/>
+        <text x="8" y="90" font-size="8.5" font-weight="800" fill="#D97706">⚠️ UNKNOWN (保守安全未决)</text>
+        <text x="8" y="102" font-size="7" fill="#78350F">输出归因 (binding / runtime / behavior)</text>
+      </g>
+    </g>
+
+    <!-- Block 2: Downstream AST Rewriter & Sound Code Output -->
+    <g transform="translate(12, 194)">
+      <rect x="0" y="0" width="280" height="184" rx="4" fill="#FFFFFF" stroke="#059669" stroke-width="1.2"/>
+      <text x="10" y="18" font-size="9.5" font-weight="700" fill="#059669">下游反混淆器与代码生成 (webcrack/terser)</text>
+
+      <g transform="translate(8, 26)">
+        <!-- Comparison Output -->
+        <rect x="0" y="0" width="264" height="56" rx="3" fill="#FFF1F2" stroke="#FECDD3" stroke-width="0.8"/>
+        <text x="6" y="14" font-size="8" font-weight="700" fill="#9F1239">无 R97 守护（传统反混淆）：</text>
+        <text x="6" y="26" font-size="7.5" fill="#BE123C">• Node VM 求值 ➔ 误判 typeof wx 恒假</text>
+        <text x="6" y="38" font-size="7.5" font-weight="700" fill="#E11D48">• 切除 wx 分支 ➔ 部署真机运行时崩溃！</text>
+
+        <rect x="0" y="62" width="264" height="84" rx="3" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1"/>
+        <text x="6" y="76" font-size="8.5" font-weight="800" fill="#15803D">集成 R97 守门（安全保真输出）：</text>
+        <text x="6" y="90" font-size="7.5" fill="#166534">• 拦截 wx.request 误切 ➔ 敏感分支完整保留</text>
+        <text x="6" y="102" font-size="7.5" fill="#166534">• 纯语言计算安全折叠 ➔ 体积精简</text>
+        <text x="6" y="114" font-size="7.5" font-weight="700" fill="#059669">• 真机部署：微信/前端/后端 100% 正常运行！</text>
+        <text x="6" y="126" font-size="7.5" font-weight="700" fill="#059669">• 零不安全折叠 (0 Unsafe Folds Guarantee)</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Global Bottom Summary Banner -->
+  <g transform="translate(28, 468)">
+    <rect x="0" y="0" width="1384" height="34" rx="4" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="16" y="21" font-size="9" font-weight="700" fill="#0F172A">
+      工作流总结：前端 WPT / 后端 Node / 微信小程序源码 ➔ AST 解析与外部指纹解耦 ➔ 契约与 4 宿主实测探针核验 ➔ 三值网关拦截冲突 ➔ 保语义安全反混淆输出。
+    </text>
+  </g>
+</svg>

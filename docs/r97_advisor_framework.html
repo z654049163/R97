@@ -1,0 +1,265 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>*{margin:0;padding:0;box-sizing:border-box;}body{background:#fff;width:1200px;height:740px;overflow:hidden;}</style></head><body><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 740" width="1200" height="740" style="background:#FFFFFF; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <!-- Soft Subtle Shadow -->
+    <filter id="soft-card" x="-4%" y="-3%" width="108%" height="106%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.05" />
+    </filter>
+
+    <!-- Clean Markers -->
+    <marker id="arr-navy" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#0284C7"/>
+    </marker>
+    <marker id="arr-gray" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#64748B"/>
+    </marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#059669"/>
+    </marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#E11D48"/>
+    </marker>
+    <marker id="arr-amber" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#D97706"/>
+    </marker>
+  </defs>
+
+  <!-- Canvas Hairline Frame -->
+  <rect x="12" y="12" width="1176" height="716" rx="4" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+
+  <!-- ==================== HEADER ==================== -->
+  <g transform="translate(40, 36)">
+    <text x="0" y="0" font-size="17" font-weight="800" fill="#0F172A">R97: Environment-Aware Semantic Preservation Framework for Safe Deobfuscation</text>
+    <text x="0" y="20" font-size="11.5" fill="#64748B">面向跨环境异构语义保持的反混淆折叠保护分析框架 (Figure 1: System Framework Overview)</text>
+  </g>
+
+  <!-- ==================== 1. INPUT LAYER (Y: 76) ==================== -->
+  <g transform="translate(40, 76)">
+    <rect x="0" y="0" width="1120" height="74" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" filter="url(#soft-card)"/>
+    
+    <!-- Stage Tag -->
+    <rect x="16" y="14" width="70" height="20" rx="10" fill="#E2E8F0"/>
+    <text x="51" y="28" text-anchor="middle" font-size="9" font-weight="700" fill="#475569">STAGE 1</text>
+    <text x="16" y="52" font-size="12" font-weight="800" fill="#0F172A">输入源 (Input)</text>
+
+    <!-- Input Tile A: Protected Code -->
+    <g transform="translate(140, 12)">
+      <rect x="0" y="0" width="460" height="50" rx="6" fill="#FFFFFF" stroke="#BAE6FD" stroke-width="1.2"/>
+      <rect x="10" y="12" width="26" height="26" rx="4" fill="#E0F2FE"/>
+      <text x="23" y="29" text-anchor="middle" font-size="13">💻</text>
+      <text x="46" y="24" font-size="11" font-weight="700" fill="#0369A1">Protected Source Code (AST)</text>
+      <text x="46" y="38" font-size="9" fill="#64748B">Web WPT / Node / WeChat 混淆待折叠程序代码</text>
+    </g>
+
+    <!-- Input Tile B: Runtime Evidence -->
+    <g transform="translate(630, 12)">
+      <rect x="0" y="0" width="460" height="50" rx="6" fill="#FFFFFF" stroke="#DDD6FE" stroke-width="1.2"/>
+      <rect x="10" y="12" width="26" height="26" rx="4" fill="#F3E8FF"/>
+      <text x="23" y="29" text-anchor="middle" font-size="13">📦</text>
+      <text x="46" y="24" font-size="11" font-weight="700" fill="#6D28D9">External Deployment Evidence</text>
+      <text x="46" y="38" font-size="9" fill="#64748B">project.config.json / package.json / 部署环境清单</text>
+    </g>
+  </g>
+
+  <!-- Arrow L1 -> L2 -->
+  <line x1="370" y1="150" x2="370" y2="176" stroke="#0284C7" stroke-width="1.5" marker-end="url(#arr-navy)"/>
+  <line x1="860" y1="150" x2="860" y2="176" stroke="#7C3AED" stroke-width="1.5" marker-end="url(#arr-gray)"/>
+
+  <!-- ==================== 2. FEATURE DECOUPLING (INNOVATION 1) (Y: 176) ==================== -->
+  <g transform="translate(40, 176)">
+    <!-- Container -->
+    <rect x="0" y="0" width="1120" height="96" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1" filter="url(#soft-card)"/>
+
+    <!-- Stage Tag -->
+    <rect x="16" y="16" width="70" height="20" rx="10" fill="#E0F2FE"/>
+    <text x="51" y="30" text-anchor="middle" font-size="9" font-weight="700" fill="#0369A1">STAGE 2</text>
+    <text x="16" y="56" font-size="12" font-weight="800" fill="#0F172A">特征解耦层</text>
+    <text x="16" y="72" font-size="9" fill="#64748B">Feature Decoupling</text>
+
+    <!-- Decoupled Left: Code Requirement -->
+    <g transform="translate(140, 14)">
+      <rect x="0" y="0" width="370" height="68" rx="6" fill="#FFFFFF" stroke="#0284C7" stroke-width="1.2"/>
+      <text x="14" y="24" font-size="11" font-weight="700" fill="#0369A1">Code Capability Requirement (Required)</text>
+      <text x="14" y="40" font-size="9" fill="#475569">AST 作用域与别名解析 ➔ 提取必需宿主依赖</text>
+      <text x="14" y="56" font-size="9" font-weight="700" fill="#15803D">状态输出: { definite (确定依赖), possible }</text>
+    </g>
+
+    <!-- HIGHLIGHTED INNOVATION 1 BADGE: ORTHOGONAL FIREWALL -->
+    <g transform="translate(530, 14)">
+      <rect x="0" y="0" width="200" height="68" rx="6" fill="#FFF1F2" stroke="#E11D48" stroke-width="1.5" stroke-dasharray="4 3"/>
+      <rect x="35" y="8" width="130" height="18" rx="9" fill="#E11D48"/>
+      <text x="100" y="21" text-anchor="middle" font-size="8.5" font-weight="800" fill="#FFFFFF">★ INNOVATION 1 ★</text>
+      
+      <text x="100" y="44" text-anchor="middle" font-size="12" font-weight="900" fill="#9F1239">Required ⊥ Target</text>
+      <text x="100" y="58" text-anchor="middle" font-size="8.5" font-weight="700" fill="#BE123C">正交解耦公理 (禁循环论证)</text>
+    </g>
+
+    <!-- Decoupled Right: External Target Evidence -->
+    <g transform="translate(750, 14)">
+      <rect x="0" y="0" width="350" height="68" rx="6" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/>
+      <text x="14" y="24" font-size="11" font-weight="700" fill="#6D28D9">Target Environment Facts (Target)</text>
+      <text x="14" y="40" font-size="9" fill="#475569">外部部署清单与指纹 ➔ 确立真实运行环境</text>
+      <text x="14" y="56" font-size="9" font-weight="700" fill="#5B21B6">状态输出: { confirmed (强证实), corroborated }</text>
+    </g>
+  </g>
+
+  <!-- Arrow L2 -> L3 -->
+  <line x1="600" y1="272" x2="600" y2="300" stroke="#0284C7" stroke-width="2" marker-end="url(#arr-navy)"/>
+
+  <!-- ==================== 3. ★ PROPOSED R97 GUARD MODEL ★ (Y: 300 - VISUAL CENTER) ==================== -->
+  <g transform="translate(40, 300)">
+    <!-- Main Focus Card with Blue Primary Border -->
+    <rect x="0" y="0" width="1120" height="210" rx="8" fill="#FFFFFF" stroke="#0284C7" stroke-width="1.8" filter="url(#soft-card)"/>
+
+    <!-- Left Header Block -->
+    <g transform="translate(16, 20)">
+      <rect x="0" y="0" width="105" height="26" rx="4" fill="#0284C7"/>
+      <text x="52" y="17" text-anchor="middle" font-size="9.5" font-weight="800" fill="#FFFFFF">★ 核心创新模型 ★</text>
+      <text x="0" y="44" font-size="12.5" font-weight="800" fill="#0F172A">R97 Guard Model</text>
+      <text x="0" y="60" font-size="9" fill="#64748B">Tri-State Decision</text>
+      
+      <rect x="0" y="80" width="105" height="84" rx="4" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="0.8"/>
+      <text x="52" y="100" text-anchor="middle" font-size="8.5" font-weight="700" fill="#0369A1">4 宿主实测探针</text>
+      <text x="52" y="118" text-anchor="middle" font-size="7.5" fill="#64748B">• 纯 VM 基线</text>
+      <text x="52" y="130" text-anchor="middle" font-size="7.5" fill="#64748B">• 原生 Node.js</text>
+      <text x="52" y="142" text-anchor="middle" font-size="7.5" fill="#64748B">• Edge 浏览器</text>
+      <text x="52" y="154" text-anchor="middle" font-size="7.5" fill="#059669">• 微信 DevTools</text>
+    </g>
+
+    <!-- Sub 3A: Semantic Contract -->
+    <g transform="translate(140, 20)">
+      <rect x="0" y="0" width="310" height="170" rx="6" fill="#F0F9FF" stroke="#BAE6FD" stroke-width="1.2"/>
+      <text x="14" y="24" font-size="11" font-weight="800" fill="#0369A1">1. 语义契约约束 (Semantic Contract)</text>
+      <text x="14" y="42" font-size="9" fill="#475569">按语法用法上下文投影必须保真的语义维度：</text>
+
+      <!-- 3 Pills -->
+      <g transform="translate(14, 52)">
+        <rect x="0" y="0" width="85" height="22" rx="11" fill="#FFFFFF" stroke="#0284C7" stroke-width="0.8"/>
+        <text x="42" y="15" text-anchor="middle" font-size="8.5" font-weight="700" fill="#0284C7">typeof 维度</text>
+
+        <rect x="95" y="0" width="92" height="22" rx="11" fill="#FFFFFF" stroke="#0284C7" stroke-width="0.8"/>
+        <text x="141" y="15" text-anchor="middle" font-size="8.5" font-weight="700" fill="#0284C7">truthiness 维度</text>
+
+        <rect x="196" y="0" width="86" height="22" rx="11" fill="#FFFFFF" stroke="#0284C7" stroke-width="0.8"/>
+        <text x="239" y="15" text-anchor="middle" font-size="8.5" font-weight="700" fill="#0284C7">return_val</text>
+      </g>
+
+      <rect x="14" y="86" width="282" height="42" rx="4" fill="#FFF1F2" stroke="#FECDD3" stroke-width="0.8"/>
+      <text x="22" y="102" font-size="8.5" font-weight="700" fill="#9F1239">非确定性调用拦截 (Trap Guard):</text>
+      <text x="22" y="116" font-size="8" fill="#BE123C">Date.now / Math.random 强制要求 return_val ➔ 守住未决</text>
+
+      <text x="14" y="148" font-size="8.5" fill="#0369A1">比较谓词: predicate = strict_equal (严格相等)</text>
+    </g>
+
+    <!-- Connector 3A -> Decision Core -->
+    <line x1="450" y1="105" x2="480" y2="105" stroke="#0284C7" stroke-width="1.5" marker-end="url(#arr-navy)"/>
+
+    <!-- Sub 3B: Decision Engine -->
+    <g transform="translate(480, 20)">
+      <rect x="0" y="0" width="230" height="170" rx="6" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="14" y="24" font-size="11" font-weight="800" fill="#0F172A">2. 八步决策引擎</text>
+      <text x="14" y="40" font-size="8.5" fill="#64748B">D(req, target, C, E)</text>
+
+      <g transform="translate(14, 52)">
+        <text x="0" y="12" font-size="8.5" fill="#334155">• 静态绑定合法性检验</text>
+        <text x="0" y="26" font-size="8.5" fill="#334155">• 目标证实核准 (confirmed)</text>
+        <text x="0" y="40" font-size="8.5" fill="#334155">• 必需宿主缺失核验</text>
+        <text x="0" y="54" font-size="8.5" fill="#334155">• 探针证据时效与指纹匹配</text>
+        <text x="0" y="68" font-size="8.5" fill="#334155">• 契约维度多环境严格投影</text>
+        <line x1="0" y1="78" x2="200" y2="78" stroke="#E2E8F0" stroke-width="0.8"/>
+        <text x="0" y="92" font-size="8.5" font-weight="700" fill="#0284C7">➔ 多目标一致性最终仲裁</text>
+      </g>
+    </g>
+
+    <!-- Split Lines into Verdicts -->
+    <line x1="710" y1="65" x2="740" y2="50" stroke="#059669" stroke-width="1.5" marker-end="url(#arr-green)"/>
+    <line x1="710" y1="105" x2="740" y2="105" stroke="#E11D48" stroke-width="1.5" marker-end="url(#arr-red)"/>
+    <line x1="710" y1="145" x2="740" y2="160" stroke="#D97706" stroke-width="1.5" marker-end="url(#arr-amber)"/>
+
+    <!-- VISUAL CENTER: THREE CLEAN DECISION VERDICTS (3C) -->
+    <g transform="translate(740, 20)">
+      <!-- FOLD -->
+      <g transform="translate(0, 8)">
+        <rect x="0" y="0" width="350" height="42" rx="6" fill="#ECFDF5" stroke="#10B981" stroke-width="1.2"/>
+        <rect x="8" y="8" width="56" height="26" rx="4" fill="#059669"/>
+        <text x="36" y="25" text-anchor="middle" font-size="11" font-weight="900" fill="#FFFFFF">FOLD</text>
+        <text x="74" y="20" font-size="10" font-weight="800" fill="#065F46">等价安全放行 (Permit Transformation)</text>
+        <text x="74" y="32" font-size="8" fill="#047857">所有目标在契约维度 strict_equal ➔ 授权常量折叠</text>
+      </g>
+
+      <!-- PROTECT -->
+      <g transform="translate(0, 62)">
+        <rect x="0" y="0" width="350" height="42" rx="6" fill="#FFF1F2" stroke="#EF4444" stroke-width="1.2"/>
+        <rect x="8" y="8" width="72" height="26" rx="4" fill="#E11D48"/>
+        <text x="44" y="25" text-anchor="middle" font-size="10.5" font-weight="900" fill="#FFFFFF">PROTECT</text>
+        <text x="90" y="20" font-size="10" font-weight="800" fill="#9F1239">冲突硬拦截 (Block Transformation)</text>
+        <text x="90" y="32" font-size="8" fill="#BE123C">实测证实跨宿主异构差分 ➔ 强制锁死分支，禁止剪枝！</text>
+      </g>
+
+      <!-- UNKNOWN -->
+      <g transform="translate(0, 116)">
+        <rect x="0" y="0" width="350" height="42" rx="6" fill="#FFFBEB" stroke="#F59E0B" stroke-width="1.2"/>
+        <rect x="8" y="8" width="72" height="26" rx="4" fill="#D97706"/>
+        <text x="44" y="25" text-anchor="middle" font-size="10" font-weight="900" fill="#FFFFFF">UNKNOWN</text>
+        <text x="90" y="20" font-size="10" font-weight="800" fill="#92400E">保守安全未决 (Fail-Safe Fallback)</text>
+        <text x="90" y="32" font-size="8" fill="#78350F">证据不足或未决 ➔ 保守兜底不折叠，保全程序</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Arrow L3 -> L4 -->
+  <line x1="600" y1="510" x2="600" y2="534" stroke="#0284C7" stroke-width="2" marker-end="url(#arr-navy)"/>
+
+  <!-- ==================== 4. DOUBLE-ORACLE VALIDATION (Y: 534) ==================== -->
+  <g transform="translate(40, 534)">
+    <rect x="0" y="0" width="1120" height="66" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" filter="url(#soft-card)"/>
+
+    <!-- Stage Tag -->
+    <rect x="16" y="12" width="70" height="20" rx="10" fill="#E2E8F0"/>
+    <text x="51" y="26" text-anchor="middle" font-size="9" font-weight="700" fill="#475569">STAGE 4</text>
+    <text x="16" y="48" font-size="11" font-weight="800" fill="#0F172A">双重验证闭环</text>
+
+    <!-- Validation Card -->
+    <g transform="translate(140, 10)">
+      <rect x="0" y="0" width="960" height="46" rx="6" fill="#FFFFFF" stroke="#86EFAC" stroke-width="1"/>
+      <text x="14" y="18" font-size="10" font-weight="800" fill="#15803D">Double-Oracle Equivalence Verification (OBsmith §3.4 规范对标):</text>
+      <text x="14" y="34" font-size="9" fill="#166534">
+        • Level-1: 离线微探针元能力投影维度核验；
+        • Level-2: 变换前后源码动态执行观测等价性验证 (Normalized Observational Trace: <tspan font-family="monospace">P ≈_E Q</tspan>) ➔ 保证真实行为零偏差！
+      </text>
+    </g>
+  </g>
+
+  <!-- Arrow L4 -> L5 -->
+  <line x1="600" y1="600" x2="600" y2="624" stroke="#059669" stroke-width="2" marker-end="url(#arr-green)"/>
+
+  <!-- ==================== 5. OUTPUT LAYER (Y: 624) ==================== -->
+  <g transform="translate(40, 624)">
+    <rect x="0" y="0" width="1120" height="84" rx="8" fill="#F0FDF4" stroke="#059669" stroke-width="1.2" filter="url(#soft-card)"/>
+
+    <!-- Stage Tag -->
+    <rect x="16" y="14" width="70" height="20" rx="10" fill="#059669"/>
+    <text x="51" y="28" text-anchor="middle" font-size="9" font-weight="800" fill="#FFFFFF">STAGE 5</text>
+    <text x="16" y="52" font-size="12" font-weight="800" fill="#065F46">输出层 (Output)</text>
+    <text x="16" y="66" font-size="8.5" fill="#047857">Sound Program</text>
+
+    <!-- Output Content Box -->
+    <g transform="translate(140, 10)">
+      <rect x="0" y="0" width="960" height="64" rx="6" fill="#FFFFFF" stroke="#BBF7D0" stroke-width="1"/>
+      
+      <!-- Compare left: Traditional -->
+      <g transform="translate(14, 10)">
+        <rect x="0" y="0" width="440" height="44" rx="4" fill="#FFF1F2" stroke="#FDA4AF" stroke-width="0.8"/>
+        <text x="10" y="16" font-size="8.5" font-weight="800" fill="#E11D48">传统反混淆器 (无 R97 守门):</text>
+        <text x="10" y="30" font-size="8" fill="#9F1239">离线 Node 沙箱求值误判假 ➔ 误剪宿主分支 ➔ 💥 真实环境部署直接崩溃！</text>
+      </g>
+
+      <!-- Compare right: R97 Sound -->
+      <g transform="translate(470, 10)">
+        <rect x="0" y="0" width="476" height="44" rx="4" fill="#ECFDF5" stroke="#6EE7B7" stroke-width="0.8"/>
+        <text x="10" y="16" font-size="8.5" font-weight="800" fill="#059669">集成 R97 守门保护 (Semantics-Preserved Output):</text>
+        <text x="10" y="30" font-size="8" fill="#047857">识别环境差分 ➔ 强制拦截折叠，保留完整分支 ➔ ✅ 目标环境部署 100% 正常运行！</text>
+      </g>
+    </g>
+  </g>
+</svg>
+</body></html>

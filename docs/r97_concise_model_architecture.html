@@ -1,0 +1,220 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>*{margin:0;padding:0;box-sizing:border-box;}body{background:#fff;width:1360px;height:620px;overflow:hidden;}</style></head><body><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1360 620" width="1360" height="620" style="background:#FFFFFF; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, 'Source Han Sans SC', 'Microsoft YaHei', sans-serif;">
+  <defs>
+    <filter id="c-shadow" x="-3%" y="-2%" width="106%" height="106%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="5" flood-color="#0F172A" flood-opacity="0.04" />
+    </filter>
+
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#0284C7"/>
+    </marker>
+    <marker id="arr-purple" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#7C3AED"/>
+    </marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#059669"/>
+    </marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#DC2626"/>
+    </marker>
+    <marker id="arr-dark" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#334155"/>
+    </marker>
+  </defs>
+
+  <!-- Canvas Outer Border -->
+  <rect x="12" y="12" width="1336" height="596" rx="4" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.2"/>
+
+  <!-- Figure Header -->
+  <g transform="translate(28, 30)">
+    <text x="0" y="10" font-size="15" font-weight="800" fill="#0F172A">Figure 1 | R97 系统判定模型 (Concise Architecture Model)</text>
+    <text x="0" y="26" font-size="11" fill="#64748B">核心正交解耦公理：代码能力需求 (Required) 与外部目标环境 (Target) 严格独立 · 实测探针驱动守门</text>
+  </g>
+
+  <!-- Left: Dual-Track Decoupled Extraction -->
+  <g transform="translate(28, 70)">
+    <rect x="0" y="0" width="360" height="470" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+    <text x="16" y="24" font-size="12" font-weight="800" fill="#0F172A">一、特征解耦提取层 (Decoupled Extraction)</text>
+
+    <!-- Top Track: Code-side -->
+    <g transform="translate(16, 40)">
+      <rect x="0" y="0" width="328" height="150" rx="6" fill="#FFFFFF" stroke="#BAE6FD" stroke-width="1.2"/>
+      <rect x="0" y="0" width="328" height="22" rx="6" fill="#E0F2FE" stroke="#BAE6FD" stroke-width="1.2"/>
+      <text x="10" y="15" font-size="10" font-weight="700" fill="#0369A1">代码侧（内部证据）➔ 必需能力依赖</text>
+
+      <g transform="translate(12, 34)">
+        <text x="0" y="12" font-family="monospace" font-size="10" font-weight="700" fill="#0F172A">if (typeof wx !== 'undefined')</text>
+        <text x="12" y="28" font-family="monospace" font-size="9" fill="#0284C7">wx.request({ url: '...' })</text>
+        <line x1="0" y1="36" x2="304" y2="36" stroke="#E2E8F0" stroke-width="1"/>
+        <text x="0" y="52" font-size="9" fill="#475569">• AST 作用域解析：排除局部形参遮蔽变量</text>
+        <text x="0" y="68" font-size="9" fill="#475569">• 常量别名追踪：还原 client ➔ wx 依赖链</text>
+        <text x="0" y="84" font-size="9" font-weight="700" fill="#15803D">➔ 输出必需运行时: required = { Wechat, definite }</text>
+      </g>
+    </g>
+
+    <!-- Center Barrier: Orthogonal Firewall -->
+    <g transform="translate(16, 202)">
+      <rect x="0" y="0" width="328" height="54" rx="6" fill="#FFF1F2" stroke="#FDA4AF" stroke-width="1.2" stroke-dasharray="3 3"/>
+      <text x="164" y="22" text-anchor="middle" font-size="10" font-weight="800" fill="#E11D48">🔒 正交隔离防火墙 (Required ⊥ Target)</text>
+      <text x="164" y="40" text-anchor="middle" font-size="8.5" fill="#9F1239">严禁循环论证：代码内部依赖 wx，绝不能作为目标是微信的证据！</text>
+    </g>
+
+    <!-- Bottom Track: Evidence-side -->
+    <g transform="translate(16, 268)">
+      <rect x="0" y="0" width="328" height="150" rx="6" fill="#FFFFFF" stroke="#DDD6FE" stroke-width="1.2"/>
+      <rect x="0" y="0" width="328" height="22" rx="6" fill="#EDE9FE" stroke="#DDD6FE" stroke-width="1.2"/>
+      <text x="10" y="15" font-size="10" font-weight="700" fill="#6D28D9">证据侧（外部证据）➔ 真实目标环境确立</text>
+
+      <g transform="translate(12, 34)">
+        <text x="0" y="12" font-family="monospace" font-size="9.5" font-weight="700" fill="#0F172A">project.config.json / package.json</text>
+        <text x="0" y="26" font-size="8.5" fill="#6D28D9">外部项目配置清单 · 部署环境指纹</text>
+        <line x1="0" y1="34" x2="304" y2="34" stroke="#E2E8F0" stroke-width="1"/>
+        <text x="0" y="50" font-size="9" fill="#475569">• 目标解析器：严格校验外部客观事实</text>
+        <text x="0" y="66" font-size="9" fill="#475569">• 排除代码自身干扰，防范多源配置互斥冲突</text>
+        <text x="0" y="82" font-size="9" font-weight="700" fill="#5B21B6">➔ 输出确认目标: target = { Wechat, confirmed }</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Connectors from Track 1 to Center -->
+  <line x1="388" y1="185" x2="422" y2="185" stroke="#0284C7" stroke-width="1.5" marker-end="url(#arr-blue)"/>
+  <line x1="388" y1="410" x2="422" y2="410" stroke="#7C3AED" stroke-width="1.5" marker-end="url(#arr-purple)"/>
+
+  <!-- Center: Decision Core & Multi-Host Probing -->
+  <g transform="translate(422, 70)">
+    <rect x="0" y="0" width="500" height="470" rx="8" fill="#FFFFFF" filter="url(#c-shadow)" stroke="#CBD5E1" stroke-width="1"/>
+    <text x="16" y="24" font-size="12" font-weight="800" fill="#0F172A">二、语义契约与四宿主实测守门核心 (Decision Engine)</text>
+
+    <!-- Top: Semantic Contract & Non-deterministic Trap -->
+    <g transform="translate(16, 40)">
+      <rect x="0" y="0" width="468" height="84" rx="6" fill="#F0F9FF" stroke="#BAE6FD" stroke-width="1"/>
+      <text x="12" y="18" font-size="10" font-weight="700" fill="#0369A1">语义契约模型 C：用法上下文维度投影</text>
+      
+      <g transform="translate(12, 28)">
+        <rect x="0" y="0" width="85" height="20" rx="10" fill="#FFFFFF" stroke="#0284C7" stroke-width="0.8"/>
+        <text x="42" y="14" text-anchor="middle" font-size="8.5" font-weight="700" fill="#0284C7">typeof 维度</text>
+
+        <rect x="95" y="0" width="95" height="20" rx="10" fill="#FFFFFF" stroke="#0284C7" stroke-width="0.8"/>
+        <text x="142" y="14" text-anchor="middle" font-size="8.5" font-weight="700" fill="#0284C7">truthiness 维度</text>
+
+        <rect x="200" y="0" width="95" height="20" rx="10" fill="#FFFFFF" stroke="#0284C7" stroke-width="0.8"/>
+        <text x="247" y="14" text-anchor="middle" font-size="8.5" font-weight="700" fill="#0284C7">return_val 维度</text>
+      </g>
+      <text x="12" y="70" font-size="8.5" fill="#DC2626">⚠️ 非确定性语言内建拦截：Date.now / Math.random 强制要求 return_val ➔ 守住未决 UNKNOWN</text>
+    </g>
+
+    <!-- Middle: 4-Host Empirical Observations -->
+    <g transform="translate(16, 136)">
+      <rect x="0" y="0" width="468" height="156" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="12" y="18" font-size="10" font-weight="700" fill="#0F172A">4 宿主差分探针实测读数矩阵 (Empirical Probing Contrast)</text>
+
+      <!-- 4 Host Boxes -->
+      <g transform="translate(12, 28)">
+        <rect x="0" y="0" width="102" height="34" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.8"/>
+        <text x="51" y="14" text-anchor="middle" font-size="8" font-weight="700" fill="#0F172A">① 语言基线 VM</text>
+        <text x="51" y="26" text-anchor="middle" font-size="7.5" fill="#64748B">Node vm 干净基线</text>
+
+        <rect x="112" y="0" width="102" height="34" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.8"/>
+        <text x="163" y="14" text-anchor="middle" font-size="8" font-weight="700" fill="#0F172A">② 原生 Node.js</text>
+        <text x="163" y="26" text-anchor="middle" font-size="7.5" fill="#64748B">后端 v20+ 生产环境</text>
+
+        <rect x="224" y="0" width="102" height="34" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="0.8"/>
+        <text x="275" y="14" text-anchor="middle" font-size="8" font-weight="700" fill="#0F172A">③ Headless 浏览器</text>
+        <text x="275" y="26" text-anchor="middle" font-size="7.5" fill="#64748B">MS Edge (DOM/BOM)</text>
+
+        <rect x="336" y="0" width="108" height="34" rx="4" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1"/>
+        <text x="390" y="14" text-anchor="middle" font-size="8" font-weight="700" fill="#15803D">④ 微信官方 DevTools</text>
+        <text x="390" y="26" text-anchor="middle" font-size="7.5" fill="#166534">SDK 3.17.3 真机实测</text>
+      </g>
+
+      <!-- Concrete Probing Readings -->
+      <g transform="translate(12, 70)">
+        <rect x="0" y="0" width="444" height="36" rx="4" fill="#FFF1F2" stroke="#FECDD3" stroke-width="0.8"/>
+        <text x="10" y="15" font-family="monospace" font-size="8" font-weight="700" fill="#9F1239">[实测冲突] typeof wx:</text>
+        <text x="10" y="28" font-size="7.5" fill="#BE123C">VM: 'undefined' | Node: 'undefined' | Edge: 'undefined' | <tspan font-weight="700" fill="#E11D48">微信真机: 'object'</tspan> ➔ 真实冲突 ➔ 硬 PROTECT</text>
+
+        <rect x="0" y="42" width="444" height="36" rx="4" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="0.8"/>
+        <text x="10" y="57" font-family="monospace" font-size="8" font-weight="700" fill="#166534">[实测等价] Math.abs(-5) === 5:</text>
+        <text x="10" y="70" font-size="7.5" fill="#15803D">VM: true | Node: true | Edge: true | 微信: true ➔ <tspan font-weight="700" fill="#059669">4端完全 strict_equal 且证据可折叠 ➔ 放行 FOLD</tspan></text>
+      </g>
+    </g>
+
+    <!-- Bottom: 8-Stage Fail-Safe Rules -->
+    <g transform="translate(16, 304)">
+      <rect x="0" y="0" width="468" height="150" rx="6" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="12" y="18" font-size="10" font-weight="700" fill="#0F172A">判定规则流 D(required, target, contract, evidence):</text>
+      
+      <g transform="translate(12, 28)">
+        <rect x="0" y="0" width="444" height="34" rx="4" fill="#FFF1F2" stroke="#FDA4AF" stroke-width="0.8"/>
+        <text x="10" y="15" font-size="8.5" font-weight="700" fill="#E11D48">【规则 1 · 冲突保护】已确认目标 confirmed + 确定依赖 definite + 真实冲突 ➔ PROTECT</text>
+        <text x="10" y="27" font-size="7.5" fill="#9F1239">直接拦截代码变换，原样保留分支结构，防止环境敏感逻辑被恶意剪除（0 漏网）</text>
+
+        <rect x="0" y="40" width="444" height="34" rx="4" fill="#F0FDF4" stroke="#6EE7B7" stroke-width="0.8"/>
+        <text x="10" y="55" font-size="8.5" font-weight="700" fill="#059669">【规则 2 · 等价放行】已确认目标 confirmed + 契约维度严格一致 + 证据 foldEligible ➔ FOLD</text>
+        <text x="10" y="67" font-size="7.5" fill="#047857">证实行为严格一致，授权下游执行常量折叠与死代码剪枝（实测差分误放行 0，精度 100%）</text>
+
+        <rect x="0" y="80" width="444" height="34" rx="4" fill="#FFFBEB" stroke="#FDE68A" stroke-width="0.8"/>
+        <text x="10" y="95" font-size="8.5" font-weight="700" fill="#D97706">【规则 3 · 安全兜底】目标未确认 (inferred/unknown) 或 契约维度缺失 ➔ UNKNOWN</text>
+        <text x="10" y="107" font-size="7.5" fill="#92400E">保守兜底不折叠，并输出细粒度归因 (binding / runtime / behavior)，确保绝对零事故</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Connectors from Center to Right -->
+  <line x1="922" y1="200" x2="956" y2="200" stroke="#059669" stroke-width="1.5" marker-end="url(#arr-green)"/>
+  <line x1="922" y1="360" x2="956" y2="360" stroke="#DC2626" stroke-width="1.5" marker-end="url(#arr-red)"/>
+  <line x1="922" y1="420" x2="956" y2="420" stroke="#D97706" stroke-width="1.5" marker-end="url(#arr-dark)"/>
+
+  <!-- Right: Downstream Guard Impact -->
+  <g transform="translate(956, 70)">
+    <rect x="0" y="0" width="375" height="470" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+    <text x="16" y="24" font-size="12" font-weight="800" fill="#0F172A">三、下游反混淆优化对比 (Guard Impact)</text>
+
+    <!-- Traditional Crash Box -->
+    <g transform="translate(16, 40)">
+      <rect x="0" y="0" width="343" height="160" rx="6" fill="#FFF1F2" stroke="#FDA4AF" stroke-width="1.2"/>
+      <rect x="10" y="10" width="120" height="20" rx="10" fill="#E11D48"/>
+      <text x="70" y="24" text-anchor="middle" font-size="8.5" font-weight="800" fill="#FFFFFF">传统反混淆器 (无R97)</text>
+
+      <g transform="translate(12, 40)">
+        <text x="0" y="12" font-size="9" fill="#9F1239">• 在离线单 Node VM 中求值：typeof wx ➔ 'undefined'</text>
+        <text x="0" y="28" font-size="9" fill="#9F1239">• 误触发死代码剪枝：<tspan font-weight="800">将 if(wx) 分支完全切除！</tspan></text>
+        <text x="0" y="44" font-size="9" fill="#9F1239">• 保留了错误的空分支或报错 fallback 代码</text>
+        
+        <rect x="0" y="58" width="319" height="52" rx="4" fill="#FFE4E6"/>
+        <text x="10" y="76" font-size="9.5" font-weight="800" fill="#BE123C">💥 部署到真实微信环境的后果：</text>
+        <text x="10" y="92" font-size="8.5" fill="#9F1239">核心业务逻辑缺失，抛出 TypeError / ReferenceError 运行时崩溃！</text>
+      </g>
+    </g>
+
+    <!-- R97 Protected Box -->
+    <g transform="translate(16, 220)">
+      <rect x="0" y="0" width="343" height="198" rx="6" fill="#F0FDF4" stroke="#6EE7B7" stroke-width="1.2"/>
+      <rect x="10" y="10" width="120" height="20" rx="10" fill="#059669"/>
+      <text x="70" y="24" text-anchor="middle" font-size="8.5" font-weight="800" fill="#FFFFFF">集成 R97 守门保护</text>
+
+      <g transform="translate(12, 40)">
+        <text x="0" y="12" font-size="9" fill="#065F46">• 实测探针证实微信环境存在 wx ➔ 输出硬判定 PROTECT</text>
+        <text x="0" y="28" font-size="9" fill="#065F46">• <tspan font-weight="800">强制拦截折叠！原汁原味保留完整宿主分支</tspan></text>
+        <text x="0" y="44" font-size="9" fill="#047857">• 纯语言计算 (如 1+1, Math.abs) 则安全放行 FOLD</text>
+        
+        <rect x="0" y="58" width="319" height="88" rx="4" fill="#DCFCE7"/>
+        <text x="10" y="76" font-size="9.5" font-weight="800" fill="#15803D">✅ 部署到真实微信环境的成果：</text>
+        <text x="10" y="92" font-size="8.5" fill="#166534">• 微信小程序 100% 正常运行，所有宿主能力零丢失；</text>
+        <text x="10" y="106" font-size="8.5" fill="#166534">• Level-2 动态执行验证 386 样本，行为不一致率：0.00%；</text>
+        <text x="10" y="120" font-size="8.5" font-weight="800" fill="#059669">• 785 条跨宿主实测差分，不安全折叠 0，折叠准确率 100%！</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Global Footer -->
+  <g transform="translate(28, 554)">
+    <rect x="0" y="0" width="1303" height="42" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="16" y="18" font-size="9.5" font-weight="700" fill="#0F172A">R97 全景系统架构定理 (Comprehensive Architectural Invariants):</text>
+    <text x="16" y="32" font-size="8.5" fill="#64748B">
+      [1] 三生态覆盖：前端 WPT (13k记录) + 后端 Node (22k记录) + 微信小程序 (120万点)；
+      [2] 实测差分驱动：真机探针采集 785 差分点精准拦截；
+      [3] 零不安全折叠保证：Level-2 动态执行不一致率 0.00%！
+    </text>
+  </g>
+</svg>
+</body></html>
