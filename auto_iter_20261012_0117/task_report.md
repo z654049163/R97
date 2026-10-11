@@ -24,20 +24,20 @@
 2. **P1-M3（代码就绪，产物待补跑）**：`src/evaluation/obfuscation-invariance.mjs` 新增 `M3-string-array-rc4` 配置（M2 + rc4 字符串编码 + 索引位移 + 双层 function 包装器；不含 debugProtection/selfDefending）。选项名/取值域对照本地 obfuscator@5.9.0 类型定义逐项核实；混淆器级冒烟通过。**完整基准重跑需 Edge CDP → 留待用户在场；数字未验证前不得进任何报告。**
 3. **未动**：决策引擎、探针、证据链路零改动；`dropAbsence`/非对称外推铁律未被触碰。
 
-## 三、文献资产（全景录条目 13–22，全部 CrossRef/arXiv/官方页当场核验）
+## 三、文献资产（全景录条目 16–25，全部 CrossRef/arXiv/官方页当场核验）
 
 | # | 论文 | Venue（实证） | 对 R97 的价值 |
 |---|---|---|---|
-| 13 | JsDeObsBench | CCS 2025 | 混淆不变性威胁模型对标（链式变换）；"反混淆 LLM 化"引用 |
-| 14 | 微信动态分析工业实践 | ASE 2020 Industry | target runtime 概念的工业背书；"为何不用纯动态分析" |
-| 15 | HybriDroid | ASE 2016 | 混合应用感知谱系定位；跨语言路线反衬轻量性 |
-| 16 | V8 JIT Translation Validation | ICSE 2024 | Level-2 oracle 接入 per-instance validation 脉络；跨宿主→观测等价的分界论证 |
-| 17 | BridgeScope | RAID 2017 | 宿主能力暴露面谱系（HybriDroid→BridgeScope→ASE'20→R97） |
-| 18 | 小程序 bug 实证 | ICSE 2022 | "小程序平台特有 bug"经验事实（83 bug 分类待读全文核对 UNVERIFIED） |
-| 19 | 微信小程序生态测量 | SIGMETRICS 2021 / PACMPER 5(2) | 生态规模与宿主 API 密度的第三方量化（环境嗅探统计待核对 UNVERIFIED） |
-| 20 | LLM 反混淆能力评估 | DIMVA 2025 | 与条目 13 并引，封"反混淆器变强后 R97 是否过时" |
-| 21 | 混淆 vs 静态 ML 检测器 | ISSTA 2023 | "混淆 vs 静态分析鲁棒性"脉络：检测器退化 vs R97 守门安全的对照 |
-| 22 | SAFE-Deobs | IEEE SCAM 2020（非 CCF-A，如实标注） | "反混淆器核心操作=常量折叠"工具证据，恰是 R97 守门的 CONST_EVAL |
+| 16 | JsDeObsBench | CCS 2025 | 混淆不变性威胁模型对标（链式变换）；"反混淆 LLM 化"引用 |
+| 17 | 微信动态分析工业实践 | ASE 2020 Industry | target runtime 概念的工业背书；"为何不用纯动态分析" |
+| 18 | HybriDroid | ASE 2016 | 混合应用感知谱系定位；跨语言路线反衬轻量性 |
+| 19 | V8 JIT Translation Validation | ICSE 2024 | Level-2 oracle 接入 per-instance validation 脉络；跨宿主→观测等价的分界论证 |
+| 20 | BridgeScope | RAID 2017 | 宿主能力暴露面谱系（HybriDroid→BridgeScope→ASE'20→R97） |
+| 21 | 小程序 bug 实证 | ICSE 2022 | "小程序平台特有 bug"经验事实（83 bug 分类待读全文核对 UNVERIFIED） |
+| 22 | 微信小程序生态测量 | SIGMETRICS 2021 / PACMPER 5(2) | 生态规模与宿主 API 密度的第三方量化（环境嗅探统计待核对 UNVERIFIED） |
+| 23 | LLM 反混淆能力评估 | DIMVA 2025 | 与条目 16 并引，封"反混淆器变强后 R97 是否过时" |
+| 24 | 混淆 vs 静态 ML 检测器 | ISSTA 2023 | "混淆 vs 静态分析鲁棒性"脉络：检测器退化 vs R97 守门安全的对照 |
+| 25 | SAFE-Deobs | IEEE SCAM 2020（非 CCF-A，如实标注） | "反混淆器核心操作=常量折叠"工具证据，恰是 R97 守门的 CONST_EVAL |
 
 **核验纪律的实证**：本任务期间共拦截 **6 处**检索元数据/描述错误——3 个错误 DOI、2 个错误 venue、1 个幻觉题名（"A Large-Scale Empirical Assessment of JavaScript Obfuscation" 不存在）、1 处主题描述漂移（Simulacrum 实为扩展指纹防御而非分析环境逃避）。全部核验事件已留痕于全景录，审稿可追溯。
 
@@ -53,7 +53,7 @@
 1. **P1 基准补跑**：`npm run eval:obfuscation-invariance`（M3 已就绪）→ 预期一致性低于 M2、0 不安全折叠保持 → 数字确认后更新性能报告（P2 通道已就绪，会自动带上 M3 列）。
 2. **P3 实施与验证**：按 `proposals/P3` 测量结果节执行——6 个核心 API（FileReader/Image/SVGRect/Window/close/stop）加入 `HOST_RUNTIME_ROOTS` Edge 组 + `WebKitCSSMatrix` 单独决定 → 重跑 host-attribution + 主基准（--include-browser）验证 0 不安全折叠不变。
 3. **M4 可行性试验**（可选）：debugProtection/selfExploding 在场小样本试验，若探针卡死则维持不加。
-4. **UNVERIFIED 待核对**：条目 18 的 83-bug 分类与 R97 失败模式重合度；条目 19 的环境嗅探统计比例。
+4. **UNVERIFIED 待核对**：条目 21 的 83-bug 分类与 R97 失败模式重合度；条目 22 的环境嗅探统计比例。
 5. **收尾决策**：审核后是否合并入主线（当前全部仅本地提交，主线未受影响）；回退命令见 §0。
 
 ## 六、安全红线遵守声明

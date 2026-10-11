@@ -24,7 +24,7 @@
   - `proposals/P1-混淆不变性扩展为链式变换.md`（中等工作量，对标 CCS 2025 威胁模型，评测-only）
   - `proposals/P2-混淆不变性接入性能指标自动汇总.md`（**首选实施项**，第三十二轮遗留 TODO，风险最低）
   - `proposals/P3-浏览器宿主根集合扩展.md`（需先跑 host-attribution 实测，硬性前置门槛已写入）
-- [x] 新条目按标准格式追加 `R97_已读文献库与技术借鉴全景录.md`（新增第四节，条目 13–15，目录索引已同步）
+- [x] 新条目按标准格式追加 `R97_已读文献库与技术借鉴全景录.md`（新增文献节【现为第五节】，条目 16–18【原记 13–15，周期 7 重编号】，目录索引已同步）
 - [x] 设置自动化任务（每小时 :13 触发，共 8 次：02:13–09:13，截止 09:17 由章程兜底）
 
 ### 周期 2+ 建议
@@ -48,7 +48,7 @@
 - **Translation Validation for JIT Compiler in the V8 JavaScript Engine**——实为 **ICSE 2024**（10.1145/3597503.3639189，Kwon/Kwon/Kang/Lee/Heo），检索暗示"IEEE 期刊"有误。写作定位：R97 Level-2 oracle 与 TV 同属 per-instance validation 传统；跨宿主使形式化等价退化为观测等价，正是 R97 空白。
 - **BridgeScope**——实为 **RAID 2017**（10.1007/978-3-319-66332-6_7，Yang/Mendoza/Zhang/Gu，pp.143–166），检索给的"ASE 2018"是错的。写作定位：宿主能力暴露面谱系（HybriDroid→BridgeScope→ASE'20 微信→R97）。
 - **过滤掉 1 个候选**："On Obfuscating JavaScript Code Using LLMs"（Chalmers）查实为硕士论文，权威性不足，按三问不进文献库。
-- 全景录新增条目 16、17（第四节内），笔记见 `literature/{v8-translation-validation-icse24, bridgescope-raid17}.md`。
+- 全景录新增条目 19、20（第五节内），笔记见 `literature/{v8-translation-validation-icse24, bridgescope-raid17}.md`。
 
 ### 提案状态更新
 
@@ -85,7 +85,7 @@
 
 - **Characterizing and Detecting Bugs in WeChat Mini-Programs**——**ICSE 2022**（10.1145/3510003.3510114，中科院+腾讯 11 人，pp.363–375）。首个小程序 bug 实证研究，与 ASE 2020 工业实践互补的 Motivation 引证。
 - **A Measurement Study of WeChat Mini-Apps**——**SIGMETRICS 2021 / PACMPER 5(2)**（10.1145/3460081，OSU Zhiqiang Lin 组，pp.1–25）。生态规模与 API 调用密度的第三方量化，与 JsDeObsBench 同组成谱系。
-- 两篇"待读全文核对"点已用 UNVERIFIED 显式标注（83 bug 分类与环境嗅探统计）。全景录条目 18、19，笔记见 `literature/`。
+- 两篇"待读全文核对"点已用 UNVERIFIED 显式标注（83 bug 分类与环境嗅探统计）。全景录条目 21、22，笔记见 `literature/`。
 
 ### 评测注意事项更新（本周期发现）
 
@@ -98,7 +98,7 @@
 - **Exploring the Potential of LLMs for Code Deobfuscation**——**DIMVA 2025**（10.1007/978-3-031-97620-9_15，CISPA+CEA List 九人，pp.267–286）。与 JsDeObsBench 并引，封住"反混淆器 LLM 化后 R97 是否过时"的质疑。检索给的作者名单不完整，CrossRef 实证 9 人。
 - **An Empirical Study on the Effects of Obfuscation on Static ML-based Malicious JavaScript Detectors**——**ISSTA 2023**（10.1145/3597926.3598146，华科六人，pp.1420–1432）。"混淆 vs 静态分析鲁棒性"脉络：检测器退化是脆弱性证据，R97 的 0 不安全折叠是第一个守门安全结论。
 - **拦截幻觉题名**："A Large-Scale Empirical Assessment of JavaScript Obfuscation" 经专门检索确认不存在（易与 Hammad/Garcia/Malek ICSE 2018 Android 测量研究混淆），未收录；已在全景录核验事件中记录。
-- 全景录条目 20、21 + 核验事件；笔记见 `literature/{llm-deobfuscation-dimva25, obfuscation-vs-ml-detectors-issta23}.md`。
+- 全景录条目 23、24 + 核验事件；笔记见 `literature/{llm-deobfuscation-dimva25, obfuscation-vs-ml-detectors-issta23}.md`。
 
 ### 代码面：本周期无实施（按"宁可不改"原则）
 
@@ -116,7 +116,7 @@
 
 ### 文献：新增 1 篇 + 一批候选被过滤（过滤记录全部留痕于全景录）
 
-- **收录**：Optimizing Away JavaScript Obfuscation / SAFE-Deobs——**IEEE SCAM 2020**（10.1109/scam51674.2020.00029，pp.215–220，arXiv:2009.09170 双通道核实；venue 为工作会议、如实标注非 CCF-A）。价值：其核心操作正是 R97 守门的 CONST_EVAL，作为"反混淆器内部大量使用常量折叠"的工具证据，补全"混淆器—反混淆器—守门"链条引用面。条目 22。
+- **收录**：Optimizing Away JavaScript Obfuscation / SAFE-Deobs——**IEEE SCAM 2020**（10.1109/scam51674.2020.00029，pp.215–220，arXiv:2009.09170 双通道核实；venue 为工作会议、如实标注非 CCF-A）。价值：其核心操作正是 R97 守门的 CONST_EVAL，作为"反混淆器内部大量使用常量折叠"的工具证据，补全"混淆器—反混淆器—守门"链条引用面。条目 25。
 - **过滤（三问/核验未过，未收录）**：
   - webcrack：社区工具，无同行评审论文；
   - "Understanding and Detecting Minification Bugs in JavaScript Minifiers" 与 "Minifying Bug Detection via LLM-based Test Generation"（检索称 ISSTA 2024）：CrossRef 查无，疑幻觉题名；
@@ -140,11 +140,11 @@
 ### 威胁模型方向检索：1 个候选核验后被过滤（描述漂移拦截，第 6 处）
 
 - **Unleash the Simulacrum**（USENIX Security 2022，Soroush Karami 等，UIC）——官方页核实其实际主题为**浏览器扩展指纹的防御**（"Shifting Browser Realities for Robust Extension-Fingerprinting Prevention"），与周期 1 检索摘要的描述（"evasion-resilient browser honeybags / 分析环境对 JS 指纹的韧性"）**存在主题漂移**。经三问评估：与 R97 的"黑灰产反沙箱逃逸"威胁模型契合度不足，**不收录**，已在全景录核验事件留痕。
-- 本周期无新收录论文：现有条目 13–22 已覆盖写作所需的主要脉络，宁缺毋滥。
+- 本周期无新收录论文：现有条目 16–25 已覆盖写作所需的主要脉络，宁缺毋滥。
 
 ### task_report.md 草稿完成（周期 8 定稿的底稿）
 
-- 新增 `auto_iter_20261012_0117/task_report.md`：提交链、代码改动清单与验证状态、文献资产表（条目 13–22 + 6 处核验拦截实证）、**四条写作级论点链**（混淆器—反混淆器—守门链条 / TV 观测等价脉络 / 宿主能力谱系 / 混淆 vs 静态鲁棒性）、**待用户在场执行清单**（P1 补跑、P3 实施验证、M4 试验、UNVERIFIED 核对）、安全红线遵守声明。
+- 新增 `auto_iter_20261012_0117/task_report.md`：提交链、代码改动清单与验证状态、文献资产表（条目 16–25 + 6 处核验拦截实证）、**四条写作级论点链**（混淆器—反混淆器—守门链条 / TV 观测等价脉络 / 宿主能力谱系 / 混淆 vs 静态鲁棒性）、**待用户在场执行清单**（P1 补跑、P3 实施验证、M4 试验、UNVERIFIED 核对）、安全红线遵守声明。
 
 ### 结构修复：PROGRESS.md 章节顺序
 
@@ -156,6 +156,28 @@
 
 ### 周期 7 建议
 
-1. 文档质量收口：全景录目录索引与条目 13–22 的链接一致性核对、proposals 与 literature 交叉引用核对；低风险、纯任务文件夹与全景录目录层面。
+1. 文档质量收口：全景录目录索引与条目 16–25 的链接一致性核对、proposals 与 literature 交叉引用核对；低风险、纯任务文件夹与全景录目录层面。
 2. 若出现新的可无人值守验证代码项再实施；否则维持零改动。
 3. 周期 8：task_report.md 定稿 + 最终核对（提交链、测试状态、无未提交残留、删 LOCK）。
+
+---
+
+## 周期 7（2026-10-12 07:13–07:4x，自动化触发执行）
+
+### 文档质量收口：抓到并修复本任务引入的编号撞号（重要）
+
+- **问题**：全景录原有"第四节：权威论文标杆模型图专题"（条目 12–15，读库时只看了头尾未及中部，周期 1 未发现）；周期 1 新增的文献节同样命名为"第四节"且条目从 13 起编号，与原条目 13–15（Silent Spring / Mini-Programs Mega-Problems / JEST）**节名冲突、编号撞号**，且目录索引一直缺原四节（12–15）与勘误记录的链接。
+- **修复**：本任务新增条目重编号 **13–22 → 16–25**（接续原最大编号 15 之后），文献节更名"**第五节**"；原条目 1–15 一律不动（勘误表按号引用它们）。同步更新全部引用点：task_report.md 文献资产表与正文、PROGRESS.md 各周期记录、literature 笔记内文、全景录内文互引。
+- **顺带修正一处陈旧指针**：周期 1 写的"两个错误 DOI（见条目 13、14 备注）"实际指向的应是当时条目 14、15（微信 ASE 与 HybriDroid 的 ⚠️ 备注），JsDeObsBench 的 DOI 本来就是对的——重编号后已正确指向条目 17、18。
+- **目录索引重建**：补齐第四节（12–15）、第五节（16–25）条目级链接与勘误记录行，锚点沿用库内既有命名约定。
+- 重编号映射：13→16（JsDeObsBench）、14→17（微信 ASE'20）、15→18（HybriDroid）、16→19（V8 TV）、17→20（BridgeScope）、18→21（小程序 bug ICSE'22）、19→22（生态测量 SIGMETRICS'21）、20→23（LLM 反混淆 DIMVA'25）、21→24（ISSTA'23）、22→25（SAFE-Deobs）。
+
+### 代码面：本周期无实施（文档收口周期，符合预期）
+
+- 无代码改动；npm test 无需重跑（本轮零代码、零评测改动）。
+
+### 周期 8 建议（收尾周期）
+
+1. task_report.md 定稿：更新提交链（补 auto-iter6/7）、条目编号（已同步 16–25）、核对"待用户在场执行清单"完整性。
+2. 最终核对：`git status` 无未提交残留、LOCK 已删、252 测试基线未被触碰的声明复核。
+3. 若自动化在周期 8 后仍有残余触发，按章程截止规则只追加一行进度即停。
