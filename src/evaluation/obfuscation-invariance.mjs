@@ -117,8 +117,15 @@ const DEFAULT_OPTIONS = Object.freeze({
 
 /**
  * 流式扫描语料 JSONL，只取文件级元数据（真实语料含上百万条记录，不能整读）。
- * 返回按体积升序的文件清单，供“从最小的可用文件开始抽”策略使用。
+ * 体积分层抽样：小 / 中 / 大三档各占 limit 的三分之一，消除“只测小文件”
+ * 的偏倚；档内按体积升序取，保证确定性可复现。
  */
+const SIZE_STRATA = Object.freeze([
+  { id: "small", min: 3000, max: 10000 },
+  { id: "medium", min: 10000, max: 60000 },
+  { id: "large", min: 60000, max: 120000 },
+]);
+
 const readCorpusFiles = async (corpusPath, { minFileBytes, maxFileBytes, limit }) => {
   const byFile = new Map();
   const input = createReadStream(path.resolve(corpusPath), { encoding: "utf8" });
@@ -144,8 +151,37 @@ const readCorpusFiles = async (corpusPath, { minFileBytes, maxFileBytes, limit }
     });
   }
   input.close();
-  const files = [...byFile.values()].sort((a, b) => a.sourceBytes - b.sourceBytes);
-  return { files: files.slice(0, limit), totalCandidateFiles: files.length };
+  const files = [];
+  const perStratum = Math.max(1, Math.floor(limit / SIZE_STRATA.length));
+  let remainder = limit;
+  for (let index = 0; index < SIZE_STRATA.length; index += 1) {
+    const stratum = SIZE_STRATA[index];
+    const take = index === SIZE_STRATA.length - 1
+      ? remainder
+      : Math.min(perStratum, remainder);
+    remainder -= take;
+    const stratumFiles = [...byFile.values()]
+      .filter(
+        (entry) =>
+          entry.sourceBytes >= stratum.min &&
+          entry.sourceBytes < stratum.max,
+      )
+      .sort((a, b) => a.sourceBytes - b.sourceBytes)
+      .slice(0, take);
+    for (const entry of stratumFiles) {
+      files.push({ ...entry, sizeStratum: stratum.id });
+    }
+  }
+  const totalCandidateFiles = [...byFile.values()].length;
+  return { files, totalCandidateFiles, strataCounts: countStrata(files) };
+};
+
+const countStrata = (files) => {
+  const counts = {};
+  for (const entry of files) {
+    counts[entry.sizeStratum] = (counts[entry.sizeStratum] ?? 0) + 1;
+  }
+  return counts;
 };
 
 /* ────────────────────────── 受控混淆（worker + 超时） ────────────────────────── */
@@ -283,7 +319,7 @@ export const runObfuscationInvariance = async (options = {}) => {
   const kindBuckets = [];
 
   for (const source of CORPUS_SOURCES) {
-    const { files, totalCandidateFiles } = await readCorpusFiles(source.corpusPath, {
+    const { files, totalCandidateFiles, strataCounts } = await readCorpusFiles(source.corpusPath, {
       minFileBytes: config.minFileBytes,
       maxFileBytes: config.maxFileBytes,
       limit: config.limitFilesPerKind,
@@ -399,6 +435,7 @@ export const runObfuscationInvariance = async (options = {}) => {
       wechatReportUsed: wechatReportPath,
       totalCandidateFiles,
       selectedFiles: files.length,
+      sizeStrataCounts: strataCounts,
       evidenceAvailability: evidence.availability,
       differentialEntityCount: differentialEntities.size,
       perVariant,
