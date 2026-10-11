@@ -96,3 +96,24 @@
 1. 周期主题：度量与基准方向（Collberg potency/resilience 在 JS 的现代实测、混淆强度度量）+ LLM 辅助分析的第二轮（DIMVA 2025 Hajipour 等候选核验）。
 2. 代码面：本周期已完成 P2 + P1(代码部分)；P3 待在场验证。剩余可无人值守做的：提案级工作（如 P4 候选：host-attribution 产物时间戳与根数漂移的口径说明）——按"宁可不改"原则，若无充分论证不动代码。
 3. 周期 8 收尾任务不变：task_report.md 汇总。
+
+---
+
+## 周期 4（2026-10-12 04:13–04:3x，自动化触发执行）
+
+### 文献：新增 2 篇（CrossRef 当场核验）+ 1 个幻觉题名拦截
+
+- **Exploring the Potential of LLMs for Code Deobfuscation**——**DIMVA 2025**（10.1007/978-3-031-97620-9_15，CISPA+CEA List 九人，pp.267–286）。与 JsDeObsBench 并引，封住"反混淆器 LLM 化后 R97 是否过时"的质疑。检索给的作者名单不完整，CrossRef 实证 9 人。
+- **An Empirical Study on the Effects of Obfuscation on Static ML-based Malicious JavaScript Detectors**——**ISSTA 2023**（10.1145/3597926.3598146，华科六人，pp.1420–1432）。"混淆 vs 静态分析鲁棒性"脉络：检测器退化是脆弱性证据，R97 的 0 不安全折叠是第一个守门安全结论。
+- **拦截幻觉题名**："A Large-Scale Empirical Assessment of JavaScript Obfuscation" 经专门检索确认不存在（易与 Hammad/Garcia/Malek ICSE 2018 Android 测量研究混淆），未收录；已在全景录核验事件中记录。
+- 全景录条目 20、21 + 核验事件；笔记见 `literature/{llm-deobfuscation-dimva25, obfuscation-vs-ml-detectors-issta23}.md`。
+
+### 代码面：本周期无实施（按"宁可不改"原则）
+
+- P3 被 CDP 验证门槛挡住（无人值守不可重跑 host-attribution/主基准）；无其他过三问的候选。周期 1–4 累计代码改动仅 P2（已落地）与 P1-M3 配置（待在场补跑基准），符合"正向收益、宁缺毋滥"要求。
+
+### 周期 5+ 建议
+
+1. 周期主题：防护与折叠策略相关（protection、bundling、capability 分析）或补洞周期——按章程周期表推进。
+2. 文献面：候选还有 Herrera "Optimizing Away JavaScript Obfuscation"（arXiv:2009.09170，非顶会，三问评估后再定）与 Hammad ICSE 2018 Android 混淆测量（potency/cost 方法论，跨域类比慎引）。
+3. 周期 8 收尾：task_report.md 汇总全部提交、文献、提案与"待用户在场执行"清单（P1 基准补跑、P3 验证、83-bug 分类核对）。
