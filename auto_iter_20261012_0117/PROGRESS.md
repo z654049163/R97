@@ -91,6 +91,19 @@
 
 - `npm run eval:host-attribution` **并非纯本地**（含 Edge CDP），已修正周期 2 的假设；无人值守期间任何依赖 CDP 的评测一律不跑。
 
+## 周期 4（2026-10-12 04:13–04:3x，自动化触发执行）
+
+### 文献：新增 2 篇（CrossRef 当场核验）+ 1 个幻觉题名拦截
+
+- **Exploring the Potential of LLMs for Code Deobfuscation**——**DIMVA 2025**（10.1007/978-3-031-97620-9_15，CISPA+CEA List 九人，pp.267–286）。与 JsDeObsBench 并引，封住"反混淆器 LLM 化后 R97 是否过时"的质疑。检索给的作者名单不完整，CrossRef 实证 9 人。
+- **An Empirical Study on the Effects of Obfuscation on Static ML-based Malicious JavaScript Detectors**——**ISSTA 2023**（10.1145/3597926.3598146，华科六人，pp.1420–1432）。"混淆 vs 静态分析鲁棒性"脉络：检测器退化是脆弱性证据，R97 的 0 不安全折叠是第一个守门安全结论。
+- **拦截幻觉题名**："A Large-Scale Empirical Assessment of JavaScript Obfuscation" 经专门检索确认不存在（易与 Hammad/Garcia/Malek ICSE 2018 Android 测量研究混淆），未收录；已在全景录核验事件中记录。
+- 全景录条目 20、21 + 核验事件；笔记见 `literature/{llm-deobfuscation-dimva25, obfuscation-vs-ml-detectors-issta23}.md`。
+
+### 代码面：本周期无实施（按"宁可不改"原则）
+
+- P3 被 CDP 验证门槛挡住（无人值守不可重跑 host-attribution/主基准）；无其他过三问的候选。周期 1–4 累计代码改动仅 P2（已落地）与 P1-M3 配置（待在场补跑基准），符合"正向收益、宁缺毋滥"要求。
+
 ### 周期 5+ 建议
 
 1. 周期主题：防护与折叠策略相关（protection、bundling、capability 分析）或补洞周期——按章程周期表推进。
@@ -122,21 +135,27 @@
 
 ---
 
-## 周期 4（2026-10-12 04:13–04:3x，自动化触发执行）
+## 周期 6（2026-10-12 06:13–06:3x，自动化触发执行）
 
-### 文献：新增 2 篇（CrossRef 当场核验）+ 1 个幻觉题名拦截
+### 威胁模型方向检索：1 个候选核验后被过滤（描述漂移拦截，第 6 处）
 
-- **Exploring the Potential of LLMs for Code Deobfuscation**——**DIMVA 2025**（10.1007/978-3-031-97620-9_15，CISPA+CEA List 九人，pp.267–286）。与 JsDeObsBench 并引，封住"反混淆器 LLM 化后 R97 是否过时"的质疑。检索给的作者名单不完整，CrossRef 实证 9 人。
-- **An Empirical Study on the Effects of Obfuscation on Static ML-based Malicious JavaScript Detectors**——**ISSTA 2023**（10.1145/3597926.3598146，华科六人，pp.1420–1432）。"混淆 vs 静态分析鲁棒性"脉络：检测器退化是脆弱性证据，R97 的 0 不安全折叠是第一个守门安全结论。
-- **拦截幻觉题名**："A Large-Scale Empirical Assessment of JavaScript Obfuscation" 经专门检索确认不存在（易与 Hammad/Garcia/Malek ICSE 2018 Android 测量研究混淆），未收录；已在全景录核验事件中记录。
-- 全景录条目 20、21 + 核验事件；笔记见 `literature/{llm-deobfuscation-dimva25, obfuscation-vs-ml-detectors-issta23}.md`。
+- **Unleash the Simulacrum**（USENIX Security 2022，Soroush Karami 等，UIC）——官方页核实其实际主题为**浏览器扩展指纹的防御**（"Shifting Browser Realities for Robust Extension-Fingerprinting Prevention"），与周期 1 检索摘要的描述（"evasion-resilient browser honeybags / 分析环境对 JS 指纹的韧性"）**存在主题漂移**。经三问评估：与 R97 的"黑灰产反沙箱逃逸"威胁模型契合度不足，**不收录**，已在全景录核验事件留痕。
+- 本周期无新收录论文：现有条目 13–22 已覆盖写作所需的主要脉络，宁缺毋滥。
 
-### 代码面：本周期无实施（按"宁可不改"原则）
+### task_report.md 草稿完成（周期 8 定稿的底稿）
 
-- P3 被 CDP 验证门槛挡住（无人值守不可重跑 host-attribution/主基准）；无其他过三问的候选。周期 1–4 累计代码改动仅 P2（已落地）与 P1-M3 配置（待在场补跑基准），符合"正向收益、宁缺毋滥"要求。
+- 新增 `auto_iter_20261012_0117/task_report.md`：提交链、代码改动清单与验证状态、文献资产表（条目 13–22 + 6 处核验拦截实证）、**四条写作级论点链**（混淆器—反混淆器—守门链条 / TV 观测等价脉络 / 宿主能力谱系 / 混淆 vs 静态鲁棒性）、**待用户在场执行清单**（P1 补跑、P3 实施验证、M4 试验、UNVERIFIED 核对）、安全红线遵守声明。
 
-### 周期 5+ 建议
+### 结构修复：PROGRESS.md 章节顺序
 
-1. 周期主题：防护与折叠策略相关（protection、bundling、capability 分析）或补洞周期——按章程周期表推进。
-2. 文献面：候选还有 Herrera "Optimizing Away JavaScript Obfuscation"（arXiv:2009.09170，非顶会，三问评估后再定）与 Hammad ICSE 2018 Android 混淆测量（potency/cost 方法论，跨域类比慎引）。
-3. 周期 8 收尾：task_report.md 汇总全部提交、文献、提案与"待用户在场执行"清单（P1 基准补跑、P3 验证、83-bug 分类核对）。
+- 发现并修复前几轮追加编辑造成的章节错位（周期 5 记录被插到周期 4 之前、"周期 5+ 建议"重复两次）；现已恢复为周期 1→2→3→4→5→6 的时序结构。内容无丢失，仅顺序整理。
+
+### 代码面：本周期无实施（正确行为）
+
+- 无新过三问候选；任务启动以来代码改动仍为 2 处（均有验证背书）。
+
+### 周期 7 建议
+
+1. 文档质量收口：全景录目录索引与条目 13–22 的链接一致性核对、proposals 与 literature 交叉引用核对；低风险、纯任务文件夹与全景录目录层面。
+2. 若出现新的可无人值守验证代码项再实施；否则维持零改动。
+3. 周期 8：task_report.md 定稿 + 最终核对（提交链、测试状态、无未提交残留、删 LOCK）。
