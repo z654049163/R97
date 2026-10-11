@@ -65,6 +65,27 @@ const OBFUSCATION_CONFIGS = Object.freeze([
       deadCodeInjectionThreshold: 0.3,
     }),
   },
+  {
+    configId: "M3-string-array-rc4",
+    label: "链式混淆：+字符串RC4编码+索引位移+包装器",
+    options: Object.freeze({
+      stringArray: true,
+      stringArrayThreshold: 0.8,
+      stringArrayRotate: true,
+      stringArrayShuffle: true,
+      stringArrayEncoding: Object.freeze(["rc4"]),
+      stringArrayIndexShift: true,
+      stringArrayWrappersCount: 2,
+      stringArrayWrappersType: "function",
+      renameGlobals: false,
+      selfDefending: false,
+      unicodeEscapeSequence: false,
+      controlFlowFlattening: true,
+      controlFlowFlatteningThreshold: 0.7,
+      deadCodeInjection: true,
+      deadCodeInjectionThreshold: 0.3,
+    }),
+  },
 ]);
 
 const CORPUS_SOURCES = Object.freeze([
