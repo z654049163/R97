@@ -162,6 +162,9 @@ const wechatProbeReport = readJson(
 const memoryBenchmark = readJson(
   "datasets/memory-benchmark/memory-benchmark.json",
 );
+const obfuscationInvariance = readJson(
+  "datasets/obfuscation-invariance/obfuscation-invariance.json",
+);
 
 const metrics = {
   generatedAt: new Date().toISOString(),
@@ -183,6 +186,7 @@ const metrics = {
   annotationSampling,
   annotationAgreement,
   memoryBenchmark,
+  obfuscationInvariance,
 };
 
 writeFileSync(
@@ -432,6 +436,7 @@ const sources = [
   ["datasets/wechat-surface-consistency/report.json", workerSurface?.generatedAt],
   ["datasets/annotation-sample/sampling-summary.json", annotationSampling?.generatedAt],
   ["datasets/memory-benchmark/memory-benchmark.json", memoryBenchmark?.generatedAt],
+  ["datasets/obfuscation-invariance/obfuscation-invariance.json", obfuscationInvariance?.generatedAt],
 ];
 for (const [file, iso] of sources) {
   lines.push(`| \`${file}\` | ${beijing(iso)} |`);
@@ -483,6 +488,48 @@ if (memoryBenchmark?.scenarios?.length) {
 } else {
   lines.push(
     "内存基准产物缺失。生成命令：`node --expose-gc src/evaluation/memory-benchmark.mjs --per-entity-cap 5 --source-root \"<语料源目录>\"`；也可用 `R97_SOURCE_ROOT` 环境变量配合 `npm run eval:memory`。",
+    "",
+  );
+}
+
+lines.push("## 14. 混淆不变性基准", "");
+if (obfuscationInvariance?.summary?.totals) {
+  const oi = obfuscationInvariance;
+  const t = oi.summary.totals;
+  lines.push(
+    "用 `javascript-obfuscator` 对三生态真实语料文件做受控混淆（M1 = 字符串数组化、M2 = + 控制流平坦化 0.7 + 死代码注入 0.3，`renameGlobals: false` 保证实体可跨版本配对），同一文件的原始版与混淆版各跑一遍完整判定管线，按共享实体配对检查判定迁移与不安全折叠。",
+    "",
+  );
+  lines.push(
+    `总计：共享实体配对 ${num(t.shared)}，判定一致 ${num(t.consistent)}（${pct(t.consistencyRate)}），**混淆版不安全折叠 ${num(t.unsound)}**（实测差分口径）。`,
+    "",
+  );
+  lines.push(
+    "| 生态 | 配置 | 对比文件（混淆失败） | 共享配对 | 判定一致 | 一致性 | 不安全折叠 |",
+    "|---|---|---:|---:|---:|---:|---:|",
+  );
+  let crossDecision = 0;
+  let unknownToFold = 0;
+  for (const kind of oi.summary.perKind ?? []) {
+    for (const config of kind.configs ?? []) {
+      lines.push(
+        `| ${kind.label} | ${config.label} | ${num(config.comparedFiles)}（${num(config.obfuscationFailures)}） | ${num(config.sharedEntityCount)} | ${num(config.consistentEntityCount)} | ${pct(config.consistencyRate)} | ${num(config.totalUnsoundFolds)} |`,
+      );
+      crossDecision +=
+        (config.transitions?.["PROTECT->FOLD"] ?? 0) +
+        (config.transitions?.["FOLD->PROTECT"] ?? 0);
+      unknownToFold += config.transitions?.["UNKNOWN->FOLD"] ?? 0;
+    }
+  }
+  lines.push(
+    "",
+    `- 跨决策迁移（PROTECT↔FOLD）合计 ${num(crossDecision)}；UNKNOWN→FOLD 合计 ${num(unknownToFold)}，按产物报告口径均不落在实测差分实体上。`,
+    `- 来源：\`datasets/obfuscation-invariance/obfuscation-invariance.json\`（${beijing(oi.generatedAt)}）；重生成命令 \`npm run eval:obfuscation-invariance\`。`,
+    "",
+  );
+} else {
+  lines.push(
+    "混淆不变性产物缺失。生成命令：`npm run eval:obfuscation-invariance`。",
     "",
   );
 }
