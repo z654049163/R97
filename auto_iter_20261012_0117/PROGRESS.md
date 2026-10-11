@@ -61,3 +61,38 @@
 1. 周期主题：宿主运行时与混合应用方向检索（补充 BridgeScope 已覆盖部分）；可评估 P3 前置测量 `npm run eval:host-attribution`（纯本地、无 CDP 依赖，可无人值守跑）。
 2. P1 的 M3/M4 代码扩展可做，但按无人值守约束执行：只改代码 + npm test，不重跑完整基准、不写数字进报告。
 3. 检索方向补充：小程序 API 演进/基础库版本画像相关近作（对应 22.52% 版本画像缺口）；semantic patch derivation / 折叠安全性相关 PL 论文。
+
+---
+
+## 周期 3（2026-10-12 03:13–03:5x，自动化触发执行）
+
+### P3 前置测量分析（代码不动，符合硬性门槛第 5 条）
+
+- `host-attribution-report.mjs` 第 60 行确认调用 `collectBrowserObservations`（Edge CDP）→ **无人值守不可重跑**，改用既有产物（356 根 / 17 候选，2026-09-23）做分类：
+  - 微信侧 10 个：**全部不加**（第十五轮证伪：`wh`/`$gwx` 等为 wcc 编译产物文件内自赋值；`define`/`f`/`requireOnce` 应用自带；`__wxConfig` 强归属曾致 295 条错误放行）；
+  - Edge 侧 7 个（`FileReader`/`Image`/`SVGRect`/`Window`/`close`/`stop`/`WebKitCSSMatrix`）：实测仅 Edge 存在且全部为平台能力；建议实施集合 6 个核心规范 API + `WebKitCSSMatrix` 单独决定；
+  - 预期方向：UNKNOWN→PROTECT 的精度收益，不应产生新 FOLD；验证需 host-attribution + 主基准重跑（均依赖 CDP）→ **留待用户在场**。
+- 全部分类、规范归属与验证门槛已写入 `proposals/P3-浏览器宿主根集合扩展.md` 的"测量结果"节。
+
+### P1 受约束代码扩展（M3 配置）
+
+- `src/evaluation/obfuscation-invariance.mjs` 新增 `M3-string-array-rc4`（M2 + rc4 字符串编码 + 索引位移 + 2 层 function 包装器；不含 debugProtection/selfDefending）。
+- 选项名与取值域逐项对照本地 javascript-obfuscator@5.9.0 类型定义核实（`'rc4'`/`'function'` 均合法）；混淆器级冒烟通过（54ms 出码、`renameGlobals:false` 生效）；`npm test` 252 全绿。
+- **完整基准重跑待用户在场**（Edge CDP 依赖）；数字未验证前不得进任何报告。M4（debugProtection）未加，可行性需在场试验。
+- 提交：`facf6f5`。
+
+### 文献：新增 2 篇（CrossRef 当场核验）
+
+- **Characterizing and Detecting Bugs in WeChat Mini-Programs**——**ICSE 2022**（10.1145/3510003.3510114，中科院+腾讯 11 人，pp.363–375）。首个小程序 bug 实证研究，与 ASE 2020 工业实践互补的 Motivation 引证。
+- **A Measurement Study of WeChat Mini-Apps**——**SIGMETRICS 2021 / PACMPER 5(2)**（10.1145/3460081，OSU Zhiqiang Lin 组，pp.1–25）。生态规模与 API 调用密度的第三方量化，与 JsDeObsBench 同组成谱系。
+- 两篇"待读全文核对"点已用 UNVERIFIED 显式标注（83 bug 分类与环境嗅探统计）。全景录条目 18、19，笔记见 `literature/`。
+
+### 评测注意事项更新（本周期发现）
+
+- `npm run eval:host-attribution` **并非纯本地**（含 Edge CDP），已修正周期 2 的假设；无人值守期间任何依赖 CDP 的评测一律不跑。
+
+### 周期 4+ 建议
+
+1. 周期主题：度量与基准方向（Collberg potency/resilience 在 JS 的现代实测、混淆强度度量）+ LLM 辅助分析的第二轮（DIMVA 2025 Hajipour 等候选核验）。
+2. 代码面：本周期已完成 P2 + P1(代码部分)；P3 待在场验证。剩余可无人值守做的：提案级工作（如 P4 候选：host-attribution 产物时间戳与根数漂移的口径说明）——按"宁可不改"原则，若无充分论证不动代码。
+3. 周期 8 收尾任务不变：task_report.md 汇总。
