@@ -216,7 +216,7 @@ test("未声明就赋值的全局标出文件内定义来源（wcc 产物写法�
 
   const finding = findEntity(result, "$gwx");
   assert.ok(finding);
-  assert.equal(finding.bindingRef.bindingKind, "unresolved_global");
+  assert.equal(finding.bindingRef.bindingKind, "in_file_synthetic_global");
   assert.equal(
     finding.bindingRef.inFileDefinition,
     "top_level_assignment",

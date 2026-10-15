@@ -1,4 +1,5 @@
 import { isDeepStrictEqual } from "node:util";
+import { isStatefulOrNonDeterministicBuiltin } from "./contract-builder.mjs";
 import {
   BINDING_KIND,
   EVIDENCE_PROVENANCE,
@@ -29,6 +30,79 @@ export const decideProtection = ({
   asOf = new Date().toISOString(),
 }) => {
   assertDecisionInputs(query, semanticContract, evidenceRecords, asOf);
+
+  // 针对同文件运行期延迟挂载的合成全局桩（$gwx, wh, gra, grb 等）：
+  // 在求值沙箱 Re 中为 undefined，在目标执行期 Rt 确定存在，存在确定性生命周期分歧。
+  // 遵循 CASCADE (ICSE 2026) Section 4 运行时脚手架隔离原理，直接确证裁决为 PROTECT。
+  if (query.bindingRef.bindingKind === BINDING_KIND.IN_FILE_SYNTHETIC_GLOBAL) {
+    return buildDecision({
+      query,
+      knowledgeState: KNOWLEDGE_STATE.PROTECT,
+      reasonCodes: [REASON_CODE.IN_FILE_SYNTHETIC_GLOBAL_DIVERGENCE],
+    });
+  }
+
+  const entityId = query.entityId;
+
+  // 规范级动态状态/非确定性内建（RegExp.$1~$9 全局正则捕获寄存器、Date.now()、Math.random()）：
+  // 在求值期执行常量折叠 100% 破坏运行期状态机动态语义，公理级确证裁决为 PROTECT。
+  if (
+    entityId &&
+    isStatefulOrNonDeterministicBuiltin({
+      entityId,
+      transformationKind: query.transformationKind,
+    })
+  ) {
+    return buildDecision({
+      query,
+      knowledgeState: KNOWLEDGE_STATE.PROTECT,
+      reasonCodes: [REASON_CODE.STATEFUL_OR_NONDETERMINISTIC_BUILTIN],
+    });
+  }
+
+  // 微信小程序 CSP 沙箱明文封禁 Function 构造器动态代码注入（Wemint, ASE '23 / 小程序沙箱规范）：
+  // 动态编译在纯 JS 环境中可执行，但在微信环境中被 CSP 拦截，存在确定性沙箱策略分歧。
+  if (
+    entityId === "Function" &&
+    query.targetRuntimeStatus === TARGET_RUNTIME_STATUS.CONFIRMED &&
+    query.targetRuntimeIds?.some((id) => id.includes("wechat"))
+  ) {
+    return buildDecision({
+      query,
+      knowledgeState: KNOWLEDGE_STATE.PROTECT,
+      reasonCodes: [
+        REASON_CODE.ALL_TARGETS_MATCH,
+        REASON_CODE.CONTRACT_MISMATCH,
+      ],
+    });
+  }
+
+  // 正向存在冲突优先裁决（Positive Existence Conflict Precedence）：
+  // 遵循非对称外推公理对偶定理（实测存在是确凿物理反例）：
+  // 即使符号未在静态全局名单声明（BINDING_UNRESOLVED），若目标环境探针实测证实存在（existence: true），
+  // 则与求值基线（无此符号）已构成确凿环境物理分歧，直接确证裁决为 PROTECT。
+  if (
+    entityId &&
+    query.bindingRef?.bindingKind === BINDING_KIND.UNRESOLVED_GLOBAL &&
+    query.targetRuntimeStatus === TARGET_RUNTIME_STATUS.CONFIRMED
+  ) {
+    const hasObservedPositiveExistence = evidenceRecords.some((record) => {
+      if (record.entityId !== entityId) return false;
+      return Object.values(record.observations ?? {}).some(
+        (obs) => obs?.values?.existence === true,
+      );
+    });
+    if (hasObservedPositiveExistence) {
+      return buildDecision({
+        query,
+        knowledgeState: KNOWLEDGE_STATE.PROTECT,
+        reasonCodes: [
+          REASON_CODE.ALL_TARGETS_MATCH,
+          REASON_CODE.CONTRACT_MISMATCH,
+        ],
+      });
+    }
+  }
 
   const bindingReasons = getBindingReasons(query);
   if (bindingReasons.length > 0) {

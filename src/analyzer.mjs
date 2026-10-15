@@ -22,7 +22,9 @@ import {
   findOwningModule,
   isRequireCall,
   resolveBundleRequest,
+  unwrapInteropRequire,
 } from "./bundle-modules.mjs";
+import { BundleDependencyGraph } from "./bundle-pro-analyzer.mjs";
 
 const DEFAULT_RUNTIME_GLOBALS = new Set([
   ...LANGUAGE_BUILTIN_ROOTS,
@@ -61,6 +63,7 @@ export const analyzeSource = ({
   runtimeGlobals = [],
   sourceType = "auto",
   collectProvenanceDiagnostics = false,
+  analysisMode = "lite",
 }) => {
   if (typeof source !== "string") {
     throw new TypeError("source must be a string");
@@ -75,6 +78,10 @@ export const analyzeSource = ({
   const bundleModules = source.includes("define(")
     ? buildBundleModuleTable(ast).modules
     : new Map();
+  const proDependencyGraph =
+    analysisMode === "pro" && bundleModules.size > 0
+      ? new BundleDependencyGraph(bundleModules)
+      : null;
   const scopes = buildScopeTree(ast, bundleModules);
   const knownGlobals = new Set([
     ...DEFAULT_RUNTIME_GLOBALS,
@@ -89,6 +96,8 @@ export const analyzeSource = ({
     implicitGlobalAssignments: scopes.implicitGlobalAssignments,
     bundleModules,
     bundleExportCache: new Map(),
+    proDependencyGraph,
+    analysisMode,
     provenanceDiagnostics: collectProvenanceDiagnostics ? [] : null,
     consumedNodes: new Set(),
     findings: [],
@@ -143,31 +152,34 @@ const parseSource = (source, sourceType) => {
 };
 
 const getRequiredBuiltinPath = (node) => {
+  const unwrapped = unwrapInteropRequire(node);
   if (
-    node?.type !== "CallExpression" ||
-    node.callee.type !== "Identifier" ||
-    node.callee.name !== "require" ||
-    node.arguments.length !== 1 ||
-    node.arguments[0].type !== "Literal" ||
-    typeof node.arguments[0].value !== "string"
+    unwrapped?.type !== "CallExpression" ||
+    unwrapped.callee.type !== "Identifier" ||
+    unwrapped.callee.name !== "require" ||
+    unwrapped.arguments.length !== 1 ||
+    unwrapped.arguments[0].type !== "Literal" ||
+    typeof unwrapped.arguments[0].value !== "string"
   ) {
     return null;
   }
-  return normalizeNodeBuiltinSpecifier(node.arguments[0].value);
+  return normalizeNodeBuiltinSpecifier(unwrapped.arguments[0].value);
 };
 
 /**
  * `const m = require("./x.js")` 的请求是否命中同文件的 bundle 模块表。
+ * 支持通过 unwrapInteropRequire 解包 Babel 前置助手函数。
  *
  * 命中返回目标模块路径；外部依赖（`wx-server-sdk`、Node 内建）返回 null，
  * 保持原有行为。Node 内建由 getRequiredBuiltinPath 处理，优先级更高。
  */
 const bundleModulePathForRequire = (initNode, bundleModules) => {
-  if (bundleModules.size === 0 || !isRequireCall(initNode)) {
+  const unwrapped = unwrapInteropRequire(initNode);
+  if (bundleModules.size === 0 || !isRequireCall(unwrapped)) {
     return null;
   }
-  const owner = findOwningModule(initNode, { modules: bundleModules });
-  const target = resolveBundleRequest(initNode.arguments[0].value, owner);
+  const owner = findOwningModule(unwrapped, { modules: bundleModules });
+  const target = resolveBundleRequest(unwrapped.arguments[0].value, owner);
   return bundleModules.has(target) ? target : null;
 };
 
@@ -353,6 +365,7 @@ const buildScopeTree = (ast, bundleModules = new Map()) => {
       markAssignedBinding(node.left, currentScope);
       recordImplicitGlobalAssignment(
         node.left,
+        node.right,
         currentScope,
         implicitGlobalAssignments,
       );
@@ -538,20 +551,36 @@ const markAssignedBinding = (target, scope) => {
   }
 };
 
-const recordImplicitGlobalAssignment = (target, scope, assignments) => {
-  if (!target || target.type !== "Identifier") {
+const recordImplicitGlobalAssignment = (target, value, scope, assignments) => {
+  let targetName = null;
+  if (target?.type === "Identifier") {
+    if (!scope.resolve(target.name)) {
+      targetName = target.name;
+    }
+  } else if (
+    target?.type === "MemberExpression" &&
+    !target.computed &&
+    target.property?.type === "Identifier" &&
+    target.object?.type === "Identifier" &&
+    (target.object.name === "globalThis" || target.object.name === "window")
+  ) {
+    targetName = target.property.name;
+  }
+  if (!targetName) {
     return;
   }
-  if (scope.resolve(target.name)) {
-    return;
-  }
-  const existing = assignments.get(target.name);
+  const existing = assignments.get(targetName);
   const inFunctionBody = scope.functionScope?.kind !== "program";
   if (!existing) {
-    assignments.set(target.name, { topLevel: !inFunctionBody });
+    assignments.set(targetName, {
+      topLevel: !inFunctionBody,
+      count: 1,
+      rightNode: value,
+    });
     return;
   }
   existing.topLevel = existing.topLevel || !inFunctionBody;
+  existing.count += 1;
 };
 
 const collectFindings = (node, context) => {
@@ -824,6 +853,14 @@ const analyzeExportProvenance = (node, context, seen, depth) => {
         recordUnknown(`bundle_ref:${binding.bundleModulePath}`);
         return;
       }
+      // 形参与 arguments 是函数局部绑定：它们没有宿主来源。此前会借
+      // 「declaration 是函数节点」再整段复扫函数体，使嵌套助手链的深度
+      // 翻倍消耗并提前触发 depth_limit，Babel 助手（toPropertyKey 等）
+      // 因此被误判为 UNKNOWN。跳过它们不改变判定语义：函数体在进入
+      // 函数节点时已经被扫描。
+      if (binding.kind === "parameter" || current.name === "arguments") {
+        return;
+      }
       if (binding.aliasNode && !binding.mutated) {
         visit(binding.aliasNode, currentDepth + 1);
         return;
@@ -917,7 +954,34 @@ const resolveBundleExport = (modulePath, exportName, context, depth, seen) => {
     // 模块整体导出是对象字面量：按属性名从对象里取。
     valueNode = getObjectLiteralProperty(exports.defaultExport, exportName);
   }
-  if (!valueNode) return null;
+  if (!valueNode) {
+    const moduleEntry = context.bundleModules?.get(modulePath);
+    const summary = moduleEntry?.closureSummary;
+    if (summary?.isHostOrthogonal) {
+      return {
+        kind: BINDING_KIND.LOCAL,
+        origin: `bundle-export:${modulePath}.${exportName}`,
+        path: `${modulePath}.${exportName}`,
+        root: null,
+        aliasChain: [],
+        mutationStatus: "stable",
+        scopeId: null,
+      };
+    }
+    if (summary?.hasHostGlobal && summary.hostRoots.length > 0) {
+      const primaryRoot = summary.hostRoots[0];
+      return {
+        kind: BINDING_KIND.RUNTIME_GLOBAL,
+        origin: primaryRoot,
+        path: `${primaryRoot}.${exportName}`,
+        root: primaryRoot,
+        aliasChain: [primaryRoot],
+        mutationStatus: "stable",
+        scopeId: null,
+      };
+    }
+    return null;
+  }
   const verdict = analyzeExportProvenance(valueNode, context, seen, depth);
   if (verdict.kind === "pure") {
     return {
@@ -937,6 +1001,31 @@ const resolveBundleExport = (modulePath, exportName, context, depth, seen) => {
       path: verdict.path,
       root: verdict.root,
       aliasChain: [verdict.root],
+      mutationStatus: "stable",
+      scopeId: null,
+    };
+  }
+  const moduleEntry = context.bundleModules?.get(modulePath);
+  const summary = moduleEntry?.closureSummary;
+  if (summary?.isHostOrthogonal) {
+    return {
+      kind: BINDING_KIND.LOCAL,
+      origin: `bundle-export:${modulePath}.${exportName}`,
+      path: `${modulePath}.${exportName}`,
+      root: null,
+      aliasChain: [],
+      mutationStatus: "stable",
+      scopeId: null,
+    };
+  }
+  if (summary?.hasHostGlobal && summary.hostRoots.length > 0) {
+    const primaryRoot = summary.hostRoots[0];
+    return {
+      kind: BINDING_KIND.RUNTIME_GLOBAL,
+      origin: primaryRoot,
+      path: `${primaryRoot}.${exportName}`,
+      root: primaryRoot,
+      aliasChain: [primaryRoot],
       mutationStatus: "stable",
       scopeId: null,
     };
@@ -967,6 +1056,49 @@ const resolveExpressionPath = (node, context, resolving = new Set()) => {
     const scope = context.scopeByNode.get(node);
     const binding = scope?.resolve(node.name);
     if (!binding) {
+      // 检查当前文件内是否有无声明隐式全局赋值 (Write-Once 别名提升与合成全局分类)
+      const implicitAssignment = context.implicitGlobalAssignments?.get(node.name);
+      if (implicitAssignment) {
+        // 1. 宿主别名提升 (方案一：处理 $gwn = console.warn; $gwl = console.log;)
+        if (
+          implicitAssignment.count === 1 &&
+          implicitAssignment.rightNode?.type === "MemberExpression" &&
+          !implicitAssignment.rightNode.computed &&
+          implicitAssignment.rightNode.object?.type === "Identifier" &&
+          HOST_GLOBAL_SET.has(implicitAssignment.rightNode.object.name)
+        ) {
+          const hostRoot = implicitAssignment.rightNode.object.name;
+          const hostProp = implicitAssignment.rightNode.property?.name;
+          const fullPath = hostProp ? `${hostRoot}.${hostProp}` : hostRoot;
+          return {
+            kind: BINDING_KIND.RUNTIME_GLOBAL,
+            origin: `implicit_alias:${fullPath}`,
+            path: fullPath,
+            root: hostRoot,
+            aliasChain: [node.name, fullPath],
+            mutationStatus: "stable",
+            scopeId: scopeId(scope),
+            inFileDefinition: implicitAssignment.topLevel
+              ? "top_level_assignment"
+              : "function_body_assignment",
+          };
+        }
+
+        // 2. 编译器延迟挂载桩 (方案二：处理 $gwx, wh, gra, grb 等 wcc 合成全局)
+        return {
+          kind: BINDING_KIND.IN_FILE_SYNTHETIC_GLOBAL,
+          origin: `in_file_synthetic:${node.name}`,
+          path: node.name,
+          root: node.name,
+          aliasChain: [node.name],
+          mutationStatus: "stable",
+          scopeId: scopeId(scope),
+          inFileDefinition: implicitAssignment.topLevel
+            ? "top_level_assignment"
+            : "function_body_assignment",
+        };
+      }
+
       const kind = context.knownGlobals.has(node.name)
         ? BINDING_KIND.RUNTIME_GLOBAL
         : BINDING_KIND.UNRESOLVED_GLOBAL;
@@ -982,6 +1114,38 @@ const resolveExpressionPath = (node, context, resolving = new Set()) => {
     }
 
     if (binding.bundleModulePath) {
+      // Pro 模式：先走包级依赖图（bundle-pro-analyzer），支持
+      // require→require→require 的多层模块导出链深穿透与函数体来源扫描。
+      if (context.analysisMode === "pro" && context.proDependencyGraph) {
+        const proResolved = context.proDependencyGraph.resolveExportDeep(
+          binding.bundleModulePath,
+          "default",
+          context,
+        );
+        if (proResolved.kind === "pure") {
+          return {
+            kind: BINDING_KIND.LOCAL,
+            origin: `bundle-pro-default:${binding.bundleModulePath}`,
+            path: `${binding.bundleModulePath}.default`,
+            root: null,
+            aliasChain: [node.name],
+            mutationStatus: "stable",
+            scopeId: scopeId(binding.scope),
+          };
+        }
+        if (proResolved.kind === "host") {
+          return {
+            kind: BINDING_KIND.RUNTIME_GLOBAL,
+            origin: proResolved.root,
+            path: proResolved.path,
+            root: proResolved.root,
+            bundleModulePath: binding.bundleModulePath,
+            aliasChain: [node.name, proResolved.root],
+            mutationStatus: "stable",
+            scopeId: scopeId(binding.scope),
+          };
+        }
+      }
       // 模块整体导出：`module.exports = <expr>` 时，require() 的返回值就是该表达式。
       const moduleExports = bundleExportsFor(binding.bundleModulePath, context);
       if (moduleExports?.defaultExport && !moduleExports.dynamic) {
@@ -1120,6 +1284,36 @@ const resolveExpressionPath = (node, context, resolving = new Set()) => {
     // 解析不出来（外部依赖、动态导出、深度超限）就保持原来的拼接行为，
     // 让判定停在 UNKNOWN，不做猜测。
     if (object.bundleModulePath) {
+      if (context.analysisMode === "pro" && context.proDependencyGraph) {
+        const proResolved = context.proDependencyGraph.resolveExportDeep(
+          object.bundleModulePath,
+          property,
+          context,
+        );
+        if (proResolved.kind === "pure") {
+          return {
+            kind: BINDING_KIND.LOCAL,
+            origin: `bundle-pro-export:${object.bundleModulePath}.${property}`,
+            path: `${object.bundleModulePath}.${property}`,
+            root: null,
+            aliasChain: [...object.aliasChain, property],
+            mutationStatus: "stable",
+            scopeId: null,
+          };
+        }
+        if (proResolved.kind === "host") {
+          return {
+            kind: BINDING_KIND.RUNTIME_GLOBAL,
+            origin: proResolved.root,
+            path: proResolved.path,
+            root: proResolved.root,
+            aliasChain: [...object.aliasChain, property, proResolved.root],
+            mutationStatus: "stable",
+            scopeId: null,
+          };
+        }
+      }
+
       const resolved = resolveBundleExport(
         object.bundleModulePath,
         property,
@@ -1187,7 +1381,9 @@ const isR97Relevant = (resolution, context) => {
   if (
     resolution.kind === BINDING_KIND.RUNTIME_GLOBAL ||
     resolution.kind === BINDING_KIND.MODULE_IMPORT ||
-    resolution.kind === BINDING_KIND.UNRESOLVED_GLOBAL
+    resolution.kind === BINDING_KIND.UNRESOLVED_GLOBAL ||
+    resolution.kind === BINDING_KIND.IN_FILE_SYNTHETIC_GLOBAL ||
+    Boolean(resolution.origin && resolution.origin.startsWith("bundle-pro-export:"))
   ) {
     return true;
   }

@@ -1,0 +1,938 @@
+{
+  "corpusPath": "E:\\读论文\\R97\\datasets\\real-miniapp-full\\real-miniapp-candidates.jsonl",
+  "sampling": {
+    "mode": "per-entity-cap",
+    "perEntityCap": 5
+  },
+  "rawRecordCount": 3900,
+  "deduplicatedCount": 3895,
+  "sampleCount": 3669,
+  "entityView": {
+    "total": 1157,
+    "fold": 250,
+    "protect": 363,
+    "unknown": 544,
+    "entitiesWithUnsafeFold": 0,
+    "foldRate": 0.21607605877268798,
+    "protectRate": 0.31374243733794294,
+    "unknownRate": 0.4701815038893691,
+    "decidableRate": 0.5298184961106309
+  },
+  "excludedFromEvaluation": {
+    "recordCount": 5,
+    "entityIds": [
+      "default",
+      "default.hex_sha1"
+    ],
+    "examples": [
+      {
+        "entityId": "default",
+        "transformationKind": "CONST_EVAL",
+        "bindingKind": "module_import"
+      },
+      {
+        "entityId": "default",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "module_import"
+      },
+      {
+        "entityId": "default",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "module_import"
+      },
+      {
+        "entityId": "default",
+        "transformationKind": "CONST_EVAL",
+        "bindingKind": "module_import"
+      },
+      {
+        "entityId": "default.hex_sha1",
+        "transformationKind": "CALL_EVAL",
+        "bindingKind": "module_import"
+      }
+    ]
+  },
+  "fileLevelAnalysis": {
+    "enabled": true,
+    "sourceRoot": "E:\\复现\\sample_collector\\可用于实验的干净源码包",
+    "filesAnalyzed": 467,
+    "unmatchedDecisionCount": 226
+  },
+  "independentReference": {
+    "description": "判卷探针 r97-oracle-probe 在 e2-node-24.21.0 / e5-edge-headless / e4-wechat-real 上的直接读取",
+    "oracleRuntimeIds": [
+      "e2-node-24.21.0",
+      "e5-edge-headless",
+      "e4-wechat-real"
+    ],
+    "oracleInScope": true,
+    "targetRuntimeIds": [
+      "e1-ecmascript",
+      "e2-node-24.21.0",
+      "e5-edge-headless",
+      "e4-wechat-real"
+    ],
+    "provenance": {
+      "runtimes": [
+        {
+          "runtimeId": "e1-ecmascript",
+          "probeImplementation": "r97-oracle-probe（隔离 vm，非宿主）",
+          "isHost": false,
+          "observedEntityCount": 1157,
+          "collectedAt": null,
+          "versionProfile": null
+        },
+        {
+          "runtimeId": "e2-node-24.21.0",
+          "probeImplementation": "r97-oracle-probe",
+          "isHost": true,
+          "observedEntityCount": 1157,
+          "collectedAt": null,
+          "versionProfile": "v24.21.0"
+        },
+        {
+          "runtimeId": "e5-edge-headless",
+          "probeImplementation": "r97-oracle-probe",
+          "isHost": true,
+          "observedEntityCount": 1157,
+          "collectedAt": null,
+          "versionProfile": null
+        },
+        {
+          "runtimeId": "e4-wechat-real",
+          "probeImplementation": "r97-oracle-probe",
+          "isHost": true,
+          "observedEntityCount": 1147,
+          "collectedAt": "2026-09-24T08:09:33.545Z",
+          "versionProfile": "3.17.3",
+          "platform": "devtools",
+          "snapshot": true
+        }
+      ]
+    },
+    "excluded": [
+      {
+        "root": "Function",
+        "reason": "AppService 上读取 Function 会栈溢出并卡死会话，该根节点不参与微信侧判卷",
+        "entityCount": 10,
+        "entityIds": [
+          "Function",
+          "Function.prototype",
+          "Function.prototype.bind.apply",
+          "Function.prototype.bind",
+          "Function.bind.apply",
+          "Function.bind",
+          "Function.toString.call",
+          "Function.toString",
+          "Function.call.apply",
+          "Function.call"
+        ]
+      }
+    ],
+    "entityCount": 1157,
+    "differentialEntityCount": 208,
+    "differentialRecordCount": 782,
+    "differentialEntities": [
+      "$gwx",
+      "console.warn",
+      "$gwn",
+      "$gwl",
+      "console.log",
+      "wh",
+      "wh.hn",
+      "wh.rv",
+      "wh.nh",
+      "console.error",
+      "gra",
+      "grb",
+      "define",
+      "App",
+      "wx.request",
+      "require",
+      "getApp",
+      "Page",
+      "wx.openLocation",
+      "wx.downloadFile"
+    ],
+    "differentialRoots": {
+      "wx": 128,
+      "Math": 15,
+      "console": 7,
+      "wh": 4,
+      "process": 4,
+      "Buffer": 4,
+      "__wxConfig": 2,
+      "Uint8Array": 2,
+      "Date": 2,
+      "$gwx": 1,
+      "$gwn": 1,
+      "$gwl": 1,
+      "gra": 1,
+      "grb": 1,
+      "define": 1,
+      "App": 1,
+      "require": 1,
+      "getApp": 1,
+      "Page": 1,
+      "setTimeout": 1,
+      "clearTimeout": 1,
+      "setInterval": 1,
+      "clearInterval": 1,
+      "MessageChannel": 1,
+      "WeixinJSBridge": 1,
+      "requireOnce": 1,
+      "getCurrentPages": 1,
+      "setImmediate": 1,
+      "atob": 1,
+      "btoa": 1,
+      "TextDecoder": 1,
+      "TextEncoder": 1,
+      "SVGRect": 1,
+      "WebKitCSSMatrix": 1,
+      "Image": 1,
+      "f": 1,
+      "Window": 1,
+      "__dirname": 1,
+      "close": 1,
+      "Crypto": 1,
+      "eval": 1,
+      "FileReader": 1,
+      "window": 1,
+      "self": 1,
+      "crypto": 1,
+      "Blob": 1,
+      "stop": 1,
+      "requestAnimationFrame": 1,
+      "globalThis": 1
+    },
+    "allowedFold": 1180,
+    "allowedFoldOnDifferentialEntity": 0,
+    "allowedFoldOnDifferentialExamples": []
+  },
+  "evidenceAvailability": {
+    "language": true,
+    "node": true,
+    "wechat": true,
+    "browser": true
+  },
+  "runtimeEvidence": {
+    "wechat": {
+      "runtimeId": "e4-wechat-real",
+      "observedEntityCount": 448,
+      "sdkVersion": "3.17.3"
+    },
+    "browser": {
+      "runtimeId": "e5-edge-headless",
+      "observedEntityCount": 1063,
+      "browserVersion": {
+        "product": "Edg/150.0.4078.83",
+        "revision": "@7f302606e52ab615d52e1a0ab89ca415c8c843a3",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/150.0.0.0 Safari/537.36 Edg/150.0.0.0",
+        "protocolVersion": "1.3"
+      }
+    }
+  },
+  "byExpected": {
+    "PROTECT": 473,
+    "UNKNOWN": 2012,
+    "FOLD": 1184
+  },
+  "byActual": {
+    "PROTECT": 1330,
+    "FOLD": 1180,
+    "UNKNOWN": 1159
+  },
+  "byTransformation": {
+    "CONST_EVAL": 1957,
+    "CALL_EVAL": 1598,
+    "BRANCH_PRUNE": 114
+  },
+  "byReasonCode": {
+    "IN_FILE_SYNTHETIC_GLOBAL_DIVERGENCE": 572,
+    "ALL_TARGETS_MATCH": 2152,
+    "CONTRACT_MISMATCH": 758,
+    "EVIDENCE_MISSING": 889,
+    "CONTRACT_COVERAGE_MISSING": 650,
+    "BINDING_UNRESOLVED": 295
+  },
+  "byUncertaintySource": {
+    "binding": 295,
+    "runtime": 840,
+    "behavior": 24
+  },
+  "byTargetRuntimeStatus": {
+    "confirmed": 3669
+  },
+  "targetRuntimeImpact": {
+    "confirmed": {
+      "sampleCount": 3669,
+      "unsafeFold": 0,
+      "overProtection": 4,
+      "overProtectionRate": 0.0033783783783783786,
+      "blockedForUnconfirmedTarget": 0
+    }
+  },
+  "examples": [
+    {
+      "sampleId": "367dd3fa3aabaf79e62d82fb",
+      "project": "35d307ca",
+      "file": "35d307ca\\app-service.js",
+      "entityId": "undefined",
+      "transformationKind": "CONST_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "generatedSource": "undefined;",
+      "expected": "FOLD",
+      "actualState": "FOLD",
+      "actualAction": "ALLOW_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH"
+      ]
+    },
+    {
+      "sampleId": "841d086dd14d83104a3fab76",
+      "project": "KK维语翻译_65eb9713",
+      "file": "KK维语翻译_65eb9713\\app-service.js",
+      "entityId": "undefined",
+      "transformationKind": "CONST_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "generatedSource": "undefined;",
+      "expected": "FOLD",
+      "actualState": "FOLD",
+      "actualAction": "ALLOW_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH"
+      ]
+    },
+    {
+      "sampleId": "81a8662dcfd2226b91ac288c",
+      "project": "小剧场_b8d846d4",
+      "file": "小剧场_b8d846d4\\app-service.js",
+      "entityId": "undefined",
+      "transformationKind": "BRANCH_PRUNE",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "generatedSource": "if (undefined) {}",
+      "expected": "FOLD",
+      "actualState": "FOLD",
+      "actualAction": "ALLOW_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH"
+      ]
+    },
+    {
+      "sampleId": "390c77988f7d8f129203723e",
+      "project": "我的_c8deeb89",
+      "file": "我的_c8deeb89\\app-service.js",
+      "entityId": "undefined",
+      "transformationKind": "BRANCH_PRUNE",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "generatedSource": "if (undefined) {}",
+      "expected": "FOLD",
+      "actualState": "FOLD",
+      "actualAction": "ALLOW_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH"
+      ]
+    },
+    {
+      "sampleId": "7ebbf39ca03c0a6c87f3b70f",
+      "project": "uni-app_6597f70e",
+      "file": "uni-app_6597f70e\\app-service.js",
+      "entityId": "undefined",
+      "transformationKind": "CONST_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "generatedSource": "undefined;",
+      "expected": "FOLD",
+      "actualState": "FOLD",
+      "actualAction": "ALLOW_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH"
+      ]
+    },
+    {
+      "sampleId": "3e71cc911d8988d33abdcb95",
+      "project": "喝酒摇骰子_21a80905",
+      "file": "喝酒摇骰子_21a80905\\app-service.js",
+      "entityId": "JSON.stringify",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "generatedSource": "JSON.stringify();",
+      "expected": "FOLD",
+      "actualState": "FOLD",
+      "actualAction": "ALLOW_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH"
+      ]
+    },
+    {
+      "sampleId": "c1f8aa14dabfa0162c4bd69e",
+      "project": "透明头像小助手_a2856cae",
+      "file": "透明头像小助手_a2856cae\\app-service.js",
+      "entityId": "JSON.stringify",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "generatedSource": "JSON.stringify();",
+      "expected": "FOLD",
+      "actualState": "FOLD",
+      "actualAction": "ALLOW_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH"
+      ]
+    },
+    {
+      "sampleId": "b68fea6a4c68c469710f499a",
+      "project": "霍兰德职业性格测试_2f55af3e",
+      "file": "霍兰德职业性格测试_2f55af3e\\app-service.js",
+      "entityId": "JSON.stringify",
+      "transformationKind": "BRANCH_PRUNE",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "generatedSource": "if (JSON.stringify) {}",
+      "expected": "FOLD",
+      "actualState": "FOLD",
+      "actualAction": "ALLOW_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH"
+      ]
+    },
+    {
+      "sampleId": "078c0811877bd4f5af97f014",
+      "project": "天工音乐AI写歌_e60b382d",
+      "file": "天工音乐AI写歌_e60b382d\\app-service.js",
+      "entityId": "JSON.stringify",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "generatedSource": "JSON.stringify();",
+      "expected": "FOLD",
+      "actualState": "FOLD",
+      "actualAction": "ALLOW_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH"
+      ]
+    },
+    {
+      "sampleId": "2df992d589f7c8a10468a94f",
+      "project": "创意平台提供技术支持_4469d358",
+      "file": "创意平台提供技术支持_4469d358\\app-service.js",
+      "entityId": "JSON.stringify",
+      "transformationKind": "BRANCH_PRUNE",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "generatedSource": "if (JSON.stringify) {}",
+      "expected": "FOLD",
+      "actualState": "FOLD",
+      "actualAction": "ALLOW_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH"
+      ]
+    },
+    {
+      "sampleId": "759d451b26606a4597b66170",
+      "project": "a4e739b4",
+      "file": "a4e739b4\\app-service.js",
+      "entityId": "$gwx",
+      "transformationKind": "CONST_EVAL",
+      "bindingKind": "unresolved_global",
+      "resolutionStatus": "unresolved",
+      "generatedSource": "$gwx;",
+      "expected": "PROTECT",
+      "actualState": "PROTECT",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "IN_FILE_SYNTHETIC_GLOBAL_DIVERGENCE"
+      ]
+    },
+    {
+      "sampleId": "04c2e21b4d0578058206d1e0",
+      "project": "中途国际_b77dbc70",
+      "file": "中途国际_b77dbc70\\app-service.js",
+      "entityId": "console.warn",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "generatedSource": "console.warn();",
+      "expected": "PROTECT",
+      "actualState": "PROTECT",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ]
+    },
+    {
+      "sampleId": "d6123a385760eed18755f48e",
+      "project": "858e14b1",
+      "file": "858e14b1\\app-service.js",
+      "entityId": "console.warn",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "generatedSource": "console.warn();",
+      "expected": "PROTECT",
+      "actualState": "PROTECT",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ]
+    },
+    {
+      "sampleId": "0d27f9ec79a609d1695cfe99",
+      "project": "9da14543",
+      "file": "9da14543\\app-service.js",
+      "entityId": "console.warn",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "generatedSource": "console.warn();",
+      "expected": "PROTECT",
+      "actualState": "PROTECT",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ]
+    },
+    {
+      "sampleId": "a1339977cc47b57563ecea3a",
+      "project": "70f40db0",
+      "file": "70f40db0\\app-service.js",
+      "entityId": "console.warn",
+      "transformationKind": "CONST_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "generatedSource": "console.warn;",
+      "expected": "PROTECT",
+      "actualState": "PROTECT",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ]
+    },
+    {
+      "sampleId": "2ee1c3de61fa2e8e217d4d28",
+      "project": "君雅物业水电管理系统_fb8f438f",
+      "file": "君雅物业水电管理系统_fb8f438f\\app-service.js",
+      "entityId": "console.warn",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "runtime_global",
+      "resolutionStatus": "resolved",
+      "generatedSource": "console.warn();",
+      "expected": "PROTECT",
+      "actualState": "PROTECT",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ]
+    },
+    {
+      "sampleId": "b2fcec27149152977369da52",
+      "project": "南台箱包缴费系统_0fa67583",
+      "file": "南台箱包缴费系统_0fa67583\\app-service.js",
+      "entityId": "$gwn",
+      "transformationKind": "CONST_EVAL",
+      "bindingKind": "unresolved_global",
+      "resolutionStatus": "unresolved",
+      "generatedSource": "$gwn;",
+      "expected": "PROTECT",
+      "actualState": "PROTECT",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ]
+    },
+    {
+      "sampleId": "5f259652a71cf4be3f8dcc44",
+      "project": "像素风_11b15071",
+      "file": "像素风_11b15071\\app-service.js",
+      "entityId": "$gwn",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "unresolved_global",
+      "resolutionStatus": "unresolved",
+      "generatedSource": "$gwn();",
+      "expected": "PROTECT",
+      "actualState": "PROTECT",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ]
+    },
+    {
+      "sampleId": "8283f2d14e086669ddc6576e",
+      "project": "智慧农业病虫害识别_8fbaa990",
+      "file": "智慧农业病虫害识别_8fbaa990\\app-service.js",
+      "entityId": "$gwn",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "unresolved_global",
+      "resolutionStatus": "unresolved",
+      "generatedSource": "$gwn();",
+      "expected": "PROTECT",
+      "actualState": "PROTECT",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ]
+    },
+    {
+      "sampleId": "fad57beff2efe6ca43a8c3bd",
+      "project": "答题帮手_daac5cae",
+      "file": "答题帮手_daac5cae\\app-service.js",
+      "entityId": "$gwn",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "unresolved_global",
+      "resolutionStatus": "unresolved",
+      "generatedSource": "$gwn();",
+      "expected": "PROTECT",
+      "actualState": "PROTECT",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "ALL_TARGETS_MATCH",
+        "CONTRACT_MISMATCH"
+      ]
+    },
+    {
+      "sampleId": "a54e08761edcda519f43fc01",
+      "project": "uView UI_787d326a",
+      "file": "uView UI_787d326a\\app-service.js",
+      "entityId": "$gwx",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "unresolved_global",
+      "resolutionStatus": "unresolved",
+      "generatedSource": "$gwx();",
+      "expected": "UNKNOWN",
+      "actualState": "PROTECT",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "IN_FILE_SYNTHETIC_GLOBAL_DIVERGENCE"
+      ]
+    },
+    {
+      "sampleId": "447475d4be8704181f4845c0",
+      "project": "医学常用计算_cd717e09",
+      "file": "医学常用计算_cd717e09\\app-service.js",
+      "entityId": "$gwx",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "unresolved_global",
+      "resolutionStatus": "unresolved",
+      "generatedSource": "$gwx();",
+      "expected": "UNKNOWN",
+      "actualState": "PROTECT",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "IN_FILE_SYNTHETIC_GLOBAL_DIVERGENCE"
+      ]
+    },
+    {
+      "sampleId": "a60529e81423045154946d61",
+      "project": "维尼来了_63394f0f",
+      "file": "维尼来了_63394f0f\\app-service.js",
+      "entityId": "$gwx",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "unresolved_global",
+      "resolutionStatus": "unresolved",
+      "generatedSource": "$gwx();",
+      "expected": "UNKNOWN",
+      "actualState": "PROTECT",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "IN_FILE_SYNTHETIC_GLOBAL_DIVERGENCE"
+      ]
+    },
+    {
+      "sampleId": "fa8964a56ef7c238e5999bbb",
+      "project": "uni-app_c354d0bb",
+      "file": "uni-app_c354d0bb\\app-service.js",
+      "entityId": "$gwx",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "unresolved_global",
+      "resolutionStatus": "unresolved",
+      "generatedSource": "$gwx();",
+      "expected": "UNKNOWN",
+      "actualState": "PROTECT",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "IN_FILE_SYNTHETIC_GLOBAL_DIVERGENCE"
+      ]
+    },
+    {
+      "sampleId": "4fa68b5528557147274784c6",
+      "project": "Focus Bloom_00951cdc",
+      "file": "Focus Bloom_00951cdc\\app-service.js",
+      "entityId": "wh.hn",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "unresolved_global",
+      "resolutionStatus": "unresolved",
+      "generatedSource": "wh.hn();",
+      "expected": "UNKNOWN",
+      "actualState": "PROTECT",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "IN_FILE_SYNTHETIC_GLOBAL_DIVERGENCE"
+      ]
+    },
+    {
+      "sampleId": "66c988a41c0b2ff5aa770d5e",
+      "project": "家庭WIFI测试_a0ff52e3",
+      "file": "家庭WIFI测试_a0ff52e3\\app-service.js",
+      "entityId": "wh.hn",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "unresolved_global",
+      "resolutionStatus": "unresolved",
+      "generatedSource": "wh.hn();",
+      "expected": "UNKNOWN",
+      "actualState": "PROTECT",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "IN_FILE_SYNTHETIC_GLOBAL_DIVERGENCE"
+      ]
+    },
+    {
+      "sampleId": "10908b5ca3d7119d878e6de4",
+      "project": "中国移动自动充话费_d93431eb",
+      "file": "中国移动自动充话费_d93431eb\\app-service.js",
+      "entityId": "wh.hn",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "unresolved_global",
+      "resolutionStatus": "unresolved",
+      "generatedSource": "wh.hn();",
+      "expected": "UNKNOWN",
+      "actualState": "PROTECT",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "IN_FILE_SYNTHETIC_GLOBAL_DIVERGENCE"
+      ]
+    },
+    {
+      "sampleId": "656ad3f77825d019e56efa92",
+      "project": "a2437ff0",
+      "file": "a2437ff0\\app-service.js",
+      "entityId": "wh.hn",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "unresolved_global",
+      "resolutionStatus": "unresolved",
+      "generatedSource": "wh.hn();",
+      "expected": "UNKNOWN",
+      "actualState": "PROTECT",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "IN_FILE_SYNTHETIC_GLOBAL_DIVERGENCE"
+      ]
+    },
+    {
+      "sampleId": "76c831f4c919915549941759",
+      "project": "作文批改助理_3f6853c9",
+      "file": "作文批改助理_3f6853c9\\app-service.js",
+      "entityId": "wh.hn",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "unresolved_global",
+      "resolutionStatus": "unresolved",
+      "generatedSource": "wh.hn();",
+      "expected": "UNKNOWN",
+      "actualState": "PROTECT",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "IN_FILE_SYNTHETIC_GLOBAL_DIVERGENCE"
+      ]
+    },
+    {
+      "sampleId": "5749493037a00280215959d7",
+      "project": "Wechat_175d0604",
+      "file": "Wechat_175d0604\\app-service.js",
+      "entityId": "wh.rv",
+      "transformationKind": "CALL_EVAL",
+      "bindingKind": "unresolved_global",
+      "resolutionStatus": "unresolved",
+      "generatedSource": "wh.rv();",
+      "expected": "UNKNOWN",
+      "actualState": "PROTECT",
+      "actualAction": "BLOCK_FOLD",
+      "uncertaintySource": null,
+      "targetRuntimeStatus": "confirmed",
+      "reasonCodes": [
+        "IN_FILE_SYNTHETIC_GLOBAL_DIVERGENCE"
+      ]
+    }
+  ],
+  "metrics": {
+    "A0-aggressive-fold": {
+      "total": 3669,
+      "allowedFold": 3669,
+      "blockedFold": 0,
+      "unsafeFold": 2485,
+      "unsafeFoldMeasured": 782,
+      "usefulFold": 1184,
+      "overProtection": 0,
+      "unknown": 0,
+      "correctState": 1184,
+      "foldRate": 1,
+      "unknownRate": 0,
+      "decidableRate": 1,
+      "unsafeFoldMeasuredRate": 0.2131370945761788,
+      "exactStateAccuracy": 0.32270373398746255,
+      "safeFoldCoverage": 1,
+      "overProtectionRate": 0,
+      "unsafeFoldRate": 1,
+      "blockedNonFoldRate": 0
+    },
+    "A1-legacy-blacklist": {
+      "total": 3669,
+      "allowedFold": 2893,
+      "blockedFold": 776,
+      "unsafeFold": 1714,
+      "unsafeFoldMeasured": 112,
+      "usefulFold": 1179,
+      "overProtection": 5,
+      "unknown": 0,
+      "correctState": 1552,
+      "foldRate": 0.788498228400109,
+      "unknownRate": 0,
+      "decidableRate": 1,
+      "unsafeFoldMeasuredRate": 0.03871413757345316,
+      "exactStateAccuracy": 0.42300354319978195,
+      "safeFoldCoverage": 0.995777027027027,
+      "overProtectionRate": 0.004222972972972973,
+      "unsafeFoldRate": 0.689738430583501,
+      "blockedNonFoldRate": 0.310261569416499
+    },
+    "A2-prefix-blacklist": {
+      "total": 3669,
+      "allowedFold": 3048,
+      "blockedFold": 621,
+      "unsafeFold": 1869,
+      "unsafeFoldMeasured": 236,
+      "usefulFold": 1179,
+      "overProtection": 5,
+      "unknown": 0,
+      "correctState": 1502,
+      "foldRate": 0.830744071954211,
+      "unknownRate": 0,
+      "decidableRate": 1,
+      "unsafeFoldMeasuredRate": 0.07742782152230972,
+      "exactStateAccuracy": 0.40937585173071683,
+      "safeFoldCoverage": 0.995777027027027,
+      "overProtectionRate": 0.004222972972972973,
+      "unsafeFoldRate": 0.752112676056338,
+      "blockedNonFoldRate": 0.24788732394366197
+    },
+    "A-safe-all-protect": {
+      "total": 3669,
+      "allowedFold": 0,
+      "blockedFold": 3669,
+      "unsafeFold": 0,
+      "unsafeFoldMeasured": 0,
+      "usefulFold": 0,
+      "overProtection": 1184,
+      "unknown": 0,
+      "correctState": 473,
+      "foldRate": 0,
+      "unknownRate": 0,
+      "decidableRate": 1,
+      "unsafeFoldMeasuredRate": 0,
+      "exactStateAccuracy": 0.12891796129735622,
+      "safeFoldCoverage": 0,
+      "overProtectionRate": 1,
+      "unsafeFoldRate": 0,
+      "blockedNonFoldRate": 1
+    },
+    "R97-full": {
+      "total": 3669,
+      "allowedFold": 1180,
+      "blockedFold": 2489,
+      "unsafeFold": 0,
+      "unsafeFoldMeasured": 0,
+      "usefulFold": 1180,
+      "overProtection": 4,
+      "unknown": 1159,
+      "correctState": 2812,
+      "foldRate": 0.3216135186699373,
+      "unknownRate": 0.31588988825292996,
+      "decidableRate": 0.68411011174707,
+      "unsafeFoldMeasuredRate": 0,
+      "exactStateAccuracy": 0.7664213682202234,
+      "safeFoldCoverage": 0.9966216216216216,
+      "overProtectionRate": 0.0033783783783783786,
+      "unsafeFoldRate": 0,
+      "blockedNonFoldRate": 1,
+      "elapsedMs": 735201.95,
+      "decisionsPerSecond": 4.99046554487512
+    }
+  },
+  "foldRateConfidence": {
+    "point": 0.3216135186699373,
+    "lower": 0.28535289653427776,
+    "upper": 0.36358574610244987,
+    "iterations": 2000,
+    "clusterKey": "project",
+    "clusterCount": 1031
+  }
+}

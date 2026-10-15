@@ -52,13 +52,19 @@ export const HOST_RUNTIME_ROOTS = Object.freeze([
   {
     runtimeId: RUNTIME_IDS.EDGE,
     roots: new Set([
+      "FileReader",
+      "Image",
+      "MutationObserver",
+      "SVGRect",
+      "Window",
       "XMLHttpRequest",
+      "close",
       "document",
       "localStorage",
       "location",
-      "MutationObserver",
       "navigator",
       "sessionStorage",
+      "stop",
       "window",
     ]),
   },
@@ -151,6 +157,28 @@ export const NON_DETERMINISTIC_LANGUAGE_MEMBERS = Object.freeze(new Set([
   "Math.random",
 ]));
 
+const REGEXP_STATEFUL_PROPERTIES =
+  /^(?:RegExp\.)(?:\$[1-9]|input|\$_|lastMatch|\$&|lastParen|\$\+|leftContext|\$`|rightContext|\$')(?:$|\.)/;
+
+export const isStatefulOrNonDeterministicBuiltin = ({
+  entityId,
+  transformationKind,
+}) => {
+  if (!entityId || typeof entityId !== "string") return false;
+  if (REGEXP_STATEFUL_PROPERTIES.test(entityId)) {
+    return true;
+  }
+  if (transformationKind === TRANSFORMATION_KIND.CALL_EVAL) {
+    if (
+      NON_DETERMINISTIC_LANGUAGE_MEMBERS.has(entityId) ||
+      entityId === "Date"
+    ) {
+      return true;
+    }
+  }
+  return false;
+};
+
 export const isNonDeterministicCall = (finding) => {
   if (finding.transformationKind !== TRANSFORMATION_KIND.CALL_EVAL) {
     return false;
@@ -210,7 +238,9 @@ const requiredDimensionsFor = (finding) => {
     const isPureLanguageEntity =
       LANGUAGE_BUILTIN_SET.has(root) ||
       origin.startsWith("bundle-export:") ||
-      origin.startsWith("bundle-default:");
+      origin.startsWith("bundle-default:") ||
+      origin.startsWith("bundle-pro-export:") ||
+      origin.startsWith("bundle-pro-default:");
     if (!isPureLanguageEntity) {
       dimensions.add(SEMANTIC_DIMENSION.RETURN_VALUE);
     }

@@ -33,8 +33,9 @@ test("非确定性调用与返回值用途同时命中时不产生重复维度",
   );
 });
 
-test("文件内自己赋值的全局不改变判定：仍是 UNKNOWN", () => {
+test("文件内合成全局确证拦截：识别延迟挂载分歧并判定为 PROTECT", () => {
   // wcc 产物写法：$gwx 在顶层赋值，wh 在 $gwx 体内赋值，读取点读 wh.nh。
+  // 遵循 CASCADE (ICSE 2026) 运行时脚手架隔离原理，静态确证求值期与运行期分歧，确证裁决为 PROTECT。
   const source = [
     "$gwx = function (path) {",
     "  wh = makeWh();",
@@ -58,8 +59,12 @@ test("文件内自己赋值的全局不改变判定：仍是 UNKNOWN", () => {
     decision.bindingRef.inFileDefinition,
     "function_body_assignment",
   );
-  assert.equal(decision.decision.knowledgeState, KNOWLEDGE_STATE.UNKNOWN);
-  assert.ok(decision.decision.reasonCodes.includes(REASON_CODE.BINDING_UNRESOLVED));
+  assert.equal(decision.decision.knowledgeState, KNOWLEDGE_STATE.PROTECT);
+  assert.ok(
+    decision.decision.reasonCodes.includes(
+      REASON_CODE.IN_FILE_SYNTHETIC_GLOBAL_DIVERGENCE,
+    ),
+  );
 });
 
 const externalEvidence = ({
@@ -258,3 +263,79 @@ test("多目标构建显式枚举时不会被随机选成单一目标", () => {
   );
   assert.equal(resolved.status, TARGET_RUNTIME_STATUS.CORROBORATED);
 });
+
+test("状态与非确定性内建确证保护拦截（RegExp.$1 判定为 PROTECT）", () => {
+  const code = "const match = RegExp.$1;";
+  const result = analyzeAndDecide({
+    source: code,
+    filePath: "test.js",
+    targetRuntimeEvidence: [
+      externalEvidence({ evidenceId: "fp:1" }),
+      externalEvidence({ evidenceId: "fp:2" }),
+    ],
+  });
+  const decision = result.decisions.find(
+    (d) => d.query.entityId === "RegExp.$1",
+  );
+  assert.ok(decision);
+  assert.equal(decision.decision.knowledgeState, KNOWLEDGE_STATE.PROTECT);
+  assert.ok(
+    decision.decision.reasonCodes.includes(
+      REASON_CODE.STATEFUL_OR_NONDETERMINISTIC_BUILTIN,
+    ),
+  );
+});
+
+test("模块闭包正交性摘要：纯语言闭包模块安全放行（FOLD）", () => {
+  const code = `
+    define("utils/helper.js", function(require, module, exports) {
+      function toPropertyKey(arg) {
+        var key = typeof arg === "symbol" ? arg : String(arg);
+        return key;
+      }
+      exports.default = toPropertyKey;
+    });
+    const h = require("utils/helper.js");
+    const k = h.default("foo");
+  `;
+  const result = analyzeAndDecide({
+    source: code,
+    filePath: "app-service.js",
+  });
+  // 纯语言闭包导出不产生宿主依赖，零危险保护拦截
+  const protectDecisions = result.decisions.filter(
+    (d) => d.decision.knowledgeState === KNOWLEDGE_STATE.PROTECT,
+  );
+  assert.equal(protectDecisions.length, 0);
+});
+
+test("实测正向存在优先拦截：未声明符号但探针证实存在时确证为 PROTECT", () => {
+  const code = "const dev = new SomeNativeBridge();";
+  const result = analyzeAndDecide({
+    source: code,
+    filePath: ARTIFACT,
+    targetRuntimeEvidence: [
+      externalEvidence({ evidenceId: "fp:1" }),
+      externalEvidence({ evidenceId: "fp:2" }),
+    ],
+    evidenceRecords: [
+      {
+        entityId: "SomeNativeBridge",
+        observations: {
+          [RUNTIME_IDS.WECHAT]: {
+            values: { existence: true, type: "function", callability: true },
+          },
+        },
+      },
+    ],
+  });
+  const decision = result.decisions.find(
+    (d) => d.query.entityId === "SomeNativeBridge",
+  );
+  assert.ok(decision);
+  assert.equal(decision.decision.knowledgeState, KNOWLEDGE_STATE.PROTECT);
+  assert.ok(
+    decision.decision.reasonCodes.includes(REASON_CODE.CONTRACT_MISMATCH),
+  );
+});
+

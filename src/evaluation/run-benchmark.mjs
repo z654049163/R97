@@ -114,6 +114,7 @@ export const runBenchmark = ({
   evaluatorRuntimeId = RUNTIME_IDS.LANGUAGE,
   wechatReportPath = null,
   sourceRoot = null,
+  analysisMode = "lite",
 }) => {
   return runBenchmarkAsync({
     outputDir,
@@ -126,6 +127,7 @@ export const runBenchmark = ({
     evaluatorRuntimeId,
     wechatReportPath,
     sourceRoot,
+    analysisMode,
   });
 };
 
@@ -140,6 +142,7 @@ const runBenchmarkAsync = async ({
   evaluatorRuntimeId,
   wechatReportPath,
   sourceRoot,
+  analysisMode = "lite",
 }) => {
   mkdirSync(outputDir, { recursive: true });
   const legacy = loadLegacyBlacklist(legacyMapPath);
@@ -147,6 +150,7 @@ const runBenchmarkAsync = async ({
     legacy,
     targetRuntimeIds,
     wechatReportPath,
+    analysisMode,
   });
   const corpus = corpusPath
       ? await runCorpusBenchmark({
@@ -159,6 +163,7 @@ const runBenchmarkAsync = async ({
           evaluatorRuntimeId,
           wechatReportPath,
           sourceRoot,
+          analysisMode,
       })
     : null;
   const corpusResults = corpus?.results ?? null;
@@ -177,6 +182,7 @@ const runBenchmarkAsync = async ({
       legacySymbolCount: legacy.symbols.size,
       corpusPath,
       wechatReportPath,
+      analysisMode,
     },
     synthetic,
     corpus: corpusSummary,
@@ -241,11 +247,12 @@ export const runSyntheticBenchmark = async ({
   legacy,
   targetRuntimeIds = DEFAULT_TARGET_RUNTIME_IDS,
   wechatReportPath = null,
+  analysisMode = "lite",
 }) => {
   const plansByCase = SYNTHETIC_CASES.map((testCase) =>
     ({
       testCase,
-      result: analyzeCase(testCase, [], targetRuntimeIds),
+      result: analyzeCase(testCase, [], targetRuntimeIds, analysisMode),
     }),
   );
   const allPlans = plansByCase.flatMap((item) => item.result.decisions);
@@ -260,6 +267,7 @@ export const runSyntheticBenchmark = async ({
       testCase,
       evidence.records,
       targetRuntimeIds,
+      analysisMode,
     );
     const allowed = result.decisions.every(
       (item) => item.decision.enforcementAction === "ALLOW_FOLD",
@@ -316,6 +324,7 @@ export const runCorpusBenchmark = async ({
   evaluatorRuntimeId = RUNTIME_IDS.LANGUAGE,
   wechatReportPath = null,
   sourceRoot = null,
+  analysisMode = "lite",
 }) => {
   if (!existsSync(corpusPath)) {
     throw new Error(`Corpus file does not exist: ${corpusPath}`);
@@ -371,6 +380,7 @@ export const runCorpusBenchmark = async ({
           policyVersion: "benchmark-policy-v1",
           contractVersion: "benchmark-v1",
           evidenceRecords,
+          analysisMode,
         });
         decisionsBySampleId.set(record.sampleId, result.decisions[0] ?? null);
       }
@@ -384,11 +394,12 @@ export const runCorpusBenchmark = async ({
       byFile.set(record.file, bucket);
     }
     for (const [file, bucket] of byFile.entries()) {
-      // 只有含 module_import 记录的文件才需要文件级分析——它们是 bundle 模块表
-      // 解析的唯一受益者。其余文件走表达式模式，避免给 1000+ 个大文件建 AST
-      // （实测把 1046 个文件的 analysis 全缓存下来会吃掉 4.7 GB 内存）。
+      // 含有 module_import 或 unresolved_global（需要分析文件内隐式全局定义与合成桩）
+      // 的文件走文件级分析。其余文件走表达式模式，避免无谓的内存浪费。
       const needsFileAnalysis = bucket.some(
-        (record) => record.bindingKind === "module_import",
+        (record) =>
+          record.bindingKind === "module_import" ||
+          record.bindingKind === "unresolved_global",
       );
       if (!needsFileAnalysis) {
         for (const record of bucket) {
@@ -401,6 +412,7 @@ export const runCorpusBenchmark = async ({
             policyVersion: "benchmark-policy-v1",
             contractVersion: "benchmark-v1",
             evidenceRecords,
+            analysisMode,
           });
           decisionsBySampleId.set(record.sampleId, result.decisions[0] ?? null);
         }
@@ -413,7 +425,7 @@ export const runCorpusBenchmark = async ({
         }
         continue;
       }
-      const analysis = analyzeSource({ source, filePath: file });
+      const analysis = analyzeSource({ source, filePath: file, analysisMode });
       analyzedFiles.add(file);
       const result = analyzeAndDecide({
         source,
@@ -425,6 +437,7 @@ export const runCorpusBenchmark = async ({
         policyVersion: "benchmark-policy-v1",
         contractVersion: "benchmark-v1",
         evidenceRecords,
+        analysisMode,
       });
       const byPointId = new Map();
       const byEntity = new Map();
@@ -807,6 +820,7 @@ const analyzeCase = (
   testCase,
   evidenceRecords = [],
   defaultTargetRuntimeIds = DEFAULT_TARGET_RUNTIME_IDS,
+  analysisMode = "lite",
 ) =>
   analyzeAndDecide({
     source: testCase.source,
@@ -819,6 +833,7 @@ const analyzeCase = (
     policyVersion: "benchmark-policy-v1",
     contractVersion: "benchmark-v1",
     evidenceRecords,
+    analysisMode,
   });
 
 export const buildRuntimeEvidence = async (
@@ -1793,6 +1808,7 @@ export const parseBenchmarkArgs = (argv) => {
     targetRuntimeIds: [...DEFAULT_TARGET_RUNTIME_IDS],
     evaluatorRuntimeId: RUNTIME_IDS.LANGUAGE,
     wechatReportPath: null,
+    analysisMode: "lite",
   };
   for (let index = 0; index < argv.length; index += 1) {
     const argument = argv[index];
@@ -1850,6 +1866,11 @@ export const parseBenchmarkArgs = (argv) => {
           ...options.targetRuntimeIds,
           RUNTIME_IDS.WECHAT,
         ]);
+        break;
+      case "--analysis-mode":
+      case "--mode":
+        options.analysisMode = value(argument, next);
+        index += 1;
         break;
       case "--help":
         options.help = true;
@@ -1925,6 +1946,7 @@ if (isMain()) {
         "  --include-browser     Add the real headless Edge runtime to targets",
         "  --include-wechat      Add the real WeChat runtime to targets",
         "  --source-root <path>  Analyze original app-service.js files instead of rebuilt snippets",
+        "  --analysis-mode <m>   Analysis mode: lite or pro (default: lite)",
       ].join("\n"),
     );
   } else {

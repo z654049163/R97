@@ -1,0 +1,2070 @@
+[
+  {
+    "title": "From Obfuscated to Obvious: A Comprehensive JavaScript Deobfuscation Tool for Security Analysis",
+    "doi": "10.14722/ndss.2026.242198",
+    "venue": "Proceedings 2026 Network and Distributed System Security Symposium",
+    "year": 2026,
+    "authors": [
+      "Dongchao Zhou",
+      "Lingyun Ying",
+      "Huajun Chai",
+      "Dongbin Wang"
+    ],
+    "type": "proceedings-article"
+  },
+  {
+    "title": "JSimpo: Structural Deobfuscation of JavaScript Programs",
+    "doi": "10.1145/3714460",
+    "venue": "ACM Transactions on Software Engineering and Methodology",
+    "year": 2025,
+    "authors": [
+      "Tianyu Chen",
+      "Ding Li",
+      "Ying Zhang",
+      "Tao Xie"
+    ],
+    "type": "journal-article"
+  },
+  {
+    "title": "<scp>JsDeObsBench:</scp>\n                    Measuring and Benchmarking LLMs for JavaScript Deobfuscation",
+    "doi": "10.1145/3719027.3744871",
+    "venue": "Proceedings of the 2025 ACM SIGSAC Conference on Computer and Communications Security",
+    "year": 2025,
+    "authors": [
+      "Guoqiang Chen",
+      "Xin Jin",
+      "Zhiqiang Lin"
+    ],
+    "type": "proceedings-article"
+  },
+  {
+    "title": "Deobfuscation of JavaScript code and identification of security weaknesses through large language models",
+    "doi": "10.1016/j.future.2025.108318",
+    "venue": "Future Generation Computer Systems",
+    "year": 2026,
+    "authors": [
+      "Giacomo Benedetti",
+      "Luca Caviglione",
+      "Carmela Comito",
+      "Alberto Falcone",
+      "Massimo Guarascio"
+    ],
+    "type": "journal-article"
+  },
+  {
+    "title": "Introduction to JavaScript Syntax",
+    "doi": "10.1007/979-8-8688-1460-0_1",
+    "venue": "Beginning JavaScript Syntax",
+    "year": 2025,
+    "authors": [
+      "Sonu Kapoor"
+    ],
+    "type": "book-chapter"
+  },
+  {
+    "title": "@JavaScript: Augmented JavaScript",
+    "doi": "10.20944/preprints202502.0081.v1",
+    "venue": "MDPI AG",
+    "year": 2025,
+    "authors": [
+      "Iosif Iulian Petrila"
+    ],
+    "type": "posted-content"
+  },
+  {
+    "title": "The Evolution of JavaScript",
+    "doi": "10.1007/979-8-8688-1460-0_4",
+    "venue": "Beginning JavaScript Syntax",
+    "year": 2025,
+    "authors": [
+      "Sonu Kapoor"
+    ],
+    "type": "book-chapter"
+  },
+  {
+    "title": "Building Blocks of JavaScript",
+    "doi": "10.1007/979-8-8688-1460-0_8",
+    "venue": "Beginning JavaScript Syntax",
+    "year": 2025,
+    "authors": [
+      "Sonu Kapoor"
+    ],
+    "type": "book-chapter"
+  },
+  {
+    "title": "How JavaScript Works in Web Development",
+    "doi": "10.1007/979-8-8688-1460-0_2",
+    "venue": "Beginning JavaScript Syntax",
+    "year": 2025,
+    "authors": [
+      "Sonu Kapoor"
+    ],
+    "type": "book-chapter"
+  },
+  {
+    "title": "Debugging JavaScript in the Browser",
+    "doi": "10.1007/979-8-8688-1460-0_7",
+    "venue": "Beginning JavaScript Syntax",
+    "year": 2025,
+    "authors": [
+      "Sonu Kapoor"
+    ],
+    "type": "book-chapter"
+  },
+  {
+    "title": "Control Flow in JavaScript",
+    "doi": "10.1007/979-8-8688-1460-0_10",
+    "venue": "Beginning JavaScript Syntax",
+    "year": 2025,
+    "authors": [
+      "Sonu Kapoor"
+    ],
+    "type": "book-chapter"
+  },
+  {
+    "title": "JAVASCRIPT: DEVELOPING INTERACTIVE WEB PAGES USING JAVASCRIPT",
+    "doi": "10.36871/ek.up.p.r.2024.09.09.004",
+    "venue": "EKONOMIKA I UPRAVLENIE: PROBLEMY, RESHENIYA",
+    "year": 2024,
+    "authors": [
+      "",
+      "Niyaz R. Galimullin"
+    ],
+    "type": "journal-article"
+  },
+  {
+    "title": "The Role of JavaScript in Modern Web Development",
+    "doi": "10.1007/979-8-8688-1460-0_5",
+    "venue": "Beginning JavaScript Syntax",
+    "year": 2025,
+    "authors": [
+      "Sonu Kapoor"
+    ],
+    "type": "book-chapter"
+  },
+  {
+    "title": "A Systematic LLM-Based Procedure for the Deobfuscation of WebAssembly: Benchmark and Security Evaluation",
+    "doi": "10.1109/access.2026.3724950",
+    "venue": "IEEE Access",
+    "year": 2026,
+    "authors": [
+      "Sebeom Cheon",
+      "Jinho Jung",
+      "Sangkyun Lee"
+    ],
+    "type": "journal-article"
+  },
+  {
+    "title": "Beginning JavaScript Syntax",
+    "doi": "10.1007/979-8-8688-1460-0",
+    "venue": "Apress",
+    "year": 2025,
+    "authors": [
+      "Sonu Kapoor"
+    ],
+    "type": "book"
+  },
+  {
+    "title": "Working with ES6+ Syntax",
+    "doi": "10.1007/979-8-8688-1460-0_14",
+    "venue": "Beginning JavaScript Syntax",
+    "year": 2025,
+    "authors": [
+      "Sonu Kapoor"
+    ],
+    "type": "book-chapter"
+  },
+  {
+    "title": "Functions and Scope",
+    "doi": "10.1007/979-8-8688-1460-0_11",
+    "venue": "Beginning JavaScript Syntax",
+    "year": 2025,
+    "authors": [
+      "Sonu Kapoor"
+    ],
+    "type": "book-chapter"
+  },
+  {
+    "title": "Error Handling",
+    "doi": "10.1007/979-8-8688-1460-0_13",
+    "venue": "Beginning JavaScript Syntax",
+    "year": 2025,
+    "authors": [
+      "Sonu Kapoor"
+    ],
+    "type": "book-chapter"
+  },
+  {
+    "title": "Exploring the Capabilities of LLMs in Binary Decompilation and Deobfuscation",
+    "doi": "10.1109/icaic67076.2026.11395868",
+    "venue": "2026 IEEE 5th International Conference on AI in Cybersecurity (ICAIC)",
+    "year": 2026,
+    "authors": [
+      "Logan Mebane",
+      "Ajay Kumara Makanahalli Annaiah"
+    ],
+    "type": "proceedings-article"
+  },
+  {
+    "title": "Elementare JavaScript-Grundstrukturen",
+    "doi": "10.1007/978-3-658-45577-4_4",
+    "venue": "Programmieren mit JavaScript",
+    "year": 2025,
+    "authors": [
+      "Ralph Steyer"
+    ],
+    "type": "book-chapter"
+  },
+  {
+    "title": "A universal sector of $\\mathcal{N}=1$ class $\\mathcal{S}$ spectra",
+    "doi": "http://arxiv.org/abs/2610.13938v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Ritabrata Bhattacharya",
+      "Abhay Katyal",
+      "Oscar Varela"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "Adiabatic evolution of hadronic neutron stars",
+    "doi": "http://arxiv.org/abs/2610.13926v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Domenico Logoteta",
+      "Francesco Zeno Constanzo",
+      "Ignazio Bombaci",
+      "Sebastiano Bernuzzi",
+      "Albino Perego"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "An Infinite Family of Apéry-like Recurrences for Euler's Constant",
+    "doi": "http://arxiv.org/abs/2610.13919v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Rotem Kalisch",
+      "Tali Monderer",
+      "Elyasheev Leibtag",
+      "Shachar Weinbaum",
+      "Michael Shalyt"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "Fundamental Limits of Covert queueing under Busy-Period Observations",
+    "doi": "http://arxiv.org/abs/2610.13911v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Anumula Venkata Sai Sree Sahithi",
+      "Arti Yardi",
+      "Jithin Ravi"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "Counting with Hiccup Sequences",
+    "doi": "http://arxiv.org/abs/2610.13908v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Benoit Cloitre"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "Quantum Query Complexity of Maximum Degree and its Generalizations",
+    "doi": "http://arxiv.org/abs/2610.13906v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Amin Shiraz Gilani",
+      "Nikhil S. Mande",
+      "Subhasree Patro",
+      "Nithish Raja"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "Hitting-Time Bounds for Asynchronous Q-Learning",
+    "doi": "http://arxiv.org/abs/2610.13901v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Yang Peng"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "Nimbus Studio reproduces reference BCI decoding pipelines: a validation study on public benchmarks across protocols and paradigms",
+    "doi": "http://arxiv.org/abs/2610.13894v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Sergey Musienko"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "Ground states and sharp logarithmic Sobolev inequalities for logarithmic Schrödinger equations with partial confinement",
+    "doi": "http://arxiv.org/abs/2610.13887v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Baihong Li",
+      "Jarosław Mederski",
+      "Xiangjian Zeng"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "GPU-Based Parallel BP Decoding for Quantum LDPC Memory",
+    "doi": "http://arxiv.org/abs/2610.13879v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Ming Wang",
+      "Yanbo Zhao",
+      "Ang Li",
+      "Frank Mueller"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "Enhanced analogue quantum computation with a logically-encoded XX gadget",
+    "doi": "http://arxiv.org/abs/2610.13845v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Robert J. Banks",
+      "Natasha Feinstein",
+      "Roopayan Ghosh",
+      "Sebastian Schulz",
+      "Kristel Michielsen"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "Dimension-free Markov--Bernstein-type inequality for $\\mathbb R^2$-valued polynomials",
+    "doi": "http://arxiv.org/abs/2610.13836v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Egor Kosov"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "Biholomorphic rigidity and symmetry breaking for domains with Bergman metric of constant positive holomorphic sectional curvature",
+    "doi": "http://arxiv.org/abs/2610.13831v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Gordon Heier",
+      "Ravi Mudaliar",
+      "Haotian Zuo"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "Phononic Frequency Combs in Twisted Bilayer Transition Metal Dichalcogenide Heterostructures from First Principles",
+    "doi": "http://arxiv.org/abs/2610.13825v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Naman Arora",
+      "Adarsh Ganesan"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "An exact rotating black hole solution in Palatini Kalb-Ramond gravity",
+    "doi": "http://arxiv.org/abs/2610.13814v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "A. A. Araújo Filho"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "Static Code Analysis Output as a Proxy Indicator for Classifying JavaScript Obfuscation",
+    "doi": "10.5220/0015007900004103",
+    "venue": "Proceedings of the 23rd International Conference on Security and Cryptography",
+    "year": 2026,
+    "authors": [
+      "Alkın Alkan",
+      "Mehmet Sandıkkaya"
+    ],
+    "type": "proceedings-article"
+  },
+  {
+    "title": "A Hybrid Software Protection Framework Against Reverse Engineering Using AST Obfuscation and Runtime Code Encryption",
+    "doi": "10.1109/iccsdfai70505.2026.11647974",
+    "venue": "2026 International Conference on Cybersecurity, Digital Forensics, and AI Applications (ICCSDFAI)",
+    "year": 2026,
+    "authors": [
+      "Askaruly Abinur",
+      "Saule T. Amanzholova",
+      "Shangytbayeva Gulmira",
+      "Yelepbergenova Aigul",
+      "Zhussupbayeva Marzhan"
+    ],
+    "type": "proceedings-article"
+  },
+  {
+    "title": "Impact of Code Obfuscation on Reverse Engineering of .NET Assemblies: An Empirical and Analytical Study",
+    "doi": "10.64643/ijirtv13i2-206155-459",
+    "venue": "International Journal of Innovative Research in Technology",
+    "year": 2026,
+    "authors": [],
+    "type": "journal-article"
+  },
+  {
+    "title": "Malicious JavaScript Detection using Obfuscation Analysis and String Reconstruction Techniques",
+    "doi": "10.24002/jbi.v16i01.10530",
+    "venue": "Jurnal Buana Informatika",
+    "year": 2025,
+    "authors": [
+      "Alfin Gusti Alamsyah",
+      "Latius Hermawan"
+    ],
+    "type": "journal-article"
+  },
+  {
+    "title": "Hybrid Obfuscation Technique to Enhance Software Protection Against Reverse Engineering",
+    "doi": "10.20428/jst.v31i1.3231",
+    "venue": "Journal of Science and Technology",
+    "year": 2026,
+    "authors": [
+      "Mohammed Hassan bin-Shamlan",
+      "Nabil Munassar",
+      "Mohammed Fadhl Abdullah"
+    ],
+    "type": "journal-article"
+  },
+  {
+    "title": "White-box logic obfuscation: A Transparent Solution to Hardware Piracy and Reverse Engineering",
+    "doi": "10.1145/3658617.3703132",
+    "venue": "Proceedings of the 30th Asia and South Pacific Design Automation Conference",
+    "year": 2025,
+    "authors": [
+      "Leon Li",
+      "Alex Orailoglu"
+    ],
+    "type": "proceedings-article"
+  },
+  {
+    "title": "PhD Project: Reconfigurable Network on Chip Architecture Through Topology Obfuscation For Protecting SoC Against Reverse Engineering",
+    "doi": "10.1109/fccm60383.2024.00048",
+    "venue": "2024 IEEE 32nd Annual International Symposium on Field-Programmable Custom Computing Machines (FCCM)",
+    "year": 2024,
+    "authors": [
+      "Dipal Halder",
+      "Sandip Ray"
+    ],
+    "type": "proceedings-article"
+  },
+  {
+    "title": "Challenges to JavaScript obfuscation in the era of large language models",
+    "doi": "10.1109/icstcc66753.2025.11240358",
+    "venue": "2025 29th International Conference on System Theory, Control and Computing (ICSTCC)",
+    "year": 2025,
+    "authors": [
+      "Daniel Ciochiu",
+      "Marius Brezovan",
+      "Nicolae Enescu",
+      "Claudiu Traistaru",
+      "Mircea Badoi"
+    ],
+    "type": "proceedings-article"
+  },
+  {
+    "title": "ANALISIS REVERSE ENGINEERING MALWARE WINRAR SFX MENGGUNAKAN GHIDRA UNTUK DETEKSI TEKNIK OBFUSCATION DAN UAC BYPASS",
+    "doi": "10.24252/instek.v10i2.60503",
+    "venue": "Jurnal INSTEK (Informatika Sains dan Teknologi)",
+    "year": 2025,
+    "authors": [
+      "Rosmiati",
+      "Muh. Ikhsan Amar",
+      "Muhammad Arham Arsyad"
+    ],
+    "type": "journal-article"
+  },
+  {
+    "title": "GNN-Based Reverse Engineering Protection Using Obfuscation Through Electromagnetic Interference",
+    "doi": "10.1142/9789811297427_0020",
+    "venue": "Selected Topics in Electronics and Systems",
+    "year": 2025,
+    "authors": [
+      "William Stark",
+      "Lei Wang",
+      "Shuai Chen",
+      "Yuebo Luo"
+    ],
+    "type": "book-chapter"
+  },
+  {
+    "title": "GNN-Based Reverse Engineering Protection Using Obfuscation Through Electromagnetic Interference",
+    "doi": "10.1142/s0129156424400718",
+    "venue": "International Journal of High Speed Electronics and Systems",
+    "year": 2024,
+    "authors": [
+      "William Stark",
+      "Lei Wang",
+      "Shuai Chen",
+      "Yuebo Luo"
+    ],
+    "type": "journal-article"
+  },
+  {
+    "title": "BAFuzz: The JavaScript engine fuzzer that is mutated by the AST generation model",
+    "doi": "10.1145/3703935.3703964",
+    "venue": "Proceedings of the 2024 7th International Conference on Artificial Intelligence and Pattern Recognition",
+    "year": 2024,
+    "authors": [
+      "Yong Zhang",
+      "Hongbo Yu",
+      "Qin Peng",
+      "Junru Wang"
+    ],
+    "type": "proceedings-article"
+  },
+  {
+    "title": "On the Learnability, Robustness, and Adaptability of Deep Learning Models for Obfuscation-applied Code",
+    "doi": "10.1145/3733822.3764676",
+    "venue": "Proceedings of the 2025 Workshop on Software Understanding and Reverse Engineering",
+    "year": 2025,
+    "authors": [
+      "Jiyong Uhm",
+      "Yujeong Kwon",
+      "Hyungjoon Koo"
+    ],
+    "type": "proceedings-article"
+  },
+  {
+    "title": "Quantum Power Obfuscation",
+    "doi": "10.1007/978-981-97-6722-9_4",
+    "venue": "Quantum Nonlinear Function Obfuscation Theory and Application",
+    "year": 2025,
+    "authors": [
+      "Tao Shang"
+    ],
+    "type": "book-chapter"
+  },
+  {
+    "title": "A Warped Born Rule Turns an Observer into a Maxwell's Demon",
+    "doi": "http://arxiv.org/abs/2610.13936v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Olumakinde Ogunnaike"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "Goal-Oriented Bundle Management and Flow Control for Deep-Space Communications via Reinforcement Learning",
+    "doi": "http://arxiv.org/abs/2610.13923v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Sajjad Baghaeea",
+      "Aimin Lib",
+      "Shanmugarajan Balasubramanian",
+      "Elif Uysal"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "Information-Weighted Distributed Kalman Filter for Multi-Target Tracking over Switching Sensor Networks",
+    "doi": "http://arxiv.org/abs/2610.13893v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Tirthankar Chakraborty",
+      "Arnab Maity"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "Statistical Optical Replication and Mixing of Spatial Information across Wavelengths",
+    "doi": "http://arxiv.org/abs/2610.13861v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Wanting Hou",
+      "Wei Liu",
+      "Hong-Chao Liu",
+      "Zhiyuan Ye",
+      "Jun Xiong"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "Returning to Development States: When Full Sandbox Snapshots Help Coding Agents",
+    "doi": "http://arxiv.org/abs/2610.13841v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Daniel Thi Graviet",
+      "Tanmay Shah"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "OpenPA: Forced-alignment-free Multi-granular Pronunciation Assessment with Mixed-transcript Adaptation",
+    "doi": "http://arxiv.org/abs/2610.13826v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Fu-An Chao",
+      "Bi-Cheng Yan",
+      "Berlin Chen"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "Same Query, Different Answer: Run-to-Run Variance in Semantic Query Processing",
+    "doi": "http://arxiv.org/abs/2610.13823v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Oktie Hassanzadeh",
+      "Dharmashankar Subramanian"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "A Miniaturized Wi-Fi HaLow-Based Wireless Imaging Transfer System for Capsule Endoscopy",
+    "doi": "http://arxiv.org/abs/2610.13815v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Michele Bertozzi",
+      "Lorenzo Amelio",
+      "Sebastiano Strangio",
+      "Nikita J. Greenidge",
+      "Benjamin Calmé"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "Diversity-Aware Ensemble of Quantum-Classical Models via Combinatorial Fusion",
+    "doi": "http://arxiv.org/abs/2610.13808v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Jingyan Xu",
+      "Yuanhong Wu",
+      "Samuel Yen-Chi Chen",
+      "Sean Patten",
+      "Christina Schweikert"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "Error Rate is Not Enough: Costs of Augmentation in Low-Resource ASR",
+    "doi": "http://arxiv.org/abs/2610.13807v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Katsumi Ibaraki",
+      "David Chiang"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "Your Discrete Graph Diffusion Model is Secretly Memorizing",
+    "doi": "http://arxiv.org/abs/2610.13786v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Adarsh Jamadandi",
+      "Nicolas Keriven"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "Locality-Preparation Time Tradeoffs in Dissipative Quantum Systems",
+    "doi": "http://arxiv.org/abs/2610.13784v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Philipp Westhoff",
+      "Sara Murciano",
+      "Mattia Moroder"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "SimVTA: Simulation-Grounded Video-Trajectory Alignment for Driving World Action Models",
+    "doi": "http://arxiv.org/abs/2610.13781v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Changhui Jing",
+      "Haochen Tian",
+      "Hongchen Li",
+      "Tianyu Li",
+      "Caojun Wang"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "In-the-Wild JavaScript Dead-Code Elimination via HTTP Range Requests",
+    "doi": "10.1145/3777912.3839817",
+    "venue": "Proceedings of the 2026 ACM Internet Measurement Conference",
+    "year": 2026,
+    "authors": [
+      "Ayush Pandey",
+      "Vladimir Sharkovski",
+      "Matteo Varvello",
+      "Yasir Zaki"
+    ],
+    "type": "proceedings-article"
+  },
+  {
+    "title": "Lacuna-Based JavaScript Code Visualization and Dead Code Optimization: A Cross-Platform Performance Evaluation.",
+    "doi": "10.2139/ssrn.5231348",
+    "venue": "Elsevier BV",
+    "year": 2025,
+    "authors": [
+      "Tejas Wasekar",
+      "Shubham Tambe",
+      "Shruti Sood",
+      "Akanksha Wagaskar",
+      "Aniket Thenge"
+    ],
+    "type": "posted-content"
+  },
+  {
+    "title": "Minification of CSS, JavaScript, and HTML for Faster Websites",
+    "doi": "10.59828/ijercs.v2i3.23",
+    "venue": "International Journal of Emerging Research in Computer Science",
+    "year": 2026,
+    "authors": [
+      "Budgude Siddharth Dattatray",
+      "Dr. Sonali Doifode Gholve"
+    ],
+    "type": "journal-article"
+  },
+  {
+    "title": "A Mathematical Modeling Framework Opti-Blend for Integrated Code Analysis through Dead Code Elimination, Clone Detection, and Loop Optimization",
+    "doi": "10.12732/ijam.v38i5.424",
+    "venue": "International Journal of Applied Mathematics",
+    "year": 2025,
+    "authors": [
+      "Tulshihar Patil"
+    ],
+    "type": "journal-article"
+  },
+  {
+    "title": "The Opticode: A User-Centric Tool for Enhancing Software Efficiency and Minimizing Errors Through Dead Code Elimination and Loop Invariant Code Motion Techniques",
+    "doi": "10.52783/cana.v32.2860",
+    "venue": "Communications on Applied Nonlinear Analysis",
+    "year": 2024,
+    "authors": [
+      "Tulshihar Patil"
+    ],
+    "type": "journal-article"
+  },
+  {
+    "title": "Code stylometry vs formatting and minification",
+    "doi": "10.7717/peerj-cs.2142",
+    "venue": "PeerJ Computer Science",
+    "year": 2024,
+    "authors": [
+      "Stefano Balla",
+      "Maurizio Gabbrielli",
+      "Stefano Zacchiroli"
+    ],
+    "type": "journal-article"
+  },
+  {
+    "title": "Beyond a Joke: Dead Code Elimination Can Delete Live Code",
+    "doi": "10.1145/3639476.3639763",
+    "venue": "Proceedings of the 2024 ACM/IEEE 44th International Conference on Software Engineering: New Ideas and Emerging Results",
+    "year": 2024,
+    "authors": [
+      "Haoxin Tu",
+      "Lingxiao Jiang",
+      "Debin Gao",
+      "He Jiang"
+    ],
+    "type": "proceedings-article"
+  },
+  {
+    "title": "Analyzing Dead Code Elimination Techniques for Green and Efficient Web Applications",
+    "doi": "10.1109/iccca66364.2025.11325681",
+    "venue": "2025 IEEE 7th International Conference on Computing, Communication and Automation (ICCCA)",
+    "year": 2025,
+    "authors": [
+      "Vivek Kumar",
+      "Ankit Jangid",
+      "Yash Gehlot",
+      "Radhakrishna Rambola"
+    ],
+    "type": "proceedings-article"
+  },
+  {
+    "title": "A simple \"copy this code\" button in JavaScript",
+    "doi": "10.59350/0p1bx-svk64",
+    "venue": "Front Matter",
+    "year": 2026,
+    "authors": [
+      "Terence Eden"
+    ],
+    "type": "posted-content"
+  },
+  {
+    "title": "A simple \"copy this code\" button in JavaScript",
+    "doi": "10.59350/37gnz-01p55",
+    "venue": "Front Matter",
+    "year": 2026,
+    "authors": [
+      "Terence Eden"
+    ],
+    "type": "posted-content"
+  },
+  {
+    "title": "A simple \"copy this code\" button in JavaScript",
+    "doi": "10.59350/ar7wp-9tz66",
+    "venue": "Front Matter",
+    "year": 2026,
+    "authors": [
+      "Terence Eden"
+    ],
+    "type": "posted-content"
+  },
+  {
+    "title": "Decoding Code Quality: A Software Metric Analysis of Open-Source JavaScript Projects",
+    "doi": "10.5220/0012618800003687",
+    "venue": "Proceedings of the 19th International Conference on Evaluation of Novel Approaches to Software Engineering",
+    "year": 2024,
+    "authors": [
+      "Suzad Mohammad",
+      "Abdullah Al Jobair",
+      "Iftekharul Abedeen"
+    ],
+    "type": "proceedings-article"
+  },
+  {
+    "title": "Code optimization opportunities in the JavaScript ecosystem with Rust",
+    "doi": "10.62486/latia202468",
+    "venue": "LatIA",
+    "year": 2024,
+    "authors": [
+      "Volodymyr Kozub"
+    ],
+    "type": "journal-article"
+  },
+  {
+    "title": "JavaScript",
+    "doi": "10.1201/9781003727651-6",
+    "venue": "From Code to Cloud",
+    "year": 2026,
+    "authors": [
+      "Maura A. Deek",
+      "Fadi P. Deek",
+      "Wei Yao"
+    ],
+    "type": "book-chapter"
+  },
+  {
+    "title": "Enhancing JavaScript Source Code Understanding with Graph-Aligned Large Language Models",
+    "doi": "10.21203/rs.3.rs-5106829/v1",
+    "venue": "Springer Science and Business Media LLC",
+    "year": 2024,
+    "authors": [
+      "Theodor Vadoce",
+      "James Pritchard",
+      "Callum Fairbanks"
+    ],
+    "type": "posted-content"
+  },
+  {
+    "title": "Functional Programming: Blueprint for Pure Code",
+    "doi": "10.1007/979-8-8688-1004-6_2",
+    "venue": "Crafting Clean Code with JavaScript and React",
+    "year": 2024,
+    "authors": [
+      "Héla Ben Khalfallah"
+    ],
+    "type": "book-chapter"
+  },
+  {
+    "title": "Painting with Code: A Case Study on an Interactive JavaScript Drawing Editor for 8-10 Year Olds",
+    "doi": "10.2139/ssrn.5548985",
+    "venue": "Elsevier BV",
+    "year": 2025,
+    "authors": [
+      "Andrei Enea"
+    ],
+    "type": "posted-content"
+  },
+  {
+    "title": "Painting with Code: A Case Study on an Interactive JavaScript Drawing Editor for 8–10 Year Olds",
+    "doi": "10.35542/osf.io/5k7ye_v1",
+    "venue": "Center for Open Science",
+    "year": 2025,
+    "authors": [
+      "Andrei Enea"
+    ],
+    "type": "posted-content"
+  },
+  {
+    "title": "Painting with Code: A Case Study on an Interactive JavaScript Drawing Editor for 8-10 Year Olds",
+    "doi": "10.2139/ssrn.5546919",
+    "venue": "Elsevier BV",
+    "year": 2025,
+    "authors": [
+      "Andrei Enea"
+    ],
+    "type": "posted-content"
+  },
+  {
+    "title": "Can Language Models Play the Wikipedia Game?",
+    "doi": "http://arxiv.org/abs/2610.13948v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Alexander Hickey",
+      "Joanna Knight",
+      "James Bishop"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "Images Talk Back: Guiding MMDiTs by Suppressing Image-to-Text Feedback",
+    "doi": "http://arxiv.org/abs/2610.13941v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Yucheng Yang",
+      "Xiaoxiao Sun",
+      "Shusheng Yang",
+      "Jiakang Chen",
+      "Serena Yeung-Levy"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "Hide and Seek: HIDE Concepts to SEEK explanations for black box models",
+    "doi": "http://arxiv.org/abs/2610.13935v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Bhanu Tokas",
+      "Rahul Nair",
+      "Rockwell Jackson",
+      "Hannah Kerner"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "Designing Protein Structures from Natural Language",
+    "doi": "http://arxiv.org/abs/2610.13917v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Joseph Lee",
+      "Yanjing Li",
+      "Bo Qiang",
+      "Gregory Lau",
+      "Allyson Ettinger"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "Heterogeneous Demand-Private Coded Caching: Exact Characterization for Two Users and Two Files",
+    "doi": "http://arxiv.org/abs/2610.13914v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Tati V D N Eswar",
+      "Jithin Ravi"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "RSI-Anything: Unlocking Recursive Self-Improvement with World Models",
+    "doi": "http://arxiv.org/abs/2610.13912v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Taoyong Cui",
+      "Pinxian Zeng",
+      "Wanghan Xu",
+      "Hao Xiao",
+      "Shuhan Xue"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "Revisiting Tabular Deep Regression: Objectives and the Limits of Global Early Stopping",
+    "doi": "http://arxiv.org/abs/2610.13909v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Danil Rudenko",
+      "Georgii Bulgakov",
+      "Nikolay Kartashev",
+      "Ivan Rubachev",
+      "Daniil Krasylnikov"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "Unifying spherical convolutions through lifting",
+    "doi": "http://arxiv.org/abs/2610.13892v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "J. D. McEwen"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "RATED: Reliability-Aware AI Agent Tool Retrieval via Execution Dynamics",
+    "doi": "http://arxiv.org/abs/2610.13889v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Weiliang Chen",
+      "Song Liao"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "Prediction Is Not a Sufficient Memory State",
+    "doi": "http://arxiv.org/abs/2610.13881v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Robert Jenkinson Alvarez"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "Bicycle Race: small two-block codes on the Pareto frontier",
+    "doi": "http://arxiv.org/abs/2610.13880v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Gideon Lee"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "Impact of ab initio E1 strength on neutron capture rates along the nickel isotopic chain",
+    "doi": "http://arxiv.org/abs/2610.13868v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Francesca Bonaiti",
+      "Joanna E. Sobczyk"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "Clique and chromatic numbers of graph powers: spectral bounds and anticodes",
+    "doi": "http://arxiv.org/abs/2610.13852v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Aida Abiad",
+      "Gabriel Coutinho",
+      "Hitesh Kumar",
+      "Emanuel Juliano",
+      "Michael Tait"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "Llm-Fuzz: Adaptive, Structure-Aware Fuzzing of Javascript Engines with Large Language Models",
+    "doi": "10.1109/iccc68654.2025.11438113",
+    "venue": "2025 11th International Conference on Computer and Communications (ICCC)",
+    "year": 2025,
+    "authors": [
+      "Kongyang Liu",
+      "Chengxiang Tan"
+    ],
+    "type": "proceedings-article"
+  },
+  {
+    "title": "The JavaScript Package Selection Task: A Comparative Experiment Using an LLM-based Approach",
+    "doi": "10.19153/cleiej.27.2.4",
+    "venue": "CLEI Electronic Journal",
+    "year": 2024,
+    "authors": [
+      "Andres Diaz Pace",
+      "Antonela Tommasel",
+      "Hernan Ceferino Vazquez"
+    ],
+    "type": "journal-article"
+  },
+  {
+    "title": "Exploring LLM-Based Representations for Malicious JavaScript Detection",
+    "doi": "10.1109/icaibd69640.2026.11637261",
+    "venue": "2026 9th International Conference on Artificial Intelligence and Big Data (ICAIBD)",
+    "year": 2026,
+    "authors": [
+      "Kai Cheng",
+      "Dongkun Li",
+      "Weidong Tang",
+      "Kunlun Ren",
+      "Weizhong Qiang"
+    ],
+    "type": "proceedings-article"
+  },
+  {
+    "title": "Constrained LLM-Guided Refactoring of JavaScript: A Smell-Targeted Transformation Framework with Human-in-the-Loop Validation",
+    "doi": "10.32604/cmc.2026.080737",
+    "venue": "Computers, Materials &amp; Continua",
+    "year": 2026,
+    "authors": [
+      "Emir Kuanyshev",
+      "Hashim Ali"
+    ],
+    "type": "journal-article"
+  },
+  {
+    "title": "Secrets without Signatures: An LLM Agent for Logic-Defined Exposures in Recovered JavaScript",
+    "doi": "10.1145/3832783.3844581",
+    "venue": "Proceedings of the 41st IEEE/ACM International Conference on Automated Software Engineering",
+    "year": 2026,
+    "authors": [
+      "Shriyans Sudhi"
+    ],
+    "type": "proceedings-article"
+  },
+  {
+    "title": "CASCADE: LLM-powered JavaScript Deobfuscator at Google",
+    "doi": "10.1145/3786583.3786873",
+    "venue": "Proceedings of the IEEE/ACM 48th International Conference on Software Engineering: Software Engineering in Practice",
+    "year": 2026,
+    "authors": [
+      "Shan Jiang",
+      "Pranoy Kovuri",
+      "David Tao",
+      "Zhixun Tan"
+    ],
+    "type": "proceedings-article"
+  },
+  {
+    "title": "Aplicação de LLM com RAG para geração automática de testes unitários em projetos JavaScript",
+    "doi": "10.54899/rpd.v17n4-2796",
+    "venue": "Revista Projeção e Docência",
+    "year": 2026,
+    "authors": [
+      "Gabriel Sena Menezes",
+      "Alberlan Lopes Silva",
+      "José Augusto Almeida Araújo Júnior"
+    ],
+    "type": "journal-article"
+  },
+  {
+    "title": "OBsmith: LLM-Powered JavaScript Obfuscator Testing",
+    "doi": "10.1145/3798204",
+    "venue": "Proceedings of the ACM on Programming Languages",
+    "year": 2026,
+    "authors": [
+      "Shan Jiang",
+      "Chenguang Zhu",
+      "Sarfraz Khurshid"
+    ],
+    "type": "journal-article"
+  },
+  {
+    "title": "LLM-Guided Mutation Location Selection for Vulnerability-Aware JavaScript Engine Fuzzing",
+    "doi": "10.1109/trustcom66490.2025.00355",
+    "venue": "2025 IEEE 24th International Conference on Trust, Security and Privacy in Computing and Communications (TrustCom)",
+    "year": 2025,
+    "authors": [
+      "Jizhe Li",
+      "Yongjun Wang",
+      "Haoran Xu",
+      "Lin Peng",
+      "Muxin Xu"
+    ],
+    "type": "proceedings-article"
+  },
+  {
+    "title": "State-Aware Fuzzing of JavaScript Engines with LLM-Guided Instrumentation",
+    "doi": "10.1145/3830418.3843900",
+    "venue": "Proceedings of the ACM SIGOPS 32nd Symposium on Operating Systems Principles",
+    "year": 2026,
+    "authors": [
+      "Wai Kin Wong",
+      "Dongwei Xiao",
+      "Anthony Cheuk Tung Lai",
+      "Ping Fan Ke",
+      "Shuai Wang"
+    ],
+    "type": "proceedings-article"
+  },
+  {
+    "title": "Fixing, Breaking, or Faking It? An Execution-Calibrated Evaluation of LLM Vulnerability Patching in JavaScript, Python, Go, and Java, and the Limits of LLM-as-Judge",
+    "doi": "10.3390/jcp6050153",
+    "venue": "Journal of Cybersecurity and Privacy",
+    "year": 2026,
+    "authors": [
+      "Patrick Deininger",
+      "Wolfgang Slany"
+    ],
+    "type": "journal-article"
+  },
+  {
+    "title": "Detecting Malicious JavaScript Code by Code-Specialized LLM",
+    "doi": "10.1007/978-981-95-6857-4_16",
+    "venue": "Lecture Notes in Computer Science",
+    "year": 2026,
+    "authors": [
+      "Keiichi Kinoshita",
+      "Mamoru Mimura"
+    ],
+    "type": "book-chapter"
+  },
+  {
+    "title": "The Hidden DNA of LLM-Generated JavaScript: Structural Patterns Enable High-Accuracy Authorship Attribution",
+    "doi": "10.1145/3786181.3788707",
+    "venue": "Proceedings of the 3rd International Workshop on Large Language Models For Code",
+    "year": 2026,
+    "authors": [
+      "Norbert Tihanyi",
+      "Bilel Cherif",
+      "Richard A. Dubniczky",
+      "Mohamed Amine Ferrag",
+      "Lajos Balkanyi"
+    ],
+    "type": "proceedings-article"
+  },
+  {
+    "title": "X-AgentRed: Red-Teaming Personal Agents in Evolving Multi-Service Ecosystems",
+    "doi": "http://arxiv.org/abs/2610.13886v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Yeonsung Jung",
+      "Zhiyuan Wang",
+      "Zifan Wang",
+      "Vítor Albiero",
+      "Benjamin Newman"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "BT-Agent: Deploying Onboard Robot Agents with Behavior Trees and Multi-Fidelity Evaluation",
+    "doi": "http://arxiv.org/abs/2610.13862v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Fabio Hübel",
+      "Adam Lilja",
+      "Yue Yin",
+      "Siming He",
+      "Claire Tomlin"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "SLICE: Sequential Likelihood-Free Inference via Conformal E-Values",
+    "doi": "http://arxiv.org/abs/2610.13855v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Stefano Cortinovis",
+      "Laura Battaglia",
+      "François Caron"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "QTestBench: A Test Framework for Evaluating LLM-Generated Quantum Code",
+    "doi": "http://arxiv.org/abs/2610.13811v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Meriem Terki",
+      "Nouhaila Innan",
+      "Minghao Shao",
+      "Muhammad Kashif",
+      "Alberto Marchisio"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "Tracing and Taming Hallucinated Terms via Subsequence-Association Filtering and Breadth-Aware Selection for LLM Query Expansion",
+    "doi": "http://arxiv.org/abs/2610.13810v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Amit Kumar Jaiswal",
+      "Sagar Uprety",
+      "Prayag Tiwari"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "Not Just an Evaluation: A Case Study of Discourse Particle Sensitivity in Language Models",
+    "doi": "http://arxiv.org/abs/2610.13794v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "William Sheffield",
+      "Jiahui Chen",
+      "Amy Zhang",
+      "Alex Warstadt",
+      "Junyi Jessy Li"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "DualQuant: Dual-scale Calibration-free Weight-and-Activation Quantization for LLMs",
+    "doi": "http://arxiv.org/abs/2610.13767v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Mahsa Salmani",
+      "Sayeh Sharify",
+      "Hesham Mostafa"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "Matched-Context Group Policy Optimization for LLM Agent Training",
+    "doi": "http://arxiv.org/abs/2610.13755v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Chenxu Zhang",
+      "Yaorui Shi",
+      "Wenlong Zhang",
+      "Jianchao Tan",
+      "Zihan Wang"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "A Baseline Assessment for the Agentic Web Technology Stack",
+    "doi": "http://arxiv.org/abs/2610.13703v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Vagner Figueredo de Santana",
+      "Diogo Cortiz"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "Verifiable Retrieval for Legal Reasoning through Structure-driven Knowledge Graph",
+    "doi": "http://arxiv.org/abs/2610.13695v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Ibrahim Siddig",
+      "Sviatoslav Tugeev",
+      "Munir Georges"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "Inject a Turn, Not a Token: Learning Where to Redirect LLM Reasoning for Self-Correction",
+    "doi": "http://arxiv.org/abs/2610.13672v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Jiwon Jeon",
+      "Myungsik Cho",
+      "Jeonghye Kim",
+      "Youngchul Sung"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "A Multi-Agent LLM System for Automated Tuning of Specialized Neural Network Models",
+    "doi": "http://arxiv.org/abs/2610.13663v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Ivan Moloshnikov",
+      "Dmitry Kunitsyn",
+      "Alexander Sboev",
+      "Maksim Skorokhodov",
+      "Roman Rybka"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "A Critical Look at Power Sampling when Test Time Sharpening LLMs",
+    "doi": "http://arxiv.org/abs/2610.13653v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Abiel Malkani Talwar",
+      "Christopher Nemeth",
+      "Henry Moss"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "Deobfuscation of Control Flow Flattening Based on Abstract Interpretation",
+    "doi": "10.1109/tse.2026.3659437",
+    "venue": "IEEE Transactions on Software Engineering",
+    "year": 2026,
+    "authors": [
+      "Soyeon Baek",
+      "Sungho Lee"
+    ],
+    "type": "journal-article"
+  },
+  {
+    "title": "Evaluating satisfiability modulo theorem solvers for code deobfuscation",
+    "doi": "10.54254/2753-8818/51/2024ch0178",
+    "venue": "Theoretical and Natural Science",
+    "year": 2024,
+    "authors": [
+      "Tinghan Zhu"
+    ],
+    "type": "journal-article"
+  },
+  {
+    "title": "Analyzing Chain of Thought (CoT) Approaches in Control Flow Code Deobfuscation Tasks",
+    "doi": "10.1109/eurospw72509.2026.00033",
+    "venue": "2026 IEEE European Symposium on Security and Privacy Workshops (EuroS&amp;PW)",
+    "year": 2026,
+    "authors": [
+      "Seyedreza Mohseni",
+      "Sarvesh Baskar",
+      "Edward Raff",
+      "Manas Gaur"
+    ],
+    "type": "proceedings-article"
+  },
+  {
+    "title": "AI-Powered Deobfuscation: A Novel Approach to Understanding Reverse Engineered Code",
+    "doi": "10.1109/mpcon66082.2025.11256567",
+    "venue": "2025 IEEE Madhya Pradesh Section Conference (MPCON)",
+    "year": 2025,
+    "authors": [
+      "Bishwajeet Pandey",
+      "Sanjeev Pippal",
+      "Simi Bajaj",
+      "Ashish Kumar Singh",
+      "Advait Patel"
+    ],
+    "type": "proceedings-article"
+  },
+  {
+    "title": "Der Straube-Code? – Der Straube-Code! Gedanken zur Reger-Interpretation",
+    "doi": "10.25366/2026.140",
+    "venue": "Max-Reger-Institut/Elsa-Reger-Stiftung",
+    "year": 2026,
+    "authors": [
+      "Ludwig Audersch"
+    ],
+    "type": "monograph"
+  },
+  {
+    "title": "Assessing LLMs in malicious code deobfuscation of real-world malware campaigns",
+    "doi": "10.1016/j.eswa.2024.124912",
+    "venue": "Expert Systems with Applications",
+    "year": 2024,
+    "authors": [
+      "Constantinos Patsakis",
+      "Fran Casino",
+      "Nikolaos Lykousas"
+    ],
+    "type": "journal-article"
+  },
+  {
+    "title": "Abstract Interpretation-based Verification for Confidentiality: Information Hiding and Code Protection by Abstract Interpretation",
+    "doi": "10.1145/3786347",
+    "venue": "ACM Transactions on Privacy and Security",
+    "year": 2026,
+    "authors": [
+      "Isabella Mastroeni",
+      "Michele Pasqua"
+    ],
+    "type": "journal-article"
+  },
+  {
+    "title": "Impact of GPU Architecture and VRAM on Quantized LLM Inference for Code Deobfuscation",
+    "doi": "10.1109/acdsa67686.2026.11468042",
+    "venue": "2026 International Conference on Artificial Intelligence, Computer, Data Sciences and Applications (ACDSA)",
+    "year": 2026,
+    "authors": [
+      "Italo Thiago Felix Dos Santos",
+      "Ricardo da Silva Barboza",
+      "Felipe Peres De Almeida",
+      "Cristina Souza de Araujo",
+      "Jucimar Maia da Silva Junior"
+    ],
+    "type": "proceedings-article"
+  },
+  {
+    "title": "Verificational Reading: Code Beyond Interpretation",
+    "doi": "10.64773/kf7r-g2b3",
+    "venue": "electronic book review",
+    "year": 2026,
+    "authors": [
+      "Zeroichi Arakawa"
+    ],
+    "type": "journal-article"
+  },
+  {
+    "title": "Rainbet Bonus Code RAINBET20: 20% Rakeback &amp; Free Spins Guide (2026)Abstract",
+    "doi": "10.55277/researchhub.j80e6p6b",
+    "venue": "ResearchHub Technologies, Inc.",
+    "year": 2026,
+    "authors": [
+      "referral code"
+    ],
+    "type": "report"
+  },
+  {
+    "title": "Automating SAS and R Code Interpretation and Debugging: A Practical Pipeline for Statistical Programmers",
+    "doi": "10.36227/techrxiv.174234963.31536639/v1",
+    "venue": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "year": 2025,
+    "authors": [
+      "Jaime Yan"
+    ],
+    "type": "posted-content"
+  },
+  {
+    "title": "Chatcivic: A Domain-Specific Large Language Model (Llm) for Design Code Interpretation",
+    "doi": "10.2139/ssrn.5047555",
+    "venue": "Elsevier BV",
+    "year": 2024,
+    "authors": [
+      "Jinxin Chen",
+      "Yi Bao"
+    ],
+    "type": "posted-content"
+  },
+  {
+    "title": "Chatcivic: A Domain-Specific Large Language Model (Llm) for Design Code Interpretation",
+    "doi": "10.2139/ssrn.5172919",
+    "venue": "Elsevier BV",
+    "year": 2025,
+    "authors": [
+      "Jinxin Chen",
+      "Yi Bao"
+    ],
+    "type": "posted-content"
+  },
+  {
+    "title": "LLM-DAS: An LLM-Powered Deobfuscation System for ARM Binary Code",
+    "doi": "10.1007/978-981-95-6209-1_17",
+    "venue": "Lecture Notes in Computer Science",
+    "year": 2026,
+    "authors": [
+      "Jiahan Liu",
+      "Jing Jing",
+      "Jian Lin",
+      "Haonan Sun",
+      "Bing Zhu"
+    ],
+    "type": "book-chapter"
+  },
+  {
+    "title": "Interpretation guide for peppercorn code of practice in South-East Asia.",
+    "doi": "10.1079/20240474915",
+    "venue": "CABI",
+    "year": 2024,
+    "authors": [
+      "",
+      "Muhammad Faheem",
+      "Nguyen Xuan Hoa",
+      ""
+    ],
+    "type": "edited-book"
+  },
+  {
+    "title": "Interpretation Guide for Peppercorn Code of Practice in South-East Asia",
+    "doi": "10.1079/cabireports.2025.000002",
+    "venue": "CABI Publishing",
+    "year": 2026,
+    "authors": [
+      "Suzanne Neave",
+      "Grant Vinning",
+      ""
+    ],
+    "type": "posted-content"
+  },
+  {
+    "title": "Exploring the Potential of LLMs for Code Deobfuscation",
+    "doi": "10.1007/978-3-031-97620-9_15",
+    "venue": "Lecture Notes in Computer Science",
+    "year": 2025,
+    "authors": [
+      "David Beste",
+      "Grégoire Menguy",
+      "Hossein Hajipour",
+      "Mario Fritz",
+      "Antonio Emanuele Cinà"
+    ],
+    "type": "book-chapter"
+  },
+  {
+    "title": "Enhancing Code Representation Learning for Code Search with Abstract Code Semantics",
+    "doi": "10.1109/ijcnn60899.2024.10650119",
+    "venue": "2024 International Joint Conference on Neural Networks (IJCNN)",
+    "year": 2024,
+    "authors": [
+      "Shaojie Zhang",
+      "Yiwei Ding",
+      "Enrui Hu",
+      "Yue Yu",
+      "Yu Zhang"
+    ],
+    "type": "proceedings-article"
+  },
+  {
+    "title": "OGLE-2016-BLG-0523: A Low-mass Brown Dwarf or super-Jupiter in a $>100$ au Orbit",
+    "doi": "http://arxiv.org/abs/2610.13942v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Hongjing Yang",
+      "Weicheng Zang",
+      "Yoon-Hyun Ryu",
+      "Andrzej Udalski",
+      "Yuchen Tang"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "The LZ inelastic splitting as a probe of anomaly mediation",
+    "doi": "http://arxiv.org/abs/2610.13930v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Seung J. Lee",
+      "Taewook Youn"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "AI Models Can Provably Hide Arbitrary Capabilities",
+    "doi": "http://arxiv.org/abs/2610.13928v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Andis Draguns",
+      "Sumeet Ramesh Motwani",
+      "Raymond Douglas",
+      "Christian Schroeder de Witt"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "Can machines reason non-verbally?",
+    "doi": "http://arxiv.org/abs/2610.13925v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Shaheer U. Saeed",
+      "Zion Tse",
+      "Gregory Slabaugh",
+      "Daniel C. Alexander",
+      "Yipeng Hu"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "A Lean Formalization of the Hamilton--Perelman Proof of Thurston's Geometrization Conjecture",
+    "doi": "http://arxiv.org/abs/2610.13897v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Yuan Liao",
+      "Ziyang Qin",
+      "Jui-Hui Chung",
+      "Ayush Khaitan",
+      "Zhengyang Zhang"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "Analysis of WeChat Mini Program Data Encryption Algorithm Based on Computer Network Security: AES Symmetric Encryption Algorithm",
+    "doi": "10.1109/icicml63543.2024.10957877",
+    "venue": "2024 International Conference on Image Processing, Computer Vision and Machine Learning (ICICML)",
+    "year": 2024,
+    "authors": [
+      "Lidong Liu",
+      "Xiaoqin Li",
+      "Yuting Chen",
+      "Jingyi Huang",
+      "Yuhang Qi"
+    ],
+    "type": "proceedings-article"
+  },
+  {
+    "title": "Design and Analysis of a Campus Service Platform Based on WeChat Mini Program",
+    "doi": "10.54254/2754-1169/80/20241706",
+    "venue": "Advances in Economics, Management and Political Sciences",
+    "year": 2024,
+    "authors": [
+      "Ziheng Wan",
+      "Le Bao"
+    ],
+    "type": "journal-article"
+  },
+  {
+    "title": "Design and Implementation of a WeChat Mini-program Named \"Cloud Tour Gangu\"",
+    "doi": "10.23977/tmte.2024.070311",
+    "venue": "Tourism Management and Technology Economy",
+    "year": 2024,
+    "authors": [],
+    "type": "journal-article"
+  },
+  {
+    "title": "Design of Children’s Abacus Mental Calculation Mini-game Based on WeChat Mini Program from the Perspective of Human-computer Interaction",
+    "doi": "10.62517/jike.202404122",
+    "venue": "Journal of Intelligence and Knowledge Engineering",
+    "year": 2024,
+    "authors": [
+      "Zhenyuan Yang",
+      "Jiayi Zhao",
+      "Huaichun Lin"
+    ],
+    "type": "journal-article"
+  },
+  {
+    "title": "Research on design and implementation of campus second-hand platform based on WeChat mini program",
+    "doi": "10.23977/acss.2024.080416",
+    "venue": "Advances in Computer, Signals and Systems",
+    "year": 2024,
+    "authors": [],
+    "type": "journal-article"
+  },
+  {
+    "title": "An intelligent college entrance examination enrollment preferences recommendation system based on WeChat mini-program",
+    "doi": "10.1145/3796731.3796762",
+    "venue": "Proceedings of the 2025 5th International Conference on Computational Modeling, Simulation and Data Analysis",
+    "year": 2025,
+    "authors": [
+      "Yuru Yang",
+      "Xinyi Li",
+      "Yitao Li"
+    ],
+    "type": "proceedings-article"
+  },
+  {
+    "title": "User’s willingness and functional requirements for home-based nutritional management using WeChat mini-program after gastric cancer surgery: A qualitative descriptive study",
+    "doi": "10.22541/au.174742171.10213852/v1",
+    "venue": "Wiley",
+    "year": 2025,
+    "authors": [
+      "Pei Hong",
+      "Xiaojuan Wu",
+      "Peihua Xiao",
+      "Jianhua Lang"
+    ],
+    "type": "posted-content"
+  },
+  {
+    "title": "Risk Factors and Screening Model for Sarcopenia among Community-Dwelling Older Adults: Development and Internal Validation with a WeChat Mini-Program Tool",
+    "doi": "10.21203/rs.3.rs-10171949/v1",
+    "venue": "Springer Science and Business Media LLC",
+    "year": 2026,
+    "authors": [
+      "Mengjuan Zhou¹",
+      "Xueqin Ma¹",
+      "Tingting Shi"
+    ],
+    "type": "posted-content"
+  },
+  {
+    "title": "Design and Implementation of WeChat Mini Program for English Vocabulary Learning",
+    "doi": "10.1109/ainit65432.2025.11035898",
+    "venue": "2025 IEEE 6th International Seminar on Artificial Intelligence, Networking and Information Technology (AINIT)",
+    "year": 2025,
+    "authors": [
+      "Rongrong Guo",
+      "Guozhi Hu"
+    ],
+    "type": "proceedings-article"
+  },
+  {
+    "title": "Design of a Wechat Mini Program for Chinese Ethnic Minority Costumes",
+    "doi": "10.1145/3757749.3757810",
+    "venue": "Proceedings of the 2025 2nd International Conference on Computer and Multimedia Technology",
+    "year": 2025,
+    "authors": [
+      "Shiying Liu",
+      "Mengdie Zuo"
+    ],
+    "type": "proceedings-article"
+  },
+  {
+    "title": "Exploration of Bilingual Teaching in Universities Based on WeChat Mini Program Development under the New Quality Productive Forces",
+    "doi": "10.54097/xn7kvq62",
+    "venue": "Journal of Innovation and Development",
+    "year": 2025,
+    "authors": [
+      "Jingqiang Hou"
+    ],
+    "type": "journal-article"
+  },
+  {
+    "title": "Design and Implementation of Rural Culture and Tourism Software based on Wechat Small Program",
+    "doi": "10.54097/cfdhjb64",
+    "venue": "Frontiers in Computing and Intelligent Systems",
+    "year": 2025,
+    "authors": [
+      "Liyuan Xie"
+    ],
+    "type": "journal-article"
+  },
+  {
+    "title": "Link Copy System Design and Development Based on WeChat Mini Program",
+    "doi": "10.1145/3672758.3672761",
+    "venue": "Proceedings of the 3rd International Conference on Computer, Artificial Intelligence and Control Engineering",
+    "year": 2024,
+    "authors": [
+      "Shengqi Fu",
+      "Tianyu Tu"
+    ],
+    "type": "proceedings-article"
+  },
+  {
+    "title": "Intelligent Timetable Based on WeChat Mini Program",
+    "doi": "10.1145/3711129.3711219",
+    "venue": "Proceedings of the 2024 8th International Conference on Electronic Information Technology and Computer Engineering",
+    "year": 2024,
+    "authors": [
+      "Ru Jing",
+      "Xiaolong Gao",
+      "Zhancai Bian",
+      "Lihan Wang"
+    ],
+    "type": "proceedings-article"
+  },
+  {
+    "title": "Research and Development of WeChat Mini-Program for Smart Tour Guides Based on BLE Beacons",
+    "doi": "10.23919/ccc63176.2024.10662834",
+    "venue": "2024 43rd Chinese Control Conference (CCC)",
+    "year": 2024,
+    "authors": [
+      "Yiling Zhao",
+      "Weiping Wang",
+      "Yizhou Song",
+      "Zhaoxia Xu",
+      "Dairong Hu"
+    ],
+    "type": "proceedings-article"
+  },
+  {
+    "title": "Multi-AGV Coordination System Design Based on 3D SLAM, MQTT and WeChat Mini-program",
+    "doi": "10.1109/irce62232.2024.10739786",
+    "venue": "2024 7th International Conference on Intelligent Robotics and Control Engineering (IRCE)",
+    "year": 2024,
+    "authors": [
+      "Yixuan Huang",
+      "Wei Dai",
+      "Mark Leach",
+      "Limin Yu"
+    ],
+    "type": "proceedings-article"
+  },
+  {
+    "title": "A Cloud-Based Remote Management System for Disinfection Robots: Integrating Alibaba Cloud IoT and WeChat Mini-Program",
+    "doi": "10.1109/iccar64901.2025.11073040",
+    "venue": "2025 11th International Conference on Control, Automation and Robotics (ICCAR)",
+    "year": 2025,
+    "authors": [
+      "Wei Dai",
+      "Lin Zhang",
+      "Limin Yu"
+    ],
+    "type": "proceedings-article"
+  },
+  {
+    "title": "Design and Implementation of a WeChat Mini Program for Home Economics Services",
+    "doi": "10.1145/3747912.3747928",
+    "venue": "Proceedings of the 2025 International Conference on Software Engineering and Computer Applications",
+    "year": 2025,
+    "authors": [
+      "Mengwen Li",
+      "Fei Wu",
+      "Lixia Gan"
+    ],
+    "type": "proceedings-article"
+  },
+  {
+    "title": "Improving the Efficiency of Teaching Management in Universities: Research on Notification Dissemination Mode Based on Wechat Mini Program",
+    "doi": "10.62517/jhet.202515149",
+    "venue": "Journal of Higher Education Teaching",
+    "year": 2025,
+    "authors": [
+      "Detian Zeng",
+      "Taoyun Zhou",
+      "Shilin Li"
+    ],
+    "type": "journal-article"
+  },
+  {
+    "title": "Research on the Teaching Reform of Applied Undergraduate WeChat Mini-Program Courses Based on the CDIO Concept",
+    "doi": "10.62381/h251b16",
+    "venue": "Higher Education and Practice",
+    "year": 2025,
+    "authors": [
+      "Huitong Liao",
+      "Ruxia Wang",
+      "Xueri Li"
+    ],
+    "type": "journal-article"
+  },
+  {
+    "title": "Noise Space Learning for VLA Adaptation",
+    "doi": "http://arxiv.org/abs/2610.13943v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Junjie Lu",
+      "Chuheng Zhang",
+      "Yucen Wang",
+      "Yuhua Jiang",
+      "Xinyao Qin"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "A Riesz-Map Preconditioned Extragradient Method for Price Formation in Mean Field Games",
+    "doi": "http://arxiv.org/abs/2610.13934v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Yeva Gevorgyan",
+      "Diogo Gomes"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "An Aleksandrov estimate for kinetic equations with rough coefficients",
+    "doi": "http://arxiv.org/abs/2610.13921v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Amĺie Loher",
+      "Connor Mooney",
+      "Clément Mouhot",
+      "Lukas Niebel",
+      "Luis Silvestre"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "Markov Chain Convergence in Kernel-Induced Geometry",
+    "doi": "http://arxiv.org/abs/2610.13916v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Oleksii Kachaiev",
+      "Luc Brogat-Motte",
+      "Silvia Villa",
+      "Lorenzo Rosasco"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "The Bernstein problem in higher dimensional Heisenberg groups",
+    "doi": "http://arxiv.org/abs/2610.13913v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Gianmarco Giovannardi",
+      "Simone Verzellesi"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "When VLMs Destroy What They Know: Spatial Representations Fall Below Lexical Priors",
+    "doi": "http://arxiv.org/abs/2610.13910v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Shubh Garg",
+      "Chen Shani"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "Fast and Stable Arbitrary Precision Approximate Matrix Multiplication",
+    "doi": "http://arxiv.org/abs/2610.13905v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Ioana Dumitriu",
+      "Olga Holtz",
+      "Abraham Hsu",
+      "Nicholas Liskij",
+      "Yoav Moran"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "The Inviscid Limit in Uniformly Local Yudovich Spaces",
+    "doi": "http://arxiv.org/abs/2610.13898v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Zachary Radke"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "Beyond the Snowflakes: Disentangling Weather Effects from Confounding Meta-Factors in LiDAR Object Detection",
+    "doi": "http://arxiv.org/abs/2610.13891v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Yiming Yang",
+      "Jeremy P. Bos"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "Necessary conditions for benchmarking next-generation AI in materials discovery",
+    "doi": "http://arxiv.org/abs/2610.13885v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Daniel E Widdowson",
+      "Tatiana V Kurlina",
+      "Olga D Anosova",
+      "Vitaliy A Kurlin"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "Existence and large-field asymptotics of Hopfions in a continuum model of frustrated magnets",
+    "doi": "http://arxiv.org/abs/2610.13883v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Glal Bacho",
+      "Christof Melcher"
+    ],
+    "type": "preprint"
+  },
+  {
+    "title": "Best proximity point results of operator type condensing mappings via measure of noncompactness and application to an infinite system of differential equations in $c_0$ and $\\ell_1$",
+    "doi": "http://arxiv.org/abs/2610.13878v1",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "authors": [
+      "Parveen Kumar",
+      "Ankit Kumar"
+    ],
+    "type": "preprint"
+  }
+]

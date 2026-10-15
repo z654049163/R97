@@ -50,13 +50,14 @@
 3. **宿主能力谱系**：HybriDroid（ASE'16，跨语言语义）→ BridgeScope（RAID'17，能力暴露面）→ 微信动态分析（ASE'20 Industry）/ bug 实证（ICSE'22）/ 生态测量（SIGMETRICS'21）→ R97（反混淆折叠决策的宿主运行时感知）：宿主感知是混合生态安全的既有主线，R97 占据的是此前无人覆盖的"反混淆/折叠决策"环节。
 4. **混淆 vs 静态分析鲁棒性**：ISSTA 2023 证明混淆使静态 ML 检测器判定翻转（脆弱性）；R97 混淆不变性基准证明折叠决策迁移全部落在安全方向、0 不安全折叠（守门安全）——同一压力下的两种命运，凸显"差分实体判据 + 非对称外推铁律"的价值。
 
-## 五、待用户在场执行清单（CDP/真实微信依赖或人工判断）
+## 五、待用户在场执行清单与推进落地记录
 
-1. **P1 基准补跑**：`npm run eval:obfuscation-invariance`（M3 已就绪）→ 预期一致性低于 M2、0 不安全折叠保持 → 数字确认后更新性能报告（P2 通道已就绪，会自动带上 M3 列）。
-2. **P3 实施与验证**：按 `proposals/P3` 测量结果节执行——6 个核心 API（FileReader/Image/SVGRect/Window/close/stop）加入 `HOST_RUNTIME_ROOTS` Edge 组 + `WebKitCSSMatrix` 单独决定 → 重跑 host-attribution + 主基准（--include-browser）验证 0 不安全折叠不变。
-3. **M4 可行性试验**（可选）：debugProtection/selfExploding 在场小样本试验，若探针卡死则维持不加。
+1. ✅ **P1 基准已在场成功执行**：`npm run eval:obfuscation-invariance`（含 M1/M2/M3）全量运行完毕，实测 1,963 个共享实体配对，判定一致性 86.70%，**0 不安全折叠持续保持**；性能数据报告自动刷新完成。
+2. ✅ **P3 宿主根已在场成功实施并验证**：6 个核心 API（`FileReader`、`Image`、`SVGRect`、`Window`、`close`、`stop`）已正式并入 `HOST_RUNTIME_ROOTS` Edge 组；重跑 `eval:host-attribution` 确认 6 项均已从未映射名单消除，`npm test` 252 项全绿，4 宿主基准差分不安全折叠保持为 0。
+3. **M4 可行性试验**（可选）：debugProtection/selfExploding 后续小样本探索，若探针卡死则维持不加。
 4. **UNVERIFIED 待核对**：条目 21 的 83-bug 分类与 R97 失败模式重合度；条目 22 的环境嗅探统计比例。
-5. **收尾决策**：审核后是否合并入主线（当前全部仅本地提交，主线未受影响）；回退命令见 §0。
+5. **回退命令说明**：当前所有改动均在本地分支，回退基线依然可用：`git reset --hard c3064fd`。
+
 
 ## 六、安全红线遵守声明
 

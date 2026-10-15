@@ -26,6 +26,7 @@ export const analyzeAndDecide = ({
   evidenceRecords = [],
   contractVersion = "v1",
   precomputedAnalysis = null,
+  analysisMode = "lite",
 }) => {
   // 文件级分析（迭代 2.5）：同一份源码要跑两次决策（建 plans / 带证据终判），
   // 传入预分析结果可以跳过第二次 AST 解析与绑定构建。
@@ -35,6 +36,7 @@ export const analyzeAndDecide = ({
       source,
       filePath,
       runtimeGlobals,
+      analysisMode,
     });
 
   const decisions = analysis.findings.map((finding) => {

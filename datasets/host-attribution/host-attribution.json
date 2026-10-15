@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-23T09:05:54.836Z",
+  "generatedAt": "2026-10-12T07:47:47.891Z",
   "corpusPath": "E:\\读论文\\R97\\datasets\\real-miniapp-full\\real-miniapp-candidates.jsonl",
   "sampling": {
     "perEntityCap": 5
   },
   "rootCount": 356,
-  "hostExclusiveUnmappedCount": 17,
+  "hostExclusiveUnmappedCount": 11,
   "hostExclusiveUnmapped": [
     {
       "root": "$gwl",
@@ -23,38 +23,13 @@
       "knownHostRoot": false
     },
     {
-      "root": "FileReader",
-      "host": "edge",
-      "knownHostRoot": false
-    },
-    {
-      "root": "Image",
-      "host": "edge",
-      "knownHostRoot": false
-    },
-    {
-      "root": "SVGRect",
-      "host": "edge",
-      "knownHostRoot": false
-    },
-    {
       "root": "WebKitCSSMatrix",
-      "host": "edge",
-      "knownHostRoot": false
-    },
-    {
-      "root": "Window",
       "host": "edge",
       "knownHostRoot": false
     },
     {
       "root": "__wxConfig",
       "host": "wechat",
-      "knownHostRoot": false
-    },
-    {
-      "root": "close",
-      "host": "edge",
       "knownHostRoot": false
     },
     {
@@ -80,11 +55,6 @@
     {
       "root": "requireOnce",
       "host": "wechat",
-      "knownHostRoot": false
-    },
-    {
-      "root": "stop",
-      "host": "edge",
       "knownHostRoot": false
     },
     {
@@ -1369,7 +1339,7 @@
     {
       "root": "FileReader",
       "knownHostRoot": false,
-      "mappedRuntimeId": null,
+      "mappedRuntimeId": "e5-edge-headless",
       "exists": {
         "language": false,
         "node": false,
@@ -1379,7 +1349,7 @@
       "existingHosts": [
         "edge"
       ],
-      "verdict": "host_exclusive_unmapped"
+      "verdict": "host_exclusive_mapped"
     },
     {
       "root": "FormData",
@@ -1455,7 +1425,7 @@
     {
       "root": "Image",
       "knownHostRoot": false,
-      "mappedRuntimeId": null,
+      "mappedRuntimeId": "e5-edge-headless",
       "exists": {
         "language": false,
         "node": false,
@@ -1465,7 +1435,7 @@
       "existingHosts": [
         "edge"
       ],
-      "verdict": "host_exclusive_unmapped"
+      "verdict": "host_exclusive_mapped"
     },
     {
       "root": "Iterator",
@@ -1685,7 +1655,7 @@
     {
       "root": "SVGRect",
       "knownHostRoot": false,
-      "mappedRuntimeId": null,
+      "mappedRuntimeId": "e5-edge-headless",
       "exists": {
         "language": false,
         "node": false,
@@ -1695,7 +1665,7 @@
       "existingHosts": [
         "edge"
       ],
-      "verdict": "host_exclusive_unmapped"
+      "verdict": "host_exclusive_mapped"
     },
     {
       "root": "SuppressedError",
@@ -1879,7 +1849,7 @@
     {
       "root": "Window",
       "knownHostRoot": false,
-      "mappedRuntimeId": null,
+      "mappedRuntimeId": "e5-edge-headless",
       "exists": {
         "language": false,
         "node": false,
@@ -1889,7 +1859,7 @@
       "existingHosts": [
         "edge"
       ],
-      "verdict": "host_exclusive_unmapped"
+      "verdict": "host_exclusive_mapped"
     },
     {
       "root": "XMLHttpRequest",
@@ -2619,7 +2589,7 @@
     {
       "root": "close",
       "knownHostRoot": false,
-      "mappedRuntimeId": null,
+      "mappedRuntimeId": "e5-edge-headless",
       "exists": {
         "language": false,
         "node": false,
@@ -2629,7 +2599,7 @@
       "existingHosts": [
         "edge"
       ],
-      "verdict": "host_exclusive_unmapped"
+      "verdict": "host_exclusive_mapped"
     },
     {
       "root": "cloud",
@@ -4595,7 +4565,7 @@
     {
       "root": "stop",
       "knownHostRoot": false,
-      "mappedRuntimeId": null,
+      "mappedRuntimeId": "e5-edge-headless",
       "exists": {
         "language": false,
         "node": false,
@@ -4605,7 +4575,7 @@
       "existingHosts": [
         "edge"
       ],
-      "verdict": "host_exclusive_unmapped"
+      "verdict": "host_exclusive_mapped"
     },
     {
       "root": "storage",

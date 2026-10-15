@@ -1,0 +1,49 @@
+{
+  "generatedAt": "2026-10-12T13:54:37.330Z",
+  "benchmarkName": "hardware-longtail-benchmark",
+  "totalProjects": 8,
+  "totalDecisions": 26156,
+  "byDecision": {
+    "FOLD": 14987,
+    "PROTECT": 2786,
+    "UNKNOWN": 8383
+  },
+  "unsoundFolds": 0,
+  "categories": {
+    "Bluetooth": {
+      "regex": {},
+      "total": 17,
+      "protect": 0,
+      "fold": 17,
+      "unknown": 0
+    },
+    "NFC": {
+      "regex": {},
+      "total": 0,
+      "protect": 0,
+      "fold": 0,
+      "unknown": 0
+    },
+    "Worker": {
+      "regex": {},
+      "total": 1,
+      "protect": 0,
+      "fold": 0,
+      "unknown": 1
+    },
+    "Sensor": {
+      "regex": {},
+      "total": 0,
+      "protect": 0,
+      "fold": 0,
+      "unknown": 0
+    },
+    "WebGL": {
+      "regex": {},
+      "total": 0,
+      "protect": 0,
+      "fold": 0,
+      "unknown": 0
+    }
+  }
+}

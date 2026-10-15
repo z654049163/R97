@@ -19,6 +19,10 @@
  * 它不判断导出值的语义，也不做跨模块数据流——那是接入 analyzer 之后的下一步。
  */
 import path from "node:path";
+import { HOST_GLOBAL_ROOTS, LANGUAGE_BUILTIN_ROOTS } from "./global-roots.mjs";
+
+const LANGUAGE_BUILTIN_SET = new Set(LANGUAGE_BUILTIN_ROOTS);
+const HOST_GLOBAL_SET = new Set(HOST_GLOBAL_ROOTS);
 
 /** `define("path", factory)` / `define("path", [deps], factory)` */
 const isDefineCall = (node) =>
@@ -37,6 +41,28 @@ export const isRequireCall = (node) =>
   node.arguments?.length === 1 &&
   node.arguments[0]?.type === "Literal" &&
   typeof node.arguments[0].value === "string";
+
+/**
+ * 解包 Babel / TypeScript 助手函数（如 _interopRequireDefault(require(...))），
+ * 提取内部核心 require 调用节点。
+ * 遵循 CASCADE (ICSE 2026) 前置助手透明解包规范。
+ */
+export const unwrapInteropRequire = (node) => {
+  if (!node || node.type !== "CallExpression") return node;
+  if (isRequireCall(node)) return node;
+  if (
+    node.arguments?.length === 1 &&
+    node.callee?.type === "Identifier" &&
+    (node.callee.name.startsWith("_interopRequireDefault") ||
+      node.callee.name.startsWith("_interopRequireWildcard") ||
+      node.callee.name === "_interopRequire" ||
+      node.callee.name === "_toPropertyKey" ||
+      node.callee.name === "__toESM")
+  ) {
+    return unwrapInteropRequire(node.arguments[0]);
+  }
+  return node;
+};
 
 /** 模块路径归一化：去掉 `.js` 后缀，供查表使用。 */
 export const normalizeModulePath = (value) =>
@@ -127,10 +153,99 @@ const walk = (node, visitor) => {
   }
 };
 
+const walkWithParent = (node, visitor, parent = null, parentKey = null) => {
+  if (!node || typeof node.type !== "string") return;
+  visitor(node, parent, parentKey);
+  for (const key of Object.keys(node)) {
+    if (key === "parent") continue;
+    const value = node[key];
+    if (Array.isArray(value)) {
+      for (const child of value) walkWithParent(child, visitor, node, key);
+    } else if (value && typeof value.type === "string") {
+      walkWithParent(value, visitor, node, key);
+    }
+  }
+};
+
+/**
+ * 模块闭包静态依赖摘要（Module-Closure Static Dependency Summarization）。
+ *
+ * 理论依据：OBsmith (OOPSLA 2026) Host Dependence Orthogonality 公理。
+ * 若模块工厂函数内部引用的外部自由标识符 100% 属于纯语言内建（零宿主、零未解析全局），
+ * 则该闭包为 Host-Orthogonal，导出必然为标准 ECMAScript 语义，可安全 FOLD。
+ */
+export const summarizeModuleClosure = (factoryNode) => {
+  if (!factoryNode?.body) {
+    return { isHostOrthogonal: false, hasHostGlobal: false, hostRoots: [] };
+  }
+  const declaredLocals = new Set();
+  for (const p of factoryNode.params ?? []) {
+    if (p?.type === "Identifier") declaredLocals.add(p.name);
+  }
+
+  walk(factoryNode.body, (node) => {
+    if (node.type === "VariableDeclarator" && node.id?.type === "Identifier") {
+      declaredLocals.add(node.id.name);
+    } else if (node.type === "FunctionDeclaration" && node.id?.type === "Identifier") {
+      declaredLocals.add(node.id.name);
+    } else if (node.type === "FunctionExpression" || node.type === "ArrowFunctionExpression") {
+      for (const p of node.params ?? []) {
+        if (p?.type === "Identifier") declaredLocals.add(p.name);
+      }
+    } else if (node.type === "CatchClause" && node.param?.type === "Identifier") {
+      declaredLocals.add(node.param.name);
+    }
+  });
+
+  const freeIdentifiers = new Set();
+  walkWithParent(factoryNode.body, (node, parent) => {
+    if (node.type === "Identifier") {
+      if (
+        (parent?.type === "MemberExpression" && parent.property === node && !parent.computed) ||
+        (parent?.type === "Property" && parent.key === node && !parent.computed) ||
+        (parent?.type === "VariableDeclarator" && parent.id === node) ||
+        (parent?.type === "FunctionDeclaration" && parent.id === node)
+      ) {
+        return;
+      }
+      if (!declaredLocals.has(node.name)) {
+        freeIdentifiers.add(node.name);
+      }
+    }
+  });
+
+  let hasHostGlobal = false;
+  const hostRoots = new Set();
+  let hasUnknownGlobal = false;
+
+  for (const ident of freeIdentifiers) {
+    if (LANGUAGE_BUILTIN_SET.has(ident)) {
+      continue;
+    }
+    if (
+      HOST_GLOBAL_SET.has(ident) ||
+      ident === "$gwx" ||
+      ident === "wh" ||
+      ident.startsWith("$gw")
+    ) {
+      hasHostGlobal = true;
+      hostRoots.add(ident);
+    } else {
+      hasUnknownGlobal = true;
+    }
+  }
+
+  return {
+    isHostOrthogonal: !hasHostGlobal && !hasUnknownGlobal,
+    hasHostGlobal,
+    hostRoots: [...hostRoots],
+  };
+};
+
 /**
  * 从 AST 建立模块表。
  *
- * 返回 Map<规范路径, { modulePath, normalizedPath, factoryNode, defineNode }>。
+ * 返回 Map<规范路径, { modulePath, normalizedPath, factoryNode, defineNode, closureSummary }>。
  * 同一路径出现多次时保留第一次，并累计 duplicateCount。
  */
 export const buildBundleModuleTable = (ast) => {
@@ -155,6 +270,7 @@ export const buildBundleModuleTable = (ast) => {
       normalizedPath,
       factoryNode,
       defineNode: node,
+      closureSummary: factoryNode ? summarizeModuleClosure(factoryNode) : null,
     });
   });
   return { modules, duplicateCount };
@@ -171,6 +287,18 @@ export const buildBundleModuleTable = (ast) => {
  *
  * 动态写入（`exports[key] = ...`）会让 `dynamic` 置位，调用方应据此保持保守。
  */
+/**
+ * 提取一个模块 factory 的静态导出。
+ *
+ * 识别标准 CommonJS 以及 Webpack / Babel 现代打包器合成导出：
+ *   1. exports.foo = <expr> / exports["foo"] = <expr>
+ *   2. module.exports.foo = <expr>
+ *   3. module.exports = <expr>
+ *   4. __webpack_require__.d(exports, "foo", function() { return <expr>; })
+ *   5. Object.defineProperty(exports, "foo", { get: function() { return <expr>; }, value: <expr> })
+ *
+ * 动态写入（`exports[key] = ...`）会让 `dynamic` 置位，调用方据此保持保守。
+ */
 export const extractModuleExports = (factoryNode) => {
   const named = new Map();
   let defaultExport = null;
@@ -178,7 +306,105 @@ export const extractModuleExports = (factoryNode) => {
   if (!factoryNode?.body) {
     return { named, defaultExport, dynamic };
   }
+
+  // 辅助函数：从 getter 函数或箭头函数体内提取 return 的表达式
+  const extractReturnValue = (fnNode) => {
+    if (!fnNode) return null;
+    if (fnNode.type === "ArrowFunctionExpression" && fnNode.body.type !== "BlockStatement") {
+      return fnNode.body;
+    }
+    const body = fnNode.body?.type === "BlockStatement" ? fnNode.body.body : null;
+    if (!Array.isArray(body)) return null;
+    for (const stmt of body) {
+      if (stmt.type === "ReturnStatement" && stmt.argument) {
+        return stmt.argument;
+      }
+    }
+    return null;
+  };
+
   walk(factoryNode.body, (node) => {
+    // 1. 处理 Webpack ES6 导出合成桩: __webpack_require__.d(exports, "name", getter)
+    // 或 r.d(e, "name", getter) / e.d(...)
+    if (
+      node.type === "CallExpression" &&
+      node.arguments?.length >= 3 &&
+      node.callee?.type === "MemberExpression" &&
+      !node.callee.computed &&
+      node.callee.property?.type === "Identifier" &&
+      node.callee.property.name === "d"
+    ) {
+      const targetArg = node.arguments[0];
+      const nameArg = node.arguments[1];
+      const getterArg = node.arguments[2];
+
+      const isExportsTarget =
+        targetArg?.type === "Identifier" &&
+        (targetArg.name === "exports" || targetArg.name === "e");
+      const exportName =
+        nameArg?.type === "Literal" && typeof nameArg.value === "string"
+          ? nameArg.value
+          : null;
+
+      if (isExportsTarget && exportName) {
+        const valueExpr = extractReturnValue(getterArg) ?? getterArg;
+        if (exportName === "default") {
+          defaultExport = valueExpr;
+        } else {
+          named.set(exportName, valueExpr);
+        }
+        return;
+      }
+    }
+
+    // 2. 处理 Object.defineProperty(exports, "name", { get: ..., value: ... })
+    if (
+      node.type === "CallExpression" &&
+      node.arguments?.length >= 3 &&
+      node.callee?.type === "MemberExpression" &&
+      !node.callee.computed &&
+      node.callee.object?.type === "Identifier" &&
+      node.callee.object.name === "Object" &&
+      node.callee.property?.type === "Identifier" &&
+      node.callee.property.name === "defineProperty"
+    ) {
+      const targetArg = node.arguments[0];
+      const nameArg = node.arguments[1];
+      const descriptorArg = node.arguments[2];
+
+      const isExportsTarget =
+        (targetArg?.type === "Identifier" && (targetArg.name === "exports" || targetArg.name === "e")) ||
+        (targetArg?.type === "MemberExpression" &&
+          targetArg.object?.type === "Identifier" &&
+          targetArg.object.name === "module" &&
+          targetArg.property?.type === "Identifier" &&
+          targetArg.property.name === "exports");
+
+      const exportName =
+        nameArg?.type === "Literal" && typeof nameArg.value === "string"
+          ? nameArg.value
+          : nameArg?.type === "Identifier"
+          ? nameArg.name
+          : null;
+
+      if (isExportsTarget && exportName && descriptorArg?.type === "ObjectExpression") {
+        for (const prop of descriptorArg.properties) {
+          if (prop.type !== "Property" || prop.computed) continue;
+          const propName = prop.key.type === "Identifier" ? prop.key.name : prop.key.value;
+          if (propName === "get") {
+            const val = extractReturnValue(prop.value) ?? prop.value;
+            if (exportName === "default") defaultExport = val;
+            else named.set(exportName, val);
+          } else if (propName === "value") {
+            if (exportName === "default") defaultExport = prop.value;
+            else named.set(exportName, prop.value);
+          }
+        }
+        return;
+      }
+    }
+
+    // 3. 处理常规赋值导出: AssignmentExpression
     if (node.type !== "AssignmentExpression") return;
     const target = classifyExportTarget(node.left);
     if (!target) {
@@ -200,6 +426,65 @@ export const extractModuleExports = (factoryNode) => {
       named.set(target.name, node.right);
     }
   });
+
+  // 局部 var 单赋值解绑（Unbind local single-assignment chains）
+  // UglifyJS/Terser/Babel 压缩产物中常出现:
+  //   var n, r; n = function() { ... }; exports.foo = n;
+  // 或:
+  //   var _toPropertyKey = require("./toPropertyKey"); exports.default = _toPropertyKey;
+  // 若 exports.x 导出的右值是局部变量 a，且 a 在 factory 顶层仅被单次赋值为 targetExpr，
+  // 则安全穿透将导出右值还原为 targetExpr。
+  const localBindingValues = new Map();
+  const localAssignCounts = new Map();
+
+  if (factoryNode.body?.type === "BlockStatement" && Array.isArray(factoryNode.body.body)) {
+    for (const stmt of factoryNode.body.body) {
+      if (stmt.type === "VariableDeclaration") {
+        for (const decl of stmt.declarations) {
+          if (decl.id?.type === "Identifier" && decl.init) {
+            localBindingValues.set(decl.id.name, decl.init);
+            localAssignCounts.set(decl.id.name, 1);
+          }
+        }
+      } else if (stmt.type === "FunctionDeclaration" && stmt.id?.type === "Identifier") {
+        localBindingValues.set(stmt.id.name, stmt);
+        localAssignCounts.set(stmt.id.name, 1);
+      } else if (stmt.type === "ExpressionStatement") {
+        const expr = stmt.expression;
+        if (expr?.type === "AssignmentExpression" && expr.left?.type === "Identifier") {
+          const varName = expr.left.name;
+          const count = (localAssignCounts.get(varName) ?? 0) + 1;
+          localAssignCounts.set(varName, count);
+          if (count === 1) {
+            localBindingValues.set(varName, expr.right);
+          } else {
+            localBindingValues.delete(varName);
+          }
+        }
+      }
+    }
+  }
+
+  const unbindValue = (val) => {
+    if (!val || val.type !== "Identifier") return val;
+    if (localAssignCounts.get(val.name) === 1 && localBindingValues.has(val.name)) {
+      const bound = localBindingValues.get(val.name);
+      if (bound && bound !== val) {
+        return unbindValue(bound);
+      }
+    }
+    return val;
+  };
+
+  if (defaultExport?.type === "Identifier") {
+    defaultExport = unbindValue(defaultExport);
+  }
+  for (const [k, v] of named.entries()) {
+    if (v?.type === "Identifier") {
+      named.set(k, unbindValue(v));
+    }
+  }
+
   return { named, defaultExport, dynamic };
 };
 

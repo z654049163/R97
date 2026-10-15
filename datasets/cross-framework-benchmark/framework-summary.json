@@ -1,0 +1,28 @@
+{
+  "generatedAt": "2026-10-12T13:46:54.755Z",
+  "benchmarkName": "cross-framework-benchmark",
+  "totalProjects": 10,
+  "totalEntities": 41233,
+  "byDecision": {
+    "FOLD": 20819,
+    "PROTECT": 3385,
+    "UNKNOWN": 17029
+  },
+  "unsoundFolds": 0,
+  "byFramework": {
+    "Taro": {
+      "projects": 2,
+      "entities": 8578,
+      "fold": 6530,
+      "protect": 432,
+      "unknown": 1616
+    },
+    "uni-app": {
+      "projects": 8,
+      "entities": 32655,
+      "fold": 14289,
+      "protect": 2953,
+      "unknown": 15413
+    }
+  }
+}

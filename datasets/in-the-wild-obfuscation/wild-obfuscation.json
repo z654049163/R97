@@ -1,0 +1,106 @@
+{
+  "generatedAt": "2026-10-12T13:31:51.980Z",
+  "benchmarkName": "in-the-wild-obfuscation",
+  "totalProjects": 10,
+  "totalEntities": 32410,
+  "byDecision": {
+    "FOLD": 12920,
+    "PROTECT": 7683,
+    "UNKNOWN": 11807
+  },
+  "unsoundFolds": 0,
+  "differentialEntitiesCount": 0,
+  "safetyRate": "100.00%",
+  "projects": [
+    {
+      "project": "2912aa95",
+      "sizeKB": "273.8",
+      "totalDecisions": 2232,
+      "fold": 862,
+      "protect": 769,
+      "unknown": 601,
+      "unsound": 0
+    },
+    {
+      "project": "96d7ec80",
+      "sizeKB": "280.0",
+      "totalDecisions": 2303,
+      "fold": 849,
+      "protect": 769,
+      "unknown": 685,
+      "unsound": 0
+    },
+    {
+      "project": "de30c784",
+      "sizeKB": "1130.3",
+      "totalDecisions": 3940,
+      "fold": 1892,
+      "protect": 1342,
+      "unknown": 706,
+      "unsound": 0
+    },
+    {
+      "project": "QEEK骑电_7c4b6fdf",
+      "sizeKB": "1260.6",
+      "totalDecisions": 6826,
+      "fold": 2712,
+      "protect": 766,
+      "unknown": 3348,
+      "unsound": 0
+    },
+    {
+      "project": "uni-app_3852bba7",
+      "sizeKB": "348.2",
+      "totalDecisions": 2918,
+      "fold": 1103,
+      "protect": 886,
+      "unknown": 929,
+      "unsound": 0
+    },
+    {
+      "project": "坐着火车去旅行_198bea6e",
+      "sizeKB": "1173.4",
+      "totalDecisions": 3143,
+      "fold": 1322,
+      "protect": 309,
+      "unknown": 1512,
+      "unsound": 0
+    },
+    {
+      "project": "猫狗翻译器_908601f1",
+      "sizeKB": "424.8",
+      "totalDecisions": 2645,
+      "fold": 1384,
+      "protect": 127,
+      "unknown": 1134,
+      "unsound": 0
+    },
+    {
+      "project": "空调遥控器_9e534431",
+      "sizeKB": "438.7",
+      "totalDecisions": 1978,
+      "fold": 956,
+      "protect": 522,
+      "unknown": 500,
+      "unsound": 0
+    },
+    {
+      "project": "约 拍_3084fca7",
+      "sizeKB": "739.2",
+      "totalDecisions": 5081,
+      "fold": 998,
+      "protect": 2040,
+      "unknown": 2043,
+      "unsound": 0
+    },
+    {
+      "project": "高德打车企业版_726bdae4",
+      "sizeKB": "159.8",
+      "totalDecisions": 1344,
+      "fold": 842,
+      "protect": 153,
+      "unknown": 349,
+      "unsound": 0
+    }
+  ]
+}

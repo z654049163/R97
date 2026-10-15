@@ -497,7 +497,7 @@ if (obfuscationInvariance?.summary?.totals) {
   const oi = obfuscationInvariance;
   const t = oi.summary.totals;
   lines.push(
-    "用 `javascript-obfuscator` 对三生态真实语料文件做受控混淆（M1 = 字符串数组化、M2 = + 控制流平坦化 0.7 + 死代码注入 0.3，`renameGlobals: false` 保证实体可跨版本配对），同一文件的原始版与混淆版各跑一遍完整判定管线，按共享实体配对检查判定迁移与不安全折叠。",
+    "用 `javascript-obfuscator` 对三生态真实语料文件做受控混淆（M1 = 字符串数组化、M2 = + 控制流平坦化 0.7 + 死代码注入 0.3、M3 = + 字符串 RC4 加密 + 索引位移 + 嵌套包装器，`renameGlobals: false` 保证实体可跨版本配对），同一文件的原始版与混淆版各跑一遍完整判定管线，按共享实体配对检查判定迁移与不安全折叠。",
     "",
   );
   lines.push(

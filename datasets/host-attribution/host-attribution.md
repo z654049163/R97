@@ -1,6 +1,6 @@
 # R97 宿主归属测量
 
-生成时间：2026-09-23T09:05:54.836Z
+生成时间：2026-10-12T07:47:47.891Z
 
 参与测量的根节点：356
 
@@ -16,19 +16,13 @@
 | $gwl | wechat | 否 |
 | $gwn | wechat | 否 |
 | $gwx | wechat | 否 |
-| FileReader | edge | 否 |
-| Image | edge | 否 |
-| SVGRect | edge | 否 |
 | WebKitCSSMatrix | edge | 否 |
-| Window | edge | 否 |
 | __wxConfig | wechat | 否 |
-| close | edge | 否 |
 | define | wechat | 否 |
 | f | wechat | 否 |
 | gra | wechat | 否 |
 | grb | wechat | 否 |
 | requireOnce | wechat | 否 |
-| stop | edge | 否 |
 | wh | wechat | 否 |
 
 这些是候选，不是自动生效的名单。加进 `HOST_RUNTIME_ROOTS` 前需要按平台规范确认：
@@ -133,13 +127,13 @@
 | Event | cross_host | 无 | 有 | 有 | 未观测 | - |
 | EventTarget | cross_host | 无 | 有 | 有 | 未观测 | - |
 | File | cross_host | 无 | 有 | 有 | 未观测 | - |
-| FileReader | host_exclusive_unmapped | 无 | 无 | 有 | 未观测 | - |
+| FileReader | host_exclusive_mapped | 无 | 无 | 有 | 未观测 | e5-edge-headless |
 | FormData | cross_host | 无 | 有 | 有 | 未观测 | - |
 | G | absent_everywhere | 无 | 无 | 无 | 未观测 | - |
 | GameGlobal | absent_everywhere | 无 | 无 | 无 | 未观测 | - |
 | Headers | cross_host | 无 | 有 | 有 | 未观测 | - |
 | HmacSHA1 | absent_everywhere | 无 | 无 | 无 | 未观测 | - |
-| Image | host_exclusive_unmapped | 无 | 无 | 有 | 未观测 | - |
+| Image | host_exclusive_mapped | 无 | 无 | 有 | 未观测 | e5-edge-headless |
 | Iterator | cross_host | 无 | 有 | 有 | 有 | - |
 | MessageChannel | cross_host | 无 | 有 | 有 | 未观测 | - |
 | MessagePort | cross_host | 无 | 有 | 有 | 未观测 | - |
@@ -155,7 +149,7 @@
 | Response | cross_host | 无 | 有 | 有 | 未观测 | - |
 | SL | absent_everywhere | 无 | 无 | 无 | 未观测 | - |
 | SLConverter | absent_everywhere | 无 | 无 | 无 | 未观测 | - |
-| SVGRect | host_exclusive_unmapped | 无 | 无 | 有 | 未观测 | - |
+| SVGRect | host_exclusive_mapped | 无 | 无 | 有 | 未观测 | e5-edge-headless |
 | SuppressedError | cross_host | 无 | 有 | 有 | 有 | - |
 | Taro | absent_everywhere | 无 | 无 | 无 | 未观测 | - |
 | TextDecoder | cross_host | 无 | 有 | 有 | 有 | - |
@@ -168,7 +162,7 @@
 | WebKitCSSMatrix | host_exclusive_unmapped | 无 | 无 | 有 | 未观测 | - |
 | WebSocket | cross_host | 无 | 有 | 有 | 未观测 | - |
 | WeixinJSBridge | absent_everywhere | 无 | 无 | 无 | 未观测 | - |
-| Window | host_exclusive_unmapped | 无 | 无 | 有 | 未观测 | - |
+| Window | host_exclusive_mapped | 无 | 无 | 有 | 未观测 | e5-edge-headless |
 | XMLHttpRequest | host_exclusive_mapped | 无 | 无 | 有 | 未观测 | e5-edge-headless |
 | Z | absent_everywhere | 无 | 无 | 无 | 未观测 | - |
 | __VUE_SSR_CONTEXT__ | absent_everywhere | 无 | 无 | 无 | 未观测 | - |
@@ -223,7 +217,7 @@
 | clearImmediate | host_exclusive_mapped | 无 | 有 | 无 | 未观测 | e2-node-24.21.0 |
 | clearInterval | cross_host | 无 | 有 | 有 | 有 | - |
 | clearTimeout | cross_host | 无 | 有 | 有 | 有 | - |
-| close | host_exclusive_unmapped | 无 | 无 | 有 | 未观测 | - |
+| close | host_exclusive_mapped | 无 | 无 | 有 | 未观测 | e5-edge-headless |
 | cloud | absent_everywhere | 无 | 无 | 无 | 未观测 | - |
 | colorIndex | absent_everywhere | 无 | 无 | 无 | 未观测 | - |
 | complete | absent_everywhere | 无 | 无 | 无 | 未观测 | - |
@@ -369,7 +363,7 @@
 | setTimeout | cross_host | 无 | 有 | 有 | 有 | - |
 | snap_bb | absent_everywhere | 无 | 无 | 无 | 未观测 | - |
 | song | absent_everywhere | 无 | 无 | 无 | 未观测 | - |
-| stop | host_exclusive_unmapped | 无 | 无 | 有 | 未观测 | - |
+| stop | host_exclusive_mapped | 无 | 无 | 有 | 未观测 | e5-edge-headless |
 | storage | absent_everywhere | 无 | 无 | 无 | 未观测 | - |
 | superPropBase | absent_everywhere | 无 | 无 | 无 | 未观测 | - |
 | swan | absent_everywhere | 无 | 无 | 无 | 未观测 | - |
