@@ -158,7 +158,7 @@ export const NON_DETERMINISTIC_LANGUAGE_MEMBERS = Object.freeze(new Set([
 ]));
 
 const REGEXP_STATEFUL_PROPERTIES =
-  /^(?:RegExp\.)(?:\$[1-9]|input|\$_|lastMatch|\$&|lastParen|\$\+|leftContext|\$`|rightContext|\$')(?:$|\.)/;
+  /^(?:(?:RegExp\.)(?:\$[1-9]|input|\$_|lastMatch|\$&|lastParen|\$\+|leftContext|\$`|rightContext|\$')|(?:Error(?:\.prototype)?\.stack))(?:$|\.)/;
 
 export const isStatefulOrNonDeterministicBuiltin = ({
   entityId,
@@ -166,6 +166,13 @@ export const isStatefulOrNonDeterministicBuiltin = ({
 }) => {
   if (!entityId || typeof entityId !== "string") return false;
   if (REGEXP_STATEFUL_PROPERTIES.test(entityId)) {
+    return true;
+  }
+  if (
+    entityId.startsWith("RegExp.$") ||
+    entityId === "Error.stack" ||
+    entityId === "Error.prototype.stack"
+  ) {
     return true;
   }
   if (transformationKind === TRANSFORMATION_KIND.CALL_EVAL) {

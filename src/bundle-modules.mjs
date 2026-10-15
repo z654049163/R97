@@ -239,13 +239,100 @@ export const summarizeModuleClosure = (factoryNode) => {
     isHostOrthogonal: !hasHostGlobal && !hasUnknownGlobal,
     hasHostGlobal,
     hostRoots: [...hostRoots],
+    hasUnknownGlobal,
   };
+};
+
+/**
+ * 提取模块工厂函数内部所有的直接依赖请求路径。
+ */
+export const extractModuleDependencies = (factoryNode, ownerPath) => {
+  const deps = new Set();
+  walk(factoryNode, (node) => {
+    if (isRequireCall(node)) {
+      const req = node.arguments[0]?.value;
+      if (typeof req === "string") {
+        const resolved = resolveBundleRequest(req, ownerPath);
+        deps.add(resolved);
+      }
+    }
+  });
+  return [...deps];
+};
+
+/**
+ * 自底向上传递闭包摘要（Transitive Closure Summarization）。
+ *
+ * 理论依据：Wemint (ASE 2023) Section 3.2 与 OBsmith (OOPSLA 2026)。
+ * 若模块 A 调用子模块 B，且 A、B 均为纯语言正交（零宿主、零未知），由归纳法确证 A 也为纯语言（FOLD）；
+ * 若子模块 B 包含宿主污染（如 wx.request），则宿主依赖沿调用链向上传递至 A，确证 PROTECT。
+ */
+export const propagateTransitiveSummaries = (modules) => {
+  let changed = true;
+  let iterations = 0;
+  const MAX_ITERATIONS = 8;
+
+  while (changed && iterations < MAX_ITERATIONS) {
+    changed = false;
+    iterations++;
+
+    for (const entry of modules.values()) {
+      const summary = entry.closureSummary;
+      if (!summary) continue;
+
+      for (const depPath of entry.dependencies ?? []) {
+        const depEntry = modules.get(depPath);
+        if (!depEntry) {
+          // 外部或动态依赖模块，标记未决
+          if (!summary.externalDeps) summary.externalDeps = new Set();
+          if (!summary.externalDeps.has(depPath)) {
+            summary.externalDeps.add(depPath);
+            summary.isHostOrthogonal = false;
+            changed = true;
+          }
+          continue;
+        }
+
+        const depSummary = depEntry.closureSummary;
+        if (!depSummary) continue;
+
+        // 宿主依赖向上传递
+        if (depSummary.hasHostGlobal && depSummary.hostRoots.length > 0) {
+          for (const hr of depSummary.hostRoots) {
+            if (!summary.hostRoots.includes(hr)) {
+              summary.hostRoots.push(hr);
+              summary.hasHostGlobal = true;
+              summary.isHostOrthogonal = false;
+              changed = true;
+            }
+          }
+        }
+
+        // 未知全局向上传递
+        if (depSummary.hasUnknownGlobal && !summary.hasUnknownGlobal) {
+          summary.hasUnknownGlobal = true;
+          summary.isHostOrthogonal = false;
+          changed = true;
+        }
+      }
+
+      // 不动点判定
+      const isOrthogonal =
+        !summary.hasHostGlobal &&
+        !summary.hasUnknownGlobal &&
+        (!summary.externalDeps || summary.externalDeps.size === 0);
+      if (summary.isHostOrthogonal !== isOrthogonal) {
+        summary.isHostOrthogonal = isOrthogonal;
+        changed = true;
+      }
+    }
+  }
 };
 
 /**
  * 从 AST 建立模块表。
  *
- * 返回 Map<规范路径, { modulePath, normalizedPath, factoryNode, defineNode, closureSummary }>。
+ * 返回 Map<规范路径, { modulePath, normalizedPath, factoryNode, defineNode, closureSummary, dependencies }>。
  * 同一路径出现多次时保留第一次，并累计 duplicateCount。
  */
 export const buildBundleModuleTable = (ast) => {
@@ -271,8 +358,13 @@ export const buildBundleModuleTable = (ast) => {
       factoryNode,
       defineNode: node,
       closureSummary: factoryNode ? summarizeModuleClosure(factoryNode) : null,
+      dependencies: factoryNode
+        ? extractModuleDependencies(factoryNode, normalizedPath)
+        : [],
     });
   });
+  // 执行自底向上传递闭包摘要
+  propagateTransitiveSummaries(modules);
   return { modules, duplicateCount };
 };
 
