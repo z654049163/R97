@@ -323,10 +323,9 @@ svg_content = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 580" 
         <text x="0" y="41" font-size="8" font-weight="700" fill="#166534">✓ 闭包正交多阶传递安全放行</text>
         <text x="0" y="53" font-size="7.5" fill="#15803D">安全放行 1,531 条 (39.44%)，效用大增</text>
 
-        <rect x="0" y="64" width="204" height="42" rx="4" fill="#DCFCE7"/>
-        <text x="6" y="78" font-size="8" font-weight="800" fill="#15803D">✅ 可判定率 77.20% (帕累托最优)</text>
-        <text x="6" y="90" font-size="7.5" font-weight="800" fill="#059669">跨宿主 782 条差分上：实测 0 误放行！</text>
-        <text x="6" y="100" font-size="7" fill="#166534">保语义代码生成，零不安全折叠保证</text>
+        <rect x="0" y="66" width="204" height="34" rx="4" fill="#DCFCE7"/>
+        <text x="6" y="80" font-size="8.5" font-weight="800" fill="#15803D">✅ 可判定率 77.20%</text>
+        <text x="6" y="94" font-size="7.5" font-weight="800" fill="#059669">跨宿主 782 条差分上：实测 0 误放行！</text>
       </g>
     </g>
 
