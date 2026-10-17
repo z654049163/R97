@@ -58,6 +58,7 @@
     "eval:result-reuse": "node --max-old-space-size=4096 src/evaluation/result-reuse-validation.mjs --out datasets/result-reuse-validation",
     "eval:differential": "node src/evaluation/differential-reference.mjs --out datasets/differential-reference",
     "eval:external-baselines": "node src/evaluation/external-tool-baseline.mjs --out datasets/external-tool-baseline",
+    "eval:comprehensive-baselines": "node src/evaluation/comprehensive-baseline-benchmark.mjs",
     "eval:memory": "node --expose-gc src/evaluation/memory-benchmark.mjs --per-entity-cap 5 --out datasets/memory-benchmark",
     "eval:perf:compare": "node --expose-gc tools/compare_lite_vs_pro_perf.mjs",
     "eval:obfuscation-invariance": "node --max-old-space-size=4096 src/evaluation/obfuscation-invariance.mjs --out datasets/obfuscation-invariance"
