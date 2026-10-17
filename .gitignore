@@ -27,3 +27,6 @@ datasets/benchmark-file-smoke-base/
 .DS_Store
 Thumbs.db
 *.log
+
+# ---- 本地会话规划产物（不进入版本库）----
+.zcode/
