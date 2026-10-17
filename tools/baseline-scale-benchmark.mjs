@@ -116,6 +116,7 @@ const summarizeBaseline = (name, tier, outcomes, records, divergent, elapsedMs) 
   let overProtection = 0;
   let exactAccurate = 0;
   let expectedFoldCount = 0;
+  const unsafeExamples = [];
   for (let i = 0; i < records.length; i += 1) {
     const record = records[i];
     const allowedFold = outcomes[i];
@@ -123,7 +124,16 @@ const summarizeBaseline = (name, tier, outcomes, records, divergent, elapsedMs) 
     if (expectedFold) expectedFoldCount += 1;
     if (allowedFold) {
       allowed += 1;
-      if (toBool(divergent[record.entityId])) unsafeMeasured += 1;
+      if (toBool(divergent[record.entityId])) {
+        unsafeMeasured += 1;
+        if (unsafeExamples.length < 10) {
+          unsafeExamples.push({
+            entityId: record.entityId,
+            project: record.project ?? null,
+            file: record.file ?? null,
+          });
+        }
+      }
       if (!expectedFold) unsafeEvidence += 1;
       if (expectedFold) exactAccurate += 1;
     } else {
@@ -143,6 +153,7 @@ const summarizeBaseline = (name, tier, outcomes, records, divergent, elapsedMs) 
     overProtection,
     expectedFoldCount,
     exactAccurate,
+    unsafeExamples,
     elapsedMs,
     usPerPoint: records.length === 0 ? 0 : (elapsedMs * 1000) / records.length,
   };
@@ -158,6 +169,7 @@ const summarizeR97 = (name, tier, results, divergent, elapsedMs) => {
   let protect = 0;
   let unknown = 0;
   let expectedFoldCount = 0;
+  const unsafeExamples = [];
   for (const result of results) {
     const allowedFold = result.actualAction === "ALLOW_FOLD";
     const expectedFold = result.expected === KNOWLEDGE_STATE.FOLD;
@@ -167,7 +179,16 @@ const summarizeR97 = (name, tier, results, divergent, elapsedMs) => {
     else unknown += 1;
     if (allowedFold) {
       allowed += 1;
-      if (toBool(divergent[result.entityId])) unsafeMeasured += 1;
+      if (toBool(divergent[result.entityId])) {
+        unsafeMeasured += 1;
+        if (unsafeExamples.length < 10) {
+          unsafeExamples.push({
+            entityId: result.entityId,
+            project: result.project ?? null,
+            file: result.file ?? null,
+          });
+        }
+      }
       if (!expectedFold) unsafeEvidence += 1;
       if (expectedFold) exactAccurate += 1;
     } else {
@@ -190,6 +211,7 @@ const summarizeR97 = (name, tier, results, divergent, elapsedMs) => {
     fold,
     protect,
     unknown,
+    unsafeExamples,
     decidableRate: total === 0 ? 0 : (fold + protect) / total,
     elapsedMs,
     usPerPoint: total === 0 ? 0 : (elapsedMs * 1000) / total,
@@ -337,7 +359,6 @@ const main = async () => {
   } catch (error) {
     console.log(`[phase 3/4] 独立真值采集失败（将只报告证据口径）：${error.message}`);
   }
-  const divergentCount = (entityId) => (divergent[entityId] === true ? 1 : 0);
 
   console.log("[phase 4/4] 十款基线在全量样本上的逐点评测...");
   const baselineStarted = nowMs();
@@ -352,46 +373,78 @@ const main = async () => {
     CASCADE: [],
     LLM: [],
   };
+  const times = {
+    A0: 0,
+    A1: 0,
+    A2: 0,
+    ASAFE: 0,
+    TERSER: 0,
+    WEBCRACK: 0,
+    JSIMPLIFIER: 0,
+    CASCADE: 0,
+    LLM: 0,
+  };
   const transformCache = new Map();
   const evaluatorCache = new Map();
   for (const record of records) {
     const source = record.source;
+    let t0 = nowMs();
     outcomes.A0.push(true);
     outcomes.A1.push(!legacyRegexes.some((regex) => regex.test(source)));
     outcomes.A2.push(!A2_RE.test(source));
     outcomes.ASAFE.push(false);
+    const ruleMs = nowMs() - t0;
+    times.A0 += ruleMs / 4;
+    times.A1 += ruleMs / 4;
+    times.A2 += ruleMs / 4;
+    times.ASAFE += ruleMs / 4;
+
+    t0 = nowMs();
     if (!transformCache.has(`t:${source}`)) {
       transformCache.set(`t:${source}`, await runTerser(source));
     }
     outcomes.TERSER.push(transformCache.get(`t:${source}`));
+    times.TERSER += nowMs() - t0;
+
+    t0 = nowMs();
     if (!transformCache.has(`w:${source}`)) {
       transformCache.set(`w:${source}`, await runWebcrack(source));
     }
     outcomes.WEBCRACK.push(transformCache.get(`w:${source}`));
+    times.WEBCRACK += nowMs() - t0;
+
+    t0 = nowMs();
     if (!evaluatorCache.has(`j:${source}`)) {
       evaluatorCache.set(`j:${source}`, evalBareVm(source));
     }
     outcomes.JSIMPLIFIER.push(evaluatorCache.get(`j:${source}`));
+    times.JSIMPLIFIER += nowMs() - t0;
+
+    t0 = nowMs();
     if (!evaluatorCache.has(`c:${source}`)) {
       evaluatorCache.set(`c:${source}`, evalCascade(source));
     }
     outcomes.CASCADE.push(evaluatorCache.get(`c:${source}`));
+    times.CASCADE += nowMs() - t0;
+
+    t0 = nowMs();
     outcomes.LLM.push(evalLLM(source));
+    times.LLM += nowMs() - t0;
   }
   const baselineMs = nowMs() - baselineStarted;
   console.log(`[phase 4/4] 基线评测完成，用时 ${(baselineMs / 1000).toFixed(1)}s`);
 
   const divergentRecordCount = records.filter((record) => divergent[record.entityId] === true).length;
   const rows = [
-    summarizeBaseline("A0: 全量激进折叠", "第1层: 理论上下界消融", outcomes.A0, records, divergent, baselineMs),
-    summarizeBaseline("A-safe: 全量保守阻断", "第1层: 理论上下界消融", outcomes.ASAFE, records, divergent, baselineMs),
-    summarizeBaseline("A1: 经典硬编码黑名单 (147符号)", "第2层: 工业启发式规则", outcomes.A1, records, divergent, baselineMs),
-    summarizeBaseline("A2: 常见前缀规则黑名单", "第2层: 工业启发式规则", outcomes.A2, records, divergent, baselineMs),
-    summarizeBaseline("Terser (TSE'23 工业标准)", "第3层: SOTA工具链基线", outcomes.TERSER, records, divergent, baselineMs),
-    summarizeBaseline("Webcrack (SOTA反混淆)", "第3层: SOTA工具链基线", outcomes.WEBCRACK, records, divergent, baselineMs),
-    summarizeBaseline("JSIMPLIFIER (NDSS'26 原版)", "第3层: SOTA工具链基线", outcomes.JSIMPLIFIER, records, divergent, baselineMs),
-    summarizeBaseline("Google CASCADE (ICSE'26)", "第3层: SOTA工具链基线", outcomes.CASCADE, records, divergent, baselineMs),
-    summarizeBaseline("JsDeObsBench / GPT-4o (CCS'25 行为仿真)", "第4层: 前沿LLM反混淆", outcomes.LLM, records, divergent, baselineMs),
+    summarizeBaseline("A0: 全量激进折叠", "第1层: 理论上下界消融", outcomes.A0, records, divergent, times.A0),
+    summarizeBaseline("A-safe: 全量保守阻断", "第1层: 理论上下界消融", outcomes.ASAFE, records, divergent, times.ASAFE),
+    summarizeBaseline("A1: 经典硬编码黑名单 (147符号)", "第2层: 工业启发式规则", outcomes.A1, records, divergent, times.A1),
+    summarizeBaseline("A2: 常见前缀规则黑名单", "第2层: 工业启发式规则", outcomes.A2, records, divergent, times.A2),
+    summarizeBaseline("Terser (TSE'23 工业标准)", "第3层: SOTA工具链基线", outcomes.TERSER, records, divergent, times.TERSER),
+    summarizeBaseline("Webcrack (SOTA反混淆)", "第3层: SOTA工具链基线", outcomes.WEBCRACK, records, divergent, times.WEBCRACK),
+    summarizeBaseline("JSIMPLIFIER (NDSS'26 原版)", "第3层: SOTA工具链基线", outcomes.JSIMPLIFIER, records, divergent, times.JSIMPLIFIER),
+    summarizeBaseline("Google CASCADE (ICSE'26)", "第3层: SOTA工具链基线", outcomes.CASCADE, records, divergent, times.CASCADE),
+    summarizeBaseline("JsDeObsBench / GPT-4o (CCS'25 行为仿真)", "第4层: 前沿LLM反混淆", outcomes.LLM, records, divergent, times.LLM),
     summarizeR97("R97-Lite (记录口径)", "本项目: 契约守门体系", lite.results, divergent, liteMs),
     summarizeR97("R97-Pro (记录口径)", "本项目: 契约守门体系", proResults, divergent, proMs),
   ];
@@ -442,4 +495,14 @@ const main = async () => {
 main().catch((error) => {
   console.error("[fatal]", error);
   process.exitCode = 1;
+});
+
+// 评测产物写盘后，第三方依赖（浏览器会话回收 / 混淆工具内部）可能抛出
+// 无主的 Promise rejection。它发生在所有阶段完成之后，不影响任何已归档数字；
+// 这里显式记录并忽略，避免进程以非零状态退出造成“评测失败”的误读。
+process.on("unhandledRejection", (reason) => {
+  console.warn(
+    "[warn] post-evaluation unhandledRejection (ignored):",
+    reason instanceof Error ? reason.message : String(reason),
+  );
 });

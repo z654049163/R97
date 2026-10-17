@@ -1,0 +1,701 @@
+{
+  "generatedAt": "2026-10-17T16:36:53.875Z",
+  "sample": {
+    "corpusPath": "datasets/real-miniapp-full/real-miniapp-candidates.jsonl",
+    "perEntityCap": 5,
+    "recordCount": 3895,
+    "entityCount": 1246,
+    "targetRuntimeIds": [
+      "e1-ecmascript",
+      "e2-node-24.21.0",
+      "e5-edge-headless",
+      "e4-wechat-real"
+    ],
+    "wechatReportPath": "datasets/wechat-live/wechat-probe-report.json",
+    "liteResults": 3895,
+    "proResults": 3895
+  },
+  "groundTruth": {
+    "entityCount": 1246,
+    "differentialEntityCount": 208,
+    "differentialRecordCount": 785,
+    "differentialEntities": [
+      "$gwx",
+      "console.warn",
+      "$gwn",
+      "$gwl",
+      "console.log",
+      "wh",
+      "wh.hn",
+      "wh.rv",
+      "wh.nh",
+      "console.error",
+      "gra",
+      "grb",
+      "define",
+      "App",
+      "wx.request",
+      "require",
+      "getApp",
+      "Page",
+      "wx.openLocation",
+      "wx.downloadFile",
+      "wx.openDocument",
+      "wx.openBusinessView",
+      "wx.setVisualEffectOnCapture",
+      "wx.login",
+      "wx.navigateBack",
+      "wx.setNavigationBarTitle",
+      "wx.navigateToMiniProgram",
+      "setTimeout",
+      "Math.nv_ceil",
+      "wx.chooseMessageFile"
+    ],
+    "excludedRoots": [
+      {
+        "root": "Function",
+        "reason": "AppService 上读取 Function 会栈溢出并卡死会话，该根节点不参与微信侧判卷",
+        "entityCount": 10,
+        "entityIds": [
+          "Function",
+          "Function.prototype",
+          "Function.prototype.bind.apply",
+          "Function.prototype.bind",
+          "Function.bind.apply",
+          "Function.bind",
+          "Function.toString.call",
+          "Function.toString",
+          "Function.call.apply",
+          "Function.call"
+        ]
+      }
+    ],
+    "provenance": {
+      "runtimes": [
+        {
+          "runtimeId": "e1-ecmascript",
+          "probeImplementation": "r97-oracle-probe（隔离 vm，非宿主）",
+          "isHost": false,
+          "observedEntityCount": 1246,
+          "collectedAt": null,
+          "versionProfile": null
+        },
+        {
+          "runtimeId": "e2-node-24.21.0",
+          "probeImplementation": "r97-oracle-probe",
+          "isHost": true,
+          "observedEntityCount": 1246,
+          "collectedAt": null,
+          "versionProfile": "v24.21.0"
+        },
+        {
+          "runtimeId": "e5-edge-headless",
+          "probeImplementation": "r97-oracle-probe",
+          "isHost": true,
+          "observedEntityCount": 1246,
+          "collectedAt": null,
+          "versionProfile": null
+        },
+        {
+          "runtimeId": "e4-wechat-real",
+          "probeImplementation": "r97-oracle-probe",
+          "isHost": true,
+          "observedEntityCount": 1236,
+          "collectedAt": "2026-09-24T08:09:33.545Z",
+          "versionProfile": "3.17.3",
+          "platform": "devtools",
+          "snapshot": true
+        }
+      ]
+    },
+    "divergentRecordCount": 785
+  },
+  "rows": [
+    {
+      "tier": "第1层: 理论上下界消融",
+      "name": "A0: 全量激进折叠",
+      "total": 3895,
+      "allowed": 3895,
+      "blocked": 0,
+      "unsafeMeasured": 785,
+      "unsafeEvidence": 2659,
+      "overProtection": 0,
+      "expectedFoldCount": 1236,
+      "exactAccurate": 1236,
+      "unsafeExamples": [
+        {
+          "entityId": "$gwx",
+          "project": "a4e739b4",
+          "file": "a4e739b4\\app-service.js"
+        },
+        {
+          "entityId": "$gwx",
+          "project": "uView UI_787d326a",
+          "file": "uView UI_787d326a\\app-service.js"
+        },
+        {
+          "entityId": "$gwx",
+          "project": "医学常用计算_cd717e09",
+          "file": "医学常用计算_cd717e09\\app-service.js"
+        },
+        {
+          "entityId": "$gwx",
+          "project": "维尼来了_63394f0f",
+          "file": "维尼来了_63394f0f\\app-service.js"
+        },
+        {
+          "entityId": "$gwx",
+          "project": "uni-app_c354d0bb",
+          "file": "uni-app_c354d0bb\\app-service.js"
+        },
+        {
+          "entityId": "console.warn",
+          "project": "中途国际_b77dbc70",
+          "file": "中途国际_b77dbc70\\app-service.js"
+        },
+        {
+          "entityId": "console.warn",
+          "project": "858e14b1",
+          "file": "858e14b1\\app-service.js"
+        },
+        {
+          "entityId": "console.warn",
+          "project": "9da14543",
+          "file": "9da14543\\app-service.js"
+        },
+        {
+          "entityId": "console.warn",
+          "project": "70f40db0",
+          "file": "70f40db0\\app-service.js"
+        },
+        {
+          "entityId": "console.warn",
+          "project": "君雅物业水电管理系统_fb8f438f",
+          "file": "君雅物业水电管理系统_fb8f438f\\app-service.js"
+        }
+      ],
+      "elapsedMs": 10.564000090584159,
+      "usPerPoint": 2.712195145207743
+    },
+    {
+      "tier": "第1层: 理论上下界消融",
+      "name": "A-safe: 全量保守阻断",
+      "total": 3895,
+      "allowed": 0,
+      "blocked": 3895,
+      "unsafeMeasured": 0,
+      "unsafeEvidence": 0,
+      "overProtection": 1236,
+      "expectedFoldCount": 1236,
+      "exactAccurate": 2659,
+      "unsafeExamples": [],
+      "elapsedMs": 10.564000090584159,
+      "usPerPoint": 2.712195145207743
+    },
+    {
+      "tier": "第2层: 工业启发式规则",
+      "name": "A1: 经典硬编码黑名单 (147符号)",
+      "total": 3895,
+      "allowed": 3131,
+      "blocked": 764,
+      "unsafeMeasured": 130,
+      "unsafeEvidence": 1900,
+      "overProtection": 5,
+      "expectedFoldCount": 1236,
+      "exactAccurate": 1990,
+      "unsafeExamples": [
+        {
+          "entityId": "$gwx",
+          "project": "a4e739b4",
+          "file": "a4e739b4\\app-service.js"
+        },
+        {
+          "entityId": "$gwx",
+          "project": "uView UI_787d326a",
+          "file": "uView UI_787d326a\\app-service.js"
+        },
+        {
+          "entityId": "$gwx",
+          "project": "医学常用计算_cd717e09",
+          "file": "医学常用计算_cd717e09\\app-service.js"
+        },
+        {
+          "entityId": "$gwx",
+          "project": "维尼来了_63394f0f",
+          "file": "维尼来了_63394f0f\\app-service.js"
+        },
+        {
+          "entityId": "$gwx",
+          "project": "uni-app_c354d0bb",
+          "file": "uni-app_c354d0bb\\app-service.js"
+        },
+        {
+          "entityId": "$gwn",
+          "project": "南台箱包缴费系统_0fa67583",
+          "file": "南台箱包缴费系统_0fa67583\\app-service.js"
+        },
+        {
+          "entityId": "$gwn",
+          "project": "像素风_11b15071",
+          "file": "像素风_11b15071\\app-service.js"
+        },
+        {
+          "entityId": "$gwn",
+          "project": "智慧农业病虫害识别_8fbaa990",
+          "file": "智慧农业病虫害识别_8fbaa990\\app-service.js"
+        },
+        {
+          "entityId": "$gwn",
+          "project": "答题帮手_daac5cae",
+          "file": "答题帮手_daac5cae\\app-service.js"
+        },
+        {
+          "entityId": "$gwn",
+          "project": "和你一起背单词_28268ac3",
+          "file": "和你一起背单词_28268ac3\\app-service.js"
+        }
+      ],
+      "elapsedMs": 10.564000090584159,
+      "usPerPoint": 2.712195145207743
+    },
+    {
+      "tier": "第2层: 工业启发式规则",
+      "name": "A2: 常见前缀规则黑名单",
+      "total": 3895,
+      "allowed": 3311,
+      "blocked": 584,
+      "unsafeMeasured": 269,
+      "unsafeEvidence": 2075,
+      "overProtection": 0,
+      "expectedFoldCount": 1236,
+      "exactAccurate": 1820,
+      "unsafeExamples": [
+        {
+          "entityId": "$gwx",
+          "project": "a4e739b4",
+          "file": "a4e739b4\\app-service.js"
+        },
+        {
+          "entityId": "$gwx",
+          "project": "uView UI_787d326a",
+          "file": "uView UI_787d326a\\app-service.js"
+        },
+        {
+          "entityId": "$gwx",
+          "project": "医学常用计算_cd717e09",
+          "file": "医学常用计算_cd717e09\\app-service.js"
+        },
+        {
+          "entityId": "$gwx",
+          "project": "维尼来了_63394f0f",
+          "file": "维尼来了_63394f0f\\app-service.js"
+        },
+        {
+          "entityId": "$gwx",
+          "project": "uni-app_c354d0bb",
+          "file": "uni-app_c354d0bb\\app-service.js"
+        },
+        {
+          "entityId": "console.warn",
+          "project": "中途国际_b77dbc70",
+          "file": "中途国际_b77dbc70\\app-service.js"
+        },
+        {
+          "entityId": "console.warn",
+          "project": "858e14b1",
+          "file": "858e14b1\\app-service.js"
+        },
+        {
+          "entityId": "console.warn",
+          "project": "9da14543",
+          "file": "9da14543\\app-service.js"
+        },
+        {
+          "entityId": "console.warn",
+          "project": "70f40db0",
+          "file": "70f40db0\\app-service.js"
+        },
+        {
+          "entityId": "console.warn",
+          "project": "君雅物业水电管理系统_fb8f438f",
+          "file": "君雅物业水电管理系统_fb8f438f\\app-service.js"
+        }
+      ],
+      "elapsedMs": 10.564000090584159,
+      "usPerPoint": 2.712195145207743
+    },
+    {
+      "tier": "第3层: SOTA工具链基线",
+      "name": "Terser (TSE'23 工业标准)",
+      "total": 3895,
+      "allowed": 619,
+      "blocked": 3276,
+      "unsafeMeasured": 57,
+      "unsafeEvidence": 166,
+      "overProtection": 783,
+      "expectedFoldCount": 1236,
+      "exactAccurate": 2946,
+      "unsafeExamples": [
+        {
+          "entityId": "console.warn",
+          "project": "70f40db0",
+          "file": "70f40db0\\app-service.js"
+        },
+        {
+          "entityId": "console.log",
+          "project": "5G网速测评_5e892f7b",
+          "file": "5G网速测评_5e892f7b\\app-service.js"
+        },
+        {
+          "entityId": "setTimeout",
+          "project": "智能迷你超市_40e32241",
+          "file": "智能迷你超市_40e32241\\app-service.js"
+        },
+        {
+          "entityId": "clearTimeout",
+          "project": "b79419db",
+          "file": "b79419db\\app-service.js"
+        },
+        {
+          "entityId": "Math.nv_abs",
+          "project": "Weixin_0992f912",
+          "file": "Weixin_0992f912\\app-service.js"
+        },
+        {
+          "entityId": "Math.nv_abs",
+          "project": "a897eaf8",
+          "file": "a897eaf8\\app-service.js"
+        },
+        {
+          "entityId": "Math.nv_abs",
+          "project": "5bacb485",
+          "file": "5bacb485\\app-service.js"
+        },
+        {
+          "entityId": "Math.nv_PI",
+          "project": "越星短剧_3610c365",
+          "file": "越星短剧_3610c365\\app-service.js"
+        },
+        {
+          "entityId": "Math.nv_PI",
+          "project": "越星短剧_3610c365",
+          "file": "越星短剧_3610c365\\app-service.js"
+        },
+        {
+          "entityId": "Math.nv_PI",
+          "project": "uni-app_ec2e6da3",
+          "file": "uni-app_ec2e6da3\\app-service.js"
+        }
+      ],
+      "elapsedMs": 296.3599999323487,
+      "usPerPoint": 76.08729138186104
+    },
+    {
+      "tier": "第3层: SOTA工具链基线",
+      "name": "Webcrack (SOTA反混淆)",
+      "total": 3895,
+      "allowed": 83,
+      "blocked": 3812,
+      "unsafeMeasured": 23,
+      "unsafeEvidence": 67,
+      "overProtection": 1220,
+      "expectedFoldCount": 1236,
+      "exactAccurate": 2608,
+      "unsafeExamples": [
+        {
+          "entityId": "setTimeout",
+          "project": "智能迷你超市_40e32241",
+          "file": "智能迷你超市_40e32241\\app-service.js"
+        },
+        {
+          "entityId": "process",
+          "project": "2504f8b6",
+          "file": "2504f8b6\\app-service.js"
+        },
+        {
+          "entityId": "process",
+          "project": "智能迷你超市_40e32241",
+          "file": "智能迷你超市_40e32241\\app-service.js"
+        },
+        {
+          "entityId": "process",
+          "project": "字鉴·书法智能识别_5f4caac5",
+          "file": "字鉴·书法智能识别_5f4caac5\\app-service.js"
+        },
+        {
+          "entityId": "MessageChannel",
+          "project": "2504f8b6",
+          "file": "2504f8b6\\app-service.js"
+        },
+        {
+          "entityId": "MessageChannel",
+          "project": "字鉴·书法智能识别_5f4caac5",
+          "file": "字鉴·书法智能识别_5f4caac5\\app-service.js"
+        },
+        {
+          "entityId": "setImmediate",
+          "project": "59b397ac",
+          "file": "59b397ac\\app-service.js"
+        },
+        {
+          "entityId": "atob",
+          "project": "78240726",
+          "file": "78240726\\app-service.js"
+        },
+        {
+          "entityId": "btoa",
+          "project": "78240726",
+          "file": "78240726\\app-service.js"
+        },
+        {
+          "entityId": "Buffer",
+          "project": "78240726",
+          "file": "78240726\\app-service.js"
+        }
+      ],
+      "elapsedMs": 679.0179996564984,
+      "usPerPoint": 174.33068027124477
+    },
+    {
+      "tier": "第3层: SOTA工具链基线",
+      "name": "JSIMPLIFIER (NDSS'26 原版)",
+      "total": 3895,
+      "allowed": 1237,
+      "blocked": 2658,
+      "unsafeMeasured": 71,
+      "unsafeEvidence": 163,
+      "overProtection": 162,
+      "expectedFoldCount": 1236,
+      "exactAccurate": 3570,
+      "unsafeExamples": [
+        {
+          "entityId": "console.warn",
+          "project": "中途国际_b77dbc70",
+          "file": "中途国际_b77dbc70\\app-service.js"
+        },
+        {
+          "entityId": "console.warn",
+          "project": "858e14b1",
+          "file": "858e14b1\\app-service.js"
+        },
+        {
+          "entityId": "console.warn",
+          "project": "9da14543",
+          "file": "9da14543\\app-service.js"
+        },
+        {
+          "entityId": "console.warn",
+          "project": "70f40db0",
+          "file": "70f40db0\\app-service.js"
+        },
+        {
+          "entityId": "console.warn",
+          "project": "君雅物业水电管理系统_fb8f438f",
+          "file": "君雅物业水电管理系统_fb8f438f\\app-service.js"
+        },
+        {
+          "entityId": "console.log",
+          "project": "在线计算器小工具_cb86660c",
+          "file": "在线计算器小工具_cb86660c\\app-service.js"
+        },
+        {
+          "entityId": "console.log",
+          "project": "15460a67",
+          "file": "15460a67\\app-service.js"
+        },
+        {
+          "entityId": "console.log",
+          "project": "5G网速测评_5e892f7b",
+          "file": "5G网速测评_5e892f7b\\app-service.js"
+        },
+        {
+          "entityId": "console.log",
+          "project": "uni-app_89a7ac48",
+          "file": "uni-app_89a7ac48\\app-service.js"
+        },
+        {
+          "entityId": "console.log",
+          "project": "RQrun_cd7b985e",
+          "file": "RQrun_cd7b985e\\app-service.js"
+        }
+      ],
+      "elapsedMs": 808.258999876678,
+      "usPerPoint": 207.5119383508801
+    },
+    {
+      "tier": "第3层: SOTA工具链基线",
+      "name": "Google CASCADE (ICSE'26)",
+      "total": 3895,
+      "allowed": 1260,
+      "blocked": 2635,
+      "unsafeMeasured": 94,
+      "unsafeEvidence": 186,
+      "overProtection": 162,
+      "expectedFoldCount": 1236,
+      "exactAccurate": 3547,
+      "unsafeExamples": [
+        {
+          "entityId": "console.warn",
+          "project": "中途国际_b77dbc70",
+          "file": "中途国际_b77dbc70\\app-service.js"
+        },
+        {
+          "entityId": "console.warn",
+          "project": "858e14b1",
+          "file": "858e14b1\\app-service.js"
+        },
+        {
+          "entityId": "console.warn",
+          "project": "9da14543",
+          "file": "9da14543\\app-service.js"
+        },
+        {
+          "entityId": "console.warn",
+          "project": "70f40db0",
+          "file": "70f40db0\\app-service.js"
+        },
+        {
+          "entityId": "console.warn",
+          "project": "君雅物业水电管理系统_fb8f438f",
+          "file": "君雅物业水电管理系统_fb8f438f\\app-service.js"
+        },
+        {
+          "entityId": "console.log",
+          "project": "在线计算器小工具_cb86660c",
+          "file": "在线计算器小工具_cb86660c\\app-service.js"
+        },
+        {
+          "entityId": "console.log",
+          "project": "15460a67",
+          "file": "15460a67\\app-service.js"
+        },
+        {
+          "entityId": "console.log",
+          "project": "5G网速测评_5e892f7b",
+          "file": "5G网速测评_5e892f7b\\app-service.js"
+        },
+        {
+          "entityId": "console.log",
+          "project": "uni-app_89a7ac48",
+          "file": "uni-app_89a7ac48\\app-service.js"
+        },
+        {
+          "entityId": "console.log",
+          "project": "RQrun_cd7b985e",
+          "file": "RQrun_cd7b985e\\app-service.js"
+        }
+      ],
+      "elapsedMs": 231.43799992650747,
+      "usPerPoint": 59.419255436844026
+    },
+    {
+      "tier": "第4层: 前沿LLM反混淆",
+      "name": "JsDeObsBench / GPT-4o (CCS'25 行为仿真)",
+      "total": 3895,
+      "allowed": 3277,
+      "blocked": 618,
+      "unsafeMeasured": 255,
+      "unsafeEvidence": 2041,
+      "overProtection": 0,
+      "expectedFoldCount": 1236,
+      "exactAccurate": 1854,
+      "unsafeExamples": [
+        {
+          "entityId": "$gwx",
+          "project": "a4e739b4",
+          "file": "a4e739b4\\app-service.js"
+        },
+        {
+          "entityId": "$gwx",
+          "project": "uView UI_787d326a",
+          "file": "uView UI_787d326a\\app-service.js"
+        },
+        {
+          "entityId": "$gwx",
+          "project": "医学常用计算_cd717e09",
+          "file": "医学常用计算_cd717e09\\app-service.js"
+        },
+        {
+          "entityId": "$gwx",
+          "project": "维尼来了_63394f0f",
+          "file": "维尼来了_63394f0f\\app-service.js"
+        },
+        {
+          "entityId": "$gwx",
+          "project": "uni-app_c354d0bb",
+          "file": "uni-app_c354d0bb\\app-service.js"
+        },
+        {
+          "entityId": "console.warn",
+          "project": "中途国际_b77dbc70",
+          "file": "中途国际_b77dbc70\\app-service.js"
+        },
+        {
+          "entityId": "console.warn",
+          "project": "858e14b1",
+          "file": "858e14b1\\app-service.js"
+        },
+        {
+          "entityId": "console.warn",
+          "project": "9da14543",
+          "file": "9da14543\\app-service.js"
+        },
+        {
+          "entityId": "console.warn",
+          "project": "70f40db0",
+          "file": "70f40db0\\app-service.js"
+        },
+        {
+          "entityId": "console.warn",
+          "project": "君雅物业水电管理系统_fb8f438f",
+          "file": "君雅物业水电管理系统_fb8f438f\\app-service.js"
+        }
+      ],
+      "elapsedMs": 2.4809998646378517,
+      "usPerPoint": 0.6369704402151095
+    },
+    {
+      "tier": "本项目: 契约守门体系",
+      "name": "R97-Lite (记录口径)",
+      "total": 3895,
+      "allowed": 1236,
+      "blocked": 2659,
+      "unsafeMeasured": 0,
+      "unsafeEvidence": 0,
+      "overProtection": 0,
+      "expectedFoldCount": 1236,
+      "exactAccurate": 3895,
+      "fold": 1236,
+      "protect": 832,
+      "unknown": 1827,
+      "unsafeExamples": [],
+      "decidableRate": 0.5309370988446727,
+      "elapsedMs": 15340.381999999285,
+      "usPerPoint": 3938.480616174399
+    },
+    {
+      "tier": "本项目: 契约守门体系",
+      "name": "R97-Pro (记录口径)",
+      "total": 3895,
+      "allowed": 1236,
+      "blocked": 2659,
+      "unsafeMeasured": 0,
+      "unsafeEvidence": 0,
+      "overProtection": 0,
+      "expectedFoldCount": 1236,
+      "exactAccurate": 3895,
+      "fold": 1236,
+      "protect": 832,
+      "unknown": 1827,
+      "unsafeExamples": [],
+      "decidableRate": 0.5309370988446727,
+      "elapsedMs": 15495.02499999851,
+      "usPerPoint": 3978.1835686774093
+    }
+  ],
+  "notes": [
+    "Terser/Webcrack: 放行=语义 AST 被改写；JSIMPLIFIER/CASCADE: 放行=离线沙箱求值成功；LLM: 依据 CCS'25 实证的确定性行为仿真",
+    "实测不安全折叠以独立判卷探针为唯一真值；证据口径不安全为自洽校验",
+    "LLM 真实远端 API 端到端延迟为 2.7-9.6 秒/点（JsDeObsBench CCS'25 Table 4），表中 μs 为本地仿真耗时"
+  ]
+}
