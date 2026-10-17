@@ -8,11 +8,22 @@ const HOST = "127.0.0.1";
 const server = http.createServer((req, res) => {
   const url = req.url.split("?")[0];
   let filePath = null;
+  let isPdf = false;
 
   if (url === "/safety" || url === "/safety-utility") {
     filePath = path.join(process.cwd(), "datasets/benchmark-wechat-file-pro-v6/safety-utility.svg");
+  } else if (url === "/minimal" || url === "/new") {
+    filePath = path.join(process.cwd(), "docs/r97_minimalist_framework.svg");
+  } else if (url === "/concise" || url === "/jsimplifier-style") {
+    filePath = path.join(process.cwd(), "docs/r97_concise_architecture.svg");
+  } else if (url === "/pdf") {
+    filePath = path.join(process.cwd(), "docs/r97_horizontal_framework.pdf");
+    isPdf = true;
+  } else if (url === "/pdf-minimal") {
+    filePath = path.join(process.cwd(), "docs/r97_minimalist_framework.pdf");
+    isPdf = true;
   } else {
-    // 默认或 /framework: 显示重构后的终版科研架构图
+    // 默认或 /framework: 显示经典终版架构图
     filePath = path.join(process.cwd(), "docs/r97_horizontal_framework.svg");
   }
 
@@ -22,8 +33,9 @@ const server = http.createServer((req, res) => {
       res.end("File not found");
       return;
     }
+    const contentType = isPdf ? "application/pdf" : "image/svg+xml; charset=utf-8";
     res.writeHead(200, {
-      "Content-Type": "image/svg+xml; charset=utf-8",
+      "Content-Type": contentType,
       "Cache-Control": "no-cache",
     });
     res.end(data);

@@ -127,7 +127,7 @@ svg_content = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 580" 
       <rect x="0" y="0" width="216" height="110" rx="6" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.2"/>
       <text x="10" y="20" font-size="9.5" font-weight="700" fill="#6D28D9">证据侧：目标环境独立证实</text>
       <text x="10" y="36" font-size="8.5" fill="#475569">• 外部清单解析与指纹提取</text>
-      <text x="10" y="50" font-size="8.5" fill="#475569">• 非对称外推对偶定理 (F3 反例证明)</text>
+      <text x="10" y="50" font-size="8.5" fill="#475569">• 跨宿主实测差异反例检验 (Disparity Check)</text>
       
       <rect x="8" y="62" width="200" height="38" rx="4" fill="#EDE7F6" stroke="#C4B5FD" stroke-width="0.8"/>
       <text x="14" y="78" font-size="8.5" font-weight="700" fill="#5B21B6">目标确认状态 (Target):</text>
@@ -196,7 +196,7 @@ svg_content = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 580" 
       <!-- 8 Sequential Steps -->
       <g transform="translate(8, 62)">
         <text x="4" y="12" font-size="7.5" fill="#334155"><tspan font-weight="700">①</tspan> 绑定解析有效性</text>
-        <text x="136" y="12" font-size="7.5" font-weight="700" fill="#E11D48"><tspan font-weight="700">⑤</tspan> 正向存在冲突优先</text>
+        <text x="136" y="12" font-size="7.5" font-weight="700" fill="#E11D48"><tspan font-weight="700">⑤</tspan> 宿主全量覆盖判别</text>
 
         <text x="4" y="26" font-size="7.5" fill="#334155"><tspan font-weight="700">②</tspan> 规范契约完备性</text>
         <text x="136" y="26" font-size="7.5" fill="#334155"><tspan font-weight="700">⑥</tspan> 证据时效与版本校验</text>
@@ -340,8 +340,8 @@ svg_content = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 580" 
   <g transform="translate(28, 528)">
     <rect x="0" y="0" width="1384" height="34" rx="4" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
     <text x="16" y="21" font-size="9" font-weight="800" fill="#0F172A">设计原则 (Design Principles):</text>
-    <text x="156" y="21" font-size="8" fill="#475569">
-      [1] 三域生态覆盖 (Web/Node/小程序)； [2] 需求与目标正交隔离 (Required ⊥ Target) 与非对称外推对偶定理； [3] 契约元能力降维； [4] 模块闭包自底向上拓扑正交传递； [5] Double-Oracle 双重闭环验证； [6] 100% 守住零误放行 (0% 差分折叠) 安全底线。
+    <text x="156" y="21" font-size="8.5" fill="#475569">
+      [1] 三域生态覆盖 (Web/Node/小程序)； [2] 需求与目标正交隔离 (Required ⊥ Target)； [3] 契约元能力降维； [4] 模块闭包自底向上拓扑正交传递； [5] Double-Oracle 双重闭环验证； [6] 100% 守住零误放行 (0% 差分折叠) 安全底线。
     </text>
   </g>
 </svg>
