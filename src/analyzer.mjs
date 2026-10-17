@@ -1461,6 +1461,40 @@ const resolveStaticPrimitive = (node, context, resolving) => {
     );
   }
 
+  // 支持对当前词法作用域内未被重赋值的只读常量数组字面量索引取值 (如 var arr = ["Math", "max"]; arr[0])
+  if (
+    node.type === "MemberExpression" &&
+    node.computed &&
+    node.object?.type === "Identifier"
+  ) {
+    const scope = context.scopeByNode.get(node);
+    const arrayBinding = scope?.resolve(node.object.name);
+    if (
+      arrayBinding &&
+      arrayBinding.kind === "local" &&
+      !arrayBinding.mutated &&
+      arrayBinding.aliasNode?.type === "ArrayExpression" &&
+      !resolving.has(arrayBinding) &&
+      !isUsedBeforeDeclaration(node, arrayBinding)
+    ) {
+      const indexPrimitive = resolveStaticPrimitive(node.property, context, resolving);
+      if (
+        indexPrimitive &&
+        typeof indexPrimitive.value === "number" &&
+        Number.isInteger(indexPrimitive.value) &&
+        indexPrimitive.value >= 0 &&
+        indexPrimitive.value < arrayBinding.aliasNode.elements.length
+      ) {
+        const elementNode = arrayBinding.aliasNode.elements[indexPrimitive.value];
+        if (elementNode) {
+          const nextResolving = new Set(resolving);
+          nextResolving.add(arrayBinding);
+          return resolveStaticPrimitive(elementNode, context, nextResolving);
+        }
+      }
+    }
+  }
+
   if (node.type === "BinaryExpression" && node.operator === "+") {
     const left = resolveStaticPrimitive(node.left, context, resolving);
     const right = resolveStaticPrimitive(node.right, context, resolving);
