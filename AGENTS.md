@@ -31,4 +31,13 @@
    - 当新增或调整测试用例红灯时，必须先通过节点脚本检查返回的 `result.decisions` 真实结构；
    - 严格区分是“AST 未提取到实体”（才归因于 `src/analyzer.mjs`）还是“决策引擎根据 R97 不变量公理防御性阻断”（例如缺少外部物证导致 `declared` 状态不能授权 `FOLD`，属于物证注入机制，绝非解析器 bug）；严禁因业务断言失败而盲目翻改 `analyzer.mjs`。
 
+# 评测实验数据查阅与源码修改规约（以 comprehensive-baseline-benchmark.mjs 为例）
+
+1. **结果数据查阅一律读报告，严禁翻源码**：
+   - 询问或核对 4 层 10 款基线（A0/A-safe/A1/A2/Terser/Webcrack/JSIMPLIFIER/CASCADE/GPT-4o/R97）的放行数、误放行率、准确率或耗时时，**强制优先读取已落盘的详报** `datasets/baseline-comparison/baseline-comparison-report.md` 或 `baseline-comparison-summary.json`；
+   - 严禁为了“看实验数据”而直接去读取 `src/evaluation/comprehensive-baseline-benchmark.mjs`。
+2. **源码修改遵循符号地图定点读取**：
+   - 若确需调整基线求值逻辑，先查阅 `docs/comprehensive_baseline_guide.md` 定位函数行号（如 `evaluateJSIMPLIFIERVanilla` 在 L142~L160）；
+   - 使用 `Read` 时必须传入 `offset` 与 `limit`（严禁无参全量读取 400 行）；修改完成后直接运行 `npm run eval:comprehensive-baselines` 刷新报告，不得重复读取源码。
+
 修改代码后运行 `npm test`（当前 268 项全绿通过）。
